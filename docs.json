@@ -109,57 +109,41 @@
             "tab": "Documentación",
             "groups": [
               {
+                "group": "Primeros pasos",
+                "pages": [
+                  "que-es-bold"
+                ]
+              },
+              {
                 "group": "Fabricación",
                 "pages": [
                   "diferencias-entre-recursos-y-procesos"
                 ]
+              },
+              {
+                "group": "Mantenimiento",
+                "pages": []
               }
             ]
           },
           {
-            "tab": "Referencia API",
-            "openapi": "https://api.bold-factory.com/openapi/v1.json"
+            "tab": "Desarrolladores",
+            "pages": [
+              "autenticacion",
+              "webhooks",
+              {
+                "group": "Referencia API",
+                "openapi": "https://api.bold-factory.com/openapi/v1.json"
+              }
+            ]
           },
           {
-            "tab": "Test",
-            "dropdowns": [
+            "tab": "Novedades",
+            "groups": [
               {
-                "dropdown": "Test dropdown",
-                "anchors": [
-                  {
-                    "anchor": "Anchor 1",
-                    "versions": [
-                      {
-                        "version": "v1",
-                        "pages": [
-                          "hola"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "anchor": "Anchor 2",
-                    "pages": [
-                      "adios"
-                    ]
-                  }
-                ]
-              },
-              {
-                "dropdown": "Test dropdown 2",
-                "products": [
-                  {
-                    "product": "Product 1",
-                    "pages": [
-                      "prueba"
-                    ]
-                  },
-                  {
-                    "product": "Product 2",
-                    "pages": [
-                      "prueba-2"
-                    ]
-                  }
+                "group": "Changelog",
+                "pages": [
+                  "v1-0"
                 ]
               }
             ]
