@@ -7,6 +7,9 @@
 ## About this project
 
 - This is a documentation site built on [Mintlify](https://mintlify.com)
+- This documentation refers to the Bold backend and client applications.
+- The source repositories should be available as sibling folders next to `bold.docs`: `../bold.backend` and `../bold.client`
+- Refer to `../bold.backend` and `../bold.client` as source context when documenting backend or client behavior.
 - Pages are MDX files with YAML frontmatter
 - Configuration lives in `docs.json`
 - Use the Mintlify MCP server, `https://mcp.mintlify.com`, to edit content and settings via MCP

@@ -35,94 +35,94 @@
               {
                 "group": "Primeros pasos",
                 "pages": [
-                  "ayuda/primeros-pasos/que-es-bold",
-                  "ayuda/primeros-pasos/flujo-basico-de-trabajo",
-                  "ayuda/primeros-pasos/configurar-tu-empresa",
-                  "ayuda/primeros-pasos/crear-tu-primera-fabricacion"
+                  "es/ayuda/primeros-pasos/que-es-bold",
+                  "es/ayuda/primeros-pasos/flujo-basico-de-trabajo",
+                  "es/ayuda/primeros-pasos/configurar-tu-empresa",
+                  "es/ayuda/primeros-pasos/crear-tu-primera-fabricacion"
                 ]
               },
               {
                 "group": "Artículos y SKUs",
                 "pages": [
-                  "ayuda/articulos-y-skus/introduccion",
-                  "ayuda/articulos-y-skus/crear-un-producto",
-                  "ayuda/articulos-y-skus/crear-un-sku",
-                  "ayuda/articulos-y-skus/editar-un-sku",
-                  "ayuda/articulos-y-skus/producto-vs-sku",
-                  "ayuda/articulos-y-skus/trabajar-con-lotes"
+                  "es/ayuda/articulos-y-skus/introduccion",
+                  "es/ayuda/articulos-y-skus/crear-un-producto",
+                  "es/ayuda/articulos-y-skus/crear-un-sku",
+                  "es/ayuda/articulos-y-skus/editar-un-sku",
+                  "es/ayuda/articulos-y-skus/producto-vs-sku",
+                  "es/ayuda/articulos-y-skus/trabajar-con-lotes"
                 ]
               },
               {
                 "group": "Almacén",
                 "pages": [
-                  "ayuda/almacen/introduccion",
-                  "ayuda/almacen/crear-ubicaciones",
-                  "ayuda/almacen/consultar-stock",
-                  "ayuda/almacen/recibir-material",
-                  "ayuda/almacen/mover-stock",
-                  "ayuda/almacen/ajustar-stock",
-                  "ayuda/almacen/hacer-inventario",
-                  "ayuda/almacen/ver-movimientos-de-stock",
-                  "ayuda/almacen/solucion-de-problemas-de-stock"
+                  "es/ayuda/almacen/introduccion",
+                  "es/ayuda/almacen/crear-ubicaciones",
+                  "es/ayuda/almacen/consultar-stock",
+                  "es/ayuda/almacen/recibir-material",
+                  "es/ayuda/almacen/mover-stock",
+                  "es/ayuda/almacen/ajustar-stock",
+                  "es/ayuda/almacen/hacer-inventario",
+                  "es/ayuda/almacen/ver-movimientos-de-stock",
+                  "es/ayuda/almacen/solucion-de-problemas-de-stock"
                 ]
               },
               {
                 "group": "Planificación",
                 "pages": [
-                  "ayuda/planificacion/introduccion",
-                  "ayuda/planificacion/entender-el-stock-proyectado",
-                  "ayuda/planificacion/crear-demanda",
-                  "ayuda/planificacion/crear-suministro",
-                  "ayuda/planificacion/saber-que-comprar",
-                  "ayuda/planificacion/saber-que-fabricar",
-                  "ayuda/planificacion/revisar-recomendaciones"
+                  "es/ayuda/planificacion/introduccion",
+                  "es/ayuda/planificacion/entender-el-stock-proyectado",
+                  "es/ayuda/planificacion/crear-demanda",
+                  "es/ayuda/planificacion/crear-suministro",
+                  "es/ayuda/planificacion/saber-que-comprar",
+                  "es/ayuda/planificacion/saber-que-fabricar",
+                  "es/ayuda/planificacion/revisar-recomendaciones"
                 ]
               },
               {
                 "group": "Producción",
                 "pages": [
-                  "ayuda/produccion/introduccion",
-                  "ayuda/produccion/crear-una-receta",
-                  "ayuda/produccion/crear-una-orden-de-fabricacion",
-                  "ayuda/produccion/ejecutar-una-orden",
-                  "ayuda/produccion/completar-operaciones",
-                  "ayuda/produccion/consumir-componentes",
-                  "ayuda/produccion/registrar-produccion",
-                  "ayuda/produccion/solucion-de-problemas-de-produccion"
+                  "es/ayuda/produccion/introduccion",
+                  "es/ayuda/produccion/crear-una-receta",
+                  "es/ayuda/produccion/crear-una-orden-de-fabricacion",
+                  "es/ayuda/produccion/ejecutar-una-orden",
+                  "es/ayuda/produccion/completar-operaciones",
+                  "es/ayuda/produccion/consumir-componentes",
+                  "es/ayuda/produccion/registrar-produccion",
+                  "es/ayuda/produccion/solucion-de-problemas-de-produccion"
                 ]
               },
               {
                 "group": "Compras",
                 "pages": [
-                  "ayuda/compras/introduccion",
-                  "ayuda/compras/crear-pedido-de-compra",
-                  "ayuda/compras/recibir-pedido-de-compra",
-                  "ayuda/compras/ver-compras-pendientes"
+                  "es/ayuda/compras/introduccion",
+                  "es/ayuda/compras/crear-pedido-de-compra",
+                  "es/ayuda/compras/recibir-pedido-de-compra",
+                  "es/ayuda/compras/ver-compras-pendientes"
                 ]
               },
               {
                 "group": "Ventas",
                 "pages": [
-                  "ayuda/ventas/introduccion",
-                  "ayuda/ventas/crear-pedido-de-venta",
-                  "ayuda/ventas/preparar-salida",
-                  "ayuda/ventas/completar-envio"
+                  "es/ayuda/ventas/introduccion",
+                  "es/ayuda/ventas/crear-pedido-de-venta",
+                  "es/ayuda/ventas/preparar-salida",
+                  "es/ayuda/ventas/completar-envio"
                 ]
               },
               {
                 "group": "Usuarios y permisos",
                 "pages": [
-                  "ayuda/usuarios-y-permisos/invitar-usuarios",
-                  "ayuda/usuarios-y-permisos/roles-y-permisos",
-                  "ayuda/usuarios-y-permisos/permisos-por-modulo"
+                  "es/ayuda/usuarios-y-permisos/invitar-usuarios",
+                  "es/ayuda/usuarios-y-permisos/roles-y-permisos",
+                  "es/ayuda/usuarios-y-permisos/permisos-por-modulo"
                 ]
               },
               {
                 "group": "Referencia funcional",
                 "pages": [
-                  "ayuda/referencia-funcional/estados",
-                  "ayuda/referencia-funcional/glosario",
-                  "ayuda/referencia-funcional/reglas-del-sistema"
+                  "es/ayuda/referencia-funcional/estados",
+                  "es/ayuda/referencia-funcional/glosario",
+                  "es/ayuda/referencia-funcional/reglas-del-sistema"
                 ]
               }
             ]
@@ -133,30 +133,30 @@
               {
                 "group": "Empezar",
                 "pages": [
-                  "desarrolladores/empezar/introduccion",
-                  "desarrolladores/empezar/autenticacion",
-                  "desarrolladores/empezar/errores",
-                  "desarrolladores/empezar/paginacion"
+                  "es/desarrolladores/empezar/introduccion",
+                  "es/desarrolladores/empezar/autenticacion",
+                  "es/desarrolladores/empezar/errores",
+                  "es/desarrolladores/empezar/paginacion"
                 ]
               },
               {
                 "group": "Webhooks",
                 "pages": [
-                  "desarrolladores/webhooks/introduccion",
-                  "desarrolladores/webhooks/eventos-disponibles",
-                  "desarrolladores/webhooks/reintentos-y-errores",
-                  "desarrolladores/webhooks/payloads"
+                  "es/desarrolladores/webhooks/introduccion",
+                  "es/desarrolladores/webhooks/eventos-disponibles",
+                  "es/desarrolladores/webhooks/reintentos-y-errores",
+                  "es/desarrolladores/webhooks/payloads"
                 ]
               },
               {
                 "group": "API Reference",
                 "pages": [
-                  "desarrolladores/api-reference/items",
-                  "desarrolladores/api-reference/warehouse",
-                  "desarrolladores/api-reference/planning",
-                  "desarrolladores/api-reference/production",
-                  "desarrolladores/api-reference/purchases",
-                  "desarrolladores/api-reference/sales"
+                  "es/desarrolladores/api-reference/items",
+                  "es/desarrolladores/api-reference/warehouse",
+                  "es/desarrolladores/api-reference/planning",
+                  "es/desarrolladores/api-reference/production",
+                  "es/desarrolladores/api-reference/purchases",
+                  "es/desarrolladores/api-reference/sales"
                 ]
               }
             ]
@@ -167,7 +167,7 @@
               {
                 "group": "Changelog",
                 "pages": [
-                  "novedades/changelog"
+                  "es/novedades/changelog"
                 ]
               }
             ]
@@ -176,6 +176,8 @@
       }
     ]
   },
+  "redirects": [
+  ],
   "footer": {
     "socials": {
       "website": "https://bold-factory.com",
