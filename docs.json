@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "name": "Bold Factory",
-  "theme": "almond",
+  "theme": "maple",
   "colors": {
     "primary": "#3264cc",
     "light": "#4babfb",
@@ -190,7 +190,7 @@
   },
   "description": "Bold Factory es una plataforma de gestión industrial para fabricantes.",
   "background": {
-    "decoration": "gradient"
+    "decoration": "grid"
   },
   "fonts": {
     "family": "Nunito"
