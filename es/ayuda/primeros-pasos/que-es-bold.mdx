@@ -1,70 +1,51 @@
 ---
 title: "Qué es Bold"
-description: "Conoce cómo Bold conecta catálogo, planificación, almacén, producción, compras y ventas en una fábrica."
+description: "Conoce cómo Bold organiza catálogo, planificación, fabricación, almacén, personal, costes y operaciones industriales."
+icon: "sparkles"
 ---
 
-Bold es una plataforma de gestión industrial para fabricantes. Centraliza los datos maestros, el stock, la planificación, la producción, las compras, las ventas y la trazabilidad operativa.
-
-La idea principal es sencilla: defines lo que compras, fabricas y vendes; registras lo que ocurre en planta y almacén; y Bold usa esa información para mostrar disponibilidad, necesidades y trabajo pendiente.
-
-<Info>
-  En la interfaz, Bold usa el término **Artículo** para la unidad física sobre la que controlas stock. En otros sistemas puede aparecer como SKU.
-</Info>
+Bold es una plataforma de gestión industrial para fabricantes. Centraliza los datos maestros, el stock, la planificación, la fabricación, el almacén, el mantenimiento, los costes y la información operativa.
 
 ## Qué puedes gestionar
 
 <Columns cols={2}>
-  <Card title="Catálogo" icon="boxes" href="/es/ayuda/articulos-y-skus/introduccion">
+  <Card title="Catálogo" icon="boxes" href="/ayuda/articulos-y-skus/introduccion">
     Define productos, artículos, propiedades, variantes, lotes y reglas de aprovisionamiento.
   </Card>
-  <Card title="Almacén" icon="warehouse" href="/es/ayuda/almacen/introduccion">
-    Controla ubicaciones, recepciones, envíos, inventarios, movimientos y stock disponible.
+  <Card title="Planificación" icon="calendar-range" href="/ayuda/planificacion/introduccion">
+    Revisa demanda, suministro, stock proyectado y recomendaciones de compra o fabricación.
   </Card>
-  <Card title="Planificación" icon="calendar-range" href="/es/ayuda/planificacion/introduccion">
-    Conecta demanda, suministro, stock proyectado y recomendaciones de compra o fabricación.
+  <Card title="Fabricación" icon="factory" href="/ayuda/produccion/introduccion">
+    Configura recetas, lanza órdenes y registra operaciones, consumos, controles y producción.
   </Card>
-  <Card title="Producción" icon="factory" href="/es/ayuda/produccion/introduccion">
-    Crea recetas, lanza órdenes de fabricación y registra operaciones, consumos y salidas.
+  <Card title="Almacén" icon="warehouse" href="/ayuda/almacen/introduccion">
+    Controla ubicaciones, recepciones, envíos, inventarios, bultos, lotes y movimientos.
+  </Card>
+  <Card title="Mantenimiento" icon="wrench" href="/ayuda/mantenimiento/introduccion">
+    Gestiona activos, preventivos, correctivos, acciones, causas y partes de trabajo.
+  </Card>
+  <Card title="Smart Factory" icon="sparkles" href="/ayuda/smart-factory/introduccion">
+    Consulta informes, habla con Boldy y revisa tareas ejecutadas por agentes.
   </Card>
 </Columns>
 
-## Cómo se conectan los módulos
-
-Un **Producto** agrupa variantes de una misma familia. Un **Artículo** representa una variante física concreta. Ese artículo se usa después en pedidos, recetas, stock, recepciones, envíos, fabricación y costes.
-
-Por ejemplo, una fábrica de mesas puede trabajar con esta estructura:
-
-| Elemento | Ejemplo | Para qué sirve |
-| --- | --- | --- |
-| Producto | Mesa Nórdica | Agrupa variantes comerciales o técnicas. |
-| Propiedades | Color, largo, acabado | Diferencian las variantes. |
-| Artículo | Mesa Nórdica blanca 120 cm | Se compra, fabrica, almacena o vende. |
-| Receta | Montaje de Mesa Nórdica | Define materiales, operaciones y controles. |
-| Orden de fabricación | OF-10038 | Ejecuta la fabricación real. |
-| Recepción | REC-2305 | Aumenta stock cuando entra material. |
-| Envío | ENV-1807 | Reduce stock cuando sale material. |
-
-## Ciclo básico
+## Flujo de trabajo
 
 <Steps>
-  <Step title="Configura los datos maestros">
-    Crea productos, artículos, ubicaciones, proveedores, clientes, empleados y recursos. Estos datos sostienen el resto de operaciones.
+  <Step title="Configura la base">
+    Crea empresa, usuarios, catálogo, ubicaciones, clientes, proveedores, empleados y recursos.
   </Step>
-  <Step title="Registra demanda y suministro">
-    Los pedidos de venta generan demanda. Los pedidos de compra, las peticiones de fabricación y las órdenes de fabricación generan suministro previsto o real.
+  <Step title="Registra compromisos">
+    Confirma pedidos de venta, pedidos de compra y peticiones de fabricación cuando quieras que afecten a planificación.
   </Step>
   <Step title="Ejecuta operaciones">
-    Recibe material, mueve stock, fabrica, consume componentes, registra producción y completa envíos.
+    Recibe material, mueve stock, fabrica, consume componentes, registra producción y prepara envíos.
   </Step>
-  <Step title="Revisa el estado operativo">
-    Consulta stock disponible, stock proyectado, recomendaciones, movimientos y estados para detectar bloqueos antes de que afecten a cliente o planta.
+  <Step title="Revisa resultados">
+    Usa stock proyectado, KPIs, costes, movimientos, estados e informes para detectar bloqueos.
   </Step>
 </Steps>
 
-## Trazabilidad
+## Cómo leer esta documentación
 
-Bold protege la información que ya forma parte del histórico. Por eso algunas acciones quedan limitadas cuando una recepción ya está recibida, un envío ya está expedido, una orden ya se empezó o un pedido ya tiene movimientos relacionados.
-
-<Tip>
-  Si necesitas corregir una operación ya ejecutada, busca primero la acción de reversión o ajuste. Evita editar directamente datos históricos que expliquen movimientos reales.
-</Tip>
+La documentación de producto explica cómo trabajar en la interfaz de Bold. La documentación de desarrolladores queda separada para integraciones técnicas.

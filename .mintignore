@@ -2,9 +2,10 @@
 # .git, .github, .claude, .agents, .idea, node_modules,
 # README.md, LICENSE.md, CHANGELOG.md, CONTRIBUTING.md
 
-# Draft content
-drafts/
-*.draft.mdx
-
-# Scraped source content (not part of the docs site)
-sources/
+sources/**
+AGENTS.md
+.claude/**
+.idea/**
+skills-lock.json
+pnpm-lock.yaml
+pnpm-workspace.yaml

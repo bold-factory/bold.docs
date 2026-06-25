@@ -1,6 +1,7 @@
 ---
 title: "Reglas del sistema"
 description: "Reglas funcionales que Bold aplica para proteger trazabilidad y coherencia."
+icon: "shield-alert"
 ---
 
 Bold aplica reglas de negocio para que los datos operativos sigan explicando lo que ocurrió en fábrica y almacén. Algunas reglas bloquean cambios directos cuando ya existe actividad histórica.
@@ -37,8 +38,13 @@ Bold aplica reglas de negocio para que los datos operativos sigan explicando lo 
 
 ## Permisos
 
-Bold valida permisos antes de ejecutar acciones protegidas. Si falta un permiso, la API responde `403` y la interfaz oculta o bloquea acciones según el caso.
+Bold valida permisos antes de ejecutar acciones protegidas. Si falta un permiso, la interfaz oculta o bloquea acciones según el caso.
 
 <Tip>
   Si una acción no aparece o falla, revisa dos cosas: el estado del documento y los permisos del usuario.
 </Tip>
+
+## Relacionado
+
+- [Qué es Bold](/ayuda/primeros-pasos/que-es-bold)
+- [Glosario](/ayuda/referencia-funcional/glosario)

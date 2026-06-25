@@ -1,63 +1,39 @@
 ---
-title: "Introducción"
-description: "Gestiona ubicaciones, recepciones, movimientos, ajustes, inventarios y trazabilidad de stock."
+title: "Almacén"
+description: "Gestiona ubicaciones, contenedores, bultos, recepciones, envíos, inventarios, lotes y movimientos de stock."
+icon: "warehouse"
 ---
 
-El módulo **Almacén** controla dónde está el stock, cómo entra, cómo sale y qué movimientos explican cada cambio. Es la base física para compras, ventas, planificación y producción.
+Almacén controla dónde está el stock, cómo entra, cómo sale y qué movimientos explican cada cambio. Es la base física para compras, ventas, planificación, fabricación y costes.
 
-## Qué gestiona almacén
+## Áreas de trabajo
 
 <Columns cols={2}>
-  <Card title="Ubicaciones" icon="map-pin" href="/es/ayuda/almacen/crear-ubicaciones">
-    Lugares donde se almacena, recibe, consume o envía stock.
+  <Card title="Ubicaciones" icon="map-pin" href="/ayuda/almacen/crear-ubicaciones">
+    Lugares donde recibes, almacenas, consumes, preparas o envías material.
   </Card>
-  <Card title="Recepciones" icon="package-plus" href="/es/ayuda/almacen/recibir-material">
+  <Card title="Recepciones" icon="package-plus" href="/ayuda/almacen/recibir-material">
     Entradas de material desde proveedores, compras u otros orígenes.
   </Card>
-  <Card title="Movimientos" icon="arrow-left-right" href="/es/ayuda/almacen/mover-stock">
-    Cambios de ubicación, lote o cantidad dentro del almacén.
+  <Card title="Bultos" icon="package" href="/ayuda/almacen/bultos">
+    Agrupan unidades físicas para mover o consultar stock con más contexto.
   </Card>
-  <Card title="Inventarios" icon="clipboard-check" href="/es/ayuda/almacen/hacer-inventario">
+  <Card title="Inventarios" icon="clipboard-check" href="/ayuda/almacen/hacer-inventario">
     Recuentos físicos que regularizan diferencias con el sistema.
   </Card>
 </Columns>
 
-## Cómo calcula Bold el stock
+## Qué cambia el stock
 
-Bold calcula el stock a partir de movimientos reales: recepciones, envíos, consumos, fabricaciones, ajustes e inventarios. El resultado puede consultarse agregado, pero internamente se relaciona con artículo, ubicación y lote cuando aplica.
-
-<Info>
-  El stock físico no descuenta compromisos futuros. Para saber qué queda libre para nuevas necesidades, consulta el **stock disponible** y el **stock proyectado**.
-</Info>
-
-## Conceptos clave
-
-| Concepto | Qué significa |
+| Acción | Efecto |
 | --- | --- |
-| Stock físico | Cantidad actual registrada en almacén. |
-| Stock disponible | Stock físico menos demanda comprometida. |
-| Stock proyectado | Stock esperado después de entradas y salidas previstas. |
-| Lote | Conjunto trazable de unidades de un artículo. |
-| Ubicación | Lugar donde el stock aumenta, disminuye o se mueve. |
-| Movimiento | Registro que explica un cambio de stock. |
+| Recibir material | Aumenta stock físico. |
+| Enviar material | Reduce stock físico. |
+| Mover stock | Cambia ubicación, lote o bulto sin cambiar el total. |
+| Ajustar stock | Corrige una diferencia puntual. |
+| Hacer inventario | Regulariza según recuento físico. |
+| Consumir o producir | Actualiza stock desde fabricación. |
 
-## Flujo habitual
+## Antes de empezar
 
-<Steps>
-  <Step title="Crea ubicaciones">
-    Define dónde puede estar el stock. Puedes empezar con una ubicación general y detallar más adelante.
-  </Step>
-  <Step title="Recibe material">
-    Registra entradas con artículo, cantidad, ubicación y lote si corresponde.
-  </Step>
-  <Step title="Mueve o consume stock">
-    Traslada material, consume componentes en producción o prepáralo para envío.
-  </Step>
-  <Step title="Regulariza diferencias">
-    Usa ajustes o inventarios cuando el recuento físico no coincide con Bold.
-  </Step>
-</Steps>
-
-<Warning>
-  Bold puede permitir stock negativo para no bloquear una operación urgente, pero ese valor indica que falta regularizar una recepción, inventario, lote o consumo.
-</Warning>
+Define ubicaciones y decide qué artículos trabajan con lotes. Si operas con móviles o tablets, prepara códigos de ubicación, bultos y flujos de lectura para evitar capturas manuales.

@@ -1,57 +1,45 @@
 ---
-title: "Introducción"
-description: "Gestiona recetas, peticiones, órdenes, operaciones, consumos y producción terminada."
+title: "Fabricación"
+description: "Configura recetas, recursos, órdenes, operaciones, consumos, producción y KPIs de planta."
+icon: "factory"
 ---
 
-El módulo **Producción** separa diseño, planificación y ejecución. Primero defines cómo se fabrica un producto. Después creas necesidades y órdenes. Finalmente registras operaciones, consumos, tiempos y salidas reales.
+Fabricación convierte necesidades en trabajo ejecutable. Conecta recetas, recursos, órdenes, operaciones, controles, consumos, salidas y datos de productividad.
 
-## Conceptos principales
+## Áreas de trabajo
 
 <Columns cols={2}>
-  <Card title="Receta" icon="book-open" href="/es/ayuda/produccion/crear-una-receta">
-    Molde de fabricación con operaciones, entradas, pasos, controles y restricciones.
+  <Card title="Cuadros de mando" icon="gauge" href="/ayuda/produccion/cuadros-de-mando">
+    Analiza KPIs de fabricación, productividad, tiempos, pausas y calidad.
   </Card>
-  <Card title="Petición" icon="clipboard-list">
-    Necesidad de fabricar un artículo, cantidad y fecha, sin definir todavía la ejecución completa.
+  <Card title="Recetas" icon="book-open" href="/ayuda/produccion/crear-una-receta">
+    Define operaciones, entradas, salidas, pasos, controles, versiones y restricciones.
   </Card>
-  <Card title="Orden de fabricación" icon="factory" href="/es/ayuda/produccion/crear-una-orden-de-fabricacion">
-    Trabajo ejecutable con operaciones reales, consumos, salidas y progreso.
+  <Card title="Órdenes" icon="factory" href="/ayuda/produccion/crear-una-orden-de-fabricacion">
+    Ejecutan el trabajo real y guardan progreso, consumos, tiempos y producción.
   </Card>
-  <Card title="Operación" icon="workflow" href="/es/ayuda/produccion/completar-operaciones">
-    Etapa de trabajo que se ejecuta en una estación o recurso principal.
+  <Card title="Secuenciación" icon="route" href="/ayuda/produccion/secuenciar-ordenes">
+    Ordena operaciones para que planta sepa qué hacer en cada momento.
   </Card>
 </Columns>
-
-## Receta frente a orden
-
-Una receta es el diseño del proceso. No ejecuta trabajo por sí sola.
-
-Una orden de fabricación es la ejecución real. Copia la estructura de una versión de receta y registra actividad concreta: empleados, estaciones, tiempos, consumos, inspecciones, interrupciones y producción.
-
-<Info>
-  Las versiones activas de receta quedan protegidas para conservar trazabilidad. Para cambiar el proceso, crea o copia una nueva versión y actívala cuando esté revisada.
-</Info>
 
 ## Flujo habitual
 
 <Steps>
-  <Step title="Define producto y artículos">
-    Crea el artículo terminado y los componentes que se consumirán.
+  <Step title="Configura el proceso">
+    Crea recursos, procesos, motivos de pausa y recetas con controles claros.
   </Step>
-  <Step title="Crea y activa una receta">
-    Añade operaciones, entradas, pasos, controles, co-productos y restricciones.
-  </Step>
-  <Step title="Crea una petición">
-    Indica qué artículo se necesita fabricar, cantidad y fecha.
-  </Step>
-  <Step title="Lanza una orden">
-    Selecciona cantidad, receta o versión y crea el trabajo ejecutable.
+  <Step title="Crea trabajo ejecutable">
+    Convierte peticiones en órdenes y asigna recursos si el proceso lo requiere.
   </Step>
   <Step title="Ejecuta operaciones">
-    Inicia, pausa, consume, registra producción y termina operaciones.
+    Inicia operaciones, registra avances, completa controles, consume componentes y registra salidas.
+  </Step>
+  <Step title="Analiza resultados">
+    Revisa pausas, tiempos, rendimiento, defectos, OEE y desviaciones de coste.
   </Step>
 </Steps>
 
 <Warning>
-  Una orden con actividad trazable no se elimina sin más. Si ya tiene tiempos, consumos u otros registros, se cancela o corrige con acciones específicas.
+  Una orden con actividad conserva histórico. Corrige con acciones operativas cuando existan en vez de editar datos que ya explican trabajo real.
 </Warning>
