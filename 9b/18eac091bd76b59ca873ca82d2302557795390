@@ -1,0 +1,69 @@
+desarrolladores/empezar/autenticacion.mdx
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-63
+desarrolladores/webhooks/reintentos-y-errores.mdx
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-57
+desarrolladores/api-reference/items.mdx
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-67
+desarrolladores/webhooks/introduccion.mdx
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-57
+ayuda/ventas/preparar-salida.mdx
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-59
+novedades/changelog.mdx
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-45
+desarrolladores/empezar/errores.mdx
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-60
+desarrolladores/empezar/introduccion.mdx
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-71
+desarrolladores/webhooks/payloads.mdx
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-57
+ayuda/ventas/completar-envio.mdx
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-61
+ayuda/referencia-funcional/reglas-del-sistema.mdx
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-44
+desarrolladores/api-reference/production.mdx
+  s_b2ae671ef1f322::t_1c4afcfde6cbcd 37,40-41
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-36,38-39,42-71
+ayuda/referencia-funcional/glosario.mdx
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-39
+desarrolladores/api-reference/purchases.mdx
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-32,35-37,40-63
+  s_b2ae671ef1f322::t_1c4afcfde6cbcd 33-34,38-39
+ayuda/usuarios-y-permisos/invitar-usuarios.mdx
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-50
+ayuda/referencia-funcional/estados.mdx
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-64
+ayuda/usuarios-y-permisos/roles-y-permisos.mdx
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-58
+desarrolladores/webhooks/eventos-disponibles.mdx
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-9,11-63
+  s_b2ae671ef1f322::t_1c4afcfde6cbcd 10
+desarrolladores/api-reference/sales.mdx
+  s_b2ae671ef1f322::t_1c4afcfde6cbcd 33-34,38-39
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-32,35-37,40-63
+ayuda/usuarios-y-permisos/permisos-por-modulo.mdx
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-71
+desarrolladores/api-reference/warehouse.mdx
+  s_b2ae671ef1f322::t_1c4afcfde6cbcd 33-35,39,43
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-32,36-38,40-42,44-71
+desarrolladores/api-reference/planning.mdx
+  s_b2ae671ef1f322::t_1c4afcfde6cbcd 30,34
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-29,31-33,35-69
+desarrolladores/empezar/paginacion.mdx
+  s_b2ae671ef1f322::t_ca5c1e35e90587 3,5-72
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.13",
+  "base_commit_sha": "9b18eac091bd76b59ca873ca82d2302557795390",
+  "prompts": {},
+  "sessions": {
+    "s_b2ae671ef1f322": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019eff8a-0e95-7793-bba8-dd407b2a1aa9",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
