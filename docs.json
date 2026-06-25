@@ -9,8 +9,7 @@
   },
   "logo": {
     "light": "/images/logo-multicolor.svg",
-    "dark": "/images/logo-multicolor.svg",
-    "href": "https://bold-factory.com"
+    "dark": "/images/logo-multicolor.svg"
   },
   "favicon": {
     "light": "/images/emblem-multicolor.png",
