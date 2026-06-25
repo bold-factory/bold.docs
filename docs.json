@@ -8,7 +8,7 @@
     "dark": "#040404"
   },
   "logo": {
-    "light": "/images/logo-monocolor.svg",
+    "light": "/images/logo-multicolor.svg",
     "dark": "/images/logo-multicolor.svg",
     "href": "https://bold-factory.com"
   },
@@ -19,120 +19,146 @@
   "navbar": {
     "primary": {
       "type": "button",
-      "label": "Book a Demo",
-      "href": "https://bold-factory.com/en/contact"
+      "label": "Solicitar demo",
+      "href": "https://bold-factory.com/contact"
     },
     "links": []
   },
   "navigation": {
     "languages": [
       {
-        "language": "en",
-        "tabs": [
-          {
-            "tab": "Documentation",
-            "groups": [
-              {
-                "group": "Get Started",
-                "pages": [
-                  "introduction",
-                  "getting-started/onboarding",
-                  "getting-started/plans-and-pricing"
-                ]
-              },
-              {
-                "group": "Production (MES)",
-                "pages": [
-                  "mes/overview",
-                  "mes/process-recipes",
-                  "mes/operator-work-mode",
-                  "mes/quality-controls",
-                  "mes/sequencing-and-scheduling",
-                  "mes/oee"
-                ]
-              },
-              {
-                "group": "Planning & Purchasing (MRP)",
-                "pages": [
-                  "mrp/overview",
-                  "mrp/purchasing-assistant",
-                  "mrp/demand-forecasting",
-                  "mrp/order-allocation"
-                ]
-              },
-              {
-                "group": "Warehouse (WMS)",
-                "pages": [
-                  "wms/overview",
-                  "wms/stock-and-locations",
-                  "wms/delivery-note-scanning",
-                  "wms/inventory-and-traceability"
-                ]
-              },
-              {
-                "group": "Maintenance (CMMS)",
-                "pages": [
-                  "cmms/overview",
-                  "cmms/preventive-and-corrective",
-                  "cmms/team-scheduling",
-                  "cmms/maintenance-kpis"
-                ]
-              },
-              {
-                "group": "AI Agents & Analytics",
-                "pages": [
-                  "ai-agents/overview",
-                  "ai-agents/configuring-agents",
-                  "ai-agents/use-cases",
-                  "analytics/dashboards-and-reports"
-                ]
-              },
-              {
-                "group": "Integrations & API",
-                "pages": [
-                  "integrations/overview",
-                  "integrations/public-api",
-                  "integrations/webhooks",
-                  "integrations/erp-connectivity"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
         "language": "es",
         "default": true,
         "tabs": [
           {
-            "tab": "Documentación",
+            "tab": "Ayuda",
             "groups": [
               {
                 "group": "Primeros pasos",
                 "pages": [
-                  "que-es-bold"
+                  "ayuda/primeros-pasos/que-es-bold",
+                  "ayuda/primeros-pasos/flujo-basico-de-trabajo",
+                  "ayuda/primeros-pasos/configurar-tu-empresa",
+                  "ayuda/primeros-pasos/crear-tu-primera-fabricacion"
                 ]
               },
               {
-                "group": "Fabricación",
+                "group": "Artículos y SKUs",
                 "pages": [
-                  "diferencias-entre-recursos-y-procesos"
+                  "ayuda/articulos-y-skus/introduccion",
+                  "ayuda/articulos-y-skus/crear-un-producto",
+                  "ayuda/articulos-y-skus/crear-un-sku",
+                  "ayuda/articulos-y-skus/editar-un-sku",
+                  "ayuda/articulos-y-skus/producto-vs-sku",
+                  "ayuda/articulos-y-skus/trabajar-con-lotes"
                 ]
               },
               {
-                "group": "Mantenimiento",
-                "pages": []
+                "group": "Almacén",
+                "pages": [
+                  "ayuda/almacen/introduccion",
+                  "ayuda/almacen/crear-ubicaciones",
+                  "ayuda/almacen/consultar-stock",
+                  "ayuda/almacen/recibir-material",
+                  "ayuda/almacen/mover-stock",
+                  "ayuda/almacen/ajustar-stock",
+                  "ayuda/almacen/hacer-inventario",
+                  "ayuda/almacen/ver-movimientos-de-stock",
+                  "ayuda/almacen/solucion-de-problemas-de-stock"
+                ]
+              },
+              {
+                "group": "Planificación",
+                "pages": [
+                  "ayuda/planificacion/introduccion",
+                  "ayuda/planificacion/entender-el-stock-proyectado",
+                  "ayuda/planificacion/crear-demanda",
+                  "ayuda/planificacion/crear-suministro",
+                  "ayuda/planificacion/saber-que-comprar",
+                  "ayuda/planificacion/saber-que-fabricar",
+                  "ayuda/planificacion/revisar-recomendaciones"
+                ]
+              },
+              {
+                "group": "Producción",
+                "pages": [
+                  "ayuda/produccion/introduccion",
+                  "ayuda/produccion/crear-una-receta",
+                  "ayuda/produccion/crear-una-orden-de-fabricacion",
+                  "ayuda/produccion/ejecutar-una-orden",
+                  "ayuda/produccion/completar-operaciones",
+                  "ayuda/produccion/consumir-componentes",
+                  "ayuda/produccion/registrar-produccion",
+                  "ayuda/produccion/solucion-de-problemas-de-produccion"
+                ]
+              },
+              {
+                "group": "Compras",
+                "pages": [
+                  "ayuda/compras/introduccion",
+                  "ayuda/compras/crear-pedido-de-compra",
+                  "ayuda/compras/recibir-pedido-de-compra",
+                  "ayuda/compras/ver-compras-pendientes"
+                ]
+              },
+              {
+                "group": "Ventas",
+                "pages": [
+                  "ayuda/ventas/introduccion",
+                  "ayuda/ventas/crear-pedido-de-venta",
+                  "ayuda/ventas/preparar-salida",
+                  "ayuda/ventas/completar-envio"
+                ]
+              },
+              {
+                "group": "Usuarios y permisos",
+                "pages": [
+                  "ayuda/usuarios-y-permisos/invitar-usuarios",
+                  "ayuda/usuarios-y-permisos/roles-y-permisos",
+                  "ayuda/usuarios-y-permisos/permisos-por-modulo"
+                ]
+              },
+              {
+                "group": "Referencia funcional",
+                "pages": [
+                  "ayuda/referencia-funcional/estados",
+                  "ayuda/referencia-funcional/glosario",
+                  "ayuda/referencia-funcional/reglas-del-sistema"
+                ]
               }
             ]
           },
           {
             "tab": "Desarrolladores",
-            "pages": [
-              "autenticacion",
-              "webhooks",
+            "groups": [
               {
-                "group": "Referencia API",
-                "openapi": "https://api.bold-factory.com/openapi/v1.json"
+                "group": "Empezar",
+                "pages": [
+                  "desarrolladores/empezar/introduccion",
+                  "desarrolladores/empezar/autenticacion",
+                  "desarrolladores/empezar/errores",
+                  "desarrolladores/empezar/paginacion"
+                ]
+              },
+              {
+                "group": "Webhooks",
+                "pages": [
+                  "desarrolladores/webhooks/introduccion",
+                  "desarrolladores/webhooks/eventos-disponibles",
+                  "desarrolladores/webhooks/reintentos-y-errores",
+                  "desarrolladores/webhooks/payloads"
+                ]
+              },
+              {
+                "group": "API Reference",
+                "pages": [
+                  "desarrolladores/api-reference/items",
+                  "desarrolladores/api-reference/warehouse",
+                  "desarrolladores/api-reference/planning",
+                  "desarrolladores/api-reference/production",
+                  "desarrolladores/api-reference/purchases",
+                  "desarrolladores/api-reference/sales"
+                ]
               }
             ]
           },
@@ -142,7 +168,7 @@
               {
                 "group": "Changelog",
                 "pages": [
-                  "v1-0"
+                  "novedades/changelog"
                 ]
               }
             ]
@@ -162,7 +188,7 @@
   "markdown": {
     "schema": false
   },
-  "description": "Bold Factory is a modern MES/MOM platform designed for manufacturing SMEs.",
+  "description": "Bold Factory es una plataforma de gestión industrial para fabricantes.",
   "background": {
     "decoration": "gradient"
   },
