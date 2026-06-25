@@ -1,0 +1,151 @@
+ayuda/almacen/ver-movimientos-de-stock.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/articulos-y-skus/producto-vs-sku.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/primeros-pasos/crear-tu-primera-fabricacion.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+desarrolladores/empezar/introduccion.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+desarrolladores/webhooks/eventos-disponibles.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/ventas/introduccion.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/articulos-y-skus/crear-un-sku.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/planificacion/saber-que-comprar.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/articulos-y-skus/introduccion.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/produccion/introduccion.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+desarrolladores/api-reference/warehouse.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/almacen/mover-stock.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/primeros-pasos/que-es-bold.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 3-4
+ayuda/ventas/crear-pedido-de-venta.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/usuarios-y-permisos/roles-y-permisos.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/compras/recibir-pedido-de-compra.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/referencia-funcional/reglas-del-sistema.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+desarrolladores/webhooks/introduccion.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/almacen/introduccion.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/produccion/completar-operaciones.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/almacen/crear-ubicaciones.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/planificacion/saber-que-fabricar.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+desarrolladores/empezar/paginacion.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/planificacion/introduccion.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+desarrolladores/api-reference/items.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 2-4
+ayuda/usuarios-y-permisos/invitar-usuarios.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+desarrolladores/api-reference/planning.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+desarrolladores/empezar/autenticacion.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 3-4
+desarrolladores/api-reference/production.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/compras/crear-pedido-de-compra.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+desarrolladores/api-reference/purchases.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+docs.json
+  h_55f2ba4d68b42c 11
+  s_0d91ccb369913c::t_fd22a183f1133e 22-23,30-31,34,37,39-42,46,48-53,57,59-67,71,73-79,83,85-92,96,98-101,105,107-110,112,114,116-118,122,124-126,133-142,144-161,171,191
+ayuda/ventas/completar-envio.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+desarrolladores/empezar/errores.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/produccion/ejecutar-una-orden.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/articulos-y-skus/trabajar-con-lotes.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/articulos-y-skus/crear-un-producto.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/almacen/solucion-de-problemas-de-stock.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/produccion/crear-una-orden-de-fabricacion.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/almacen/consultar-stock.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/produccion/consumir-componentes.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/produccion/registrar-produccion.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/primeros-pasos/flujo-basico-de-trabajo.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/articulos-y-skus/editar-un-sku.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/usuarios-y-permisos/permisos-por-modulo.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/primeros-pasos/configurar-tu-empresa.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/planificacion/crear-suministro.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/planificacion/crear-demanda.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/planificacion/entender-el-stock-proyectado.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/compras/ver-compras-pendientes.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/referencia-funcional/estados.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/almacen/ajustar-stock.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+novedades/changelog.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/produccion/solucion-de-problemas-de-produccion.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+desarrolladores/webhooks/reintentos-y-errores.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/produccion/crear-una-receta.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/compras/introduccion.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/ventas/preparar-salida.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/referencia-funcional/glosario.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/planificacion/revisar-recomendaciones.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+ayuda/almacen/hacer-inventario.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+desarrolladores/api-reference/sales.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 2-4
+ayuda/almacen/recibir-material.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+desarrolladores/webhooks/payloads.mdx
+  s_0d91ccb369913c::t_fd22a183f1133e 1-4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.13",
+  "base_commit_sha": "d04e7c4d5551e435a3485fc09c833c6e95299512",
+  "prompts": {},
+  "humans": {
+    "h_55f2ba4d68b42c": {
+      "author": "Pablo López <pablo@bold-factory.com>"
+    }
+  },
+  "sessions": {
+    "s_0d91ccb369913c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019eff5a-e6f2-7a12-9fb5-c79a064cd244",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
