@@ -26,72 +26,125 @@
     ]
   },
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Documentation",
-        "groups": [
+        "language": "en",
+        "tabs": [
           {
-            "group": "Get Started",
-            "pages": [
-              "introduction",
-              "getting-started/onboarding",
-              "getting-started/plans-and-pricing"
+            "tab": "Documentation",
+            "groups": [
+              {
+                "group": "Get Started",
+                "pages": [
+                  "introduction",
+                  "getting-started/onboarding",
+                  "getting-started/plans-and-pricing"
+                ]
+              },
+              {
+                "group": "Production (MES)",
+                "pages": [
+                  "mes/overview",
+                  "mes/process-recipes",
+                  "mes/operator-work-mode",
+                  "mes/quality-controls",
+                  "mes/sequencing-and-scheduling",
+                  "mes/oee"
+                ]
+              },
+              {
+                "group": "Planning & Purchasing (MRP)",
+                "pages": [
+                  "mrp/overview",
+                  "mrp/purchasing-assistant",
+                  "mrp/demand-forecasting",
+                  "mrp/order-allocation"
+                ]
+              },
+              {
+                "group": "Warehouse (WMS)",
+                "pages": [
+                  "wms/overview",
+                  "wms/stock-and-locations",
+                  "wms/delivery-note-scanning",
+                  "wms/inventory-and-traceability"
+                ]
+              },
+              {
+                "group": "Maintenance (CMMS)",
+                "pages": [
+                  "cmms/overview",
+                  "cmms/preventive-and-corrective",
+                  "cmms/team-scheduling",
+                  "cmms/maintenance-kpis"
+                ]
+              },
+              {
+                "group": "AI Agents & Analytics",
+                "pages": [
+                  "ai-agents/overview",
+                  "ai-agents/configuring-agents",
+                  "ai-agents/use-cases",
+                  "analytics/dashboards-and-reports"
+                ]
+              },
+              {
+                "group": "Integrations & API",
+                "pages": [
+                  "integrations/overview",
+                  "integrations/public-api",
+                  "integrations/webhooks",
+                  "integrations/erp-connectivity"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "es",
+        "default": true,
+        "tabs": [
+          {
+            "tab": "Documentación",
+            "groups": [
+              {
+                "group": "Fabricación",
+                "pages": [
+                  "diferencias-entre-recursos-y-procesos"
+                ]
+              }
             ]
           },
           {
-            "group": "Production (MES)",
-            "pages": [
-              "mes/overview",
-              "mes/process-recipes",
-              "mes/operator-work-mode",
-              "mes/quality-controls",
-              "mes/sequencing-and-scheduling",
-              "mes/oee"
-            ]
+            "tab": "Referencia API",
+            "openapi": "https://api.bold-factory.com/openapi/v1.json"
           },
           {
-            "group": "Planning & Purchasing (MRP)",
-            "pages": [
-              "mrp/overview",
-              "mrp/purchasing-assistant",
-              "mrp/demand-forecasting",
-              "mrp/order-allocation"
-            ]
-          },
-          {
-            "group": "Warehouse (WMS)",
-            "pages": [
-              "wms/overview",
-              "wms/stock-and-locations",
-              "wms/delivery-note-scanning",
-              "wms/inventory-and-traceability"
-            ]
-          },
-          {
-            "group": "Maintenance (CMMS)",
-            "pages": [
-              "cmms/overview",
-              "cmms/preventive-and-corrective",
-              "cmms/team-scheduling",
-              "cmms/maintenance-kpis"
-            ]
-          },
-          {
-            "group": "AI Agents & Analytics",
-            "pages": [
-              "ai-agents/overview",
-              "ai-agents/configuring-agents",
-              "ai-agents/use-cases",
-              "analytics/dashboards-and-reports"
-            ]
-          },
-          {
-            "group": "Integrations & API",
-            "pages": [
-              "integrations/overview",
-              "integrations/public-api",
-              "integrations/webhooks",
-              "integrations/erp-connectivity"
+            "tab": "Test",
+            "dropdowns": [
+              {
+                "dropdown": "Test dropdown",
+                "anchors": [
+                  {
+                    "anchor": "Anchor 1"
+                  },
+                  {
+                    "anchor": "Anchor 2"
+                  }
+                ]
+              },
+              {
+                "dropdown": "Test dropdown 2",
+                "products": [
+                  {
+                    "product": "Product 1"
+                  },
+                  {
+                    "product": "Product 2"
+                  }
+                ]
+              }
             ]
           }
         ]
