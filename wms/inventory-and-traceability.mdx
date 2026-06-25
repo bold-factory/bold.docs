@@ -1,0 +1,113 @@
+---
+title: "Inventory Counts and Full Lot Traceability in Bold WMS"
+sidebarTitle: "Traceability"
+description: "Bold keeps a live perpetual inventory updated by every production run, with full lot traceability from goods receipt through to customer dispatch."
+---
+
+Traditional stock management runs on a cycle of weekly counts, paper forms, and manually updated spreadsheets. By the time the numbers reach a manager's desk, they are already out of date. Bold WMS takes a different approach: every warehouse event updates the inventory in real time, so the perpetual count is always current, and when you do need to perform a physical count it takes minutes on a phone rather than hours on paper.
+
+## Perpetual Inventory: Always Up to Date
+
+Bold maintains a live inventory that reflects every movement in your warehouse without any manual reconciliation. The following events all update stock counts automatically:
+
+- **Goods receipt** from a supplier (via delivery note scanning or manual entry)
+- **Production consumption** when a work order starts on the shop floor (via Bold MES)
+- **Finished-goods creation** when a production run is completed
+- **Internal transfers** between warehouse locations
+- **Inventory adjustments** recorded during a physical count
+- **Customer dispatches** and outbound shipments
+
+<Note>
+  Because production runs automatically consume raw materials and create finished goods in Bold, weekly manual stock counts to catch production-related discrepancies are no longer necessary. Your perpetual inventory is as current as your last production event.
+</Note>
+
+## Running a Physical Inventory Count
+
+When you do need to verify physical quantities — for an audit, a period-end check, or simply spot-checking a suspicious location — Bold makes it fast and entirely paperless.
+
+<Steps>
+  <Step title="Create an Inventory Session">
+    Go to **WMS → Inventory Counts → New Count**. Choose the scope: full warehouse, a specific zone, a shelf, or a single SKU. Give the session a name (for example, "Q2 Audit — Zone A") and set a cut-off date if needed.
+  </Step>
+  <Step title="Assign Operators">
+    Add the team members who will carry out the count. Each operator receives the count tasks assigned to their section on their mobile device — no printed sheets to distribute.
+  </Step>
+  <Step title="Scan and Count On-Site">
+    Each operator goes to their assigned locations, scans the location QR code (or selects it from the list), and enters the physical quantity they observe. Bold shows the system quantity only after the operator submits their count, preventing anchoring bias.
+  </Step>
+  <Step title="Review Discrepancies">
+    From the manager dashboard, review all locations where the physical count differs from the system quantity. For each discrepancy, you can approve the adjustment, request a recount, or add a note explaining the variance.
+  </Step>
+  <Step title="Close and Apply Adjustments">
+    Once all discrepancies are resolved, close the inventory session. Bold applies all approved adjustments to the live stock in a single, auditable transaction — with the session name, operator names, and timestamps recorded.
+  </Step>
+</Steps>
+
+<Tip>
+  You can count a single shelf or a single SKU at any time without opening a formal inventory session. Use **WMS → Quick Count** for spot checks that take under a minute.
+</Tip>
+
+## Inventory Cycle Types
+
+Bold supports several approaches to physical stock verification, so you can choose the method that fits your operation.
+
+<AccordionGroup>
+  <Accordion title="Fixed (Periodic) Inventory">
+    Count everything in the warehouse on a fixed schedule — monthly, quarterly, or annually. Useful when your operation requires a formal, documented full-count for auditors or year-end financials. Bold generates a complete report with before/after quantities and all adjustments applied.
+  </Accordion>
+  <Accordion title="Continuous (Ongoing) Inventory">
+    Count a different section of the warehouse every working day so that, over the course of a month, everything has been checked at least once. No single count session disrupts operations, and discrepancies are caught faster. Bold's scheduling tool assigns sections automatically to balance workload across your team.
+  </Accordion>
+  <Accordion title="Rotating (ABC) Inventory">
+    Count your highest-value or fastest-moving items (A class) most frequently, and lower-priority items less often. Configure your item classifications in Bold and the system will generate a rotating count schedule that reflects those priorities automatically.
+  </Accordion>
+</AccordionGroup>
+
+## Full Lot Traceability: From Purchase to Dispatch
+
+Lot traceability means being able to answer, at any moment, two critical questions: "Where did this material come from?" and "Where did it end up?" Bold assigns a lot identifier to goods from the moment they arrive and follows that lot through every subsequent step.
+
+The complete traceability chain in Bold looks like this:
+
+```text
+Supplier purchase receipt  →  Lot assigned on arrival
+        ↓
+Raw material stored at warehouse location
+        ↓
+Consumed on production work order  →  Lot linked to work order
+        ↓
+Finished goods created  →  Finished goods lot linked to input lots
+        ↓
+Dispatched to customer  →  Customer order linked to finished goods lot
+```
+
+At any point in this chain, you can query a lot number and see its full forward and backward history: which supplier delivered it, which work orders consumed it, which finished products it became, and which customers received it.
+
+<AccordionGroup>
+  <Accordion title="How to look up a lot's history">
+    Go to **WMS → Traceability → Lot Search**. Enter the lot number (or scan the label). Bold displays the complete forward and backward chain: supplier, receipt date, warehouse location, work orders, finished goods lots, and dispatch records. You can export the full trace as a PDF for audit documentation.
+  </Accordion>
+  <Accordion title="How lots are assigned at goods receipt">
+    When you confirm a goods receipt in Bold, you are prompted to assign a lot number to each item line. You can enter the supplier's own lot reference, scan a barcode from the packaging, or let Bold generate a sequential lot number automatically. All three options produce a fully traceable lot record.
+  </Accordion>
+  <Accordion title="What happens when a lot is split or merged?">
+    If a lot is split across multiple locations or partially consumed in a work order, Bold maintains traceability for every fragment. The original lot identifier is retained on all sub-quantities, and the history records each split or partial consumption event.
+  </Accordion>
+</AccordionGroup>
+
+## Traceability for Audits, Claims, and Compliance
+
+Full lot traceability is not just a nice-to-have — in several industries it is a legal or contractual requirement.
+
+| Sector | Traceability Requirement |
+|---|---|
+| Food & Beverage | Rapid selective recall by lot; supplier and dispatch records for food safety audits |
+| Pharmaceuticals | Batch-level records for regulatory submissions and patient safety |
+| Automotive | Part genealogy for warranty claims and product liability |
+| General Manufacturing | Customer claims investigation; process improvement analysis |
+
+<Warning>
+  If your industry requires traceability, ensure that **every goods receipt** includes a lot assignment before items are moved to production. A lot not assigned at receipt cannot be retroactively added to the traceability chain without a manual correction record.
+</Warning>
+
+With Bold, the traceability data is always complete as long as your team records receipts and production events in the system. When an auditor arrives or a customer raises a claim, you open Bold, search the lot, and export the complete history — no detective work, no archive diving, no spreadsheet reconstruction.

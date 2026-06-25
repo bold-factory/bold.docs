@@ -1,0 +1,94 @@
+---
+title: "Automatic Delivery Note Scanning for Faster Goods Receipts"
+sidebarTitle: "Delivery Notes"
+description: "Photograph a delivery note and Bold extracts references and quantities, cross-checks against open purchase orders, and flags any discrepancy instantly."
+---
+
+Typing delivery notes line by line is one of the most error-prone tasks in any warehouse. A misread quantity, a transposed reference, or a skipped line can cause stock discrepancies that take hours to untangle. Bold's automatic delivery note scanning replaces that process entirely: take a photo, review the extracted lines, confirm the receipt. Your team gets hours back every week, and transcription errors are eliminated from the very first use.
+
+## How It Works
+
+Bold uses optical character recognition (OCR) to read a supplier delivery note from a photo taken on any mobile device. The extracted lines are automatically matched against open purchase orders already in Bold, so you can confirm a delivery in seconds rather than minutes.
+
+<Steps>
+  <Step title="Open a New Goods Receipt">
+    In Bold, go to **WMS → Goods Receipts → New Receipt**. Select the supplier from the dropdown — this narrows the open purchase orders that Bold will match against.
+  </Step>
+  <Step title="Photograph the Delivery Note">
+    Tap **Scan Delivery Note** and point your phone or tablet camera at the supplier's delivery note. Hold the device steady for a moment — Bold captures the image automatically when it detects a clear document.
+  </Step>
+  <Step title="Review the Extracted Lines">
+    Bold displays the extracted references and quantities in a table. Each line shows the item reference, the quantity on the delivery note, and the quantity on the matching purchase order line. Review for any highlighted discrepancies.
+  </Step>
+  <Step title="Confirm or Adjust">
+    If everything matches, tap **Confirm Receipt**. If there are discrepancies, adjust individual line quantities before confirming (see [Handling Discrepancies](#discrepancies) below). Bold records the receipt, updates stock, and closes or partially fulfils the relevant purchase order lines.
+  </Step>
+  <Step title="Assign to Locations">
+    After confirming quantities, you are prompted to assign each item line to a warehouse location. Scan or select the destination bin — Bold updates the location stock immediately.
+  </Step>
+</Steps>
+
+<Tip>
+  For best scan results, lay the delivery note flat on a hard surface and ensure the text is well-lit and fully within the camera frame. Creased or heavily printed backgrounds may require a manual review of one or two lines.
+</Tip>
+
+## Cross-Checking Against Purchase Orders
+
+The scan alone saves time, but the real value is the automatic cross-check. Bold compares every extracted line against your open purchase orders for that supplier. For each line, you see at a glance:
+
+- **Expected quantity** (from the purchase order)
+- **Delivered quantity** (from the delivery note scan)
+- **Difference** (highlighted in amber for partial, red for over-delivery)
+
+This means you never accidentally receive more than you ordered without a deliberate override, and you always know when a supplier has shipped short.
+
+<Note>
+  Bold only matches delivery note lines against **open** purchase order lines — lines already fully received are excluded automatically, preventing accidental double-receipts.
+</Note>
+
+## Handling Discrepancies {#discrepancies}
+
+Not every delivery matches the purchase order exactly. Bold gives you a clear path for each scenario.
+
+<AccordionGroup>
+  <Accordion title="Under-delivery (supplier shipped less than ordered)">
+    Bold marks the short lines in amber. You can confirm the partial receipt as-is — the purchase order line stays open for the remaining quantity, and you can receive the remainder when the supplier delivers it. Optionally, add a note for your purchasing team directly in the receipt record.
+  </Accordion>
+  <Accordion title="Over-delivery (supplier shipped more than ordered)">
+    Bold marks the excess lines in red and requires an explicit override before you can confirm. You can accept the excess (Bold updates the purchase order accordingly) or reject it (the excess quantity is flagged for return to the supplier).
+  </Accordion>
+  <Accordion title="Unrecognized reference (item not on any open PO)">
+    If Bold cannot match a scanned reference to an open purchase order, it flags the line as unmatched. You can manually link it to an existing item in your catalogue, create a new item on the spot, or mark the line for investigation before confirming the rest of the receipt.
+  </Accordion>
+  <Accordion title="Scan extraction error (OCR misread a value)">
+    If the extracted quantity or reference looks wrong, tap the field to edit it directly before confirming. Bold logs the original scanned value alongside your correction for audit purposes.
+  </Accordion>
+</AccordionGroup>
+
+## Supported Delivery Note Formats
+
+Bold's OCR engine is designed to handle the variety of real-world delivery note formats you encounter from suppliers:
+
+- Printed documents (laser or inkjet, A4 or letter)
+- Pre-printed forms with typed or handwritten quantities
+- Documents in multiple languages (the system extracts numbers and references regardless of language)
+- Multi-page delivery notes (Bold processes all pages in sequence)
+
+<Warning>
+  Handwritten-only delivery notes without any printed structure may produce lower extraction accuracy. In these cases, Bold will extract what it can and highlight fields for manual review before you confirm.
+</Warning>
+
+## Time Saved vs. Manual Entry
+
+The difference becomes clear when you look at the numbers:
+
+| Method | Time per delivery (10-line note) | Error rate |
+|---|---|---|
+| Manual line-by-line entry | 8–12 minutes | High (transcription risk on every field) |
+| Bold delivery note scanning | Under 60 seconds | Near zero (OCR + automatic PO cross-check) |
+
+For a warehouse receiving ten deliveries a day, that is typically one to two hours recovered daily — time your team can spend on work that actually moves product.
+
+<Tip>
+  Delivery note scanning is available from day one on all Bold plans — there is no add-on or extra configuration required. Just open the goods receipt screen on a phone or tablet and tap **Scan Delivery Note**.
+</Tip>

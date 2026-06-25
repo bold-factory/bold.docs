@@ -1,0 +1,91 @@
+---
+title: "Dynamic Order Allocation: Real-Time Material Assignment"
+sidebarTitle: "Order Allocation"
+description: "Bold recalculates in real time which materials go to each Work Order and which stock is reserved per sales order, so you know what to launch or ship."
+---
+
+In most MRP systems, allocation is a batch process: the system recalculates overnight, and by morning the picture is already stale. Bold's dynamic order allocation engine works differently. Every time something changes — a delivery arrives, a Work Order progresses, a sales order is confirmed or re-prioritised — Bold instantly recalculates which materials are assigned to which Work Orders and which finished goods are reserved for which sales orders. You always have an accurate, real-time view of what you can launch, what you can ship, and what is on hold.
+
+## What dynamic allocation means
+
+Allocation answers a question that traditional MRP handles poorly: **when the same material is needed by multiple Work Orders at the same time, which one gets it?** Static systems resolve this in an overnight batch run and lock in the answer until the next run. Bold resolves it continuously, using the priorities and target dates you have set.
+
+Concretely, Bold maintains two allocation layers:
+
+- **Material-to-Work-Order allocation**: for each open Work Order, Bold reserves the exact quantity of each component it needs from available stock. If stock is insufficient, the Work Order is flagged as blocked rather than silently under-allocated.
+- **Finished-goods-to-Sales-Order allocation**: for each confirmed sales order, Bold reserves the corresponding finished goods from available stock or from the projected output of in-progress Work Orders.
+
+Both layers update in real time, so the allocation view always reflects the current state of your warehouse, your production floor, and your order book.
+
+## Read the allocation view
+
+Navigate to **Planning → Order Allocation** to open the allocation view. The view has two tabs:
+
+- **Work Orders** — shows each open Work Order, its required materials, the quantity allocated from stock, and any shortfall that is blocking it.
+- **Sales Orders** — shows each confirmed sales order, the finished goods reserved for it, and the expected ship date based on current stock or confirmed Work Order output.
+
+For each row you can see at a glance:
+
+| Status | Meaning |
+|--------|---------|
+| **Ready to launch** | All required materials are allocated and the Work Order can start immediately. |
+| **Partially allocated** | Some materials are available; others are on order or in production. The Work Order can be launched for the available components if your process allows partial starts. |
+| **Blocked** | One or more critical materials have no allocated stock and no confirmed incoming supply. The Work Order cannot start until supply is resolved. |
+| **Reserved** | For sales orders: sufficient finished goods are allocated. The order can be shipped as scheduled. |
+| **On hold** | For sales orders: finished goods are not yet available. The order is waiting on Work Order output or an incoming delivery. |
+
+<Tip>
+  Sort the Work Orders view by **target date** to surface the most time-critical launches first. Filter by **Blocked** status to focus your attention on the allocations that need immediate action.
+</Tip>
+
+## Change a date and see allocation update instantly
+
+Unlike traditional MRP batch recalculation, Bold updates allocation the moment you change a priority or target date. This makes re-prioritisation genuinely practical — you can see the downstream impact before you commit.
+
+<Steps>
+  <Step title="Open the Work Order or sales order">
+    Find the order you want to re-prioritise in the allocation view or in the Work Orders / Sales Orders module.
+  </Step>
+  <Step title="Change the target date or priority">
+    Edit the **Target date** field or adjust the priority rank. Bold recalculates allocation for all affected orders simultaneously — not just the one you edited.
+  </Step>
+  <Step title="Review the ripple effect">
+    Check whether any other Work Orders or sales orders have changed status as a result. A higher-priority order that just claimed a contested material may have pushed a lower-priority order from **Partially allocated** to **Blocked**.
+  </Step>
+  <Step title="Confirm or revert">
+    If the resulting allocation looks right, save the change. If the ripple effect creates a problem you did not expect, revert and try a different re-prioritisation.
+  </Step>
+</Steps>
+
+## Handle allocation conflicts
+
+An allocation conflict occurs when two or more orders need the same material but there is not enough stock to satisfy both. Bold surfaces these conflicts explicitly rather than hiding them in a batch log.
+
+<Steps>
+  <Step title="Identify the conflict">
+    In the Work Orders tab, filter by **Blocked** status. Each blocked Work Order shows which specific material is causing the conflict and which other Work Orders are competing for the same stock.
+  </Step>
+  <Step title="Decide on priority">
+    Review the target dates and commercial importance of the competing orders. Adjust the target date or priority of the order that should yield, so Bold can reallocate the available stock to the higher-priority one.
+  </Step>
+  <Step title="Resolve the supply gap">
+    For the lower-priority order now left short, open the purchasing assistant. Bold will have already created a replenishment proposal for the missing material — confirm it to trigger a purchase order or expedited supply.
+  </Step>
+  <Step title="Communicate to the customer">
+    If a sales order is affected by an allocation conflict, the **On hold** status and the projected new ship date give you the information you need to set customer expectations proactively, before the delay becomes a surprise.
+  </Step>
+</Steps>
+
+<Warning>
+  Manually editing stock quantities outside of the WMS receipt and issue process can create phantom allocations — Bold will show materials as available when they have already been consumed. Always record stock movements through the WMS to keep allocation accurate.
+</Warning>
+
+## How allocation connects to the warehouse and production floor
+
+Dynamic allocation is only as good as the data feeding it. Bold keeps allocation accurate by reading stock movements from the WMS in real time:
+
+- When your warehouse team **receives a delivery**, the new stock is immediately visible to the allocation engine and is assigned to the highest-priority Work Orders waiting for it.
+- When a Work Order **issues materials** to the shop floor, those quantities are deducted from stock and from the allocation of any other order that might have claimed them.
+- When a Work Order is **completed**, the finished goods it produces are immediately allocated to the sales orders waiting for them.
+
+This closed loop between WMS, MRP, and MES means Bold's allocation view is always a live picture of your operation — not a snapshot from last night.

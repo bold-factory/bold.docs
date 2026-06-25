@@ -1,0 +1,101 @@
+---
+title: "Schedule Your Maintenance Team and Balance Workloads"
+sidebarTitle: "Team Scheduling"
+description: "See your team's full weekly workload in one view, balance preventive and corrective tasks, and let Bold auto-optimize the schedule with a single click."
+---
+
+Maintenance planning is a balancing act: preventive work orders that must happen on time, corrective jobs that arrive without warning, and a team whose capacity is finite. Bold CMMS gives you a single weekly schedule view where all of it is visible at once — so you can make smart assignment decisions quickly, or hand the whole optimization problem to Bold and focus on more pressing things.
+
+## The weekly schedule view
+
+The team schedule in Bold shows every open task across the maintenance team for the current week:
+
+- **Preventive work orders** that are due this week — generated automatically from your maintenance plans and already assigned to a technician based on the plan configuration.
+- **Corrective work orders** that are currently open — logged from the shop floor (manually or via MES integration) and waiting to be assigned or already in progress.
+- **Each technician's daily load** — how many hours of work they already have assigned versus their available capacity, so you can see overloads and gaps at a glance.
+
+Color coding separates preventive tasks from corrective ones and highlights overdue work orders so nothing slips through the gaps.
+
+## Assigning tasks manually
+
+<Steps>
+  <Step title="Open the weekly schedule">
+    Navigate to **CMMS → Team Schedule** to see the full week. Use the asset or technician filters to narrow the view if you manage a large team or multiple production areas.
+  </Step>
+  <Step title="Review open and unassigned work orders">
+    Unassigned work orders appear in the unscheduled column. Click any work order to see its details — asset, task list, estimated duration, priority, and any notes from the person who logged it.
+  </Step>
+  <Step title="Drag and assign">
+    Drag the work order onto the technician and day that fits best. Bold updates that technician's daily load in real time so you can see immediately whether the assignment creates an overload. Adjust as needed.
+  </Step>
+  <Step title="Notify the team">
+    Technicians see their updated task queues in their own Bold CMMS view. No separate message or printout needed — the schedule is live.
+  </Step>
+</Steps>
+
+## Letting Bold auto-optimize the schedule
+
+If you would rather not spend time on manual planning, Bold can propose an optimized weekly schedule with a single click.
+
+<Steps>
+  <Step title="Review what's open">
+    Before running the optimizer, confirm that all open work orders have accurate estimated durations and priorities set. The optimizer uses these to balance the workload.
+  </Step>
+  <Step title="Run the auto-optimize">
+    Click **Auto-optimize schedule** in the team schedule view. Bold considers each technician's availability, skill profile, current load, and the priority of each work order to produce an assignment proposal.
+  </Step>
+  <Step title="Review and confirm">
+    The proposed schedule appears as a preview. You can accept it as-is, tweak individual assignments before confirming, or discard it and plan manually. The optimizer never applies changes without your confirmation.
+  </Step>
+</Steps>
+
+<Tip>
+Run the auto-optimizer at the start of each week as a baseline, then make manual adjustments only where you have context the system cannot see — technician preferences, planned absences, or imminent deadlines that were added after the plan was generated.
+</Tip>
+
+## Handling rush corrective repairs
+
+Corrective breakdowns do not wait for a convenient slot in the schedule. When a machine goes down unexpectedly, here is how to keep the rest of the plan intact:
+
+<AccordionGroup>
+  <Accordion title="Create a high-priority corrective work order">
+    Log the breakdown immediately and set its priority to **Urgent**. Urgent work orders are flagged in the schedule view so you can see at a glance that the plan needs adjustment.
+  </Accordion>
+  <Accordion title="Check who has capacity">
+    Look at the technician load columns in the weekly view. Identify who has slack time today and can absorb the repair without dropping a critical preventive task.
+  </Accordion>
+  <Accordion title="Reassign or defer lower-priority preventive work">
+    If the only available technician is already fully loaded, you may need to defer a lower-priority preventive task. Drag it to a later day in the same week or — if the asset can tolerate it — to the following week. Bold records the deferral in the work order history so you have a full audit trail.
+  </Accordion>
+  <Accordion title="Re-run auto-optimize if the disruption is significant">
+    If a major corrective event reshuffles a large portion of the week's plan, re-running the optimizer after logging all the new work orders can help you quickly recover a balanced schedule.
+  </Accordion>
+</AccordionGroup>
+
+<Warning>
+Avoid deferring preventive work on assets with a history of failures or where the inspection is linked to a legal or regulatory obligation. Check the asset's MTBF before deciding — if failures are already frequent, a skipped inspection can trigger the next breakdown sooner than expected.
+</Warning>
+
+## In-house teams and external contractors
+
+Bold CMMS scheduling works equally well for both models:
+
+| Scenario | How Bold handles it |
+|---|---|
+| **In-house plant team** | Each technician has a personal queue and appears in the team schedule. Assignments and updates are live. |
+| **External maintenance contractor** | The contractor's team appears in the schedule just like internal staff. Work orders can be assigned to them, and they can log time and materials when they close jobs. |
+| **On-site intervention team** | Technicians who travel between client sites can see their upcoming work orders in the mobile view and log completions in the field. |
+
+<Note>
+For external teams, you can restrict access so contractors only see the work orders assigned to them — not your full maintenance history or KPI dashboards. Use Bold's role-based permissions to configure this.
+</Note>
+
+## Balancing workload across the team
+
+A balanced team schedule reduces burnout, prevents costly mistakes made by overloaded technicians, and ensures that lower-priority preventive tasks actually get done instead of being indefinitely deferred.
+
+Use the weekly load view to check three things before finalizing the schedule each week:
+
+1. **No technician is loaded above capacity** — Bold flags overloads visually. Redistribute tasks before the week starts, not after a job gets missed.
+2. **Critical assets have their preventive work covered** — Filter the schedule by asset to confirm that your highest-MTBF-risk machines are not the ones whose preventive tasks got deferred.
+3. **Corrective backlog is shrinking** — If the open corrective work order count keeps growing week over week, the team either needs more capacity or more preventive work to stop the breakdowns that are generating corrective demand.

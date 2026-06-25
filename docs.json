@@ -1,0 +1,112 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "Bold Factory",
+  "theme": "almond",
+  "colors": {
+    "primary": "#3264cc",
+    "light": "#4babfb",
+    "dark": "#040404"
+  },
+  "logo": {
+    "light": "https://media.brand.dev/92c27c81-5e33-4765-b388-2c900dbf9b7b.png",
+    "dark": "https://media.brand.dev/92c27c81-5e33-4765-b388-2c900dbf9b7b.png"
+  },
+  "favicon": "https://media.brand.dev/74ad1af6-ffb2-402d-84c6-bcc61e5cb915.jpg",
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "Book a Demo",
+      "href": "https://bold-factory.com/en/contact"
+    },
+    "links": [
+      {
+        "href": "https://api.bold-factory.com/docs/v1",
+        "label": "API Reference"
+      }
+    ]
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "getting-started/onboarding",
+              "getting-started/plans-and-pricing"
+            ]
+          },
+          {
+            "group": "Production (MES)",
+            "pages": [
+              "mes/overview",
+              "mes/process-recipes",
+              "mes/operator-work-mode",
+              "mes/quality-controls",
+              "mes/sequencing-and-scheduling",
+              "mes/oee"
+            ]
+          },
+          {
+            "group": "Planning & Purchasing (MRP)",
+            "pages": [
+              "mrp/overview",
+              "mrp/purchasing-assistant",
+              "mrp/demand-forecasting",
+              "mrp/order-allocation"
+            ]
+          },
+          {
+            "group": "Warehouse (WMS)",
+            "pages": [
+              "wms/overview",
+              "wms/stock-and-locations",
+              "wms/delivery-note-scanning",
+              "wms/inventory-and-traceability"
+            ]
+          },
+          {
+            "group": "Maintenance (CMMS)",
+            "pages": [
+              "cmms/overview",
+              "cmms/preventive-and-corrective",
+              "cmms/team-scheduling",
+              "cmms/maintenance-kpis"
+            ]
+          },
+          {
+            "group": "AI Agents & Analytics",
+            "pages": [
+              "ai-agents/overview",
+              "ai-agents/configuring-agents",
+              "ai-agents/use-cases",
+              "analytics/dashboards-and-reports"
+            ]
+          },
+          {
+            "group": "Integrations & API",
+            "pages": [
+              "integrations/overview",
+              "integrations/public-api",
+              "integrations/webhooks",
+              "integrations/erp-connectivity"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "socials": {
+      "website": "https://bold-factory.com"
+    }
+  },
+  "markdown": {
+    "schema": false
+  },
+  "api": {
+    "openapi": "v1(88).json"
+  }
+}

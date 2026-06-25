@@ -1,0 +1,92 @@
+---
+title: "Bold Factory Public REST API Reference and Authentication"
+sidebarTitle: "Public API"
+description: "Use the Bold Factory REST API to load data automatically, sync with external systems, or build custom portals. Full reference available in Swagger."
+---
+
+The Bold Factory public REST API lets you read and write data programmatically — load production orders from your ERP, push stock movements back, or build a customer-facing portal that shows live order status. If you can imagine a data flow between Bold and another system, the API gives you the means to build it.
+
+The full interactive reference is published at **[https://api.bold-factory.com/swagger/index.html](https://api.bold-factory.com/swagger/index.html)**. Every endpoint, request body, and response schema is documented there. This page covers authentication, common use cases, and how to make your first call.
+
+## Authentication
+
+The Bold Factory API uses **API key authentication**. Every request must include your key in the `Authorization` header.
+
+**To get your API key:**
+
+<Steps>
+  <Step title="Open Bold Factory settings">
+    Log in to your Bold Factory account and navigate to **Settings → API Keys**.
+  </Step>
+  <Step title="Generate a new key">
+    Click **Create API Key**, give it a descriptive name (for example, `erp-sync-production`), and confirm. Copy the key immediately — it is only shown once.
+  </Step>
+  <Step title="Store the key securely">
+    Save the key in your secrets manager or environment variables. Never commit it to source control.
+  </Step>
+</Steps>
+
+<Note>
+  If you cannot access **Settings → API Keys**, contact your Bold Account Manager. Keys can also be provisioned at the account level for managed integrations.
+</Note>
+
+## Making your first API call
+
+The pattern below shows how to authenticate and call any endpoint in the Bold API. Replace `YOUR_API_KEY` with your actual key and `{endpoint-path}` with the path you want to call — find all available paths in the [Swagger reference](https://api.bold-factory.com/swagger/index.html).
+
+```bash
+curl --request GET \
+  --url "https://api.bold-factory.com/{endpoint-path}" \
+  --header "Authorization: Bearer YOUR_API_KEY" \
+  --header "Accept: application/json"
+```
+
+A successful response returns HTTP `200` with a JSON body. The exact request and response schema for each endpoint is documented in the Swagger reference.
+
+## Common use cases
+
+<Accordion title="Sync orders from your ERP or e-commerce platform">
+  Poll your ERP or e-commerce system for new sales or purchase orders, then `POST` them to the Bold API to create corresponding production or purchase orders in Bold. Run this as a scheduled job or trigger it in real time from your ERP's event system.
+</Accordion>
+
+<Accordion title="Push production status back to your ERP">
+  After a production order is completed in Bold, call your ERP's API with the finished-goods quantity, actual labor hours, and materials consumed. Combine this with Bold webhooks to trigger the push the moment an order closes.
+</Accordion>
+
+<Accordion title="Build a customer order-tracking portal">
+  Use the Bold API to fetch live production order status and expose it through your own branded web portal. Customers can see where their order is in the production queue without needing access to Bold itself.
+</Accordion>
+
+<Accordion title="Automate stock replenishment">
+  Query Bold stock levels on a schedule. When a product falls below its reorder point, automatically create a purchase order in Bold or trigger a procurement workflow in your ERP.
+</Accordion>
+
+## Pagination
+
+Endpoints that return collections support pagination so you can work through large result sets without loading everything at once. The exact pagination mechanism (page-based or cursor-based) and the available query parameters vary by endpoint — full details are documented per-endpoint in the [Swagger reference](https://api.bold-factory.com/swagger/index.html).
+
+## Rate limits
+
+The API enforces rate limits to ensure platform stability. When you exceed the limit the API returns HTTP `429 Too Many Requests`. Design your integration to handle this gracefully — check the response headers for guidance on when to retry.
+
+<Tip>
+  Implement exponential back-off in your integration client. On a `429` response, wait before retrying and increase the delay progressively if further rate-limit errors occur.
+</Tip>
+
+## HTTP status codes
+
+| Code | Meaning | What to do |
+|------|---------|------------|
+| `200 OK` | Request succeeded. | Process the response body. |
+| `201 Created` | Resource created successfully. | Read the `Location` header for the new resource URL. |
+| `400 Bad Request` | The request body or query parameters are invalid. | Check the `errors` array in the response for field-level details. |
+| `401 Unauthorized` | API key is missing, expired, or invalid. | Verify your key and ensure the `Authorization` header is present. |
+| `404 Not Found` | The requested resource does not exist. | Confirm the ID or path is correct. |
+| `429 Too Many Requests` | Rate limit exceeded. | Wait for the `Retry-After` duration and retry. |
+| `500 Internal Server Error` | Unexpected error on the Bold side. | Retry with back-off; contact Bold support if the error persists. |
+
+## Next steps
+
+- Explore all available endpoints in the **[Swagger reference](https://api.bold-factory.com/swagger/index.html)**.
+- Set up **[Webhooks](/integrations/webhooks)** to receive real-time push notifications instead of polling.
+- Review **[ERP Connectivity](/integrations/erp-connectivity)** if you need a pre-built bidirectional sync with SAP, Sage, or Navision.

@@ -1,0 +1,83 @@
+---
+title: "Operator Work Mode: Tablet Interface for the Shop Floor"
+sidebarTitle: "Operator Interface"
+description: "A tablet-optimised interface with step-by-step instructions and quality checks — built for shop floor operators who are new to digital tools."
+---
+
+Getting operators to adopt a new digital system is often the hardest part of any MES rollout. Resistance to change is real, and it is usually not stubbornness — it is unfamiliarity with tools that were not designed with the shop floor in mind. Bold Factory's Operator Work Mode is built from the ground up for the people who are actually making things: a clean, tablet-optimised interface that shows operators exactly what they need to do, step by step, without requiring any training to get started.
+
+## What Operator Work Mode Is
+
+Operator Work Mode is a dedicated execution view that activates when an operator opens a work order. It strips away all of the configuration screens, dashboards, and management tools that make up the rest of Bold, and replaces them with a single focused interface showing the current task.
+
+The goal is simple: the operator should never have to wonder what to do next. The screen tells them.
+
+## What Operators See
+
+When an operator starts a production order step, the work mode screen shows:
+
+- **Step title and instructions** — the description you wrote into the recipe, displayed clearly in large text without clutter.
+- **Materials needed** — the components or raw materials required for this step, with quantities and (if configured) the warehouse location to pull from.
+- **Quality checks** — any checks embedded in this step appear in sequence before the operator can mark the step complete, so nothing is skipped.
+- **Estimated time** — the target cycle time for the step, helping operators pace themselves and flagging when a task is taking longer than expected.
+- **Navigation controls** — large, tap-friendly buttons to move between steps, report a stoppage, or flag an issue, designed for use with gloves or in low-light environments.
+
+<Note>
+  Operators only see the steps assigned to their current work order and workstation. They are never exposed to other orders, configuration options, or management data.
+</Note>
+
+## Designed for People Who Are Not Comfortable with Digital Tools
+
+Many shop floor workers have limited experience with digital systems, and some are actively resistant to using them. Bold's Operator Work Mode is designed with this reality in mind.
+
+Key design decisions that reduce the barrier to adoption:
+
+- **No login complexity** — operators can be authenticated with a simple PIN or QR code scan, not a password they have to remember.
+- **One thing at a time** — the interface shows only the current step. There are no menus to navigate, no sidebars to ignore, and no settings to accidentally change.
+- **Visual language** — icons and colours reinforce the text so that operators can understand the screen even if they are not confident readers or are working in a second language.
+- **Immediate feedback** — when an operator completes a step or passes a quality check, the screen confirms it clearly. When something is wrong, the alert is unmistakable.
+
+<Tip>
+  Run a 15-minute walkthrough with a small group of operators before the full rollout. In most cases, they are productive without any formal training — the interface is that intuitive. The walkthrough simply removes the anxiety of using something new.
+</Tip>
+
+## Mobile-First Design
+
+Operator Work Mode works on any modern tablet or smartphone, with no app installation required — it runs in the browser. The layout adapts to the screen size automatically, so a tablet mounted at a workstation and a phone carried on the floor both give a consistent experience.
+
+Recommended setups:
+
+| Setup | Best for |
+|---|---|
+| Wall-mounted tablet at each workstation | Fixed production lines and machining cells |
+| Shared tablet on a trolley | Flexible assembly areas where operators move between stations |
+| Personal smartphone | Mobile workers covering multiple areas of the floor |
+
+## Handling the Unexpected
+
+The shop floor is not a predictable place. Operator Work Mode is built to handle interruptions gracefully and to surface problems immediately rather than letting them compound.
+
+<AccordionGroup>
+  <Accordion title="Reporting stoppages">
+    Operators can log a machine stoppage directly from the work mode screen — selecting a reason code, recording the start time, and restarting the clock when the machine is back. This data feeds directly into OEE calculations, so no stoppage is ever lost or forgotten.
+  </Accordion>
+  <Accordion title="Flagging quality issues">
+    If an operator notices a defect or an out-of-tolerance measurement, they can flag it without leaving the work mode screen. The flag is timestamped, linked to the specific step and work order, and surfaced immediately to the production manager.
+  </Accordion>
+  <Accordion title="Out-of-the-ordinary alerts">
+    When something deviates from the expected — a quality check value outside the permitted range, a step taking significantly longer than its cycle time, or a material that is not available — Bold alerts the operator and, if configured, notifies a supervisor automatically.
+  </Accordion>
+  <Accordion title="Work order interruptions">
+    If an operator needs to pause a work order — for a break, a shift change, or to switch to a higher-priority task — they can park it cleanly. The next operator who picks it up sees exactly where it was left off and which steps have already been completed.
+  </Accordion>
+</AccordionGroup>
+
+## Reducing Resistance to Change
+
+The most common reason MES implementations fail is not technical — it is human. Operators who feel like the system is there to monitor and judge them will work around it rather than with it.
+
+Bold's approach addresses this directly:
+
+- **The system helps, it does not surveil.** Operators see the interface as a guide that makes their job easier, not as a tracking tool that reports their every move to management.
+- **Quick wins build trust.** When operators realise they no longer have to go and find a supervisor to ask what to do next, or track down a paper job sheet, they become advocates for the system.
+- **Feedback loops close.** When quality data that operators enter leads to visible improvements — a process step gets updated, a recurring problem gets fixed — they see that their input matters, which reinforces continued use.

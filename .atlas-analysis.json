@@ -1,0 +1,101 @@
+{
+  "projectType": "saas",
+  "projectName": "Bold Factory",
+  "projectDescription": "Bold Factory is a cloud-based industrial software platform for manufacturing SMEs that unifies production control (MES), planning (MRP), warehouse management (WMS), maintenance (CMMS), analytics, and AI-powered automation in a single intuitive system.",
+  "theme": "almond",
+  "primaryColor": "#3264cc",
+  "lightColor": "#4babfb",
+  "darkColor": "#040404",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "getting-started/onboarding",
+              "getting-started/plans-and-pricing"
+            ]
+          },
+          {
+            "group": "Production (MES)",
+            "pages": [
+              "mes/overview",
+              "mes/process-recipes",
+              "mes/operator-work-mode",
+              "mes/quality-controls",
+              "mes/sequencing-and-scheduling",
+              "mes/oee"
+            ]
+          },
+          {
+            "group": "Planning & Purchasing (MRP)",
+            "pages": [
+              "mrp/overview",
+              "mrp/purchasing-assistant",
+              "mrp/demand-forecasting",
+              "mrp/order-allocation"
+            ]
+          },
+          {
+            "group": "Warehouse (WMS)",
+            "pages": [
+              "wms/overview",
+              "wms/stock-and-locations",
+              "wms/delivery-note-scanning",
+              "wms/inventory-and-traceability"
+            ]
+          },
+          {
+            "group": "Maintenance (CMMS)",
+            "pages": [
+              "cmms/overview",
+              "cmms/preventive-and-corrective",
+              "cmms/team-scheduling",
+              "cmms/maintenance-kpis"
+            ]
+          },
+          {
+            "group": "AI Agents & Analytics",
+            "pages": [
+              "ai-agents/overview",
+              "ai-agents/configuring-agents",
+              "ai-agents/use-cases",
+              "analytics/dashboards-and-reports"
+            ]
+          },
+          {
+            "group": "Integrations & API",
+            "pages": [
+              "integrations/overview",
+              "integrations/public-api",
+              "integrations/webhooks",
+              "integrations/erp-connectivity"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "MES (Manufacturing Execution System) for real-time shop floor control",
+    "MRP for demand-driven production planning and purchasing",
+    "WMS for multi-location warehouse management with lot traceability",
+    "CMMS for preventive and corrective maintenance management",
+    "AI Agents for natural-language task automation",
+    "Built-in Analytics powered by Power BI",
+    "Public REST API and webhooks for ERP integration",
+    "Automatic OEE calculation from live operator data",
+    "Automatic delivery note scanning with OCR",
+    "Mobile-first operator interface optimized for tablets"
+  ],
+  "publicApiSurface": [
+    "Public REST API (https://api.bold-factory.com/swagger/index.html)",
+    "Webhooks for real-time event notifications",
+    "Bidirectional ERP integration (SAP, Sage, Navision, A3, and others)",
+    "AI Agent configuration API (natural-language instructions, permissions, scheduling)",
+    "Analytics / Power BI embedded reports"
+  ]
+}

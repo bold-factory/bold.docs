@@ -1,0 +1,116 @@
+---
+title: "Stock and Warehouse Locations: Track Every Item's Position"
+sidebarTitle: "Stock & Locations"
+description: "Set up a multi-level warehouse layout in Bold and know exactly where every item sits — from zone down to individual bin — in real time, on any device."
+---
+
+Knowing you have 500 units of a component is useful. Knowing it is on shelf B3-Row2-Bin4 in your secondary warehouse is what actually lets your team work efficiently. Bold's location system gives you both — a hierarchical map of your entire warehouse that every stock movement updates automatically, visible on any device your team already uses.
+
+## What "Locations" Means in Bold
+
+Bold organizes warehouse space in a flexible multi-level tree. You define the levels that match your real-world layout — you are not forced into a rigid structure.
+
+A typical layout might look like this:
+
+```text
+Warehouse (Main Site)
+└── Zone A — Raw Materials
+    ├── Aisle 1
+    │   ├── Shelf 1
+    │   │   ├── Bin A1-S1-01
+    │   │   └── Bin A1-S1-02
+    │   └── Shelf 2
+└── Zone B — Finished Goods
+    ├── Aisle 1
+    ...
+```
+
+You can track stock at any level of this hierarchy. Managers often monitor at zone or aisle level; operators work at the bin level when picking or put-away.
+
+<Note>
+  You can also keep things simple. If your warehouse is a single room with labeled shelves, a two-level structure (zone → shelf) works perfectly. Bold adapts to your operation, not the other way around.
+</Note>
+
+## Setting Up Your Warehouse Layout
+
+<Steps>
+  <Step title="Open the Warehouse Configuration">
+    In Bold, go to **WMS → Settings → Locations**. You will see the root of your warehouse tree.
+  </Step>
+  <Step title="Create Top-Level Warehouses or Zones">
+    Add each physical building or major zone as a top-level location. Give it a clear name and a short code (for example, `WH-MAIN` or `ZONE-RM`).
+  </Step>
+  <Step title="Add Sub-Locations">
+    Under each zone, create aisles, shelves, or bays as needed. You can nest as many levels as your layout requires.
+  </Step>
+  <Step title="Create Bin-Level Locations">
+    At the lowest level, create individual bins or slots. These are the locations your operators will scan during goods receipt and picking.
+  </Step>
+  <Step title="Assign Items or Families (Optional)">
+    You can restrict certain locations to specific item families (for example, hazardous materials in a dedicated zone). Bold will warn operators if they attempt to put something in the wrong location.
+  </Step>
+</Steps>
+
+<Tip>
+  Print QR code labels for each bin-level location directly from Bold. Operators can then scan the location with their phone camera rather than typing a code manually.
+</Tip>
+
+## Tracking Stock at Any Level
+
+Once your layout is set up, every stock movement in Bold — a goods receipt, a production consumption, a manual transfer, an inventory adjustment — automatically updates the quantity at the relevant location. You never need to manually reconcile warehouse records.
+
+From **WMS → Stock**, you can:
+
+- **Filter by location** to see everything stored in a specific zone, aisle, or bin.
+- **Filter by item or lot** to see where a particular component or batch is distributed across the warehouse.
+- **View movement history** for any location, showing every receipt, pick, transfer, and adjustment with timestamps and operator names.
+
+<AccordionGroup>
+  <Accordion title="What counts as a stock movement?">
+    Any of the following actions automatically updates location stock in Bold:
+    - Goods receipt from a supplier delivery note
+    - Material consumption on a production work order (via MES)
+    - Finished-goods put-away after a production run
+    - Manual stock transfer between locations
+    - Inventory count adjustment
+    - Customer dispatch / outbound shipment
+  </Accordion>
+  <Accordion title="Can I move stock between locations?">
+    Yes. Use **WMS → Transfers** to record an internal movement. Select the source location, destination location, item, and quantity. Bold updates both locations immediately and logs the transfer with the operator's name and timestamp.
+  </Accordion>
+  <Accordion title="What is negative stock, and should I allow it?">
+    Negative stock occurs when a consumption or dispatch is recorded before the corresponding receipt. Bold lets you configure per-item or per-location whether negative stock is permitted (useful for work-in-progress buffers) or blocked (recommended for finished goods and critical components).
+  </Accordion>
+</AccordionGroup>
+
+## Multi-Device Support {#multi-device}
+
+Bold is designed so that managers and operators can work simultaneously on different devices — no separate apps, no extra licences, no device mandates.
+
+| Role | Typical Device | Typical Tasks |
+|---|---|---|
+| Warehouse Manager | PC / laptop browser | Configure locations, review stock reports, approve adjustments |
+| Goods-In Operator | Tablet or phone (iOS or Android) | Scan delivery notes, confirm receipts, assign to bins |
+| Stock Picker | Phone (iOS or Android) | Follow picking lists, confirm put-aways, record transfers |
+
+<Note>
+  Bold does not dictate which device your operators must use. Tablet or phone, iOS or Android — that choice is entirely yours.
+</Note>
+
+## Real-Time Visibility from Anywhere
+
+Because Bold is 100% cloud, every stock update is visible instantly across every device on your account. A goods-in operator scanning a delivery at the loading bay and a manager reviewing stock levels from the office are always looking at the same data — there is no sync delay, no end-of-day batch update, and no reconciliation step.
+
+<Tip>
+  You can bookmark the **WMS → Stock** view on your phone's home screen for a one-tap live stock check from anywhere in the factory.
+</Tip>
+
+## Automatic Stock Updates from Production
+
+If you use Bold MES alongside WMS, stock movements from the shop floor happen without any manual warehouse entry:
+
+- When a production order is **started**, the raw materials listed in the bill of materials are automatically consumed from their warehouse locations.
+- When a production order is **completed**, the finished goods are automatically added to the designated output location.
+- When a production order is **scrapped**, the affected quantities are removed from stock with a traceable reason code.
+
+This means your warehouse stock is always a live reflection of what is actually in your building — not a snapshot from last week's spreadsheet.
