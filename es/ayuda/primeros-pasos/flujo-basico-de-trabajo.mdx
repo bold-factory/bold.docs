@@ -57,6 +57,22 @@ El stock físico cambia por movimientos reales. Las previsiones ayudan a decidir
   Una línea en borrador no genera compromiso operativo. Confirma las líneas cuando quieras que afecten a planificación.
 </Warning>
 
+## Ejemplo con un pedido
+
+Una fábrica recibe un pedido de **Cliente ACME** para 20 unidades de **Mesa Madera M-100**. Bold usa el mismo artículo durante todo el flujo: venta, planificación, fabricación, almacén y envío.
+
+```mermaid
+flowchart LR
+  catalogo["Catálogo<br/>Mesa Madera M-100"] --> venta["Pedido de venta<br/>20 unidades"]
+  venta --> demanda["Demanda confirmada"]
+  demanda --> plan["Planificación<br/>revisa stock proyectado"]
+  plan --> fabricacion["Orden de fabricación<br/>produce unidades faltantes"]
+  fabricacion --> almacen["Stock disponible<br/>ubicación y lote"]
+  almacen --> envio["Envío<br/>salida al cliente"]
+```
+
+En este ejemplo, el pedido de venta crea demanda al confirmar la línea. Si no hay stock suficiente, planificación muestra la necesidad. La fabricación registra consumos y producción. El envío reduce stock físico cuando se expide.
+
 ## Primer flujo de prueba
 
 Para validar una configuración inicial, usa un ejemplo pequeño:
