@@ -8,22 +8,21 @@
     "dark": "#040404"
   },
   "logo": {
-    "light": "https://media.brand.dev/92c27c81-5e33-4765-b388-2c900dbf9b7b.png",
-    "dark": "https://media.brand.dev/92c27c81-5e33-4765-b388-2c900dbf9b7b.png"
+    "light": "/images/logo-monocolor.svg",
+    "dark": "/images/logo-multicolor.svg",
+    "href": "https://bold-factory.com"
   },
-  "favicon": "https://media.brand.dev/74ad1af6-ffb2-402d-84c6-bcc61e5cb915.jpg",
+  "favicon": {
+    "light": "/images/emblem-multicolor.png",
+    "dark": "/images/emblem-multicolor.png"
+  },
   "navbar": {
     "primary": {
       "type": "button",
       "label": "Book a Demo",
       "href": "https://bold-factory.com/en/contact"
     },
-    "links": [
-      {
-        "href": "https://api.bold-factory.com/docs/v1",
-        "label": "API Reference"
-      }
-    ]
+    "links": []
   },
   "navigation": {
     "languages": [
@@ -154,13 +153,28 @@
   },
   "footer": {
     "socials": {
-      "website": "https://bold-factory.com"
+      "website": "https://bold-factory.com",
+      "github": "https://github.com/bold-factory",
+      "linkedin": "https://www.linkedin.com/company/bold-factory",
+      "youtube": "https://www.youtube.com/@BoldFactory"
     }
   },
   "markdown": {
     "schema": false
   },
-  "api": {
-    "openapi": "v1(88).json"
+  "description": "Bold Factory is a modern MES/MOM platform designed for manufacturing SMEs.",
+  "background": {
+    "decoration": "gradient"
+  },
+  "fonts": {
+    "family": "Nunito"
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "assistant",
+      "view"
+    ],
+    "display": "header"
   }
 }
