@@ -1,4 +1,71 @@
 ---
 title: "Production"
-description: "Contenido pendiente."
+description: "Referencia funcional de la API de producción, recetas, órdenes y operaciones."
 ---
+
+El módulo `production` convierte necesidades de fabricación en trabajo ejecutable. Expone recursos para recetas, versiones, peticiones, órdenes, operaciones, recursos y registros de ejecución.
+
+## Recursos principales
+
+<Columns cols={2}>
+  <Card title="Recetas" icon="book-open">
+    Estructura de operaciones, entradas, pasos, controles y co-productos.
+  </Card>
+  <Card title="Órdenes" icon="factory">
+    Trabajo real que se planifica, ejecuta, pausa y finaliza.
+  </Card>
+  <Card title="Operaciones" icon="route">
+    Unidades de trabajo con tiempos, consumos, progreso y restricciones.
+  </Card>
+  <Card title="Recursos" icon="wrench">
+    Puestos, áreas, herramientas, empleados y tipos de operación.
+  </Card>
+</Columns>
+
+## Endpoint families
+
+```http
+GET    /v1/production/recipes
+POST   /v1/production/recipes
+GET    /v1/production/recipes/{recipeId}/versions
+
+GET    /v1/production/requests
+POST   /v1/production/requests
+
+GET    /v1/production/orders
+POST   /v1/production/orders
+GET    /v1/production/orders/{orderReference}
+
+GET    /v1/production/operations
+POST   /v1/production/operations/{operationReference}/start
+POST   /v1/production/operations/{operationReference}/finish
+
+GET    /v1/production/workstations
+GET    /v1/production/operationTypes
+GET    /v1/production/tools
+```
+
+## Estados
+
+| Entidad | Estados principales |
+| --- | --- |
+| Orden | `Created`, `Planned`, `InProcess`, `Paused`, `Finished`, `Blocked`, `Cancelled` |
+| Operación | `Pending`, `Planned`, `InProcess`, `Paused`, `Finished`, `Cancelled` |
+| Versión de receta | `Editable`, `Active`, `Inactive` |
+| Plan | `Pending`, `Processing`, `Solved`, `Failed`, `Unfeasible` |
+
+## Permisos
+
+| Permiso | Uso |
+| --- | --- |
+| `Production.Recipes.Read` / `Production.Recipes.Write` | Consultar o editar recetas. |
+| `Production.Recipes.Activate` | Activar versiones de receta. |
+| `Production.Orders.Read` / `Production.Orders.Write` | Consultar o gestionar órdenes. |
+| `Production.Orders.Work` | Ejecutar trabajo de producción. |
+| `Production.Orders.Sequence` | Secuenciar o planificar órdenes. |
+| `Production.Requests.Read` / `Production.Requests.Write` | Consultar o crear peticiones de fabricación. |
+| `Production.Workstations.Read` / `Production.Workstations.Write` | Consultar o gestionar puestos. |
+
+<Warning>
+  Las órdenes y operaciones con actividad real protegen datos históricos. Para corregir ejecución, usa acciones específicas como registrar progreso, consumo, pausa, reanudación o reversión cuando existan.
+</Warning>

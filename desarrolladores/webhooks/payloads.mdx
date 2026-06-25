@@ -1,4 +1,57 @@
 ---
 title: "Payloads"
-description: "Contenido pendiente."
+description: "Interpreta la estructura de los payloads enviados por webhooks."
 ---
+
+Cada webhook envía un payload JSON con información del evento y datos suficientes para que tu sistema decida qué hacer. El contrato concreto depende de `eventName` y `eventVersion`.
+
+## Campos que debes esperar
+
+| Campo | Uso |
+| --- | --- |
+| Identificador del evento | Permite deduplicar entregas. |
+| Nombre del evento | Indica qué ocurrió. |
+| Versión | Define el contrato del payload. |
+| Fecha de emisión | Ayuda a auditar y ordenar procesamiento. |
+| Identificadores de entidad | Permiten consultar el recurso en la API. |
+| Datos del cambio | Incluyen cantidades, estados o referencias según el evento. |
+
+<Info>
+  No todos los eventos incluyen una copia completa de la entidad. Diseña tu consumidor para llamar a la API cuando necesite el estado actual.
+</Info>
+
+## Ejemplo orientativo
+
+```json
+{
+  "id": "evt_01HZX5V8YH7V3C9T0QK3",
+  "eventName": "SalesOrderLineConfirmed",
+  "eventVersion": 1,
+  "occurredAt": "2026-06-25T10:30:00Z",
+  "data": {
+    "salesOrderId": "so_123",
+    "lineId": "sol_456",
+    "skuId": "sku_789",
+    "quantity": 24,
+    "pendingQuantity": 24
+  }
+}
+```
+
+## Buenas prácticas
+
+<Accordion title="Versiona por eventVersion">
+  Mantén validadores separados si consumes más de una versión del mismo evento. No asumas que dos versiones tienen los mismos campos.
+</Accordion>
+
+<Accordion title="Usa identificadores, no nombres">
+  Los nombres visibles pueden cambiar. Usa `id` o `reference` para reconciliar datos entre sistemas.
+</Accordion>
+
+<Accordion title="Guarda el payload original">
+  Conserva el JSON recibido durante el tiempo necesario para auditoría. Facilita depuración si un sistema externo falla.
+</Accordion>
+
+<Warning>
+  Trata los payloads como datos sensibles. Pueden contener referencias operativas, clientes, proveedores o cantidades de producción.
+</Warning>

@@ -1,4 +1,69 @@
 ---
 title: "Planning"
-description: "Contenido pendiente."
+description: "Referencia funcional de la API de planificación, demanda, suministro y stock proyectado."
 ---
+
+El módulo `planning` conecta demanda, suministro y disponibilidad futura. Úsalo para integrar pedidos de venta, pedidos de compra, clientes, proveedores y previsiones.
+
+## Recursos principales
+
+<Columns cols={2}>
+  <Card title="Pedidos de venta" icon="shopping-cart">
+    Demanda confirmada de clientes y líneas pendientes de entregar.
+  </Card>
+  <Card title="Pedidos de compra" icon="truck">
+    Suministro confirmado de proveedores y líneas pendientes de recibir.
+  </Card>
+  <Card title="Previsiones" icon="chart-no-axes-combined">
+    Demanda o suministro previsto para compra y fabricación.
+  </Card>
+  <Card title="Stock proyectado" icon="calendar-range">
+    Disponibilidad después de entradas y salidas futuras.
+  </Card>
+</Columns>
+
+## Endpoint families
+
+```http
+GET    /v1/planning/salesOrders
+POST   /v1/planning/salesOrders
+GET    /v1/planning/salesOrders/{orderReference}
+
+GET    /v1/planning/purchaseOrders
+POST   /v1/planning/purchaseOrders
+GET    /v1/planning/purchaseOrders/{orderReference}
+
+GET    /v1/planning/customers
+POST   /v1/planning/customers
+
+GET    /v1/planning/suppliers
+POST   /v1/planning/suppliers
+
+GET    /v1/planning/skus
+GET    /v1/planning/products
+```
+
+## Stock status
+
+| Estado | Significado |
+| --- | --- |
+| `Ready` | Hay stock suficiente para cubrir la necesidad. |
+| `FullyPlanned` | La necesidad está cubierta por suministro futuro. |
+| `PartiallyPlanned` | Solo una parte está cubierta. |
+| `Pending` | Falta planificar suministro. |
+| `NotRequired` | No hay necesidad de aprovisionamiento. |
+
+## Permisos
+
+| Permiso | Uso |
+| --- | --- |
+| `Planning.SalesOrders.Read` / `Planning.SalesOrders.Write` | Consultar o gestionar pedidos de venta. |
+| `Planning.PurchaseOrders.Read` / `Planning.PurchaseOrders.Write` | Consultar o gestionar pedidos de compra. |
+| `Planning.Customers.Read` / `Planning.Customers.Write` | Consultar o gestionar clientes. |
+| `Planning.Suppliers.Read` / `Planning.Suppliers.Write` | Consultar o gestionar proveedores. |
+| `Planning.Skus.Read` / `Planning.Skus.Write` | Consultar o actualizar datos de planificación del artículo. |
+| `Planning.ProductionForecasts.Read` | Consultar previsiones de fabricación. |
+
+<Tip>
+  Integra primero clientes, proveedores y artículos. Después sincroniza pedidos para que Bold pueda calcular demanda, suministro y recomendaciones.
+</Tip>

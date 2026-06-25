@@ -1,4 +1,57 @@
 ---
 title: "Reintentos y errores"
-description: "Contenido pendiente."
+description: "Diseña consumidores de webhooks idempotentes y tolerantes a fallos."
 ---
+
+Un webhook cruza dos sistemas. Debes asumir que puede haber reintentos, entregas duplicadas, caídas temporales o respuestas tardías.
+
+## Respuestas esperadas
+
+| Respuesta de tu endpoint | Resultado recomendado |
+| --- | --- |
+| `2xx` | Evento aceptado. Bold puede marcar la entrega como correcta. |
+| `4xx` | Error de consumidor o payload no aceptado. Revisa configuración y contrato. |
+| `5xx` | Error temporal del receptor. El evento debe poder reintentarse. |
+| Timeout | El receptor no respondió a tiempo. Procesa con cola y responde rápido. |
+
+<Warning>
+  No devuelvas `2xx` si descartaste el evento sin guardarlo. Bold asumirá que la entrega fue correcta.
+</Warning>
+
+## Reglas para consumidores
+
+- Procesa cada evento de forma idempotente.
+- Guarda el identificador del evento o de la notificación recibida.
+- No dependas del orden estricto entre eventos.
+- Consulta la API si necesitas confirmar el estado final.
+- Registra el payload original para auditoría y depuración.
+
+## Patrón recomendado
+
+<Steps>
+  <Step title="Valida el payload">
+    Comprueba que `eventName`, `eventVersion` y el identificador de entidad son los esperados.
+  </Step>
+  <Step title="Detecta duplicados">
+    Si ya procesaste el evento, devuelve `2xx` y no repitas efectos externos.
+  </Step>
+  <Step title="Encola el trabajo">
+    Guarda el evento en tu sistema y responde rápido.
+  </Step>
+  <Step title="Procesa en segundo plano">
+    Ejecuta llamadas a ERP, BI u otros servicios fuera del tiempo de respuesta HTTP.
+  </Step>
+</Steps>
+
+```pseudo
+if already_processed(event.id):
+  return 200
+
+store(event)
+enqueue(event.id)
+return 202
+```
+
+<Tip>
+  Si tu integración queda desincronizada, usa la API paginada para reconciliar el estado y después reactiva el procesamiento normal de webhooks.
+</Tip>

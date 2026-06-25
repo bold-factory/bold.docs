@@ -1,4 +1,50 @@
 ---
 title: "Invitar usuarios"
-description: "Contenido pendiente."
+description: "Da acceso a nuevas personas y asigna roles acordes a su trabajo."
 ---
+
+Un usuario es la cuenta con la que una persona entra en Bold. Invita usuarios cuando necesiten acceso propio a la aplicación, a la API o a funciones administrativas.
+
+<Info>
+  Usuario y empleado no son lo mismo. El usuario controla acceso y permisos. El empleado representa a una persona operativa para turnos, trabajo, costes o asignaciones.
+</Info>
+
+## Antes de invitar
+
+- Ten claro qué módulos debe usar la persona.
+- Crea o revisa el rol que le vas a asignar.
+- Decide si debe vincularse a un empleado.
+- Evita compartir una cuenta entre varias personas si necesitas auditoría.
+
+## Invitar a una persona
+
+<Steps>
+  <Step title="Abre **Panel de control > Usuarios**">
+    Entra con un usuario que pueda administrar accesos.
+  </Step>
+  <Step title="Crea el usuario">
+    Introduce el email y los datos básicos.
+  </Step>
+  <Step title="Asigna roles">
+    Selecciona uno o varios roles que reflejen sus responsabilidades reales.
+  </Step>
+  <Step title="Vincula empleado si aplica">
+    Relaciona el usuario con el empleado operativo cuando deba registrar trabajo o actuar en planta.
+  </Step>
+  <Step title="Confirma el acceso">
+    Pide a la persona que inicie sesión y comprueba que ve solo los módulos necesarios.
+  </Step>
+</Steps>
+
+## Recomendaciones
+
+| Situación | Recomendación |
+| --- | --- |
+| Nuevo responsable de almacén | Asigna permisos de lectura y escritura de almacén. |
+| Operario de planta | Asigna permisos de trabajo de producción y vínculo con empleado. |
+| Planificador | Asigna lectura y escritura de planificación, compras y producción según proceso. |
+| Integración técnica | Usa una clave API en vez de una cuenta personal. |
+
+<Warning>
+  Retira o ajusta roles cuando una persona cambia de responsabilidad. Mantener accesos antiguos aumenta el riesgo operativo.
+</Warning>

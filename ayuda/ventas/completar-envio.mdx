@@ -1,4 +1,61 @@
 ---
 title: "Completar envío"
-description: "Contenido pendiente."
+description: "Registra la salida física de material y actualiza el pedido de venta."
 ---
+
+Completar un envío confirma que el material salió del almacén. Al hacerlo, Bold descuenta stock y actualiza las líneas de venta relacionadas.
+
+## Antes de completar
+
+Revisa el envío mientras está **Pendiente**:
+
+- Tiene al menos una línea.
+- Cada línea tiene artículo y cantidad.
+- La ubicación de salida es correcta.
+- El lote está informado cuando aplica.
+- La cantidad coincide con lo preparado físicamente.
+
+## Completar el envío
+
+<Steps>
+  <Step title="Abre el envío pendiente">
+    Verifica cabecera, ubicación, líneas y pedido relacionado.
+  </Step>
+  <Step title="Compara con el material preparado">
+    Revisa cajas, unidades, lote y documentación de transporte.
+  </Step>
+  <Step title="Haz clic en **Enviar**">
+    Bold registra la salida de stock y marca el envío como expedido.
+  </Step>
+  <Step title="Comprueba el pedido de venta">
+    La línea quedará **Entregado** o **Parcialmente entregado** según la cantidad enviada.
+  </Step>
+</Steps>
+
+## Qué cambia al enviar
+
+| Elemento | Resultado |
+| --- | --- |
+| Stock | Disminuye en la ubicación y lote indicados. |
+| Envío | Cambia de **Pendiente** a **Enviado**. |
+| Pedido de venta | Aumenta la cantidad entregada. |
+| Línea de venta | Puede cambiar a **Parcialmente entregado** o **Entregado**. |
+| Histórico | Se registra el movimiento de salida. |
+
+<Warning>
+  Después de enviar, las líneas y la ubicación quedan protegidas para conservar trazabilidad. Si cometiste un error, usa la acción de reversión cuando esté disponible.
+</Warning>
+
+## Problemas habituales
+
+<Accordion title="No puedo enviar">
+  Comprueba que el envío tiene líneas, cantidades positivas y una ubicación válida. Si el artículo requiere lote, revisa que el lote esté informado.
+</Accordion>
+
+<Accordion title="El pedido sigue parcialmente entregado">
+  La cantidad enviada fue menor que la cantidad pendiente. Crea otro envío cuando prepares el resto del material.
+</Accordion>
+
+<Accordion title="El stock quedó negativo">
+  Revisa si faltaba registrar una recepción, ajuste, inventario o movimiento previo. Después regulariza el stock desde almacén.
+</Accordion>

@@ -1,4 +1,63 @@
 ---
 title: "Autenticación"
-description: "Contenido pendiente."
+description: "Autentica llamadas a la API de Bold con claves API o tokens bearer."
 ---
+
+Bold acepta dos métodos de autenticación para la API: tokens bearer para sesiones de usuario y claves API para integraciones de servidor a servidor.
+
+<Info>
+  Si la petición incluye la cabecera `X-Api-Key`, el backend usa autenticación por clave API. Si no la incluye, valida la petición como JWT bearer.
+</Info>
+
+## Claves API
+
+Usa claves API para integraciones técnicas. La clave identifica el tenant y se trata como una credencial secreta.
+
+```http
+GET /v1/items/products?pageNumber=1&pageSize=25
+X-Api-Key: bf_live_xxxxxxxxxxxxx
+```
+
+Buenas prácticas:
+
+- Crea una clave por sistema externo.
+- Usa nombres descriptivos como `ERP producción` o `BI inventario`.
+- Rota la clave si sospechas que se compartió fuera del sistema autorizado.
+- Revoca claves que ya no se usen.
+
+<Warning>
+  No guardes claves API en repositorios, documentos compartidos ni scripts locales sin gestor de secretos.
+</Warning>
+
+## Tokens bearer
+
+Usa tokens bearer cuando la llamada representa una sesión interactiva de usuario.
+
+```http
+GET /v1/warehouse/locations
+Authorization: Bearer eyJhbGciOi...
+```
+
+El token debe contener el contexto de organización y los permisos necesarios. Si el token caduca o no pertenece al tenant correcto, la API responde con un error de autenticación o autorización.
+
+## Permisos
+
+La autenticación responde a la pregunta "quién llama". Los permisos responden a la pregunta "qué puede hacer".
+
+| Error | Causa habitual | Qué revisar |
+| --- | --- | --- |
+| `401 Unauthorized` | La credencial falta, caducó o no es válida. | Cabecera, token, clave API y entorno. |
+| `403 Forbidden` | La credencial es válida, pero no tiene permisos. | Rol, permisos del usuario o permisos asociados a la integración. |
+| `404 Not Found` | La entidad no existe o no es visible para el tenant. | Tenant, referencia, identificador y permisos de lectura. |
+
+## Ejemplo
+
+```bash
+curl "https://api.bold-factory.com/v1/items/skus?pageNumber=1&pageSize=25" \
+  -H "X-Api-Key: $BOLD_API_KEY" \
+  -H "Accept: application/json"
+```
+
+<Tip>
+  Prueba primero un endpoint de lectura con paginación pequeña. Después añade operaciones de escritura cuando confirmes que la clave pertenece al tenant correcto.
+</Tip>

@@ -1,4 +1,63 @@
 ---
 title: "Purchases"
-description: "Contenido pendiente."
+description: "Referencia funcional de la API para compras, proveedores, pedidos y recepciones."
 ---
+
+Las compras combinan recursos de `planning` y `warehouse`. En planificación creas el compromiso con proveedor. En almacén registras la entrada física.
+
+## Flujo de integración
+
+<Steps>
+  <Step title="Sincroniza proveedores">
+    Crea o actualiza proveedores antes de enviar pedidos de compra.
+  </Step>
+  <Step title="Crea el pedido de compra">
+    Añade cabecera, líneas de artículo, cantidades y fechas esperadas.
+  </Step>
+  <Step title="Confirma líneas">
+    Las líneas confirmadas generan suministro futuro para planificación.
+  </Step>
+  <Step title="Registra recepción">
+    Cuando llega material, crea o completa una recepción para aumentar stock.
+  </Step>
+</Steps>
+
+## Endpoint families
+
+```http
+GET    /v1/planning/suppliers
+POST   /v1/planning/suppliers
+
+GET    /v1/planning/purchaseOrders
+POST   /v1/planning/purchaseOrders
+GET    /v1/planning/purchaseOrders/{orderReference}
+POST   /v1/planning/purchaseOrders/{orderReference}/lines/{lineReference}/confirm
+
+GET    /v1/warehouse/receipts
+POST   /v1/warehouse/receipts
+POST   /v1/planning/purchaseOrders/{orderReference}/receipt
+POST   /v1/warehouse/receipts/{receiptReference}/receive
+```
+
+## Estados de compra
+
+| Estado | Significado |
+| --- | --- |
+| `Draft` | La línea no genera suministro todavía. |
+| `Pending` | La línea está confirmada y pendiente de recibir. |
+| `PartiallyReceived` | Se recibió parte de la cantidad. |
+| `Received` | La línea quedó completamente recibida. |
+| `Cancelled` | La línea ya no se espera. |
+
+## Permisos
+
+| Permiso | Uso |
+| --- | --- |
+| `Planning.Suppliers.Read` / `Planning.Suppliers.Write` | Consultar o mantener proveedores. |
+| `Planning.PurchaseOrders.Read` / `Planning.PurchaseOrders.Write` | Consultar o gestionar pedidos de compra. |
+| `Warehouse.Receipts.Read` / `Warehouse.Receipts.Write` | Consultar o registrar entradas de material. |
+| `Warehouse.Lots.Read` / `Warehouse.Lots.Write` | Gestionar trazabilidad por lote cuando aplique. |
+
+<Tip>
+  Si tu ERP ya gestiona pedidos de compra, usa Bold para reflejar líneas confirmadas y recepciones. Así planificación y stock proyectado quedan actualizados.
+</Tip>

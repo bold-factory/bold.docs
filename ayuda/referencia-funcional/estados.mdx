@@ -1,4 +1,64 @@
 ---
 title: "Estados"
-description: "Contenido pendiente."
+description: "Consulta los estados principales de pedidos, almacén, producción y planificación."
 ---
+
+Los estados indican qué puede pasar a continuación y qué datos quedan protegidos. Úsalos para entender por qué Bold permite o bloquea una acción.
+
+## Compras y ventas
+
+| Entidad | Estado | Significado |
+| --- | --- | --- |
+| Pedido de compra | **Borrador** | La línea no genera suministro. |
+| Pedido de compra | **Pendiente** | La línea está confirmada y pendiente de recibir. |
+| Pedido de compra | **Parcialmente recibido** | Ya se recibió una parte. |
+| Pedido de compra | **Recibido** | La línea quedó recibida por completo. |
+| Pedido de compra | **Cancelado** | La línea ya no se espera. |
+| Pedido de venta | **Borrador** | La línea no genera demanda. |
+| Pedido de venta | **Pendiente** | La línea está confirmada y pendiente de entregar. |
+| Pedido de venta | **Parcialmente entregado** | Ya se entregó una parte. |
+| Pedido de venta | **Entregado** | La línea quedó entregada por completo. |
+| Pedido de venta | **Cancelado** | La línea ya no se entregará. |
+
+## Almacén
+
+| Entidad | Estado | Significado |
+| --- | --- | --- |
+| Recepción | **Pendiente** | Puede editarse antes de registrar la entrada. |
+| Recepción | **Recibida** | Ya aumentó stock y queda protegida. |
+| Envío | **Pendiente** | Puede editarse antes de registrar la salida. |
+| Envío | **Enviado** | Ya redujo stock y queda protegido. |
+| Lote | **Activo** | Tiene stock o sigue disponible para trazabilidad. |
+| Lote | **Inactivo** | No tiene stock disponible. |
+
+## Producción
+
+| Entidad | Estado | Significado |
+| --- | --- | --- |
+| Orden | **Creada** | Existe, pero aún no está planificada. |
+| Orden | **Planificada** | Tiene planificación suficiente para ejecutar. |
+| Orden | **En curso** | Hay operaciones activas. |
+| Orden | **Pausada** | Se empezó, pero ahora no hay trabajo activo. |
+| Orden | **Finalizada** | La fabricación terminó. |
+| Orden | **Bloqueada** | No debe continuar hasta resolver el bloqueo. |
+| Orden | **Cancelada** | La fabricación se abortó. |
+| Operación | **Pendiente** | Falta planificación o requisitos. |
+| Operación | **Planificada** | Tiene planificación suficiente. |
+| Operación | **En curso** | Está siendo ejecutada. |
+| Operación | **Pausada** | Está detenida temporalmente. |
+| Operación | **Finalizada** | La operación terminó. |
+| Operación | **Cancelada** | La operación no se ejecutará. |
+
+## Stock proyectado
+
+| Estado | Significado |
+| --- | --- |
+| **Disponible** | Hay stock suficiente ahora. |
+| **Planificado** | La necesidad queda cubierta por suministro futuro. |
+| **Parcialmente planificado** | Solo una parte está cubierta. |
+| **Pendiente** | Falta crear compra o fabricación. |
+| **No requerido** | No hace falta aprovisionar. |
+
+<Tip>
+  Si una acción aparece bloqueada, revisa primero el estado. La mayoría de restricciones protegen trazabilidad después de movimientos reales.
+</Tip>

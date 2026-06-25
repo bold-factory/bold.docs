@@ -1,4 +1,44 @@
 ---
 title: "Reglas del sistema"
-description: "Contenido pendiente."
+description: "Reglas funcionales que Bold aplica para proteger trazabilidad y coherencia."
 ---
+
+Bold aplica reglas de negocio para que los datos operativos sigan explicando lo que ocurrió en fábrica y almacén. Algunas reglas bloquean cambios directos cuando ya existe actividad histórica.
+
+## Trazabilidad
+
+<Warning>
+  Evita editar directamente documentos que ya generaron movimientos. Usa acciones de reversión, ajuste o corrección cuando estén disponibles.
+</Warning>
+
+| Situación | Regla |
+| --- | --- |
+| Recepción recibida | La ubicación y las líneas quedan protegidas porque ya aumentaron stock. |
+| Envío enviado | La ubicación y las líneas quedan protegidas porque ya redujeron stock. |
+| Línea de compra recibida | No puedes reducir la cantidad por debajo de lo ya recibido. |
+| Línea de venta entregada | La edición queda limitada para conservar histórico de entrega. |
+| Orden con actividad | Los cambios que afectarían tiempos, consumos o progreso quedan limitados. |
+
+## Planificación
+
+- Una línea de venta en borrador no genera demanda.
+- Una línea de venta confirmada genera demanda.
+- Una línea de compra en borrador no genera suministro.
+- Una línea de compra confirmada genera suministro.
+- El stock proyectado combina stock actual, demanda y suministro futuro.
+
+## Producción
+
+- Una receta define la estructura del trabajo, pero una orden guarda la ejecución real.
+- Activar una versión de receta la convierte en referencia para nuevas órdenes.
+- Una orden finalizada no debe modificarse como si aún estuviera en curso.
+- Una orden cancelada conserva histórico si ya hubo actividad.
+- Las operaciones pueden pasar por estados de planificación, ejecución, pausa y finalización.
+
+## Permisos
+
+Bold valida permisos antes de ejecutar acciones protegidas. Si falta un permiso, la API responde `403` y la interfaz oculta o bloquea acciones según el caso.
+
+<Tip>
+  Si una acción no aparece o falla, revisa dos cosas: el estado del documento y los permisos del usuario.
+</Tip>

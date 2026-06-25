@@ -1,4 +1,72 @@
 ---
 title: "Paginación"
-description: "Contenido pendiente."
+description: "Usa pageNumber y pageSize para recorrer listados de la API."
 ---
+
+Los endpoints de búsqueda y listado devuelven páginas de resultados. La paginación evita respuestas demasiado grandes y permite reconciliar datos de forma estable.
+
+## Parámetros
+
+| Parámetro | Tipo | Valor por defecto | Reglas |
+| --- | --- | --- | --- |
+| `pageNumber` | integer | `1` | Debe ser mayor o igual que `1`. |
+| `pageSize` | integer | `25` | Debe estar entre `1` y `1000`. |
+
+```http
+GET /v1/items/skus?pageNumber=1&pageSize=50
+```
+
+## Respuesta
+
+```json
+{
+  "results": [
+    {
+      "reference": "SKU-0001",
+      "name": "Mesa nordica blanca"
+    }
+  ],
+  "pageNumber": 1,
+  "totalPages": 12,
+  "totalCount": 587,
+  "pageSize": 50
+}
+```
+
+## Recorrer todas las páginas
+
+<Steps>
+  <Step title="Empieza por pageNumber 1">
+    Llama con un `pageSize` que tu integración pueda procesar sin timeouts.
+  </Step>
+  <Step title="Procesa results">
+    Guarda cada elemento usando su `id` o `reference`.
+  </Step>
+  <Step title="Avanza hasta totalPages">
+    Sigue llamando mientras `pageNumber` sea menor que `totalPages`.
+  </Step>
+  <Step title="Repite periódicamente">
+    En integraciones críticas, combina paginación con webhooks para detectar cambios entre sincronizaciones.
+  </Step>
+</Steps>
+
+```bash
+page=1
+while true; do
+  response=$(curl "https://api.bold-factory.com/v1/items/skus?pageNumber=$page&pageSize=100" \
+    -H "X-Api-Key: $BOLD_API_KEY")
+
+  total_pages=$(echo "$response" | jq ".totalPages")
+  echo "$response" | jq ".results[]"
+
+  if [ "$page" -ge "$total_pages" ]; then
+    break
+  fi
+
+  page=$((page + 1))
+done
+```
+
+<Tip>
+  Usa páginas pequeñas durante pruebas. Sube `pageSize` solo cuando midas tiempos de respuesta, memoria y límites del sistema receptor.
+</Tip>

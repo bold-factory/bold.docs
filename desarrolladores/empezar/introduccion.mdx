@@ -1,4 +1,71 @@
 ---
 title: "Introducción"
-description: "Contenido pendiente."
+description: "Conecta sistemas externos con Bold mediante la API, claves API y webhooks."
 ---
+
+La API de Bold permite leer y actualizar datos operativos desde sistemas externos. Úsala para sincronizar catálogo, stock, pedidos, producción, compras, ventas y eventos con ERP, BI, automatizaciones internas o herramientas propias.
+
+<Info>
+  La referencia completa generada por el backend está disponible en el entorno de API como `/docs/v1`. Esta sección resume los patrones que necesitas antes de consumirla.
+</Info>
+
+## Qué puedes integrar
+
+<Columns cols={2}>
+  <Card title="Datos maestros" icon="boxes" href="/desarrolladores/api-reference/items">
+    Productos, artículos, propiedades, variantes y unidades.
+  </Card>
+  <Card title="Almacén" icon="warehouse" href="/desarrolladores/api-reference/warehouse">
+    Ubicaciones, lotes, recepciones, envíos, inventarios y stock.
+  </Card>
+  <Card title="Planificación" icon="calendar-range" href="/desarrolladores/api-reference/planning">
+    Demanda, suministro, stock proyectado, clientes y proveedores.
+  </Card>
+  <Card title="Producción" icon="factory" href="/desarrolladores/api-reference/production">
+    Recetas, versiones, órdenes, operaciones, recursos y ejecución.
+  </Card>
+</Columns>
+
+## Patrón base
+
+Los endpoints públicos usan versión en la ruta:
+
+```http
+GET /v1/items/products
+GET /v1/warehouse/locations
+GET /v1/planning/salesOrders
+GET /v1/production/orders
+```
+
+Las respuestas y errores usan JSON. Los listados paginados devuelven una estructura común con `results`, `pageNumber`, `pageSize`, `totalPages` y `totalCount`.
+
+## Flujo recomendado
+
+<Steps>
+  <Step title="Crea una clave API">
+    Crea una clave desde el panel de administración. Usa una clave distinta por integración para poder revocarla sin afectar otros sistemas.
+  </Step>
+  <Step title="Prueba lectura antes de escribir">
+    Empieza con endpoints `GET` para validar autenticación, tenant, permisos y paginación.
+  </Step>
+  <Step title="Sincroniza identificadores">
+    Guarda las referencias de Bold que devuelven los endpoints. Evita depender solo de nombres visibles, porque los nombres pueden cambiar.
+  </Step>
+  <Step title="Activa webhooks">
+    Usa webhooks para enterarte de cambios sin consultar la API en bucle.
+  </Step>
+</Steps>
+
+## Convenciones
+
+| Convención | Uso |
+| --- | --- |
+| `v1` | Versión pública actual de la API. |
+| `reference` | Identificador funcional visible en varias entidades. |
+| `id` | Identificador técnico de una entidad. |
+| `pageNumber` | Número de página, empezando en `1`. |
+| `pageSize` | Tamaño de página. El máximo validado por el backend es `1000`. |
+
+<Tip>
+  Para integraciones críticas, combina webhooks con reconciliaciones periódicas paginadas. El webhook te avisa rápido y la reconciliación detecta cualquier evento perdido.
+</Tip>

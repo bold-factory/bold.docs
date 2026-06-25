@@ -1,4 +1,71 @@
 ---
 title: "Warehouse"
-description: "Contenido pendiente."
+description: "Referencia funcional de la API de almacén, stock, ubicaciones, recepciones y envíos."
 ---
+
+El módulo `warehouse` controla el stock físico. Expone recursos para consultar disponibilidad, gestionar ubicaciones, registrar entradas y salidas, hacer inventarios y mantener trazabilidad por lote.
+
+## Recursos principales
+
+<Columns cols={2}>
+  <Card title="Ubicaciones" icon="map-pin">
+    Lugares donde el stock se recibe, almacena, consume o envía.
+  </Card>
+  <Card title="Recepciones" icon="package-plus">
+    Entradas que aumentan stock cuando se reciben.
+  </Card>
+  <Card title="Envíos" icon="package-minus">
+    Salidas que reducen stock cuando se expiden.
+  </Card>
+  <Card title="Inventarios" icon="clipboard-check">
+    Recuentos físicos que ajustan diferencias.
+  </Card>
+</Columns>
+
+## Endpoint families
+
+```http
+GET    /v1/warehouse/locations
+POST   /v1/warehouse/locations
+
+GET    /v1/warehouse/stockUnits
+GET    /v1/warehouse/lots
+GET    /v1/items/skus/{skuReference}/warehouse
+GET    /v1/items/skus/{skuReference}/stock/units
+GET    /v1/items/skus/{skuReference}/stock/history
+
+GET    /v1/warehouse/receipts
+POST   /v1/warehouse/receipts
+POST   /v1/warehouse/receipts/{receiptReference}/receive
+
+GET    /v1/warehouse/shipments
+POST   /v1/warehouse/shipments
+POST   /v1/warehouse/shipments/{shipmentReference}/ship
+
+GET    /v1/warehouse/counts
+POST   /v1/warehouse/counts
+```
+
+## Estados relevantes
+
+| Entidad | Estados |
+| --- | --- |
+| Recepción | `Pending`, `Received` |
+| Envío | `Pending`, `Shipped` |
+| Lote | `Active`, `Inactive` |
+| Contenedor | `Active`, `Inactive` |
+
+## Permisos
+
+| Permiso | Uso |
+| --- | --- |
+| `Warehouse.Locations.Read` / `Warehouse.Locations.Write` | Consultar o gestionar ubicaciones. |
+| `Warehouse.Receipts.Read` / `Warehouse.Receipts.Write` | Consultar o registrar recepciones. |
+| `Warehouse.Shipments.Read` / `Warehouse.Shipments.Write` | Consultar o registrar envíos. |
+| `Warehouse.Counts.Read` / `Warehouse.Counts.Write` | Consultar o ejecutar inventarios. |
+| `Warehouse.Lots.Read` / `Warehouse.Lots.Write` | Consultar o gestionar lotes. |
+| `Warehouse.Skus.Read` / `Warehouse.Skus.Write` | Consultar o actualizar datos de artículo en almacén. |
+
+<Warning>
+  Recibir o enviar crea movimientos de stock. Después la edición queda limitada para conservar trazabilidad.
+</Warning>

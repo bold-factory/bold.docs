@@ -1,4 +1,60 @@
 ---
 title: "Errores"
-description: "Contenido pendiente."
+description: "Interpreta los errores de la API de Bold y corrige las causas más frecuentes."
 ---
+
+La API de Bold devuelve errores JSON siguiendo el formato de `ProblemDetails`. Algunos errores incluyen campos adicionales como `code`, `parameters`, `requestId` y `traceId` para facilitar diagnóstico.
+
+## Estructura
+
+```json
+{
+  "type": "https://api.bold-factory.com/errors/missing-permissions",
+  "title": "Missing permissions",
+  "status": 403,
+  "detail": "Missing permissions: Items.Products.Read",
+  "instance": "GET /v1/items/products",
+  "code": "missing-permissions",
+  "parameters": {
+    "permissions": ["Items.Products.Read"]
+  },
+  "requestId": "0HN..."
+}
+```
+
+## Códigos HTTP habituales
+
+| Código | Significado | Qué hacer |
+| --- | --- | --- |
+| `400 Bad Request` | La petición no tiene el formato esperado. | Revisa tipos, campos obligatorios, fechas, rutas y query params. |
+| `401 Unauthorized` | La credencial no es válida. | Comprueba `Authorization` o `X-Api-Key`. |
+| `403 Forbidden` | Faltan permisos. | Añade el permiso al rol o usa otra credencial. |
+| `404 Not Found` | La entidad no existe en el tenant actual. | Revisa `id`, `reference`, tenant y entorno. |
+| `409 Conflict` | La operación choca con entidades relacionadas o estado actual. | Consulta dependencias antes de borrar o cambiar datos. |
+| `422 Unprocessable Entity` | La petición es válida en formato, pero incumple una regla de negocio. | Lee `title`, `detail` y `parameters`. |
+| `500 Internal Server Error` | Error inesperado. | Guarda `requestId` y contacta con soporte si persiste. |
+
+## Cómo depurar
+
+<Steps>
+  <Step title="Lee el campo detail">
+    El texto suele explicar la regla concreta que falló.
+  </Step>
+  <Step title="Busca parameters">
+    Los parámetros indican cantidades, permisos, referencias o estados implicados.
+  </Step>
+  <Step title="Comprueba el estado de la entidad">
+    Muchas operaciones quedan bloqueadas después de recibir, enviar, confirmar, iniciar o finalizar trabajo.
+  </Step>
+  <Step title="Guarda el requestId">
+    Incluye `requestId` o `traceId` cuando abras una incidencia.
+  </Step>
+</Steps>
+
+<Accordion title="Errores de permisos">
+  Si recibes `403`, la credencial existe y pertenece a un tenant, pero no tiene al menos uno de los permisos exigidos. Revisa el rol en **Usuarios y permisos** o crea una clave API con el alcance adecuado.
+</Accordion>
+
+<Accordion title="Errores de estado">
+  Si recibes `409` o `422`, consulta el estado de la entidad. Por ejemplo, una recepción recibida, un envío expedido o una orden finalizada protegen parte de sus datos para conservar trazabilidad.
+</Accordion>

@@ -1,4 +1,67 @@
 ---
 title: "Items"
-description: "Contenido pendiente."
+description: "Referencia funcional de la API de productos, artículos, propiedades y unidades."
 ---
+
+El módulo `items` gestiona el catálogo base de Bold. Define qué compras, fabricas, almacenas o vendes antes de usar almacén, planificación o producción.
+
+## Recursos principales
+
+<Columns cols={2}>
+  <Card title="Productos" icon="package">
+    Familias o modelos que agrupan artículos relacionados.
+  </Card>
+  <Card title="Artículos" icon="boxes">
+    Variantes concretas que se compran, fabrican, almacenan o venden.
+  </Card>
+  <Card title="Propiedades" icon="list-checks">
+    Atributos que diferencian variantes, como color, formato o acabado.
+  </Card>
+  <Card title="Unidades" icon="ruler">
+    Unidades de medida disponibles para cantidades y conversiones operativas.
+  </Card>
+</Columns>
+
+## Endpoint families
+
+```http
+GET    /v1/items/products
+POST   /v1/items/products
+GET    /v1/items/products/{productReference}
+PUT    /v1/items/products/{productReference}
+DELETE /v1/items/products/{productReference}
+
+GET    /v1/items/skus
+POST   /v1/items/skus
+GET    /v1/items/skus/{skuReference}
+PUT    /v1/items/skus/{skuReference}
+DELETE /v1/items/skus/{skuReference}
+
+GET    /v1/items/properties
+POST   /v1/items/properties
+GET    /v1/items/units
+```
+
+## Relaciones
+
+| Relación | Descripción |
+| --- | --- |
+| Producto -> Artículos | Un producto puede tener muchos artículos o SKUs. |
+| Producto -> Propiedades | Las propiedades definen qué atributos puede tener cada artículo del producto. |
+| Artículo -> Valores | Cada artículo puede guardar valores para sus propiedades. |
+| Artículo -> Imagen | Los artículos admiten imagen para uso operativo y catálogo. |
+
+## Permisos
+
+| Permiso | Uso |
+| --- | --- |
+| `Items.Products.Read` | Leer productos y asignaciones. |
+| `Items.Products.Write` | Crear, editar o eliminar productos y asignaciones. |
+| `Items.Properties.Read` | Leer propiedades y opciones. |
+| `Items.Properties.Write` | Crear, editar o eliminar propiedades y opciones. |
+| `Items.Skus.Read` | Leer artículos, valores y duplicados. |
+| `Items.Skus.Write` | Crear, editar, fusionar o eliminar artículos. |
+
+<Tip>
+  Crea primero productos y propiedades. Después crea artículos con valores coherentes. Así evitas duplicados y mejoras la búsqueda.
+</Tip>

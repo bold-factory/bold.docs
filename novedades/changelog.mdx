@@ -1,4 +1,45 @@
 ---
 title: "Changelog"
-description: "Contenido pendiente."
+description: "Cambios relevantes de la documentación y del producto Bold."
 ---
+
+Esta página recoge cambios relevantes para usuarios e integradores. Usa las fechas para saber cuándo se añadió o actualizó documentación funcional.
+
+<Info>
+  El changelog de producto debe mantenerse alineado con los despliegues reales. Cuando documentes una versión concreta, añade fecha, alcance y enlaces a las páginas afectadas.
+</Info>
+
+## 2026-06-25
+
+<Update label="Docs" description="Se completa la primera cobertura funcional visible del sitio de ayuda." />
+
+- Se amplía la documentación de primeros pasos, catálogo, almacén, planificación, producción, compras y ventas.
+- Se añaden páginas de desarrolladores para autenticación, errores, paginación, webhooks y referencia funcional por módulo.
+- Se documentan estados, glosario, reglas del sistema y permisos por módulo.
+
+## Formato recomendado
+
+Usa este patrón para próximos cambios:
+
+```mdx
+## AAAA-MM-DD
+
+<Update label="Producto" description="Resumen corto del cambio." />
+
+- Cambio visible para usuarios.
+- Impacto operativo o técnico.
+- Enlace a la guía relacionada.
+```
+
+## Tipos de cambio
+
+| Tipo | Cuándo usarlo |
+| --- | --- |
+| Producto | Funcionalidad nueva o cambio visible en Bold. |
+| Docs | Nueva guía, corrección o reorganización de documentación. |
+| API | Cambio en endpoints, eventos, autenticación o contratos. |
+| Corrección | Ajuste funcional que cambia comportamiento esperado. |
+
+<Tip>
+  Enlaza cada entrada a la página de ayuda más cercana. El changelog debe orientar, no sustituir la documentación completa.
+</Tip>

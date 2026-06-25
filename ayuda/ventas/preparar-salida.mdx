@@ -1,4 +1,59 @@
 ---
 title: "Preparar salida"
-description: "Contenido pendiente."
+description: "Prepara material para enviar un pedido de venta desde almacén."
 ---
+
+Preparar una salida consiste en convertir una demanda de cliente en material listo para expedir. Normalmente parte de un pedido de venta confirmado y termina en un envío pendiente.
+
+## Antes de empezar
+
+- El pedido de venta debe tener líneas confirmadas.
+- El artículo debe existir en catálogo.
+- Debe haber stock disponible o una decisión clara sobre cómo cubrir la falta.
+- La ubicación de salida debe representar el lugar físico desde el que se expedirá.
+
+<Info>
+  El pedido de venta explica la demanda. El envío explica el movimiento físico que reduce stock.
+</Info>
+
+## Preparar el envío
+
+<Steps>
+  <Step title="Abre el pedido de venta">
+    Revisa cliente, fecha comprometida, líneas pendientes y disponibilidad.
+  </Step>
+  <Step title="Comprueba stock">
+    Consulta stock disponible por artículo, ubicación y lote si aplica trazabilidad.
+  </Step>
+  <Step title="Crea o abre el envío">
+    Agrupa las líneas que saldrán juntas. Puedes preparar un envío parcial si no hay material suficiente para todo el pedido.
+  </Step>
+  <Step title="Selecciona ubicación y lote">
+    Indica de dónde sale el material. Si el artículo trabaja con lotes, selecciona el lote correcto.
+  </Step>
+  <Step title="Revisa cantidades">
+    La cantidad enviada no debe superar lo pendiente salvo que tu proceso operativo lo permita expresamente.
+  </Step>
+</Steps>
+
+## Qué revisar
+
+| Campo | Por qué importa |
+| --- | --- |
+| Artículo | Debe coincidir con la línea de venta. |
+| Cantidad | Reduce stock y actualiza la cantidad entregada. |
+| Ubicación | Indica de dónde sale físicamente el material. |
+| Lote | Mantiene trazabilidad cuando aplica. |
+| Cliente o pedido | Permite cerrar la demanda correcta. |
+
+<Warning>
+  No completes el envío hasta que el material vaya a salir físicamente. Enviar demasiado pronto reduce stock y puede dejar otras operaciones sin disponibilidad.
+</Warning>
+
+## Salidas parciales
+
+Si solo puedes entregar parte de la línea, prepara el envío con la cantidad disponible. Bold dejará la línea como **Parcialmente entregado** y mantendrá pendiente la cantidad restante.
+
+<Tip>
+  Usa notas o referencias de transporte para que el equipo pueda relacionar el envío de Bold con el albarán, transportista o documento externo.
+</Tip>
