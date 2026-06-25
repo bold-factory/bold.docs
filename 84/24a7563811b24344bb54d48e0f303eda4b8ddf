@@ -1,0 +1,14 @@
+docs.json
+  h_55f2ba4d68b42c 4,33,45
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.13",
+  "base_commit_sha": "8424a7563811b24344bb54d48e0f303eda4b8ddf",
+  "prompts": {},
+  "humans": {
+    "h_55f2ba4d68b42c": {
+      "author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
