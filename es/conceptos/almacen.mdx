@@ -1,0 +1,78 @@
+---
+title: "Almacén"
+description: "Referencia de stock, ubicaciones, recepciones, envíos, inventarios, bultos y trazabilidad."
+icon: "warehouse"
+---
+
+El almacén registra dónde está el material, por qué cambió la cantidad y qué documento originó cada movimiento.
+
+## Modelo de stock
+
+Bold controla stock por **artículo**, **ubicación** y **lote** opcional. Esa combinación forma la unidad de stock.
+
+| Concepto | Uso |
+| --- | --- |
+| Stock físico | Cantidad registrada actualmente. |
+| Stock disponible | Cantidad libre después de reservas o compromisos. |
+| Stock entrante | Cantidad esperada por compras, recepciones o fabricación. |
+| Stock saliente | Cantidad comprometida por ventas, envíos o consumos. |
+| Movimiento de stock | Auditoría de cada aumento, disminución o ajuste. |
+| Ubicación | Lugar físico o lógico donde se almacena material. |
+| Bulto | Contenedor operativo que agrupa material para moverlo o identificarlo. |
+| Tipo de contenedor | Plantilla para clasificar bultos, cajas, palets o embalajes. |
+
+El backend registra cada mutación como un cambio auditado con cantidad firmada, stock resultante, referencia relacionada, detalle y fecha de ocurrencia.
+
+<Info>
+  Una disminución de stock registra cantidad negativa. El backend no impide por sí solo que el saldo quede negativo; los flujos de negocio deben revisar disponibilidad antes de ejecutar.
+</Info>
+
+## Recepciones
+
+Una recepción registra entrada física de material. Puede venir de un pedido de compra o crearse manualmente.
+
+Para recibir, la recepción debe estar pendiente, tener ubicación, contener al menos una línea y tener completados los controles obligatorios. Al recibir, pasa a estado **Recibida** y emite eventos que aplican el efecto de stock.
+
+Después de recibir, no puedes editar líneas ni cambiar ubicación. Si necesitas deshacer una recepción, usa la reversión cuando esté disponible y todavía exista ubicación.
+
+## Envíos
+
+Un envío registra salida física de material. Puede venir de un pedido de venta o crearse como salida de almacén.
+
+Para enviar, debe estar pendiente, tener ubicación y contener al menos una línea. Al enviar, pasa a **Enviado** y emite eventos que reducen stock.
+
+Las líneas requieren cantidad positiva. Después del envío, las líneas y la ubicación quedan protegidas.
+
+## Inventarios y ajustes
+
+Un inventario compara stock esperado con conteo físico. Úsalo para regularizar diferencias, no para sustituir recepciones, consumos o envíos que sí tienen un origen operativo.
+
+Cada línea de inventario guarda el stock previo, la cantidad contada y el ajuste previsto. Al finalizar, Bold aplica ese ajuste previsto como movimiento `InventoryCount`. Si el stock cambió mientras el inventario estaba abierto, Bold no sustituye el saldo final por la lectura antigua; aplica la diferencia calculada.
+
+Un ajuste manual usa el mismo mecanismo con una sola línea y finalización inmediata. Úsalo cuando conoces el artículo, la ubicación, el lote y la cantidad final correcta.
+
+| Concepto | Úsalo para |
+| --- | --- |
+| Inventario | Recuento de una o varias ubicaciones, cierres, auditorías o diferencias múltiples. |
+| Ajuste de stock | Correcciones puntuales con causa conocida. |
+| Movimiento de stock | Revisar la trazabilidad de cualquier aumento, disminución o regularización. |
+
+Cuando haya movimientos durante el conteo, revisa la fecha y el alcance del inventario antes de aplicar ajustes. La auditoría debe explicar si la diferencia corresponde al conteo o a una operación posterior.
+
+## Ubicaciones y bultos
+
+Diseña ubicaciones con el nivel de detalle que uses en operación diaria. Una estructura demasiado fina obliga a mover material constantemente. Una estructura demasiado amplia dificulta encontrar diferencias.
+
+Usa bultos cuando el material viaje físicamente agrupado: cajas, palets, carros, contenedores o kits. El tipo de contenedor ayuda a clasificar capacidad, formato o uso.
+
+## Guías relacionadas
+
+- [Crear ubicaciones](/ayuda/almacen/crear-ubicaciones)
+- [Consultar stock](/ayuda/almacen/consultar-stock)
+- [Recibir material](/ayuda/almacen/recibir-material)
+- [Recibir con albarán](/ayuda/almacen/recibir-con-albaran)
+- [Mover stock](/ayuda/almacen/mover-stock)
+- [Ajustar stock](/ayuda/almacen/ajustar-stock)
+- [Hacer inventario](/ayuda/almacen/hacer-inventario)
+- [Ver movimientos de stock](/ayuda/almacen/ver-movimientos-de-stock)
+- [Solución de problemas de stock](/ayuda/almacen/solucion-de-problemas-de-stock)

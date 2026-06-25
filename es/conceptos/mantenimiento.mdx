@@ -1,0 +1,83 @@
+---
+title: "Mantenimiento"
+description: "Referencia de activos, causas, acciones, preventivos y partes de trabajo."
+icon: "wrench"
+---
+
+Mantenimiento registra intervenciones sobre activos, conserva historial y conecta tiempos, materiales y costes.
+
+## Entidades
+
+| Concepto | Uso |
+| --- | --- |
+| Activo | Máquina, instalación, área o equipo mantenible. |
+| Causa | Motivo principal o auxiliar de una avería o intervención. |
+| Acción | Trabajo o comprobación que debe completarse en un parte. |
+| Programación preventiva | Regla que genera partes según frecuencia, activo y fecha. |
+| Parte de trabajo | Ejecución real de mantenimiento correctivo, preventivo u otro tipo. |
+| Material | Artículo consumido durante el parte. |
+| Tiempo | Registro de mano de obra de un empleado. |
+
+## Permisos
+
+Los permisos de mantenimiento separan lectura y escritura por tipo de dato. Usa permisos de lectura para perfiles de consulta, análisis o soporte, y permisos de escritura para perfiles que cambian configuración o ejecución.
+
+| Permiso | Uso |
+| --- | --- |
+| `Maintenance.Assets.Read` / `Maintenance.Assets.Write` | Consultar o gestionar activos. |
+| `Maintenance.ActionDefinitions.Read` / `Maintenance.ActionDefinitions.Write` | Consultar o gestionar acciones reutilizables. |
+| `Maintenance.Causes.Read` / `Maintenance.Causes.Write` | Consultar o gestionar causas y acciones planificadas. |
+| `Maintenance.WorkOrders.Read` / `Maintenance.WorkOrders.Write` | Consultar o ejecutar partes, tiempos, acciones y materiales. |
+| `Maintenance.PreventiveSchedules.Read` / `Maintenance.PreventiveSchedules.Write` | Consultar o gestionar programaciones preventivas. |
+| `Files.Files.Upload` | Subir resultados de acciones de tipo imagen o archivo. |
+
+## Partes de trabajo
+
+Un parte de trabajo guarda activo, tipo, causa, acciones, tiempos, materiales y estado. El backend bloquea cambios de cabecera, acciones, tiempos y materiales después de completar o cancelar el parte.
+
+Al añadir un tiempo activo, el parte empieza o se reanuda. Cuando todos los tiempos terminan, el parte queda pausado. Si eliminas todos los tiempos, vuelve a pendiente.
+
+La eficiencia se calcula con tiempo teórico dividido por tiempo real cuando ambos valores son positivos.
+
+## Causas y acciones
+
+Un parte puede tener causa principal y causas auxiliares. Las causas auxiliares no pueden duplicar la principal ni duplicarse entre sí.
+
+Las acciones pueden requerir distintos resultados:
+
+| Tipo de acción | Resultado esperado |
+| --- | --- |
+| Simple | No requiere resultado. |
+| Sí/no | Requiere valor booleano. |
+| Número | Requiere valor decimal. |
+| Texto | Requiere texto no vacío. |
+| Imagen o archivo | Requiere una URI segura `https`. |
+
+Completar una acción ya completada se bloquea para proteger el historial.
+
+## Preventivo
+
+Una programación preventiva define cuándo debe generarse un parte. El backend exige coherencia entre identificador de programación y fecha de ocurrencia: ambos deben existir o ambos deben quedar vacíos.
+
+El planificador procesa programaciones habilitadas con `NextRunAt` vencida. Si la política es `SkipWhileOpen` y existe un parte generado que no está completado ni cancelado, marca la ocurrencia como omitida y calcula la siguiente. Si ya existe un parte no cancelado para la misma programación y ocurrencia, no duplica el parte y avanza la próxima generación.
+
+| Política técnica | Comportamiento funcional |
+| --- | --- |
+| `AllowEachOccurrence` | Genera un parte para cada ocurrencia vencida. |
+| `SkipWhileOpen` | Omite la ocurrencia cuando ya hay un parte abierto de esa programación. |
+
+Si una programación no genera un parte, revisa activo, frecuencia, fecha siguiente, estado de la programación, política de generación y posibles partes ya generados para la misma ocurrencia.
+
+## Materiales y trazabilidad
+
+Los materiales consumidos deben tener cantidades positivas. Si detallas lotes, no puedes duplicar el mismo lote para el mismo material y la suma de detalles no puede superar la cantidad del material.
+
+## Guías relacionadas
+
+- [Activos](/ayuda/mantenimiento/activos)
+- [Acciones](/ayuda/mantenimiento/acciones)
+- [Causas](/ayuda/mantenimiento/causas)
+- [Partes de trabajo](/ayuda/mantenimiento/partes-de-trabajo)
+- [Mantenimiento preventivo](/ayuda/mantenimiento/mantenimiento-preventivo)
+- [Costes de mantenimiento](/ayuda/costes/partes-de-trabajo)
+- [API de mantenimiento](/desarrolladores/api-reference/maintenance)

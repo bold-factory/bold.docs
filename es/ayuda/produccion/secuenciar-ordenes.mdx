@@ -4,37 +4,67 @@ description: "Ordena operaciones para que planta ejecute el trabajo en la priori
 icon: "route"
 ---
 
-Secuenciar órdenes forma parte de fabricación y mantiene el trabajo de planta alineado con recursos, órdenes y resultados.
+La **secuenciación** ayuda a decidir cuándo y dónde ejecutar operaciones de fabricación.
+
+Puedes asignar fechas y recursos directamente en órdenes, o crear un **plan de producción** para resolver un escenario completo antes de aplicarlo.
 
 ## Antes de empezar
 
-Revisa permisos, datos maestros relacionados, estados de órdenes y el objetivo operativo antes de modificar registros.
+Revisa que las órdenes tengan operaciones abiertas, procesos definidos, estaciones compatibles, restricciones coherentes, fechas objetivo y disponibilidad de materiales cuando aplique.
 
-## Pasos
+## Qué es un plan de producción
+
+Un plan es un escenario. Copia operaciones activas, disponibilidad de recursos, restricciones, fechas y contexto de stock para calcular una propuesta.
+
+Puedes tener varios planes en paralelo para comparar alternativas. Nada cambia en las operaciones reales hasta que aplicas el plan.
+
+<Info>
+  Al aplicar un plan, Bold solo modifica operaciones reales que siguen abiertas. No cambia operaciones finalizadas ni canceladas.
+</Info>
+
+## Crear y aplicar un plan
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Secuenciar órdenes** desde fabricación.
+  <Step title="Crea el plan">
+    Define el alcance de órdenes, fechas y recursos que quieres secuenciar.
   </Step>
-  <Step title="Filtra el trabajo">
-    Busca por estado, fecha, recurso, orden o referencia cuando aplique.
+  <Step title="Actualiza el plan">
+    Carga la realidad operativa actual: operaciones, recursos, restricciones y disponibilidad.
   </Step>
-  <Step title="Crea o ajusta el registro">
-    Completa los campos obligatorios y usa nombres que el equipo de planta reconozca.
+  <Step title="Resuelve la secuencia">
+    Ejecuta el algoritmo y revisa la propuesta.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para ejecución o análisis.
+  <Step title="Revisa feedback">
+    Corrige operaciones no planificadas, retrasadas o con restricciones faltantes.
+  </Step>
+  <Step title="Ajusta si hace falta">
+    Cambia recursos, fechas o prioridades antes de aplicar.
+  </Step>
+  <Step title="Aplica el plan">
+    Aplica solo cuando la propuesta sea ejecutable para planta.
   </Step>
 </Steps>
 
-## Qué cambia en Bold
+## Por qué puede fallar
 
-El registro queda disponible para órdenes, operaciones, planificación de recursos, secuenciación o cuadros de mando según el caso.
+Un plan puede no resolver si faltan recursos compatibles, hay restricciones imposibles, no existe disponibilidad suficiente o las fechas de materiales son incompatibles con la entrega esperada.
 
-## Problemas habituales
+| Síntoma | Qué revisar |
+| --- | --- |
+| Operación sin recurso | Proceso, estación compatible y capacidad. |
+| Operación retrasada | Fecha objetivo, turno de trabajo y disponibilidad de estación. |
+| Secuencia imposible | Restricciones duplicadas, ciclos o precedencias incompatibles. |
+| Falta material | Stock proyectado, entradas pendientes y fecha de necesidad. |
+| Plan desactualizado | Cambios recientes en órdenes, recursos o requisitos. |
 
-Si una acción no aparece, revisa permisos, estado de la orden, compatibilidad de recursos y datos maestros relacionados.
+<Warning>
+  Si cambian operaciones, recursos o requisitos después de resolver, actualiza o resuelve de nuevo el plan antes de aplicarlo.
+</Warning>
 
 ## Relacionado
 
 - [Fabricación](/ayuda/produccion/introduccion)
+- [Asignar recursos](/ayuda/produccion/asignar-recursos)
+- [Turnos de trabajo](/ayuda/produccion/turnos-de-trabajo)
+- [Entender el stock proyectado](/ayuda/planificacion/entender-el-stock-proyectado)
+- [Referencia de fabricación](/conceptos/fabricacion)

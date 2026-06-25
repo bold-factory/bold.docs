@@ -6,6 +6,8 @@ icon: "list-todo"
 
 Las compras pendientes muestran qué líneas confirmadas todavía no se han recibido por completo. Esta vista ayuda a seguir proveedores, fechas esperadas y material crítico.
 
+Una línea pendiente representa suministro esperado. Todavía no aumenta stock físico.
+
 ## Qué aparece como pendiente
 
 Una línea puede estar pendiente si:
@@ -14,6 +16,14 @@ Una línea puede estar pendiente si:
 - tiene cantidad pendiente de recibir;
 - no está cancelada;
 - todavía no se ha recibido completa.
+
+## Cómo se calcula la cantidad pendiente
+
+```text
+Cantidad pendiente = Cantidad solicitada - Cantidad recibida - Cantidad cancelada
+```
+
+Las líneas en **Borrador** no aparecen como suministro entrante porque aún no están confirmadas. Las líneas **Recibidas** no tienen cantidad pendiente. Las líneas **Canceladas** dejan de aportar suministro.
 
 ## Campos que conviene revisar
 
@@ -39,6 +49,9 @@ Una línea puede estar pendiente si:
   <Step title="Comprueba impacto">
     Revisa stock proyectado para saber si el retraso bloquea ventas o fabricación.
   </Step>
+  <Step title="Valida cantidad pendiente">
+    Comprueba si ya hubo recepciones parciales o cancelaciones de cantidad pendiente.
+  </Step>
   <Step title="Recibe o actualiza">
     Registra recepciones parciales, ajusta fechas si procede o cancela lo que ya no se espera.
   </Step>
@@ -52,7 +65,11 @@ Una línea puede estar pendiente si:
 
 Una compra pendiente no aumenta el stock físico hasta que registras una recepción. Si el material está físicamente en planta, pero no aparece en stock, revisa si falta recibirlo.
 
+Cuando recibes material, Bold actualiza la cantidad recibida de la línea y recalcula su estado. Si la recepción cubre solo parte de la cantidad, la línea queda **Parcialmente recibido** y conserva el resto como pendiente.
+
 ## Relacionado
 
 - [Planificación](/ayuda/planificacion/introduccion)
+- [Crear pedido de compra](/ayuda/compras/crear-pedido-de-compra)
+- [Recibir pedido de compra](/ayuda/compras/recibir-pedido-de-compra)
 - [Entender el stock proyectado](/ayuda/planificacion/entender-el-stock-proyectado)

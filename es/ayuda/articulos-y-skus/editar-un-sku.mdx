@@ -50,6 +50,25 @@ El valor debe respetar la clase de la propiedad:
 | Fecha/hora | Fecha válida. |
 | Selección de opción | Una opción existente de la propiedad. |
 
+## Cambiar planificación
+
+Los datos de planificación del SKU afectan a recomendaciones, compras y fabricación. Revisa el impacto antes de guardar cambios en artículos con demanda o suministro activo.
+
+| Cambio | Impacto esperado |
+| --- | --- |
+| Origen **Compra** | Las faltas pueden aparecer en el Asistente de compras o generar pedidos directos. |
+| Origen **Fabricación** | Las faltas pueden aparecer en el Asistente de fabricación o generar peticiones directas. |
+| Origen **Ignorar** | Bold elimina previsiones de compra o fabricación para ese artículo. |
+| Modo **Contra pedido** | Las demandas se cubren de forma vinculada cuando aplica. |
+| Modo **Contra stock** | Las demandas se agrupan contra el stock disponible y proyectado. |
+| Punto de pedido | Cambia cuándo se disparan recomendaciones. |
+| Pedido mínimo y tamaño de lote | Cambian la cantidad propuesta. |
+| Lead time | Cambia cuándo conviene lanzar la reposición. |
+
+<Warning>
+  Cambiar origen, modo o cantidades de planificación puede crear, actualizar o retirar previsiones. Revisa el stock proyectado después de guardar.
+</Warning>
+
 ## Consolidar duplicados
 
 Si Bold detecta dos artículos con el mismo producto y los mismos valores de propiedades, puede proponer consolidarlos. Consolidar deja un artículo como referencia válida y retira el duplicado, moviendo relaciones operativas al artículo que permanece.
@@ -61,4 +80,7 @@ Si Bold detecta dos artículos con el mismo producto y los mismos valores de pro
 ## Relacionado
 
 - [Catálogo](/ayuda/articulos-y-skus/introduccion)
+- [Crear un SKU](/ayuda/articulos-y-skus/crear-un-sku)
+- [Entender el stock proyectado](/ayuda/planificacion/entender-el-stock-proyectado)
+- [Revisar recomendaciones](/ayuda/planificacion/revisar-recomendaciones)
 - [Glosario](/ayuda/referencia-funcional/glosario)

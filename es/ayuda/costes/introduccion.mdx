@@ -6,20 +6,51 @@ icon: "circle-dollar-sign"
 
 Costes ayuda a entender cuánto cuesta producir, mantener y conservar stock usando datos de catálogo, personal, almacén, fabricación y mantenimiento.
 
-## Flujo recomendado
+## Áreas de análisis
+
+<Columns cols={2}>
+  <Card title="Artículos" icon="boxes" href="/ayuda/costes/articulos">
+    Revisa el coste previsto de materiales, semielaborados y productos terminados.
+  </Card>
+  <Card title="Empleados" icon="users" href="/ayuda/costes/empleados">
+    Mantén costes horarios para mano de obra de producción y mantenimiento.
+  </Card>
+  <Card title="Órdenes de fabricación" icon="factory" href="/ayuda/costes/ordenes-de-fabricacion">
+    Compara materiales y tiempos previstos con consumos y registros reales.
+  </Card>
+  <Card title="Inventario" icon="warehouse" href="/ayuda/costes/valoracion-inventario">
+    Consulta valoración por artículo, lote o ubicación.
+  </Card>
+</Columns>
+
+## Orden recomendado
 
 <Steps>
-  <Step title="Configura la base">
-    Crea los datos maestros que el módulo necesita para operar.
+  <Step title="Completa costes base">
+    Revisa costes de artículos y empleados antes de analizar desviaciones.
   </Step>
-  <Step title="Registra actividad">
-    Usa los registros funcionales para conservar histórico y alimentar informes.
+  <Step title="Ejecuta trabajo trazable">
+    Registra compras, consumos, producción, tiempos y partes de mantenimiento.
   </Step>
-  <Step title="Revisa resultados">
-    Consulta estados, costes, carga, permisos o automatizaciones para detectar bloqueos.
+  <Step title="Compara previsto y real">
+    Analiza diferencias por orden, parte, artículo o lote.
+  </Step>
+  <Step title="Revisa inventario">
+    Comprueba que stock, lotes y costes usados en valoración sean coherentes.
   </Step>
 </Steps>
 
 ## Antes de empezar
 
-Define responsables, permisos y datos mínimos. Evita crear duplicados si el dato ya existe en otro módulo.
+Costes depende de datos operativos completos. Si faltan consumos, tiempos, precios o lotes, el análisis puede quedar incompleto.
+
+## Conceptos relacionados
+
+<Columns cols={2}>
+  <Card title="Referencia de costes" icon="book-open" href="/conceptos/costes">
+    Entiende coste previsto, coste real, actualización de costes y valoración de inventario.
+  </Card>
+  <Card title="Reglas del sistema" icon="shield-alert" href="/ayuda/referencia-funcional/reglas-del-sistema">
+    Revisa qué datos quedan protegidos para conservar trazabilidad económica.
+  </Card>
+</Columns>

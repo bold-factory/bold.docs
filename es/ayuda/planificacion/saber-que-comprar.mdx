@@ -6,7 +6,7 @@ icon: "shopping-cart"
 
 El **Asistente de compras** agrupa necesidades de compra sugeridas por Bold antes de convertirlas en **Pedidos de compra**.
 
-Aparecen aquí los artículos configurados para aprovisionarse por compra en modo de acumulación cuando el stock proyectado cae por debajo del punto de pedido.
+Aparecen aquí los artículos configurados con origen **Compra** y modo **Contra stock** cuando el stock proyectado cae por debajo del punto de pedido.
 
 ## Cómo calcula necesidades
 
@@ -46,6 +46,12 @@ Bold puede tener en cuenta:
   La sugerencia no es un compromiso firme hasta que creas y confirmas el pedido. Usa el asistente para revisar antes de comprar.
 </Tip>
 
+## Ejemplo de recomendación
+
+El artículo **Tablero roble 18 mm** tiene 30 unidades en stock, punto de pedido 50, pedido mínimo 100 y tamaño de lote 25. Hay demanda confirmada de 60 unidades para esta semana.
+
+El stock proyectado cae a -30. Como el pedido mínimo es 100 y el tamaño de lote es 25, la recomendación puede proponer 100 unidades. Si también hay demanda futura, el asistente puede sugerir una cantidad mayor para agrupar compras.
+
 ## Parámetros que más influyen
 
 | Parámetro | Efecto |
@@ -57,7 +63,7 @@ Bold puede tener en cuenta:
 | Plazo de entrega | Afecta cuándo deberías lanzar la compra. |
 
 <Warning>
-  Si no aparece una recomendación esperada, revisa que el artículo tenga origen **Compra**, modo **Acumulación** y reglas de planificación completas.
+  Si no aparece una recomendación esperada, revisa que el artículo tenga origen **Compra**, modo **Contra stock** y reglas de planificación completas.
 </Warning>
 
 ## Relacionado

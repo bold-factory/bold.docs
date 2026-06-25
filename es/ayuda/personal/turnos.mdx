@@ -4,38 +4,55 @@ description: "Programa turnos y segmentos para coordinar trabajo de equipos."
 icon: "calendar-clock"
 ---
 
-Turnos forma parte del flujo funcional de Bold y debe mantenerse alineado con cómo trabaja tu equipo.
+Los **turnos** definen ciclos repetitivos de jornadas laborales. Sirven para expresar patrones como cinco días de mañana, dos de descanso y cinco de tarde sin configurar cada fecha una a una.
+
+Cada turno se compone de segmentos ordenados. Cada segmento indica qué jornada se aplica y cuántos días consecutivos dura.
 
 ## Antes de empezar
 
-Revisa permisos, datos relacionados y el objetivo operativo antes de crear o modificar registros.
+Ten creadas las jornadas laborales que forman el ciclo. Define también la fecha de inicio del patrón, porque Bold usa esa fecha para resolver qué jornada corresponde a cada día futuro.
 
-## Pasos
+## Crear un turno
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Turnos** desde el módulo correspondiente.
+  <Step title="Abre turnos">
+    Entra en **Personal > Turnos**.
   </Step>
-  <Step title="Revisa el listado">
-    Filtra por estado, fecha, responsable o referencia cuando aplique.
+  <Step title="Crea el turno">
+    Indica nombre, descripción y fecha de inicio del ciclo.
   </Step>
-  <Step title="Crea o actualiza el registro">
-    Completa los campos obligatorios y usa nombres que el equipo reconozca.
+  <Step title="Añade segmentos">
+    Selecciona la jornada y los días consecutivos de cada tramo.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para el flujo operativo.
+  <Step title="Ordena el ciclo">
+    Revisa que los segmentos estén en el orden correcto.
+  </Step>
+  <Step title="Asigna a empleados">
+    Usa el turno en la programación de las personas que siguen ese patrón.
   </Step>
 </Steps>
 
-## Qué cambia en Bold
+## Cómo se resuelve
 
-El registro queda disponible para los módulos relacionados y puede afectar a planificación, ejecución, informes o permisos según el caso.
+Cada segmento debe durar al menos un día. Para fechas anteriores a la fecha de inicio, Bold no resuelve ninguna jornada del patrón. Desde la fecha de inicio, el turno cicla por los segmentos según los días transcurridos.
+
+La programación efectiva de un empleado sigue esta prioridad:
+
+1. Asignación explícita de una fecha.
+2. Excepción del calendario local.
+3. Patrón repetitivo del turno.
 
 ## Problemas habituales
 
-Si una acción no aparece, revisa permisos, estado del registro y datos maestros relacionados.
+- Si una fecha no muestra jornada, revisa si está antes del inicio del turno.
+- Si el patrón se desplaza, revisa la fecha de inicio y el orden de segmentos.
+- Si un día especial no coincide, usa calendario local o asignación manual.
+- Si buscas disponibilidad de fábrica, revisa **Fabricación > Turnos de trabajo**.
 
 ## Relacionado
 
-- [Qué es Bold](/ayuda/primeros-pasos/que-es-bold)
-- [Glosario](/ayuda/referencia-funcional/glosario)
+- [Personal](/ayuda/personal/introduccion)
+- [Jornadas laborales](/ayuda/personal/jornadas-laborales)
+- [Calendarios locales](/ayuda/personal/calendarios-locales)
+- [Turnos de trabajo](/ayuda/produccion/turnos-de-trabajo)
+- [Referencia de personal](/conceptos/personal)

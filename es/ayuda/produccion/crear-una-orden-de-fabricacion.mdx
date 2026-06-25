@@ -54,6 +54,12 @@ Necesitas:
   El estado de la OF se recalcula a partir de sus operaciones y transiciones.
 </Info>
 
+## Ejemplo
+
+Planificación detecta que faltan 25 unidades de **Mesa Nórdica - 160 cm - Roble** para una entrega. Crea una petición de fabricación por 25 unidades con fecha requerida el 18 de julio.
+
+Desde la petición, crea una OF por 25 unidades y selecciona la versión activa de la receta **Mesa Nórdica**. La orden copia operaciones como **Corte**, **Montaje** y **Control final**, junto con entradas, pasos, controles y restricciones.
+
 <Warning>
   La cantidad planificada solo debería cambiar antes de empezar la orden. Cuando hay actividad, Bold protege la trazabilidad.
 </Warning>

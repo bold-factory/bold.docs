@@ -13,14 +13,14 @@ Los webhooks envían una notificación HTTP cuando ocurre un evento en Bold. Ús
 
 | Campo | Descripción |
 | --- | --- |
-| Evento | Nombre del evento que quieres recibir. |
-| Versión | Versión del contrato del evento. |
+| Evento | Nombre completo del evento que quieres recibir, por ejemplo `Planning.SalesOrder.LineConfirmed`. |
+| Versión | Versión mayor del contrato del evento. |
 | Endpoint | URL pública donde tu sistema recibe la notificación. |
 
 ```json
 {
   "endpoint": "https://integraciones.example.com/bold/webhooks",
-  "eventName": "SalesOrderLineConfirmed",
+  "eventName": "Planning.SalesOrder.LineConfirmed",
   "eventVersion": 1
 }
 ```
@@ -29,7 +29,7 @@ Los webhooks envían una notificación HTTP cuando ocurre un evento en Bold. Ús
 
 <Steps>
   <Step title="Crea el endpoint receptor">
-    Publica una URL HTTPS que acepte peticiones JSON y responda rápido.
+    Publica una URL que acepte peticiones JSON y responda rápido. Bold acepta `http` y `https`; usa `https` en producción.
   </Step>
   <Step title="Crea la suscripción">
     Registra `endpoint`, `eventName` y `eventVersion` en Bold.
@@ -50,8 +50,57 @@ POST /v1/notifications/webhook/subscriptions
 DELETE /v1/notifications/webhook/subscriptions/{id}
 ```
 
-Estas operaciones requieren permisos de administración de la aplicación.
+Estas operaciones requieren rol `App.Admin`.
+
+<Tip>
+  Si prefieres configurar suscripciones desde la interfaz, usa [Webhooks](/ayuda/panel-de-control/webhooks) en el Panel de control.
+</Tip>
+
+## Histórico de notificaciones
+
+Bold guarda notificaciones y sus intentos de entrega para que puedas diagnosticar fallos.
+
+```http
+GET /v1/notifications/webhook
+GET /v1/notifications/webhook/{id}
+GET /v1/notifications/webhook/{id}/attempts
+POST /v1/notifications/webhook/{id}/retry
+```
+
+| Estado | Qué significa |
+| --- | --- |
+| `Pending` | La notificación está pendiente o programada para reintento. |
+| `Success` | El endpoint respondió con un código `2xx`. |
+| `Failure` | Se agotaron los intentos automáticos. Puedes reintentar manualmente. |
 
 <Warning>
   No ejecutes trabajo pesado dentro de la respuesta HTTP del webhook. Encola el evento, responde `2xx` y procesa en segundo plano.
 </Warning>
+
+## Firma del webhook
+
+Bold firma el cuerpo JSON serializado con HMAC-SHA256 y lo envía como hexadecimal en minúsculas en la cabecera `X-HMAC-Signature`.
+
+```javascript
+import crypto from "node:crypto";
+
+function isValidSignature(rawBody, signature, secret) {
+  const expected = crypto
+    .createHmac("sha256", secret)
+    .update(rawBody)
+    .digest("hex");
+
+  if (!signature || signature.length !== expected.length) {
+    return false;
+  }
+
+  return crypto.timingSafeEqual(
+    Buffer.from(signature, "hex"),
+    Buffer.from(expected, "hex"),
+  );
+}
+```
+
+<Tip>
+  Verifica la firma con el cuerpo sin modificar. Si parseas y vuelves a serializar el JSON antes de verificarlo, la firma puede no coincidir.
+</Tip>

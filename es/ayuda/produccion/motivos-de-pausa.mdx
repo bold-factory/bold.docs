@@ -4,37 +4,55 @@ description: "Categoriza paradas para medir causas reales de pérdida de tiempo.
 icon: "timer-off"
 ---
 
-Motivos de pausa forma parte de fabricación y mantiene el trabajo de planta alineado con recursos, órdenes y resultados.
+Los **motivos de pausa** clasifican por qué se detiene una operación o un grupo de operaciones.
+
+Registrar el motivo permite analizar pérdidas, paradas recurrentes y oportunidades de mejora. También ayuda a separar pausas planificadas de incidencias reales.
 
 ## Antes de empezar
 
-Revisa permisos, datos maestros relacionados, estados de órdenes y el objetivo operativo antes de modificar registros.
+Define una lista corta y estable. Si hay demasiados motivos, planta elegirá opciones de forma inconsistente y el análisis perderá valor.
 
-## Pasos
+## Tipos de pausa
+
+| Tipo | Ejemplos |
+| --- | --- |
+| Planificada | Descanso, cambio de turno, limpieza programada, mantenimiento previsto. |
+| No planificada | Avería, falta de material, incidencia de calidad, espera de herramienta. |
+
+## Crear motivos
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Motivos de pausa** desde fabricación.
+  <Step title="Abre motivos de pausa">
+    Entra en **Fabricación > Motivos de pausa**.
   </Step>
-  <Step title="Filtra el trabajo">
-    Busca por estado, fecha, recurso, orden o referencia cuando aplique.
+  <Step title="Crea categorías claras">
+    Usa nombres que el operario pueda elegir rápido durante la ejecución.
   </Step>
-  <Step title="Crea o ajusta el registro">
-    Completa los campos obligatorios y usa nombres que el equipo de planta reconozca.
+  <Step title="Clasifica la pausa">
+    Marca si es planificada o no planificada cuando aplique.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para ejecución o análisis.
+  <Step title="Asigna a estaciones si corresponde">
+    Revisa qué motivos deben estar disponibles en cada estación de trabajo.
+  </Step>
+  <Step title="Revisa con planta">
+    Elimina solapes antes de usar la lista en producción real.
   </Step>
 </Steps>
 
-## Qué cambia en Bold
+## Durante la ejecución
 
-El registro queda disponible para órdenes, operaciones, planificación de recursos, secuenciación o cuadros de mando según el caso.
+Una pausa en tiempo real detiene la operación. Al cerrar la pausa, Bold puede reanudar la operación si no queda otra interrupción abierta. Las pausas cerradas alimentan duración real, productividad y análisis de pérdidas.
 
 ## Problemas habituales
 
-Si una acción no aparece, revisa permisos, estado de la orden, compatibilidad de recursos y datos maestros relacionados.
+- Si un motivo no aparece en una estación, revisa que la estación lo tenga asignado.
+- Si las pausas quedan abiertas, revisa operaciones pausadas antes de cerrar turno.
+- Si muchos registros usan **Otros**, crea motivos más claros o forma al equipo.
+- Si necesitas analizar OEE, separa paradas planificadas de no planificadas.
 
 ## Relacionado
 
 - [Fabricación](/ayuda/produccion/introduccion)
+- [Ejecutar una orden](/ayuda/produccion/ejecutar-una-orden)
+- [Cuadros de mando](/ayuda/produccion/cuadros-de-mando)
+- [Referencia de fabricación](/conceptos/fabricacion)

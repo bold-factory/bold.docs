@@ -4,37 +4,94 @@ description: "Organiza áreas, máquinas, estaciones y herramientas para ejecuta
 icon: "wrench"
 ---
 
-Recursos forma parte de fabricación y mantiene el trabajo de planta alineado con recursos, órdenes y resultados.
+Los **recursos** son los elementos productivos que organizan la ejecución en fabricación: áreas, estaciones, herramientas y el diagrama de planta.
+
+Modela solo lo que aporte planificación, ejecución, trazabilidad o coste. Un recurso demasiado genérico no ayuda a secuenciar. Un recurso demasiado detallado obliga a mantener datos que planta no usa.
 
 ## Antes de empezar
 
-Revisa permisos, datos maestros relacionados, estados de órdenes y el objetivo operativo antes de modificar registros.
+Decide qué necesitas controlar: capacidad, ubicación de stock, compatibilidad con procesos, herramientas o análisis por área.
 
-## Pasos
+## Qué puedes gestionar
+
+| Recurso | Uso |
+| --- | --- |
+| Área | Agrupa estaciones por planta, sección, línea o zona. |
+| Estación | Máquina, línea, mesa, cabina o punto donde se ejecutan operaciones. |
+| Herramienta | Elemento auxiliar requerido por una operación. |
+| Diagrama | Vista visual para entender áreas y estaciones. |
+
+## Áreas
+
+Las áreas organizan estaciones de forma jerárquica. Puedes representar una fábrica completa, plantas, secciones, líneas, células o cualquier estructura que ayude a ubicar recursos y analizar trabajo.
+
+Una planta simple puede tener una sola área. Una planta con varias líneas puede usar varios niveles si eso facilita navegación, presencia, capacidad o análisis por zona.
+
+## Configurar recursos
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Recursos** desde fabricación.
+  <Step title="Crea áreas">
+    Define la estructura física o lógica de planta.
   </Step>
-  <Step title="Filtra el trabajo">
-    Busca por estado, fecha, recurso, orden o referencia cuando aplique.
+  <Step title="Crea estaciones">
+    Indica nombre, área, capacidad y ubicación si la estación registra consumos o salidas.
   </Step>
-  <Step title="Crea o ajusta el registro">
-    Completa los campos obligatorios y usa nombres que el equipo de planta reconozca.
+  <Step title="Asigna procesos">
+    Relaciona cada estación con los procesos que puede ejecutar.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para ejecución o análisis.
+  <Step title="Configura herramientas">
+    Añade herramientas y características cuando una operación deba seleccionar un recurso auxiliar.
+  </Step>
+  <Step title="Revisa el diagrama">
+    Comprueba que la estructura sea comprensible para planificación y planta.
   </Step>
 </Steps>
 
-## Qué cambia en Bold
+## Capacidad y ubicación
 
-El registro queda disponible para órdenes, operaciones, planificación de recursos, secuenciación o cuadros de mando según el caso.
+Una estación puede tener capacidad finita o infinita. Usa capacidad finita cuando el recurso limita la planificación. Usa capacidad infinita para recursos que no bloquean la secuencia real.
+
+Si una estación tiene ubicación de almacén, Bold puede usarla para consumos y salidas de fabricación. Si falta la ubicación en un flujo que mueve stock, el movimiento puede quedar bloqueado o incompleto.
+
+## Estaciones, procesos y capacidad
+
+Cada estación pertenece a un área y puede ejecutar uno o varios procesos. Cuando una operación de receta necesita un proceso, Bold usa esa relación para proponer recursos compatibles.
+
+| Configuración | Efecto |
+| --- | --- |
+| Capacidad finita | La estación limita planificación según turnos y disponibilidad. |
+| Capacidad infinita | La estación no bloquea la planificación. Úsala para recursos no críticos. |
+| Estación principal | Bold la puede usar como opción preferente para el proceso. |
+| Estación auxiliar | Puede ejecutar el proceso, pero no es la opción automática principal. |
+| Eficiencia | Ajusta duración prevista, coste y secuenciación. Debe ser positiva. |
+| Ubicación de almacén | Permite registrar consumos y salidas en esa ubicación. |
+
+Solo puede haber una estación principal por proceso. Si marcas otra estación como principal, la anterior pasa a auxiliar.
+
+## Herramientas y características
+
+Las herramientas son recursos auxiliares que pueden requerirse para ejecutar operaciones. Se gestionan en **Fabricación > Recursos**, pestaña **Herramientas**.
+
+Usa características para describir requisitos que una herramienta cumple, como molde, calibre, útil, boquilla, formato o capacidad. Después puedes relacionar operaciones o procesos con esas características para ayudar a seleccionar herramientas compatibles.
+
+| Caso | Modelado recomendado |
+| --- | --- |
+| Una operación necesita cualquier herramienta de un tipo | Crea una característica y asígnala a las herramientas válidas. |
+| Una herramienta concreta debe trazarse | Crea la herramienta como recurso propio. |
+| El requisito no afecta ejecución ni trazabilidad | Déjalo como instrucción de paso. |
 
 ## Problemas habituales
 
-Si una acción no aparece, revisa permisos, estado de la orden, compatibilidad de recursos y datos maestros relacionados.
+- Si una operación no se puede planificar, revisa estación, fecha objetivo y herramientas requeridas.
+- Si no puedes consumir o producir desde una estación, revisa su ubicación de almacén.
+- Si secuenciación no propone un recurso, revisa compatibilidad con el proceso.
+- Si los KPIs salen mezclados, revisa si el área o estación es demasiado genérica.
+- Si Bold asigna una estación inesperada, revisa cuál está marcada como principal para ese proceso.
 
 ## Relacionado
 
 - [Fabricación](/ayuda/produccion/introduccion)
+- [Procesos](/ayuda/produccion/procesos)
+- [Asignar recursos](/ayuda/produccion/asignar-recursos)
+- [Crear una receta](/ayuda/produccion/crear-una-receta)
+- [Referencia de fabricación](/conceptos/fabricacion)

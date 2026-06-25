@@ -4,37 +4,53 @@ description: "Asigna máquinas, estaciones o equipos a operaciones antes de ejec
 icon: "user-check"
 ---
 
-Asignar recursos forma parte de fabricación y mantiene el trabajo de planta alineado con recursos, órdenes y resultados.
+Asignar recursos prepara una operación para ejecutarse en una estación concreta, con fecha objetivo y herramientas cuando el proceso lo requiere.
+
+Una operación queda planificada cuando cumple los requisitos mínimos: estación de trabajo, fecha objetivo y herramientas requeridas seleccionadas.
 
 ## Antes de empezar
 
-Revisa permisos, datos maestros relacionados, estados de órdenes y el objetivo operativo antes de modificar registros.
+Necesitas una orden con operaciones, procesos compatibles con estaciones y recursos creados. Si una operación exige característica, debe existir una herramienta compatible.
 
-## Pasos
+## Asignar una operación
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Asignar recursos** desde fabricación.
+  <Step title="Abre la orden">
+    Entra en la orden de fabricación y localiza la operación.
   </Step>
-  <Step title="Filtra el trabajo">
-    Busca por estado, fecha, recurso, orden o referencia cuando aplique.
+  <Step title="Selecciona estación">
+    Elige una estación compatible con el proceso de la operación.
   </Step>
-  <Step title="Crea o ajusta el registro">
-    Completa los campos obligatorios y usa nombres que el equipo de planta reconozca.
+  <Step title="Define fecha objetivo">
+    Indica cuándo debe ejecutarse o terminarse la operación.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para ejecución o análisis.
+  <Step title="Selecciona herramientas">
+    Si la operación exige característica, elige una herramienta compatible antes de ejecutar.
+  </Step>
+  <Step title="Comprueba el estado">
+    Revisa si la operación pasa a **Planificada** o si falta algún requisito.
   </Step>
 </Steps>
 
 ## Qué cambia en Bold
 
-El registro queda disponible para órdenes, operaciones, planificación de recursos, secuenciación o cuadros de mando según el caso.
+Cambiar estación, herramienta, característica requerida o fecha objetivo puede planificar o desplanificar una operación. Si cambias la fecha objetivo, Bold actualiza fechas pendientes de entradas y co-productos relacionados.
+
+<Warning>
+  No puedes borrar la fecha objetivo de una operación que ya está pausada, en curso o finalizada.
+</Warning>
 
 ## Problemas habituales
 
-Si una acción no aparece, revisa permisos, estado de la orden, compatibilidad de recursos y datos maestros relacionados.
+- Si una estación no aparece, revisa compatibilidad con el proceso.
+- Si falta herramienta, revisa característica requerida y herramientas compatibles.
+- Si la operación no pasa a planificada, revisa estación, fecha y herramientas.
+- Si ya empezó la operación, algunos cambios quedan bloqueados para proteger trazabilidad.
 
 ## Relacionado
 
 - [Fabricación](/ayuda/produccion/introduccion)
+- [Recursos](/ayuda/produccion/recursos)
+- [Procesos](/ayuda/produccion/procesos)
+- [Completar operaciones](/ayuda/produccion/completar-operaciones)
+- [Referencia de fabricación](/conceptos/fabricacion)

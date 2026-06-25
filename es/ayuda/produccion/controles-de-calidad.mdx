@@ -4,37 +4,59 @@ description: "Añade comprobaciones obligatorias o informativas dentro de operac
 icon: "badge-check"
 ---
 
-Controles de calidad forma parte de fabricación y mantiene el trabajo de planta alineado con recursos, órdenes y resultados.
+Los **controles de calidad** obligan al operario a registrar una comprobación al iniciar o completar una operación.
+
+Úsalos para capturar evidencias, parámetros de proceso, resultados de inspección o validaciones que deben quedar vinculadas a la orden.
 
 ## Antes de empezar
 
-Revisa permisos, datos maestros relacionados, estados de órdenes y el objetivo operativo antes de modificar registros.
+Define qué controles son obligatorios y en qué momento se deben completar. Un control al inicio puede bloquear el arranque. Un control al final puede bloquear el cierre de la operación.
 
-## Pasos
+## Tipos de control
+
+| Tipo | Uso habitual |
+| --- | --- |
+| Confirmación | El operario confirma que revisó una condición. |
+| Sí/no | Resultado binario, como **Aprobado** o **Rechazado**. |
+| Número | Medida, peso, temperatura, presión o tolerancia. |
+| Texto | Observación libre o explicación de incidencia. |
+| Foto | Evidencia visual. |
+| Archivo | Documento, certificado o informe adjunto. |
+
+## Añadir controles
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Controles de calidad** desde fabricación.
+  <Step title="Abre la receta">
+    Entra en la versión editable de la receta.
   </Step>
-  <Step title="Filtra el trabajo">
-    Busca por estado, fecha, recurso, orden o referencia cuando aplique.
+  <Step title="Selecciona la operación">
+    Elige la operación donde debe registrarse la comprobación.
   </Step>
-  <Step title="Crea o ajusta el registro">
-    Completa los campos obligatorios y usa nombres que el equipo de planta reconozca.
+  <Step title="Crea el control">
+    Define nombre, tipo, momento de ejecución y obligatoriedad.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para ejecución o análisis.
+  <Step title="Prueba la ejecución">
+    Lanza una orden de prueba o revisa la vista de operación para confirmar que el control aparece en el momento correcto.
+  </Step>
+  <Step title="Activa la versión">
+    Activa la versión cuando la receta valide correctamente.
   </Step>
 </Steps>
 
-## Qué cambia en Bold
+## Impacto en ejecución
 
-El registro queda disponible para órdenes, operaciones, planificación de recursos, secuenciación o cuadros de mando según el caso.
+Bold bloquea el inicio o finalización si faltan controles obligatorios configurados para ese momento. Los resultados quedan ligados a la operación y ayudan a explicar calidad, rechazos e incidencias.
 
 ## Problemas habituales
 
-Si una acción no aparece, revisa permisos, estado de la orden, compatibilidad de recursos y datos maestros relacionados.
+- Si el operario no puede iniciar, revisa controles obligatorios de inicio.
+- Si no puede finalizar, revisa controles obligatorios de cierre.
+- Si el control pide un dato incorrecto, cambia el tipo en una versión editable de la receta.
+- Si necesitas evidencia externa, usa foto o archivo en vez de texto libre.
 
 ## Relacionado
 
 - [Fabricación](/ayuda/produccion/introduccion)
+- [Crear una receta](/ayuda/produccion/crear-una-receta)
+- [Completar operaciones](/ayuda/produccion/completar-operaciones)
+- [Referencia de fabricación](/conceptos/fabricacion)

@@ -1,41 +1,85 @@
 ---
 title: "Configuración de empresa"
-description: "Gestiona datos básicos, logo y preferencias generales de la empresa."
+description: "Gestiona logo, actividad, zona horaria, idioma, automatizaciones y prefijos de códigos."
 icon: "building-2"
 ---
 
-Configuración de empresa forma parte del flujo funcional de Bold y debe mantenerse alineado con cómo trabaja tu equipo.
+Usa **Configuración de empresa** para definir ajustes transversales de la organización. Estos valores afectan a cálculos, automatizaciones, códigos generados, documentos y contexto usado por la IA.
 
-## Antes de empezar
+## Qué puedes configurar
 
-Revisa permisos, datos relacionados y el objetivo operativo antes de crear o modificar registros.
+| Área | Uso |
+| --- | --- |
+| Logo | Aparece en cabecera, etiquetas y documentos generados. |
+| Actividad de la empresa | Da contexto a la IA para respuestas más adaptadas. |
+| Plazo de entrega por defecto | Días laborables usados cuando no hay un plazo específico. |
+| Zona horaria | Afecta a fechas, horas, programaciones y automatizaciones. |
+| Idioma | Define preferencias de visualización y contexto de empresa. |
+| Cancelación de peticiones | Controla qué ocurre con órdenes asociadas al cancelar una petición de fabricación. |
+| Automatizaciones de producción | Permiten generar o planificar órdenes de producción automáticamente. |
+| Prefijos de código | Se aplican a códigos generados por Bold. |
 
-## Pasos
+## Ajustes críticos
+
+<Warning>
+  Cambia zona horaria, prefijos y automatizaciones con cuidado. Pueden afectar a nuevos registros, programaciones, integraciones y forma de interpretar fechas.
+</Warning>
+
+| Ajuste | Qué revisar antes de cambiar |
+| --- | --- |
+| Zona horaria | Que coincida con la operación principal de la empresa. |
+| Prefijos | Que no entren en conflicto con códigos ya usados o integraciones externas. |
+| Generar órdenes automáticamente | Que planificación y recetas estén preparadas para crear órdenes sin revisión manual. |
+| Planificar órdenes automáticamente | Que recursos, turnos y prioridades estén bien definidos. |
+| Cancelación de peticiones | Si quieres bloquear siempre, cancelar siempre o cancelar solo órdenes no iniciadas. |
+
+## Actualizar la configuración
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Configuración de empresa** desde el módulo correspondiente.
+  <Step title="Abre Configuración">
+    Entra en **Panel de control** y abre **Configuración de empresa**.
   </Step>
-  <Step title="Revisa el listado">
-    Filtra por estado, fecha, responsable o referencia cuando aplique.
+  <Step title="Revisa logo y actividad">
+    Sube un logo en formato recomendado y describe la actividad de la empresa.
   </Step>
-  <Step title="Crea o actualiza el registro">
-    Completa los campos obligatorios y usa nombres que el equipo reconozca.
+  <Step title="Ajusta valores generales">
+    Define plazo de entrega por defecto, zona horaria e idioma.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para el flujo operativo.
+  <Step title="Revisa automatizaciones">
+    Activa generación o planificación automática solo si el dato base ya es fiable.
+  </Step>
+  <Step title="Normaliza prefijos">
+    Usa prefijos cortos, claros y estables. La pantalla limita cada prefijo a 4 caracteres.
+  </Step>
+  <Step title="Guarda y comunica">
+    Guarda los cambios y avisa al equipo si afectan a códigos, fechas o procesos automáticos.
   </Step>
 </Steps>
 
-## Qué cambia en Bold
+## Prefijos de código
 
-El registro queda disponible para los módulos relacionados y puede afectar a planificación, ejecución, informes o permisos según el caso.
+Los prefijos se aplican a entidades como artículos, productos, empleados, pedidos, órdenes de fabricación, grupos de operaciones, bultos, recepciones, envíos, partes de trabajo, activos y lotes.
+
+Ejemplo:
+
+```text
+SKU -> Artículos
+OF  -> Órdenes de producción
+WO  -> Partes de trabajo
+```
 
 ## Problemas habituales
 
-Si una acción no aparece, revisa permisos, estado del registro y datos maestros relacionados.
+| Problema | Qué revisar |
+| --- | --- |
+| Los códigos nuevos no tienen el prefijo esperado | Revisa el prefijo configurado y si el registro fue creado antes del cambio. |
+| Las horas de automatización no encajan | Revisa la zona horaria de empresa. |
+| Una cancelación no permite cerrar órdenes asociadas | Revisa la política de cancelación de peticiones. |
+| La IA responde con poco contexto de negocio | Completa la actividad de la empresa. |
 
 ## Relacionado
 
-- [Qué es Bold](/ayuda/primeros-pasos/que-es-bold)
-- [Glosario](/ayuda/referencia-funcional/glosario)
+- [Mi cuenta y plan](/ayuda/panel-de-control/mi-cuenta-y-plan)
+- [Crear tu primera fabricación](/ayuda/primeros-pasos/crear-tu-primera-fabricacion)
+- [Agentes](/ayuda/panel-de-control/agentes)
+- [Reglas del sistema](/ayuda/referencia-funcional/reglas-del-sistema)

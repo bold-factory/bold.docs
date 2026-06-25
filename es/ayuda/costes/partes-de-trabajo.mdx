@@ -1,41 +1,84 @@
 ---
 title: "Costes de partes de trabajo"
-description: "Revisa coste de mano de obra, acciones y repuestos en mantenimiento."
+description: "Revisa coste de mano de obra, materiales y repuestos en mantenimiento."
 icon: "wrench"
 ---
 
-Costes de partes de trabajo forma parte del flujo funcional de Bold y debe mantenerse alineado con cómo trabaja tu equipo.
+Usa **Costes de partes de trabajo** para analizar cuánto cuesta una intervención de mantenimiento. Bold separa coste de materiales, coste de mano de obra y coste total del parte.
 
-## Antes de empezar
+## Qué estás revisando
 
-Revisa permisos, datos relacionados y el objetivo operativo antes de crear o modificar registros.
+| Bloque | Qué incluye |
+| --- | --- |
+| Coste total | Suma de materiales y mano de obra. |
+| Coste materiales | Repuestos y consumos registrados en el parte. |
+| Coste mano de obra | Horas registradas por empleado. |
+| Detalle de materiales | SKU, lote, cantidad, coste por unidad y coste total. |
+| Detalle de mano de obra | Empleado, tiempo, coste por hora y coste total. |
 
-## Pasos
+## Antes de analizar un parte
+
+- El parte debe tener materiales o tiempos registrados.
+- Los materiales deben estar consumidos con lote para usar su coste real.
+- Los empleados deben tener coste/hora si quieres valorar su tiempo.
+- Las acciones y causas deben estar informadas si quieres comparar costes por tipo de intervención.
+
+## Analizar el coste de una intervención
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Costes de partes de trabajo** desde el módulo correspondiente.
+  <Step title="Abre el listado">
+    Entra en **Costes** y abre **Partes de trabajo**.
   </Step>
-  <Step title="Revisa el listado">
-    Filtra por estado, fecha, responsable o referencia cuando aplique.
+  <Step title="Filtra el parte">
+    Busca por código o por rango de fechas. Ordena por coste total para localizar intervenciones caras.
   </Step>
-  <Step title="Crea o actualiza el registro">
-    Completa los campos obligatorios y usa nombres que el equipo reconozca.
+  <Step title="Abre el detalle">
+    Usa **Acciones** para abrir el parte y entra en la pestaña **Costes**.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para el flujo operativo.
+  <Step title="Revisa materiales">
+    Comprueba SKU, lote, cantidad, coste por unidad y coste total. Si el coste no encaja, abre el lote.
+  </Step>
+  <Step title="Revisa mano de obra">
+    Comprueba empleado, tiempo, coste por hora y coste total. Si falta coste, revisa el coste/hora del empleado.
   </Step>
 </Steps>
 
-## Qué cambia en Bold
+## Cómo se calcula
 
-El registro queda disponible para los módulos relacionados y puede afectar a planificación, ejecución, informes o permisos según el caso.
+| Coste | Cálculo |
+| --- | --- |
+| Material por línea | Cantidad consumida x coste por unidad del lote. |
+| Mano de obra por línea | Horas registradas x coste/hora del empleado. |
+| Coste total del parte | Coste materiales + coste mano de obra. |
+
+<Info>
+  El coste del parte se apoya en los datos registrados durante la intervención. Si faltan consumos, lotes, tiempos o costes horarios, el análisis puede quedar incompleto.
+</Info>
+
+## Ejemplo
+
+Un parte para una cinta transportadora consume `2` rodamientos del lote `ROD-2026-04` a `18,00 €/ud` y registra `1,5 h` de un técnico a `24,00 €/h`.
+
+```text
+Materiales: 2 x 18,00 = 36,00 €
+Mano de obra: 1,5 x 24,00 = 36,00 €
+Coste total: 72,00 €
+```
+
+Después puedes comparar este coste con otros partes del mismo activo, causa o acción para detectar recurrencia.
 
 ## Problemas habituales
 
-Si una acción no aparece, revisa permisos, estado del registro y datos maestros relacionados.
+| Problema | Qué revisar |
+| --- | --- |
+| Coste de materiales a cero | El repuesto no tiene lote valorado o el consumo no está registrado. |
+| Coste de mano de obra a cero | El empleado no tiene coste/hora o falta el registro de tiempo. |
+| Un parte parece más caro de lo esperado | Revisa cantidad consumida, coste del lote y duración real de la intervención. |
+| No ves costes de mantenimiento | Revisa permisos de costes de mantenimiento. |
 
 ## Relacionado
 
-- [Qué es Bold](/ayuda/primeros-pasos/que-es-bold)
-- [Glosario](/ayuda/referencia-funcional/glosario)
+- [Mantenimiento](/conceptos/mantenimiento)
+- [Partes de trabajo](/ayuda/mantenimiento/partes-de-trabajo)
+- [Costes de empleados](/ayuda/costes/empleados)
+- [Valoración del inventario](/ayuda/costes/valoracion-inventario)

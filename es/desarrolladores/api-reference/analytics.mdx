@@ -1,0 +1,134 @@
+---
+title: "Analytics"
+description: "Referencia funcional de la API de informes Power BI embebidos."
+---
+
+La API de `analytics` gestiona informes Power BI embebidos dentro de Smart Factory. Úsala para listar informes, abrir uno con token de embed, crear informes vacíos, duplicar informes existentes o eliminar informes editables.
+
+<Info>
+  Los informes usan el workspace y el modelo semántico provisionados para el tenant. Si el entorno no tiene analítica provisionada, las operaciones de informes no podrán completarse.
+</Info>
+
+## Recursos principales
+
+<Columns cols={2}>
+  <Card title="Informes" icon="bar-chart-3">
+    Metadatos de informes disponibles en el workspace de Power BI.
+  </Card>
+  <Card title="Token de embed" icon="key-round">
+    Credencial temporal para abrir un informe embebido en la interfaz.
+  </Card>
+  <Card title="Duplicación" icon="copy">
+    Copia de un informe existente para adaptarlo sin modificar el original.
+  </Card>
+  <Card title="Modelo semántico" icon="database">
+    Dataset de Power BI al que se conectan los informes creados por Bold.
+  </Card>
+</Columns>
+
+## Endpoint families
+
+```http
+GET    /v1/analytics/reports
+GET    /v1/analytics/reports/{id}
+POST   /v1/analytics/reports
+POST   /v1/analytics/reports/{id}/clone
+DELETE /v1/analytics/reports/{id}
+```
+
+## Permisos
+
+| Permiso | Uso |
+| --- | --- |
+| `Analytics.Reports.Read` | Listar informes y obtener datos de embed. |
+| `Analytics.Reports.Write` | Crear, duplicar o eliminar informes. |
+
+## Listar informes
+
+`GET /v1/analytics/reports` devuelve los informes existentes.
+
+```json
+{
+  "results": [
+    {
+      "id": "4a2cf9db-53fb-44b4-8f6b-08f5c8e7d2a1",
+      "name": "Producción semanal",
+      "type": "PowerBIReport",
+      "editable": true,
+      "embedUrl": "https://app.powerbi.com/reportEmbed?...",
+      "datasetId": "a0c55a7e-65c4-45d0-8cc2-96d0c9b4a508"
+    }
+  ]
+}
+```
+
+| Campo | Descripción |
+| --- | --- |
+| `id` | Identificador del informe en Power BI. |
+| `name` | Nombre visible del informe. |
+| `type` | Tipo de informe devuelto por Power BI. |
+| `editable` | Indica si el informe puede editarse o eliminarse desde Bold. |
+| `embedUrl` | URL de embed usada por el cliente. |
+| `datasetId` | Modelo semántico asociado al informe. |
+
+## Abrir un informe
+
+`GET /v1/analytics/reports/{id}` devuelve los metadatos del informe y un `embedToken`.
+
+```json
+{
+  "report": {
+    "id": "4a2cf9db-53fb-44b4-8f6b-08f5c8e7d2a1",
+    "name": "Producción semanal",
+    "type": "PowerBIReport",
+    "editable": true,
+    "embedUrl": "https://app.powerbi.com/reportEmbed?...",
+    "datasetId": "a0c55a7e-65c4-45d0-8cc2-96d0c9b4a508"
+  },
+  "embedToken": "eyJ0eXAiOiJKV1Qi..."
+}
+```
+
+<Warning>
+  Trata `embedToken` como credencial temporal. No lo guardes en logs, documentos ni almacenamiento persistente del navegador.
+</Warning>
+
+Los informes sin `datasetId`, como informes RDL, no están soportados por este endpoint de embed.
+
+## Crear o duplicar informes
+
+Crear un informe parte del modelo semántico del tenant y una definición base.
+
+```http
+POST /v1/analytics/reports
+Content-Type: application/json
+
+{
+  "name": "Coste por activo"
+}
+```
+
+Duplicar un informe copia un informe existente con un nombre nuevo.
+
+```http
+POST /v1/analytics/reports/4a2cf9db-53fb-44b4-8f6b-08f5c8e7d2a1/clone
+Content-Type: application/json
+
+{
+  "name": "Coste por activo - copia"
+}
+```
+
+## Eliminar informes
+
+`DELETE /v1/analytics/reports/{id}` elimina el informe del workspace de Power BI.
+
+<Warning>
+  Eliminar un informe no se puede deshacer desde Bold. Usa duplicados para experimentar con visualizaciones, filtros o campos antes de borrar un informe usado por el equipo.
+</Warning>
+
+## Relacionado
+
+- [Informes Power BI](/ayuda/smart-factory/informes-powerbi)
+- [Smart Factory y panel de control](/conceptos/smart-factory-y-control)
+- [Permisos por módulo](/ayuda/usuarios-y-permisos/permisos-por-modulo)

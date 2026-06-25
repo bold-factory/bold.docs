@@ -6,20 +6,51 @@ icon: "sparkles"
 
 Smart Factory reúne análisis e inteligencia artificial para consultar datos, automatizar tareas y revisar conversaciones o ejecuciones anteriores.
 
-## Flujo recomendado
+## Áreas de trabajo
+
+<Columns cols={2}>
+  <Card title="Informes Power BI" icon="chart-no-axes-combined" href="/ayuda/smart-factory/informes-powerbi">
+    Consulta métricas de operación, producción, almacén, costes o mantenimiento.
+  </Card>
+  <Card title="Boldy" icon="message-circle" href="/ayuda/smart-factory/boldy">
+    Conversa con el asistente para consultar información y recibir ayuda contextual.
+  </Card>
+  <Card title="Tareas con agentes" icon="bot" href="/ayuda/smart-factory/tareas-con-agentes">
+    Revisa trabajos ejecutados por agentes y continúa el contexto cuando haga falta.
+  </Card>
+  <Card title="Agentes" icon="settings" href="/ayuda/panel-de-control/agentes">
+    Configura automatizaciones, instrucciones y nivel de inteligencia.
+  </Card>
+</Columns>
+
+## Orden recomendado
 
 <Steps>
-  <Step title="Configura la base">
-    Crea los datos maestros que el módulo necesita para operar.
+  <Step title="Define el objetivo">
+    Decide si necesitas consultar, analizar, automatizar o revisar una tarea ejecutada.
   </Step>
-  <Step title="Registra actividad">
-    Usa los registros funcionales para conservar histórico y alimentar informes.
+  <Step title="Elige la herramienta">
+    Usa informes para métricas, Boldy para conversación y agentes para tareas más largas.
   </Step>
-  <Step title="Revisa resultados">
-    Consulta estados, costes, carga, permisos o automatizaciones para detectar bloqueos.
+  <Step title="Revisa permisos y datos">
+    Comprueba que el usuario o agente tenga acceso a los módulos necesarios.
+  </Step>
+  <Step title="Audita el resultado">
+    Revisa historial, créditos, entradas usadas y acciones realizadas.
   </Step>
 </Steps>
 
 ## Antes de empezar
 
-Define responsables, permisos y datos mínimos. Evita crear duplicados si el dato ya existe en otro módulo.
+La calidad de las respuestas depende del dato disponible. Mantén catálogo, stock, órdenes y partes al día antes de pedir análisis operativos.
+
+## Conceptos relacionados
+
+<Columns cols={2}>
+  <Card title="Smart Factory y control" icon="book-open" href="/conceptos/smart-factory-y-control">
+    Entiende Boldy, agentes, informes, claves API, webhooks, notificaciones y diseños.
+  </Card>
+  <Card title="Panel de control" icon="settings" href="/ayuda/panel-de-control/introduccion">
+    Configura usuarios, permisos, agentes, eventos, datos y diseños.
+  </Card>
+</Columns>

@@ -1,41 +1,89 @@
 ---
 title: "Valoración del inventario"
-description: "Consulta el valor actual de existencias por artículo, lote o ubicación."
+description: "Consulta el valor actual de existencias por artículo, lote y ubicación."
 icon: "warehouse"
 ---
 
-Valoración del inventario forma parte del flujo funcional de Bold y debe mantenerse alineado con cómo trabaja tu equipo.
+Usa **Valoración del inventario** para ver el valor económico del stock disponible. Bold calcula el valor desde las unidades de stock con cantidad positiva y el coste por unidad de sus lotes.
 
-## Antes de empezar
+## Qué estás revisando
 
-Revisa permisos, datos relacionados y el objetivo operativo antes de crear o modificar registros.
+| Campo | Qué significa |
+| --- | --- |
+| Valor total del inventario | Suma del valor de todas las unidades de stock positivas. |
+| Artículo | SKU valorado. |
+| Ubicación | Lugar donde está el stock. |
+| Lote | Lote que aporta el coste por unidad. |
+| Stock | Cantidad disponible en la unidad del SKU. |
+| Coste/ud | Coste por unidad del lote. |
+| Valor total | Stock x coste/ud. |
 
-## Pasos
+## Cómo se calcula
+
+```text
+Valor de una línea = stock disponible x coste por unidad del lote
+Valor total del inventario = suma de las líneas con stock positivo
+```
+
+El origen del lote determina el coste usado:
+
+| Origen del lote | Coste habitual |
+| --- | --- |
+| Compra | Coste de compra registrado en la entrada. |
+| Fabricación | Coste real de fabricación trasladado al lote producido. |
+| Mezcla o transformación | Coste derivado de los componentes del lote. |
+| Origen desconocido | Puede quedar sin valorar hasta regularizar la trazabilidad. |
+
+## Revisar la valoración
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Valoración del inventario** desde el módulo correspondiente.
+  <Step title="Abre Costes">
+    Entra en **Costes** y abre **Valoración del inventario**.
   </Step>
-  <Step title="Revisa el listado">
-    Filtra por estado, fecha, responsable o referencia cuando aplique.
+  <Step title="Revisa el valor total">
+    Usa el total como visión rápida del inventario valorado.
   </Step>
-  <Step title="Crea o actualiza el registro">
-    Completa los campos obligatorios y usa nombres que el equipo reconozca.
+  <Step title="Filtra por artículo, ubicación o lote">
+    Localiza las líneas que explican el valor que quieres revisar.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para el flujo operativo.
+  <Step title="Comprueba el coste del lote">
+    Abre el lote para revisar coste unitario y componentes si el valor no encaja.
+  </Step>
+  <Step title="Regulariza datos incompletos">
+    Si un lote no tiene coste, revisa su origen: compra, fabricación, ajuste o consumo temporal.
   </Step>
 </Steps>
 
-## Qué cambia en Bold
+## Ejemplo
 
-El registro queda disponible para los módulos relacionados y puede afectar a planificación, ejecución, informes o permisos según el caso.
+Tienes `80 ud` del SKU `ENV-500` en la ubicación `A-01`. El lote tiene un coste de `0,42 €/ud`.
+
+```text
+80 x 0,42 = 33,60 €
+```
+
+Si el mismo SKU tiene otro lote en otra ubicación con coste `0,47 €/ud`, Bold valora cada línea con su propio coste de lote. Esto permite ver diferencias por compra, fabricación o regularización.
+
+## Lotes temporales y trazabilidad
+
+Cuando se consumen materiales sin stock disponible, Bold puede necesitar crear trazabilidad temporal. Esos lotes pueden quedar sin valorar o con coste pendiente hasta que se registre stock que permita completar el origen.
+
+<Warning>
+  No uses la valoración como dato financiero cerrado si existen lotes sin origen claro, consumos pendientes de regularizar o recepciones sin coste.
+</Warning>
 
 ## Problemas habituales
 
-Si una acción no aparece, revisa permisos, estado del registro y datos maestros relacionados.
+| Problema | Qué revisar |
+| --- | --- |
+| El valor total parece bajo | Busca lotes con coste cero o stock sin origen valorado. |
+| Dos líneas del mismo SKU tienen costes distintos | Cada lote conserva su propio coste. Revisa origen, compra o fabricación. |
+| El stock aparece en valoración pero no esperabas verlo | La tabla incluye unidades de stock con cantidad positiva. Revisa ubicación y lote. |
+| No ves valoración de inventario | Revisa permisos de costes de almacén. |
 
 ## Relacionado
 
-- [Qué es Bold](/ayuda/primeros-pasos/que-es-bold)
-- [Glosario](/ayuda/referencia-funcional/glosario)
+- [Almacén](/conceptos/almacen)
+- [Consultar stock](/ayuda/almacen/consultar-stock)
+- [Ver movimientos de stock](/ayuda/almacen/ver-movimientos-de-stock)
+- [Costes de artículos](/ayuda/costes/articulos)

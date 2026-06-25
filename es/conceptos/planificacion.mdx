@@ -1,0 +1,135 @@
+---
+title: "Planificación"
+description: "Referencia de demanda, suministro, stock proyectado, compras, ventas y recomendaciones."
+icon: "calendar-range"
+---
+
+La planificación conecta compromisos comerciales, compras, fabricación y stock para decidir qué falta, cuándo falta y cómo cubrirlo.
+
+## Conceptos principales
+
+| Concepto | Significado |
+| --- | --- |
+| Demanda | Necesidad de stock generada por venta, previsión o consumo previsto. |
+| Suministro | Entrada esperada por compra, fabricación o previsión. |
+| Stock proyectado | Evolución esperada del stock al aplicar demanda y suministro futuros. |
+| Stock disponible | Stock físico libre después de compromisos actuales. |
+| Stock entrante | Cantidad esperada por recepciones, compras o fabricación. |
+| Stock saliente | Cantidad comprometida por ventas, consumos o envíos. |
+| Stock disponible actual | Stock físico menos stock saliente. |
+| Stock disponible proyectado | Stock disponible actual más stock entrante. |
+| Punto de pedido | Umbral desde el que Bold recomienda reponer. |
+| Pedido mínimo | Cantidad mínima recomendada al crear compra o fabricación. |
+| Tamaño de lote | Múltiplo o lote operativo usado para redondear recomendaciones. |
+
+## Política de aprovisionamiento del artículo
+
+Cada artículo tiene una política de aprovisionamiento que guía las recomendaciones.
+
+| Campo | Qué decide |
+| --- | --- |
+| Origen de aprovisionamiento | Si Bold propone **Compra**, **Fabricación** o **Ignorar** el artículo en recomendaciones. |
+| Modo de aprovisionamiento | Si la necesidad se cubre **Contra pedido** o **Contra stock**. |
+| Punto de pedido | Nivel que dispara la reposición cuando el stock queda por debajo del umbral. |
+| Pedido mínimo | Cantidad mínima que Bold propone cuando falta stock. |
+| Tamaño de lote | Múltiplo al que Bold redondea la cantidad recomendada. |
+| Lead time de aprovisionamiento | Días laborables usados para anticipar cuándo lanzar la reposición. |
+| Stock de seguridad | Colchón operativo que debes alinear con el punto de pedido. |
+
+<Note>
+  El backend valida que punto de pedido, pedido mínimo, stock de seguridad y lead time no sean negativos. El tamaño de lote debe ser mayor que cero cuando se informa.
+</Note>
+
+## Cómo calcula los saldos
+
+Bold mantiene saldos calculados por artículo:
+
+```text
+Stock disponible actual = Stock físico - Stock saliente
+Stock disponible proyectado = Stock disponible actual + Stock entrante
+```
+
+El stock saliente nace de demanda activa, como pedidos de venta confirmados o consumos previstos. El stock entrante nace de suministro activo, como pedidos de compra confirmados, peticiones de fabricación, órdenes de fabricación o previsiones.
+
+## Demanda y pedidos de venta
+
+Un pedido de venta representa demanda de cliente. Sus líneas solo afectan a planificación cuando están confirmadas.
+
+Las líneas nuevas nacen en borrador. Al confirmarlas, el backend valida que el artículo exista y esté activo. La cantidad, el artículo y el modo de cumplimiento se editan solo mientras la línea está en borrador. Las fechas y notas pueden cambiar después para mantener la planificación actualizada.
+
+La fecha objetivo de una línea se deriva de la fecha comprometida si existe. Si no existe, usa la fecha solicitada o la fecha del pedido más el plazo del artículo.
+
+| Estado de línea | Cómo afecta a demanda |
+| --- | --- |
+| Borrador | No aporta demanda. |
+| Pendiente | Aporta la cantidad pendiente. |
+| Parcialmente entregado | Aporta solo la parte pendiente de enviar. |
+| Entregado | Ya no aporta demanda pendiente. |
+| Cancelado | No aporta demanda. |
+
+La cantidad pendiente se calcula como cantidad solicitada menos cantidad enviada y cantidad cancelada. La disponibilidad de la línea se calcula aparte con stock disponible y suministro planificado.
+
+## Suministro y pedidos de compra
+
+Un pedido de compra representa suministro firme de proveedor. Sus líneas también nacen en borrador y solo aportan suministro pendiente después de confirmarse.
+
+La cantidad no puede bajar por debajo de lo ya recibido. Una línea recibida o parcialmente recibida no se cancela como si no hubiera existido; Bold conserva lo recibido y cancela solo la cantidad pendiente.
+
+| Estado de línea | Cómo afecta al suministro |
+| --- | --- |
+| Borrador | No aporta stock entrante. |
+| Pendiente | Aporta la cantidad pendiente como suministro esperado. |
+| Parcialmente recibido | Aporta solo la parte pendiente. |
+| Recibido | Ya no aporta suministro pendiente. |
+| Cancelado | No aporta suministro. |
+
+Cuando almacén recibe una línea de compra, Bold aumenta stock físico y planificación reduce el suministro pendiente de esa línea.
+
+## Peticiones de fabricación
+
+Una petición de fabricación indica que un artículo debe estar disponible en una fecha. Puede nacer manualmente o desde planificación.
+
+La petición define la necesidad. La orden de fabricación define la ejecución. Si una petición ya tiene cantidad asignada, el backend bloquea cambios de artículo y no permite reducir la cantidad solicitada por debajo de la cantidad asignada.
+
+| Estado de petición | Cómo afecta a planificación |
+| --- | --- |
+| Sin asignar | Mantiene toda la cantidad como pendiente de cubrir. |
+| Parcialmente asignada | Mantiene solo la cantidad no asignada. |
+| Asignada | La necesidad está cubierta por órdenes. |
+| Cancelada | La petición y sus entradas pendientes dejan de estar activas. |
+
+## Recomendaciones
+
+Los asistentes de compras y fabricación leen stock proyectado, demanda, suministro y parámetros del artículo.
+
+| Parámetro | Efecto |
+| --- | --- |
+| Origen de aprovisionamiento | Indica si el artículo se compra, fabrica o se cubre por otra fuente. |
+| Contra pedido | Relaciona una demanda concreta con su aprovisionamiento. |
+| Contra stock | Agrupa necesidades contra el stock disponible y proyectado. |
+| Punto de pedido | Dispara recomendaciones cuando el proyectado cae por debajo del umbral. |
+| Pedido mínimo | Eleva la recomendación hasta una cantidad mínima. |
+| Tamaño de lote | Redondea cantidades a múltiplos operativos. |
+
+## Ejemplo
+
+Tienes 20 unidades de **Caja A** en stock. Hay un pedido de venta confirmado de 35 unidades para el 15 de julio y un pedido de compra confirmado de 30 unidades para el 12 de julio.
+
+| Fecha | Movimiento | Proyectado |
+| --- | --- | --- |
+| Hoy | Stock inicial | 20 |
+| 12 de julio | Compra entrante +30 | 50 |
+| 15 de julio | Venta saliente -35 | 15 |
+
+Si el punto de pedido es 25, Bold puede recomendar reponer aunque el stock nunca sea negativo, porque el proyectado termina por debajo del umbral.
+
+## Guías relacionadas
+
+- [Entender el stock proyectado](/ayuda/planificacion/entender-el-stock-proyectado)
+- [Crear demanda](/ayuda/planificacion/crear-demanda)
+- [Crear suministro](/ayuda/planificacion/crear-suministro)
+- [Saber qué comprar](/ayuda/planificacion/saber-que-comprar)
+- [Saber qué fabricar](/ayuda/planificacion/saber-que-fabricar)
+- [Revisar recomendaciones](/ayuda/planificacion/revisar-recomendaciones)
+- [Crear pedido de venta](/ayuda/ventas/crear-pedido-de-venta)
+- [Crear pedido de compra](/ayuda/compras/crear-pedido-de-compra)

@@ -1,41 +1,83 @@
 ---
 title: "Costes de órdenes de fabricación"
-description: "Analiza materiales, tiempos y desviaciones de coste por orden."
+description: "Analiza coste previsto, coste real y desviaciones por orden y operación."
 icon: "factory"
 ---
 
-Costes de órdenes de fabricación forma parte del flujo funcional de Bold y debe mantenerse alineado con cómo trabaja tu equipo.
+Usa **Costes de órdenes de fabricación** para comparar lo que esperabas gastar con lo que realmente ocurrió en planta. Bold desglosa cada orden por materiales, mano de obra, máquina, total y coste por unidad.
 
-## Antes de empezar
+## Qué estás revisando
 
-Revisa permisos, datos relacionados y el objetivo operativo antes de crear o modificar registros.
+| Bloque | Qué incluye |
+| --- | --- |
+| Cantidad prevista | Cantidad planificada de la orden. |
+| Coste previsto | Mano de obra, materiales, máquina, total y coste por unidad calculados desde la receta y la planificación. |
+| Cantidad completada | Cantidad registrada como producida. |
+| Coste real | Mano de obra, materiales, máquina, total y coste por unidad calculados desde consumos y tiempos reales. |
+| Operaciones | Detalle por operación para localizar la desviación. |
 
-## Pasos
+## Antes de analizar una orden
+
+- La orden debe tener receta, operaciones y materiales planificados.
+- Los materiales reales deben estar consumidos con lote.
+- La producción completada debe estar registrada.
+- Los tiempos de mano de obra deben estar asignados a empleados con coste/hora.
+- Los recursos o máquinas deben tener coste por hora cuando quieras imputar coste máquina.
+
+## Analizar desviaciones
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Costes de órdenes de fabricación** desde el módulo correspondiente.
+  <Step title="Abre el listado">
+    Entra en **Costes** y abre **Órdenes de fabricación**.
   </Step>
-  <Step title="Revisa el listado">
-    Filtra por estado, fecha, responsable o referencia cuando aplique.
+  <Step title="Filtra la orden">
+    Busca por código de OF o por SKU fabricado. Ordena por coste real por unidad para detectar desviaciones.
   </Step>
-  <Step title="Crea o actualiza el registro">
-    Completa los campos obligatorios y usa nombres que el equipo reconozca.
+  <Step title="Compara previsto y real">
+    Revisa cantidad prevista, cantidad completada, coste previsto total y coste real total.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para el flujo operativo.
+  <Step title="Entra en la orden">
+    Abre la pestaña **Costes** de la orden para ver el desglose por operación.
+  </Step>
+  <Step title="Revisa operación, materiales y mano de obra">
+    Si una operación concentra la desviación, entra en ella y revisa materiales consumidos, horas de empleados y coste máquina.
   </Step>
 </Steps>
 
-## Qué cambia en Bold
+## Cómo se calcula
 
-El registro queda disponible para los módulos relacionados y puede afectar a planificación, ejecución, informes o permisos según el caso.
+| Coste | Origen previsto | Origen real |
+| --- | --- | --- |
+| Materiales | Materiales de receta y coste previsto de SKU. | Materiales consumidos y coste del lote consumido. |
+| Mano de obra | Tiempo planificado y coste horario previsto o promedio. | Tiempo registrado por empleado y coste/hora del empleado. |
+| Máquina | Duración planificada y coste/hora del recurso. | Tiempo real de máquina y coste/hora del recurso. |
+| Coste por unidad | Coste total previsto / cantidad prevista. | Coste total real / cantidad completada. |
+
+## Ejemplo
+
+Una OF prevé fabricar `100 ud` con `300 €` de materiales, `120 €` de mano de obra y `80 €` de máquina. El coste previsto total es `500 €`, o `5,00 €/ud`.
+
+Durante la ejecución se consumen más materiales y se completan `95 ud`. El coste real queda en `570 €`, o `6,00 €/ud`. En este caso, revisa:
+
+- Materiales con cantidad real mayor que la prevista.
+- Lotes con coste unitario diferente al previsto.
+- Operaciones con más horas registradas.
+- Máquina con duración real superior a la planificada.
 
 ## Problemas habituales
 
-Si una acción no aparece, revisa permisos, estado del registro y datos maestros relacionados.
+| Problema | Qué revisar |
+| --- | --- |
+| Coste real a cero | Faltan consumos, tiempos o producción completada. |
+| Coste de materiales inesperado | Revisa el lote consumido y su coste por unidad. |
+| Mano de obra prevista distinta de la real | El previsto usa planificación; el real usa empleados y tiempos registrados. |
+| Coste por unidad muy alto | Revisa si la cantidad completada es menor que la prevista. |
+| No ves costes de producción | Revisa permisos de costes de producción. |
 
 ## Relacionado
 
-- [Qué es Bold](/ayuda/primeros-pasos/que-es-bold)
-- [Glosario](/ayuda/referencia-funcional/glosario)
+- [Fabricación](/conceptos/fabricacion)
+- [Crear una orden de fabricación](/ayuda/produccion/crear-una-orden-de-fabricacion)
+- [Ejecutar una orden](/ayuda/produccion/ejecutar-una-orden)
+- [Costes de artículos](/ayuda/costes/articulos)
+- [Costes de empleados](/ayuda/costes/empleados)

@@ -1,41 +1,83 @@
 ---
-title: "Informes PowerBI"
-description: "Consulta informes y cuadros personalizados sobre datos de Bold."
+title: "Informes Power BI"
+description: "Consulta y adapta informes embebidos sobre datos de Bold."
 icon: "bar-chart-3"
 ---
 
-Informes PowerBI forma parte del flujo funcional de Bold y debe mantenerse alineado con cómo trabaja tu equipo.
+Los **Informes Power BI** usan Power BI embebido para analizar datos de Bold con visualizaciones, filtros y campos preparados. Úsalos para análisis periódico, seguimiento de indicadores y vistas de dirección.
 
-## Antes de empezar
+<Info>
+  Los informes Power BI no son una vista en tiempo real. Se refrescan según la programación del entorno, normalmente de forma periódica durante el horario laboral.
+</Info>
 
-Revisa permisos, datos relacionados y el objetivo operativo antes de crear o modificar registros.
+## Qué puedes hacer
 
-## Pasos
+| Acción | Uso |
+| --- | --- |
+| Abrir un informe | Consulta visualizaciones y filtros existentes. |
+| Crear informe | Parte del modelo de datos predefinido de Bold. |
+| Duplicar informe | Crea una copia para modificarla sin alterar el original. |
+| Editar y guardar | Ajusta campos, visualizaciones y filtros cuando tengas permisos. |
+| Exportar datos | Extrae datos según las capacidades habilitadas en el informe. |
+| Eliminar | Borra informes editables. Esta acción no se puede deshacer. |
+
+## Cuándo usar informes y cuándo usar cuadros de mando
+
+| Necesidad | Usa |
+| --- | --- |
+| Analizar tendencias, comparar periodos o preparar reportes | **Informes Power BI**. |
+| Ver estado vivo de planta, operaciones en curso u OEE operativo | [Cuadros de mando de fabricación](/ayuda/produccion/cuadros-de-mando). |
+| Investigar un registro concreto | El módulo operativo correspondiente, por ejemplo órdenes, stock o partes. |
+
+## Crear o adaptar un informe
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Informes PowerBI** desde el módulo correspondiente.
+  <Step title="Abre Smart Factory">
+    Entra en **Smart Factory** y abre **Informes Power BI**.
   </Step>
-  <Step title="Revisa el listado">
-    Filtra por estado, fecha, responsable o referencia cuando aplique.
+  <Step title="Elige el punto de partida">
+    Abre un informe existente, crea uno nuevo o duplica uno parecido. El nombre `Base` está reservado.
   </Step>
-  <Step title="Crea o actualiza el registro">
-    Completa los campos obligatorios y usa nombres que el equipo reconozca.
+  <Step title="Edita visualizaciones">
+    En modo edición, selecciona campos del modelo, añade visualizaciones y configura filtros.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para el flujo operativo.
+  <Step title="Guarda cambios">
+    Guarda cuando el informe represente la vista que necesita tu equipo.
+  </Step>
+  <Step title="Valida con datos reales">
+    Compara el informe con registros de Bold para confirmar que filtros, fechas y unidades son correctos.
   </Step>
 </Steps>
 
-## Qué cambia en Bold
+## Permisos y API
 
-El registro queda disponible para los módulos relacionados y puede afectar a planificación, ejecución, informes o permisos según el caso.
+| Acción | Permiso |
+| --- | --- |
+| Abrir y listar informes | `Analytics.Reports.Read` |
+| Crear, duplicar o eliminar informes | `Analytics.Reports.Write` |
+
+La API de informes expone metadatos, URL de embed y token temporal para abrir informes en una experiencia propia. Consulta [Analytics API](/desarrolladores/api-reference/analytics) si necesitas integrar informes fuera de la interfaz estándar de Bold.
+
+## Buenas prácticas
+
+- Duplica informes antes de hacer cambios relevantes.
+- Usa nombres orientados al uso, por ejemplo `Coste por activo` o `Producción semanal`.
+- Incluye filtros visibles para fechas, área, SKU, activo o estado cuando el informe se use por varios equipos.
+- No uses Power BI para decisiones que requieren estado en vivo de planta.
 
 ## Problemas habituales
 
-Si una acción no aparece, revisa permisos, estado del registro y datos maestros relacionados.
+| Problema | Qué revisar |
+| --- | --- |
+| El dato parece desactualizado | Revisa la última actualización del modelo y usa cuadros de mando si necesitas tiempo real. |
+| No aparece un informe | Puede no haber informes disponibles o faltar permisos de Analytics. |
+| No puedes eliminarlo | Solo los informes editables pueden eliminarse. |
+| Un filtro cambia demasiado el resultado | Revisa fechas, estado de registros, unidades y campos usados en la visualización. |
 
 ## Relacionado
 
-- [Qué es Bold](/ayuda/primeros-pasos/que-es-bold)
-- [Glosario](/ayuda/referencia-funcional/glosario)
+- [Smart Factory y panel de control](/conceptos/smart-factory-y-control)
+- [Analytics API](/desarrolladores/api-reference/analytics)
+- [Cuadros de mando de fabricación](/ayuda/produccion/cuadros-de-mando)
+- [Costes](/ayuda/costes/introduccion)
+- [Mantenimiento](/ayuda/mantenimiento/introduccion)

@@ -4,38 +4,69 @@ description: "Conversa con el asistente para consultar información de Bold sin 
 icon: "message-circle"
 ---
 
-Boldy forma parte del flujo funcional de Bold y debe mantenerse alineado con cómo trabaja tu equipo.
+**Boldy** es el asistente conversacional de Bold. Úsalo para consultar información en lenguaje natural, resumir datos y orientarte sin recorrer todos los menús.
 
-## Antes de empezar
+## Cuándo usar Boldy
 
-Revisa permisos, datos relacionados y el objetivo operativo antes de crear o modificar registros.
+| Necesidad | Ejemplo |
+| --- | --- |
+| Localizar datos | `¿Qué pedidos de venta están pendientes esta semana?` |
+| Resumir información | `Resume las órdenes de fabricación con retraso.` |
+| Entender un proceso | `Explícame qué significa stock proyectado.` |
+| Preparar una búsqueda | `Ayúdame a encontrar partes de mantenimiento de la envasadora.` |
 
-## Pasos
+Boldy responde con el contexto y permisos disponibles para tu usuario. Si no tiene datos suficientes, debe pedir aclaración o indicar qué falta.
+
+## Iniciar una conversación
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Boldy** desde el módulo correspondiente.
+  <Step title="Abre Boldy">
+    Entra en **Smart Factory** y abre **Boldy**.
   </Step>
-  <Step title="Revisa el listado">
-    Filtra por estado, fecha, responsable o referencia cuando aplique.
+  <Step title="Revisa el historial">
+    Abre una conversación anterior si quieres continuar con el mismo contexto.
   </Step>
-  <Step title="Crea o actualiza el registro">
-    Completa los campos obligatorios y usa nombres que el equipo reconozca.
+  <Step title="Crea una conversación nueva">
+    Usa **Nueva** cuando cambie el objetivo o no quieras arrastrar contexto anterior.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para el flujo operativo.
+  <Step title="Formula la petición">
+    Indica módulo, periodo, estado o identificador cuando lo conozcas.
+  </Step>
+  <Step title="Verifica el resultado">
+    Para decisiones operativas, abre los registros citados y confirma estados, fechas y cantidades.
   </Step>
 </Steps>
 
-## Qué cambia en Bold
+## Cómo preguntar mejor
 
-El registro queda disponible para los módulos relacionados y puede afectar a planificación, ejecución, informes o permisos según el caso.
+| Menos útil | Más útil |
+| --- | --- |
+| `¿Cómo va producción?` | `Resume las OF en progreso de esta semana y destaca retrasos.` |
+| `Mira stock` | `Qué SKUs están por debajo del punto de reorden en el almacén principal.` |
+| `Dime mantenimiento` | `Lista partes abiertos del activo ENV-01 con causa y última interacción.` |
+
+## Diferencia con tareas con agentes
+
+| Herramienta | Uso principal |
+| --- | --- |
+| Boldy | Conversación directa y rápida con el asistente personal. |
+| Tareas con agentes | Trabajos delegados a agentes especializados, con estado, archivos, herramientas, aclaraciones y créditos. |
+
+<Tip>
+  Usa Boldy para explorar o preguntar. Usa una tarea con agente cuando el trabajo sea repetible, largo, necesite archivos o deba quedar auditado como ejecución delegada.
+</Tip>
 
 ## Problemas habituales
 
-Si una acción no aparece, revisa permisos, estado del registro y datos maestros relacionados.
+| Problema | Qué revisar |
+| --- | --- |
+| La respuesta es demasiado general | Añade módulo, fechas, estado, código, SKU, activo o ubicación. |
+| Boldy no encuentra un dato | Revisa permisos y si el dato existe en el módulo operativo. |
+| Mezcla contextos de conversaciones anteriores | Crea una conversación nueva. |
+| Necesitas que ejecute una tarea larga | Usa [Tareas con agentes](/ayuda/smart-factory/tareas-con-agentes). |
 
 ## Relacionado
 
-- [Qué es Bold](/ayuda/primeros-pasos/que-es-bold)
-- [Glosario](/ayuda/referencia-funcional/glosario)
+- [Tareas con agentes](/ayuda/smart-factory/tareas-con-agentes)
+- [Agentes](/ayuda/panel-de-control/agentes)
+- [Smart Factory y panel de control](/conceptos/smart-factory-y-control)

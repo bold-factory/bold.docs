@@ -1,41 +1,109 @@
 ---
 title: "Notificaciones"
-description: "Configura avisos por email o en la aplicación para eventos relevantes."
+description: "Configura avisos por email o dentro de la aplicación para eventos relevantes."
 icon: "bell"
 ---
 
-Notificaciones forma parte del flujo funcional de Bold y debe mantenerse alineado con cómo trabaja tu equipo.
+Las **Notificaciones** te permiten elegir qué eventos quieres recibir dentro de Bold y por email. Son suscripciones personales vinculadas al email de tu usuario.
 
-## Antes de empezar
+La pantalla carga el catálogo de eventos disponible en tu entorno, agrupa los eventos por entidad y muestra dos interruptores por evento: **App** y **Email**. Puedes activar uno, ambos o ninguno.
 
-Revisa permisos, datos relacionados y el objetivo operativo antes de crear o modificar registros.
+<Info>
+  Usa notificaciones para avisos de personas. Si un ERP, BI, middleware o automatización debe recibir eventos, usa [webhooks](/ayuda/panel-de-control/webhooks).
+</Info>
 
-## Pasos
+## Canales disponibles
+
+| Canal | Cuándo usarlo |
+| --- | --- |
+| App | Avisos dentro de Bold para eventos que debes revisar durante el trabajo diario. Se muestran en la campana y en la lista de notificaciones. |
+| Email | Avisos fuera de la aplicación para eventos que requieren seguimiento aunque no estés conectado. |
+
+## Cómo funciona
+
+Cuando ocurre un evento de negocio, Bold registra el evento y busca suscripciones con el mismo nombre de evento.
+
+| Elemento | Qué hace |
+| --- | --- |
+| Catálogo de eventos | Define qué eventos se pueden suscribir, por ejemplo creación, actualización, recepción, envío o cierre. |
+| Suscripción de app | Crea una notificación dentro de Bold para tu email cuando ocurre el evento. |
+| Suscripción de email | Crea una entrega de correo para tu email cuando ocurre el evento. |
+| Webhook | Crea una entrega HTTP para un sistema externo. Se gestiona en una pantalla distinta. |
+
+<Info>
+  El listado puede cambiar cuando se añaden módulos o eventos nuevos. No todos los cambios operativos generan una notificación configurable.
+</Info>
+
+## Configurar tus suscripciones
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Notificaciones** desde el módulo correspondiente.
+  <Step title="Abre Notificaciones">
+    Entra en **Panel de control** y abre **Notificaciones**.
   </Step>
-  <Step title="Revisa el listado">
-    Filtra por estado, fecha, responsable o referencia cuando aplique.
+  <Step title="Busca el evento">
+    Usa el buscador para localizar la entidad o acción que quieres seguir.
   </Step>
-  <Step title="Crea o actualiza el registro">
-    Completa los campos obligatorios y usa nombres que el equipo reconozca.
+  <Step title="Abre el grupo de entidad">
+    Revisa los eventos disponibles dentro de cada entidad, por ejemplo artículo, pedido, orden o parte.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para el flujo operativo.
+  <Step title="Activa App o Email">
+    Marca el canal que necesitas para cada evento.
+  </Step>
+  <Step title="Revisa el resultado">
+    Mantén activados solo los eventos que requieren acción o seguimiento real.
   </Step>
 </Steps>
 
-## Qué cambia en Bold
+## Revisar notificaciones de app
 
-El registro queda disponible para los módulos relacionados y puede afectar a planificación, ejecución, informes o permisos según el caso.
+Las notificaciones de app aparecen en la campana de la barra superior. Desde ahí puedes ver los avisos más recientes, abrir la lista completa o marcar todo como leído.
+
+<Steps>
+  <Step title="Abre la campana">
+    Revisa el contador de avisos sin leer. Si no hay avisos, la campana indica que estás al día.
+  </Step>
+  <Step title="Abre el evento">
+    Haz clic en la notificación para ir a la entidad relacionada cuando Bold tenga una ruta directa para esa entidad.
+  </Step>
+  <Step title="Gestiona la lectura">
+    Marca un aviso como leído con el icono de confirmación. Si lo necesitas, puedes marcarlo otra vez como no leído.
+  </Step>
+  <Step title="Abre la lista completa">
+    Usa **Ver todas** para revisar notificaciones paginadas, fecha, evento, identificador de entidad y estado de lectura.
+  </Step>
+</Steps>
+
+## Ejemplos de configuración
+
+| Objetivo | Canal recomendado | Ejemplos de eventos |
+| --- | --- | --- |
+| Revisar trabajo diario sin salir de Bold | App | Órdenes creadas, operaciones finalizadas, partes completados. |
+| Enterarte aunque no estés conectado | Email | Eventos críticos de almacén, mantenimiento o administración. |
+| Evitar ruido operativo | App | Eventos frecuentes que conviene revisar en bloque. |
+| Integrar otro sistema | Webhook | Cambios que debe consumir un ERP, BI o middleware. |
+
+## Buenas prácticas
+
+- Activa email solo para eventos importantes o que deban verse fuera de Bold.
+- Usa notificaciones de app para seguimiento diario dentro de la plataforma.
+- Revisa tus suscripciones cuando cambien tus responsabilidades.
+- Evita activar todos los eventos. Demasiados avisos reducen la utilidad.
+- Configura webhooks para sistemas externos y notificaciones para personas.
 
 ## Problemas habituales
 
-Si una acción no aparece, revisa permisos, estado del registro y datos maestros relacionados.
+| Problema | Qué revisar |
+| --- | --- |
+| No recibes emails | Revisa que el canal **Email** esté activo para ese evento y que tu usuario tenga email. |
+| No ves avisos en la app | Revisa que el canal **App** esté activo para ese evento y que el evento haya ocurrido después de activar la suscripción. |
+| Recibes demasiados avisos | Desactiva eventos informativos que no requieren acción. |
+| Un evento no aparece | Puede no estar disponible como evento suscribible. |
+| El enlace no abre una pantalla | Algunos eventos no tienen ruta directa o tu usuario no tiene acceso a la entidad relacionada. |
+| El contador no cambia | Actualiza la página o revisa si la conexión en tiempo real se ha perdido. |
 
 ## Relacionado
 
-- [Qué es Bold](/ayuda/primeros-pasos/que-es-bold)
-- [Glosario](/ayuda/referencia-funcional/glosario)
+- [Smart Factory y panel de control](/conceptos/smart-factory-y-control)
+- [Webhooks](/desarrolladores/webhooks/introduccion)
+- [Notifications API](/desarrolladores/api-reference/notifications)
+- [Permisos por módulo](/ayuda/usuarios-y-permisos/permisos-por-modulo)

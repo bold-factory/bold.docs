@@ -1,0 +1,75 @@
+---
+title: "Personal"
+description: "Referencia de usuarios, roles, empleados, jornadas, calendarios y turnos."
+icon: "users"
+---
+
+Personal separa acceso a la aplicación, personas operativas y capacidad planificada.
+
+## Entidades
+
+| Concepto | Uso |
+| --- | --- |
+| Usuario | Persona con acceso a Bold. Tiene credenciales, permisos y roles. |
+| Rol | Conjunto reutilizable de permisos. |
+| Permiso | Capacidad concreta para leer, editar o ejecutar acciones. |
+| Empleado | Persona operativa que puede registrar tiempos, recibir asignaciones o participar en costes. |
+| Jornada laboral | Plantilla de tramos de trabajo. |
+| Calendario local | Excepciones por festivos, cierres o días especiales. |
+| Turno de personal | Programación que asigna jornadas y calendarios a empleados. |
+| Turno de trabajo | Turno usado en operación de planta o fabricación. |
+
+## Usuario y empleado
+
+Un usuario controla acceso. Un empleado representa trabajo operativo. Pueden estar relacionados, pero no son el mismo concepto.
+
+Usa un usuario para entrar en Bold, recibir permisos y administrar módulos. Usa un empleado para registrar mano de obra, calcular costes, asignar operaciones o medir presencia.
+
+## Roles y permisos
+
+Los roles evitan configurar permisos persona por persona. Crea roles por responsabilidad real: administración, planificación, almacén, producción, mantenimiento o solo lectura.
+
+<Tip>
+  Revisa permisos por módulo antes de invitar usuarios externos o perfiles temporales. Un rol demasiado amplio puede permitir acciones que cambian stock, órdenes o costes.
+</Tip>
+
+## Jornadas, calendarios y turnos
+
+Una jornada define el patrón normal de trabajo. Un calendario local define excepciones. Un turno aplica esas reglas a personas o equipos.
+
+El orden recomendado es:
+
+<Steps>
+  <Step title="Define jornadas laborales">
+    Crea plantillas de horario reutilizables.
+  </Step>
+  <Step title="Configura calendarios locales">
+    Añade festivos, cierres y excepciones.
+  </Step>
+  <Step title="Crea turnos">
+    Programa cuándo trabaja cada equipo o empleado.
+  </Step>
+  <Step title="Relaciona con operación">
+    Usa esa capacidad en planificación, ejecución y análisis de costes.
+  </Step>
+</Steps>
+
+## Impacto en otros módulos
+
+| Módulo | Impacto |
+| --- | --- |
+| Producción | Asignación de empleados, registros de tiempo y análisis de eficiencia. |
+| Mantenimiento | Partes de trabajo, tiempo de intervención y empleado principal. |
+| Costes | Coste horario de empleados y coste real de mano de obra. |
+| Panel de control | Acceso, roles, permisos e invitaciones. |
+
+## Guías relacionadas
+
+- [Empleados](/ayuda/personal/empleados)
+- [Jornadas laborales](/ayuda/personal/jornadas-laborales)
+- [Calendarios locales](/ayuda/personal/calendarios-locales)
+- [Turnos](/ayuda/personal/turnos)
+- [Invitar usuarios](/ayuda/usuarios-y-permisos/invitar-usuarios)
+- [Roles y permisos](/ayuda/usuarios-y-permisos/roles-y-permisos)
+- [Permisos por módulo](/ayuda/usuarios-y-permisos/permisos-por-modulo)
+- [People API](/desarrolladores/api-reference/people)

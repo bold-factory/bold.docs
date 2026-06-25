@@ -36,6 +36,13 @@ Los estados indican qué puede pasar a continuación y qué datos quedan protegi
 
 | Entidad | Estado | Significado |
 | --- | --- | --- |
+| Versión de receta | **Editable** | Puede cambiarse antes de activarse. |
+| Versión de receta | **Activa** | Es la referencia para nuevas órdenes y queda protegida. |
+| Versión de receta | **Inactiva** | No se usa como versión principal. |
+| Petición de fabricación | **Sin asignar** | Todavía no tiene cantidad lanzada a órdenes. |
+| Petición de fabricación | **Parcialmente asignada** | Parte de la cantidad ya está asignada a órdenes. |
+| Petición de fabricación | **Asignada** | Toda la cantidad está cubierta por órdenes. |
+| Petición de fabricación | **Cancelada** | Ya no genera necesidad pendiente. |
 | Orden | **Creada** | Existe, pero aún no está planificada. |
 | Orden | **Planificada** | Tiene planificación suficiente para ejecutar. |
 | Orden | **En curso** | Hay operaciones activas. |
@@ -49,6 +56,18 @@ Los estados indican qué puede pasar a continuación y qué datos quedan protegi
 | Operación | **Pausada** | Está detenida temporalmente. |
 | Operación | **Finalizada** | La operación terminó. |
 | Operación | **Cancelada** | La operación no se ejecutará. |
+
+## Mantenimiento
+
+| Entidad | Estado | Significado |
+| --- | --- | --- |
+| Parte de trabajo | **Pendiente** | Existe, pero todavía no tiene trabajo activo. |
+| Parte de trabajo | **En curso** | Hay una entrada de tiempo activa. |
+| Parte de trabajo | **Pausado** | Se trabajó, pero no queda tiempo activo. |
+| Parte de trabajo | **Completado** | La intervención terminó y queda protegida. |
+| Parte de trabajo | **Cancelado** | La intervención se anuló y no debe ejecutarse. |
+| Acción | **Pendiente** | Falta completar el resultado requerido. |
+| Acción | **Completada** | El resultado quedó registrado. |
 
 ## Stock proyectado
 
@@ -68,3 +87,4 @@ Los estados indican qué puede pasar a continuación y qué datos quedan protegi
 
 - [Qué es Bold](/ayuda/primeros-pasos/que-es-bold)
 - [Glosario](/ayuda/referencia-funcional/glosario)
+- [Conceptos de Bold](/conceptos/introduccion)

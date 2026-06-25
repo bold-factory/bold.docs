@@ -6,6 +6,10 @@ icon: "clipboard-check"
 
 Un inventario permite comparar el stock físico contado con el stock que Bold tenía registrado en el momento de lectura. Al finalizar, Bold aplica la diferencia necesaria para regularizar.
 
+<Info>
+  Necesitas permisos `Warehouse.Counts.Read` para consultar inventarios y `Warehouse.Counts.Write` para crear, editar, añadir conteos o finalizar.
+</Info>
+
 ## Cuándo hacer inventario
 
 Haz inventario cuando:
@@ -21,10 +25,10 @@ Haz inventario cuando:
 
 <Steps>
   <Step title="Crea el inventario">
-    Selecciona ubicación, artículos o criterios de recuento según el alcance.
+    Indica nombre, notas si las necesitas y una o varias ubicaciones. Si solo existe una ubicación en la cuenta, Bold puede usarla por defecto.
   </Step>
   <Step title="Congela la lectura de referencia">
-    Bold conserva la cantidad registrada como base para calcular diferencias.
+    Al registrar cada línea, Bold conserva el stock previo de esa referencia, ubicación y lote.
   </Step>
   <Step title="Cuenta físicamente">
     Registra las cantidades reales por artículo, ubicación y lote si aplica.
@@ -40,6 +44,43 @@ Haz inventario cuando:
 <Info>
   El inventario aplica la diferencia entre lo contado y lo que Bold indicaba en la lectura, no una sustitución ciega sin contexto.
 </Info>
+
+## Estados del inventario
+
+| Estado | Qué significa |
+| --- | --- |
+| Pendiente | El inventario está creado, pero todavía no tiene lecturas registradas. |
+| En curso | Ya existe al menos una línea contada o editada. |
+| Finalizado | Bold aplicó los ajustes de stock y el inventario queda bloqueado para conservar la auditoría. |
+
+## Reglas de conteo
+
+| Regla | Resultado |
+| --- | --- |
+| Una ubicación solo puede aparecer una vez en el mismo inventario. | Evita contar dos veces el mismo stock físico. |
+| En una ubicación, solo puede existir una línea por combinación de artículo y lote. | Si detectas un error, edita la línea existente. |
+| No puedes finalizar un inventario sin líneas contadas. | Debe existir al menos una lectura física. |
+| Un inventario finalizado no se modifica. | Las ubicaciones y líneas quedan protegidas. |
+| Los lotes provisionales no se usan como lote contado. | Selecciona un lote real o deja el lote vacío cuando el artículo no gestione lotes. |
+
+## Movimientos durante el conteo
+
+Bold guarda el ajuste previsto de cada línea como `cantidad contada - stock previo`. Al finalizar, aplica ese ajuste previsto sobre el stock que exista en ese momento.
+
+Ejemplo:
+
+| Momento | Stock |
+| --- | ---: |
+| Stock previo al contar | 100 |
+| Cantidad física contada | 105 |
+| Ajuste previsto | +5 |
+| Consumo registrado antes de finalizar | -10 |
+| Stock antes de finalizar | 90 |
+| Stock después de finalizar | 95 |
+
+<Tip>
+  Si la operativa no puede parar, limita el inventario a ubicaciones pequeñas y revisa los movimientos recientes antes de finalizar.
+</Tip>
 
 ## Qué revisar antes de finalizar
 
@@ -57,4 +98,5 @@ Haz inventario cuando:
 ## Relacionado
 
 - [Almacén](/ayuda/almacen/introduccion)
+- [Ajustar stock](/ayuda/almacen/ajustar-stock)
 - [Ver movimientos de stock](/ayuda/almacen/ver-movimientos-de-stock)

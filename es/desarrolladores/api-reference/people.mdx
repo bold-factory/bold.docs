@@ -1,0 +1,170 @@
+---
+title: "People"
+description: "Referencia funcional de la API de usuarios, roles, empleados y programación de personal."
+---
+
+El módulo `people` separa acceso a la aplicación, personas operativas y programación. Expone recursos para usuarios, roles, empleados, jornadas laborales, calendarios locales, turnos, asignaciones de calendario y períodos de trabajo calculados.
+
+## Recursos principales
+
+<Columns cols={2}>
+  <Card title="Usuarios y roles" icon="shield-check">
+    Cuentas, roles y permisos que controlan acceso a Bold.
+  </Card>
+  <Card title="Empleados" icon="users">
+    Personas operativas usadas en tiempos, asignaciones, costes y programación.
+  </Card>
+  <Card title="Jornadas y turnos" icon="calendar-clock">
+    Plantillas de jornada y ciclos repetitivos de trabajo.
+  </Card>
+  <Card title="Calendarios" icon="calendar-days">
+    Excepciones por fecha y programación efectiva de cada empleado.
+  </Card>
+</Columns>
+
+## Endpoint families
+
+```http
+GET    /v1/people/users
+GET    /v1/people/users/self
+GET    /v1/people/users/{email}
+POST   /v1/people/users
+PUT    /v1/people/users/{email}
+DELETE /v1/people/users/{email}
+PUT    /v1/people/users/{email}/roles/{role}
+DELETE /v1/people/users/{email}/roles/{role}
+
+GET    /v1/people/roles
+GET    /v1/people/roles/{roleId}
+POST   /v1/people/roles
+PUT    /v1/people/roles/{roleId}
+DELETE /v1/people/roles/{roleId}
+PUT    /v1/people/roles/{roleId}/permissions/{permissionId}
+DELETE /v1/people/roles/{roleId}/permissions/{permissionId}
+
+GET    /v1/people/employees
+POST   /v1/people/employees
+GET    /v1/people/employees/{employeeReference}
+PUT    /v1/people/employees/{employeeReference}
+DELETE /v1/people/employees/{employeeReference}
+PUT    /v1/people/employees/{employeeReference}/picture
+DELETE /v1/people/employees/{employeeReference}/picture
+
+GET    /v1/people/workDayTemplates
+POST   /v1/people/workDayTemplates
+GET    /v1/people/workDayTemplates/{workDayTemplateReference}
+PUT    /v1/people/workDayTemplates/{workDayTemplateReference}
+DELETE /v1/people/workDayTemplates/{workDayTemplateReference}
+
+GET    /v1/people/localCalendars
+POST   /v1/people/localCalendars
+GET    /v1/people/localCalendars/{localCalendarReference}
+PUT    /v1/people/localCalendars/{localCalendarReference}
+DELETE /v1/people/localCalendars/{localCalendarReference}
+GET    /v1/people/localCalendars/{localCalendarReference}/dates
+POST   /v1/people/localCalendars/{localCalendarReference}/dates
+DELETE /v1/people/localCalendars/{localCalendarReference}/dates/{date}
+
+GET    /v1/people/shiftSchedules
+POST   /v1/people/shiftSchedules
+GET    /v1/people/shiftSchedules/{shiftScheduleReference}
+PUT    /v1/people/shiftSchedules/{shiftScheduleReference}
+DELETE /v1/people/shiftSchedules/{shiftScheduleReference}
+
+GET    /v1/people/employees/schedules
+GET    /v1/people/employees/{employeeReference}/schedule
+GET    /v1/people/employees/{employeeReference}/schedule/dates
+PUT    /v1/people/employees/{employeeReference}/schedule/timezone
+PUT    /v1/people/employees/{employeeReference}/schedule/shift
+DELETE /v1/people/employees/{employeeReference}/schedule/shift
+PUT    /v1/people/employees/{employeeReference}/schedule/localCalendar
+DELETE /v1/people/employees/{employeeReference}/schedule/localCalendar
+POST   /v1/people/employees/{employeeReference}/schedule/dates
+DELETE /v1/people/employees/{employeeReference}/schedule/dates/{date}
+
+GET    /v1/people/workPeriods
+POST   /v1/people/workPeriods/{employeeReference}/recalculate
+GET    /v1/people/tasks
+```
+
+## Permisos
+
+| Permiso o rol | Uso |
+| --- | --- |
+| `People.Users.Read` | Consultar usuarios. |
+| `App.Admin` | Crear, editar o eliminar usuarios, roles y permisos asignados. |
+| `People.Employees.Read` / `People.Employees.Write` | Consultar o gestionar empleados. |
+| `Files.Files.Upload` + `People.Employees.Write` | Subir imagen de empleado. |
+| `People.ShiftScheduling.Read` / `People.ShiftScheduling.Write` | Consultar o modificar jornadas, calendarios, turnos, programaciones y períodos. |
+| `People.Tasks.Read` | Consultar tareas de personas. |
+
+## Usuarios, roles y empleados
+
+Un usuario controla acceso. Un empleado representa trabajo operativo. Pueden estar vinculados, pero son recursos distintos.
+
+| Recurso | Campos principales |
+| --- | --- |
+| Usuario | `id`, `firstName`, `lastName`, `email`, roles y permisos cuando se consulta el detalle. |
+| Rol | `id`, `name`, `key`, `description`, `systemRole` y permisos asignados. |
+| Empleado | `id`, `externalReference`, `code`, `firstName`, `lastName`, `fullName`, `emails`, `mainUserEmail`, `pictureFileId`, auditoría y baja lógica. |
+
+<Warning>
+  No uses endpoints de empleados para conceder acceso. El acceso se gestiona con usuarios, roles y permisos.
+</Warning>
+
+## Jornadas, calendarios y turnos
+
+Una jornada laboral contiene períodos con hora de inicio, hora de fin, cruce de medianoche y horas calculadas.
+
+```json
+{
+  "name": "Noche",
+  "periods": [
+    {
+      "startTime": "22:00:00",
+      "endTime": "06:00:00",
+      "endNextDay": true
+    }
+  ]
+}
+```
+
+Un turno (`shiftSchedule`) contiene segmentos. Cada segmento referencia una jornada y dura un número de días.
+
+```json
+{
+  "name": "Mañana y descanso",
+  "description": "Cinco días de mañana y dos de descanso",
+  "segments": [
+    {
+      "workDayTemplateId": "wdt_001",
+      "durationDays": 5
+    },
+    {
+      "workDayTemplateId": "wdt_rest",
+      "durationDays": 2
+    }
+  ]
+}
+```
+
+## Programación efectiva
+
+La programación efectiva de un empleado combina turno, calendario local y asignaciones manuales.
+
+| Prioridad | Fuente |
+| --- | --- |
+| 1 | Asignación manual de una fecha en `/schedule/dates`. |
+| 2 | Fecha del calendario local asignado al empleado. |
+| 3 | Patrón repetitivo del turno asignado al empleado. |
+
+`GET /v1/people/workPeriods` devuelve períodos calculados con `employeeId`, `from`, `to` y `durationHours`. Usa `POST /v1/people/workPeriods/{employeeReference}/recalculate` cuando cambies reglas y necesites recalcular los períodos futuros de un empleado.
+
+## Relacionado
+
+- [Personal](/conceptos/personal)
+- [Empleados](/ayuda/personal/empleados)
+- [Jornadas laborales](/ayuda/personal/jornadas-laborales)
+- [Calendarios locales](/ayuda/personal/calendarios-locales)
+- [Turnos](/ayuda/personal/turnos)
+- [Roles y permisos](/ayuda/usuarios-y-permisos/roles-y-permisos)

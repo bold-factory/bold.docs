@@ -1,41 +1,89 @@
 ---
 title: "Importar datos"
-description: "Carga información desde archivos CSV cuando necesites crear datos en bloque."
+description: "Carga datos desde CSV para crear, actualizar, fusionar, cancelar o eliminar registros en bloque."
 icon: "upload"
 ---
 
-Importar datos forma parte del flujo funcional de Bold y debe mantenerse alineado con cómo trabaja tu equipo.
+Usa **Importar datos** para ejecutar cargas masivas desde CSV. Cada importación está asociada a una entidad y una acción concreta, como crear productos, actualizar artículos, añadir líneas de pedidos o cancelar órdenes.
 
-## Antes de empezar
+## Qué puedes importar
 
-Revisa permisos, datos relacionados y el objetivo operativo antes de crear o modificar registros.
+| Área | Ejemplos de acciones |
+| --- | --- |
+| Catálogo | Crear o eliminar productos y artículos, fusionar artículos, añadir o eliminar valores. |
+| Planificación | Crear, editar o eliminar clientes, proveedores, pedidos de venta y pedidos de compra. |
+| Fabricación | Crear recetas, versiones, operaciones, materiales, pasos, controles y cancelar órdenes o peticiones. |
+| Almacén | Crear recepciones y envíos, añadir o eliminar líneas, recibir, enviar, revertir e importar inventarios. |
+| Datos operativos | Actualizar planificación, gestión de lotes y relaciones según la plantilla disponible. |
 
-## Pasos
+## Acciones disponibles por entidad
+
+La pantalla organiza las plantillas por entidad y acción. Revisa siempre la plantilla concreta porque cada acción tiene columnas obligatorias distintas.
+
+| Entidad | Acciones habituales |
+| --- | --- |
+| Producto | Crear o eliminar. |
+| Artículo | Crear, eliminar, fusionar, añadir valores, eliminar valores, actualizar planificación y actualizar gestión de lotes. |
+| Cliente y proveedor | Crear, editar o eliminar. |
+| Receta | Crear receta, añadir versión, añadir operación, añadir materia prima o semielaborado, añadir paso y añadir control. |
+| Recepción | Crear, añadir líneas, eliminar líneas, recibir o revertir. |
+| Envío | Crear, añadir líneas, eliminar líneas, enviar o revertir. |
+| Inventario | Añadir entradas de recuento. |
+| Pedido de venta | Crear, eliminar, añadir líneas, editar líneas o cancelar líneas. |
+| Pedido de compra | Crear, eliminar, añadir líneas, editar líneas o cancelar líneas. |
+| Orden de fabricación | Cancelar órdenes. |
+| Petición de fabricación | Cancelar peticiones. |
+
+<Warning>
+  Las importaciones pueden crear, modificar, cancelar, fusionar o eliminar datos. Revisa siempre la plantilla y prueba con pocos registros antes de ejecutar cargas masivas.
+</Warning>
+
+## Preparar un CSV
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Importar datos** desde el módulo correspondiente.
+  <Step title="Elige entidad y acción">
+    Selecciona qué quieres importar: por ejemplo **Artículo > crear** o **Pedido de compra > añadir líneas**.
   </Step>
-  <Step title="Revisa el listado">
-    Filtra por estado, fecha, responsable o referencia cuando aplique.
+  <Step title="Revisa la plantilla">
+    Descarga o consulta las columnas esperadas para esa acción.
   </Step>
-  <Step title="Crea o actualiza el registro">
-    Completa los campos obligatorios y usa nombres que el equipo reconozca.
+  <Step title="Usa referencias existentes">
+    Rellena códigos, IDs o referencias de Bold cuando el importador las solicite.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para el flujo operativo.
+  <Step title="Valida relaciones">
+    Comprueba unidades, SKUs, productos, clientes, proveedores, ubicaciones, lotes y recetas.
+  </Step>
+  <Step title="Ejecuta una prueba">
+    Importa pocas filas y revisa el resultado en el módulo correspondiente.
+  </Step>
+  <Step title="Ejecuta la carga completa">
+    Cuando la prueba sea correcta, importa el fichero completo y revisa errores o filas rechazadas.
   </Step>
 </Steps>
 
-## Qué cambia en Bold
+## Recomendaciones por riesgo
 
-El registro queda disponible para los módulos relacionados y puede afectar a planificación, ejecución, informes o permisos según el caso.
+| Acción | Riesgo | Recomendación |
+| --- | --- | --- |
+| Crear datos maestros | Medio | Revisa duplicados, códigos y unidades. |
+| Actualizar planificación o lotes | Alto | Comprueba impacto en stock proyectado y trazabilidad. |
+| Cancelar pedidos u órdenes | Alto | Revisa estados y trabajo ya ejecutado. |
+| Fusionar artículos | Alto | Hazlo solo con usuarios que entiendan catálogo, stock y planificación. |
+| Eliminar registros | Alto | Confirma dependencias antes de importar. |
 
 ## Problemas habituales
 
-Si una acción no aparece, revisa permisos, estado del registro y datos maestros relacionados.
+| Problema | Qué revisar |
+| --- | --- |
+| La fila se rechaza | Revisa columnas obligatorias, formato de fechas, códigos y referencias. |
+| Se crean duplicados | Normaliza códigos y referencias antes de importar. |
+| El resultado afecta a otros módulos | La importación puede actualizar proyecciones usadas por planificación, almacén o fabricación. |
+| El CSV se ve mal | Revisa separador, codificación y cabeceras de la plantilla. |
 
 ## Relacionado
 
-- [Qué es Bold](/ayuda/primeros-pasos/que-es-bold)
-- [Glosario](/ayuda/referencia-funcional/glosario)
+- [Catálogo](/conceptos/catalogo)
+- [Planificación](/conceptos/planificacion)
+- [Almacén](/conceptos/almacen)
+- [Fabricación](/conceptos/fabricacion)
+- [Reglas del sistema](/ayuda/referencia-funcional/reglas-del-sistema)

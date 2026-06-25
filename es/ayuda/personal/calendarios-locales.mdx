@@ -4,38 +4,54 @@ description: "Registra festivos y excepciones de calendario que afectan a progra
 icon: "calendar-days"
 ---
 
-Calendarios locales forma parte del flujo funcional de Bold y debe mantenerse alineado con cómo trabaja tu equipo.
+Los **calendarios locales** definen excepciones por fecha para la programación de empleados. Úsalos para festivos, vacaciones colectivas, paradas de planta, inventarios generales o días con horario especial.
+
+Cada fecha del calendario se asocia a una jornada laboral. Cuando un empleado usa ese calendario, Bold sustituye el patrón normal del turno en esas fechas.
 
 ## Antes de empezar
 
-Revisa permisos, datos relacionados y el objetivo operativo antes de crear o modificar registros.
+Ten creadas las jornadas laborales que usarás como excepciones. Crea calendarios separados si distintas plantas, centros o colectivos tienen festivos diferentes.
 
-## Pasos
+## Crear excepciones
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Calendarios locales** desde el módulo correspondiente.
+  <Step title="Abre calendarios locales">
+    Entra en **Personal > Calendarios locales**.
   </Step>
-  <Step title="Revisa el listado">
-    Filtra por estado, fecha, responsable o referencia cuando aplique.
+  <Step title="Crea el calendario">
+    Indica nombre y descripción, por ejemplo **Planta Valencia**.
   </Step>
-  <Step title="Crea o actualiza el registro">
-    Completa los campos obligatorios y usa nombres que el equipo reconozca.
+  <Step title="Añade fechas">
+    Selecciona una fecha concreta y la jornada que debe aplicarse ese día.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para el flujo operativo.
+  <Step title="Asigna el calendario">
+    Relaciona el calendario con empleados o programaciones que deban usar esas excepciones.
+  </Step>
+  <Step title="Revisa programación">
+    Comprueba que los períodos futuros se recalculen según las fechas añadidas.
   </Step>
 </Steps>
 
-## Qué cambia en Bold
+## Prioridad de programación
 
-El registro queda disponible para los módulos relacionados y puede afectar a planificación, ejecución, informes o permisos según el caso.
+La programación efectiva de un empleado se resuelve con esta prioridad:
+
+1. Una asignación manual para una fecha concreta.
+2. Una fecha definida en el calendario local.
+3. El turno repetitivo del empleado.
+
+Si asignas de nuevo una fecha que ya existía, Bold sustituye la jornada de esa fecha. Si eliminas una fecha que no existe, no se produce ningún cambio.
 
 ## Problemas habituales
 
-Si una acción no aparece, revisa permisos, estado del registro y datos maestros relacionados.
+- Si un festivo no se aplica, revisa que el empleado tenga asignado el calendario correcto.
+- Si una fecha muestra otra jornada, comprueba si existe una asignación manual con más prioridad.
+- Si una planta tiene festivos distintos, usa calendarios separados.
+- Si cambias un calendario, revisa programaciones futuras que puedan quedar recalculadas.
 
 ## Relacionado
 
-- [Qué es Bold](/ayuda/primeros-pasos/que-es-bold)
-- [Glosario](/ayuda/referencia-funcional/glosario)
+- [Personal](/ayuda/personal/introduccion)
+- [Jornadas laborales](/ayuda/personal/jornadas-laborales)
+- [Turnos](/ayuda/personal/turnos)
+- [Referencia de personal](/conceptos/personal)

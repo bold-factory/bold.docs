@@ -8,11 +8,13 @@ El **stock proyectado** muestra cómo quedará el stock después de considerar e
 
 ## Diferencia con otros saldos
 
-| Saldo | Pregunta que responde |
+| Saldo | Cómo se calcula | Pregunta que responde |
 | --- | --- |
-| Stock físico | ¿Qué hay ahora? |
-| Stock disponible | ¿Qué queda libre para comprometer? |
-| Stock proyectado | ¿Qué habrá en una fecha futura si se cumplen los planes actuales? |
+| Stock físico | Movimientos reales acumulados. | ¿Qué hay ahora? |
+| Stock saliente | Demanda activa pendiente. | ¿Qué ya está comprometido? |
+| Stock disponible actual | Stock físico menos stock saliente. | ¿Qué queda libre para comprometer hoy? |
+| Stock entrante | Suministro activo pendiente. | ¿Qué está previsto que entre? |
+| Stock disponible proyectado | Stock disponible actual más stock entrante. | ¿Qué quedará si se cumplen los planes actuales? |
 
 ## Qué puede incluir
 
@@ -28,6 +30,16 @@ El stock proyectado puede tener en cuenta:
 <Warning>
   Una línea en borrador no genera demanda ni suministro firme. Confirma las líneas cuando quieras que entren en el cálculo operativo.
 </Warning>
+
+## Qué genera demanda y suministro
+
+| Tipo | Orígenes habituales | Efecto |
+| --- | --- | --- |
+| Demanda de venta | Líneas confirmadas de pedidos de venta. | Aumenta stock saliente hasta que se envía o se retira la demanda. |
+| Demanda de producción | Componentes necesarios para peticiones u órdenes de fabricación. | Reserva o planifica consumos de materiales. |
+| Suministro de compra | Líneas confirmadas de pedidos de compra. | Aumenta stock entrante hasta que se recibe. |
+| Suministro de fabricación | Peticiones, órdenes y previsiones de fabricación. | Aumenta stock entrante del artículo fabricado. |
+| Previsión | Necesidad calculada por punto de pedido, mínimo y tamaño de lote. | Propone compra o fabricación antes de crear un compromiso firme. |
 
 ## Cómo leer una caída de stock
 
@@ -52,11 +64,21 @@ Cuando el stock proyectado baja del **punto de pedido**, Bold puede generar una 
 
 El punto de pedido suele cubrir consumo esperado durante el plazo de aprovisionamiento y un margen de seguridad.
 
+Bold calcula la cantidad recomendada a partir de lo que falta para cubrir la necesidad. Si el resultado es menor que el **pedido mínimo**, sube al mínimo. Si hay **tamaño de lote**, redondea hacia arriba al múltiplo configurado.
+
 <Tip>
   Si recibes demasiadas recomendaciones, revisa puntos de pedido demasiado altos, pedidos mínimos o tamaños de lote.
 </Tip>
 
+## Ejemplo de mínimo y lote
+
+Un artículo necesita 17 unidades para no caer por debajo del punto de pedido. Tiene **pedido mínimo** 30 y **tamaño de lote** 12.
+
+Bold primero sube la cantidad a 30 por el mínimo. Después redondea al múltiplo de 12. La recomendación queda en 36 unidades.
+
 ## Relacionado
 
 - [Planificación](/ayuda/planificacion/introduccion)
-- [Entender el stock proyectado](/ayuda/planificacion/entender-el-stock-proyectado)
+- [Saber qué comprar](/ayuda/planificacion/saber-que-comprar)
+- [Saber qué fabricar](/ayuda/planificacion/saber-que-fabricar)
+- [Editar un SKU](/ayuda/articulos-y-skus/editar-un-sku)

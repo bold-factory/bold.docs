@@ -11,7 +11,7 @@ GET /v1/notifications/events/versions
 ```
 
 <Info>
-  Usa siempre el listado del entorno donde vas a integrar. Los eventos disponibles pueden crecer con nuevas funcionalidades.
+  Usa siempre el listado del entorno donde vas a integrar. Los eventos disponibles pueden crecer con nuevas funcionalidades. Estos endpoints requieren acceso a la aplicación.
 </Info>
 
 ## Familias de eventos
@@ -29,7 +29,31 @@ GET /v1/notifications/events/versions
   <Card title="Producción" icon="factory">
     Peticiones, órdenes, operaciones, recetas, progreso, pausas y finalización.
   </Card>
+  <Card title="Mantenimiento" icon="wrench">
+    Activos, partes de trabajo, consumos, tiempos y cierres.
+  </Card>
+  <Card title="Costes y personal" icon="circle-dollar-sign">
+    Cambios de coste, empleados y tareas relacionadas.
+  </Card>
 </Columns>
+
+## Ejemplos de nombres
+
+Los nombres siguen el patrón `Dominio.Entidad.Accion`.
+
+| Evento | Cuándo usarlo |
+| --- | --- |
+| `Items.Sku.Created` | Sincronizar artículos nuevos con otro sistema. |
+| `Planning.SalesOrder.LineConfirmed` | Reaccionar cuando una línea de venta empieza a generar demanda. |
+| `Planning.PurchaseOrder.LineConfirmed` | Registrar suministro esperado en una integración externa. |
+| `Warehouse.Receipt.Received` | Avisar de una entrada real de material. |
+| `Warehouse.Shipment.Shipped` | Actualizar un sistema logístico tras una salida. |
+| `Production.Order.Finished` | Reaccionar al cierre de una orden de fabricación. |
+| `Maintenance.WorkOrder.Completed` | Enviar cierre de mantenimiento a BI o ERP. |
+
+<Warning>
+  No construyas nombres de eventos a mano. Usa `/v1/notifications/events/versions` para leer `eventName` y `eventVersion` del entorno.
+</Warning>
 
 ## Elegir un evento
 
@@ -53,7 +77,7 @@ GET /v1/notifications/events/versions
 ```json
 {
   "endpoint": "https://integraciones.example.com/bold/sales-orders",
-  "eventName": "SalesOrderLineConfirmed",
+  "eventName": "Planning.SalesOrder.LineConfirmed",
   "eventVersion": 1
 }
 ```

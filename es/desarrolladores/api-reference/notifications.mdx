@@ -1,0 +1,162 @@
+---
+title: "Notifications"
+description: "Referencia funcional de la API de eventos, suscripciones personales y notificaciones de app."
+---
+
+La API de `notifications` expone el catálogo de eventos de Bold, las suscripciones personales por canal y la bandeja de notificaciones dentro de la aplicación.
+
+Usa esta API para configurar preferencias de usuario o construir una experiencia propia sobre las notificaciones de app. Si necesitas enviar eventos a un sistema externo, usa [webhooks](/desarrolladores/webhooks/introduccion).
+
+## Recursos principales
+
+<Columns cols={2}>
+  <Card title="Eventos" icon="radio">
+    Nombres y versiones de eventos que pueden generar notificaciones o webhooks.
+  </Card>
+  <Card title="Suscripciones de app" icon="bell">
+    Preferencias personales para recibir avisos dentro de Bold.
+  </Card>
+  <Card title="Suscripciones de email" icon="mail">
+    Preferencias personales para recibir correos cuando ocurre un evento.
+  </Card>
+  <Card title="Bandeja de app" icon="inbox">
+    Notificaciones paginadas con estado de lectura por aviso.
+  </Card>
+</Columns>
+
+## Endpoint families
+
+```http
+GET    /v1/notifications/events
+GET    /v1/notifications/events/versions
+
+GET    /v1/notifications/app/subscriptions
+PUT    /v1/notifications/app/subscriptions/{eventName}
+DELETE /v1/notifications/app/subscriptions/{eventName}
+
+GET    /v1/notifications/email/subscriptions
+PUT    /v1/notifications/email/subscriptions/{eventName}
+DELETE /v1/notifications/email/subscriptions/{eventName}
+
+GET    /v1/notifications/app
+POST   /v1/notifications/app/read
+POST   /v1/notifications/app/{id}/read
+POST   /v1/notifications/app/{id}/unread
+```
+
+Los endpoints de eventos requieren acceso a la aplicación. Las suscripciones de app y email usan el email del usuario autenticado.
+
+<Warning>
+  No construyas nombres de eventos a mano. Consulta `/v1/notifications/events` o `/v1/notifications/events/versions` en el entorno donde vas a operar.
+</Warning>
+
+## Eventos
+
+`GET /v1/notifications/events` devuelve nombres de evento.
+
+```json
+{
+  "results": [
+    {
+      "eventName": "Warehouse.Receipt.Received"
+    }
+  ]
+}
+```
+
+`GET /v1/notifications/events/versions` añade la versión que deben usar integraciones sensibles al contrato.
+
+```json
+{
+  "results": [
+    {
+      "eventName": "Warehouse.Receipt.Received",
+      "eventVersion": 1
+    }
+  ]
+}
+```
+
+## Suscripciones personales
+
+Cada canal tiene su propio conjunto de suscripciones. Activar **App** no activa **Email**, y activar **Email** no crea avisos dentro de Bold.
+
+| Campo | Descripción |
+| --- | --- |
+| `id` | Identificador de la suscripción. |
+| `email` | Email del usuario autenticado. |
+| `eventName` | Nombre exacto del evento suscrito. |
+
+Ejemplo para activar notificaciones de app:
+
+```http
+PUT /v1/notifications/app/subscriptions/Warehouse.Receipt.Received
+```
+
+Ejemplo para activar email:
+
+```http
+PUT /v1/notifications/email/subscriptions/Warehouse.Receipt.Received
+```
+
+Para desactivar una suscripción, usa el mismo `eventName` con `DELETE`.
+
+## Bandeja de app
+
+`GET /v1/notifications/app` devuelve notificaciones de app para el email del usuario autenticado.
+
+| Campo | Descripción |
+| --- | --- |
+| `results` | Lista paginada de notificaciones. |
+| `pageNumber` | Página devuelta. |
+| `totalPages` | Total de páginas disponibles. |
+| `totalCount` | Total de notificaciones. |
+| `totalUnreadCount` | Total de notificaciones sin leer. |
+
+Cada notificación incluye:
+
+| Campo | Descripción |
+| --- | --- |
+| `id` | Identificador de la notificación de app. |
+| `eventName` | Evento que generó la notificación. |
+| `entity` | Tipo de entidad afectada. |
+| `entityId` | Identificador de la entidad afectada. |
+| `createdAt` | Fecha del evento de negocio. |
+| `readAt` | Fecha de lectura. Es `null` si sigue sin leer. |
+
+```json
+{
+  "results": [
+    {
+      "id": "ian_123",
+      "eventName": "Warehouse.Receipt.Received",
+      "entity": "Warehouse.Receipt",
+      "entityId": "REC-00042",
+      "createdAt": "2026-06-25T10:30:00Z",
+      "readAt": null
+    }
+  ],
+  "pageNumber": 1,
+  "totalPages": 1,
+  "totalCount": 1,
+  "totalUnreadCount": 1
+}
+```
+
+## Estados de lectura
+
+Usa los endpoints de lectura para reflejar acciones de usuario en una bandeja personalizada.
+
+```http
+POST /v1/notifications/app/{id}/read
+POST /v1/notifications/app/{id}/unread
+POST /v1/notifications/app/read
+```
+
+`POST /v1/notifications/app/read` marca como leídas las notificaciones pendientes.
+
+## Relacionado
+
+- [Notificaciones en el Panel de control](/ayuda/panel-de-control/notificaciones)
+- [Eventos disponibles](/desarrolladores/webhooks/eventos-disponibles)
+- [Webhooks](/desarrolladores/webhooks/introduccion)

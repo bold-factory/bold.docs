@@ -1,0 +1,151 @@
+---
+title: "Labels"
+description: "Referencia funcional de la API de plantillas de etiquetas y generación de PDF."
+---
+
+El módulo `labels` gestiona plantillas imprimibles para objetos de Bold. Úsalo para crear diseños, añadir elementos al lienzo y generar PDF con datos reales de artículos, lotes, bultos, empleados, estaciones, recepciones u operaciones.
+
+## Recursos principales
+
+<Columns cols={2}>
+  <Card title="Plantillas" icon="qr-code">
+    Diseño imprimible con nombre, tipo, dimensiones y elementos colocados en el lienzo.
+  </Card>
+  <Card title="Elementos" icon="layout-template">
+    Texto, valores dinámicos, QR, códigos de barras, imágenes y formas.
+  </Card>
+  <Card title="Tipos de entidad" icon="boxes">
+    Define qué objeto puede alimentar los valores dinámicos y la generación del PDF.
+  </Card>
+  <Card title="PDF" icon="file-text">
+    Render de una plantilla con un objeto concreto.
+  </Card>
+</Columns>
+
+## Endpoint families
+
+```http
+GET    /v1/labels/templates
+POST   /v1/labels/templates
+GET    /v1/labels/templates/{templateId}
+PUT    /v1/labels/templates/{templateId}
+DELETE /v1/labels/templates/{templateId}
+
+POST   /v1/labels/templates/{templateId}/elements
+PUT    /v1/labels/templates/{templateId}/elements/{elementId}
+DELETE /v1/labels/templates/{templateId}/elements/{elementId}
+
+GET    /v1/labels/templates/{templateId}/pdf/{objectId}
+```
+
+## Template shape
+
+Una plantilla tiene este contrato principal:
+
+| Campo | Tipo | Uso |
+| --- | --- | --- |
+| `id` | `string` | Identificador interno de la plantilla. |
+| `externalReference` | `string` | Referencia externa cuando existe. |
+| `name` | `string` | Nombre visible de la plantilla. |
+| `type` | `EntityType` | Tipo de objeto que alimenta la plantilla. |
+| `width` / `height` | `number` | Tamaño del lienzo en milímetros. |
+| `elements` | `TemplateElement[]` | Elementos colocados en el lienzo. |
+| `createdAt` / `lastModifiedAt` | `datetime` | Auditoría de cambios. |
+| `createdBy` / `lastModifiedBy` | `string` | Usuario que creó o modificó la plantilla. |
+
+Para crear una plantilla, envía `name`, `type`, `width` y `height`.
+
+```json
+{
+  "name": "Etiqueta lote 50x30",
+  "type": "Lot",
+  "width": 50,
+  "height": 30
+}
+```
+
+<Warning>
+  `width` y `height` deben ser mayores que cero. Los elementos deben quedar dentro del lienzo.
+</Warning>
+
+## Entity types
+
+| Tipo | Objeto usado al generar el PDF |
+| --- | --- |
+| `Sku` | Artículo. |
+| `Lot` | Lote. |
+| `Container` | Bulto o contenedor. |
+| `ReceiptLine` | Línea de recepción. |
+| `Employee` | Empleado. |
+| `Workstation` | Estación de trabajo. |
+| `Operation` | Operación de fabricación. |
+| `OrderOperations` | Operaciones de una orden. |
+| `OperationGroup` | Grupo de operaciones. |
+
+El valor `objectId` de `/pdf/{objectId}` debe identificar un objeto compatible con el `type` de la plantilla.
+
+## Element types
+
+Los elementos son polimórficos. El discriminador JSON es `type`.
+
+| Tipo | Campos principales | Uso |
+| --- | --- | --- |
+| `Shape` | `x`, `y`, `width`, `height` | Forma simple o separador. |
+| `FixedText` | `x`, `y`, `width`, `height`, `fontSize`, `text` | Texto fijo. |
+| `VariableText` | `x`, `y`, `width`, `height`, `fontSize`, `key` | Valor dinámico del objeto. |
+| `QrCode` | `x`, `y`, `width`, `height`, `content` | Código QR con contenido codificado. |
+| `Barcode` | `x`, `y`, `width`, `height`, `key` | Código de barras desde un campo dinámico. |
+| `Image` | `x`, `y`, `width`, `height` | Imagen soportada por el tipo de plantilla. |
+
+Ejemplo de texto variable:
+
+```json
+{
+  "type": "VariableText",
+  "x": 4,
+  "y": 4,
+  "width": 32,
+  "height": 6,
+  "fontSize": 8,
+  "key": "code"
+}
+```
+
+Ejemplo de QR:
+
+```json
+{
+  "type": "QrCode",
+  "x": 36,
+  "y": 4,
+  "width": 10,
+  "height": 10,
+  "content": "{id}"
+}
+```
+
+## Permisos
+
+| Permiso | Uso |
+| --- | --- |
+| `Labels.Templates.Read` | Buscar plantillas, leer una plantilla y generar PDF. |
+| `Labels.Templates.Write` | Crear, renombrar o eliminar plantillas. También permite añadir, actualizar o quitar elementos. |
+
+## Flujo recomendado
+
+1. Crea la plantilla con el `type` correcto para el objeto que vas a imprimir.
+2. Añade elementos dentro de las dimensiones del lienzo.
+3. Genera un PDF de prueba con `/v1/labels/templates/{templateId}/pdf/{objectId}`.
+4. Comprueba el PDF con la impresora y el lector real.
+5. Ajusta tamaños, posiciones y claves dinámicas antes de usarla en operación.
+
+<Tip>
+  Mantén plantillas separadas por caso de uso. Una etiqueta de lote, una de bulto y una de operación suelen necesitar tamaños, códigos y datos distintos.
+</Tip>
+
+## Relacionado
+
+- [Diseños](/ayuda/panel-de-control/disenos)
+- [Almacén](/conceptos/almacen)
+- [Fabricación](/conceptos/fabricacion)
+- [People API](/desarrolladores/api-reference/people)

@@ -1,41 +1,106 @@
 ---
 title: "Proveedores"
-description: "Mantén proveedores y plazos para planificar compras con fechas realistas."
+description: "Configura proveedores y políticas de suministro para que las recomendaciones de compra usen datos realistas."
 icon: "building-2"
 ---
 
-Los proveedores permiten crear pedidos de compra y calcular cuándo puede llegar el suministro.
+Los proveedores son datos maestros de planificación. Bold los usa en pedidos de compra y en la relación entre un SKU y sus fuentes de suministro.
 
-## Antes de empezar
+La ficha del proveedor identifica a la empresa. La relación SKU-proveedor indica cómo compras un artículo concreto: código del proveedor, precio, plazo y prioridad.
 
-Revisa referencias comprables, proveedor preferente, plazo de entrega, pedido mínimo y tamaño de lote.
+## Cuándo crear un proveedor
 
-## Pasos
+Crea un proveedor cuando compras materiales, componentes, repuestos, servicios externos o productos terminados que deben aparecer en planificación.
+
+Ejemplos:
+
+- Un proveedor habitual de materia prima.
+- Un subcontratista que entrega un semielaborado.
+- Un proveedor alternativo para cubrir urgencias.
+- Un proveedor importado desde un ERP con referencia externa.
+
+## Datos del proveedor
+
+| Campo | Para qué sirve | Recomendación |
+| --- | --- | --- |
+| Nombre | Identifica al proveedor en pedidos, filtros y listas. | Usa el nombre operativo que reconoce compras. |
+| Referencia externa | Conecta el proveedor con otro sistema. | Mantén una referencia única y estable. |
+| NIF/CIF o identificación fiscal | Ayuda a distinguir proveedores con nombres parecidos. | Rellénalo si compras lo necesita o si integras con ERP. |
+| Fechas y usuarios de auditoría | Muestran creación y última modificación. | Úsalas para revisar cambios de datos maestros. |
+
+## Relación SKU-proveedor
+
+Para que Bold proponga compras útiles, no basta con crear el proveedor. También debes asociarlo a los SKUs que puedes comprar.
+
+| Campo | Para qué sirve |
+| --- | --- |
+| Tipo | Marca el proveedor como **Principal** o **Secundario** para ese SKU. |
+| Código del proveedor | Guarda la referencia que el proveedor usa para el artículo. |
+| Precio por unidad | Da contexto económico a compras y costes planificados. |
+| Plazo medio | Calcula cuándo puede estar disponible el suministro. |
+| Desviación del plazo | Representa la variabilidad del plazo de entrega. |
+
+<Tip>
+  Mantén un proveedor principal por SKU cuando quieras que el asistente de compras proponga una fuente por defecto. Usa proveedores secundarios para alternativas reales.
+</Tip>
+
+## Crear y preparar un proveedor
 
 <Steps>
   <Step title="Crea el proveedor">
-    Registra datos de identificación y contacto.
+    Ve a **Planificación > Proveedores** y registra **Nombre**, **Referencia externa** e identificación fiscal cuando aplique.
   </Step>
-  <Step title="Relaciona artículos">
-    Indica qué artículos compras a ese proveedor y con qué condiciones.
+  <Step title="Asocia SKUs comprables">
+    Añade los SKUs que compras a ese proveedor desde la ficha del proveedor o desde la ficha del SKU.
   </Step>
-  <Step title="Define plazos">
-    Mantén plazos de entrega realistas para que las recomendaciones tengan sentido.
+  <Step title="Define condiciones de suministro">
+    Informa código de proveedor, precio por unidad, plazo medio y desviación del plazo.
   </Step>
-  <Step title="Usa pedidos de compra">
-    Crea pedidos y confirma líneas cuando quieras generar suministro esperado.
+  <Step title="Marca el proveedor principal">
+    Usa **Principal** para la fuente que Bold debe priorizar en recomendaciones y previsiones de compra.
+  </Step>
+  <Step title="Crea pedidos de compra">
+    Confirma líneas cuando quieras generar suministro esperado en planificación.
   </Step>
 </Steps>
 
 ## Qué cambia en Bold
 
-Los pedidos confirmados del proveedor aparecen como suministro previsto hasta que registras la recepción.
+Los pedidos de compra confirmados del proveedor aparecen como suministro previsto hasta que registras la recepción.
+
+Además, cuando cambia el plazo de un proveedor principal para un SKU, Bold actualiza las fechas de previsiones de compra relacionadas. Por eso los plazos deben representar días reales de aprovisionamiento, no una estimación comercial optimista.
+
+## Ejemplos
+
+| Caso | Configuración recomendada |
+| --- | --- |
+| Materia prima con proveedor habitual | Proveedor principal, código del proveedor, precio vigente y plazo medio real. |
+| Segundo proveedor para urgencias | Proveedor secundario con plazo y precio propios. |
+| Artículo de catálogo importado del ERP | Referencia externa en proveedor y código del proveedor en cada SKU. |
+| Compra puntual sin histórico | Crea el proveedor y el pedido, pero no marques condiciones como definitivas si aún no están validadas. |
+
+## Permisos
+
+| Acción | Permiso necesario |
+| --- | --- |
+| Ver proveedores | `Planning.Suppliers.Read` |
+| Crear, editar o eliminar proveedores | `Planning.Suppliers.Write` |
+| Ver relaciones SKU-proveedor | `Planning.Skus.Read` |
+| Editar relaciones SKU-proveedor | `Planning.Skus.Write` |
 
 ## Problemas habituales
 
-Si una recomendación no propone un proveedor, revisa la ficha del artículo y sus relaciones de compra.
+| Problema | Qué revisar |
+| --- | --- |
+| El asistente de compras no propone proveedor | El SKU no tiene proveedor principal o no está configurado como comprable. |
+| La fecha recomendada no cuadra | Revisa el plazo medio del proveedor principal y la fecha de necesidad. |
+| El proveedor aparece duplicado | Comprueba la referencia externa y nombres importados. |
+| No puedes borrar o editar | Revisa permisos y si el proveedor ya fue eliminado. |
+| El pedido usa otro código | Actualiza el código del proveedor en la relación SKU-proveedor. |
 
 ## Relacionado
 
 - [Saber qué comprar](/ayuda/planificacion/saber-que-comprar)
 - [Crear pedido de compra](/ayuda/compras/crear-pedido-de-compra)
+- [Editar un SKU](/ayuda/articulos-y-skus/editar-un-sku)
+- [Conceptos de planificación](/conceptos/planificacion)

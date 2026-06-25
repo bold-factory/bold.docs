@@ -6,20 +6,57 @@ icon: "settings"
 
 El Panel de control agrupa las funciones administrativas que sostienen el uso diario de Bold.
 
-## Flujo recomendado
+## Áreas de administración
+
+<Columns cols={2}>
+  <Card title="Cuenta y empresa" icon="building-2" href="/ayuda/panel-de-control/configuracion-de-empresa">
+    Mantén datos de empresa, cuenta, plan y límites visibles para administradores.
+  </Card>
+  <Card title="Usuarios y permisos" icon="users" href="/ayuda/usuarios-y-permisos/roles-y-permisos">
+    Controla quién accede, qué puede hacer y qué integraciones usan claves API.
+  </Card>
+  <Card title="Datos y archivos" icon="database" href="/ayuda/panel-de-control/importar-datos">
+    Importa datos, gestiona archivos y evita duplicados operativos.
+  </Card>
+  <Card title="Diseños y agentes" icon="bot" href="/ayuda/panel-de-control/agentes">
+    Configura plantillas, etiquetas, automatizaciones y agentes.
+  </Card>
+</Columns>
+
+## Orden recomendado
 
 <Steps>
-  <Step title="Configura la base">
-    Crea los datos maestros que el módulo necesita para operar.
+  <Step title="Configura empresa y cuenta">
+    Revisa datos generales, plan y límites antes de abrir el uso al equipo.
   </Step>
-  <Step title="Registra actividad">
-    Usa los registros funcionales para conservar histórico y alimentar informes.
+  <Step title="Define acceso">
+    Crea roles, asigna permisos, invita usuarios y separa claves API por integración.
   </Step>
-  <Step title="Revisa resultados">
-    Consulta estados, costes, carga, permisos o automatizaciones para detectar bloqueos.
+  <Step title="Carga datos">
+    Importa o crea datos maestros con códigos coherentes para evitar duplicados.
+  </Step>
+  <Step title="Activa eventos y automatizaciones">
+    Configura notificaciones, webhooks, diseños y agentes cuando el dato base sea estable.
   </Step>
 </Steps>
 
 ## Antes de empezar
 
-Define responsables, permisos y datos mínimos. Evita crear duplicados si el dato ya existe en otro módulo.
+Define responsables de administración, integración y soporte operativo. Cambios en permisos, importaciones o automatizaciones pueden afectar a varios módulos.
+
+## Conceptos relacionados
+
+<Columns cols={2}>
+  <Card title="Smart Factory y control" icon="book-open" href="/conceptos/smart-factory-y-control">
+    Entiende cuenta, acceso, eventos, importaciones, archivos, diseños y agentes.
+  </Card>
+  <Card title="Permisos" icon="shield-check" href="/ayuda/usuarios-y-permisos/permisos-por-modulo">
+    Revisa qué capacidades se asignan por módulo.
+  </Card>
+  <Card title="Claves API" icon="key-round" href="/ayuda/panel-de-control/claves-api">
+    Crea, guarda y desactiva credenciales para integraciones técnicas.
+  </Card>
+  <Card title="Webhooks" icon="radio" href="/ayuda/panel-de-control/webhooks">
+    Suscribe sistemas externos a eventos y revisa entregas fallidas.
+  </Card>
+</Columns>

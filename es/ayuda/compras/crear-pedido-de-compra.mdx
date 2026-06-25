@@ -6,6 +6,10 @@ icon: "file-plus"
 
 Un **Pedido de compra** representa un compromiso firme con un proveedor. Convierte una necesidad de aprovisionamiento en una transacción de compra.
 
+<Info>
+  Necesitas permisos `Planning.PurchaseOrders.Read` para consultar pedidos y `Planning.PurchaseOrders.Write` para crear, editar, confirmar o cancelar.
+</Info>
+
 ## Crear el pedido
 
 <Steps>
@@ -37,6 +41,26 @@ Un **Pedido de compra** representa un compromiso firme con un proveedor. Convier
 | Artículo | Referencia que entrará en stock. |
 | Notas | Contexto operativo o comercial. |
 
+## Ciclo de vida de la línea
+
+| Estado | Efecto en planificación | Qué puedes hacer |
+| --- | --- | --- |
+| Borrador | No genera stock entrante. | Edita artículo, cantidad, fecha, precio y notas. |
+| Pendiente | Genera suministro entrante por la cantidad pendiente. | Recibe material o ajusta datos permitidos. |
+| Parcialmente recibido | Mantiene suministro solo por la cantidad pendiente. | Recibe el resto o cancela la cantidad pendiente. |
+| Recibido | Ya no genera cantidad pendiente. | Consulta trazabilidad y recepciones. |
+| Cancelado | No genera suministro entrante. | Revisa el motivo o deshaz cancelación si procede desde borrador. |
+
+<Warning>
+  No puedes reducir la cantidad por debajo de lo ya recibido. Tampoco puedes cancelar como si no hubiera existido una línea que ya está recibida o parcialmente recibida.
+</Warning>
+
+## Ejemplo
+
+Necesitas 120 unidades de **Tablero roble 18 mm** para cubrir fabricación de la próxima semana. El proveedor entrega en 5 días y el pedido mínimo es 100 unidades.
+
+Crea una línea por 120 unidades si esa es la cantidad real a comprar. Si el proveedor exige paquetes de 50, ajusta la cantidad a 150 antes de confirmar la línea. La fecha esperada debe reflejar cuándo estará disponible el material para planificación.
+
 <Warning>
   Una línea en borrador no genera stock entrante. Confírmala cuando quieras que planificación la tenga en cuenta.
 </Warning>
@@ -47,7 +71,8 @@ Un **Pedido de compra** representa un compromiso firme con un proveedor. Convier
 - Separa líneas con fechas esperadas distintas.
 - Revisa unidades antes de confirmar.
 - No reduzcas cantidad por debajo de lo ya recibido.
-- Cancela solo antes de recibir material.
+- Cancela antes de recibir material o cancela solo la cantidad pendiente si ya hubo recepción parcial.
+- Mantén la fecha esperada actualizada mientras la línea siga abierta.
 
 <Tip>
   Si varias recomendaciones comparten proveedor y fechas cercanas, agrúpalas en un solo pedido para simplificar seguimiento.
@@ -57,3 +82,5 @@ Un **Pedido de compra** representa un compromiso firme con un proveedor. Convier
 
 - [Planificación](/ayuda/planificacion/introduccion)
 - [Entender el stock proyectado](/ayuda/planificacion/entender-el-stock-proyectado)
+- [Ver compras pendientes](/ayuda/compras/ver-compras-pendientes)
+- [Recibir pedido de compra](/ayuda/compras/recibir-pedido-de-compra)

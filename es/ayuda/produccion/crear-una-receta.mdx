@@ -6,6 +6,8 @@ icon: "book-open"
 
 Una **Receta de fabricación** define cómo se fabrica un producto. Combina lista de materiales, operaciones, pasos, controles, co-productos, restricciones y condiciones.
 
+Una receta no ejecuta trabajo por sí sola. Bold la usa como molde para crear **Órdenes de fabricación** con una estructura consistente.
+
 ## Crear una receta
 
 <Steps>
@@ -44,17 +46,101 @@ Una **Receta de fabricación** define cómo se fabrica un producto. Combina list
 | Restricciones | Precedencia entre operaciones. |
 | Condiciones | Variantes según propiedades del artículo. |
 
+## Producto, artículos y variantes
+
+Las recetas se crean a nivel de **Producto**. Esto permite reutilizar una misma receta para varios artículos del mismo producto.
+
+| Caso | Configuración |
+| --- | --- |
+| Siempre consumes el mismo material | Define una entrada de tipo **Artículo**. |
+| El material depende de propiedades del artículo fabricado | Define una entrada de tipo **Producto** y usa valores fijos o propiedades para resolver el artículo concreto. |
+| Una etapa solo aplica a algunas variantes | Añade una condición a la operación, entrada, paso o co-producto. |
+| El proceso cambia por completo | Crea recetas separadas en vez de llenar una receta con condiciones difíciles de revisar. |
+
+<Tip>
+  Usa condiciones para variaciones controladas, como medida, color, material o acabado. Si el operario tendría que seguir un flujo completamente distinto, separa el proceso.
+</Tip>
+
 ## Versiones
 
 Una versión de receta guarda la estructura tal como estaba en ese momento. Puede estar **Editable**, **Activa** o **Inactiva**. Solo puede haber una versión activa por receta.
 
 Los cambios estructurales solo se permiten en versiones editables. Si necesitas cambiar una versión activa, copia la versión o crea una nueva, edítala y actívala cuando esté lista.
 
+Al activar una versión, Bold valida fórmulas, condiciones, operaciones, entradas, co-productos, pasos y restricciones. Activar una versión desactiva la versión activa anterior. Si conviertes una versión activa en editable, la receta queda inactiva hasta activar de nuevo una versión válida.
+
+| Estado | Uso |
+| --- | --- |
+| Editable | Permite cambiar estructura y revisar el proceso. |
+| Activa | Se usa para nuevas órdenes y queda protegida. |
+| Inactiva | Se conserva como histórico o referencia. |
+
 <Warning>
   Las restricciones no pueden duplicarse ni formar ciclos. Si condicionas operaciones, revisa que todas las variantes sigan teniendo un flujo coherente.
 </Warning>
 
+## Operaciones
+
+Una operación debe representar una etapa ejecutable en un recurso principal. Separa operaciones cuando cambian la estación, la duración, el responsable, el consumo o el punto de control.
+
+Evita crear operaciones tan pequeñas que obliguen al operario a registrar cambios cada pocos segundos. También evita operaciones demasiado grandes si necesitas medir progreso, consumos o tiempos con precisión.
+
+| Configuración | Qué decide |
+| --- | --- |
+| Proceso | Conecta la operación con estaciones compatibles. |
+| Duración | Tiempo de calendario previsto. |
+| Mano de obra | Tiempo efectivo de personas. |
+| Pasos | Instrucciones que ve el operario. |
+| Controles | Comprobaciones que pueden bloquear inicio o cierre. |
+| Entradas | Material que se consume durante la operación. |
+| Co-productos | Stock adicional que se genera durante la operación. |
+
+## Entradas, co-productos y momentos
+
+Las cantidades de entradas y co-productos se definen por unidad fabricada. Si la orden produce 10 unidades y una entrada consume 2 unidades por unidad, el consumo previsto total será 20.
+
+| Momento | En entradas | En co-productos | Cuándo usarlo |
+| --- | --- | --- | --- |
+| Al comienzo | Descuenta material al iniciar. | Registra salida adicional al iniciar. | La cantidad se conoce antes de ejecutar. |
+| Por unidad | Registra consumo con el progreso. | Registra co-producto con el progreso. | Necesitas precisión por avance o unidad. |
+| Al final | Registra consumo al cerrar. | Registra co-producto al cerrar. | Puede haber mermas, rechazos o ajustes reales. |
+
+Puedes usar fórmulas con propiedades numéricas del artículo fabricado. Las fórmulas permiten sumar, restar, multiplicar, dividir y agrupar con paréntesis.
+
+```text
+({Largo} * {Ancho}) / 1000000
+```
+
+## Pasos y controles
+
+Los pasos son instrucciones para el operario. Pueden ejecutarse una vez al comienzo, una vez al final o según el progreso de la cantidad fabricada.
+
+Los controles son comprobaciones registradas. Si son obligatorios, Bold puede bloquear el inicio o el cierre de la operación hasta completarlos.
+
+| Elemento | Buen uso |
+| --- | --- |
+| Paso inicial | Preparar máquina, cargar programa o revisar material. |
+| Paso final | Limpieza, cierre documental o embalaje. |
+| Paso por unidad | Repetición que escala con la cantidad producida. |
+| Control inicial | Validar condiciones antes de arrancar. |
+| Control final | Validar medidas, calidad o evidencia antes de cerrar. |
+
+## Restricciones
+
+Las restricciones conectan operaciones y definen qué puede empezar antes o después.
+
+| Tipo | Efecto |
+| --- | --- |
+| Total | La operación siguiente espera a que la anterior termine. |
+| Parcial | La operación siguiente puede empezar cuando hay progreso suficiente. |
+| No bloqueante | Marca precedencia recomendada, pero no bloquea ejecución. |
+
+Bold rechaza restricciones duplicadas, autorrestricciones y ciclos. Si eliminas una operación, también se eliminan las restricciones conectadas a ella.
+
 ## Relacionado
 
 - [Fabricación](/ayuda/produccion/introduccion)
+- [Procesos](/ayuda/produccion/procesos)
+- [Controles de calidad](/ayuda/produccion/controles-de-calidad)
+- [Crear una orden de fabricación](/ayuda/produccion/crear-una-orden-de-fabricacion)
 - [Solución de problemas de producción](/ayuda/produccion/solucion-de-problemas-de-produccion)

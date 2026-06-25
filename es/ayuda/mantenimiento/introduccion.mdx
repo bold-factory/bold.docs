@@ -6,20 +6,51 @@ icon: "wrench"
 
 Mantenimiento organiza el trabajo sobre activos de planta y conserva histórico de acciones, causas, tiempos y repuestos.
 
-## Flujo recomendado
+## Áreas de trabajo
+
+<Columns cols={2}>
+  <Card title="Activos" icon="factory" href="/ayuda/mantenimiento/activos">
+    Registra máquinas, instalaciones, áreas o equipos mantenibles.
+  </Card>
+  <Card title="Acciones" icon="list-checks" href="/ayuda/mantenimiento/acciones">
+    Define trabajos o comprobaciones reutilizables para partes.
+  </Card>
+  <Card title="Causas" icon="circle-alert" href="/ayuda/mantenimiento/causas">
+    Clasifica motivos de avería o intervención para analizar recurrencia.
+  </Card>
+  <Card title="Partes de trabajo" icon="clipboard-list" href="/ayuda/mantenimiento/partes-de-trabajo">
+    Registra correctivos, preventivos, tiempos, materiales y resultados.
+  </Card>
+</Columns>
+
+## Orden recomendado
 
 <Steps>
-  <Step title="Configura la base">
-    Crea los datos maestros que el módulo necesita para operar.
+  <Step title="Crea activos">
+    Define sobre qué máquinas, instalaciones o equipos se trabajará.
   </Step>
-  <Step title="Registra actividad">
-    Usa los registros funcionales para conservar histórico y alimentar informes.
+  <Step title="Normaliza causas y acciones">
+    Usa listas reutilizables para que los partes sean comparables.
   </Step>
-  <Step title="Revisa resultados">
-    Consulta estados, costes, carga, permisos o automatizaciones para detectar bloqueos.
+  <Step title="Programa preventivos">
+    Crea reglas para trabajos recurrentes antes de que se conviertan en urgencias.
+  </Step>
+  <Step title="Registra partes">
+    Conserva tiempos, materiales, acciones completadas y causas reales.
   </Step>
 </Steps>
 
 ## Antes de empezar
 
-Define responsables, permisos y datos mínimos. Evita crear duplicados si el dato ya existe en otro módulo.
+Decide qué nivel de detalle necesitas para activos y causas. Demasiado detalle dificulta registrar partes; poco detalle limita el análisis de recurrencia.
+
+## Conceptos relacionados
+
+<Columns cols={2}>
+  <Card title="Referencia de mantenimiento" icon="book-open" href="/conceptos/mantenimiento">
+    Entiende activos, causas, acciones, preventivos, partes, materiales y tiempos.
+  </Card>
+  <Card title="Estados de mantenimiento" icon="list-checks" href="/ayuda/referencia-funcional/estados">
+    Consulta qué estados permiten editar, completar o cancelar partes.
+  </Card>
+</Columns>

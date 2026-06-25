@@ -4,38 +4,50 @@ description: "Define tipos de jornada para construir turnos y capacidad de traba
 icon: "clock"
 ---
 
-Jornadas laborales forma parte del flujo funcional de Bold y debe mantenerse alineado con cómo trabaja tu equipo.
+Las **jornadas laborales** definen los períodos de trabajo de un día tipo. Sirven como piezas reutilizables para turnos, calendarios locales y asignaciones de empleados.
+
+Una jornada puede tener uno o varios períodos, incluidos turnos partidos o períodos que terminan al día siguiente.
 
 ## Antes de empezar
 
-Revisa permisos, datos relacionados y el objetivo operativo antes de crear o modificar registros.
+Define los horarios base que se repiten en tu empresa: mañana, tarde, noche, descanso, turno partido o jornada especial.
 
-## Pasos
+## Crear una jornada
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Jornadas laborales** desde el módulo correspondiente.
+  <Step title="Abre jornadas laborales">
+    Entra en **Personal > Jornadas laborales**.
   </Step>
-  <Step title="Revisa el listado">
-    Filtra por estado, fecha, responsable o referencia cuando aplique.
+  <Step title="Nombra la jornada">
+    Usa un nombre operativo, como **Mañana**, **Noche** o **Turno partido**.
   </Step>
-  <Step title="Crea o actualiza el registro">
-    Completa los campos obligatorios y usa nombres que el equipo reconozca.
+  <Step title="Añade períodos">
+    Indica hora de inicio y fin de cada tramo de trabajo.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para el flujo operativo.
+  <Step title="Marca cruce de medianoche">
+    Usa **Termina al día siguiente** para turnos nocturnos.
+  </Step>
+  <Step title="Revisa duración">
+    Comprueba que la duración total calculada coincide con el horario real.
   </Step>
 </Steps>
 
-## Qué cambia en Bold
+## Reglas de períodos
 
-El registro queda disponible para los módulos relacionados y puede afectar a planificación, ejecución, informes o permisos según el caso.
+Los períodos de una misma jornada no pueden solaparse. Un período debe terminar después de empezar, salvo que esté marcado como que termina al día siguiente.
+
+Actualizar períodos reemplaza el conjunto completo y recalcula la duración de la jornada.
 
 ## Problemas habituales
 
-Si una acción no aparece, revisa permisos, estado del registro y datos maestros relacionados.
+- Si la duración parece incorrecta, revisa si el tramo cruza medianoche.
+- Si no puedes guardar, comprueba solapes entre períodos.
+- Si necesitas marcar descanso, crea una jornada de descanso o usa una jornada sin tramos según el flujo.
+- Si cambias una jornada usada en turnos, revisa programaciones futuras.
 
 ## Relacionado
 
-- [Qué es Bold](/ayuda/primeros-pasos/que-es-bold)
-- [Glosario](/ayuda/referencia-funcional/glosario)
+- [Personal](/ayuda/personal/introduccion)
+- [Turnos](/ayuda/personal/turnos)
+- [Calendarios locales](/ayuda/personal/calendarios-locales)
+- [Referencia de personal](/conceptos/personal)

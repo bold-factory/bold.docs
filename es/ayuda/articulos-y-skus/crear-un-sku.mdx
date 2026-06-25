@@ -43,6 +43,24 @@ Aunque algunas empresas usan la palabra SKU, en Bold verás **Artículo** en la 
   Si el artículo pertenece a un producto y faltan propiedades obligatorias, Bold lo marcará como inválido.
 </Warning>
 
+## Campos de planificación
+
+Configura estos campos si el artículo puede generar necesidades de compra o fabricación.
+
+| Campo | Cuándo usarlo |
+| --- | --- |
+| Origen de aprovisionamiento | Usa **Compra** para artículos comprados, **Fabricación** para artículos fabricados e **Ignorar** si Bold no debe proponer reposición. |
+| Modo de aprovisionamiento | Usa **Contra pedido** cuando cada demanda debe generar una cobertura concreta. Usa **Contra stock** para agrupar necesidades contra stock disponible y proyectado. |
+| Punto de pedido | Define el umbral que dispara recomendaciones. |
+| Pedido mínimo | Evita propuestas demasiado pequeñas. |
+| Tamaño de lote | Redondea recomendaciones a múltiplos de compra o fabricación. |
+| Lead time de aprovisionamiento | Anticipa la fecha recomendada de lanzamiento en días laborables. |
+| Stock de seguridad | Define el colchón operativo que quieres proteger con tu política. |
+
+<Tip>
+  Para que el Asistente de compras proponga un proveedor útil, añade también la relación SKU-proveedor con proveedor principal, plazo y código del proveedor.
+</Tip>
+
 ## Después de crearlo
 
 El siguiente paso depende del uso del artículo:
@@ -55,4 +73,7 @@ El siguiente paso depende del uso del artículo:
 ## Relacionado
 
 - [Catálogo](/ayuda/articulos-y-skus/introduccion)
+- [Propiedades](/ayuda/articulos-y-skus/propiedades)
+- [Proveedores](/ayuda/planificacion/proveedores)
+- [Entender el stock proyectado](/ayuda/planificacion/entender-el-stock-proyectado)
 - [Glosario](/ayuda/referencia-funcional/glosario)

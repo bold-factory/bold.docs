@@ -183,21 +183,46 @@
                   "es/ayuda/usuarios-y-permisos/invitar-usuarios",
                   "es/ayuda/usuarios-y-permisos/roles-y-permisos",
                   "es/ayuda/usuarios-y-permisos/permisos-por-modulo",
+                  "es/ayuda/panel-de-control/claves-api",
+                  "es/ayuda/panel-de-control/webhooks",
                   "es/ayuda/panel-de-control/notificaciones",
                   "es/ayuda/panel-de-control/importar-datos",
                   "es/ayuda/panel-de-control/gestionar-archivos",
                   "es/ayuda/panel-de-control/disenos",
                   "es/ayuda/panel-de-control/agentes"
                 ]
+              }
+            ]
+          },
+          {
+            "tab": "Conceptos",
+            "icon": "book-open",
+            "groups": [
+              {
+                "group": "Modelo funcional",
+                "icon": "network",
+                "root": "es/conceptos/introduccion",
+                "directory": "card",
+                "pages": [
+                  "es/conceptos/catalogo",
+                  "es/conceptos/planificacion",
+                  "es/conceptos/almacen",
+                  "es/conceptos/fabricacion",
+                  "es/conceptos/personal",
+                  "es/conceptos/mantenimiento",
+                  "es/conceptos/costes",
+                  "es/conceptos/smart-factory-y-control"
+                ]
               },
               {
-                "group": "Referencia",
-                "icon": "book-open",
+                "group": "Referencia funcional",
+                "icon": "list-checks",
                 "root": "es/ayuda/referencia-funcional/glosario",
                 "directory": "card",
                 "pages": [
                   "es/ayuda/referencia-funcional/estados",
-                  "es/ayuda/referencia-funcional/reglas-del-sistema"
+                  "es/ayuda/referencia-funcional/reglas-del-sistema",
+                  "es/conceptos/cobertura-ayuda-integrada"
                 ]
               }
             ]
@@ -227,10 +252,15 @@
               {
                 "group": "API Reference",
                 "pages": [
+                  "es/desarrolladores/api-reference/analytics",
                   "es/desarrolladores/api-reference/items",
                   "es/desarrolladores/api-reference/warehouse",
                   "es/desarrolladores/api-reference/planning",
                   "es/desarrolladores/api-reference/production",
+                  "es/desarrolladores/api-reference/people",
+                  "es/desarrolladores/api-reference/maintenance",
+                  "es/desarrolladores/api-reference/notifications",
+                  "es/desarrolladores/api-reference/labels",
                   "es/desarrolladores/api-reference/purchases",
                   "es/desarrolladores/api-reference/sales"
                 ]
@@ -261,6 +291,10 @@
     {
       "source": "/desarrolladores/*",
       "destination": "/es/desarrolladores/*"
+    },
+    {
+      "source": "/conceptos/*",
+      "destination": "/es/conceptos/*"
     }
   ],
   "footer": {

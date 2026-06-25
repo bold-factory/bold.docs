@@ -14,6 +14,10 @@ Esta página resume los permisos funcionales que puedes asignar mediante roles. 
 | `Common.App.RegularMode` | Habilita uso regular de la aplicación. |
 | `Common.App.WorkMode` | Habilita modo trabajo cuando aplica. |
 
+<Note>
+  Administrar usuarios, roles y permisos requiere rol `App.Admin`. No se gestiona con un permiso funcional `People.Users.Write`.
+</Note>
+
 ## Artículos
 
 | Permiso | Uso |
@@ -56,6 +60,16 @@ Esta página resume los permisos funcionales que puedes asignar mediante roles. 
 | `Production.Requests.Read` / `Production.Requests.Write` | Peticiones de fabricación. |
 | `Production.Workstations.Read` / `Production.Workstations.Write` | Puestos de trabajo. |
 
+## Mantenimiento
+
+| Permiso | Uso |
+| --- | --- |
+| `Maintenance.Assets.Read` / `Maintenance.Assets.Write` | Activos mantenibles. |
+| `Maintenance.ActionDefinitions.Read` / `Maintenance.ActionDefinitions.Write` | Acciones reutilizables. |
+| `Maintenance.Causes.Read` / `Maintenance.Causes.Write` | Causas y acciones planificadas. |
+| `Maintenance.WorkOrders.Read` / `Maintenance.WorkOrders.Write` | Partes de trabajo, acciones, tiempos y materiales. |
+| `Maintenance.PreventiveSchedules.Read` / `Maintenance.PreventiveSchedules.Write` | Programaciones preventivas. |
+
 ## Personas y otros módulos
 
 | Permiso | Uso |
@@ -63,8 +77,10 @@ Esta página resume los permisos funcionales que puedes asignar mediante roles. 
 | `People.Users.Read` | Consultar usuarios. |
 | `People.Employees.Read` / `People.Employees.Write` | Empleados. |
 | `People.ShiftScheduling.Read` / `People.ShiftScheduling.Write` | Turnos y calendarios. |
+| `People.Tasks.Read` | Consultar tareas de personas. |
 | `Files.Files.Upload` / `Files.Files.Read` / `Files.Files.Delete` | Archivos. |
 | `Labels.Templates.Read` / `Labels.Templates.Write` | Plantillas de etiquetas. |
+| `Analytics.Reports.Read` / `Analytics.Reports.Write` | Informes Power BI de Smart Factory. |
 | `Agents.Questions.OtherUsers` | Permite aclaraciones de agentes para otros usuarios. |
 
 <Warning>
@@ -74,4 +90,6 @@ Esta página resume los permisos funcionales que puedes asignar mediante roles. 
 ## Relacionado
 
 - [Panel de control](/ayuda/panel-de-control/introduccion)
-- [Permisos por módulo](/ayuda/usuarios-y-permisos/permisos-por-modulo)
+- [Roles y permisos](/ayuda/usuarios-y-permisos/roles-y-permisos)
+- [People API](/desarrolladores/api-reference/people)
+- [Labels API](/desarrolladores/api-reference/labels)

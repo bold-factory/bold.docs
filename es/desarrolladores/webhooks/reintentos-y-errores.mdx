@@ -18,19 +18,45 @@ Un webhook cruza dos sistemas. Debes asumir que puede haber reintentos, entregas
   No devuelvas `2xx` si descartaste el evento sin guardarlo. Bold asumirá que la entrega fue correcta.
 </Warning>
 
+## Intentos automáticos
+
+Bold intenta enviar una notificación hasta cinco veces. Después de cada fallo, programa el siguiente intento con backoff exponencial.
+
+| Dato | Comportamiento |
+| --- | --- |
+| Timeout de envío | 30 segundos. |
+| Intentos máximos | 5 intentos automáticos. |
+| Backoff automático | `10 * 2^n` segundos, donde `n` es el número de intentos realizados. |
+| Estado final tras agotar intentos | `Failure`. |
+| Reintento manual | Solo para notificaciones en `Failure`, mediante `POST /v1/notifications/webhook/{id}/retry`. |
+
+Cada intento guarda código HTTP, cuerpo de respuesta o mensaje de error. Consulta `GET /v1/notifications/webhook/{id}/attempts` para diagnosticarlo.
+
+| Intento fallido | Siguiente intento aproximado |
+| --- | --- |
+| 1 | 20 segundos después. |
+| 2 | 40 segundos después. |
+| 3 | 80 segundos después. |
+| 4 | 160 segundos después. |
+| 5 | No hay siguiente intento automático. |
+
+Cuando solicitas un reintento manual, la notificación vuelve a `Pending` y se programa para envío inmediato.
+
 ## Reglas para consumidores
 
 - Procesa cada evento de forma idempotente.
-- Guarda el identificador del evento o de la notificación recibida.
+- Guarda `eventId` para deduplicar el evento de negocio.
+- Guarda `attemptId` si necesitas auditar cada entrega.
 - No dependas del orden estricto entre eventos.
 - Consulta la API si necesitas confirmar el estado final.
 - Registra el payload original para auditoría y depuración.
+- Verifica `X-HMAC-Signature` antes de confiar en el payload.
 
 ## Patrón recomendado
 
 <Steps>
   <Step title="Valida el payload">
-    Comprueba que `eventName`, `eventVersion` y el identificador de entidad son los esperados.
+    Comprueba que `eventName`, `majorVersion`, `minorVersion` y el identificador de entidad son los esperados.
   </Step>
   <Step title="Detecta duplicados">
     Si ya procesaste el evento, devuelve `2xx` y no repitas efectos externos.
@@ -44,11 +70,11 @@ Un webhook cruza dos sistemas. Debes asumir que puede haber reintentos, entregas
 </Steps>
 
 ```pseudo
-if already_processed(event.id):
+if already_processed(event.eventId):
   return 200
 
 store(event)
-enqueue(event.id)
+enqueue(event.eventId)
 return 202
 ```
 

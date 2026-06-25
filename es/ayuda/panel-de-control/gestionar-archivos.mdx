@@ -4,38 +4,75 @@ description: "Consulta y administra documentos adjuntos usados en Bold."
 icon: "file"
 ---
 
-Gestionar archivos forma parte del flujo funcional de Bold y debe mantenerse alineado con cómo trabaja tu equipo.
+Usa **Gestionar archivos** para consultar documentos y adjuntos usados por Bold. Los archivos pueden estar vinculados a operaciones, controles, partes de trabajo, agentes, importaciones u otros registros.
 
-## Antes de empezar
+## Qué guarda Bold de cada archivo
 
-Revisa permisos, datos relacionados y el objetivo operativo antes de crear o modificar registros.
+| Campo | Uso |
+| --- | --- |
+| Nombre | Nombre original del archivo. |
+| Tipo de contenido | Formato detectado y validado. |
+| Etiquetas | Contexto que relaciona el archivo con registros o procesos. |
+| URI de lectura | Enlace seguro para abrir o descargar el archivo. |
+| Gestionado por el sistema | Indica si Bold controla el archivo para un proceso interno. |
+| Auditoría | Fecha y usuario de creación o modificación. |
 
-## Pasos
+## Formatos admitidos
+
+Bold valida la extensión y el contenido real del archivo. Entre los formatos admitidos están:
+
+| Tipo | Extensiones |
+| --- | --- |
+| PDF | `.pdf` |
+| Imágenes | `.jpg`, `.jpeg`, `.png`, `.webp` |
+| Texto y datos | `.txt`, `.md`, `.markdown`, `.csv` |
+| Word | `.doc`, `.docx`, `.docm` |
+| Excel | `.xls`, `.xlsx`, `.xlsm`, `.xlsb` |
+| Comprimidos | `.zip` |
+
+<Warning>
+  Si cambias la extensión de un archivo sin cambiar su contenido real, Bold puede rechazarlo por discrepancia de tipo.
+</Warning>
+
+## Revisar archivos
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Gestionar archivos** desde el módulo correspondiente.
+  <Step title="Abre Gestionar archivos">
+    Entra en **Panel de control** y abre **Gestionar archivos**.
   </Step>
-  <Step title="Revisa el listado">
-    Filtra por estado, fecha, responsable o referencia cuando aplique.
+  <Step title="Busca el archivo">
+    Filtra por nombre, etiqueta, fecha o usuario cuando aplique.
   </Step>
-  <Step title="Crea o actualiza el registro">
-    Completa los campos obligatorios y usa nombres que el equipo reconozca.
+  <Step title="Revisa metadatos">
+    Comprueba tipo de contenido, etiquetas y si es gestionado por el sistema.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para el flujo operativo.
+  <Step title="Abre o descarga">
+    Usa la URI de lectura para revisar el contenido.
+  </Step>
+  <Step title="Elimina solo si procede">
+    Borra archivos solo cuando tengas claro que no son necesarios para auditoría, evidencias o procesos activos.
   </Step>
 </Steps>
 
-## Qué cambia en Bold
+## Buenas prácticas
 
-El registro queda disponible para los módulos relacionados y puede afectar a planificación, ejecución, informes o permisos según el caso.
+- Usa nombres descriptivos antes de subir archivos.
+- No borres archivos usados como evidencias de calidad, mantenimiento o agentes sin revisar el proceso.
+- Usa CSV para importaciones y adjuntos estructurados.
+- Usa PDF o imágenes para evidencias que no deben cambiar.
 
 ## Problemas habituales
 
-Si una acción no aparece, revisa permisos, estado del registro y datos maestros relacionados.
+| Problema | Qué revisar |
+| --- | --- |
+| El archivo no se acepta | Revisa extensión, tipo real de archivo y si está dañado. |
+| No puedes eliminarlo | Puede faltar permiso o estar gestionado por el sistema. |
+| No encuentras el archivo | Busca por etiquetas o por el registro que lo generó. |
+| El enlace no abre | Revisa permisos y si la URI de lectura sigue vigente. |
 
 ## Relacionado
 
-- [Qué es Bold](/ayuda/primeros-pasos/que-es-bold)
-- [Glosario](/ayuda/referencia-funcional/glosario)
+- [Importar datos](/ayuda/panel-de-control/importar-datos)
+- [Controles de calidad](/ayuda/produccion/controles-de-calidad)
+- [Partes de trabajo](/ayuda/mantenimiento/partes-de-trabajo)
+- [Tareas con agentes](/ayuda/smart-factory/tareas-con-agentes)

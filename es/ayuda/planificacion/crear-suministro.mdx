@@ -20,11 +20,28 @@ Una línea confirmada de pedido de compra genera stock entrante. Mientras la lí
 
 Cuando una recepción registra material del pedido, Bold actualiza cantidad recibida y estado de la línea.
 
+| Estado de línea | Suministro generado |
+| --- | --- |
+| Borrador | Ninguno. |
+| Pendiente | Cantidad pendiente completa. |
+| Parcialmente recibido | Solo la cantidad que falta recibir. |
+| Recibido | Ninguno pendiente. |
+| Cancelado | Ninguno. |
+
 ## Suministro por fabricación
 
 Una petición de fabricación indica qué artículo se necesita fabricar, en qué cantidad y para qué fecha. Es el puente entre demanda y órdenes.
 
 Una orden de fabricación convierte esa necesidad en ejecución real. Al registrar producción, aumenta stock del artículo fabricado.
+
+| Estado de petición | Qué significa |
+| --- | --- |
+| Sin asignar | Todavía no hay órdenes cubriendo la petición. |
+| Parcialmente asignada | Ya existe alguna orden, pero queda cantidad pendiente. |
+| Asignada | Las órdenes cubren toda la cantidad solicitada. |
+| Cancelada | La necesidad deja de estar activa y se eliminan sus entradas pendientes. |
+
+La cantidad solicitada de una petición no puede bajar por debajo de la cantidad ya asignada a órdenes. Si ya hay cantidad asignada, el artículo de la petición queda bloqueado.
 
 ## Crear suministro desde una recomendación
 
@@ -44,10 +61,25 @@ Una orden de fabricación convierte esa necesidad en ejecución real. Al registr
 </Steps>
 
 <Info>
-  En modo directo, Bold puede crear el compromiso correspondiente automáticamente. En modo acumulación, lo propone para revisión.
+  En modo **Contra pedido**, Bold puede cubrir una demanda concreta. En modo **Contra stock**, lo propone para revisión y agrupación.
 </Info>
+
+## Ejemplo
+
+El stock proyectado de **Caja A** cae a -40 el 18 de julio. El artículo se compra, tiene pedido mínimo de 100 y tamaño de lote de 25.
+
+| Parámetro | Valor |
+| --- | ---: |
+| Necesidad neta | 40 |
+| Pedido mínimo | 100 |
+| Tamaño de lote | 25 |
+| Cantidad recomendada | 100 |
+
+Si el mismo artículo tuviera origen **Fabricación**, la recomendación generaría una petición de fabricación por la cantidad revisada. La orden se crearía después, cuando definas receta, operaciones y fecha de ejecución.
 
 ## Relacionado
 
 - [Planificación](/ayuda/planificacion/introduccion)
 - [Entender el stock proyectado](/ayuda/planificacion/entender-el-stock-proyectado)
+- [Crear pedido de compra](/ayuda/compras/crear-pedido-de-compra)
+- [Crear una orden de fabricación](/ayuda/produccion/crear-una-orden-de-fabricacion)

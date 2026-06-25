@@ -6,6 +6,10 @@ icon: "package-check"
 
 Recibir un pedido de compra crea una **Recepción** vinculada a sus líneas. Al recibir, Bold aumenta stock y actualiza cantidades recibidas del pedido.
 
+<Info>
+  Necesitas permisos `Warehouse.Receipts.Read` para consultar recepciones y `Warehouse.Receipts.Write` para crear, editar, recibir, revertir o completar controles.
+</Info>
+
 ## Antes de recibir
 
 Comprueba:
@@ -37,6 +41,25 @@ Comprueba:
   </Step>
 </Steps>
 
+## Estados de la recepción
+
+| Estado | Qué permite |
+| --- | --- |
+| Pendiente | Puedes editar ubicación, líneas, lotes, cantidades e inspecciones. |
+| Recibida | Bold ya aumentó stock. La ubicación, líneas e inspecciones quedan protegidas. |
+
+La acción **Recibir** exige ubicación, al menos una línea y todos los controles obligatorios completados.
+
+## Qué ocurre al recibir
+
+| Efecto | Detalle |
+| --- | --- |
+| Stock físico | Aumenta en la ubicación de recepción. |
+| Lote | Bold usa el lote indicado o crea el lote de compra asociado a la línea y proveedor. |
+| Pedido de compra | La línea suma cantidad recibida y recalcula cantidad pendiente. |
+| Planificación | El suministro previsto se reduce por la cantidad recibida. |
+| Auditoría | El movimiento queda vinculado a la recepción y a su línea. |
+
 ## Recepción parcial
 
 Si recibes menos de lo solicitado, la línea queda **Parcialmente recibido** y mantiene cantidad pendiente. Puedes recibir el resto más adelante.
@@ -55,7 +78,19 @@ Después de recibir, la ubicación y las líneas quedan protegidas. Si hay un er
   No corrijas una recepción recibida con ajustes si puedes revertirla. La reversión conserva mejor la relación con el pedido de compra.
 </Warning>
 
+## Casos frecuentes
+
+| Caso | Acción recomendada |
+| --- | --- |
+| Falta parte del material | Recibe solo la cantidad física que llegó. |
+| El proveedor entrega otro lote | Cambia el lote antes de recibir. |
+| Hay control obligatorio pendiente | Completa el control antes de recibir. |
+| La ubicación es incorrecta | Corrígela antes de recibir. |
+| Recibiste con un dato erróneo | Revisa si puedes revertir y corregir la recepción. |
+
 ## Relacionado
 
 - [Planificación](/ayuda/planificacion/introduccion)
 - [Entender el stock proyectado](/ayuda/planificacion/entender-el-stock-proyectado)
+- [Crear pedido de compra](/ayuda/compras/crear-pedido-de-compra)
+- [Ver compras pendientes](/ayuda/compras/ver-compras-pendientes)

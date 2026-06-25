@@ -4,37 +4,57 @@ description: "Define horarios de producción para planificar capacidad y ejecuci
 icon: "calendar-clock"
 ---
 
-Turnos de trabajo forma parte de fabricación y mantiene el trabajo de planta alineado con recursos, órdenes y resultados.
+Los **turnos de trabajo** de fabricación definen ventanas de disponibilidad para planta y apoyan la secuenciación.
+
+Úsalos para que la planificación proponga operaciones en horarios realistas, no solo en fechas objetivo.
 
 ## Antes de empezar
 
-Revisa permisos, datos maestros relacionados, estados de órdenes y el objetivo operativo antes de modificar registros.
+Decide qué calendario de producción quieres modelar: turnos por planta, por línea, por área o por recurso. Mantén esta configuración alineada con los turnos de personal cuando afecte a capacidad real.
 
-## Pasos
+## Diferencia con turnos de personal
+
+| Concepto | Uso |
+| --- | --- |
+| Turnos de personal | Programan jornadas de empleados y equipos humanos. |
+| Turnos de trabajo | Definen capacidad productiva para planificar operaciones. |
+
+Los dos conceptos pueden coincidir, pero no son lo mismo. Un turno de trabajo puede representar disponibilidad de una línea aunque los empleados se organicen con otra estructura.
+
+## Crear turnos de trabajo
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Turnos de trabajo** desde fabricación.
+  <Step title="Abre turnos de trabajo">
+    Entra en **Fabricación > Turnos de trabajo**.
   </Step>
-  <Step title="Filtra el trabajo">
-    Busca por estado, fecha, recurso, orden o referencia cuando aplique.
+  <Step title="Define la ventana">
+    Indica días, horas y patrón de repetición.
   </Step>
-  <Step title="Crea o ajusta el registro">
-    Completa los campos obligatorios y usa nombres que el equipo de planta reconozca.
+  <Step title="Relaciona con capacidad">
+    Asocia el turno a la planta, área o recursos que usan esa disponibilidad.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para ejecución o análisis.
+  <Step title="Revisa con secuenciación">
+    Comprueba que las operaciones se propongan dentro de las ventanas definidas.
+  </Step>
+  <Step title="Ajusta excepciones">
+    Mantén cambios de horario, paradas programadas o cierres coordinados con planificación.
   </Step>
 </Steps>
 
 ## Qué cambia en Bold
 
-El registro queda disponible para órdenes, operaciones, planificación de recursos, secuenciación o cuadros de mando según el caso.
+Los turnos de trabajo ayudan a calcular cuándo puede planificarse una operación. Si la capacidad no está bien configurada, una orden puede parecer viable en fecha aunque planta no tenga ventana real de trabajo.
 
 ## Problemas habituales
 
-Si una acción no aparece, revisa permisos, estado de la orden, compatibilidad de recursos y datos maestros relacionados.
+- Si secuenciación propone fechas fuera de horario, revisa el turno asociado.
+- Si la capacidad parece excesiva, comprueba si un recurso debería ser finito.
+- Si producción y personal no cuadran, compara turnos de trabajo con turnos de personal.
+- Si hay cierres o festivos, revisa calendarios y excepciones relacionados.
 
 ## Relacionado
 
 - [Fabricación](/ayuda/produccion/introduccion)
+- [Secuenciar órdenes](/ayuda/produccion/secuenciar-ordenes)
+- [Turnos](/ayuda/personal/turnos)
+- [Referencia de fabricación](/conceptos/fabricacion)

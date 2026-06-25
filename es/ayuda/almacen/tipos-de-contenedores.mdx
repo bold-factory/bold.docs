@@ -4,37 +4,56 @@ description: "Define formatos físicos de almacenamiento como cajas, palets o ja
 icon: "package-2"
 ---
 
-Tipos de contenedores cubre una operación de almacén que ayuda a conservar stock físico y trazabilidad.
+Los **tipos de contenedores** describen formatos físicos que usas para mover o almacenar material: palets, cajas, bidones, bolsas, carros, jaulas u otros.
+
+Después, cada **bulto** concreto se crea a partir de un tipo de contenedor y se ubica en almacén.
 
 ## Antes de empezar
 
-Revisa artículos, ubicaciones, lotes, bultos y permisos antes de confirmar movimientos que afecten al histórico.
+Define tipos solo para formatos que quieras identificar, imprimir, mover o analizar. No hace falta crear un tipo para cada proveedor si el formato físico es el mismo.
 
-## Pasos
+## Campos habituales
+
+| Campo | Uso |
+| --- | --- |
+| Nombre | Identifica el formato, como **Palet europeo** o **Caja pequeña**. |
+| Descripción | Aclara cuándo se usa. |
+| Anchura, longitud y altura | Ayudan a diferenciar formatos y preparar diseños o etiquetas. |
+
+## Crear tipos de contenedores
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Tipos de contenedores** desde almacén.
+  <Step title="Lista formatos reales">
+    Revisa qué cajas, palets, carros o contenedores usa el almacén.
   </Step>
-  <Step title="Busca el material">
-    Filtra por artículo, ubicación, lote, bulto o documento relacionado.
+  <Step title="Crea cada tipo">
+    Usa nombres claros que el equipo reconozca durante recepción, movimiento o preparación.
   </Step>
-  <Step title="Registra la acción">
-    Introduce cantidad, ubicación, lote o documento según el flujo.
+  <Step title="Añade dimensiones">
+    Completa medidas cuando ayuden a impresión, capacidad o identificación física.
   </Step>
-  <Step title="Confirma el resultado">
-    Comprueba stock, movimientos y estado del documento antes de cerrar.
+  <Step title="Crea bultos desde el tipo">
+    Usa el tipo como plantilla para los bultos concretos que se moverán.
+  </Step>
+  <Step title="Revisa etiquetas">
+    Si imprimes etiquetas, comprueba que el tipo tenga los datos necesarios.
   </Step>
 </Steps>
 
 ## Qué cambia en Bold
 
-Bold actualiza stock, ubicación, lote, bulto o histórico de movimientos según el tipo de operación.
+El tipo de contenedor no mueve stock por sí mismo. Sirve para clasificar bultos y mantener criterios homogéneos al identificar material físico.
 
 ## Problemas habituales
 
-Si el stock no cuadra, revisa movimientos recientes, inventarios, recepciones, envíos y consumos de fabricación.
+- Si hay muchos tipos parecidos, agrúpalos por formato físico real.
+- Si una etiqueta no muestra datos esperados, revisa el tipo y la plantilla de diseño.
+- Si un bulto se creó con el tipo incorrecto, corrígelo antes de usarlo en movimientos trazables.
+- Si necesitas capacidad o dimensiones exactas, define una convención de medida común.
 
 ## Relacionado
 
 - [Almacén](/ayuda/almacen/introduccion)
+- [Bultos](/ayuda/almacen/bultos)
+- [Diseños](/ayuda/panel-de-control/disenos)
+- [Referencia de almacén](/conceptos/almacen)

@@ -4,37 +4,60 @@ description: "Agrupa stock físico en unidades manejables para mover, contar o p
 icon: "package"
 ---
 
-Bultos cubre una operación de almacén que ayuda a conservar stock físico y trazabilidad.
+Los **bultos** representan unidades físicas movibles dentro del almacén, como palets, cajas, carros o contenedores.
+
+Úsalos cuando quieras seguir el movimiento de agrupaciones reales de stock, no solo cantidades sueltas por ubicación.
 
 ## Antes de empezar
 
-Revisa artículos, ubicaciones, lotes, bultos y permisos antes de confirmar movimientos que afecten al histórico.
+Necesitas tipos de contenedores, ubicaciones y artículos creados. Si trabajas con lotes, prepara también los lotes que deben entrar en cada bulto.
 
-## Pasos
+## Qué contiene un bulto
+
+| Dato | Uso |
+| --- | --- |
+| Tipo de contenedor | Formato físico, como caja, palet o carro. |
+| Ubicación | Lugar actual del bulto. |
+| Artículo | Material contenido. |
+| Lote | Lote asociado cuando el artículo trabaja con trazabilidad. |
+| Cantidad | Cantidad por artículo y lote. |
+
+Un bulto solo puede estar en una ubicación a la vez, pero puede contener varios artículos y lotes.
+
+## Crear y usar bultos
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Bultos** desde almacén.
+  <Step title="Crea el bulto">
+    Elige tipo de contenedor, código y ubicación inicial.
   </Step>
-  <Step title="Busca el material">
-    Filtra por artículo, ubicación, lote, bulto o documento relacionado.
+  <Step title="Añade contenido">
+    Registra artículo, lote si aplica y cantidad.
   </Step>
-  <Step title="Registra la acción">
-    Introduce cantidad, ubicación, lote o documento según el flujo.
+  <Step title="Mueve el bulto">
+    Actualiza la ubicación cuando el bulto cambie de zona física.
   </Step>
-  <Step title="Confirma el resultado">
-    Comprueba stock, movimientos y estado del documento antes de cerrar.
+  <Step title="Retira contenido">
+    Saca cantidades cuando prepares envíos, consumas material o repartas stock.
+  </Step>
+  <Step title="Revisa el estado">
+    Si el bulto queda vacío, pasa a estar inactivo.
   </Step>
 </Steps>
 
 ## Qué cambia en Bold
 
-Bold actualiza stock, ubicación, lote, bulto o histórico de movimientos según el tipo de operación.
+Si añades contenido con el mismo artículo y lote que una línea existente, Bold lo agrupa en esa línea. Para retirar contenido debe existir cantidad suficiente. Las altas y retiradas de contenido quedan registradas como eventos del bulto.
 
 ## Problemas habituales
 
-Si el stock no cuadra, revisa movimientos recientes, inventarios, recepciones, envíos y consumos de fabricación.
+- Si no puedes retirar contenido, revisa artículo, lote y cantidad disponible dentro del bulto.
+- Si el bulto aparece vacío, comprueba si quedó inactivo después de retirar todo el contenido.
+- Si no encuentras el material, revisa la ubicación actual del bulto y los movimientos recientes.
+- Si mezclas artículos o lotes, asegúrate de que el equipo pueda identificar el contenido físicamente.
 
 ## Relacionado
 
 - [Almacén](/ayuda/almacen/introduccion)
+- [Tipos de contenedores](/ayuda/almacen/tipos-de-contenedores)
+- [Mover stock](/ayuda/almacen/mover-stock)
+- [Referencia de almacén](/conceptos/almacen)

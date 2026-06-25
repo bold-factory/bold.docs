@@ -11,13 +11,24 @@ Este glosario reúne términos que aparecen en los módulos de Bold. Úsalo para
 | Artículo | Unidad física que se compra, fabrica, almacena o vende. También puede aparecer como SKU en integraciones. |
 | Producto | Familia o modelo que agrupa artículos relacionados. |
 | Propiedad | Atributo que diferencia artículos, como color, formato o acabado. |
+| Valor de propiedad | Valor concreto de una propiedad en un artículo. Completa la variante dentro de un producto. |
+| Característica | Requisito técnico que puede condicionar herramientas, operaciones o selección de recursos. |
 | Lote | Conjunto trazable de unidades de un artículo. |
 | Ubicación | Lugar físico o lógico donde el stock entra, sale o se almacena. |
+| Bulto | Contenedor operativo que agrupa material para moverlo, identificarlo o almacenarlo. |
+| Tipo de contenedor | Plantilla que clasifica bultos como cajas, palets, carros o contenedores. |
 | Stock físico | Cantidad registrada actualmente en almacén. |
 | Stock disponible | Stock que queda libre después de considerar compromisos. |
 | Stock proyectado | Stock esperado al aplicar entradas y salidas futuras. |
+| Stock entrante | Cantidad esperada por compras, recepciones, fabricación u otros suministros. |
+| Stock saliente | Cantidad comprometida por ventas, envíos, consumos u otras demandas. |
+| Movimiento de stock | Registro auditado de un aumento, disminución, movimiento o ajuste. |
 | Demanda | Necesidad de stock generada por venta, consumo o previsión. |
 | Suministro | Entrada esperada por compra, fabricación o previsión. |
+| Punto de pedido | Umbral de stock desde el que Bold recomienda reponer. |
+| Pedido mínimo | Cantidad mínima recomendada para cubrir una necesidad. |
+| Tamaño de lote | Múltiplo o cantidad base usada para redondear recomendaciones. |
+| Origen de aprovisionamiento | Regla que indica si un artículo se compra, fabrica o se cubre por otra fuente. |
 | Pedido de compra | Compromiso con proveedor para recibir artículos. |
 | Recepción | Documento que registra la entrada física de material. |
 | Pedido de venta | Compromiso con cliente para entregar artículos. |
@@ -25,13 +36,29 @@ Este glosario reúne términos que aparecen en los módulos de Bold. Úsalo para
 | Receta | Definición de cómo fabricar un artículo. |
 | Versión de receta | Variante controlada de una receta. Solo una versión activa debe usarse como referencia principal. |
 | Operación | Paso ejecutable dentro de una orden de fabricación. |
+| Entrada | Material o semielaborado que se consume en una operación. |
+| Paso | Instrucción de trabajo dentro de una operación. |
+| Control | Comprobación o inspección que debe completarse en fabricación o almacén. |
+| Restricción | Relación de precedencia entre operaciones. |
 | Orden de fabricación | Trabajo real que transforma materiales en producto terminado o semielaborado. |
 | Petición de fabricación | Necesidad de fabricar antes de lanzar una orden. |
 | Puesto de trabajo | Recurso donde se ejecutan operaciones. |
+| Herramienta | Recurso seleccionable cuando una operación exige una característica. |
+| Área | Agrupación física o lógica de recursos de producción. |
 | Co-producto | Salida adicional generada durante una fabricación. |
+| Pausa | Interrupción registrada durante una operación. |
 | Inventario | Recuento físico que regulariza diferencias de stock. |
+| Activo | Máquina, instalación, área o equipo mantenible. |
+| Parte de trabajo | Registro de una intervención de mantenimiento. |
+| Acción | Trabajo o comprobación reutilizable dentro de mantenimiento. |
+| Causa | Motivo principal o auxiliar de una intervención. |
+| Jornada laboral | Plantilla de tramos de trabajo. |
+| Calendario local | Excepciones de disponibilidad como festivos o cierres. |
+| Turno | Programación que aplica jornadas y calendarios a personas o equipos. |
 | Rol | Conjunto de permisos asignable a usuarios. |
 | Permiso | Capacidad concreta para leer, escribir o ejecutar acciones. |
+| Agente | Automatización o asistente que ejecuta tareas con contexto de Bold. |
+| Webhook | Notificación enviada a un sistema externo cuando ocurre un evento. |
 
 <Info>
   En la interfaz, Bold usa **Artículo** para el objeto operativo sobre el que se controla stock. En documentación técnica puede aparecer como `sku`.
@@ -40,4 +67,6 @@ Este glosario reúne términos que aparecen en los módulos de Bold. Úsalo para
 ## Relacionado
 
 - [Qué es Bold](/ayuda/primeros-pasos/que-es-bold)
-- [Glosario](/ayuda/referencia-funcional/glosario)
+- [Conceptos de Bold](/conceptos/introduccion)
+- [Estados](/ayuda/referencia-funcional/estados)
+- [Reglas del sistema](/ayuda/referencia-funcional/reglas-del-sistema)

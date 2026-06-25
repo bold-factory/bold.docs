@@ -1,41 +1,71 @@
 ---
 title: "Costes de empleados"
-description: "Mantén costes de personal para calcular fabricación y mantenimiento."
+description: "Mantén costes horarios de empleados para calcular mano de obra en fabricación y mantenimiento."
 icon: "users"
 ---
 
-Costes de empleados forma parte del flujo funcional de Bold y debe mantenerse alineado con cómo trabaja tu equipo.
+Usa **Costes de empleados** para mantener el coste por hora que Bold aplica a registros de mano de obra. Este coste afecta a órdenes de fabricación, operaciones y partes de mantenimiento.
 
-## Antes de empezar
+## Qué estás revisando
 
-Revisa permisos, datos relacionados y el objetivo operativo antes de crear o modificar registros.
+| Campo | Qué significa |
+| --- | --- |
+| Código y nombre | Identifican al empleado. |
+| Coste/hora | Coste total para la empresa por hora efectiva de trabajo. |
 
-## Pasos
+El coste/hora debe representar el coste empresarial, no solo el salario neto. Incluye salario bruto, cotizaciones y otros costes laborales que quieras imputar a fabricación o mantenimiento.
+
+## Calcular un coste horario
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Costes de empleados** desde el módulo correspondiente.
+  <Step title="Calcula el coste anual">
+    Suma salario bruto anual y costes empresariales asociados.
   </Step>
-  <Step title="Revisa el listado">
-    Filtra por estado, fecha, responsable o referencia cuando aplique.
+  <Step title="Define horas efectivas">
+    Usa las horas anuales de trabajo que aplica tu empresa. Para una jornada de 40 horas semanales, una referencia aproximada son 1.826 horas anuales.
   </Step>
-  <Step title="Crea o actualiza el registro">
-    Completa los campos obligatorios y usa nombres que el equipo reconozca.
+  <Step title="Divide coste entre horas">
+    Coste/hora = coste anual / horas anuales efectivas.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para el flujo operativo.
+  <Step title="Registra el valor">
+    Abre el empleado desde **Costes** > **Empleados** o desde **Personal** y guarda el coste/hora.
   </Step>
 </Steps>
 
-## Qué cambia en Bold
+## Ejemplo
 
-El registro queda disponible para los módulos relacionados y puede afectar a planificación, ejecución, informes o permisos según el caso.
+Un empleado tiene un coste anual estimado de `42.000 €`. Si usas `1.826` horas anuales efectivas, el coste horario es:
+
+```text
+42.000 / 1.826 = 23,00 €/h
+```
+
+Registra `23,00 €/h` como coste del empleado. Cuando ese empleado impute `2 h` a una operación, Bold puede calcular `46,00 €` de mano de obra real.
+
+## Cómo lo usa Bold
+
+| Flujo | Uso del coste de empleado |
+| --- | --- |
+| Fabricación | Calcula coste real de mano de obra cuando se registran tiempos por empleado. |
+| Mantenimiento | Calcula coste real de partes con horas de trabajo registradas. |
+| Coste previsto | Puede usar promedios cuando todavía no se sabe qué empleado ejecutará una operación. |
+
+<Tip>
+  Revisa costes horarios cuando cambien convenios, salarios o calendarios. Un coste desactualizado distorsiona todas las comparativas de mano de obra.
+</Tip>
 
 ## Problemas habituales
 
-Si una acción no aparece, revisa permisos, estado del registro y datos maestros relacionados.
+| Problema | Qué revisar |
+| --- | --- |
+| Mano de obra real a cero | El empleado no tiene coste/hora o el tiempo no se registró sobre un empleado. |
+| Costes muy altos o bajos | Revisa si dividiste por horas anuales efectivas, no por horas semanales o mensuales. |
+| El coste previsto no coincide con el real | El previsto puede usar promedios; el real usa los empleados y tiempos registrados. |
+| No puedes editar el coste | Revisa permisos de costes de empleados. |
 
 ## Relacionado
 
-- [Qué es Bold](/ayuda/primeros-pasos/que-es-bold)
-- [Glosario](/ayuda/referencia-funcional/glosario)
+- [Personal](/conceptos/personal)
+- [Empleados](/ayuda/personal/empleados)
+- [Costes de órdenes de fabricación](/ayuda/costes/ordenes-de-fabricacion)
+- [Costes de partes de trabajo](/ayuda/costes/partes-de-trabajo)

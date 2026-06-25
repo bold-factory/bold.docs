@@ -1,41 +1,95 @@
 ---
 title: "Agentes"
-description: "Configura agentes de IA, permisos y automatizaciones desde el Panel de control."
+description: "Configura agentes de IA, permisos, memoria y automatizaciones desde el Panel de control."
 icon: "bot"
 ---
 
-Agentes forma parte del flujo funcional de Bold y debe mantenerse alineado con cómo trabaja tu equipo.
+Los **Agentes** son asistentes de IA configurables para ejecutar tareas sobre Bold con instrucciones y permisos concretos. Úsalos para trabajos repetibles, análisis con varios pasos o automatizaciones que deben quedar auditadas.
 
-## Antes de empezar
+## Qué puedes configurar
 
-Revisa permisos, datos relacionados y el objetivo operativo antes de crear o modificar registros.
+| Campo | Uso |
+| --- | --- |
+| Nombre | Identifica el agente para usuarios y tareas. |
+| Nivel de inteligencia | Ajusta capacidad de razonamiento y consumo de créditos. |
+| Instrucciones | Define objetivo, límites y forma de responder. |
+| Permitir preguntas | Permite que el agente pida aclaraciones cuando falte información. |
+| Memoria | Guarda contexto persistente del agente cuando está habilitada. |
+| Permisos | Determinan qué herramientas y datos puede usar. |
+| Automatizaciones | Ejecutan el agente de forma programada. |
 
-## Pasos
+<Warning>
+  Un agente solo debe tener los permisos que necesita. Si le das permisos amplios, podrá acceder a más datos y acciones durante sus tareas.
+</Warning>
+
+## Crear un agente
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Agentes** desde el módulo correspondiente.
+  <Step title="Abre Agentes">
+    Entra en **Panel de control** y abre **Agentes**.
   </Step>
-  <Step title="Revisa el listado">
-    Filtra por estado, fecha, responsable o referencia cuando aplique.
+  <Step title="Crea el agente">
+    Define nombre, nivel de inteligencia, instrucciones, preguntas y memoria.
   </Step>
-  <Step title="Crea o actualiza el registro">
-    Completa los campos obligatorios y usa nombres que el equipo reconozca.
+  <Step title="Configura permisos">
+    Marca solo los módulos y acciones necesarios. Puedes usar sugerencias de permisos si las instrucciones están claras.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para el flujo operativo.
+  <Step title="Prueba con una tarea manual">
+    Crea una [tarea con agente](/ayuda/smart-factory/tareas-con-agentes) y revisa si usa los datos correctos.
+  </Step>
+  <Step title="Ajusta instrucciones">
+    Corrige instrucciones si el agente pide demasiadas aclaraciones, omite pasos o entrega un formato poco útil.
   </Step>
 </Steps>
 
-## Qué cambia en Bold
+## Elegir nivel de inteligencia
 
-El registro queda disponible para los módulos relacionados y puede afectar a planificación, ejecución, informes o permisos según el caso.
+| Nivel | Cuándo usarlo |
+| --- | --- |
+| Bajo | Consultas directas, resúmenes simples o tareas muy acotadas. |
+| Medio | Tareas operativas habituales con equilibrio entre coste y razonamiento. |
+| Alto | Análisis con varios pasos, instrucciones ambiguas o tareas que combinan varias áreas. |
+
+Empieza por el nivel más bajo que cumpla la tarea. Sube el nivel si el agente se queda corto, omite pasos o necesita razonar con más contexto.
+
+## Automatizaciones
+
+Las automatizaciones ejecutan agentes de forma recurrente. Puedes definir frecuencia diaria, semanal, mensual, trimestral, semestral o anual, con horas y reglas de calendario.
+
+Cada ejecución crea una tarea con agente. La tabla muestra agente, estado, próxima ejecución, última ejecución, ejecuciones acumuladas y responsable.
+
+<Steps>
+  <Step title="Crea la automatización">
+    Selecciona agente, responsable, frecuencia y horas de ejecución.
+  </Step>
+  <Step title="Define reglas de calendario">
+    Para programaciones semanales, elige días. Para mensuales, elige día del mes, último día o patrón como primer lunes.
+  </Step>
+  <Step title="Revisa permisos">
+    Si el agente no tiene permisos, probablemente no podrá completar la automatización.
+  </Step>
+  <Step title="Activa y observa">
+    Revisa las primeras tareas generadas antes de confiar en el proceso.
+  </Step>
+</Steps>
+
+## Agentes de sistema
+
+La lista puede incluir agentes de **Sistema**. Estos agentes son internos y no se eliminan desde la configuración. Los agentes creados por usuarios se pueden editar o retirar según permisos.
 
 ## Problemas habituales
 
-Si una acción no aparece, revisa permisos, estado del registro y datos maestros relacionados.
+| Problema | Qué revisar |
+| --- | --- |
+| El agente no puede completar una tarea | Revisa permisos, instrucciones y datos disponibles. |
+| Consume demasiados créditos | Baja el nivel de inteligencia o acota la tarea. |
+| Pide aclaraciones continuamente | Mejora instrucciones o desactiva preguntas si el flujo debe fallar antes de continuar. |
+| La automatización no se ejecuta | Revisa si está habilitada y si Bold puede calcular la próxima ejecución. |
+| No puedes eliminar un agente | Puede ser un agente de sistema o faltarte permiso. |
 
 ## Relacionado
 
-- [Qué es Bold](/ayuda/primeros-pasos/que-es-bold)
-- [Glosario](/ayuda/referencia-funcional/glosario)
+- [Boldy](/ayuda/smart-factory/boldy)
+- [Tareas con agentes](/ayuda/smart-factory/tareas-con-agentes)
+- [Mi cuenta y plan](/ayuda/panel-de-control/mi-cuenta-y-plan)
+- [Permisos por módulo](/ayuda/usuarios-y-permisos/permisos-por-modulo)

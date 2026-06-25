@@ -1,0 +1,100 @@
+---
+title: "Claves API"
+description: "Crea, guarda, prueba y desactiva claves API para integraciones técnicas."
+icon: "key-round"
+---
+
+Las **claves API** permiten que sistemas externos llamen a la API de Bold sin usar una sesión interactiva. Úsalas para integraciones servidor a servidor, como ERP, BI, automatizaciones internas o sincronizaciones programadas.
+
+<Warning>
+  Trata una clave API como una contraseña. La clave completa solo se muestra al crearla. Después, el listado muestra la clave sin revelar el secreto.
+</Warning>
+
+## Qué muestra el listado
+
+| Campo | Uso |
+| --- | --- |
+| Id | Identificador técnico de la clave. |
+| Nombre | Sistema, integración o responsable que usa la clave. |
+| Estado | Indica si la clave está activa o inactiva. |
+| Cabecera | Las llamadas usan `X-Api-Key`. |
+
+Gestionar claves API requiere rol `App.Admin`.
+
+## Crear una clave API
+
+<Steps>
+  <Step title="Abre Claves API">
+    Entra en **Panel de control** y abre **Claves API**.
+  </Step>
+  <Step title="Crea una clave">
+    Usa un nombre descriptivo, por ejemplo `ERP producción`, `BI inventario` o `Conector compras`.
+  </Step>
+  <Step title="Copia la clave">
+    Copia el valor en cuanto aparece. Guárdalo en el gestor de secretos del sistema que hará la integración.
+  </Step>
+  <Step title="Prueba una lectura">
+    Valida la credencial con un endpoint de lectura y paginación pequeña antes de activar escrituras.
+  </Step>
+  <Step title="Documenta el uso">
+    Registra qué sistema usa la clave, quién es responsable y cuándo debe revisarse.
+  </Step>
+</Steps>
+
+```bash
+curl "https://api.bold-factory.com/v1/items/skus?pageNumber=1&pageSize=10" \
+  -H "X-Api-Key: $BOLD_API_KEY" \
+  -H "Accept: application/json"
+```
+
+## Desactivar una clave
+
+Desactiva una clave si deja de usarse, si el sistema externo cambia de responsable o si sospechas que se ha compartido fuera del canal autorizado.
+
+<Steps>
+  <Step title="Localiza la clave">
+    Busca la clave por nombre o por identificador.
+  </Step>
+  <Step title="Desactívala">
+    Usa la acción de desactivar y confirma. La clave queda inactiva y no debe usarse para nuevas peticiones.
+  </Step>
+  <Step title="Actualiza la integración">
+    Si el sistema sigue necesitando acceso, crea una clave nueva y sustituye el secreto en su gestor de configuración.
+  </Step>
+</Steps>
+
+## Endpoints técnicos
+
+| Endpoint | Uso |
+| --- | --- |
+| `GET /v1/access/apiKeys` | Lista claves API del tenant. |
+| `POST /v1/access/apiKeys` | Crea una clave nueva y devuelve el secreto. |
+| `DELETE /v1/access/apiKeys/{keyId}` | Desactiva la clave indicada. |
+
+Todos estos endpoints requieren rol `App.Admin`.
+
+## Buenas prácticas
+
+| Práctica | Motivo |
+| --- | --- |
+| Una clave por integración | Permite revocar una integración sin afectar a las demás. |
+| Nombre descriptivo | Facilita auditoría y soporte. |
+| Gestor de secretos | Evita copiar claves en documentos, chats o repositorios. |
+| Pruebas de lectura primero | Confirma tenant, autenticación y permisos antes de hacer cambios. |
+| Revisión periódica | Detecta claves antiguas o integraciones abandonadas. |
+
+## Problemas habituales
+
+| Problema | Qué revisar |
+| --- | --- |
+| La clave no vuelve a aparecer | Solo se muestra al crearla. Crea una nueva si no se guardó. |
+| La API responde `401` | Revisa cabecera `X-Api-Key`, entorno y si la clave sigue activa. |
+| La API responde `403` | La credencial existe, pero no tiene alcance suficiente para la operación. |
+| No puedes crear o desactivar claves | Necesitas rol `App.Admin`. |
+| No sabes qué sistema usa una clave | Revisa nombre, responsable interno y registros de integración. |
+
+## Relacionado
+
+- [Autenticación de API](/desarrolladores/empezar/autenticacion)
+- [Webhooks](/desarrolladores/webhooks/introduccion)
+- [Roles y permisos](/ayuda/usuarios-y-permisos/roles-y-permisos)

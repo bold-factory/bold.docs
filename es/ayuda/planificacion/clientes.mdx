@@ -1,40 +1,94 @@
 ---
 title: "Clientes"
-description: "Mantén la cartera de clientes preparada para pedidos, demanda y entregas."
+description: "Crea y mantiene clientes para agrupar demanda, pedidos de venta y seguimiento comercial."
 icon: "user-round"
 ---
 
-Los clientes agrupan la información comercial necesaria para crear pedidos de venta y seguir entregas.
+Los clientes son datos maestros de planificación. Bold los usa para identificar quién genera demanda y para agrupar pedidos de venta, entregas y análisis de servicio.
 
-## Antes de empezar
+Un cliente no sustituye a un CRM. En Bold debes mantener solo los datos que afectan a la planificación: el nombre operativo y, si integras con otro sistema, una referencia externa estable.
 
-Ten claros nombre fiscal o comercial, direcciones, contacto operativo y condiciones internas de seguimiento.
+## Cuándo crear un cliente
 
-## Pasos
+Crea un cliente cuando necesitas separar demanda, pedidos o seguimiento por empresa, canal o cuenta.
+
+Ejemplos habituales:
+
+- Una empresa que envía pedidos de venta recurrentes.
+- Un canal comercial que quieres analizar por separado.
+- Un cliente genérico para demanda interna, muestras o pedidos sin cuenta nominativa.
+- Un identificador que llega desde un ERP o CRM y debe coincidir con Bold mediante referencia externa.
+
+## Datos del cliente
+
+| Campo | Para qué sirve | Recomendación |
+| --- | --- | --- |
+| Nombre | Identifica al cliente en listas, pedidos de venta y filtros. | Usa el nombre que el equipo reconoce en operaciones. |
+| Referencia externa | Conecta el cliente con otro sistema. | Mantén una referencia única, estable y sin caracteres especiales. |
+| Fechas y usuarios de auditoría | Indican cuándo se creó o modificó el registro. | Úsalas para revisar cambios, no como datos operativos. |
+
+<Note>
+  La ficha actual de cliente no guarda direcciones ni contactos. Documenta esa información en el sistema comercial o logístico que corresponda.
+</Note>
+
+## Crear un cliente
 
 <Steps>
-  <Step title="Crea el cliente">
-    Registra los datos mínimos que tu equipo necesita para identificarlo.
+  <Step title="Abre clientes">
+    Ve a **Planificación > Clientes**.
   </Step>
-  <Step title="Añade contactos y direcciones">
-    Usa direcciones coherentes para preparar envíos y comunicar incidencias.
+  <Step title="Crea el registro">
+    Informa el **Nombre**. Añade **Referencia externa** si el cliente viene de otro sistema.
   </Step>
-  <Step title="Relaciona pedidos">
-    Crea pedidos de venta desde el cliente o asígnalos al cliente correcto.
+  <Step title="Usa el cliente en pedidos">
+    Selecciona el cliente al crear pedidos de venta o al importar demanda.
   </Step>
-  <Step title="Revisa actividad">
-    Consulta pedidos pendientes, entregas y demanda asociada antes de prometer nuevas fechas.
+  <Step title="Revisa pedidos asociados">
+    Usa la ficha del cliente y los filtros de planificación para revisar demanda, entregas y cumplimiento.
   </Step>
 </Steps>
 
 ## Qué cambia en Bold
 
-Los pedidos de venta del cliente alimentan disponibilidad, planificación y preparación de salidas cuando sus líneas están confirmadas.
+Cuando asignas un cliente a un pedido de venta, Bold puede agrupar la demanda por cliente y mostrar el origen comercial de las necesidades futuras. Las líneas confirmadas del pedido alimentan planificación y stock proyectado.
+
+Si eliminas un cliente, Bold lo marca como inactivo mediante borrado lógico. No lo edites después de eliminarlo. Conserva el historial para que pedidos y eventos antiguos sigan siendo trazables.
+
+## Importaciones e integraciones
+
+Usa **Referencia externa** cuando importas clientes desde un ERP, CRM o archivo CSV. Esa referencia evita crear duplicados cuando el mismo cliente vuelve a llegar en otra importación.
+
+Buenas prácticas:
+
+- No cambies la referencia externa después de integrarla.
+- Evita nombres duplicados si representan clientes distintos.
+- Crea un cliente genérico solo cuando el análisis por cliente no importe.
+- Revisa duplicados antes de importar pedidos de venta.
+
+## Permisos
+
+| Acción | Permiso necesario |
+| --- | --- |
+| Ver y buscar clientes | `Planning.Customers.Read` |
+| Crear, editar o eliminar clientes | `Planning.Customers.Write` |
+
+Si no ves la opción de crear o editar, revisa tu rol en **Panel de control > Miembros y roles**.
+
+## Ejemplo
+
+Una empresa recibe pedidos desde un ERP. En Bold creas el cliente **ACME Industrial** con referencia externa `ERP-CUST-0042`. Cada pedido importado usa esa referencia. Así Bold agrupa la demanda de ACME aunque el nombre comercial cambie en el ERP.
 
 ## Problemas habituales
 
-Si no encuentras un cliente, revisa filtros, duplicados y permisos de planificación o ventas.
+| Problema | Qué revisar |
+| --- | --- |
+| El cliente no aparece al crear un pedido | Comprueba permisos, filtros y si el cliente fue eliminado. |
+| La importación crea duplicados | Revisa que la referencia externa sea la misma en todos los archivos. |
+| No puedes guardar el cliente | El nombre es obligatorio o la referencia externa contiene caracteres no permitidos. |
+| La demanda no se agrupa como esperas | Comprueba que las líneas del pedido usan el cliente correcto y están confirmadas. |
 
 ## Relacionado
 
 - [Crear pedido de venta](/ayuda/ventas/crear-pedido-de-venta)
+- [Crear demanda](/ayuda/planificacion/crear-demanda)
+- [Conceptos de planificación](/conceptos/planificacion)

@@ -4,38 +4,71 @@ description: "Clasifica causas de averías o intervenciones para analizar recurr
 icon: "git-branch"
 ---
 
-Causas forma parte del flujo funcional de Bold y debe mantenerse alineado con cómo trabaja tu equipo.
+Las **causas** explican por qué se abre un parte de trabajo. Sirven para analizar averías recurrentes, comparar costes y guiar al operario con acciones recomendadas.
 
-## Antes de empezar
+## Cuándo crear una causa
 
-Revisa permisos, datos relacionados y el objetivo operativo antes de crear o modificar registros.
+Crea una causa cuando el motivo vaya a repetirse y quieras medirlo:
 
-## Pasos
+- fallo eléctrico;
+- desgaste;
+- fuga;
+- suciedad;
+- revisión periódica;
+- sobrecalentamiento;
+- cambio planificado.
+
+Evita causas demasiado genéricas como `Otros` si después necesitas analizar datos. Evita también causas demasiado específicas si solo se usarán una vez.
+
+## Causa principal y causas auxiliares
+
+Un parte tiene una causa principal y puede tener causas auxiliares. Bold evita duplicados en el parte:
+
+- una causa auxiliar no puede ser igual a la principal;
+- una causa auxiliar no puede repetirse con otra auxiliar;
+- si cambias la causa principal, no puede ser una causa ya añadida como auxiliar.
+
+## Añadir acciones recomendadas
+
+Una causa puede incluir acciones planificadas. Al usar esa causa en un parte, esas acciones ayudan a estandarizar el trabajo.
 
 <Steps>
-  <Step title="Abre la sección">
-    Entra en **Causas** desde el módulo correspondiente.
+  <Step title="Abre Causas">
+    Entra en **Mantenimiento** y abre **Causas**.
   </Step>
-  <Step title="Revisa el listado">
-    Filtra por estado, fecha, responsable o referencia cuando aplique.
+  <Step title="Crea la causa">
+    Usa un nombre que explique el motivo operativo, no el síntoma escrito de muchas formas.
   </Step>
-  <Step title="Crea o actualiza el registro">
-    Completa los campos obligatorios y usa nombres que el equipo reconozca.
+  <Step title="Añade acciones">
+    Vincula acciones reutilizables si el equipo debe seguir un checklist al tratar esa causa.
   </Step>
-  <Step title="Comprueba el resultado">
-    Vuelve al listado o al detalle para confirmar que el cambio queda disponible para el flujo operativo.
+  <Step title="Prueba en un parte">
+    Crea un parte de trabajo y comprueba que la causa y sus acciones ayudan al operario.
   </Step>
 </Steps>
 
-## Qué cambia en Bold
+## Ejemplo
 
-El registro queda disponible para los módulos relacionados y puede afectar a planificación, ejecución, informes o permisos según el caso.
+Para `Sobrecalentamiento`, puedes añadir acciones como:
+
+- `Comprobar ventilación`;
+- `Limpiar filtro`;
+- `Medir temperatura`;
+- `Adjuntar foto si hay daño visible`.
+
+Después puedes filtrar partes por esa causa y revisar coste, tiempo, activos afectados y recurrencia.
 
 ## Problemas habituales
 
-Si una acción no aparece, revisa permisos, estado del registro y datos maestros relacionados.
+| Problema | Qué revisar |
+| --- | --- |
+| La causa auxiliar no se guarda | Puede estar repetida o coincidir con la causa principal. |
+| Las acciones recomendadas no encajan | Revisa si la causa es demasiado amplia. |
+| Hay muchas causas parecidas | Normaliza nombres y conserva una lista corta de motivos medibles. |
+| No puedes eliminar la causa | Revisa si está en uso o si ya fue eliminada. |
 
 ## Relacionado
 
-- [Qué es Bold](/ayuda/primeros-pasos/que-es-bold)
-- [Glosario](/ayuda/referencia-funcional/glosario)
+- [Acciones](/ayuda/mantenimiento/acciones)
+- [Partes de trabajo](/ayuda/mantenimiento/partes-de-trabajo)
+- [Costes de partes de trabajo](/ayuda/costes/partes-de-trabajo)

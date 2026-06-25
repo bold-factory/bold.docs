@@ -14,17 +14,26 @@ Un usuario es la cuenta con la que una persona entra en Bold. Invita usuarios cu
 
 - Ten claro qué módulos debe usar la persona.
 - Crea o revisa el rol que le vas a asignar.
-- Decide si debe vincularse a un empleado.
+- Decide si debe vincularse a un empleado operativo.
 - Evita compartir una cuenta entre varias personas si necesitas auditoría.
+
+## Datos del usuario
+
+| Campo | Para qué sirve |
+| --- | --- |
+| Email | Identifica la cuenta y se usa para iniciar sesión. |
+| Nombre y apellidos | Ayudan a reconocer a la persona en listas y auditoría. |
+| Empleado | Vincula la cuenta con una persona operativa para trabajo, turnos y asignaciones. |
+| Roles | Definen qué módulos ve y qué acciones puede ejecutar. |
 
 ## Invitar a una persona
 
 <Steps>
   <Step title="Abre **Panel de control > Usuarios**">
-    Entra con un usuario que pueda administrar accesos.
+    Entra con un usuario con rol `App.Admin`.
   </Step>
   <Step title="Crea el usuario">
-    Introduce el email y los datos básicos.
+    Introduce email, nombre, apellidos y empleado si aplica.
   </Step>
   <Step title="Asigna roles">
     Selecciona uno o varios roles que reflejen sus responsabilidades reales.
@@ -37,6 +46,18 @@ Un usuario es la cuenta con la que una persona entra en Bold. Invita usuarios cu
   </Step>
 </Steps>
 
+## Vincular usuario y empleado
+
+Vincula el usuario con un empleado cuando sus acciones deban asociarse a una persona operativa. Esto importa en planta, turnos, costes, asignaciones y tareas.
+
+Casos habituales:
+
+- Un operario que registra trabajo desde una tablet.
+- Un responsable que actúa en nombre de un empleado en un flujo operativo.
+- Una cuenta que necesita consultar datos, pero no registrar trabajo. En este caso puede no necesitar vínculo con empleado.
+
+Revisa la vinculación cuando una persona cambia de puesto o cuando se reutiliza un dispositivo compartido.
+
 ## Recomendaciones
 
 | Situación | Recomendación |
@@ -45,12 +66,24 @@ Un usuario es la cuenta con la que una persona entra en Bold. Invita usuarios cu
 | Operario de planta | Asigna permisos de trabajo de producción y vínculo con empleado. |
 | Planificador | Asigna lectura y escritura de planificación, compras y producción según proceso. |
 | Integración técnica | Usa una credencial técnica gestionada por un administrador en vez de una cuenta personal. |
+| Usuario temporal | Usa roles mínimos y define una fecha de revisión del acceso. |
 
 <Warning>
   Retira o ajusta roles cuando una persona cambia de responsabilidad. Mantener accesos antiguos aumenta el riesgo operativo.
 </Warning>
 
+## Problemas habituales
+
+| Problema | Qué revisar |
+| --- | --- |
+| No puedes crear el usuario | Necesitas rol `App.Admin`. |
+| La persona entra, pero no ve módulos | Falta acceso común o permisos de lectura. |
+| Puede ver, pero no guardar | Falta permiso de escritura o acción específica. |
+| Las acciones no aparecen asociadas al empleado correcto | Revisa el vínculo usuario-empleado. |
+| Conserva accesos antiguos | Quita roles que ya no correspondan a su responsabilidad actual. |
+
 ## Relacionado
 
 - [Panel de control](/ayuda/panel-de-control/introduccion)
+- [Roles y permisos](/ayuda/usuarios-y-permisos/roles-y-permisos)
 - [Permisos por módulo](/ayuda/usuarios-y-permisos/permisos-por-modulo)
