@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "name": "Bold Factory",
-  "theme": "maple",
+  "theme": "luma",
   "colors": {
     "primary": "#3264cc",
     "light": "#4babfb",
@@ -30,7 +30,7 @@
         "default": true,
         "tabs": [
           {
-            "tab": "Ayuda",
+            "tab": "Documentación",
             "groups": [
               {
                 "group": "Primeros pasos",
@@ -42,7 +42,7 @@
                 ]
               },
               {
-                "group": "Artículos y SKUs",
+                "group": "Catálogo",
                 "pages": [
                   "es/ayuda/articulos-y-skus/introduccion",
                   "es/ayuda/articulos-y-skus/crear-un-producto",
