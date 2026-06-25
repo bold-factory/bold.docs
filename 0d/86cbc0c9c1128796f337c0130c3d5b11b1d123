@@ -1,0 +1,14 @@
+.gitignore
+  h_55f2ba4d68b42c 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.13",
+  "base_commit_sha": "0d86cbc0c9c1128796f337c0130c3d5b11b1d123",
+  "prompts": {},
+  "humans": {
+    "h_55f2ba4d68b42c": {
+      "author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
