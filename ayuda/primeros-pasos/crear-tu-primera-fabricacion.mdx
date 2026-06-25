@@ -1,4 +1,60 @@
 ---
 title: "Crear tu primera fabricación"
-description: "Contenido pendiente."
+description: "Configura una receta simple, crea una petición y lanza una orden de fabricación."
 ---
+
+Esta guía te ayuda a crear una fabricación mínima de principio a fin. Úsala para validar que catálogo, almacén y producción están conectados correctamente.
+
+## Antes de empezar
+
+Necesitas:
+
+- un **Producto** terminado;
+- un **Artículo** terminado asociado al producto;
+- uno o varios artículos de componente;
+- una ubicación de almacén;
+- stock disponible de los componentes si vas a registrar consumos reales;
+- permiso para crear recetas, peticiones y órdenes de fabricación.
+
+<Note>
+  Una receta define cómo se fabrica. Una orden de fabricación registra la ejecución real.
+</Note>
+
+## Crear el flujo
+
+<Steps>
+  <Step title="Crea la receta">
+    Entra en **Producción > Recetas** y crea una receta para el producto terminado. Añade una versión inicial.
+  </Step>
+  <Step title="Añade operaciones">
+    Crea una operación por etapa principal, por ejemplo **Montaje** y **Control final**. Mantén el primer ejemplo corto para validar el flujo.
+  </Step>
+  <Step title="Añade entradas">
+    En la operación que consume material, añade los componentes y la cantidad por unidad fabricada.
+  </Step>
+  <Step title="Activa la versión">
+    Revisa que las operaciones, entradas, pasos y condiciones sean coherentes. Activa la versión cuando esté lista para usarse.
+  </Step>
+  <Step title="Crea una petición de fabricación">
+    Crea una petición para el artículo terminado, la cantidad y la fecha objetivo.
+  </Step>
+  <Step title="Lanza la orden">
+    Desde la petición, crea una orden de fabricación con la cantidad que quieras ejecutar.
+  </Step>
+  <Step title="Ejecuta y registra">
+    Inicia operaciones, consume componentes si aplica, registra producción y termina la orden cuando todas las operaciones estén completas.
+  </Step>
+</Steps>
+
+## Qué revisar si se bloquea
+
+| Síntoma | Revisa |
+| --- | --- |
+| No puedes activar la receta | Faltan operaciones, entradas incoherentes, condiciones inválidas o restricciones con ciclos. |
+| No puedes crear la orden | La petición no existe, la cantidad no es válida o no hay receta activa para el artículo. |
+| No puedes empezar una operación | Faltan controles iniciales, herramienta, estación o requisitos de precedencia. |
+| No puedes terminar una operación | Faltan controles obligatorios, estación de trabajo o cantidades. |
+
+<Check>
+  Cuando la orden queda finalizada, el artículo producido debe aparecer en stock según la ubicación y el lote definidos por la operación.
+</Check>

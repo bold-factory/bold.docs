@@ -1,4 +1,54 @@
 ---
 title: "Crear una receta"
-description: "Contenido pendiente."
+description: "Define el proceso de fabricación con operaciones, entradas, pasos, controles y versiones."
 ---
+
+Una **Receta de fabricación** define cómo se fabrica un producto. Combina lista de materiales, operaciones, pasos, controles, co-productos, restricciones y condiciones.
+
+## Crear una receta
+
+<Steps>
+  <Step title="Selecciona el producto">
+    Crea la receta a nivel de producto. Los artículos concretos se resuelven con propiedades y condiciones cuando aplica.
+  </Step>
+  <Step title="Crea una versión editable">
+    Trabaja en una versión editable hasta que el proceso esté revisado.
+  </Step>
+  <Step title="Añade operaciones">
+    Crea una operación por etapa principal del proceso.
+  </Step>
+  <Step title="Añade entradas y salidas">
+    Define componentes consumidos, producto principal y co-productos si existen.
+  </Step>
+  <Step title="Añade pasos y controles">
+    Describe instrucciones para operarios y comprobaciones obligatorias.
+  </Step>
+  <Step title="Conecta operaciones">
+    Usa restricciones para definir precedencias parciales, totales o no bloqueantes.
+  </Step>
+  <Step title="Activa la versión">
+    Activa la versión cuando Bold valide que la estructura es coherente.
+  </Step>
+</Steps>
+
+## Qué puede contener
+
+| Elemento | Uso |
+| --- | --- |
+| Operaciones | Etapas del proceso. |
+| Entradas | Materiales o semielaborados consumidos. |
+| Pasos | Instrucciones para el operario. |
+| Controles | Comprobaciones o inspecciones. |
+| Co-productos | Artículos adicionales generados. |
+| Restricciones | Precedencia entre operaciones. |
+| Condiciones | Variantes según propiedades del artículo. |
+
+## Versiones
+
+Una versión de receta guarda la estructura tal como estaba en ese momento. Puede estar **Editable**, **Activa** o **Inactiva**. Solo puede haber una versión activa por receta.
+
+Los cambios estructurales solo se permiten en versiones editables. Si necesitas cambiar una versión activa, copia la versión o crea una nueva, edítala y actívala cuando esté lista.
+
+<Warning>
+  Las restricciones no pueden duplicarse ni formar ciclos. Si condicionas operaciones, revisa que todas las variantes sigan teniendo un flujo coherente.
+</Warning>

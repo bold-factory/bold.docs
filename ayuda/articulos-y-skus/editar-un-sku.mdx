@@ -1,4 +1,58 @@
 ---
 title: "Editar un SKU"
-description: "Contenido pendiente."
+description: "Actualiza un artículo sin romper stock, pedidos, producción ni trazabilidad histórica."
 ---
+
+Puedes editar un **Artículo** para corregir datos, completar propiedades o ajustar información de almacén y planificación. Algunas ediciones quedan limitadas cuando el artículo ya participa en operaciones trazables.
+
+## Qué puedes cambiar normalmente
+
+- Nombre y descripción.
+- Imagen.
+- Referencia externa.
+- Valores de propiedades.
+- Datos de proveedor y planificación.
+- Configuración de almacén si no contradice movimientos existentes.
+
+<Info>
+  El código del artículo debe tratarse como identificador estable. Cambiarlo puede afectar búsquedas, integraciones y referencias operativas.
+</Info>
+
+## Editar datos básicos
+
+<Steps>
+  <Step title="Abre el artículo">
+    Entra en **Catálogo > Artículos** y selecciona el artículo.
+  </Step>
+  <Step title="Revisa el estado">
+    Si aparece como inválido, abre los errores para saber qué información falta.
+  </Step>
+  <Step title="Actualiza los campos">
+    Cambia los datos necesarios. Si editas propiedades, asegúrate de respetar el tipo configurado.
+  </Step>
+  <Step title="Guarda y revisa impactos">
+    Comprueba que el artículo sigue siendo válido y que planificación, stock o recetas muestran los datos esperados.
+  </Step>
+</Steps>
+
+## Valores de propiedades
+
+Los valores de propiedades diferencian artículos de un mismo producto. Por ejemplo, para la propiedad **Color**, un artículo puede tener **Rojo** y otro **Azul**.
+
+El valor debe respetar la clase de la propiedad:
+
+| Tipo de propiedad | Valor válido |
+| --- | --- |
+| Texto | Cualquier texto operativo. |
+| Sí/no | Verdadero o falso. |
+| Número | Cantidad numérica. |
+| Fecha/hora | Fecha válida. |
+| Selección de opción | Una opción existente de la propiedad. |
+
+## Consolidar duplicados
+
+Si Bold detecta dos artículos con el mismo producto y los mismos valores de propiedades, puede proponer consolidarlos. Consolidar deja un artículo como referencia válida y retira el duplicado, moviendo relaciones operativas al artículo que permanece.
+
+<Warning>
+  Consolida solo cuando ambos registros representan exactamente el mismo elemento físico. Si no son iguales, crea o completa una propiedad que explique la diferencia.
+</Warning>

@@ -19,8 +19,8 @@
   "navbar": {
     "primary": {
       "type": "button",
-      "label": "Solicitar demo",
-      "href": "https://bold-factory.com/contact"
+      "label": "Web",
+      "href": "https://bold-factory.com"
     },
     "links": []
   },

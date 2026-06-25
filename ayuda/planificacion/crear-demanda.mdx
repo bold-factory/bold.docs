@@ -1,4 +1,57 @@
 ---
 title: "Crear demanda"
-description: "Contenido pendiente."
+description: "Registra necesidades de cliente o internas para que Bold las tenga en cuenta en planificación."
 ---
+
+La demanda indica que necesitas un artículo en una cantidad y fecha. En Bold, la demanda más habitual nace de líneas confirmadas de **Pedidos de venta**.
+
+## Cómo se crea demanda
+
+<Columns cols={2}>
+  <Card title="Pedido de venta" icon="shopping-bag" href="/ayuda/ventas/crear-pedido-de-venta">
+    Genera demanda de cliente cuando confirmas sus líneas.
+  </Card>
+  <Card title="Necesidad interna" icon="clipboard-list">
+    Puede representar reposición, previsión u otra necesidad operativa según la configuración.
+  </Card>
+</Columns>
+
+## Confirmar líneas
+
+Una línea empieza como **Borrador no confirmado**. Mientras está en borrador, no descuenta stock disponible y todavía puedes cambiar artículo, cantidad y aprovisionamiento.
+
+Al confirmar una línea, Bold genera demanda. Esa demanda afecta a stock disponible, stock proyectado y recomendaciones.
+
+<Warning>
+  No uses líneas confirmadas para pruebas si el entorno tiene planificación real. Confirmar demanda puede disparar compras o fabricación según la configuración.
+</Warning>
+
+## Crear una demanda desde ventas
+
+<Steps>
+  <Step title="Crea el pedido">
+    Selecciona cliente, código, fecha y notas.
+  </Step>
+  <Step title="Añade líneas">
+    Indica artículo, cantidad, fecha esperada y notas.
+  </Step>
+  <Step title="Revisa disponibilidad">
+    Comprueba cantidad disponible, planificada y pendiente.
+  </Step>
+  <Step title="Confirma la línea">
+    La línea empieza a contar como demanda operativa.
+  </Step>
+</Steps>
+
+## Qué revisar
+
+| Dato | Motivo |
+| --- | --- |
+| Fecha esperada | Determina cuándo cae el stock proyectado. |
+| Artículo | Las variantes deben ser exactas. |
+| Cantidad | Afecta disponibilidad y recomendaciones. |
+| Modo de aprovisionamiento | Decide si se cubre de forma directa o acumulada. |
+
+<Tip>
+  Si el cliente acepta entregas parciales, registra líneas separadas por fecha. Planificación será más fácil de interpretar.
+</Tip>

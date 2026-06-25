@@ -1,4 +1,57 @@
 ---
 title: "Ejecutar una orden"
-description: "Contenido pendiente."
+description: "Inicia, sigue y completa el trabajo real de una orden de fabricación."
 ---
+
+Ejecutar una orden significa avanzar sus operaciones y registrar lo que ocurre en planta: empleados, estaciones, tiempos, consumos, controles, interrupciones y producción.
+
+## Antes de empezar
+
+Revisa:
+
+- que la orden no esté cancelada ni bloqueada;
+- que sus operaciones tengan la secuencia correcta;
+- que existan estaciones o recursos disponibles;
+- que los componentes críticos tengan stock;
+- que los controles iniciales estén preparados;
+- que las restricciones permitan iniciar la primera operación.
+
+## Ejecutar operaciones
+
+<Steps>
+  <Step title="Abre la orden">
+    Revisa el diagrama o la lista de operaciones para entender el flujo.
+  </Step>
+  <Step title="Selecciona operación">
+    Empieza por una operación disponible según sus restricciones.
+  </Step>
+  <Step title="Asigna estación y operarios">
+    Indica quién trabaja y dónde se ejecuta la operación si el flujo lo requiere.
+  </Step>
+  <Step title="Inicia">
+    Al iniciar, Bold puede registrar tiempo, validar controles iniciales o solicitar consumos al comienzo.
+  </Step>
+  <Step title="Registra avance">
+    Informa progreso, consumos, interrupciones, inspecciones o pasos realizados.
+  </Step>
+  <Step title="Termina">
+    Completa controles obligatorios, registra producción y cierra la operación.
+  </Step>
+</Steps>
+
+## Vistas útiles
+
+| Vista | Para qué sirve |
+| --- | --- |
+| Diagrama | Ver operaciones y precedencias. |
+| Materias primas | Revisar entradas necesarias y disponibilidad. |
+| Operaciones | Ejecutar trabajo y controlar estados. |
+| Costes | Comparar materiales y mano de obra previstos y reales. |
+
+<Tip>
+  Separa operaciones cuando necesitas medir tiempos, progreso o consumos de forma independiente. Evita dividir tanto que el registro sea más costoso que el trabajo.
+</Tip>
+
+<Warning>
+  Una operación en curso, pausada o finalizada no se elimina directamente porque ya contiene histórico de ejecución.
+</Warning>

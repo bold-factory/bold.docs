@@ -1,4 +1,56 @@
 ---
 title: "Entender el stock proyectado"
-description: "Contenido pendiente."
+description: "Interpreta cómo quedará el stock después de demanda, compras y fabricación previstas."
 ---
+
+El **stock proyectado** muestra cómo quedará el stock después de considerar entradas y salidas previstas. Sirve para detectar roturas antes de que ocurran.
+
+## Diferencia con otros saldos
+
+| Saldo | Pregunta que responde |
+| --- | --- |
+| Stock físico | ¿Qué hay ahora? |
+| Stock disponible | ¿Qué queda libre para comprometer? |
+| Stock proyectado | ¿Qué habrá en una fecha futura si se cumplen los planes actuales? |
+
+## Qué puede incluir
+
+El stock proyectado puede tener en cuenta:
+
+- demanda de pedidos de venta confirmados;
+- pedidos de compra confirmados;
+- peticiones de fabricación;
+- órdenes de fabricación;
+- previsiones;
+- stock físico actual.
+
+<Warning>
+  Una línea en borrador no genera demanda ni suministro firme. Confirma las líneas cuando quieras que entren en el cálculo operativo.
+</Warning>
+
+## Cómo leer una caída de stock
+
+<Steps>
+  <Step title="Busca el primer saldo negativo o bajo">
+    Identifica la fecha en la que el stock proyectado cae por debajo de cero o del punto de pedido.
+  </Step>
+  <Step title="Abre el origen de la demanda">
+    Revisa qué pedido, previsión o necesidad consume el stock.
+  </Step>
+  <Step title="Revisa suministro previsto">
+    Comprueba si hay compras o fabricación previstas antes de esa fecha.
+  </Step>
+  <Step title="Actúa según el origen">
+    Compra, fabrica, cambia fechas o ajusta prioridades según el artículo y la urgencia.
+  </Step>
+</Steps>
+
+## Relación con el punto de pedido
+
+Cuando el stock proyectado baja del **punto de pedido**, Bold puede generar una necesidad de compra o fabricación según el origen y el modo de aprovisionamiento configurados.
+
+El punto de pedido suele cubrir consumo esperado durante el plazo de aprovisionamiento y un margen de seguridad.
+
+<Tip>
+  Si recibes demasiadas recomendaciones, revisa puntos de pedido demasiado altos, pedidos mínimos o tamaños de lote.
+</Tip>

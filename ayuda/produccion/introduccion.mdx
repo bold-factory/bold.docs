@@ -1,4 +1,57 @@
 ---
 title: "Introducción"
-description: "Contenido pendiente."
+description: "Gestiona recetas, peticiones, órdenes, operaciones, consumos y producción terminada."
 ---
+
+El módulo **Producción** separa diseño, planificación y ejecución. Primero defines cómo se fabrica un producto. Después creas necesidades y órdenes. Finalmente registras operaciones, consumos, tiempos y salidas reales.
+
+## Conceptos principales
+
+<Columns cols={2}>
+  <Card title="Receta" icon="book-open" href="/ayuda/produccion/crear-una-receta">
+    Molde de fabricación con operaciones, entradas, pasos, controles y restricciones.
+  </Card>
+  <Card title="Petición" icon="clipboard-list">
+    Necesidad de fabricar un artículo, cantidad y fecha, sin definir todavía la ejecución completa.
+  </Card>
+  <Card title="Orden de fabricación" icon="factory" href="/ayuda/produccion/crear-una-orden-de-fabricacion">
+    Trabajo ejecutable con operaciones reales, consumos, salidas y progreso.
+  </Card>
+  <Card title="Operación" icon="workflow" href="/ayuda/produccion/completar-operaciones">
+    Etapa de trabajo que se ejecuta en una estación o recurso principal.
+  </Card>
+</Columns>
+
+## Receta frente a orden
+
+Una receta es el diseño del proceso. No ejecuta trabajo por sí sola.
+
+Una orden de fabricación es la ejecución real. Copia la estructura de una versión de receta y registra actividad concreta: empleados, estaciones, tiempos, consumos, inspecciones, interrupciones y producción.
+
+<Info>
+  Las versiones activas de receta quedan protegidas para conservar trazabilidad. Para cambiar el proceso, crea o copia una nueva versión y actívala cuando esté revisada.
+</Info>
+
+## Flujo habitual
+
+<Steps>
+  <Step title="Define producto y artículos">
+    Crea el artículo terminado y los componentes que se consumirán.
+  </Step>
+  <Step title="Crea y activa una receta">
+    Añade operaciones, entradas, pasos, controles, co-productos y restricciones.
+  </Step>
+  <Step title="Crea una petición">
+    Indica qué artículo se necesita fabricar, cantidad y fecha.
+  </Step>
+  <Step title="Lanza una orden">
+    Selecciona cantidad, receta o versión y crea el trabajo ejecutable.
+  </Step>
+  <Step title="Ejecuta operaciones">
+    Inicia, pausa, consume, registra producción y termina operaciones.
+  </Step>
+</Steps>
+
+<Warning>
+  Una orden con actividad trazable no se elimina sin más. Si ya tiene tiempos, consumos u otros registros, se cancela o corrige con acciones específicas.
+</Warning>

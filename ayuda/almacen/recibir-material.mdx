@@ -1,4 +1,54 @@
 ---
 title: "Recibir material"
-description: "Contenido pendiente."
+description: "Registra entradas de material en almacén y aumenta stock con ubicación y lote correctos."
 ---
+
+Las **Recepciones** registran la entrada de material en almacén. Pueden venir de un proveedor, de un pedido de compra o de otro origen operativo.
+
+Al recibir, Bold aumenta el stock en la ubicación indicada y con el lote correspondiente.
+
+## Crear una recepción
+
+<Steps>
+  <Step title="Abre recepciones">
+    Entra en **Almacén > Recepciones** o crea la recepción desde un pedido de compra.
+  </Step>
+  <Step title="Completa la cabecera">
+    Indica código, origen, proveedor si aplica, ubicación de recepción y notas.
+  </Step>
+  <Step title="Añade líneas">
+    Añade artículo, cantidad, lote y relación con pedido si procede.
+  </Step>
+  <Step title="Completa controles">
+    Si hay controles o inspecciones obligatorias, complétalos antes de recibir.
+  </Step>
+  <Step title="Recibe">
+    Haz clic en **Recibir** cuando el material haya entrado físicamente.
+  </Step>
+</Steps>
+
+## Estado de una recepción
+
+Una recepción se crea pendiente. Mientras está pendiente puedes editar cabecera y líneas.
+
+La acción **Recibir** exige:
+
+- ubicación;
+- al menos una línea;
+- cantidades válidas;
+- controles obligatorios completados;
+- lote informado cuando el artículo lo requiere.
+
+Después de recibir, la ubicación y las líneas quedan protegidas. Si hay que corregir, usa **Revertir recepción** cuando las reglas lo permitan.
+
+<Tip>
+  Recibe en Bold lo más cerca posible del momento en que el material entra físicamente. Así planificación y stock reflejan la realidad.
+</Tip>
+
+## Recepciones desde compras
+
+Cuando recibes material relacionado con un pedido de compra, Bold actualiza la cantidad recibida y el estado de la línea. Una recepción parcial deja la línea como **Parcialmente recibido**. Recibir todo la deja como **Recibido**.
+
+<Warning>
+  No reduzcas una línea de compra por debajo de lo ya recibido. Si hay un error, revisa la recepción y las reglas de reversión.
+</Warning>

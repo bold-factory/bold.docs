@@ -1,4 +1,58 @@
 ---
 title: "Configurar tu empresa"
-description: "Contenido pendiente."
+description: "Prepara los datos básicos de empresa, usuarios, almacén y catálogo antes de operar."
 ---
+
+Antes de usar Bold en operaciones reales, configura los elementos que se repiten en todo el sistema. Una buena configuración inicial reduce bloqueos al crear pedidos, recibir material o lanzar producción.
+
+## Orden recomendado
+
+<Steps>
+  <Step title="Revisa la configuración de empresa">
+    Comprueba nombre, logo, preferencias de operación y cualquier ajuste disponible en **Panel de control > Configuración**.
+  </Step>
+  <Step title="Crea usuarios y roles">
+    Invita a las personas que administrarán Bold y define roles para acceso a catálogo, almacén, planificación, producción, compras y ventas.
+  </Step>
+  <Step title="Crea ubicaciones">
+    Añade al menos una ubicación de almacén. Si ya conoces tu layout, separa zonas de recepción, producción, expedición y stock.
+  </Step>
+  <Step title="Define clientes y proveedores">
+    Crea los contactos básicos para pedidos de venta, pedidos de compra, recepciones y envíos.
+  </Step>
+  <Step title="Crea productos y artículos">
+    Empieza por los artículos más usados. Añade propiedades cuando necesites controlar variantes.
+  </Step>
+</Steps>
+
+## Datos mínimos
+
+| Área | Datos recomendados | Por qué importan |
+| --- | --- | --- |
+| Usuarios | Email, roles, relación con empleados | Controlan acceso y auditoría. |
+| Almacén | Ubicaciones, lotes si aplican | Permiten registrar stock. |
+| Catálogo | Productos, artículos, unidades | Sostienen compras, ventas y producción. |
+| Planificación | Proveedor preferente, punto de pedido, modo de aprovisionamiento | Permiten generar recomendaciones. |
+| Producción | Recetas, operaciones, estaciones | Permiten lanzar órdenes ejecutables. |
+
+<Info>
+  Puedes empezar con una configuración sencilla. Por ejemplo, una sola ubicación y pocos artículos. Después puedes añadir más detalle sin cambiar el flujo principal.
+</Info>
+
+## Decisiones que conviene tomar pronto
+
+### Cómo nombrar códigos
+
+Usa códigos estables para productos, artículos, ubicaciones, clientes y proveedores. Evita depender solo del nombre, porque los nombres suelen cambiar por razones comerciales.
+
+### Cuándo usar lotes
+
+Activa lotes cuando necesites trazabilidad por compra, fabricación, caducidad, calidad, coste u origen. Si no necesitas ese nivel de detalle, puedes operar con stock sin separar lotes manualmente.
+
+### Qué permisos separar
+
+No todas las personas necesitan acceso a todas las acciones. Separa tareas críticas como cancelar pedidos, activar recetas, ajustar stock, gestionar claves API y editar roles.
+
+<Tip>
+  Crea primero roles por responsabilidad real: administración, almacén, producción, planificación, compras y ventas.
+</Tip>

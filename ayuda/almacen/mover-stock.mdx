@@ -1,4 +1,54 @@
 ---
 title: "Mover stock"
-description: "Contenido pendiente."
+description: "Traslada stock entre ubicaciones o lotes sin perder trazabilidad."
 ---
+
+Un movimiento de stock registra un cambio interno. Úsalo cuando el material sigue perteneciendo a la empresa, pero cambia de ubicación, lote o agrupación física.
+
+## Cuándo mover stock
+
+Puedes mover stock para:
+
+- pasar material de recepción a almacén disponible;
+- preparar una zona de producción;
+- mover material a calidad o cuarentena;
+- corregir una ubicación incorrecta;
+- consolidar stock en una zona de picking;
+- preparar una expedición antes del envío.
+
+## Antes de mover
+
+Revisa:
+
+| Dato | Por qué importa |
+| --- | --- |
+| Artículo | Evita mover una variante equivocada. |
+| Cantidad | Debe coincidir con lo que se mueve físicamente. |
+| Ubicación origen | Lugar desde el que sale el material. |
+| Ubicación destino | Lugar donde quedará disponible. |
+| Lote | Necesario si el artículo trabaja con trazabilidad por lote. |
+
+## Crear el movimiento
+
+<Steps>
+  <Step title="Selecciona el stock">
+    Busca el artículo, ubicación y lote que quieres mover.
+  </Step>
+  <Step title="Define destino">
+    Elige la ubicación de destino y confirma si el lote se mantiene.
+  </Step>
+  <Step title="Indica cantidad">
+    Usa la cantidad física que se traslada. Si el movimiento es parcial, deja el resto en origen.
+  </Step>
+  <Step title="Confirma">
+    Guarda el movimiento y revisa que el stock aparece en la ubicación destino.
+  </Step>
+</Steps>
+
+<Info>
+  Un movimiento interno no crea demanda ni suministro. Solo cambia dónde está registrado el stock físico.
+</Info>
+
+## Diferencia con ajustes e inventario
+
+Usa **Mover stock** cuando el material existe y cambia de sitio. Usa **Ajustar stock** cuando necesitas corregir una diferencia puntual. Usa **Inventario** cuando haces un recuento formal de una ubicación o conjunto de artículos.

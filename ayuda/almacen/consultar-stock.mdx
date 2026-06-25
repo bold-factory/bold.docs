@@ -1,4 +1,51 @@
 ---
 title: "Consultar stock"
-description: "Contenido pendiente."
+description: "Interpreta stock físico, disponible, proyectado, por ubicación, por lote y por artículo."
 ---
+
+La consulta de stock responde a tres preguntas: cuánto hay físicamente, cuánto queda libre para comprometer y cómo quedará después de entradas y salidas previstas.
+
+## Tipos de stock
+
+| Métrica | Qué responde | Incluye |
+| --- | --- | --- |
+| Stock físico | ¿Qué hay ahora? | Movimientos reales ya registrados. |
+| Stock disponible | ¿Qué queda libre? | Stock físico menos demanda confirmada. |
+| Stock proyectado | ¿Cómo quedará? | Demanda futura, compras, fabricación y previsiones. |
+
+<Info>
+  Usa stock físico para recuentos y almacén. Usa stock disponible para prometer a cliente. Usa stock proyectado para comprar o fabricar antes de una rotura.
+</Info>
+
+## Consultar por artículo
+
+En la ficha del artículo puedes revisar stock agregado, stock por ubicación, lotes, movimientos y datos de planificación. Esta vista es útil cuando quieres entender todo lo que afecta a una referencia concreta.
+
+## Consultar por ubicación
+
+La vista por ubicación te ayuda a validar dónde está el material. Úsala para preparar picking, buscar diferencias o revisar si una zona tiene stock que debería moverse.
+
+## Consultar por lote
+
+Si el artículo trabaja con lotes, revisa el stock por lote para elegir el origen correcto en consumos, envíos o investigaciones de calidad.
+
+## Qué revisar ante diferencias
+
+<Steps>
+  <Step title="Filtra por artículo">
+    Confirma que estás consultando la referencia correcta y no una variante parecida.
+  </Step>
+  <Step title="Revisa ubicación y lote">
+    El stock puede existir, pero en una ubicación o lote distinto al esperado.
+  </Step>
+  <Step title="Mira movimientos recientes">
+    Busca recepciones, envíos, ajustes, inventarios o consumos que expliquen el cambio.
+  </Step>
+  <Step title="Compara con planificación">
+    Si el problema es disponibilidad futura, revisa pedidos, peticiones y recomendaciones.
+  </Step>
+</Steps>
+
+<Warning>
+  El stock negativo no es una recomendación operativa. Es una señal de que falta registrar una entrada, ajustar una diferencia o corregir un consumo o envío.
+</Warning>

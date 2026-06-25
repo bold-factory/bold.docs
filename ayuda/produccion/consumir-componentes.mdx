@@ -1,4 +1,48 @@
 ---
 title: "Consumir componentes"
-description: "Contenido pendiente."
+description: "Registra los materiales o semielaborados que se consumen durante una operación."
 ---
+
+Las **Entradas** son los materiales o semielaborados que se consumen al ejecutar una operación. La cantidad se define por unidad fabricada.
+
+Por ejemplo, si una operación produce 10 unidades y una entrada consume 2 unidades por cada una, el consumo previsto total será 20.
+
+## Momentos de consumo
+
+| Momento | Cuándo encaja |
+| --- | --- |
+| Al comienzo | La cantidad ya se conoce al iniciar y quieres registrar rápido. |
+| Por unidad o progreso | Necesitas precisión conforme avanza la producción. |
+| Al final | Puede haber mermas, ajustes o confirmación al terminar. |
+
+## Registrar consumo
+
+<Steps>
+  <Step title="Abre la operación">
+    Entra en la operación que contiene la entrada.
+  </Step>
+  <Step title="Revisa cantidad prevista">
+    Comprueba cantidad por unidad y cantidad total esperada.
+  </Step>
+  <Step title="Selecciona stock">
+    Indica ubicación y lote si el artículo lo requiere.
+  </Step>
+  <Step title="Registra cantidad real">
+    Ajusta la cantidad si el consumo real difiere del previsto.
+  </Step>
+  <Step title="Guarda">
+    Bold reduce stock y deja el movimiento trazable.
+  </Step>
+</Steps>
+
+<Warning>
+  Si el artículo trabaja con lotes, selecciona el lote físico que se consume. Un consumo con lote incorrecto rompe trazabilidad de fabricación.
+</Warning>
+
+## Consumos y stock negativo
+
+Bold puede registrar consumos aunque el resultado deje stock negativo, si la operación lo requiere. Eso permite continuar, pero indica que falta regularizar una recepción, producción, inventario o lote.
+
+<Tip>
+  Usa consumo por progreso cuando necesitas medir materiales de forma precisa durante la operación. Usa consumo al final si la cantidad real se conoce al cierre.
+</Tip>

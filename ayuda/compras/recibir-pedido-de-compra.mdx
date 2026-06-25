@@ -1,4 +1,55 @@
 ---
 title: "Recibir pedido de compra"
-description: "Contenido pendiente."
+description: "Registra material recibido desde un pedido de compra y actualiza stock y cantidades recibidas."
 ---
+
+Recibir un pedido de compra crea una **Recepción** vinculada a sus líneas. Al recibir, Bold aumenta stock y actualiza cantidades recibidas del pedido.
+
+## Antes de recibir
+
+Comprueba:
+
+- que la línea de compra está confirmada;
+- que el material ha llegado físicamente;
+- que la ubicación de recepción es correcta;
+- que el artículo y cantidad coinciden;
+- que el lote está definido si el artículo lo requiere;
+- que los controles obligatorios están completados.
+
+## Crear la recepción
+
+<Steps>
+  <Step title="Abre el pedido">
+    Entra en el pedido de compra que quieres recibir.
+  </Step>
+  <Step title="Crea recepción">
+    Usa la acción de recepción desde el pedido o sus líneas.
+  </Step>
+  <Step title="Revisa líneas">
+    Ajusta cantidades si la entrega es parcial y completa lote o ubicación.
+  </Step>
+  <Step title="Completa controles">
+    Realiza inspecciones si el flujo las exige.
+  </Step>
+  <Step title="Recibe">
+    Confirma la recepción para aumentar stock.
+  </Step>
+</Steps>
+
+## Recepción parcial
+
+Si recibes menos de lo solicitado, la línea queda **Parcialmente recibido** y mantiene cantidad pendiente. Puedes recibir el resto más adelante.
+
+Si recibes todo, la línea queda **Recibido**.
+
+<Info>
+  La recepción afecta al stock físico. La línea confirmada afectaba antes al suministro previsto.
+</Info>
+
+## Correcciones
+
+Después de recibir, la ubicación y las líneas quedan protegidas. Si hay un error, revisa si puedes usar **Revertir recepción**. La reversión deshace movimientos de stock y devuelve la recepción a pendiente cuando las reglas lo permiten.
+
+<Warning>
+  No corrijas una recepción recibida con ajustes si puedes revertirla. La reversión conserva mejor la relación con el pedido de compra.
+</Warning>

@@ -1,4 +1,52 @@
 ---
 title: "Completar operaciones"
-description: "Contenido pendiente."
+description: "Finaliza etapas de producción cumpliendo controles, consumos, estaciones y restricciones."
 ---
+
+Las **Operaciones** son etapas de trabajo dentro de una receta o una orden de fabricación. En una orden, la operación ya es trabajo real y tiene estado, cantidad planificada, cantidad completada, recurso, tiempos, entradas y salidas.
+
+## Cuándo puede empezar una operación
+
+Una operación puede empezar cuando cumple sus requisitos:
+
+- las restricciones anteriores permiten avanzar;
+- los controles iniciales obligatorios están completados;
+- la herramienta requerida está seleccionada si aplica;
+- existe estación o recurso cuando el flujo lo exige;
+- no está cancelada ni bloqueada.
+
+## Completar una operación
+
+<Steps>
+  <Step title="Revisa progreso">
+    Comprueba cantidad completada, pendiente y registros de avance.
+  </Step>
+  <Step title="Completa pasos">
+    Marca instrucciones o pasos según la configuración de la operación.
+  </Step>
+  <Step title="Completa controles">
+    Registra inspecciones obligatorias y adjuntos si el control los pide.
+  </Step>
+  <Step title="Registra consumos o salidas">
+    Informa materiales consumidos, producto generado o co-productos según el momento configurado.
+  </Step>
+  <Step title="Finaliza">
+    Termina la operación para cerrar pausas abiertas, recalcular tiempos y actualizar cantidades.
+  </Step>
+</Steps>
+
+## Tipos de restricciones
+
+| Tipo | Comportamiento |
+| --- | --- |
+| Parcial | La siguiente operación puede empezar cuando hay progreso suficiente. |
+| Total | La siguiente operación espera a que la anterior termine. |
+| No bloqueante | Recomienda una secuencia, pero permite continuar. |
+
+<Info>
+  Para terminar una operación, Bold comprueba estación de trabajo y controles obligatorios cuando el flujo los requiere.
+</Info>
+
+## Si no puedes completar
+
+Revisa controles obligatorios, estación, consumos pendientes, progreso mínimo, interrupciones abiertas y restricciones con otras operaciones.

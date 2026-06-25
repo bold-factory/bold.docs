@@ -1,4 +1,52 @@
 ---
 title: "Introducción"
-description: "Contenido pendiente."
+description: "Entiende cómo Bold organiza productos, artículos, propiedades, variantes y lotes."
 ---
+
+El catálogo define los datos maestros de lo que tu empresa compra, fabrica, almacena y vende. En Bold, el catálogo se organiza alrededor de **Productos**, **Artículos** y **Propiedades**.
+
+<Info>
+  Bold muestra **Artículo** en la interfaz. Si vienes de un ERP o ecommerce, puedes pensar en él como el SKU operativo.
+</Info>
+
+## Conceptos principales
+
+<Columns cols={2}>
+  <Card title="Producto" icon="package-open" href="/ayuda/articulos-y-skus/crear-un-producto">
+    Agrupa artículos que pertenecen a una misma familia comercial o técnica.
+  </Card>
+  <Card title="Artículo" icon="barcode" href="/ayuda/articulos-y-skus/crear-un-sku">
+    Identifica una unidad física concreta sobre la que Bold controla stock y operaciones.
+  </Card>
+  <Card title="Propiedad" icon="list-filter">
+    Describe variantes, como color, medida, material, acabado o configuración.
+  </Card>
+  <Card title="Lote" icon="scan-line" href="/ayuda/articulos-y-skus/trabajar-con-lotes">
+    Separa unidades trazables por compra, fabricación, origen, coste o calidad.
+  </Card>
+</Columns>
+
+## Relación entre producto y artículo
+
+Un producto puede tener un único artículo si siempre es físicamente igual. También puede tener varios artículos si existen variantes.
+
+Por ejemplo:
+
+| Producto | Propiedades | Artículos |
+| --- | --- | --- |
+| Mesa Nórdica | Color, largo, acabado | Mesa Nórdica blanca 120 cm, Mesa Nórdica roble 160 cm |
+| Tornillo DIN 912 | Medida, material | Tornillo M6 acero, Tornillo M8 inoxidable |
+
+El producto agrupa. El artículo se compra, fabrica, consume, almacena y vende.
+
+## Qué validar antes de operar
+
+1. El código del producto o artículo es único.
+2. La unidad de medida es correcta.
+3. Las propiedades obligatorias tienen valor.
+4. La estrategia de lotes refleja la trazabilidad real.
+5. El modo de aprovisionamiento está configurado si el artículo participa en planificación.
+
+<Warning>
+  Un artículo con producto queda inválido si faltan valores para propiedades asignadas al producto. Completa esos valores antes de usarlo en flujos críticos.
+</Warning>

@@ -1,4 +1,52 @@
 ---
 title: "Crear un SKU"
-description: "Contenido pendiente."
+description: "Crea un artículo operativo para comprar, fabricar, almacenar, consumir o vender."
 ---
+
+Un **Artículo** identifica un elemento físico concreto. Es la unidad sobre la que Bold controla stock, pedidos, fabricaciones, consumos, lotes y costes.
+
+Aunque algunas empresas usan la palabra SKU, en Bold verás **Artículo** en la interfaz.
+
+## Crear el artículo
+
+<Steps>
+  <Step title="Abre Catálogo">
+    Entra en **Catálogo > Artículos**.
+  </Step>
+  <Step title="Completa los datos básicos">
+    Indica código, nombre, descripción y unidad de medida.
+  </Step>
+  <Step title="Asocia un producto si aplica">
+    Selecciona un producto si el artículo es una variante de una familia.
+  </Step>
+  <Step title="Completa propiedades">
+    Informa los valores de las propiedades obligatorias del producto, como color o medida.
+  </Step>
+  <Step title="Configura almacén y planificación">
+    Define si trabaja con lotes, proveedor preferente, modo de aprovisionamiento, punto de pedido, pedido mínimo y tamaño de lote cuando aplique.
+  </Step>
+</Steps>
+
+## Campos importantes
+
+| Campo | Recomendación |
+| --- | --- |
+| Código | Debe ser estable y único. Evita códigos temporales en operaciones reales. |
+| Unidad | Define cómo se expresan cantidades en stock, compras y producción. |
+| Producto | Úsalo para agrupar variantes. |
+| Propiedades | Deben respetar el tipo de dato configurado. |
+| Imagen | Ayuda a identificar artículos en planta o almacén. |
+| Referencia externa | Útil para integraciones con ERP, ecommerce o BI. |
+
+<Warning>
+  Si el artículo pertenece a un producto y faltan propiedades obligatorias, Bold lo marcará como inválido.
+</Warning>
+
+## Después de crearlo
+
+El siguiente paso depende del uso del artículo:
+
+- Si se compra, añade proveedor preferente y datos de planificación.
+- Si se fabrica, crea o revisa una receta.
+- Si se almacena con trazabilidad, configura lotes.
+- Si se vende, úsalo en pedidos de venta y confirma las líneas para generar demanda.

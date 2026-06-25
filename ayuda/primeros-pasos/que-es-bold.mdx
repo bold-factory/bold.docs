@@ -1,4 +1,70 @@
 ---
 title: "Qué es Bold"
-description: "Contenido pendiente."
+description: "Conoce cómo Bold conecta catálogo, planificación, almacén, producción, compras y ventas en una fábrica."
 ---
+
+Bold es una plataforma de gestión industrial para fabricantes. Centraliza los datos maestros, el stock, la planificación, la producción, las compras, las ventas y la trazabilidad operativa.
+
+La idea principal es sencilla: defines lo que compras, fabricas y vendes; registras lo que ocurre en planta y almacén; y Bold usa esa información para mostrar disponibilidad, necesidades y trabajo pendiente.
+
+<Info>
+  En la interfaz, Bold usa el término **Artículo** para la unidad física sobre la que controlas stock. En otros sistemas puede aparecer como SKU.
+</Info>
+
+## Qué puedes gestionar
+
+<Columns cols={2}>
+  <Card title="Catálogo" icon="boxes" href="/ayuda/articulos-y-skus/introduccion">
+    Define productos, artículos, propiedades, variantes, lotes y reglas de aprovisionamiento.
+  </Card>
+  <Card title="Almacén" icon="warehouse" href="/ayuda/almacen/introduccion">
+    Controla ubicaciones, recepciones, envíos, inventarios, movimientos y stock disponible.
+  </Card>
+  <Card title="Planificación" icon="calendar-range" href="/ayuda/planificacion/introduccion">
+    Conecta demanda, suministro, stock proyectado y recomendaciones de compra o fabricación.
+  </Card>
+  <Card title="Producción" icon="factory" href="/ayuda/produccion/introduccion">
+    Crea recetas, lanza órdenes de fabricación y registra operaciones, consumos y salidas.
+  </Card>
+</Columns>
+
+## Cómo se conectan los módulos
+
+Un **Producto** agrupa variantes de una misma familia. Un **Artículo** representa una variante física concreta. Ese artículo se usa después en pedidos, recetas, stock, recepciones, envíos, fabricación y costes.
+
+Por ejemplo, una fábrica de mesas puede trabajar con esta estructura:
+
+| Elemento | Ejemplo | Para qué sirve |
+| --- | --- | --- |
+| Producto | Mesa Nórdica | Agrupa variantes comerciales o técnicas. |
+| Propiedades | Color, largo, acabado | Diferencian las variantes. |
+| Artículo | Mesa Nórdica blanca 120 cm | Se compra, fabrica, almacena o vende. |
+| Receta | Montaje de Mesa Nórdica | Define materiales, operaciones y controles. |
+| Orden de fabricación | OF-10038 | Ejecuta la fabricación real. |
+| Recepción | REC-2305 | Aumenta stock cuando entra material. |
+| Envío | ENV-1807 | Reduce stock cuando sale material. |
+
+## Ciclo básico
+
+<Steps>
+  <Step title="Configura los datos maestros">
+    Crea productos, artículos, ubicaciones, proveedores, clientes, empleados y recursos. Estos datos sostienen el resto de operaciones.
+  </Step>
+  <Step title="Registra demanda y suministro">
+    Los pedidos de venta generan demanda. Los pedidos de compra, las peticiones de fabricación y las órdenes de fabricación generan suministro previsto o real.
+  </Step>
+  <Step title="Ejecuta operaciones">
+    Recibe material, mueve stock, fabrica, consume componentes, registra producción y completa envíos.
+  </Step>
+  <Step title="Revisa el estado operativo">
+    Consulta stock disponible, stock proyectado, recomendaciones, movimientos y estados para detectar bloqueos antes de que afecten a cliente o planta.
+  </Step>
+</Steps>
+
+## Trazabilidad
+
+Bold protege la información que ya forma parte del histórico. Por eso algunas acciones quedan limitadas cuando una recepción ya está recibida, un envío ya está expedido, una orden ya se empezó o un pedido ya tiene movimientos relacionados.
+
+<Tip>
+  Si necesitas corregir una operación ya ejecutada, busca primero la acción de reversión o ajuste. Evita editar directamente datos históricos que expliquen movimientos reales.
+</Tip>

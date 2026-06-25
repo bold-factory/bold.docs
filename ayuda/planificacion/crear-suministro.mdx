@@ -1,4 +1,47 @@
 ---
 title: "Crear suministro"
-description: "Contenido pendiente."
+description: "Cubre necesidades con pedidos de compra, peticiones de fabricación u órdenes de fabricación."
 ---
+
+El suministro representa entradas previstas o comprometidas que cubren demanda. En Bold puede venir de compras o fabricación.
+
+## Tipos de suministro
+
+| Tipo | Cuándo usarlo |
+| --- | --- |
+| Pedido de compra | El artículo se compra a un proveedor. |
+| Petición de fabricación | Se necesita fabricar, pero todavía no está definida la ejecución exacta. |
+| Orden de fabricación | Ya existe trabajo ejecutable con operaciones, consumos y salidas. |
+
+## Suministro por compra
+
+Una línea confirmada de pedido de compra genera stock entrante. Mientras la línea está en borrador, no cuenta como suministro firme.
+
+Cuando una recepción registra material del pedido, Bold actualiza cantidad recibida y estado de la línea.
+
+## Suministro por fabricación
+
+Una petición de fabricación indica qué artículo se necesita fabricar, en qué cantidad y para qué fecha. Es el puente entre demanda y órdenes.
+
+Una orden de fabricación convierte esa necesidad en ejecución real. Al registrar producción, aumenta stock del artículo fabricado.
+
+## Crear suministro desde una recomendación
+
+<Steps>
+  <Step title="Abre el asistente adecuado">
+    Usa **Asistente de compras** para artículos de compra y **Asistente de fabricación** para artículos fabricados.
+  </Step>
+  <Step title="Revisa la necesidad">
+    Comprueba fecha, cantidad, proveedor o receta, y origen de la demanda.
+  </Step>
+  <Step title="Agrupa o ajusta">
+    Combina necesidades cuando tenga sentido y ajusta cantidades según pedido mínimo o tamaño de lote.
+  </Step>
+  <Step title="Crea el compromiso">
+    Convierte la recomendación en pedido de compra o petición de fabricación.
+  </Step>
+</Steps>
+
+<Info>
+  En modo directo, Bold puede crear el compromiso correspondiente automáticamente. En modo acumulación, lo propone para revisión.
+</Info>

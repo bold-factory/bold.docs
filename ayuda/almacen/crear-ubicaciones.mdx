@@ -1,4 +1,57 @@
 ---
 title: "Crear ubicaciones"
-description: "Contenido pendiente."
+description: "Define los lugares físicos donde Bold registra entradas, salidas y movimientos de stock."
 ---
+
+Las **Ubicaciones de almacén** representan dónde se almacena, recibe, consume o envía stock. Puedes modelar un almacén simple con una sola ubicación o una estructura detallada por pasillo, estantería, hueco o zona de trabajo.
+
+## Cuándo crear ubicaciones
+
+Crea ubicaciones para:
+
+- recepción de material;
+- stock disponible para picking;
+- cuarentena o calidad;
+- producción o consumo;
+- expedición;
+- almacenes externos o zonas separadas.
+
+## Crear una ubicación
+
+<Steps>
+  <Step title="Abre Almacén">
+    Entra en **Almacén > Ubicaciones**.
+  </Step>
+  <Step title="Crea el registro">
+    Añade código, nombre y descripción si aplica.
+  </Step>
+  <Step title="Define la jerarquía">
+    Si usas zonas, pasillos o estanterías, vincula la ubicación con su ubicación padre.
+  </Step>
+  <Step title="Guarda y prueba">
+    Usa la ubicación en una recepción, ajuste o movimiento pequeño para validar que aparece en los flujos esperados.
+  </Step>
+</Steps>
+
+## Diseñar la estructura
+
+| Nivel de detalle | Cuándo usarlo |
+| --- | --- |
+| Una ubicación general | Empresas pequeñas o primer piloto. |
+| Zonas | Recepción, stock, producción, calidad y expedición. |
+| Pasillos y huecos | Almacenes con picking frecuente o muchas referencias. |
+| Ubicaciones de planta | Consumos y producción asociados a estaciones. |
+
+<Tip>
+  Empieza con el detalle que realmente vayas a mantener. Una estructura muy fina pierde valor si los movimientos no se registran con disciplina.
+</Tip>
+
+## Impacto en stock
+
+Recepciones, envíos, inventarios, consumos y fabricaciones necesitan ubicación para saber dónde aumenta o disminuye el stock.
+
+Las estaciones de trabajo y activos pueden vincularse a ubicaciones para registrar movimientos de fabricación o mantenimiento en el lugar correcto.
+
+<Warning>
+  Si un flujo requiere ubicación y no está definida, Bold puede bloquear o limitar la operación porque no sabe dónde mover el stock.
+</Warning>

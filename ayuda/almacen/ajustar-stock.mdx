@@ -1,4 +1,49 @@
 ---
 title: "Ajustar stock"
-description: "Contenido pendiente."
+description: "Corrige diferencias puntuales de stock con un movimiento trazable."
 ---
+
+Un ajuste de stock corrige una diferencia puntual entre el stock registrado y la realidad física. Úsalo cuando sabes qué debe corregirse y no necesitas abrir un inventario completo.
+
+## Cuándo usar un ajuste
+
+Usa un ajuste para:
+
+- corregir una diferencia pequeña detectada fuera de inventario;
+- registrar una merma conocida;
+- corregir una entrada o salida no registrada si no existe una reversión adecuada;
+- ajustar una ubicación o lote tras una investigación.
+
+<Warning>
+  No uses ajustes para ocultar errores recurrentes. Si aparecen diferencias frecuentes, revisa recepción, picking, consumos, envíos o inventarios.
+</Warning>
+
+## Crear un ajuste
+
+<Steps>
+  <Step title="Identifica el stock afectado">
+    Revisa artículo, ubicación y lote. Asegúrate de que la diferencia no se explica por un movimiento reciente.
+  </Step>
+  <Step title="Define la corrección">
+    Indica la cantidad que debe aumentar o disminuir. Usa notas claras para explicar el motivo.
+  </Step>
+  <Step title="Confirma el ajuste">
+    Guarda el ajuste para generar el movimiento trazable.
+  </Step>
+  <Step title="Revisa el resultado">
+    Consulta stock y movimientos para confirmar que la cantidad final es correcta.
+  </Step>
+</Steps>
+
+## Buenas prácticas
+
+| Práctica | Motivo |
+| --- | --- |
+| Añade motivo y notas | Facilita auditoría y análisis posterior. |
+| Ajusta el lote correcto | Evita perder trazabilidad por origen. |
+| Ajusta en la ubicación correcta | Evita descuadres entre zonas. |
+| Revisa permisos | Limita ajustes a perfiles responsables. |
+
+<Tip>
+  Si la diferencia afecta a muchos artículos o ubicaciones, crea un inventario. Es más claro que una cadena de ajustes sueltos.
+</Tip>

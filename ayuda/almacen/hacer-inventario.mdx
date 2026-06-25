@@ -1,4 +1,54 @@
 ---
 title: "Hacer inventario"
-description: "Contenido pendiente."
+description: "Cuenta stock físico y regulariza diferencias de forma controlada."
 ---
+
+Un inventario permite comparar el stock físico contado con el stock que Bold tenía registrado en el momento de lectura. Al finalizar, Bold aplica la diferencia necesaria para regularizar.
+
+## Cuándo hacer inventario
+
+Haz inventario cuando:
+
+- quieres revisar una ubicación completa;
+- necesitas regularizar muchas referencias;
+- hay diferencias recurrentes;
+- haces recuentos cíclicos;
+- preparas cierre de periodo;
+- necesitas auditar stock por lote.
+
+## Flujo de inventario
+
+<Steps>
+  <Step title="Crea el inventario">
+    Selecciona ubicación, artículos o criterios de recuento según el alcance.
+  </Step>
+  <Step title="Congela la lectura de referencia">
+    Bold conserva la cantidad registrada como base para calcular diferencias.
+  </Step>
+  <Step title="Cuenta físicamente">
+    Registra las cantidades reales por artículo, ubicación y lote si aplica.
+  </Step>
+  <Step title="Revisa diferencias">
+    Valida diferencias grandes antes de finalizar. Puede haber recepciones, envíos o movimientos pendientes de registrar.
+  </Step>
+  <Step title="Finaliza el inventario">
+    Bold genera los movimientos de regularización necesarios.
+  </Step>
+</Steps>
+
+<Info>
+  El inventario aplica la diferencia entre lo contado y lo que Bold indicaba en la lectura, no una sustitución ciega sin contexto.
+</Info>
+
+## Qué revisar antes de finalizar
+
+| Revisión | Por qué importa |
+| --- | --- |
+| Movimientos pendientes | Evitan regularizar algo que ya está en tránsito. |
+| Lotes | Mantienen trazabilidad y valoración correcta. |
+| Ubicaciones | Evitan mover diferencias a la zona equivocada. |
+| Unidades | Evitan errores por cajas, unidades, kilos o metros. |
+
+<Warning>
+  Evita hacer inventario mientras se registran movimientos físicos en la misma zona. Si no puedes parar la operativa, define ventanas o alcances pequeños.
+</Warning>

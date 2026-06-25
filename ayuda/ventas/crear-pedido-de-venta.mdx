@@ -1,4 +1,54 @@
 ---
 title: "Crear pedido de venta"
-description: "Contenido pendiente."
+description: "Registra demanda de cliente con líneas de artículos, cantidades y fechas esperadas."
 ---
+
+Un **Pedido de venta** representa un compromiso de cliente. La cabecera identifica al cliente y el pedido. Las líneas indican qué artículo se necesita, en qué cantidad y para qué fecha.
+
+## Crear el pedido
+
+<Steps>
+  <Step title="Abre Ventas">
+    Entra en **Ventas > Pedidos de venta**.
+  </Step>
+  <Step title="Crea la cabecera">
+    Selecciona cliente, código, fecha, notas y referencia externa si aplica.
+  </Step>
+  <Step title="Añade líneas">
+    Indica artículo, cantidad solicitada, fecha esperada y notas.
+  </Step>
+  <Step title="Revisa disponibilidad">
+    Comprueba cantidad disponible, planificada y pendiente.
+  </Step>
+  <Step title="Confirma líneas">
+    Confirma las líneas que deban generar demanda.
+  </Step>
+</Steps>
+
+## Elementos de una línea
+
+| Campo | Uso |
+| --- | --- |
+| Cantidad solicitada | Lo que pide el cliente. |
+| Cantidad enviada | Lo que ya se expidió. |
+| Cantidad pendiente | Lo que queda por entregar. |
+| Cantidad disponible ya | Stock libre para atender la línea. |
+| Cantidad planificada | Suministro previsto para cubrirla. |
+| Fecha esperada | Fecha usada para planificación y seguimiento. |
+| Artículo | Variante exacta solicitada. |
+
+<Warning>
+  Una línea en borrador no descuenta stock disponible. Confírmala cuando el pedido sea un compromiso operativo.
+</Warning>
+
+## Fecha objetivo
+
+La fecha objetivo se calcula con la fecha comprometida si existe. Si no existe, Bold usa la fecha solicitada o la fecha del pedido más el plazo del artículo.
+
+## Edición y cancelación
+
+Si una línea ya empezó a entregarse, su edición y eliminación quedan limitadas para conservar trazabilidad.
+
+<Tip>
+  Si el cliente necesita entregas en fechas distintas, crea líneas separadas. Así planificación puede cubrir cada fecha de forma clara.
+</Tip>

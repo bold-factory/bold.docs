@@ -1,4 +1,61 @@
 ---
 title: "Introducción"
-description: "Contenido pendiente."
+description: "Conecta demanda, stock y aprovisionamiento para decidir qué comprar o fabricar."
 ---
+
+**Planificación** conecta demanda, stock y suministro. Te ayuda a responder tres preguntas: qué falta, cuándo falta y cómo conviene cubrirlo.
+
+Bold usa pedidos de venta, pedidos de compra, peticiones de fabricación, órdenes de fabricación, stock físico y parámetros de aprovisionamiento para calcular disponibilidad y proyección.
+
+## Qué mira planificación
+
+<Columns cols={2}>
+  <Card title="Demanda" icon="shopping-cart">
+    Pedidos de venta confirmados y necesidades futuras que consumen disponibilidad.
+  </Card>
+  <Card title="Suministro" icon="truck">
+    Pedidos de compra, peticiones y órdenes de fabricación que aportan entradas previstas.
+  </Card>
+  <Card title="Stock" icon="warehouse">
+    Stock físico por artículo, ubicación y lote cuando aplica.
+  </Card>
+  <Card title="Reglas" icon="sliders-horizontal">
+    Origen, modo de aprovisionamiento, punto de pedido, pedido mínimo y tamaño de lote.
+  </Card>
+</Columns>
+
+## Conceptos básicos
+
+| Concepto | Qué significa |
+| --- | --- |
+| Stock físico | Cantidad real registrada ahora. |
+| Stock disponible | Stock físico menos demanda confirmada. |
+| Stock proyectado | Saldo esperado tras entradas y salidas futuras. |
+| Origen de aprovisionamiento | Compra, fabricación o ignorar recomendaciones. |
+| Modo de aprovisionamiento | Directo o acumulación. |
+| Punto de pedido | Nivel que dispara una necesidad. |
+
+<Info>
+  Las recomendaciones ayudan a decidir. Los pedidos, peticiones y órdenes son los compromisos operativos.
+</Info>
+
+## Flujo de planificación
+
+<Steps>
+  <Step title="Configura artículos">
+    Define origen de aprovisionamiento, modo, proveedor preferente, punto de pedido, pedido mínimo y tamaño de lote.
+  </Step>
+  <Step title="Confirma demanda">
+    Confirma líneas de pedidos de venta para que afecten a disponibilidad y proyección.
+  </Step>
+  <Step title="Revisa stock proyectado">
+    Detecta roturas futuras antes de que lleguen a planta o cliente.
+  </Step>
+  <Step title="Decide qué comprar o fabricar">
+    Usa los asistentes para agrupar necesidades y convertirlas en pedidos o peticiones.
+  </Step>
+</Steps>
+
+<Tip>
+  Revisa planificación con fechas realistas. Una cantidad suficiente en total puede no ser suficiente si llega tarde.
+</Tip>

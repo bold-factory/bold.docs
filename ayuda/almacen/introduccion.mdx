@@ -1,4 +1,63 @@
 ---
 title: "Introducción"
-description: "Contenido pendiente."
+description: "Gestiona ubicaciones, recepciones, movimientos, ajustes, inventarios y trazabilidad de stock."
 ---
+
+El módulo **Almacén** controla dónde está el stock, cómo entra, cómo sale y qué movimientos explican cada cambio. Es la base física para compras, ventas, planificación y producción.
+
+## Qué gestiona almacén
+
+<Columns cols={2}>
+  <Card title="Ubicaciones" icon="map-pin" href="/ayuda/almacen/crear-ubicaciones">
+    Lugares donde se almacena, recibe, consume o envía stock.
+  </Card>
+  <Card title="Recepciones" icon="package-plus" href="/ayuda/almacen/recibir-material">
+    Entradas de material desde proveedores, compras u otros orígenes.
+  </Card>
+  <Card title="Movimientos" icon="arrow-left-right" href="/ayuda/almacen/mover-stock">
+    Cambios de ubicación, lote o cantidad dentro del almacén.
+  </Card>
+  <Card title="Inventarios" icon="clipboard-check" href="/ayuda/almacen/hacer-inventario">
+    Recuentos físicos que regularizan diferencias con el sistema.
+  </Card>
+</Columns>
+
+## Cómo calcula Bold el stock
+
+Bold calcula el stock a partir de movimientos reales: recepciones, envíos, consumos, fabricaciones, ajustes e inventarios. El resultado puede consultarse agregado, pero internamente se relaciona con artículo, ubicación y lote cuando aplica.
+
+<Info>
+  El stock físico no descuenta compromisos futuros. Para saber qué queda libre para nuevas necesidades, consulta el **stock disponible** y el **stock proyectado**.
+</Info>
+
+## Conceptos clave
+
+| Concepto | Qué significa |
+| --- | --- |
+| Stock físico | Cantidad actual registrada en almacén. |
+| Stock disponible | Stock físico menos demanda comprometida. |
+| Stock proyectado | Stock esperado después de entradas y salidas previstas. |
+| Lote | Conjunto trazable de unidades de un artículo. |
+| Ubicación | Lugar donde el stock aumenta, disminuye o se mueve. |
+| Movimiento | Registro que explica un cambio de stock. |
+
+## Flujo habitual
+
+<Steps>
+  <Step title="Crea ubicaciones">
+    Define dónde puede estar el stock. Puedes empezar con una ubicación general y detallar más adelante.
+  </Step>
+  <Step title="Recibe material">
+    Registra entradas con artículo, cantidad, ubicación y lote si corresponde.
+  </Step>
+  <Step title="Mueve o consume stock">
+    Traslada material, consume componentes en producción o prepáralo para envío.
+  </Step>
+  <Step title="Regulariza diferencias">
+    Usa ajustes o inventarios cuando el recuento físico no coincide con Bold.
+  </Step>
+</Steps>
+
+<Warning>
+  Bold puede permitir stock negativo para no bloquear una operación urgente, pero ese valor indica que falta regularizar una recepción, inventario, lote o consumo.
+</Warning>

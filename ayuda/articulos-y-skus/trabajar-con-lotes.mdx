@@ -1,4 +1,59 @@
 ---
 title: "Trabajar con lotes"
-description: "Contenido pendiente."
+description: "Usa lotes para conservar trazabilidad por compra, fabricación, origen, coste o calidad."
 ---
+
+Un **Lote** identifica un conjunto trazable de unidades de un mismo artículo. Aunque dos unidades pertenezcan al mismo artículo, pueden diferir por proveedor, fabricación, fecha, coste, calidad u origen.
+
+## Cuándo usar lotes
+
+Usa lotes si necesitas:
+
+- trazabilidad de compra o fabricación;
+- control de calidad por origen;
+- valoración por coste unitario real;
+- separación por caducidad, fecha o proveedor;
+- investigación de incidencias;
+- relación entre componentes consumidos y producto fabricado.
+
+Si tu operativa no necesita separar unidades por origen, puedes mantener una gestión más simple.
+
+## Qué contiene un lote
+
+| Dato | Uso |
+| --- | --- |
+| Código | Identifica el lote en operaciones y consultas. |
+| Artículo | Indica qué unidad física contiene. |
+| Origen | Compra, fabricación, ajuste, fusión u otro movimiento. |
+| Stock actual | Cantidad restante del lote. |
+| Coste y valor | Permiten valorar stock y trazabilidad económica. |
+| Relaciones | Documentos, recepciones, consumos u órdenes vinculadas. |
+
+<Info>
+  Un lote está activo mientras tiene stock distinto de cero. Cuando su stock queda a cero, pasa a estar inactivo.
+</Info>
+
+## Trabajar con lotes en operaciones
+
+<Steps>
+  <Step title="Recibe o produce stock">
+    Al recibir o registrar producción, indica el lote cuando el artículo lo requiere.
+  </Step>
+  <Step title="Consume o envía desde el lote correcto">
+    En fabricación o envíos, selecciona el lote que sale físicamente del almacén.
+  </Step>
+  <Step title="Consulta el histórico">
+    Revisa movimientos y relaciones para seguir el origen y destino del material.
+  </Step>
+  <Step title="Fusiona solo si procede">
+    Fusiona lotes cuando no necesitas mantenerlos separados para trazabilidad o valoración.
+  </Step>
+</Steps>
+
+## Fusionar lotes
+
+Al fusionar, Bold conserva la composición de los lotes origen para mantener trazabilidad y reparto de valor. El lote resultante simplifica la operación futura, pero debes usarlo solo si la separación original ya no aporta valor operativo.
+
+<Warning>
+  No fusiones lotes si necesitas investigar calidad, proveedor, fecha de fabricación, caducidad o coste por origen.
+</Warning>

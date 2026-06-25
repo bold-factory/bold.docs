@@ -1,4 +1,49 @@
 ---
 title: "Solución de problemas de stock"
-description: "Contenido pendiente."
+description: "Diagnostica stock negativo, diferencias por ubicación, lotes incorrectos y disponibilidad inesperada."
 ---
+
+Los problemas de stock suelen venir de una diferencia entre lo que ocurrió físicamente y lo que se registró en Bold. Antes de corregir, identifica si el problema afecta a stock físico, disponible o proyectado.
+
+## Diagnóstico rápido
+
+| Síntoma | Causa probable | Qué revisar |
+| --- | --- | --- |
+| Stock físico negativo | Salida registrada antes que entrada | Recepciones, inventarios, consumos o envíos pendientes. |
+| Hay stock, pero no disponible | Demanda confirmada lo tiene comprometido | Pedidos de venta, reservas o necesidades abiertas. |
+| Hay stock en otra ubicación | Movimiento no registrado o picking en zona equivocada | Movimientos por ubicación. |
+| Falta un lote | Recepción o producción sin lote correcto | Histórico del artículo y documentos de origen. |
+| Stock proyectado cae en negativo | Entradas futuras no cubren demanda | Compras, fabricación, fechas y punto de pedido. |
+
+## Resolver stock negativo
+
+<Steps>
+  <Step title="Consulta movimientos">
+    Filtra por artículo, ubicación y lote para encontrar la salida que dejó el saldo negativo.
+  </Step>
+  <Step title="Busca entradas pendientes">
+    Revisa si falta recibir compra, registrar producción o finalizar un inventario.
+  </Step>
+  <Step title="Corrige el origen">
+    Si existe una recepción o producción real pendiente, regístrala. Si fue un error, usa reversión o ajuste.
+  </Step>
+  <Step title="Comprueba planificación">
+    Revisa que stock disponible y proyectado se recalculan con el nuevo saldo.
+  </Step>
+</Steps>
+
+## Resolver diferencias por ubicación
+
+Si el stock total parece correcto, pero está en la ubicación equivocada, usa **Mover stock**. No uses un ajuste negativo en una ubicación y positivo en otra si en realidad es un traslado físico.
+
+## Resolver diferencias por lote
+
+Si el lote no coincide con el material físico, revisa la recepción, fabricación o movimiento que lo creó. Corrige con reversión cuando sea posible. Si no, registra un ajuste claro y documentado.
+
+<Warning>
+  Corregir solo el saldo final puede ocultar el problema real. Revisa movimientos y documentos relacionados antes de ajustar.
+</Warning>
+
+## Cuándo hacer inventario
+
+Haz inventario cuando no puedes reconstruir la diferencia con confianza, cuando hay muchas referencias afectadas o cuando necesitas una regularización formal de una ubicación.
