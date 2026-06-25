@@ -1,0 +1,42 @@
+es/ayuda/primeros-pasos/que-es-bold.mdx
+  s_e15e25080a0d47::t_a20799effac2f0 17,20,23,26
+es/ayuda/produccion/introduccion.mdx
+  s_e15e25080a0d47::t_a20799effac2f0 11,17,20
+es/ayuda/ventas/introduccion.mdx
+  s_e15e25080a0d47::t_a20799effac2f0 14
+es/ayuda/compras/introduccion.mdx
+  s_e15e25080a0d47::t_a20799effac2f0 14,20
+es/desarrolladores/empezar/introduccion.mdx
+  s_e15e25080a0d47::t_a20799effac2f0 15,18,21,24
+.gitignore
+  h_55f2ba4d68b42c 2-3
+es/ayuda/planificacion/crear-demanda.mdx
+  s_e15e25080a0d47::t_a20799effac2f0 11
+docs.json
+  s_e15e25080a0d47::t_62c118758f12c5 38-41,47-52,58-66,72-78,84-91,97-100,106-109,115-117,123-125,136-139,145-148,154-159,170,179-180
+es/ayuda/articulos-y-skus/introduccion.mdx
+  s_e15e25080a0d47::t_a20799effac2f0 15,18,24
+es/ayuda/almacen/introduccion.mdx
+  s_e15e25080a0d47::t_a20799effac2f0 11,14,17,20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.13",
+  "base_commit_sha": "7fd49024ff03791fbca528b87e782aa37874caa3",
+  "prompts": {},
+  "humans": {
+    "h_55f2ba4d68b42c": {
+      "author": "Pablo López <pablo@bold-factory.com>"
+    }
+  },
+  "sessions": {
+    "s_e15e25080a0d47": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019effea-50a4-7af1-858c-cd16e3af4a23",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
