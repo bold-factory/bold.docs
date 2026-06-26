@@ -1,12 +1,12 @@
 ---
 title: "Autenticación"
-description: "Autentica llamadas a la API de Bold con claves API o tokens bearer."
+description: "Autentica llamadas a la API de Bold con claves API o credenciales de sesión."
 ---
 
-Bold acepta dos métodos de autenticación para la API: claves API para integraciones de servidor a servidor y tokens bearer para sesiones de usuario.
+Bold acepta dos métodos de autenticación para la API: claves API para integraciones de servidor a servidor y credenciales de sesión para usuarios.
 
 <Info>
-  Si la petición incluye la cabecera `X-Api-Key`, el backend usa autenticación por clave API. Si no la incluye, valida la petición como JWT bearer.
+  Si la petición incluye la cabecera `X-Api-Key`, Bold usa autenticación por clave API. Si no la incluye, valida la petición como sesión de usuario.
 </Info>
 
 ## Obtener una clave API
@@ -18,7 +18,7 @@ Necesitas ser administrador para crear o desactivar claves API. En la aplicació
     Entra en **Panel de control** y abre **Claves API** dentro del grupo **Acceso**.
   </Step>
   <Step title="Crea una clave">
-    Haz clic en **Crear nueva clave API**. Escribe un valor en **Nombre de la clave**, por ejemplo `ERP producción` o `BI inventario`.
+    Haz clic en **Crear nueva clave API**. Escribe un valor en **Nombre de la clave**, por ejemplo `Gestión producción` o `Análisis inventario`.
   </Step>
   <Step title="Guarda el secreto">
     Haz clic en **Crear clave** y copia el valor que aparece en **Clave API creada**. La clave completa solo se muestra en ese momento.
@@ -30,7 +30,7 @@ Necesitas ser administrador para crear o desactivar claves API. En la aplicació
 
 ## Usar claves API
 
-Usa claves API para integraciones técnicas. La clave identifica el tenant y se trata como una credencial secreta. Envía la clave en la cabecera `X-Api-Key`.
+Usa claves API para integraciones técnicas. La clave identifica la organización y se trata como una credencial secreta. Envía la clave en la cabecera `X-Api-Key`.
 
 ```http
 GET /v1/items/products?pageNumber=1&pageSize=25
@@ -40,7 +40,7 @@ X-Api-Key: bf_live_xxxxxxxxxxxxx
 Buenas prácticas:
 
 - Crea una clave por sistema externo.
-- Usa nombres descriptivos como `ERP producción` o `BI inventario`.
+- Usa nombres descriptivos como `Gestión producción` o `Análisis inventario`.
 - Rota la clave si sospechas que se compartió fuera del sistema autorizado.
 - Revoca claves que ya no se usen.
 
@@ -48,16 +48,16 @@ Buenas prácticas:
   No guardes claves API en repositorios, documentos compartidos ni scripts locales sin gestor de secretos.
 </Warning>
 
-## Tokens bearer
+## Credenciales de sesión
 
-Usa tokens bearer cuando la llamada representa una sesión interactiva de usuario.
+Usa credenciales de sesión cuando la llamada representa una sesión interactiva de usuario.
 
 ```http
 GET /v1/warehouse/locations
 Authorization: Bearer eyJhbGciOi...
 ```
 
-El token debe contener el contexto de organización y los permisos necesarios. Si el token caduca o no pertenece al tenant correcto, la API responde con un error de autenticación o autorización.
+La credencial debe contener el contexto de organización y los permisos necesarios. Si caduca o no pertenece a la organización correcta, la API responde con un error de autenticación o autorización.
 
 ## Permisos
 
@@ -65,9 +65,9 @@ La autenticación responde a la pregunta "quién llama". Los permisos responden 
 
 | Error | Causa habitual | Qué revisar |
 | --- | --- | --- |
-| `401 Unauthorized` | La credencial falta, caducó o no es válida. | Cabecera, token, clave API y entorno. |
+| `401 Unauthorized` | La credencial falta, caducó o no es válida. | Cabecera, credencial de sesión, clave API y entorno. |
 | `403 Forbidden` | La credencial es válida, pero no tiene permisos. | Rol, permisos del usuario o permisos asociados a la integración. |
-| `404 Not Found` | La entidad no existe o no es visible para el tenant. | Tenant, referencia, identificador y permisos de lectura. |
+| `404 Not Found` | La entidad no existe o no es visible para la organización. | Organización, referencia, identificador y permisos de lectura. |
 
 ## Ejemplo
 
@@ -78,9 +78,9 @@ curl "https://api.bold-factory.com/v1/items/skus?pageNumber=1&pageSize=25" \
 ```
 
 <Tip>
-  Prueba primero un endpoint de lectura con paginación pequeña. Después añade operaciones de escritura cuando confirmes que la clave pertenece al tenant correcto.
+  Prueba primero una ruta de lectura con paginación pequeña. Después añade operaciones de escritura cuando confirmes que la clave pertenece a la organización correcta.
 </Tip>
 
 ## Gestionar claves
 
-La creación, consulta y desactivación de claves se hace desde **Panel de control > Acceso > Claves API**. Consulta [Claves API y webhooks](/es/conceptos/panel-de-control/claves-api-y-webhooks) para el contexto administrativo.
+La creación, consulta y desactivación de claves se hace desde **Panel de control > Acceso > Claves API**. Consulta [Claves de integración y avisos externos](/es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos) para el contexto administrativo.

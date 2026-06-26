@@ -3,7 +3,7 @@ title: "Introducción"
 description: "Conecta sistemas externos con Bold mediante la API, claves API y webhooks."
 ---
 
-La API de Bold permite leer y actualizar datos operativos desde sistemas externos. Úsala para sincronizar catálogo, stock, pedidos, producción, compras, ventas y eventos con ERP, BI, automatizaciones internas o herramientas propias.
+La API de Bold permite leer y actualizar datos operativos desde sistemas externos. Úsala para sincronizar catálogo, stock, pedidos, producción, compras, ventas y eventos con sistemas de gestión, herramientas de análisis, automatizaciones internas o herramientas propias.
 
 <Info>
   La referencia completa se genera desde OpenAPI. Puedes consultarla en la sección [Referencia de API](/es/desarrolladores/referencia-api/introduccion) o abrirla en `https://api.bold-factory.com/docs`.
@@ -25,7 +25,7 @@ La API de Bold permite leer y actualizar datos operativos desde sistemas externo
     Recetas, versiones, órdenes, operaciones, recursos y ejecución.
   </Card>
   <Card title="Personas y permisos" icon="users">
-    Usuarios, roles, empleados, jornadas, calendarios, turnos y tareas.
+    Usuarios, perfiles, empleados, jornadas, calendarios, turnos y tareas.
   </Card>
   <Card title="Mantenimiento" icon="wrench">
     Activos, acciones, causas, partes de trabajo, tiempos, materiales y preventivos.
@@ -37,7 +37,7 @@ La API de Bold permite leer y actualizar datos operativos desde sistemas externo
     Eventos, suscripciones personales, bandeja de app y lectura de avisos.
   </Card>
   <Card title="Analítica" icon="chart-no-axes-combined">
-    Informes Power BI embebidos, tokens de apertura, duplicación y creación de informes.
+    Informes Power BI integrados, credenciales de apertura, duplicación y creación de informes.
   </Card>
   <Card title="Etiquetas" icon="tag">
     Plantillas, elementos de diseño y generación de documentos PDF.
@@ -46,15 +46,15 @@ La API de Bold permite leer y actualizar datos operativos desde sistemas externo
 
 ## Referencia exacta
 
-La sección **Referencia de API** usa `https://api.bold-factory.com/openapi/v1.json` para generar los endpoints, parámetros, esquemas de request y response, modelos y pruebas interactivas.
+La sección **Referencia de API** usa `https://api.bold-factory.com/openapi/v1.json` para generar rutas, parámetros, esquemas de petición y respuesta, modelos y pruebas interactivas.
 
 <Card title="Abrir referencia externa" icon="external-link" href="https://api.bold-factory.com/docs">
-  Usa la referencia publicada por el backend si quieres verla fuera de esta documentación.
+  Usa la referencia publicada por Bold si quieres verla fuera de esta documentación.
 </Card>
 
 ## Patrón base
 
-Los endpoints públicos usan versión en la ruta:
+Las rutas públicas usan versión en la URL:
 
 ```http
 GET /v1/items/products
@@ -72,10 +72,10 @@ Las respuestas y errores usan JSON. Los listados paginados devuelven una estruct
     Crea una clave desde **Panel de control > Acceso > Claves API**. Usa una clave distinta por integración para poder revocarla sin afectar otros sistemas.
   </Step>
   <Step title="Prueba lectura antes de escribir">
-    Empieza con endpoints `GET` para validar autenticación, tenant, permisos y paginación.
+    Empieza con rutas `GET` para validar autenticación, organización, permisos y paginación.
   </Step>
   <Step title="Sincroniza identificadores">
-    Guarda las referencias de Bold que devuelven los endpoints. Evita depender solo de nombres visibles, porque los nombres pueden cambiar.
+    Guarda las referencias de Bold que devuelven las rutas. Evita depender solo de nombres visibles, porque los nombres pueden cambiar.
   </Step>
   <Step title="Activa webhooks">
     Usa webhooks para enterarte de cambios sin consultar la API en bucle.
@@ -90,7 +90,7 @@ Las respuestas y errores usan JSON. Los listados paginados devuelven una estruct
 | `reference` | Identificador funcional visible en varias entidades. |
 | `id` | Identificador técnico de una entidad. |
 | `pageNumber` | Número de página, empezando en `1`. |
-| `pageSize` | Tamaño de página. El máximo validado por el backend es `1000`. |
+| `pageSize` | Tamaño de página. El máximo validado por Bold es `1000`. |
 
 <Tip>
   Para integraciones críticas, combina webhooks con reconciliaciones periódicas paginadas. El webhook te avisa rápido y la reconciliación detecta cualquier evento perdido.

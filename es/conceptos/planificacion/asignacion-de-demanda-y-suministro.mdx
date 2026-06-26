@@ -1,0 +1,82 @@
+---
+title: "Asignación de demanda y suministro"
+description: "Entiende cómo Bold relaciona necesidades, stock y entradas futuras para decidir qué queda cubierto."
+icon: "link"
+---
+
+La **asignación de demanda y suministro** explica qué necesidad queda cubierta por stock actual o por una entrada futura.
+
+No crea compras, fabricaciones ni movimientos de almacén. Lee demanda, suministro y stock para calcular cuánto está disponible, cuánto llegará y cuánto sigue pendiente.
+
+## Qué asigna Bold
+
+| Elemento | Papel en la asignación |
+| --- | --- |
+| Demanda | Cantidad que necesitas cubrir por venta, fabricación, previsión o consumo previsto. |
+| Stock físico | Cantidad que ya existe en almacén para el artículo. |
+| Suministro | Cantidad que llegará por compra, fabricación o previsión. |
+| Stock saliente | Cantidad comprometida por necesidades activas. |
+| Stock entrante | Cantidad esperada por documentos o necesidades de entrada. |
+
+La asignación se calcula por artículo. Si el artículo trabaja con lotes o ubicaciones en ejecución, almacén conserva esa trazabilidad en los movimientos reales.
+
+## Contra pedido y contra stock
+
+La política de aprovisionamiento decide si una necesidad se cubre de forma directa o agrupada.
+
+| Modo | Cómo se comporta |
+| --- | --- |
+| **Contra pedido** | La necesidad se relaciona con un suministro concreto. Es útil cuando cada venta o petición requiere cobertura propia. |
+| **Contra stock** | Varias necesidades comparten el stock disponible y los suministros futuros. Es útil cuando repones inventario común. |
+
+Bold resuelve primero las relaciones directas contra pedido. Después reparte el stock y los suministros compartidos entre las necesidades contra stock.
+
+Consulta [Política de aprovisionamiento](/es/conceptos/planificacion/politica-de-aprovisionamiento) para configurar cuándo un artículo se compra, se fabrica o se cubre contra stock.
+
+## Resultado de una necesidad
+
+| Estado | Qué significa |
+| --- | --- |
+| **Disponible** | Hay stock suficiente ahora. |
+| **Planificado** | La necesidad queda cubierta por suministro futuro. |
+| **Parcialmente planificado** | Solo una parte queda cubierta. |
+| **Pendiente** | Falta crear o confirmar suministro suficiente. |
+| **No requerido** | La necesidad no requiere aprovisionamiento. |
+
+Una misma necesidad puede tener parte cubierta por stock actual, parte por suministro futuro y parte pendiente. Por eso el estado resumido debe leerse junto con cantidades y fechas.
+
+## Fechas esperadas
+
+La fecha esperada indica cuándo debería estar cubierta la cantidad asignada.
+
+| Origen | Confianza habitual |
+| --- | --- |
+| Stock actual | Alta, porque ya existe. |
+| Pedido de compra confirmado | Alta si la línea tiene fecha de recepción fiable. |
+| Petición u orden de fabricación | Alta si tiene fecha objetivo y planificación suficiente. |
+| Previsión o recomendación | Más baja hasta convertirla en compra o fabricación real. |
+
+Si falta fecha esperada, la necesidad puede estar planificada en cantidad pero seguir siendo incierta para priorizar entregas.
+
+## Qué cambia la asignación
+
+La asignación se recalcula cuando cambia la realidad operativa.
+
+| Cambio | Efecto habitual |
+| --- | --- |
+| Confirmas una venta | Genera demanda. |
+| Confirmas una compra | Genera suministro. |
+| Recibes material | Convierte suministro en stock físico. |
+| Envías material | Reduce stock y cierra demanda entregada. |
+| Creas o actualizas una petición de fabricación | Genera o ajusta suministro esperado. |
+| Completas una fabricación | Convierte producción pendiente en stock físico. |
+| Cambias la política de aprovisionamiento | Puede cambiar si la necesidad se cubre contra pedido o contra stock. |
+
+## Relacionado
+
+- [Demanda y suministro](/es/conceptos/planificacion/demanda-y-suministro)
+- [Política de aprovisionamiento](/es/conceptos/planificacion/politica-de-aprovisionamiento)
+- [Previsiones y asistentes](/es/conceptos/planificacion/previsiones-y-asistentes)
+- [Stock y movimientos](/es/conceptos/almacen/stock-y-movimientos)
+- [Pedidos de venta](/es/conceptos/planificacion/pedidos-de-venta)
+- [Pedidos de compra](/es/conceptos/planificacion/pedidos-de-compra)

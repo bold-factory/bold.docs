@@ -1,9 +1,9 @@
 ---
 title: "Consultar informes Power BI"
-description: "Consulta y adapta informes embebidos sobre datos de Bold."
+description: "Consulta y adapta informes Power BI sobre datos de Bold."
 ---
 
-Los **Informes Power BI** usan Power BI embebido para analizar datos de Bold con visualizaciones, filtros y campos preparados. Úsalos para análisis periódico, seguimiento de indicadores y vistas de dirección.
+Los **informes Power BI** usan Power BI integrado para analizar datos de Bold con visualizaciones, filtros y campos preparados. Úsalos para análisis periódico, seguimiento de indicadores y vistas de dirección.
 
 <Info>
   Los informes Power BI no son una vista en tiempo real. Se refrescan según la programación del entorno, normalmente de forma periódica durante el horario laboral.
@@ -24,15 +24,15 @@ Los **Informes Power BI** usan Power BI embebido para analizar datos de Bold con
 
 | Necesidad | Usa |
 | --- | --- |
-| Analizar tendencias, comparar periodos o preparar reportes | **Informes Power BI**. |
+| Analizar tendencias, comparar periodos o preparar informes | **Informes Power BI**. |
 | Ver estado vivo de planta, operaciones en curso u OEE operativo | [Cuadros de mando de fabricación](/es/conceptos/fabricacion/cuadros-de-mando). |
 | Investigar un registro concreto | El módulo operativo correspondiente, por ejemplo órdenes, stock o partes. |
 
 ## Crear o adaptar un informe
 
 <Steps>
-  <Step title="Abre Automatizaciones">
-    Entra en **Automatizaciones** y abre **Informes Power BI**.
+  <Step title="Abre Informes">
+    Entra en **Smart Factory** y abre **Informes**.
   </Step>
   <Step title="Elige el punto de partida">
     Abre un informe existente, crea uno nuevo o duplica uno parecido. El nombre `Base` está reservado.
@@ -48,21 +48,19 @@ Los **Informes Power BI** usan Power BI embebido para analizar datos de Bold con
   </Step>
 </Steps>
 
-## Permisos y API
+## Permisos e integraciones
 
-| Acción | Permiso |
+| Acción | Permiso necesario |
 | --- | --- |
-| Abrir y listar informes | `Analytics.Reports.Read` |
-| Crear, duplicar o eliminar informes | `Analytics.Reports.Write` |
-
-La API de informes expone metadatos, URL de embed y token temporal para abrir informes en una experiencia propia. Consulta [Analytics API](https://api.bold-factory.com/docs) si necesitas integrar informes fuera de la interfaz estándar de Bold.
+| Abrir informes | Acceso de lectura a informes. |
+| Crear, duplicar o eliminar informes | Acceso de edición a informes. |
 
 ## Buenas prácticas
 
 - Duplica informes antes de hacer cambios relevantes.
 - Usa nombres orientados al uso, por ejemplo `Coste por activo` o `Producción semanal`.
-- Incluye filtros visibles para fechas, área, SKU, activo o estado cuando el informe se use por varios equipos.
-- No uses Power BI para decisiones que requieren estado en vivo de planta.
+- Incluye filtros visibles para fechas, área, artículo, activo o estado cuando el informe se use por varios equipos.
+- No uses informes Power BI para decisiones que requieren estado en vivo de planta.
 
 ## Problemas habituales
 
@@ -76,7 +74,6 @@ La API de informes expone metadatos, URL de embed y token temporal para abrir in
 ## Relacionado
 
 - [Informes](/es/conceptos/smart-factory/informes)
-- [Analytics API](https://api.bold-factory.com/docs)
 - [Cuadros de mando de fabricación](/es/conceptos/fabricacion/cuadros-de-mando)
 - [Costes](/es/conceptos/costes)
 - [Mantenimiento](/es/conceptos/mantenimiento)

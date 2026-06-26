@@ -1,0 +1,68 @@
+---
+title: "Política de aprovisionamiento"
+description: "Entiende cómo Bold decide si un artículo se compra, se fabrica o se ignora en las recomendaciones."
+icon: "route"
+---
+
+La **política de aprovisionamiento** define cómo debe cubrirse una necesidad de un artículo. Afecta a las recomendaciones de compra y fabricación, a las fechas sugeridas y a las cantidades propuestas.
+
+Configura esta política en los artículos que puedan generar necesidades de reposición.
+
+## Decisiones principales
+
+| Campo | Qué decide |
+| --- | --- |
+| Origen de aprovisionamiento | Si Bold recomienda **Compra**, **Fabricación** o **Ignorar** el artículo. |
+| Modo de aprovisionamiento | Si Bold cubre necesidades **Contra stock** o **Contra pedido**. |
+| Proveedor principal | Qué proveedor propone el asistente de compras cuando el artículo se compra. |
+| Plazo de aprovisionamiento | Cuánto debe anticiparse la compra o fabricación. |
+
+Usa **Ignorar** para artículos que no quieres que aparezcan en recomendaciones, aunque existan en stock, pedidos o fabricación.
+
+## Contra stock y contra pedido
+
+| Modo | Cuándo usarlo |
+| --- | --- |
+| contra stock | Quieres reponer por nivel de inventario y agrupar necesidades. |
+| Contra pedido | Quieres cubrir una demanda concreta, normalmente vinculada a un pedido o necesidad específica. |
+
+contra stock es útil para materias primas, consumibles o referencias que quieres mantener disponibles. Contra pedido encaja mejor cuando compras o fabricas solo después de una demanda concreta.
+
+## Cantidades recomendadas
+
+Bold usa estos valores para calcular cuánto proponer:
+
+| Parámetro | Efecto |
+| --- | --- |
+| Punto de pedido | Define cuándo empieza a sugerirse reposición. |
+| Pedido mínimo | Evita recomendaciones demasiado pequeñas. |
+| Tamaño de lote | Redondea la cantidad a múltiplos operativos. |
+| Stock de seguridad | Protege un colchón mínimo frente a variaciones. |
+
+Si el stock proyectado cae por debajo del punto de pedido, Bold puede proponer una compra o fabricación. La cantidad final puede subir por pedido mínimo, tamaño de lote o demanda futura agrupada.
+
+## Fechas recomendadas
+
+El plazo de aprovisionamiento ayuda a calcular cuándo deberías lanzar la compra o fabricación para llegar a tiempo.
+
+Para artículos comprados, revisa también los datos del proveedor principal. Para artículos fabricados, revisa que exista una receta válida y que la fabricación pueda planificarse.
+
+## Cuando no aparece una recomendación
+
+Revisa estos puntos:
+
+- el artículo tiene origen **Compra** o **Fabricación**;
+- el modo de aprovisionamiento coincide con el flujo esperado;
+- el stock proyectado cae por debajo del punto de pedido;
+- el pedido mínimo, el tamaño de lote y el stock de seguridad tienen valores coherentes;
+- el proveedor principal existe si esperas una recomendación de compra;
+- existe una receta válida si esperas una recomendación de fabricación;
+- las líneas de venta o compra relevantes están confirmadas.
+
+## Relacionado
+
+- [Artículos](/es/conceptos/catalogo/articulos)
+- [Previsiones y asistentes](/es/conceptos/planificacion/previsiones-y-asistentes)
+- [Demanda y suministro](/es/conceptos/planificacion/demanda-y-suministro)
+- [Saber qué comprar](/es/ayuda/planificacion/saber-que-comprar)
+- [Saber qué fabricar](/es/ayuda/planificacion/saber-que-fabricar)

@@ -1,0 +1,106 @@
+---
+title: "Crear pedido y lanzar OF"
+description: "Crea un pedido de venta, confirma demanda y genera una orden de fabricación ejecutable."
+---
+
+El pedido de venta hace visible la necesidad del cliente. La petición de fabricación indica qué falta fabricar. La OF convierte esa necesidad en operaciones ejecutables.
+
+Esta guía une ventas, planificación y fabricación en un caso corto.
+
+## Antes de empezar
+
+Necesitas:
+
+- un artículo terminado configurado como fabricable;
+- una receta activa para el producto;
+- un empleado y un recurso preparados para ejecutar la operación;
+- un cliente de prueba o cliente real;
+- permiso para crear pedidos, peticiones y órdenes de fabricación.
+
+## Crear demanda desde el pedido
+
+<Steps>
+  <Step title="Crea el pedido">
+    Entra en la sección de pedidos de cliente y crea una cabecera con cliente, código, fecha y notas si aplica.
+  </Step>
+  <Step title="Añade la línea">
+    Selecciona el artículo fabricado, indica la cantidad y define la fecha esperada.
+  </Step>
+  <Step title="Confirma la línea">
+    Confirma la línea cuando quieras que genere demanda. Mientras esté en borrador, no afectará a planificación.
+  </Step>
+  <Step title="Revisa disponibilidad">
+    Comprueba si hay stock disponible, suministro planificado o cantidad pendiente de cubrir.
+  </Step>
+</Steps>
+
+<Warning>
+  No confundas crear el pedido con confirmar la demanda. La demanda nace cuando confirmas la línea del pedido.
+</Warning>
+
+## Convertir la demanda en OF
+
+<Steps>
+  <Step title="Revisa la necesidad">
+    Abre planificación o la vista operativa que uses para revisar necesidades de fabricación. Busca el artículo, cantidad y fecha del pedido.
+  </Step>
+  <Step title="Crea la petición de fabricación">
+    Convierte la recomendación en petición. Para un piloto controlado, también puedes crear una petición manual con la misma cantidad y fecha del pedido.
+  </Step>
+  <Step title="Abre la petición">
+    Comprueba artículo, cantidad, fecha requerida y cantidad pendiente de asignar.
+  </Step>
+  <Step title="Crea la OF">
+    Genera una orden de fabricación desde la petición. Selecciona la receta activa y confirma la cantidad que vas a fabricar.
+  </Step>
+  <Step title="Revisa la orden">
+    Comprueba que la OF tiene operaciones, entradas, salida, fecha y recurso compatible si el proceso lo requiere.
+  </Step>
+</Steps>
+
+## Qué debe pasar
+
+| Acción | Resultado |
+| --- | --- |
+| Confirmar línea de pedido | Genera demanda del artículo fabricado. |
+| Crear petición | Explica qué falta fabricar y para cuándo. |
+| Crear OF | Copia la estructura de la receta activa. |
+| Revisar operación | Permite detectar si faltan recursos, fechas, herramientas o permisos. |
+
+<Info>
+  Una petición puede dividirse en varias OFs si fabricas por lotes o en varias tandas. Para el primer recorrido, crea una sola OF por la cantidad del pedido.
+</Info>
+
+## Si no puedes crear la OF
+
+| Problema | Qué revisar |
+| --- | --- |
+| No aparece necesidad | La línea del pedido está confirmada y el artículo es fabricable. |
+| No puedes crear petición | Permisos y política de aprovisionamiento del artículo. |
+| No aparece receta | La receta pertenece al producto correcto y tiene una versión activa. |
+| La operación no se puede planificar | Proceso, recurso compatible, herramientas o restricciones. |
+
+## Guías de detalle
+
+<Columns cols={2}>
+  <Card title="Crear un pedido" icon="shopping-cart" href="/es/ayuda/ventas/crear-pedido-de-venta">
+    Registra el compromiso del cliente y confirma líneas.
+  </Card>
+  <Card title="Saber qué fabricar" icon="calendar-range" href="/es/ayuda/planificacion/saber-que-fabricar">
+    Convierte necesidades revisadas en peticiones de fabricación.
+  </Card>
+  <Card title="Crear una orden de fabricación" icon="factory" href="/es/ayuda/produccion/crear-una-orden-de-fabricacion">
+    Genera trabajo ejecutable desde una petición.
+  </Card>
+  <Card title="Peticiones de fabricación" icon="clipboard-list" href="/es/conceptos/fabricacion/peticiones-de-fabricacion">
+    Entiende la diferencia entre necesidad y ejecución.
+  </Card>
+</Columns>
+
+## Siguiente paso
+
+Cuando la OF exista y tenga operaciones ejecutables, registra la primera ejecución en planta.
+
+<Card title="Ejecutar la primera OF" icon="play" href="/es/ayuda/primeros-pasos/ejecutar-primera-of">
+  Inicia la operación, registra avance, consume materiales y finaliza producción.
+</Card>

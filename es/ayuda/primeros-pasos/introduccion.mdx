@@ -1,42 +1,67 @@
 ---
 title: "Primeros pasos"
-description: "Configura la base de Bold y valida un flujo inicial antes de operar con datos reales."
+description: "Crea los datos mínimos, lanza una OF desde un pedido y registra la primera ejecución en planta."
 ---
 
-Primeros pasos reúne las guías para preparar una cuenta nueva y comprobar que catálogo, almacén, planificación y fabricación encajan en un flujo básico.
+Primeros pasos te guía por el recorrido mínimo para ver valor en Bold: preparar los datos base, definir cómo se fabrica un producto común, crear un pedido, convertirlo en una orden de fabricación y registrar su ejecución.
+
+Empieza con un caso pequeño. Usa un producto habitual, una receta corta, un empleado operativo y un recurso de producción. Después amplía catálogo, permisos, ubicaciones y controles.
 
 ## Empieza por aquí
 
 <Columns cols={2}>
   <Card title="Ver el flujo básico" icon="workflow" href="/es/ayuda/primeros-pasos/flujo-basico-de-trabajo">
-    Recorre el ciclo desde catálogo hasta entrega para entender el orden recomendado.
+    Recorre el camino recomendado desde datos maestros hasta ejecución en planta.
   </Card>
-  <Card title="Configurar tu empresa" icon="settings" href="/es/ayuda/primeros-pasos/configurar-tu-empresa">
-    Define datos mínimos de empresa, usuarios y configuración antes de crear operaciones.
+  <Card title="Preparar datos base" icon="database" href="/es/ayuda/primeros-pasos/preparar-datos-base">
+    Crea catálogo, empleados y recursos suficientes para operar un primer caso.
   </Card>
-  <Card title="Crear tu primera fabricación" icon="factory" href="/es/ayuda/primeros-pasos/crear-tu-primera-fabricacion">
-    Prueba un caso pequeño con producto, artículo, receta, orden y registro de producción.
+  <Card title="Configurar una receta mínima" icon="book-open" href="/es/ayuda/primeros-pasos/configurar-receta-minima">
+    Define las operaciones y materiales necesarios para fabricar el producto elegido.
+  </Card>
+  <Card title="Crear pedido y lanzar OF" icon="clipboard-list" href="/es/ayuda/primeros-pasos/crear-pedido-y-lanzar-of">
+    Convierte una línea confirmada en una necesidad y crea la orden de fabricación.
+  </Card>
+  <Card title="Ejecutar la primera OF" icon="play" href="/es/ayuda/primeros-pasos/ejecutar-primera-of">
+    Registra trabajo, consumos y producción desde **Modo de trabajo**.
   </Card>
   <Card title="Entender Bold" icon="book-open" href="/es/conceptos/introduccion">
-    Revisa los conceptos principales si necesitas contexto antes de configurar.
+    Consulta conceptos cuando necesites entender un término antes de seguir.
   </Card>
 </Columns>
 
 ## Orden recomendado
 
 <Steps>
-  <Step title="Entiende el recorrido">
-    Revisa cómo se conectan catálogo, stock, pedidos, planificación, compras y fabricación.
+  <Step title="Prepara los datos base">
+    Crea el catálogo, al menos un empleado operativo y los recursos de producción mínimos. Usa un producto que el equipo reconozca.
   </Step>
-  <Step title="Configura la base">
-    Ajusta empresa, usuarios y datos mínimos antes de introducir actividad operativa.
+  <Step title="Configura la receta">
+    Define una versión simple con las operaciones y entradas imprescindibles para lanzar una OF.
   </Step>
-  <Step title="Haz una prueba controlada">
-    Usa una fabricación simple para validar permisos, artículos, ubicaciones, recetas y registros.
+  <Step title="Crea el pedido">
+    Registra un pedido de venta, añade el artículo fabricado y confirma la línea para generar demanda.
+  </Step>
+  <Step title="Lanza la OF">
+    Crea la petición o necesidad de fabricación y genera la OF desde la receta activa.
+  </Step>
+  <Step title="Ejecuta en planta">
+    Registra avance, consumos y producción desde **Modo de trabajo**.
   </Step>
 </Steps>
 
-## Antes de usar datos reales
+## Qué dejar para después
 
-Comprueba que los códigos, unidades, ubicaciones y permisos están bien definidos. Corregir datos maestros es más fácil antes de crear pedidos, movimientos o partes con histórico.
+No necesitas configurar toda la fábrica antes de validar el flujo. Añade estos elementos cuando el primer recorrido ya funcione.
 
+| Elemento | Cuándo añadirlo |
+| --- | --- |
+| Catálogo completo | Cuando el equipo haya validado cómo modelar productos y artículos. |
+| Roles detallados | Cuando sepas qué acciones hará cada responsabilidad. |
+| Lotes, bultos y contenedores | Cuando necesites trazabilidad física o preparación logística. |
+| Controles de calidad complejos | Cuando la receta mínima ya genere operaciones ejecutables. |
+| Costes y cuadros de mando | Cuando los datos de ejecución sean estables. |
+
+## Cierre opcional
+
+Cuando la OF genere stock del artículo terminado, puedes preparar y registrar el envío del pedido. Hazlo si quieres validar también la salida de stock, pero no es necesario para entender el valor principal del flujo.

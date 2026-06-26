@@ -1,6 +1,6 @@
 ---
 title: "Valoración del inventario"
-description: "Consulta el valor actual de existencias por artículo, lote y ubicación."
+description: "Consulta el valor actual de stock por artículo, lote y ubicación."
 ---
 
 Usa **Valoración del inventario** para ver el valor económico del stock disponible. Bold calcula el valor desde las unidades de stock con cantidad positiva y el coste por unidad de sus lotes.
@@ -10,12 +10,12 @@ Usa **Valoración del inventario** para ver el valor económico del stock dispon
 | Campo | Qué significa |
 | --- | --- |
 | Valor total del inventario | Suma del valor de todas las unidades de stock positivas. |
-| Artículo | SKU valorado. |
+| Artículo | artículo valorado. |
 | Ubicación | Lugar donde está el stock. |
 | Lote | Lote que aporta el coste por unidad. |
-| Stock | Cantidad disponible en la unidad del SKU. |
+| Stock | Cantidad disponible en la unidad del artículo. |
 | Coste/ud | Coste por unidad del lote. |
-| Valor total | Stock x coste/ud. |
+| Valor total | stock x coste/ud. |
 
 ## Cómo se calcula
 
@@ -55,13 +55,13 @@ El origen del lote determina el coste usado:
 
 ## Ejemplo
 
-Tienes `80 ud` del SKU `ENV-500` en la ubicación `A-01`. El lote tiene un coste de `0,42 €/ud`.
+Tienes `80 ud` del artículo `ENV-500` en la ubicación `A-01`. El lote tiene un coste de `0,42 €/ud`.
 
 ```text
 80 x 0,42 = 33,60 €
 ```
 
-Si el mismo SKU tiene otro lote en otra ubicación con coste `0,47 €/ud`, Bold valora cada línea con su propio coste de lote. Esto permite ver diferencias por compra, fabricación o regularización.
+Si el mismo artículo tiene otro lote en otra ubicación con coste `0,47 €/ud`, Bold valora cada línea con su propio coste de lote. Esto permite ver diferencias por compra, fabricación o regularización.
 
 ## Lotes temporales y trazabilidad
 
@@ -76,7 +76,7 @@ Cuando se consumen materiales sin stock disponible, Bold puede necesitar crear t
 | Problema | Qué revisar |
 | --- | --- |
 | El valor total parece bajo | Busca lotes con coste cero o stock sin origen valorado. |
-| Dos líneas del mismo SKU tienen costes distintos | Cada lote conserva su propio coste. Revisa origen, compra o fabricación. |
+| Dos líneas del mismo artículo tienen costes distintos | Cada lote conserva su propio coste. Revisa origen, compra o fabricación. |
 | El stock aparece en valoración pero no esperabas verlo | La tabla incluye unidades de stock con cantidad positiva. Revisa ubicación y lote. |
 | No ves valoración de inventario | Revisa permisos de costes de almacén. |
 

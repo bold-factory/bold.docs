@@ -1,6 +1,6 @@
 ---
 title: "Invitar usuarios"
-description: "Da acceso a nuevas personas y asigna roles acordes a su trabajo."
+description: "Da acceso a nuevas personas y asigna perfiles acordes a su trabajo."
 ---
 
 Un usuario es la cuenta con la que una persona entra en Bold. Invita usuarios cuando necesiten acceso propio a la aplicación, o a funciones administrativas.
@@ -12,7 +12,7 @@ Un usuario es la cuenta con la que una persona entra en Bold. Invita usuarios cu
 ## Antes de invitar
 
 - Ten claro qué módulos debe usar la persona.
-- Crea o revisa el rol que le vas a asignar.
+- Crea o revisa el perfil que le vas a asignar.
 - Decide si debe vincularse a un empleado operativo.
 - Evita compartir una cuenta entre varias personas si necesitas auditoría.
 
@@ -20,22 +20,22 @@ Un usuario es la cuenta con la que una persona entra en Bold. Invita usuarios cu
 
 | Campo | Para qué sirve |
 | --- | --- |
-| Email | Identifica la cuenta y se usa para iniciar sesión. |
+| Correo electrónico | Identifica la cuenta y se usa para iniciar sesión. |
 | Nombre y apellidos | Ayudan a reconocer a la persona en listas y auditoría. |
 | Empleado | Vincula la cuenta con una persona operativa para trabajo, turnos y asignaciones. |
-| Roles | Definen qué módulos ve y qué acciones puede ejecutar. |
+| perfiles | Definen qué módulos ve y qué acciones puede ejecutar. |
 
 ## Invitar a una persona
 
 <Steps>
   <Step title="Abre **Panel de control > Usuarios**">
-    Entra con un usuario con rol `App.Admin`.
+    Entra con un usuario con perfil de administración de la aplicación.
   </Step>
   <Step title="Crea el usuario">
-    Introduce email, nombre, apellidos y empleado si aplica.
+    Introduce Correo electrónico, nombre, apellidos y empleado si aplica.
   </Step>
-  <Step title="Asigna roles">
-    Selecciona uno o varios roles que reflejen sus responsabilidades reales.
+  <Step title="Asigna perfiles">
+    Selecciona uno o varios perfiles que reflejen sus responsabilidades reales.
   </Step>
   <Step title="Vincula empleado si aplica">
     Relaciona el usuario con el empleado operativo cuando deba registrar trabajo o actuar en planta.
@@ -65,24 +65,24 @@ Revisa la vinculación cuando una persona cambia de puesto o cuando se reutiliza
 | Operario de planta | Asigna permisos de trabajo de producción y vínculo con empleado. |
 | Planificador | Asigna lectura y escritura de planificación, compras y producción según proceso. |
 | Integración técnica | Usa una credencial técnica gestionada por un administrador en vez de una cuenta personal. |
-| Usuario temporal | Usa roles mínimos y define una fecha de revisión del acceso. |
+| Usuario temporal | Usa perfiles mínimos y define una fecha de revisión del acceso. |
 
 <Warning>
-  Retira o ajusta roles cuando una persona cambia de responsabilidad. Mantener accesos antiguos aumenta el riesgo operativo.
+  Retira o ajusta perfiles cuando una persona cambia de responsabilidad. Mantener accesos antiguos aumenta el riesgo operativo.
 </Warning>
 
 ## Problemas habituales
 
 | Problema | Qué revisar |
 | --- | --- |
-| No puedes crear el usuario | Necesitas rol `App.Admin`. |
+| No puedes crear el usuario | Necesitas perfil de administración de la aplicación. |
 | La persona entra, pero no ve módulos | Falta acceso común o permisos de lectura. |
 | Puede ver, pero no guardar | Falta permiso de escritura o acción específica. |
 | Las acciones no aparecen asociadas al empleado correcto | Revisa el vínculo usuario-empleado. |
-| Conserva accesos antiguos | Quita roles que ya no correspondan a su responsabilidad actual. |
+| Conserva accesos antiguos | Quita perfiles que ya no correspondan a su responsabilidad actual. |
 
 ## Relacionado
 
 - [Panel de control](/es/conceptos/panel-de-control)
-- [Roles y permisos](/es/conceptos/panel-de-control/usuarios-roles-y-permisos)
+- [Perfiles y permisos](/es/conceptos/panel-de-control/usuarios-roles-y-permisos)
 - [Permisos por módulo](/es/conceptos/panel-de-control/usuarios-roles-y-permisos)

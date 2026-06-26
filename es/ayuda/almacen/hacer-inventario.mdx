@@ -6,7 +6,7 @@ description: "Cuenta stock físico y regulariza diferencias de forma controlada.
 Un inventario permite comparar el stock físico contado con el stock que Bold tenía registrado en el momento de lectura. Al finalizar, Bold aplica la diferencia necesaria para regularizar.
 
 <Info>
-  Necesitas permisos `Warehouse.Counts.Read` para consultar inventarios y `Warehouse.Counts.Write` para crear, editar, añadir conteos o finalizar.
+  Necesitas acceso de lectura para consultar inventarios y acceso de edición para crear, contar o finalizar.
 </Info>
 
 ## Cuándo hacer inventario
@@ -64,11 +64,11 @@ Haz inventario cuando:
 
 ## Movimientos durante el conteo
 
-Bold guarda el ajuste previsto de cada línea como `cantidad contada - stock previo`. Al finalizar, aplica ese ajuste previsto sobre el stock que exista en ese momento.
+Bold guarda el ajuste previsto de cada línea como `cantidad contada - stock previo`. Al finalizar, aplica ese ajuste previsto sobre el stock registrado en ese momento.
 
 Ejemplo:
 
-| Momento | Stock |
+| Momento | stock |
 | --- | ---: |
 | Stock previo al contar | 100 |
 | Cantidad física contada | 105 |

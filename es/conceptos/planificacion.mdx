@@ -12,8 +12,14 @@ La planificación conecta compromisos comerciales, compras, fabricación y stock
   <Card title="Demanda y suministro" icon="calendar-range" href="/es/conceptos/planificacion/demanda-y-suministro">
     Necesidades, entradas esperadas y stock proyectado.
   </Card>
+  <Card title="Asignación de demanda y suministro" icon="link" href="/es/conceptos/planificacion/asignacion-de-demanda-y-suministro">
+    Relación entre necesidades, stock actual y entradas futuras.
+  </Card>
   <Card title="Previsiones y asistentes" icon="wand-sparkles" href="/es/conceptos/planificacion/previsiones-y-asistentes">
     Sugerencias de compra o fabricación antes de crear documentos.
+  </Card>
+  <Card title="Política de aprovisionamiento" icon="route" href="/es/conceptos/planificacion/politica-de-aprovisionamiento">
+    Reglas que indican si un artículo se compra, se fabrica o se ignora.
   </Card>
   <Card title="Clientes" icon="user-round" href="/es/conceptos/planificacion/clientes">
     Datos maestros que identifican de dónde viene la demanda comercial.
@@ -35,6 +41,7 @@ La planificación conecta compromisos comerciales, compras, fabricación y stock
 | --- | --- |
 | Demanda | Necesidad de stock generada por venta, previsión o consumo previsto. |
 | Suministro | Entrada esperada por compra, fabricación o previsión. |
+| Asignación | Relación calculada entre una necesidad y el stock o suministro que la cubre. |
 | Stock proyectado | Evolución esperada del stock al aplicar demanda y suministro futuros. |
 | Stock disponible | Stock físico libre después de compromisos actuales. |
 | Stock entrante | Cantidad esperada por recepciones, compras o fabricación. |
@@ -46,31 +53,21 @@ La planificación conecta compromisos comerciales, compras, fabricación y stock
 | Pedido mínimo | Cantidad mínima recomendada al crear compra o fabricación. |
 | Tamaño de lote | Múltiplo o lote operativo usado para redondear recomendaciones. |
 
-## Política de aprovisionamiento del artículo
+## Política de aprovisionamiento
 
-Cada artículo tiene una política de aprovisionamiento que guía las recomendaciones.
+La política de aprovisionamiento indica si un artículo se compra, se fabrica o se ignora en recomendaciones. También define si Bold debe cubrir necesidades contra stock o contra pedido.
 
-| Campo | Qué decide |
-| --- | --- |
-| Origen de aprovisionamiento | Si Bold propone **Compra**, **Fabricación** o **Ignorar** el artículo en recomendaciones. |
-| Modo de aprovisionamiento | Si la necesidad se cubre **Contra pedido** o **Contra stock**. |
-| Punto de pedido | Nivel que dispara la reposición cuando el stock queda por debajo del umbral. |
-| Pedido mínimo | Cantidad mínima que Bold propone cuando falta stock. |
-| Tamaño de lote | Múltiplo al que Bold redondea la cantidad recomendada. |
-| Lead time de aprovisionamiento | Días laborables usados para anticipar cuándo lanzar la reposición. |
-| Stock de seguridad | Colchón operativo que debes alinear con el punto de pedido. |
+Consulta [Política de aprovisionamiento](/es/conceptos/planificacion/politica-de-aprovisionamiento) para entender punto de pedido, pedido mínimo, tamaño de lote, plazo, stock de seguridad y proveedor principal.
 
-<Note>
-  El backend valida que punto de pedido, pedido mínimo, stock de seguridad y lead time no sean negativos. El tamaño de lote debe ser mayor que cero cuando se informa.
-</Note>
+Consulta [Asignación de demanda y suministro](/es/conceptos/planificacion/asignacion-de-demanda-y-suministro) para ver cómo se relaciona cada necesidad con stock disponible o suministro futuro.
 
 ## Cómo calcula los saldos
 
 Bold mantiene saldos calculados por artículo:
 
 ```text
-Stock disponible actual = Stock físico - Stock saliente
-Stock disponible proyectado = Stock disponible actual + Stock entrante
+Stock disponible actual = stock físico - stock saliente
+Stock disponible proyectado = stock disponible actual + stock entrante
 ```
 
 El stock saliente nace de demanda activa, como líneas confirmadas de pedidos de venta o consumos previstos. El stock entrante nace de suministro activo, como líneas confirmadas de pedidos de compra, peticiones de fabricación, órdenes de fabricación o previsiones.
@@ -106,7 +103,7 @@ Consulta [Peticiones de fabricación](/es/conceptos/fabricacion/peticiones-de-fa
 
 ## Recomendaciones
 
-Los asistentes de compras y fabricación leen stock proyectado, demanda, suministro y parámetros del artículo. Consulta [Previsiones y asistentes](/es/conceptos/planificacion/previsiones-y-asistentes) para ver cómo se convierten las sugerencias en pedidos o peticiones.
+Los asistentes de compras y fabricación leen stock proyectado, demanda, suministro y política de aprovisionamiento. Consulta [Previsiones y asistentes](/es/conceptos/planificacion/previsiones-y-asistentes) para ver cómo se convierten las sugerencias en pedidos o peticiones.
 
 | Parámetro | Efecto |
 | --- | --- |

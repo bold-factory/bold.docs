@@ -37,6 +37,18 @@ El estado de la orden se deriva de sus operaciones. Si las operaciones empiezan,
 
 La cantidad planificada solo debería cambiar antes de empezar. Después, el historial de progreso, consumos y producción protege la trazabilidad.
 
+| Estado | Cuándo aparece |
+| --- | --- |
+| **Pendiente de planificar** | La orden existe, pero todavía no está preparada para ejecución. |
+| **Planificada** | Las operaciones tienen planificación suficiente para empezar cuando corresponda. |
+| **En curso** | Alguna operación empezó. |
+| **Pausada** | El trabajo está detenido temporalmente. |
+| **Bloqueada** | La orden no puede avanzar hasta resolver una condición pendiente. |
+| **Finalizada** | El trabajo terminó. |
+| **Cancelada** | La orden ya no debe ejecutarse. |
+
+Consulta [Estados de fabricación](/es/conceptos/fabricacion/estados-de-fabricacion) para comparar estados de órdenes, operaciones, grupos y planes.
+
 ## Relación con almacén y costes
 
 Los consumos reducen stock. La producción aumenta stock del artículo fabricado o de co-productos.
@@ -47,6 +59,7 @@ Los tiempos, consumos y cantidades reales alimentan costes y eficiencia. Si falt
 
 - [Peticiones de fabricación](/es/conceptos/fabricacion/peticiones-de-fabricacion)
 - [Recetas y versiones](/es/conceptos/fabricacion/recetas-y-versiones)
+- [Estados de fabricación](/es/conceptos/fabricacion/estados-de-fabricacion)
 - [Asignaciones y grupos de operaciones](/es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones)
 - [Inspecciones y controles](/es/conceptos/fabricacion/inspecciones-y-controles)
 - [Controles, consumos y pausas](/es/conceptos/fabricacion/controles-consumos-y-pausas)

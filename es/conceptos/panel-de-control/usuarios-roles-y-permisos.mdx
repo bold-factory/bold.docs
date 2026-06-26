@@ -1,10 +1,10 @@
 ---
-title: "Usuarios, roles y permisos"
+title: "Usuarios, perfiles y permisos"
 description: "Diferencia acceso, permisos y perfiles de trabajo en Bold."
 icon: "shield"
 ---
 
-Un **usuario** accede a Bold. Un **rol** agrupa permisos. Un **permiso** habilita una acción concreta.
+Un **usuario** accede a Bold. Un **perfil** agrupa permisos. Un **permiso** habilita una acción concreta.
 
 Estos conceptos controlan qué puede ver y cambiar cada persona desde el Panel de control.
 
@@ -13,17 +13,17 @@ Estos conceptos controlan qué puede ver y cambiar cada persona desde el Panel d
 | Concepto | Uso |
 | --- | --- |
 | Usuario | Identidad con credenciales de acceso. |
-| Rol | Conjunto reutilizable de permisos. |
+| Perfil | Conjunto reutilizable de permisos. |
 | Permiso | Capacidad concreta para leer, editar o ejecutar una acción. |
 | Empleado | Persona operativa que registra trabajo, aunque no siempre tenga usuario. |
 
 Usuario y empleado pueden estar vinculados, pero no son lo mismo. El usuario responde a "quién entra y qué puede hacer". El empleado responde a "quién trabaja, registra tiempo o participa en costes".
 
-## Diseño de roles
+## Diseño de perfiles
 
-Crea roles por responsabilidad real, no por persona individual.
+Crea perfiles por responsabilidad real, no por persona individual.
 
-| Rol típico | Alcance habitual |
+| Perfil típico | Alcance habitual |
 | --- | --- |
 | Administración | Configuración, usuarios y datos maestros. |
 | Almacén | Stock, recepciones, movimientos e inventarios. |
@@ -31,27 +31,13 @@ Crea roles por responsabilidad real, no por persona individual.
 | Mantenimiento | Activos, preventivos y partes. |
 | Consulta | Lectura sin cambios operativos. |
 
-Evita roles demasiado amplios para perfiles temporales o externos. Un permiso de escritura puede cambiar stock, costes o trazabilidad.
+Evita perfiles demasiado amplios para perfiles temporales o externos. Un permiso de escritura puede cambiar stock, costes o trazabilidad.
 
-## Patrón de permisos
+## Cómo se organizan los permisos
 
-Los permisos suelen seguir una estructura legible:
+Los permisos suelen separar consulta, edición y ejecución. La consulta permite ver datos. La edición permite crear, modificar, completar o cancelar registros. La ejecución habilita acciones operativas específicas, como trabajar en planta, secuenciar órdenes o activar versiones.
 
-```text
-Modulo.Area.Accion
-```
-
-Ejemplos:
-
-| Permiso | Lectura |
-| --- | --- |
-| `Warehouse.Receipts.Read` | Ver recepciones de almacén. |
-| `Warehouse.Receipts.Write` | Crear, editar, recibir o revertir recepciones. |
-| `Production.Orders.Work` | Ejecutar operaciones en modo trabajo. |
-| `Production.Orders.Sequence` | Secuenciar o planificar órdenes. |
-| `Production.Recipes.Activate` | Activar versiones de receta. |
-
-Las acciones más comunes son `Read` y `Write`, pero hay permisos específicos para tareas críticas, como `Work`, `Sequence`, `Activate`, `Presence`, `Upload` o `Delete`.
+Asigna permisos según la responsabilidad real de cada equipo. No todos los perfiles necesitan modificar datos, y algunas acciones críticas conviene reservarlas a responsables concretos.
 
 ## Permisos por módulo
 
@@ -59,32 +45,32 @@ Los permisos suelen separar lectura y escritura. La lectura permite consultar; l
 
 Algunos flujos requieren permisos adicionales. Por ejemplo, subir evidencias puede requerir permisos de archivos además del permiso funcional.
 
-| Módulo | Permisos habituales |
+| Módulo | Accesos habituales |
 | --- | --- |
-| Acceso común | `Common.App.Access`, `Common.App.RegularMode`, `Common.App.WorkMode` |
-| Catálogo | `Items.Products.*`, `Items.Properties.*`, `Items.Skus.*` |
-| Almacén | `Warehouse.Locations.*`, `Warehouse.Receipts.*`, `Warehouse.Shipments.*`, `Warehouse.Counts.*`, `Warehouse.Containers.*` |
-| Planificación | `Planning.Customers.*`, `Planning.Suppliers.*`, `Planning.SalesOrders.*`, `Planning.PurchaseOrders.*`, `Planning.Skus.*` |
-| Producción | `Production.Recipes.*`, `Production.Orders.*`, `Production.Requests.*`, `Production.Workstations.*` |
-| Mantenimiento | `Maintenance.Assets.*`, `Maintenance.Causes.*`, `Maintenance.ActionDefinitions.*`, `Maintenance.WorkOrders.*`, `Maintenance.PreventiveSchedules.*` |
-| Personas | `People.Users.Read`, `People.Employees.*`, `People.ShiftScheduling.*`, `People.Tasks.Read` |
-| Archivos y etiquetas | `Files.Files.*`, `Labels.Templates.*` |
-| Informes y agentes | `Analytics.Reports.*`, `Agents.Questions.OtherUsers` |
+| Acceso común | Entrada a Bold, modo administrativo y modo de trabajo. |
+| Catálogo | Productos, propiedades y artículos. |
+| Almacén | Ubicaciones, recepciones, envíos, inventarios, movimientos y bultos. |
+| Planificación | Clientes, proveedores, pedidos, recomendaciones y artículos planificables. |
+| Producción | Recetas, órdenes, peticiones, estaciones y secuenciación. |
+| Mantenimiento | Activos, causas, acciones, partes y preventivos. |
+| Personal | Usuarios, empleados, turnos, presencia y tareas. |
+| Archivos y etiquetas | Archivos adjuntos, evidencias, diseños y plantillas. |
+| Informes y agentes | Informes, Boldy, agentes y tareas delegadas. |
 
-Administrar usuarios, roles y permisos requiere rol `App.Admin`. No se gestiona con un permiso funcional `People.Users.Write`.
+Administrar usuarios, perfiles y permisos requiere un perfil de administración de la aplicación. No lo gestiones como un permiso operativo de personal.
 
 <Tip>
   Si una acción no aparece o falla, revisa dos cosas: el estado del documento y los permisos del usuario.
 </Tip>
 
-## Claves API y agentes
+## Claves de integración y agentes
 
-Las claves API y los agentes también necesitan alcance controlado. Usa credenciales separadas por integración y concede a cada agente solo los permisos que necesita para sus tareas.
+Las claves de integración y los agentes también necesitan alcance controlado. Usa credenciales separadas por integración y concede a cada agente solo los permisos que necesita para sus tareas.
 
 ## Relacionado
 
 - [Panel de control](/es/conceptos/panel-de-control)
 - [Empleados](/es/conceptos/personal/empleados)
-- [Claves API y webhooks](/es/conceptos/panel-de-control/claves-api-y-webhooks)
+- [Claves de integración y avisos externos](/es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos)
 - [Agentes](/es/conceptos/smart-factory/agentes)
 - [Invitar usuarios](/es/ayuda/usuarios-y-permisos/invitar-usuarios)

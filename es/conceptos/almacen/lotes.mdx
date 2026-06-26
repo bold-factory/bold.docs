@@ -32,6 +32,30 @@ Si tu operación no necesita separar unidades por origen, puedes mantener stock 
 
 Un lote está activo mientras conserva stock o historial relevante.
 
+## Tipos de lote
+
+Bold distingue tipos de lote según cómo se creó y qué trazabilidad conserva.
+
+| Tipo | Cuándo aparece |
+| --- | --- |
+| Lote de origen | Nace desde una compra, fabricación u origen conocido. |
+| Lote fusionado | Agrupa stock de dos lotes cuando decides dejar de separarlos. |
+| Lote provisional | Permite conservar una referencia cuando falta información completa de origen. |
+
+El tipo de lote ayuda a interpretar su historial. Un lote de origen conserva una procedencia directa. Un lote fusionado conserva relación con los lotes que lo componen.
+
+## Origen del lote
+
+El origen indica de dónde viene el material trazable.
+
+| Origen | Significado |
+| --- | --- |
+| Compra | El lote nace de una entrada de proveedor. |
+| Fabricación | El lote nace de una orden o progreso productivo. |
+| Desconocido | El lote existe, pero no hay origen operativo fiable. |
+
+Evita usar origen desconocido como solución normal. Úsalo solo cuando el historial real no esté disponible.
+
 ## Relación con almacén
 
 Bold registra stock por artículo, ubicación y lote opcional. Si un artículo trabaja con lotes, cada recepción, consumo, movimiento o envío debe conservar el lote correcto.
@@ -50,8 +74,10 @@ Fusiona lotes solo cuando ya no necesitas mantener separado su origen. La fusió
 
 No fusiones lotes si necesitas investigar calidad, proveedor, fecha de fabricación, caducidad o coste por origen.
 
+Cuando fusionas lotes, el lote resultante conserva relación con los lotes de origen y sus cantidades. A partir de ese momento, la operación diaria trabaja con el lote fusionado.
+
 ## Relacionado
 
 - [Stock y movimientos](/es/conceptos/almacen/stock-y-movimientos)
 - [Valoración de inventario](/es/conceptos/costes/valoracion-de-inventario)
-- [Trabajar con lotes](/es/ayuda/articulos-y-skus/trabajar-con-lotes)
+- [Trabajar con lotes](/es/ayuda/articulos/trabajar-con-lotes)

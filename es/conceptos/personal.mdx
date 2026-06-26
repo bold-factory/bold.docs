@@ -4,13 +4,16 @@ description: "Referencia de empleados, jornadas, calendarios, turnos y capacidad
 icon: "users"
 ---
 
-Personal agrupa personas operativas y capacidad planificada. El acceso a la aplicación, usuarios, roles y permisos se administra desde [Panel de control](/es/conceptos/panel-de-control).
+Personal agrupa personas operativas y capacidad planificada. El acceso a la aplicación, usuarios, perfiles y permisos se administra desde [Panel de control](/es/conceptos/panel-de-control).
 
 ## Conceptos de este grupo
 
 <Columns cols={2}>
   <Card title="Empleados" icon="user-round" href="/es/conceptos/personal/empleados">
     Personas operativas para tiempos, asignaciones y costes.
+  </Card>
+  <Card title="Habilidades y estaciones habituales" icon="badge-check" href="/es/conceptos/personal/habilidades-y-estaciones-habituales">
+    Capacidades y estaciones habituales que ayudan a mostrar trabajo relevante.
   </Card>
   <Card title="Jornadas, calendarios y turnos" icon="calendar-clock" href="/es/conceptos/personal/jornadas-calendarios-y-turnos">
     Horarios, excepciones y ciclos de trabajo.
@@ -25,6 +28,8 @@ Personal agrupa personas operativas y capacidad planificada. El acceso a la apli
 | Concepto | Uso |
 | --- | --- |
 | Empleado | Persona operativa que puede registrar tiempos, recibir asignaciones o participar en costes. |
+| Habilidad | Proceso o tipo de operación que un empleado puede ejecutar. |
+| Estación habitual | Estación de trabajo asociada al empleado para priorizar tareas operativas. |
 | Jornada laboral | Plantilla de tramos de trabajo. |
 | Calendario local | Excepciones por festivos, cierres o días especiales. |
 | Turno de personal | Programación que asigna jornadas y calendarios a empleados. |
@@ -36,7 +41,7 @@ Personal agrupa personas operativas y capacidad planificada. El acceso a la apli
 
 Un usuario controla acceso. Un empleado representa trabajo operativo. Pueden estar relacionados, pero no son el mismo concepto.
 
-Usa un usuario para entrar en Bold, recibir permisos y administrar módulos. Usa un empleado para registrar mano de obra, calcular costes, asignar operaciones o medir presencia. Consulta [Usuarios, roles y permisos](/es/conceptos/panel-de-control/usuarios-roles-y-permisos) para la parte de acceso.
+Usa un usuario para entrar en Bold, recibir permisos y administrar módulos. Usa un empleado para registrar mano de obra, calcular costes, asignar operaciones o medir presencia. Consulta [Usuarios, perfiles y permisos](/es/conceptos/panel-de-control/usuarios-roles-y-permisos) para la parte de acceso.
 
 ## Jornadas, calendarios y turnos
 
@@ -56,16 +61,18 @@ Una jornada define el patrón normal de trabajo. Un calendario local define exce
 | Producción | Asignación de empleados, registros de tiempo y análisis de eficiencia. |
 | Mantenimiento | Partes de trabajo, tiempo de intervención y empleado principal. |
 | Costes | Coste horario de empleados y coste real de mano de obra. |
-| Panel de control | Relación entre empleados, usuarios, roles, permisos e invitaciones. |
+| Panel de control | Relación entre empleados, usuarios, perfiles, permisos e invitaciones. |
 | Modo de trabajo | Identificación del empleado activo y tareas disponibles en planta. |
+
+Las [habilidades y estaciones habituales](/es/conceptos/personal/habilidades-y-estaciones-habituales) ayudan a que el modo de trabajo muestre operaciones más relevantes para cada empleado.
 
 ## Guías relacionadas
 
 - [Empleados](/es/ayuda/personal/empleados)
+- [Habilidades y estaciones habituales](/es/conceptos/personal/habilidades-y-estaciones-habituales)
 - [Jornadas laborales](/es/ayuda/personal/jornadas-laborales)
 - [Calendarios locales](/es/ayuda/personal/calendarios-locales)
 - [Turnos](/es/ayuda/personal/turnos)
 - [Modo de trabajo](/es/conceptos/modo-de-trabajo)
-- [Usuarios, roles y permisos](/es/conceptos/panel-de-control/usuarios-roles-y-permisos)
+- [Usuarios, perfiles y permisos](/es/conceptos/panel-de-control/usuarios-roles-y-permisos)
 - [Invitar usuarios](/es/ayuda/usuarios-y-permisos/invitar-usuarios)
-- [People API](https://api.bold-factory.com/docs)

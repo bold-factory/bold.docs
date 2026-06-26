@@ -1,0 +1,83 @@
+---
+title: "Configurar una receta mínima"
+description: "Define una receta corta para fabricar el producto común del primer recorrido."
+---
+
+Una receta mínima debe permitir crear una OF ejecutable sin obligarte a modelar todo el proceso de fabricación. Empieza con una operación principal, los consumos imprescindibles y una salida clara del artículo terminado.
+
+Después podrás añadir más operaciones, controles, restricciones, condiciones, herramientas y variantes.
+
+## Antes de empezar
+
+Necesitas:
+
+- un producto fabricable;
+- un artículo terminado asociado a ese producto;
+- los componentes que quieras consumir;
+- un proceso y un recurso compatible con la operación;
+- permiso para crear y activar recetas.
+
+## Crear la receta mínima
+
+<Steps>
+  <Step title="Abre recetas">
+    Entra en **Fabricación > Recetas** y crea una receta para el producto elegido.
+  </Step>
+  <Step title="Crea una versión editable">
+    Usa una versión nueva para preparar la estructura. No la actives hasta revisar operaciones, entradas y salidas.
+  </Step>
+  <Step title="Añade una operación principal">
+    Crea una operación que represente el trabajo central, por ejemplo **Montaje**, **Mezcla**, **Corte** o **Envasado**.
+  </Step>
+  <Step title="Asocia el proceso">
+    Selecciona el proceso que puede ejecutarse en el recurso que creaste. Esto permite que la OF encuentre estaciones compatibles.
+  </Step>
+  <Step title="Añade entradas">
+    Indica los componentes y la cantidad consumida por unidad fabricada. Usa cantidades fáciles de comprobar en el primer recorrido.
+  </Step>
+  <Step title="Define la salida">
+    Revisa que la receta produzca el artículo terminado esperado. La OF usará esta información para registrar producción.
+  </Step>
+  <Step title="Activa la versión">
+    Activa la versión cuando la estructura sea coherente. Solo las versiones activas se usan para crear nuevas órdenes.
+  </Step>
+</Steps>
+
+## Qué incluir y qué dejar fuera
+
+| Elemento | Primer recorrido | Después |
+| --- | --- | --- |
+| Operaciones | Una operación principal. | Varias etapas con precedencias. |
+| Entradas | Componentes imprescindibles. | Fórmulas, variantes y consumos por momento. |
+| Pasos | Instrucciones cortas si ayudan a planta. | Instrucciones detalladas por etapa. |
+| Controles | Solo si bloquean un riesgo real. | Controles de calidad obligatorios. |
+| Restricciones | Ninguna si solo hay una operación. | Restricciones parciales, totales o no bloqueantes. |
+| Herramientas | Solo si son obligatorias para ejecutar. | Útiles, moldes y características requeridas. |
+
+<Warning>
+  Si añades controles obligatorios, asegúrate de que el equipo sabe completarlos en **Modo de trabajo**. Un control obligatorio puede bloquear el inicio o el cierre de una operación.
+</Warning>
+
+## Comprobación rápida
+
+Antes de crear el pedido, revisa que:
+
+- la versión de receta está activa;
+- la operación tiene un proceso;
+- existe al menos un recurso compatible con ese proceso;
+- las entradas usan artículos existentes;
+- la salida corresponde al artículo terminado que vas a vender.
+
+## Guía de detalle
+
+<Card title="Crear una receta" icon="book-open" href="/es/ayuda/produccion/crear-una-receta">
+  Consulta la guía completa de recetas, versiones, operaciones, entradas, pasos, controles y restricciones.
+</Card>
+
+## Siguiente paso
+
+Cuando la receta esté activa, crea un pedido de venta para el artículo fabricado y conviértelo en una OF.
+
+<Card title="Crear pedido y lanzar OF" icon="clipboard-list" href="/es/ayuda/primeros-pasos/crear-pedido-y-lanzar-of">
+  Registra demanda y genera trabajo ejecutable para producción.
+</Card>

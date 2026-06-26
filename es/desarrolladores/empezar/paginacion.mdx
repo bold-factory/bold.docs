@@ -1,9 +1,9 @@
 ---
 title: "Paginación"
-description: "Usa pageNumber y pageSize para recorrer listados de la API."
+description: "Usa paginación para recorrer listados de la API."
 ---
 
-Los endpoints de búsqueda y listado devuelven páginas de resultados. La paginación evita respuestas demasiado grandes y permite reconciliar datos de forma estable.
+Las rutas de búsqueda y listado devuelven páginas de resultados. La paginación evita respuestas demasiado grandes y permite reconciliar datos de forma estable.
 
 ## Parámetros
 
@@ -36,13 +36,13 @@ GET /v1/items/skus?pageNumber=1&pageSize=50
 ## Recorrer todas las páginas
 
 <Steps>
-  <Step title="Empieza por pageNumber 1">
-    Llama con un `pageSize` que tu integración pueda procesar sin timeouts.
+  <Step title="Empieza por la primera página">
+    Llama con un `pageSize` que tu integración pueda procesar sin agotar el tiempo de espera.
   </Step>
-  <Step title="Procesa results">
+  <Step title="Procesa los resultados">
     Guarda cada elemento usando su `id` o `reference`.
   </Step>
-  <Step title="Avanza hasta totalPages">
+  <Step title="Avanza hasta la última página">
     Sigue llamando mientras `pageNumber` sea menor que `totalPages`.
   </Step>
   <Step title="Repite periódicamente">

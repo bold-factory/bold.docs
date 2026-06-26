@@ -6,14 +6,14 @@ description: "Crea un compromiso con proveedor y confirma líneas para generar s
 Un **Pedido de compra** representa un compromiso firme con un proveedor. Convierte una necesidad de aprovisionamiento en una transacción de compra.
 
 <Info>
-  Necesitas permisos `Planning.PurchaseOrders.Read` para consultar pedidos y `Planning.PurchaseOrders.Write` para crear, editar, confirmar o cancelar.
+  Necesitas acceso de lectura para consultar pedidos y acceso de edición para crear, editar, confirmar o cancelar.
 </Info>
 
 ## Crear el pedido
 
 <Steps>
-  <Step title="Abre Compras">
-    Entra en **Compras > Pedidos de compra**.
+  <Step title="Abre Pedidos de compra">
+    Entra en **Planificación > Pedidos de compra**.
   </Step>
   <Step title="Crea la cabecera">
     Selecciona proveedor, código, fecha, notas y referencia externa si aplica.
@@ -46,7 +46,7 @@ Un **Pedido de compra** representa un compromiso firme con un proveedor. Convier
 | --- | --- | --- |
 | Borrador | No genera stock entrante. | Edita artículo, cantidad, fecha, precio y notas. |
 | Pendiente | Genera suministro entrante por la cantidad pendiente. | Recibe material o ajusta datos permitidos. |
-| Parcialmente recibido | Mantiene suministro solo por la cantidad pendiente. | Recibe el resto o cancela la cantidad pendiente. |
+| Parcialmente recibido | Mantiene suministro solo por la cantidad pendiente. | Recibe el resto más adelante. |
 | Recibido | Ya no genera cantidad pendiente. | Consulta trazabilidad y recepciones. |
 | Cancelado | No genera suministro entrante. | Revisa el motivo o deshaz cancelación si procede desde borrador. |
 
@@ -70,7 +70,7 @@ Crea una línea por 120 unidades si esa es la cantidad real a comprar. Si el pro
 - Separa líneas con fechas esperadas distintas.
 - Revisa unidades antes de confirmar.
 - No reduzcas cantidad por debajo de lo ya recibido.
-- Cancela antes de recibir material o cancela solo la cantidad pendiente si ya hubo recepción parcial.
+- Cancela solo líneas que todavía no tengan recepciones asociadas.
 - Mantén la fecha esperada actualizada mientras la línea siga abierta.
 
 <Tip>

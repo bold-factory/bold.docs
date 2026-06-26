@@ -3,7 +3,7 @@ title: "Introducción"
 description: "Recibe notificaciones de eventos de Bold en sistemas externos."
 ---
 
-Los webhooks envían una notificación HTTP cuando ocurre un evento en Bold. Úsalos para que un ERP, una herramienta de BI, una automatización interna o un middleware reaccionen sin consultar la API continuamente.
+Los webhooks envían una notificación HTTP cuando ocurre un evento en Bold. Úsalos para que un sistema de gestión, una herramienta de análisis, una automatización interna o un servicio intermedio reaccionen sin consultar la API continuamente.
 
 <Info>
   Los webhooks complementan la API. Usa la API para consultar o corregir el estado final, y usa webhooks para enterarte de que algo cambió.
@@ -15,7 +15,7 @@ Los webhooks envían una notificación HTTP cuando ocurre un evento en Bold. Ús
 | --- | --- |
 | Evento | Nombre completo del evento que quieres recibir, por ejemplo `Planning.SalesOrder.LineConfirmed`. |
 | Versión | Versión mayor del contrato del evento. |
-| Endpoint | URL pública donde tu sistema recibe la notificación. |
+| URL de recepción | Dirección pública donde tu sistema recibe la notificación. |
 
 ```json
 {
@@ -28,13 +28,13 @@ Los webhooks envían una notificación HTTP cuando ocurre un evento en Bold. Ús
 ## Flujo
 
 <Steps>
-  <Step title="Crea el endpoint receptor">
+  <Step title="Crea el receptor">
     Publica una URL que acepte peticiones JSON y responda rápido. Bold acepta `http` y `https`; usa `https` en producción.
   </Step>
   <Step title="Crea la suscripción">
     Registra `endpoint`, `eventName` y `eventVersion` en Bold.
   </Step>
-  <Step title="Procesa el payload">
+  <Step title="Procesa los datos enviados">
     Guarda el identificador del evento para evitar duplicados y usa la API si necesitas más datos.
   </Step>
   <Step title="Devuelve una respuesta correcta">
@@ -42,7 +42,7 @@ Los webhooks envían una notificación HTTP cuando ocurre un evento en Bold. Ús
   </Step>
 </Steps>
 
-## Endpoints de suscripción
+## Rutas de suscripción
 
 ```http
 GET /v1/notifications/webhook/subscriptions
@@ -70,7 +70,7 @@ POST /v1/notifications/webhook/{id}/retry
 | Estado | Qué significa |
 | --- | --- |
 | `Pending` | La notificación está pendiente o programada para reintento. |
-| `Success` | El endpoint respondió con un código `2xx`. |
+| `Success` | El receptor respondió con un código `2xx`. |
 | `Failure` | Se agotaron los intentos automáticos. Puedes reintentar manualmente. |
 
 <Warning>

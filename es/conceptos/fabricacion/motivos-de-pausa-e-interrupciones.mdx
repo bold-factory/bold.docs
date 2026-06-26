@@ -1,0 +1,62 @@
+---
+title: "Motivos de pausa e interrupciones"
+description: "Entiende cómo clasificar paradas de fabricación y cómo afectan a ejecución, análisis y OEE."
+icon: "pause-circle"
+---
+
+Una **interrupción** es una parada real durante la ejecución. El **motivo de pausa** clasifica por qué se detuvo el trabajo.
+
+Usa motivos de pausa para entender pérdidas de tiempo, separar paradas planificadas de incidencias y analizar patrones por estación, proceso o turno.
+
+## Conceptos
+
+| Concepto | Qué representa |
+| --- | --- |
+| Motivo de pausa | Categoría configurable que explica una parada. |
+| Interrupción | Registro real de inicio, fin, duración, empleado y contexto. |
+| Operación pausada | Operación detenida temporalmente hasta reanudarla. |
+| Grupo pausado | Grupo de operaciones detenido como bloque operativo. |
+| Comentario | Detalle libre que ayuda a interpretar la parada. |
+
+El motivo responde a "por qué se paró". La interrupción responde a "cuándo ocurrió, cuánto duró y quién la registró".
+
+## Dónde se usan
+
+| Lugar | Uso |
+| --- | --- |
+| Operaciones | Pausar y reanudar una etapa concreta de fabricación. |
+| Grupos de operaciones | Pausar un bloque de operaciones que se ejecuta junto. |
+| Estaciones de trabajo | Analizar paradas recurrentes por recurso. |
+| Cuadros de mando | Revisar duración, frecuencia y efecto en OEE. |
+
+Los motivos pueden configurarse para que el operario seleccione opciones relevantes para su entorno. Evita listas largas con causas que la estación nunca usa.
+
+## Tipos de causa
+
+Define motivos con una granularidad que permita actuar.
+
+| Tipo de causa | Ejemplos |
+| --- | --- |
+| Espera operativa | Falta de material, falta de instrucciones, espera de calidad. |
+| Recurso | Avería, cambio de herramienta, limpieza, preparación. |
+| Personas | Descanso, cambio de turno, apoyo no disponible. |
+| Calidad | Revisión, retrabajo, rechazo pendiente de decisión. |
+| Externa | Corte de suministro, bloqueo logístico, incidencia de proveedor. |
+
+No conviertas cada comentario en un motivo. Usa el comentario para el detalle puntual y el motivo para el análisis repetible.
+
+## Relación con estados
+
+Cuando pausas una operación o grupo, su estado pasa a **Pausado**. Al reanudar, la interrupción queda cerrada y el trabajo vuelve a **En curso**.
+
+Una interrupción abierta debe cerrarse antes de interpretar tiempos reales. Si quedan pausas abiertas, los cuadros de mando pueden mostrar duraciones incompletas.
+
+Consulta [Estados de fabricación](/es/conceptos/fabricacion/estados-de-fabricacion) para ver cómo se relacionan pausas, órdenes, operaciones y grupos.
+
+## Relacionado
+
+- [Controles, consumos y pausas](/es/conceptos/fabricacion/controles-consumos-y-pausas)
+- [Asignaciones y grupos de operaciones](/es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones)
+- [Cuadros de mando](/es/conceptos/fabricacion/cuadros-de-mando)
+- [Modo de trabajo](/es/conceptos/modo-de-trabajo)
+- [Ejecutar operaciones en planta](/es/ayuda/produccion/ejecutar-operaciones-en-planta)

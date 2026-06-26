@@ -48,19 +48,21 @@
                 "directory": "card",
                 "pages": [
                   "es/ayuda/primeros-pasos/flujo-basico-de-trabajo",
-                  "es/ayuda/primeros-pasos/configurar-tu-empresa",
-                  "es/ayuda/primeros-pasos/crear-tu-primera-fabricacion"
+                  "es/ayuda/primeros-pasos/preparar-datos-base",
+                  "es/ayuda/primeros-pasos/configurar-receta-minima",
+                  "es/ayuda/primeros-pasos/crear-pedido-y-lanzar-of",
+                  "es/ayuda/primeros-pasos/ejecutar-primera-of"
                 ]
               },
               {
                 "group": "Preparar catálogo",
                 "icon": "boxes",
-                "root": "es/ayuda/articulos-y-skus/introduccion",
+                "root": "es/ayuda/articulos/introduccion",
                 "directory": "card",
                 "pages": [
-                  "es/ayuda/articulos-y-skus/crear-un-producto",
-                  "es/ayuda/articulos-y-skus/crear-un-sku",
-                  "es/ayuda/articulos-y-skus/editar-un-sku"
+                  "es/ayuda/articulos/crear-un-producto",
+                  "es/ayuda/articulos/crear-un-articulo",
+                  "es/ayuda/articulos/editar-un-articulo"
                 ]
               },
               {
@@ -107,8 +109,7 @@
                   "es/ayuda/produccion/crear-una-orden-de-fabricacion",
                   "es/ayuda/produccion/secuenciar-ordenes",
                   "es/ayuda/produccion/ejecutar-operaciones-en-planta",
-                  "es/ayuda/produccion/configurar-controles-de-calidad",
-                  "es/ayuda/produccion/revisar-oee-y-paradas"
+                  "es/ayuda/produccion/configurar-controles-de-calidad"
                 ]
               },
               {
@@ -146,11 +147,18 @@
                 ]
               },
               {
-                "group": "Analizar costes",
-                "icon": "circle-dollar-sign",
-                "root": "es/ayuda/costes/introduccion",
+                "group": "Analizar datos",
+                "icon": "chart-line",
+                "root": "es/ayuda/analisis/introduccion",
                 "directory": "card",
                 "pages": [
+                  "es/ayuda/produccion/ver-oee-por-estacion",
+                  "es/ayuda/produccion/ver-evolucion-del-oee",
+                  "es/ayuda/produccion/ver-actividad-de-los-empleados",
+                  "es/ayuda/produccion/ver-estado-de-las-estaciones",
+                  "es/ayuda/produccion/ver-progreso-en-la-produccion",
+                  "es/ayuda/produccion/revisar-oee-y-paradas",
+                  "es/ayuda/costes/introduccion",
                   "es/ayuda/costes/preparar-datos-de-coste",
                   "es/ayuda/costes/ordenes-de-fabricacion",
                   "es/ayuda/costes/partes-de-trabajo",
@@ -224,6 +232,7 @@
                   "es/conceptos/fabricacion/recetas-y-versiones",
                   "es/conceptos/fabricacion/peticiones-de-fabricacion",
                   "es/conceptos/fabricacion/ordenes-de-fabricacion",
+                  "es/conceptos/fabricacion/estados-de-fabricacion",
                   "es/conceptos/fabricacion/procesos",
                   "es/conceptos/fabricacion/operaciones-y-restricciones",
                   "es/conceptos/fabricacion/recursos",
@@ -233,6 +242,7 @@
                   "es/conceptos/fabricacion/secuenciacion",
                   "es/conceptos/fabricacion/planes-de-produccion",
                   "es/conceptos/fabricacion/inspecciones-y-controles",
+                  "es/conceptos/fabricacion/motivos-de-pausa-e-interrupciones",
                   "es/conceptos/fabricacion/controles-consumos-y-pausas",
                   "es/conceptos/fabricacion/cuadros-de-mando"
                 ]
@@ -244,6 +254,8 @@
                 "expanded": false,
                 "pages": [
                   "es/conceptos/planificacion/demanda-y-suministro",
+                  "es/conceptos/planificacion/asignacion-de-demanda-y-suministro",
+                  "es/conceptos/planificacion/politica-de-aprovisionamiento",
                   "es/conceptos/planificacion/previsiones-y-asistentes",
                   "es/conceptos/planificacion/clientes",
                   "es/conceptos/planificacion/proveedores",
@@ -286,6 +298,7 @@
                 "expanded": false,
                 "pages": [
                   "es/conceptos/personal/empleados",
+                  "es/conceptos/personal/habilidades-y-estaciones-habituales",
                   "es/conceptos/personal/jornadas-calendarios-y-turnos",
                   "es/conceptos/personal/periodos-tareas-y-presencia"
                 ]
@@ -320,7 +333,7 @@
                 "pages": [
                   "es/conceptos/panel-de-control/cuenta-y-empresa",
                   "es/conceptos/panel-de-control/usuarios-roles-y-permisos",
-                  "es/conceptos/panel-de-control/claves-api-y-webhooks",
+                  "es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos",
                   "es/conceptos/panel-de-control/notificaciones",
                   "es/conceptos/panel-de-control/auditoria-y-eventos",
                   "es/conceptos/panel-de-control/datos-y-archivos",
@@ -401,8 +414,24 @@
       "destination": "/es/conceptos/planificacion"
     },
     {
+      "source": "/es/ayuda/articulos-y-skus/introduccion",
+      "destination": "/es/ayuda/articulos/introduccion"
+    },
+    {
+      "source": "/es/ayuda/articulos-y-skus/crear-un-producto",
+      "destination": "/es/ayuda/articulos/crear-un-producto"
+    },
+    {
+      "source": "/es/ayuda/articulos-y-skus/crear-un-sku",
+      "destination": "/es/ayuda/articulos/crear-un-articulo"
+    },
+    {
+      "source": "/es/ayuda/articulos-y-skus/editar-un-sku",
+      "destination": "/es/ayuda/articulos/editar-un-articulo"
+    },
+    {
       "source": "/es/ayuda/articulos-y-skus/trabajar-con-lotes",
-      "destination": "/es/conceptos/almacen/lotes"
+      "destination": "/es/ayuda/articulos/trabajar-con-lotes"
     },
     {
       "source": "/es/ayuda/ventas/preparar-salida",
@@ -471,6 +500,10 @@
     {
       "source": "/es/ayuda/smart-factory/tareas-con-agentes",
       "destination": "/es/ayuda/smart-factory/crear-automatizacion-con-agente"
+    },
+    {
+      "source": "/es/conceptos/panel-de-control/claves-api-y-webhooks",
+      "destination": "/es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos"
     }
   ],
   "markdown": {

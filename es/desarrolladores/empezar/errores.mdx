@@ -26,10 +26,10 @@ La API de Bold devuelve errores JSON siguiendo el formato de `ProblemDetails`. A
 
 | Código | Significado | Qué hacer |
 | --- | --- | --- |
-| `400 Bad Request` | La petición no tiene el formato esperado. | Revisa tipos, campos obligatorios, fechas, rutas y query params. |
+| `400 Bad Request` | La petición no tiene el formato esperado. | Revisa tipos, campos obligatorios, fechas, rutas y parámetros de consulta. |
 | `401 Unauthorized` | La credencial no es válida. | Comprueba `Authorization` o `X-Api-Key`. |
 | `403 Forbidden` | Faltan permisos. | Añade el permiso al rol o usa otra credencial. |
-| `404 Not Found` | La entidad no existe en el tenant actual. | Revisa `id`, `reference`, tenant y entorno. |
+| `404 Not Found` | La entidad no existe en la organización actual. | Revisa `id`, `reference`, organización y entorno. |
 | `409 Conflict` | La operación choca con entidades relacionadas o estado actual. | Consulta dependencias antes de borrar o cambiar datos. |
 | `422 Unprocessable Entity` | La petición es válida en formato, pero incumple una regla de negocio. | Lee `title`, `detail` y `parameters`. |
 | `500 Internal Server Error` | Error inesperado. | Guarda `requestId` y contacta con soporte si persiste. |
@@ -46,13 +46,13 @@ La API de Bold devuelve errores JSON siguiendo el formato de `ProblemDetails`. A
   <Step title="Comprueba el estado de la entidad">
     Muchas operaciones quedan bloqueadas después de recibir, enviar, confirmar, iniciar o finalizar trabajo.
   </Step>
-  <Step title="Guarda el requestId">
+  <Step title="Guarda el identificador de petición">
     Incluye `requestId` o `traceId` cuando abras una incidencia.
   </Step>
 </Steps>
 
 <Accordion title="Errores de permisos">
-  Si recibes `403`, la credencial existe y pertenece a un tenant, pero no tiene al menos uno de los permisos exigidos. Revisa el rol en **Usuarios y permisos** o crea una clave API con el alcance adecuado.
+  Si recibes `403`, la credencial existe y pertenece a una organización, pero no tiene al menos uno de los permisos exigidos. Revisa el perfil en **Usuarios y permisos** o crea una clave API con el alcance adecuado.
 </Accordion>
 
 <Accordion title="Errores de estado">

@@ -1,6 +1,6 @@
 ---
 title: "Qué hago si tengo stock negativo"
-description: "Diagnostica y corrige un saldo negativo de stock sin perder trazabilidad."
+description: "Diagnostica y corrige un stock negativo de stock sin perder trazabilidad."
 ---
 
 El **stock negativo** indica que Bold registró una salida antes de tener registrada la entrada que la cubre. Puede venir de un envío, consumo, ajuste o movimiento creado antes de recibir, producir o inventariar el material.
@@ -11,7 +11,7 @@ No lo trates como un saldo normal. Úsalo como señal para encontrar qué ocurri
 
 | Pregunta | Qué revisar |
 | --- | --- |
-| ¿Qué artículo está en negativo? | SKU, unidad, lote y ubicación afectados. |
+| ¿Qué artículo está en negativo? | artículo, unidad, lote y ubicación afectados. |
 | ¿Qué movimiento lo dejó negativo? | Último envío, consumo, ajuste, inventario o movimiento de salida. |
 | ¿Falta una entrada real? | Recepción de compra, producción, devolución o movimiento interno pendiente. |
 | ¿El lote es correcto? | Puede haberse consumido o enviado desde un lote equivocado. |
@@ -21,10 +21,10 @@ No lo trates como un saldo normal. Úsalo como señal para encontrar qué ocurri
 
 <Steps>
   <Step title="Consulta movimientos">
-    Filtra por artículo, ubicación y lote para localizar la salida que dejó el saldo negativo.
+    Filtra por artículo, ubicación y lote para localizar la salida que dejó el stock negativo.
   </Step>
   <Step title="Busca entradas pendientes">
-    Revisa si falta recibir una compra, registrar producción, cerrar un inventario o mover stock desde otra ubicación.
+    Revisa si falta recibir una compra, registrar producción, cerrar un inventario o Mover stock desde otra ubicación.
   </Step>
   <Step title="Corrige el origen">
     Si la entrada existió físicamente, regístrala desde el flujo correcto. Si el problema fue un envío, consumo o lote equivocado, usa reversión cuando esté disponible.

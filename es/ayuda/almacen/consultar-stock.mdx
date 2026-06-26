@@ -3,14 +3,14 @@ title: "Consultar stock"
 description: "Interpreta stock físico, disponible, proyectado, por ubicación, por lote y por artículo."
 ---
 
-La consulta de stock responde a tres preguntas: cuánto hay físicamente, cuánto queda libre para comprometer y cómo quedará después de entradas y salidas previstas.
+La consulta de stock responde a tres preguntas: cuánto hay físicamente, cuánto queda libre para comprometer y cómo quedará después de entradas y stock saliente.
 
 ## Tipos de stock
 
 | Métrica | Qué responde | Incluye |
 | --- | --- | --- |
 | Stock físico | ¿Qué hay ahora? | Movimientos reales ya registrados. |
-| Stock disponible | ¿Qué queda libre? | Stock físico menos demanda confirmada. |
+| Stock disponible | ¿Qué queda libre? | stock físico menos demanda confirmada. |
 | Stock proyectado | ¿Cómo quedará? | Demanda futura, compras, fabricación y previsiones. |
 
 <Info>
@@ -23,7 +23,7 @@ En la ficha del artículo puedes revisar stock agregado, stock por ubicación, l
 
 ## Consultar por ubicación
 
-La vista por ubicación te ayuda a validar dónde está el material. Úsala para preparar picking, buscar diferencias o revisar si una zona tiene stock que debería moverse.
+La vista por ubicación te ayuda a validar dónde está el material. Úsala para organizar picking, buscar diferencias o revisar si una zona tiene stock que debería moverse.
 
 ## Consultar por lote
 
@@ -33,9 +33,9 @@ Si el artículo trabaja con lotes, revisa el stock por lote para elegir el orige
 
 Bold calcula disponibilidad a nivel de artículo y usa las reglas de planificación para comprometer stock:
 
-- La demanda **contra pedido** tiene prioridad sobre la demanda agrupada **contra stock**.
+- La demanda **contra pedido** tiene prioridad sobre la demanda agrupada **Contra stock**.
 - Si una demanda ya tiene lote asociado, Bold intenta respetar ese lote.
-- Si no hay lote asociado, Bold puede usar stock común o entradas previstas no asignadas.
+- Si no hay lote asociado, Bold puede usar stock común o stock entrante no asignado.
 - La demanda agrupada se ordena por naturaleza y fecha de necesidad.
 
 <Tip>

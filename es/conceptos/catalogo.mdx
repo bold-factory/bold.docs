@@ -43,7 +43,7 @@ Un **producto** agrupa variantes. Un **artículo** identifica la variante operat
 
 Por ejemplo, **Mesa Nórdica** puede ser el producto. **Mesa Nórdica - 160 cm - Roble** y **Mesa Nórdica - 200 cm - Nogal** son artículos distintos porque tienen stock, pedidos y fabricación separados.
 
-El backend valida código y nombre al crear productos y artículos. Cuando un producto tiene propiedades asignadas, cada artículo de ese producto debe informar un valor para todas ellas. Si falta un valor, el artículo queda **inválido** hasta completar la información.
+Bold valida código y nombre al crear productos y artículos. Cuando un producto tiene propiedades asignadas, cada artículo de ese producto debe informar un valor para todas ellas. Si falta un valor, el artículo queda **inválido** hasta completar la información.
 
 ## Propiedades
 
@@ -67,7 +67,7 @@ Un artículo sin producto se considera válido. Un artículo con producto se val
 
 Bold puede proponer consolidar artículos cuando tienen el mismo producto y los mismos valores de propiedades. Consolidar deja un artículo como referencia válida y retira el duplicado. Úsalo solo si ambos registros representan exactamente el mismo elemento físico.
 
-El backend solo permite fusionar artículos del mismo producto con el mismo conjunto de valores. La fusión emite eventos de consolidación y elimina de forma lógica el artículo absorbido.
+Bold solo permite fusionar artículos del mismo producto con el mismo conjunto de valores. La fusión conserva la trazabilidad y retira el artículo absorbido.
 
 ## Relación con otros módulos
 
@@ -77,14 +77,14 @@ El backend solo permite fusionar artículos del mismo producto con el mismo conj
 | Almacén | El stock se registra por artículo, ubicación y lote opcional. Los lotes se gestionan desde almacén cuando necesitas trazabilidad. |
 | Fabricación | Las recetas se definen a nivel de producto y producen o consumen artículos. |
 | Costes | El coste se calcula sobre artículos, lotes, consumos, producción y valor de inventario. |
-| API | Las integraciones pueden usar `sku` para referirse al artículo operativo. |
+| Integraciones | Relacionan el artículo operativo con referencias de otros sistemas. |
 
 ## Guías relacionadas
 
-- [Crear un producto](/es/ayuda/articulos-y-skus/crear-un-producto)
-- [Crear un artículo](/es/ayuda/articulos-y-skus/crear-un-sku)
-- [Editar un artículo](/es/ayuda/articulos-y-skus/editar-un-sku)
+- [Crear un producto](/es/ayuda/articulos/crear-un-producto)
+- [Crear un artículo](/es/ayuda/articulos/crear-un-articulo)
+- [Editar un artículo](/es/ayuda/articulos/editar-un-articulo)
 - [Propiedades](/es/conceptos/catalogo/propiedades)
 - [Unidades de medida](/es/conceptos/catalogo/unidades-de-medida)
 - [Lotes](/es/conceptos/almacen/lotes)
-- [Trabajar con lotes](/es/ayuda/articulos-y-skus/trabajar-con-lotes)
+- [Trabajar con lotes](/es/ayuda/articulos/trabajar-con-lotes)

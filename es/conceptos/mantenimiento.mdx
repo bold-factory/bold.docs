@@ -37,20 +37,19 @@ Mantenimiento registra intervenciones sobre activos, conserva historial y conect
 
 ## Permisos
 
-Los permisos de mantenimiento separan lectura y escritura por tipo de dato. Usa permisos de lectura para perfiles de consulta, análisis o soporte, y permisos de escritura para perfiles que cambian configuración o ejecución.
+Los permisos de mantenimiento separan consulta, configuración y ejecución. Usa permisos de consulta para perfiles de análisis o soporte, y permisos de edición para perfiles que cambian activos, causas, acciones, preventivos o partes.
 
-| Permiso | Uso |
+| Necesidad | Acceso recomendado |
 | --- | --- |
-| `Maintenance.Assets.Read` / `Maintenance.Assets.Write` | Consultar o gestionar activos. |
-| `Maintenance.ActionDefinitions.Read` / `Maintenance.ActionDefinitions.Write` | Consultar o gestionar acciones reutilizables. |
-| `Maintenance.Causes.Read` / `Maintenance.Causes.Write` | Consultar o gestionar causas y acciones planificadas. |
-| `Maintenance.WorkOrders.Read` / `Maintenance.WorkOrders.Write` | Consultar o ejecutar partes, tiempos, acciones y materiales. |
-| `Maintenance.PreventiveSchedules.Read` / `Maintenance.PreventiveSchedules.Write` | Consultar o gestionar programaciones preventivas. |
-| `Files.Files.Upload` | Subir resultados de acciones de tipo imagen o archivo. |
+| Consultar activos, partes o preventivos | Lectura de mantenimiento. |
+| Gestionar activos, causas o acciones | Edición de configuración de mantenimiento. |
+| Ejecutar partes, tiempos, acciones y materiales | Edición de partes de trabajo. |
+| Gestionar programaciones preventivas | Edición de mantenimiento preventivo. |
+| Subir imágenes o archivos como evidencia | Permiso para adjuntar archivos. |
 
 ## Partes de trabajo
 
-Un parte de trabajo guarda activo, tipo, causa, acciones, tiempos, materiales y estado. El backend bloquea cambios de cabecera, acciones, tiempos y materiales después de completar o cancelar el parte.
+Un parte de trabajo guarda activo, tipo, causa, acciones, tiempos, materiales y estado. Bold bloquea cambios de cabecera, acciones, tiempos y materiales después de completar o cancelar el parte.
 
 Al añadir un tiempo activo, el parte empieza o se reanuda. Cuando todos los tiempos terminan, el parte queda pausado. Si eliminas todos los tiempos, vuelve a pendiente.
 
@@ -93,14 +92,14 @@ Completar una acción ya completada se bloquea para proteger el historial.
 
 ## Preventivo
 
-Una programación preventiva define cuándo debe generarse un parte. El backend exige coherencia entre identificador de programación y fecha de ocurrencia: ambos deben existir o ambos deben quedar vacíos.
+Una programación preventiva define cuándo debe generarse un parte. Bold exige coherencia entre programación y fecha de ocurrencia: ambas deben existir o ambas deben quedar vacías.
 
-El planificador procesa programaciones habilitadas con `NextRunAt` vencida. Si la política es `SkipWhileOpen` y existe un parte generado que no está completado ni cancelado, marca la ocurrencia como omitida y calcula la siguiente. Si ya existe un parte no cancelado para la misma programación y ocurrencia, no duplica el parte y avanza la próxima generación.
+El planificador revisa programaciones habilitadas cuando llega su próxima fecha. Si la política evita duplicados mientras hay un parte abierto, omite esa ocurrencia y calcula la siguiente. Si ya existe un parte no cancelado para la misma programación y fecha, no duplica el parte y avanza la próxima generación.
 
-| Política técnica | Comportamiento funcional |
+| Política | Comportamiento |
 | --- | --- |
-| `AllowEachOccurrence` | Genera un parte para cada ocurrencia vencida. |
-| `SkipWhileOpen` | Omite la ocurrencia cuando ya hay un parte abierto de esa programación. |
+| Generar cada ocurrencia | Genera un parte para cada ocurrencia vencida. |
+| Omitir si hay parte abierto | Omite la ocurrencia cuando ya hay un parte abierto de esa programación. |
 
 Si una programación no genera un parte, revisa activo, frecuencia, fecha siguiente, estado de la programación, política de generación y posibles partes ya generados para la misma ocurrencia.
 
@@ -115,4 +114,3 @@ Los materiales consumidos deben tener cantidades positivas. Si detallas lotes, n
 - [Crear un parte de trabajo](/es/ayuda/mantenimiento/crear-parte-de-trabajo)
 - [Programar mantenimientos preventivos](/es/ayuda/mantenimiento/mantenimiento-preventivo)
 - [Coste teórico vs coste real](/es/conceptos/costes/coste-teorico-vs-real)
-- [API de mantenimiento](https://api.bold-factory.com/docs)

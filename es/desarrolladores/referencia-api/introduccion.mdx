@@ -1,30 +1,30 @@
 ---
 title: "Referencia de API"
 sidebarTitle: "Introducción"
-description: "Consulta la documentación pública de endpoints, modelos y pruebas de la API de Bold."
+description: "Consulta la documentación pública de rutas, modelos y pruebas de la API de Bold."
 ---
 
-La referencia de API de Bold se publica desde el backend en `https://api.bold-factory.com/docs`. Úsala para consultar endpoints, parámetros, esquemas, ejemplos y pruebas interactivas.
+La referencia de API de Bold se publica desde el servicio de Bold en `https://api.bold-factory.com/docs`. Úsala para consultar rutas, parámetros, esquemas, ejemplos y pruebas interactivas.
 
 <Card title="Abrir documentación de API" icon="external-link" href="https://api.bold-factory.com/docs">
-  Accede a la documentación publicada por el backend.
+  Accede a la documentación publicada por Bold.
 </Card>
 
 ## Qué contiene
 
-- Endpoints de la versión pública.
-- Parámetros de ruta, query y body.
-- Esquemas de request y response.
+- Rutas de la versión pública.
+- Parámetros de ruta, consulta y cuerpo.
+- Esquemas de petición y respuesta.
 - Modelos y códigos de respuesta.
 - Pruebas interactivas contra el entorno de API.
 
 ## Antes de llamar a la API
 
-Necesitas una clave API o un token bearer válido. Para integraciones servidor a servidor, crea una clave desde **Panel de control > Acceso > Claves API** y envíala en la cabecera `X-Api-Key`.
+Necesitas una clave API o una credencial de sesión válida. Para integraciones servidor a servidor, crea una clave desde **Panel de control > Acceso > Claves API** y envíala en la cabecera `X-Api-Key`.
 
 <Columns cols={2}>
   <Card title="Autenticación" icon="key-round" href="/es/desarrolladores/empezar/autenticacion">
-    Prepara credenciales y permisos antes de probar endpoints.
+    Prepara credenciales y permisos antes de probar rutas.
   </Card>
   <Card title="Paginación" icon="list" href="/es/desarrolladores/empezar/paginacion">
     Recorre listados con `pageNumber` y `pageSize`.
@@ -33,4 +33,4 @@ Necesitas una clave API o un token bearer válido. Para integraciones servidor a
 
 ## Especificación OpenAPI
 
-Esta sección también incluye páginas generadas desde `https://api.bold-factory.com/openapi/v1.json`. Usa la documentación publicada por el backend si quieres probar la API fuera de esta documentación.
+Esta sección también incluye páginas generadas desde `https://api.bold-factory.com/openapi/v1.json`. Usa la documentación publicada por Bold si quieres probar la API fuera de esta documentación.

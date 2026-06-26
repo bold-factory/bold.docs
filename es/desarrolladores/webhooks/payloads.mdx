@@ -1,16 +1,16 @@
 ---
-title: "Payloads"
-description: "Interpreta la estructura de los payloads enviados por webhooks."
+title: "Datos enviados"
+description: "Interpreta la estructura de los datos enviados por webhooks."
 ---
 
-Cada webhook envía un payload JSON con un sobre común y un `payload` específico del evento. El contrato concreto depende de `eventName`, `majorVersion` y `minorVersion`.
+Cada webhook envía un cuerpo JSON con un sobre común y un campo `payload` específico del evento. El contrato concreto depende de `eventName`, `majorVersion` y `minorVersion`.
 
 ## Campos que debes esperar
 
 | Campo | Uso |
 | --- | --- |
 | `attemptId` | Identifica el intento de entrega. |
-| `workspace` | Identifica el workspace o tenant que emitió el evento. |
+| `workspace` | Identifica el espacio de trabajo que emitió el evento. |
 | `eventId` | Permite deduplicar el evento de negocio entre reintentos. |
 | `eventName` | Indica qué ocurrió. |
 | `entity` | Entidad principal afectada por el evento. |
@@ -61,12 +61,12 @@ Cada webhook envía un payload JSON con un sobre común y un `payload` específi
   Los nombres visibles pueden cambiar. Usa `id` o `reference` para reconciliar datos entre sistemas.
 </Accordion>
 
-<Accordion title="Guarda el payload original">
+<Accordion title="Guarda los datos originales">
   Conserva el JSON recibido durante el tiempo necesario para auditoría. Facilita depuración si un sistema externo falla.
 </Accordion>
 
 <Warning>
-  Trata los payloads como datos sensibles. Pueden contener referencias operativas, clientes, proveedores o cantidades de producción.
+  Trata los datos enviados como información sensible. Pueden contener referencias operativas, clientes, proveedores o cantidades de producción.
 </Warning>
 
 ## Deduplicación

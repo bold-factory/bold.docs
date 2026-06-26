@@ -1,0 +1,44 @@
+---
+title: "Claves de integración y avisos externos"
+description: "Entiende credenciales técnicas, eventos y reglas para integraciones externas."
+icon: "key-round"
+---
+
+Las **claves de integración** permiten que un sistema externo se conecte con Bold. Los **avisos externos** notifican a otros sistemas cuando ocurre un evento.
+
+## Claves de integración
+
+| Concepto | Uso |
+| --- | --- |
+| Clave de integración | Credencial técnica para autenticar una integración. |
+| Alcance | Permisos que determinan qué puede leer o modificar la clave. |
+| Sistema externo | Aplicación que usa la clave para integrarse con Bold. |
+
+Crea claves separadas por sistema externo. Así puedes revocar una integración sin afectar a las demás.
+
+## Avisos externos
+
+| Concepto | Uso |
+| --- | --- |
+| Evento | Cambio relevante en Bold, como stock, pedido, orden o parte. |
+| Suscripción | Configuración que decide qué eventos se envían y a qué destino. |
+| Entrega | Petición HTTP enviada al sistema externo. |
+
+Usa avisos externos cuando otro sistema necesite reaccionar a cambios de catálogo, stock, pedidos, producción o mantenimiento.
+
+<Tip>
+  Para integraciones críticas, combina avisos externos con lecturas periódicas paginadas. El aviso externo avisa rápido y la reconciliación detecta eventos perdidos o errores de entrega.
+</Tip>
+
+## Reglas
+
+- Guarda la clave de integración al crearla. No la compartas entre sistemas externos.
+- Concede solo los permisos necesarios para la integración.
+- Valida que el destino de aviso externo pueda recibir reintentos y registrar errores.
+- Usa una revisión periódica de datos cuando la entrega de eventos sea crítica.
+
+## Relacionado
+
+- [Panel de control](/es/conceptos/panel-de-control)
+- [Usuarios, perfiles y permisos](/es/conceptos/panel-de-control/usuarios-roles-y-permisos)
+- [Autenticación para integraciones](/es/desarrolladores/empezar/autenticacion)

@@ -11,7 +11,7 @@ GET /v1/notifications/events/versions
 ```
 
 <Info>
-  Usa siempre el listado del entorno donde vas a integrar. Los eventos disponibles pueden crecer con nuevas funcionalidades. Estos endpoints requieren acceso a la aplicación.
+  Usa siempre el listado del entorno donde vas a integrar. Los eventos disponibles pueden crecer con nuevas funcionalidades. Estas rutas requieren acceso a la aplicación.
 </Info>
 
 ## Familias de eventos
@@ -49,7 +49,7 @@ Los nombres siguen el patrón `Dominio.Entidad.Accion`.
 | `Warehouse.Receipt.Received` | Avisar de una entrada real de material. |
 | `Warehouse.Shipment.Shipped` | Actualizar un sistema logístico tras una salida. |
 | `Production.Order.Finished` | Reaccionar al cierre de una orden de fabricación. |
-| `Maintenance.WorkOrder.Completed` | Enviar cierre de mantenimiento a BI o ERP. |
+| `Maintenance.WorkOrder.Completed` | Enviar cierre de mantenimiento a una herramienta de análisis o a un sistema de gestión. |
 
 <Warning>
   No construyas nombres de eventos a mano. Usa `/v1/notifications/events/versions` para leer `eventName` y `eventVersion` del entorno.
@@ -62,13 +62,13 @@ Los nombres siguen el patrón `Dominio.Entidad.Accion`.
     Decide si necesitas saber que una línea se confirmó, una recepción se completó o una orden cambió de estado.
   </Step>
   <Step title="Consulta nombre y versión">
-    Usa el endpoint de eventos disponibles para obtener el contrato vigente.
+    Usa la ruta de eventos disponibles para obtener el contrato vigente.
   </Step>
   <Step title="Suscribe solo lo necesario">
     Evita suscripciones genéricas si tu integración solo necesita una familia de eventos.
   </Step>
   <Step title="Versiona tu consumidor">
-    Trata `eventVersion` como parte del contrato. No mezcles versiones sin probar el payload.
+    Trata `eventVersion` como parte del contrato. No mezcles versiones sin probar los datos enviados.
   </Step>
 </Steps>
 

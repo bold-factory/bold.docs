@@ -1,10 +1,12 @@
 ---
 title: "Stock y movimientos"
-description: "Entiende cómo Bold registra stock físico, disponible, entrante, saliente y movimientos."
+description: "Entiende cómo Bold registra stock físico, disponibilidad, entradas, salidas y movimientos."
 icon: "boxes"
 ---
 
-El stock indica qué cantidad de un artículo existe o se espera. Los movimientos explican por qué cambió esa cantidad.
+El **stock** indica qué cantidad de un artículo existe o se espera. Los movimientos explican por qué cambió esa cantidad.
+
+Bold guarda el stock físico como unidades de stock. Cada unidad identifica un artículo, una ubicación, un lote cuando aplica y una cantidad.
 
 ## Unidad de stock
 
@@ -15,8 +17,11 @@ Bold controla stock por la combinación de:
 | Artículo | Qué material es. |
 | Ubicación | Dónde está. |
 | Lote | Qué origen o conjunto trazable tiene, si aplica. |
+| Cantidad | Cuántas unidades existen en esa combinación. |
 
 Esa combinación permite separar el mismo artículo por zona, proveedor, fabricación, coste o calidad.
+
+Si un artículo trabaja con lotes, la unidad de stock debe indicar el lote correcto. Si no trabaja con lotes, el stock puede controlarse solo por artículo y ubicación.
 
 ## Tipos de stock
 
@@ -28,7 +33,7 @@ Esa combinación permite separar el mismo artículo por zona, proveedor, fabrica
 | Stock saliente | Cantidad comprometida por ventas, envíos o consumos. |
 | Stock proyectado | Evolución esperada al aplicar entradas y salidas futuras. |
 
-El stock físico responde a "qué hay ahora". El proyectado responde a "qué habrá si se cumplen los compromisos".
+El stock físico responde a "qué hay ahora". El stock proyectado responde a "qué habrá si se cumplen los compromisos".
 
 ## Movimientos de stock
 
@@ -38,14 +43,33 @@ Un movimiento de stock es la auditoría de una mutación. Guarda cantidad, signo
 | --- | --- |
 | Recepción | Aumenta stock físico. |
 | Envío | Reduce stock físico. |
-| Consumo | Reduce stock por fabricación o mantenimiento. |
-| Producción | Aumenta stock fabricado o co-productos. |
-| Movimiento interno | Cambia ubicación, lote o bulto sin cambiar el total. |
-| Inventario o ajuste | Regulariza diferencias detectadas. |
+| Progreso de orden | Aumenta stock cuando una fabricación produce unidades. |
+| Consumo de entrada | Reduce stock por materiales consumidos en fabricación. |
+| Consumo de mantenimiento | Reduce stock por materiales usados en un parte de trabajo. |
+| Co-producto producido | Aumenta stock de salidas adicionales de una operación. |
+| Reasignación de lote | Cambia la trazabilidad de stock entre lotes. |
+| Fusión de lote | Mueve stock trazable hacia un lote fusionado. |
+| Fusión de artículo | Traslada stock cuando se consolidan artículos. |
+| Inventario o ajuste | Regulariza diferencias detectadas o recuentos físicos. |
+
+Cuando una acción se revierte, Bold registra un movimiento contrario. La reversión conserva auditoría en vez de borrar el movimiento original.
+
+## Trazabilidad del cambio
+
+Cada movimiento debe poder responder:
+
+- qué artículo cambió;
+- en qué ubicación ocurrió;
+- qué lote participó, si aplica;
+- qué documento o acción lo originó;
+- qué cantidad entró o salió;
+- cuándo ocurrió.
+
+Usa movimientos para investigar diferencias antes de crear ajustes manuales. Si ajustas sin revisar el origen, puedes corregir el saldo pero perder la causa.
 
 ## Stock negativo
 
-Un saldo negativo indica que Bold registró una salida antes de tener una entrada que la cubra en la misma combinación de artículo, ubicación y lote.
+Un stock negativo indica que Bold registró una salida antes de tener una entrada que la cubra en la misma combinación de artículo, ubicación y lote.
 
 Puede ocurrir por consumos anticipados, recepciones pendientes, ubicaciones incorrectas o movimientos no registrados. Revisa el origen antes de ajustar, porque un ajuste manual puede ocultar la causa real.
 
@@ -53,5 +77,6 @@ Puede ocurrir por consumos anticipados, recepciones pendientes, ubicaciones inco
 
 - [Almacén](/es/conceptos/almacen)
 - [Lotes](/es/conceptos/almacen/lotes)
-- [Consultar stock](/es/ayuda/almacen/consultar-stock)
-- [Ver movimientos de stock](/es/ayuda/almacen/ver-movimientos-de-stock)
+- [Investigar diferencias de stock](/es/ayuda/almacen/investigar-diferencias-de-stock)
+- [Mover stock](/es/ayuda/almacen/mover-stock)
+- [Ajustar stock](/es/ayuda/almacen/ajustar-stock)

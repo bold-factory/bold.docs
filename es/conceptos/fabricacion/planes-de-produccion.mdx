@@ -29,6 +29,18 @@ El plan no cambia la ejecución real hasta que lo aplicas.
 
 Si cambian órdenes, recursos, turnos o materiales después de resolver, actualiza o resuelve el plan de nuevo antes de aplicarlo.
 
+## Estados del cálculo
+
+| Estado | Significado |
+| --- | --- |
+| **Pendiente** | El plan está creado o actualizado, pero todavía no se está resolviendo. |
+| **Procesando** | Bold está calculando una propuesta de secuencia. |
+| **Solución encontrada** | Existe una propuesta revisable y aplicable. |
+| **Fallido** | El cálculo no terminó correctamente. |
+| **Sin solución factible** | No se encontró una secuencia válida con los datos y restricciones actuales. |
+
+Consulta [Estados de fabricación](/es/conceptos/fabricacion/estados-de-fabricacion) para distinguir estados de planes y estados de ejecución real.
+
 ## Qué no modifica
 
 Un plan no debe cambiar operaciones finalizadas ni canceladas. Tampoco sustituye los registros reales de ejecución. Sirve para planificar trabajo abierto y trasladar una propuesta aprobada.
@@ -40,6 +52,7 @@ Planificación responde qué falta y cuándo falta. El plan de producción respo
 ## Relacionado
 
 - [Secuenciación](/es/conceptos/fabricacion/secuenciacion)
+- [Estados de fabricación](/es/conceptos/fabricacion/estados-de-fabricacion)
 - [Turnos](/es/conceptos/fabricacion/turnos)
 - [Recursos](/es/conceptos/fabricacion/recursos)
 - [Saber qué fabricar](/es/ayuda/planificacion/saber-que-fabricar)

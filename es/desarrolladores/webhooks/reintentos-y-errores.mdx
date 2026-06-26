@@ -7,12 +7,12 @@ Un webhook cruza dos sistemas. Debes asumir que puede haber reintentos, entregas
 
 ## Respuestas esperadas
 
-| Respuesta de tu endpoint | Resultado recomendado |
+| Respuesta del receptor | Resultado recomendado |
 | --- | --- |
 | `2xx` | Evento aceptado. Bold puede marcar la entrega como correcta. |
-| `4xx` | Error de consumidor o payload no aceptado. Revisa configuración y contrato. |
+| `4xx` | Error del consumidor o datos no aceptados. Revisa configuración y contrato. |
 | `5xx` | Error temporal del receptor. El evento debe poder reintentarse. |
-| Timeout | El receptor no respondió a tiempo. Procesa con cola y responde rápido. |
+| Tiempo de espera agotado | El receptor no respondió a tiempo. Procesa con cola y responde rápido. |
 
 <Warning>
   No devuelvas `2xx` si descartaste el evento sin guardarlo. Bold asumirá que la entrega fue correcta.
@@ -20,13 +20,13 @@ Un webhook cruza dos sistemas. Debes asumir que puede haber reintentos, entregas
 
 ## Intentos automáticos
 
-Bold intenta enviar una notificación hasta cinco veces. Después de cada fallo, programa el siguiente intento con backoff exponencial.
+Bold intenta enviar una notificación hasta cinco veces. Después de cada fallo, programa el siguiente intento con espera exponencial.
 
 | Dato | Comportamiento |
 | --- | --- |
-| Timeout de envío | 30 segundos. |
+| Tiempo máximo de envío | 30 segundos. |
 | Intentos máximos | 5 intentos automáticos. |
-| Backoff automático | `10 * 2^n` segundos, donde `n` es el número de intentos realizados. |
+| Espera automática | `10 * 2^n` segundos, donde `n` es el número de intentos realizados. |
 | Estado final tras agotar intentos | `Failure`. |
 | Reintento manual | Solo para notificaciones en `Failure`, mediante `POST /v1/notifications/webhook/{id}/retry`. |
 
@@ -49,13 +49,13 @@ Cuando solicitas un reintento manual, la notificación vuelve a `Pending` y se p
 - Guarda `attemptId` si necesitas auditar cada entrega.
 - No dependas del orden estricto entre eventos.
 - Consulta la API si necesitas confirmar el estado final.
-- Registra el payload original para auditoría y depuración.
-- Verifica `X-HMAC-Signature` antes de confiar en el payload.
+- Registra los datos originales para auditoría y depuración.
+- Verifica `X-HMAC-Signature` antes de confiar en los datos.
 
 ## Patrón recomendado
 
 <Steps>
-  <Step title="Valida el payload">
+  <Step title="Valida los datos enviados">
     Comprueba que `eventName`, `majorVersion`, `minorVersion` y el identificador de entidad son los esperados.
   </Step>
   <Step title="Detecta duplicados">
@@ -65,7 +65,7 @@ Cuando solicitas un reintento manual, la notificación vuelve a `Pending` y se p
     Guarda el evento en tu sistema y responde rápido.
   </Step>
   <Step title="Procesa en segundo plano">
-    Ejecuta llamadas a ERP, BI u otros servicios fuera del tiempo de respuesta HTTP.
+    Ejecuta llamadas a sistemas de gestión, herramientas de análisis u otros servicios fuera del tiempo de respuesta HTTP.
   </Step>
 </Steps>
 

@@ -6,40 +6,87 @@ icon: "calendar-range"
 
 La planificación compara **demanda**, **suministro** y **stock** para decidir qué falta, cuándo falta y cómo cubrirlo.
 
+La demanda indica necesidades. El suministro indica entradas esperadas. La [asignación de demanda y suministro](/es/conceptos/planificacion/asignacion-de-demanda-y-suministro) explica qué parte de cada necesidad queda cubierta por stock actual o por entradas futuras.
+
 ## Conceptos
 
 | Concepto | Significado |
 | --- | --- |
 | Demanda | Necesidad de stock generada por venta, previsión o consumo previsto. |
 | Suministro | Entrada esperada por compra, fabricación o previsión. |
+| Asignación | Relación calculada entre una necesidad y el stock o suministro que la cubre. |
 | Stock proyectado | Evolución futura al aplicar demanda y suministro. |
+| Contra pedido | Cobertura directa de una necesidad concreta. |
+| Contra stock | Cobertura agrupada desde inventario común y entradas compartidas. |
 | Punto de pedido | Umbral desde el que conviene reponer. |
 | Pedido mínimo | Cantidad mínima recomendada. |
 | Tamaño de lote | Múltiplo operativo para redondear cantidades. |
 
 ## Demanda
 
-La demanda puede venir de pedidos de venta, necesidades internas o consumos previstos. Una línea en borrador no debería tratarse igual que un compromiso confirmado.
+La demanda puede venir de pedidos de venta, necesidades internas, previsiones o consumos previstos.
+
+| Origen | Cuándo genera demanda |
+| --- | --- |
+| Pedido de venta | Cuando la línea está confirmada y queda cantidad pendiente de entregar. |
+| Orden o petición de fabricación | Cuando necesita componentes o material para ejecutarse. |
+| Previsión | Cuando representa una necesidad futura que quieres cubrir. |
+| Consumo previsto | Cuando una operación abierta espera consumir material. |
+
+Una línea en borrador no debería tratarse igual que un compromiso confirmado. Confirma los documentos cuando quieras que entren en planificación.
 
 ## Suministro
 
-El suministro puede venir de pedidos de compra, recepciones pendientes, peticiones de fabricación u órdenes planificadas.
+El suministro puede venir de pedidos de compra, recepciones pendientes, peticiones de fabricación, órdenes planificadas o previsiones.
+
+| Origen | Cuándo genera suministro |
+| --- | --- |
+| Pedido de compra | Cuando la línea está confirmada y queda cantidad pendiente de recibir. |
+| Petición de fabricación | Cuando representa una necesidad de fabricar antes de una fecha. |
+| Orden de fabricación | Cuando la producción pendiente debe aumentar stock. |
+| Previsión | Cuando representa una entrada esperada todavía no convertida en documento real. |
 
 Cuando almacén recibe material o producción completa una orden, el suministro pendiente se transforma en stock físico.
 
 ## Stock proyectado
 
 ```text
-Stock disponible proyectado = stock físico - stock saliente + stock entrante
+Stock disponible actual = stock físico - stock saliente
+Stock disponible proyectado = stock disponible actual + stock entrante
 ```
 
 El proyectado permite detectar faltas antes de que el stock físico sea negativo.
 
 Las [previsiones y asistentes](/es/conceptos/planificacion/previsiones-y-asistentes) usan este cálculo para sugerir compras o fabricaciones antes de crear documentos.
 
+## Estados de cobertura
+
+| Estado | Significado |
+| --- | --- |
+| **Disponible** | Hay stock suficiente ahora. |
+| **Planificado** | La necesidad queda cubierta por suministro futuro. |
+| **Parcialmente planificado** | Solo una parte queda cubierta. |
+| **Pendiente** | Falta crear o confirmar suministro suficiente. |
+| **No requerido** | La necesidad no requiere aprovisionamiento. |
+
+Consulta [Asignación de demanda y suministro](/es/conceptos/planificacion/asignacion-de-demanda-y-suministro) para ver cómo se decide cada estado.
+
+## Ejemplo
+
+Tienes 20 unidades de un artículo. Hay una venta confirmada de 35 unidades y una compra confirmada de 30 unidades que llega antes de la fecha de entrega.
+
+| Momento | Efecto | Proyectado |
+| --- | --- | --- |
+| Hoy | Stock físico inicial | 20 |
+| Compra | Entra suministro de 30 | 50 |
+| Venta | Sale demanda de 35 | 15 |
+
+Aunque el stock físico actual sea 20, planificación puede ver que la venta queda cubierta si la compra llega a tiempo.
+
 ## Relacionado
 
 - [Planificación](/es/conceptos/planificacion)
+- [Asignación de demanda y suministro](/es/conceptos/planificacion/asignacion-de-demanda-y-suministro)
 - [Previsiones y asistentes](/es/conceptos/planificacion/previsiones-y-asistentes)
 - [Stock y movimientos](/es/conceptos/almacen/stock-y-movimientos)
 - [Saber qué comprar](/es/ayuda/planificacion/saber-que-comprar)
