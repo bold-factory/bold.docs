@@ -1,0 +1,171 @@
+es/ayuda/produccion/ejecutar-operaciones-en-planta.mdx
+  s_481f58cf6567dd::t_2a075894d59be9 1-95
+es/conceptos/planificacion/demanda-y-suministro.mdx
+  s_467ac2fb8a312d::t_ea35da62d76c6f 38-39,43
+es/ayuda/smart-factory/introduccion.mdx
+  s_481f58cf6567dd::t_ce75064180655f 14-15
+  s_e14e45ff3250df::t_c4a6a46422ad98 17-18
+es/conceptos/fabricacion/controles-consumos-y-pausas.mdx
+  s_467ac2fb8a312d::t_9b5eb22b1a6230 9-10,52
+es/ayuda/smart-factory/crear-automatizacion-con-agente.mdx
+  s_481f58cf6567dd::t_2a075894d59be9 1-59
+es/conceptos/personal/periodos-tareas-y-presencia.mdx
+  s_467ac2fb8a312d::t_7bcc839a352029 1-63
+docs.json
+  s_481f58cf6567dd::t_b075d4dfac1c7f 63-74,84,95-96,106,109-111,124-125,145,154,167-168,178,181-182,402-473
+  s_467ac2fb8a312d::t_5e568568c20566 199-204,214-215,230-231,235,247,289-290,311-312,325
+  s_467ac2fb8a312d::t_fdcee24c91c40b 198
+es/conceptos/smart-factory/agentes.mdx
+  s_467ac2fb8a312d::t_ea35da62d76c6f 43,61
+es/conceptos/planificacion.mdx
+  s_467ac2fb8a312d::t_38e1f3fb8ada53 15-17,44,109
+es/ayuda/planificacion/introduccion.mdx
+  s_481f58cf6567dd::t_2a075894d59be9 1-58
+es/ayuda/panel-de-control/crear-etiquetas-y-codigos.mdx
+  s_481f58cf6567dd::t_2a075894d59be9 1-47
+es/ayuda/almacen/solucion-de-problemas-de-stock.mdx
+  s_481f58cf6567dd::t_28071606122ece 52-53,55
+es/conceptos/fabricacion/secuenciacion.mdx
+  s_467ac2fb8a312d::t_9b5eb22b1a6230 44
+es/ayuda/produccion/configurar-controles-de-calidad.mdx
+  s_481f58cf6567dd::t_2a075894d59be9 1-61
+es/ayuda/panel-de-control/gestionar-archivos.mdx
+  s_481f58cf6567dd::t_28071606122ece 77
+es/ayuda/costes/partes-de-trabajo.mdx
+  s_481f58cf6567dd::t_28071606122ece 82
+es/conceptos/fabricacion/ordenes-de-fabricacion.mdx
+  s_467ac2fb8a312d::t_9b5eb22b1a6230 50-51
+es/ayuda/costes/valoracion-inventario.mdx
+  s_481f58cf6567dd::t_28071606122ece 86-87
+es/ayuda/costes/preparar-datos-de-coste.mdx
+  s_481f58cf6567dd::t_2a075894d59be9 1-65
+es/ayuda/almacen/investigar-diferencias-de-stock.mdx
+  s_481f58cf6567dd::t_2a075894d59be9 1-62
+es/ayuda/produccion/configurar-recursos-de-produccion.mdx
+  s_481f58cf6567dd::t_2a075894d59be9 1-69
+es/ayuda/almacen/introduccion.mdx
+  s_481f58cf6567dd::t_ce75064180655f 15
+  s_481f58cf6567dd::t_deadb2db415550 14
+es/conceptos/panel-de-control/auditoria-y-eventos.mdx
+  s_481f58cf6567dd::t_4ed9bc8b00257b 1-70
+es/conceptos/fabricacion.mdx
+  s_481f58cf6567dd::t_f0aea3c23bfb79 30-35,45-47,64-65,67,87
+es/ayuda/costes/introduccion.mdx
+  s_481f58cf6567dd::t_ce75064180655f 11-12
+  s_481f58cf6567dd::t_738357e26fac4a 13
+es/ayuda/panel-de-control/introduccion.mdx
+  s_481f58cf6567dd::t_ce75064180655f 14-16,26
+  s_481f58cf6567dd::t_b3485bc2ec786f 27-28
+  s_481f58cf6567dd::t_c4c2024e522d39 38
+es/ayuda/panel-de-control/disenar-roles-por-responsabilidad.mdx
+  s_481f58cf6567dd::t_2a075894d59be9 1-61
+es/ayuda/produccion/introduccion.mdx
+  s_481f58cf6567dd::t_ce75064180655f 15-16,20,26-27
+  s_481f58cf6567dd::t_1e129263591187 14
+  s_481f58cf6567dd::t_8898981478b81f 28
+es/conceptos/panel-de-control.mdx
+  s_467ac2fb8a312d::t_38e1f3fb8ada53 24-26,42,60
+es/conceptos/fabricacion/recetas-y-versiones.mdx
+  s_467ac2fb8a312d::t_9b5eb22b1a6230 63-64
+es/ayuda/planificacion/priorizar-necesidades.mdx
+  s_481f58cf6567dd::t_2a075894d59be9 1-59
+es/ayuda/almacen/trabajar-con-bultos-y-contenedores.mdx
+  s_481f58cf6567dd::t_2a075894d59be9 1-61
+es/conceptos/personal.mdx
+  s_467ac2fb8a312d::t_38e1f3fb8ada53 18-20,32-33,60,68
+es/ayuda/ventas/preparar-y-registrar-envio.mdx
+  s_481f58cf6567dd::t_2a075894d59be9 1-76
+es/ayuda/personal/configurar-horarios-y-turnos.mdx
+  s_481f58cf6567dd::t_2a075894d59be9 1-47
+es/ayuda/smart-factory/consultar-o-delegar-con-ia.mdx
+  s_481f58cf6567dd::t_2a075894d59be9 1-57
+es/ayuda/produccion/ejecutar-una-orden.mdx
+  s_481f58cf6567dd::t_28071606122ece 110,112
+es/conceptos/panel-de-control/notificaciones.mdx
+  s_467ac2fb8a312d::t_ea35da62d76c6f 9-10,35
+es/ayuda/smart-factory/boldy.mdx
+  s_481f58cf6567dd::t_28071606122ece 65,69
+es/conceptos/personal/jornadas-calendarios-y-turnos.mdx
+  s_467ac2fb8a312d::t_ea35da62d76c6f 11-12,52
+es/ayuda/smart-factory/tareas-con-agentes.mdx
+  s_481f58cf6567dd::t_28071606122ece 89
+es/ayuda/costes/ordenes-de-fabricacion.mdx
+  s_481f58cf6567dd::t_28071606122ece 80-81
+es/conceptos/smart-factory.mdx
+  s_467ac2fb8a312d::t_38e1f3fb8ada53 21-23,50,73
+es/conceptos/fabricacion/recursos.mdx
+  s_467ac2fb8a312d::t_9b5eb22b1a6230 11-12,57-58
+es/ayuda/produccion/revisar-oee-y-paradas.mdx
+  s_481f58cf6567dd::t_2a075894d59be9 1-59
+es/ayuda/almacen/ajustar-stock.mdx
+  s_481f58cf6567dd::t_2c1983f2e68a59 80
+es/ayuda/almacen/recibir-con-albaran.mdx
+  s_e14e45ff3250df::t_c824ac0984ae9b 54
+es/ayuda/almacen/ver-movimientos-de-stock.mdx
+  s_481f58cf6567dd::t_a7ecc42533187b 61
+es/ayuda/personal/calendarios-locales.mdx
+  s_e14e45ff3250df::t_6e43e881667d6e 54-55
+es/ayuda/personal/introduccion.mdx
+  s_e14e45ff3250df::t_585f1ffed0077e 14-15
+es/ayuda/personal/jornadas-laborales.mdx
+  s_e14e45ff3250df::t_2a55b33a2e5a7d 50-51
+es/ayuda/personal/turnos.mdx
+  s_e14e45ff3250df::t_489744b9f33694 54-55
+es/ayuda/produccion/asignar-recursos.mdx
+  s_e14e45ff3250df::t_591cf9121d6f98 54
+es/ayuda/produccion/secuenciar-ordenes.mdx
+  s_e14e45ff3250df::t_dc4944b886a574 68
+es/conceptos/catalogo.mdx
+  s_481f58cf6567dd::t_617d24311716ab 24-26,37,88
+es/conceptos/catalogo/unidades-de-medida.mdx
+  s_481f58cf6567dd::t_6fc9eeb07f7afb 1-58
+es/conceptos/fabricacion/herramientas-y-caracteristicas.mdx
+  s_481f58cf6567dd::t_a8d0324e5d70eb 1-63
+es/conceptos/fabricacion/inspecciones-y-controles.mdx
+  s_481f58cf6567dd::t_7d04fb363f90f1 1-64
+es/conceptos/introduccion.mdx
+  s_481f58cf6567dd::t_25bae88eacb3d1 18,21,30-33,47
+es/conceptos/modo-de-trabajo.mdx
+  s_467ac2fb8a312d::t_779d152d6a3148 1-66
+es/conceptos/planificacion/previsiones-y-asistentes.mdx
+  s_467ac2fb8a312d::t_21b2aa4bcd4e73 1-81
+es/conceptos/smart-factory/automatizaciones.mdx
+  s_481f58cf6567dd::t_300149e0b5a207 1-65
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "f1cfa67bb38844dce2e02d999e5ac58a7c2e47f3",
+  "prompts": {},
+  "humans": {
+    "h_55f2ba4d68b42c": {
+      "author": "Pablo López <pablo@bold-factory.com>"
+    }
+  },
+  "sessions": {
+    "s_467ac2fb8a312d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f051f-e62f-7470-be47-ebe4444a92da",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_481f58cf6567dd": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f0525-d7e9-7a83-863b-def6a094bc63",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_e14e45ff3250df": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019efffd-dcdf-7aa1-b60f-6733c01b178e",
+        "model": "unknown"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
