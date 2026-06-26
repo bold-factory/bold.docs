@@ -1,0 +1,34 @@
+es/ayuda/smart-factory/informes-powerbi.mdx
+  s_de143ca0eee653::t_7dcc87b4e2e470 28,80
+es/conceptos/smart-factory.mdx
+  s_de143ca0eee653::t_7dcc87b4e2e470 70
+es/conceptos/smart-factory/informes.mdx
+  s_de143ca0eee653::t_7dcc87b4e2e470 25
+es/conceptos/panel-de-control.mdx
+  s_de143ca0eee653::t_7dcc87b4e2e470 49,51,55-56,59
+es/desarrolladores/empezar/autenticacion.mdx
+  s_de143ca0eee653::t_7dcc87b4e2e470 86
+es/ayuda/panel-de-control/configuracion-de-empresa.mdx
+  s_de143ca0eee653::t_7dcc87b4e2e470 81
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "42c081a22082e75dda7bf41281f3f643634bf9ef",
+  "prompts": {},
+  "humans": {
+    "h_55f2ba4d68b42c": {
+      "author": "Pablo López <pablo@bold-factory.com>"
+    }
+  },
+  "sessions": {
+    "s_de143ca0eee653": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f050c-0411-7471-9661-0f6e52474cc9",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
