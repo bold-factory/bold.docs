@@ -15,14 +15,16 @@ pnpm install
 Run a local preview:
 
 ```bash
-pnpm exec mint dev
+pnpm dev
 ```
+
+Project scripts run the local `mint` dependency and store temporary Mintlify runtime files under `.tmp/`.
 
 Validate the docs before publishing:
 
 ```bash
-pnpm exec mint validate
-pnpm exec mint broken-links
+pnpm validate
+pnpm broken-links
 ```
 
 ## Project structure
