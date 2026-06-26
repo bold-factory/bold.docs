@@ -1,0 +1,83 @@
+es/conceptos/smart-factory/informes.mdx
+  s_642abbf189dabc::t_860d9654b3c261 4
+es/conceptos/smart-factory/agentes.mdx
+  s_50f3f6d5e1c497::t_ba49bd56e500af 41,43-52
+es/conceptos/panel-de-control/usuarios-roles-y-permisos.mdx
+  s_50f3f6d5e1c497::t_ba49bd56e500af 89
+es/conceptos/panel-de-control.mdx
+  s_50f3f6d5e1c497::t_ba49bd56e500af 3,7,39,47
+docs.json
+  s_50f3f6d5e1c497::t_ba49bd56e500af 299,475-490
+es/ayuda/smart-factory/boldy.mdx
+  s_50f3f6d5e1c497::t_ba49bd56e500af 70
+es/conceptos/smart-factory.mdx
+  s_642abbf189dabc::t_860d9654b3c261 12
+  s_50f3f6d5e1c497::t_ba49bd56e500af 30,36-48,63
+es/ayuda/smart-factory/tareas-con-agentes.mdx
+  s_50f3f6d5e1c497::t_ba49bd56e500af 62-69,73-75
+  s_50f3f6d5e1c497::t_96fa15124201cb 76
+es/ayuda/panel-de-control/configuracion-de-empresa.mdx
+  s_50f3f6d5e1c497::t_ba49bd56e500af 83
+es/ayuda/primeros-pasos/introduccion.mdx
+  s_94f44eadd2aab5::t_a514b17614b5b7 2-3,6,8,10-23,25,28-29,31-32,34-35,39,41
+es/ayuda/panel-de-control/introduccion.mdx
+  s_94f44eadd2aab5::t_a6ace1d1b0244f 2-3,6,8,11-12,14-15,17-18,20-21,28-29,31-32,34-35,37-38,44,49
+  s_642abbf189dabc::t_e1e49f038a14f2 50,53
+es/ayuda/costes/introduccion.mdx
+  s_642abbf189dabc::t_4a486057039455 2
+es/ayuda/almacen/introduccion.mdx
+  s_642abbf189dabc::t_6d4e276b5b136c 2-3,6
+es/ayuda/articulos-y-skus/introduccion.mdx
+  s_642abbf189dabc::t_0113ce944b07f7 2-3,6
+es/ayuda/personal/introduccion.mdx
+  s_642abbf189dabc::t_ce70da12520949 2
+es/ayuda/produccion/introduccion.mdx
+  s_642abbf189dabc::t_de5945fc3cbfe9 2-3
+es/ayuda/smart-factory/introduccion.mdx
+  s_e14e45ff3250df::t_a9f264838238b8 20-21,53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "53660b1caf3e53e361edc9233fcee3c111612f59",
+  "prompts": {},
+  "humans": {
+    "h_55f2ba4d68b42c": {
+      "author": "Pablo López <pablo@bold-factory.com>"
+    }
+  },
+  "sessions": {
+    "s_50f3f6d5e1c497": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f04bd-4ce1-7161-a529-20340fd87853",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_642abbf189dabc": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f04bc-7c00-7202-9688-49f3163510b8",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_94f44eadd2aab5": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f03c4-1d1c-7220-94e0-c0d73f71b242",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_e14e45ff3250df": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019efffd-dcdf-7aa1-b60f-6733c01b178e",
+        "model": "unknown"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
