@@ -1,0 +1,376 @@
+es/ayuda/produccion/revisar-oee-y-paradas.mdx
+  s_fc022f22176985::t_e2de8bc58bc5c6 12
+  s_fc022f22176985::t_6bb5d6f767a906 2-3,6,22,52
+  s_f770b9351cac38::t_fc698614182d87 58
+es/ayuda/produccion/ver-oee-por-estacion.mdx
+  s_fc022f22176985::t_e2de8bc58bc5c6 12
+  s_fc022f22176985::t_6bb5d6f767a906 1,3-5,7-11,13-17,19-23,26-46,48-54
+  s_f770b9351cac38::t_19043095d5a3c7 2,6,18,24-25,47
+es/ayuda/smart-factory/boldy.mdx
+  s_f770b9351cac38::t_5fdc54c35a633d 44
+  s_65f22cefe7a610::t_bb541722ac7256 22-23
+  s_0dd80b0f93a8c5::t_82d1e6b029e8a9 62
+es/conceptos/panel-de-control/notificaciones.mdx
+  s_f770b9351cac38::t_46945aa0e17c27 15-17
+  s_f770b9351cac38::t_f8a36a7176b397 34
+  s_f770b9351cac38::t_cd444f83d67a02 9
+es/conceptos/planificacion/demanda-y-suministro.mdx
+  s_450f0be9b583f6::t_51a1f38621227b 10,19,27-36,40-45,47,62-65,67-79,81-83,89
+  s_f770b9351cac38::t_f7e5457835da00 9,46
+  s_450f0be9b583f6::t_6783dca3f1947f 17,20,54-55,66,80,84
+  s_f770b9351cac38::t_39c331b2ab5d7b 85
+es/conceptos/planificacion.mdx
+  s_450f0be9b583f6::t_257ac4b9b34a4b 15,17,61
+  s_450f0be9b583f6::t_9b30ded3a7c4c6 16,44,58,60,62,69-70,106
+  s_fc022f22176985::t_6bb5d6f767a906 21-23,56
+es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones.mdx
+  s_450f0be9b583f6::t_45477250e05c70 49-50,57-58,70,73
+es/ayuda/ventas/preparar-y-registrar-envio.mdx
+  s_f770b9351cac38::t_f7e5457835da00 66
+es/ayuda/costes/articulos.mdx
+  s_f770b9351cac38::t_64c7614ac737a0 71
+  s_f770b9351cac38::t_09c455526ee2cf 6,12,22-24,27,33,36-37,49,57,64
+es/ayuda/primeros-pasos/flujo-basico-de-trabajo.mdx
+  s_c6ce3c7bec1ebe::t_3c2987f5f1c4d5 3,6-8,13-17,19-20,22-23,25-26,28-29,31-32,36,38-50,52,54,56-63,66,69,71,73-75,77,79-92,97-98
+es/conceptos/almacen.mdx
+  s_f770b9351cac38::t_f7e5457835da00 54,57
+es/ayuda/smart-factory/tareas-con-agentes.mdx
+  s_65f22cefe7a610::t_bb541722ac7256 33
+es/ayuda/mantenimiento/crear-parte-de-trabajo.mdx
+  s_fc022f22176985::t_e2de8bc58bc5c6 36
+  s_fc022f22176985::t_6bb5d6f767a906 8-9,39,74
+es/conceptos/fabricacion/estados-de-fabricacion.mdx
+  s_450f0be9b583f6::t_fdf0f8852e512a 1-75
+es/conceptos/personal/empleados.mdx
+  s_450f0be9b583f6::t_744d078dfa2676 31-43,52-53
+  s_f770b9351cac38::t_32e29363402f6a 26
+es/conceptos/almacen/ubicaciones.mdx
+  s_450f0be9b583f6::t_32206456f04cc3 41,64
+es/conceptos/planificacion/proveedores.mdx
+  s_f770b9351cac38::t_0b41f05822580b 19
+  s_f770b9351cac38::t_5fdc54c35a633d 74-77
+es/ayuda/produccion/ver-estado-de-las-estaciones.mdx
+  s_fc022f22176985::t_e2de8bc58bc5c6 29
+  s_fc022f22176985::t_6bb5d6f767a906 1-28,30-37
+es/ayuda/panel-de-control/gestionar-archivos.mdx
+  s_65f22cefe7a610::t_bb541722ac7256 39-40
+es/desarrolladores/webhooks/eventos-disponibles.mdx
+  s_f770b9351cac38::t_4db0711ad37efc 14,52,65,71
+es/conceptos/almacen/lotes.mdx
+  s_450f0be9b583f6::t_7a136efbeee3f1 35-41,43-58,77
+  s_f770b9351cac38::t_64c7614ac737a0 83
+  s_f770b9351cac38::t_f7e5457835da00 42
+  s_f770b9351cac38::t_713d7e232d90b4 78
+es/ayuda/primeros-pasos/preparar-datos-base.mdx
+  s_c6ce3c7bec1ebe::t_d0d63bc6ef944f 1-24,26-82
+  s_c6ce3c7bec1ebe::t_670c07c0ab0f52 25
+es/conceptos/panel-de-control/usuarios-roles-y-permisos.mdx
+  s_f770b9351cac38::t_f8a36a7176b397 74
+  s_f770b9351cac38::t_8e15208aa89ae2 16,22,24,26
+  s_f770b9351cac38::t_bd7f402e455e81 66
+  s_f770b9351cac38::t_f7e5457835da00 34
+  s_f770b9351cac38::t_7f03fd1995137d 36,38,40,48,50-60
+  s_f770b9351cac38::t_ed4d8a2e615112 2,7,68
+es/conceptos/fabricacion/procesos.mdx
+  s_450f0be9b583f6::t_61c7843faaeac5 35-40,55
+es/conceptos/fabricacion/ordenes-de-fabricacion.mdx
+  s_450f0be9b583f6::t_5da85a25e792e1 40-51,62
+es/conceptos/mantenimiento.mdx
+  s_f770b9351cac38::t_dd5c4d9ea21595 40,42,44-48,97,99,101-102
+  s_f770b9351cac38::t_5a48d270fa407e 52,95
+es/desarrolladores/empezar/introduccion.mdx
+  s_f770b9351cac38::t_b81a24396072e8 6,28,40,49,52,57,75,78,93
+es/conceptos/fabricacion/secuenciacion.mdx
+  s_f770b9351cac38::t_97a30f78eec44c 32
+es/ayuda/analisis/introduccion.mdx
+  s_fc022f22176985::t_49390473bb1534 1-10,12-13,15-50
+  s_f770b9351cac38::t_b1b556b63273b0 11,14
+es/ayuda/smart-factory/informes-powerbi.mdx
+  s_f770b9351cac38::t_5fdc54c35a633d 3,6,51,53,55-56,62-63
+  s_65f22cefe7a610::t_bb541722ac7256 34-35
+  s_0dd80b0f93a8c5::t_b7c1593f82f60d 27
+es/conceptos/personal.mdx
+  s_450f0be9b583f6::t_7181f983cbf49c 15-17,31-32,44,64,67-68,72
+  s_f770b9351cac38::t_243242b8183532 7,77
+es/ayuda/primeros-pasos/ejecutar-primera-of.mdx
+  s_c6ce3c7bec1ebe::t_d0d63bc6ef944f 1-86
+es/desarrolladores/empezar/paginacion.mdx
+  s_f770b9351cac38::t_4db0711ad37efc 3,6,39-40,42,45
+es/conceptos/smart-factory/automatizaciones.mdx
+  s_f770b9351cac38::t_f8a36a7176b397 64
+es/ayuda/almacen/solucion-de-problemas-de-stock.mdx
+  s_f770b9351cac38::t_f7e5457835da00 3
+  s_f770b9351cac38::t_fa5c9f036bcda0 14,24,27
+es/conceptos/costes/valoracion-de-inventario.mdx
+  s_f770b9351cac38::t_f7e5457835da00 18
+es/ayuda/costes/valoracion-inventario.mdx
+  s_f770b9351cac38::t_f7e5457835da00 3,13,16,18
+  s_f770b9351cac38::t_fe19d3dd5aeab8 58,64,79
+es/conceptos/catalogo/productos.mdx
+  s_f770b9351cac38::t_64c7614ac737a0 52
+es/conceptos/catalogo.mdx
+  s_f770b9351cac38::t_5a48d270fa407e 46,70
+  s_f770b9351cac38::t_5fdc54c35a633d 80
+  s_f770b9351cac38::t_64c7614ac737a0 84-86,90
+es/ayuda/produccion/ver-progreso-en-la-produccion.mdx
+  s_fc022f22176985::t_6bb5d6f767a906 1-39,41
+  s_f770b9351cac38::t_31ef1b2e1be244 40
+es/conceptos/modo-de-trabajo.mdx
+  s_450f0be9b583f6::t_53b6e8ecdcfe66 44-63,76,78,84-85,88
+es/ayuda/almacen/consultar-stock.mdx
+  s_f770b9351cac38::t_f7e5457835da00 6
+  s_f770b9351cac38::t_120612ac0ff614 13,26,36,38
+es/conceptos/introduccion.mdx
+  s_f770b9351cac38::t_f7e5457835da00 24
+  s_f770b9351cac38::t_5fdc54c35a633d 65
+  s_f770b9351cac38::t_cb98095dea9656 47
+es/conceptos/catalogo/propiedades.mdx
+  s_f770b9351cac38::t_5fdc54c35a633d 74-77
+  s_f770b9351cac38::t_64c7614ac737a0 84
+  s_f770b9351cac38::t_4ec0af357dca20 62
+es/conceptos/planificacion/politica-de-aprovisionamiento.mdx
+  s_f770b9351cac38::t_bd7f402e455e81 22
+  s_fc022f22176985::t_f68fad9c5c87e9 2-3,7,9,13,15,17-18,24,27,33,35,37-39,46,48,50,54,58-60,64,67-68
+  s_f770b9351cac38::t_8e15208aa89ae2 16
+  s_fc022f22176985::t_6bb5d6f767a906 1,4-6,8,10-12,14,19,21,23,25,28,30-32,34,36,41,43-45,47,49,51-53,55,61-63,65-66
+  s_f770b9351cac38::t_f7e5457835da00 20,57
+  s_f770b9351cac38::t_97a30f78eec44c 26,29,40,42,56
+es/conceptos/catalogo/producto-vs-articulo.mdx
+  s_f770b9351cac38::t_bd7f402e455e81 47
+es/conceptos/planificacion/previsiones-y-asistentes.mdx
+  s_f770b9351cac38::t_f7e5457835da00 22
+  s_fc022f22176985::t_6bb5d6f767a906 65-66,80
+es/conceptos/catalogo/unidades-de-medida.mdx
+  s_f770b9351cac38::t_f7e5457835da00 41
+  s_f770b9351cac38::t_5fdc54c35a633d 3
+es/conceptos/fabricacion/operaciones-y-restricciones.mdx
+  s_450f0be9b583f6::t_61cc6b3a40f87c 39-51,66
+es/desarrolladores/referencia-api/introduccion.mdx
+  s_f770b9351cac38::t_b81a24396072e8 4,7,10,15-17,27,36
+  s_f770b9351cac38::t_cea11dd76e9f99 23
+es/desarrolladores/empezar/errores.mdx
+  s_f770b9351cac38::t_4db0711ad37efc 29,32,49,55
+es/novedades/changelog.mdx
+  s_f770b9351cac38::t_0b41f05822580b 33,83,104,115,157,171,175,188,220,226,232
+  s_f770b9351cac38::t_97a30f78eec44c 170,201
+  s_f770b9351cac38::t_dc062ed52c464a 261
+es/conceptos/smart-factory/informes.mdx
+  s_f770b9351cac38::t_0b41f05822580b 24
+  s_f770b9351cac38::t_5fdc54c35a633d 3,7,32,34-35
+es/conceptos/catalogo/articulos.mdx
+  s_f770b9351cac38::t_64c7614ac737a0 62-63
+  s_f770b9351cac38::t_f7e5457835da00 14
+  s_fc022f22176985::t_6bb5d6f767a906 58-59,65
+  s_fc022f22176985::t_f68fad9c5c87e9 54
+es/desarrolladores/empezar/autenticacion.mdx
+  s_f770b9351cac38::t_b81a24396072e8 9,33,70,81,86
+  s_f770b9351cac38::t_cea11dd76e9f99 3,6,21,43,51,53,60,68
+docs.json
+  s_c6ce3c7bec1ebe::t_3958b4cfc94afb 51-54
+  s_fc022f22176985::t_6bb5d6f767a906 258
+  s_f770b9351cac38::t_f8a36a7176b397 336
+  s_fc022f22176985::t_b53fdcadbda9b0 112,150-152,155-161
+  s_450f0be9b583f6::t_6e40d72955a9ad 235,245,257,301
+  s_f770b9351cac38::t_4d884d8f0f9771 416,503-506
+  s_f770b9351cac38::t_64c7614ac737a0 60,63-65
+  s_f770b9351cac38::t_15fbcdd9c9ed1e 417-431,434
+es/conceptos/fabricacion/planes-de-produccion.mdx
+  s_450f0be9b583f6::t_f6bb530f097598 32-43,55
+es/ayuda/produccion/ver-evolucion-del-oee.mdx
+  s_fc022f22176985::t_6bb5d6f767a906 8,11-12,17-18,20-21,23-24,28,30,32-35,40-41
+  s_f770b9351cac38::t_3e0be62a028ba0 2-3,6,14-15,39
+es/conceptos/fabricacion/cuadros-de-mando.mdx
+  s_fc022f22176985::t_6bb5d6f767a906 45-48
+  s_450f0be9b583f6::t_32206456f04cc3 43-44
+es/conceptos/fabricacion/controles-consumos-y-pausas.mdx
+  s_450f0be9b583f6::t_6f3a652b98e65b 49-50,55
+es/conceptos/personal/periodos-tareas-y-presencia.mdx
+  s_450f0be9b583f6::t_1bc5a63b198394 34,44-45,62
+es/conceptos/almacen/stock-y-movimientos.mdx
+  s_450f0be9b583f6::t_32206456f04cc3 3,72,81-82
+  s_f770b9351cac38::t_f7e5457835da00 7-9,46-50,52
+  s_450f0be9b583f6::t_6eeba389342514 20,25,53-68
+  s_450f0be9b583f6::t_bd3d8659a22037 24,36,51,80
+es/conceptos/planificacion/pedidos-de-compra.mdx
+  s_f770b9351cac38::t_0b41f05822580b 33
+  s_f770b9351cac38::t_964581656084ee 83-84
+es/desarrolladores/webhooks/payloads.mdx
+  s_f770b9351cac38::t_4a9bb2e14b1780 2-3,6,13,64,69
+es/conceptos/personal/habilidades-y-estaciones-habituales.mdx
+  s_450f0be9b583f6::t_fdf0f8852e512a 1-68
+es/ayuda/produccion/ver-actividad-de-los-empleados.mdx
+  s_fc022f22176985::t_e2de8bc58bc5c6 8,36
+  s_fc022f22176985::t_6bb5d6f767a906 1-7,9-35,37-43
+es/ayuda/personal/configurar-horarios-y-turnos.mdx
+  s_f770b9351cac38::t_bd7f402e455e81 47
+es/ayuda/usuarios-y-permisos/invitar-usuarios.mdx
+  s_450f0be9b583f6::t_a04e73c6bc6d41 23
+  s_f770b9351cac38::t_058a503863c8dd 3,15,26,32,35,37-38,68,71,78,82,87
+es/conceptos/panel-de-control.mdx
+  s_f770b9351cac38::t_f7e5457835da00 50
+  s_f770b9351cac38::t_f8a36a7176b397 18,58
+  s_f770b9351cac38::t_fbbec0749a7330 3,15,25,41-42,56
+es/ayuda/articulos/introduccion.mdx
+  s_f770b9351cac38::t_64c7614ac737a0 11,14-15
+es/ayuda/primeros-pasos/crear-pedido-y-lanzar-of.mdx
+  s_c6ce3c7bec1ebe::t_d0d63bc6ef944f 1-106
+es/desarrolladores/webhooks/reintentos-y-errores.mdx
+  s_f770b9351cac38::t_4a9bb2e14b1780 10,13,15,23,27,29,52-53,58,68
+es/conceptos/planificacion/asignacion-de-demanda-y-suministro.mdx
+  s_450f0be9b583f6::t_f6f2e3c8b61068 30,40,54
+  s_450f0be9b583f6::t_fdf0f8852e512a 1-2,4-6,8,10-15,17,20-22,24-29,31,33,35-39,41-45,47-53,55-68,71,74-79,81-82
+  s_f770b9351cac38::t_f7e5457835da00 3,7,9,16,18-19,32,46,70
+  s_f770b9351cac38::t_97a30f78eec44c 23,34,69,72-73,80
+es/conceptos/fabricacion/motivos-de-pausa-e-interrupciones.mdx
+  s_f770b9351cac38::t_97a30f78eec44c 3,30
+  s_450f0be9b583f6::t_fdf0f8852e512a 1-2,4-29,31-62
+es/ayuda/panel-de-control/configuracion-de-empresa.mdx
+  s_f770b9351cac38::t_5fdc54c35a633d 65
+  s_c6ce3c7bec1ebe::t_17aa116053749c 82
+  s_65f22cefe7a610::t_bb541722ac7256 39
+es/ayuda/compras/crear-pedido-de-compra.mdx
+  s_65f22cefe7a610::t_bb541722ac7256 9
+  s_f770b9351cac38::t_f7e5457835da00 16
+  s_f770b9351cac38::t_bd01b35883ef43 15
+es/ayuda/primeros-pasos/introduccion.mdx
+  s_c6ce3c7bec1ebe::t_670c07c0ab0f52 37,45-46,48-49
+  s_c6ce3c7bec1ebe::t_b9f1e8a3d3a839 3,6-8,14-17,19-20,22-26,29,36,38-40,42-43,47,53-63,65,67
+es/desarrolladores/webhooks/introduccion.mdx
+  s_f770b9351cac38::t_4a9bb2e14b1780 6,18,31,37,45,73
+es/conceptos/panel-de-control/auditoria-y-eventos.mdx
+  s_f770b9351cac38::t_f7e5457835da00 23
+  s_f770b9351cac38::t_c555af2c112fc8 33
+  s_f770b9351cac38::t_f8a36a7176b397 42,59,62,66-67
+  s_f770b9351cac38::t_c976d4b03e4665 7,27,38,40
+es/ayuda/primeros-pasos/configurar-receta-minima.mdx
+  s_c6ce3c7bec1ebe::t_d0d63bc6ef944f 2-3,6-8,14-18,20,23-24,26-27,29-30,32-33,35-36,38-39,41-42,46-71,73-75,77,79,81-83
+es/conceptos/fabricacion.mdx
+  s_450f0be9b583f6::t_091a2df04b922b 21-23,51,53,73,96,105
+  s_f770b9351cac38::t_ec1a0544f99a93 52
+es/ayuda/panel-de-control/disenar-roles-por-responsabilidad.mdx
+  s_f770b9351cac38::t_bd7f402e455e81 60
+  s_f770b9351cac38::t_b26f6095d6709c 2,6,8,32-33,36,39,50,54
+es/ayuda/almacen/hacer-inventario.mdx
+  s_f770b9351cac38::t_7f753173786b00 9,67,71
+es/ayuda/almacen/introduccion.mdx
+  s_f770b9351cac38::t_217c9022bf2af6 14-15
+es/ayuda/almacen/investigar-diferencias-de-stock.mdx
+  s_f770b9351cac38::t_468ed4f9424686 2
+es/ayuda/almacen/mover-stock.mdx
+  s_f770b9351cac38::t_74dc5f50f347ad 6,8,10
+es/ayuda/articulos/crear-un-articulo.mdx
+  s_f770b9351cac38::t_f78c01960b04c8 37,54,61-62,78
+es/ayuda/articulos/editar-un-articulo.mdx
+  s_f770b9351cac38::t_4d3a2ef77c3915 65,83
+es/ayuda/compras/recibir-pedido-de-compra.mdx
+  s_f770b9351cac38::t_8ed08710bfc42a 9
+es/ayuda/costes/ordenes-de-fabricacion.mdx
+  s_f770b9351cac38::t_012a3b12487d44 33,50
+es/ayuda/costes/partes-de-trabajo.mdx
+  s_f770b9351cac38::t_d1d64882ae8d24 15,38
+es/ayuda/panel-de-control/crear-etiquetas-y-codigos.mdx
+  s_f770b9351cac38::t_858be2a3558575 32
+es/ayuda/panel-de-control/importar-datos.mdx
+  s_f770b9351cac38::t_b504297ed07632 53
+es/ayuda/panel-de-control/introduccion.mdx
+  s_f770b9351cac38::t_ea1f1c0fc5d24a 14,38,59
+es/ayuda/personal/empleados.mdx
+  s_f770b9351cac38::t_ae90d002a4ef0b 21,41,54
+es/ayuda/personal/introduccion.mdx
+  s_f770b9351cac38::t_1f34f5c636261c 44,46
+es/ayuda/planificacion/saber-que-comprar.mdx
+  s_f770b9351cac38::t_5e1d574ae38709 65,70
+es/ayuda/planificacion/saber-que-fabricar.mdx
+  s_f770b9351cac38::t_61c0dcdc502f62 65
+es/ayuda/produccion/configurar-controles-de-calidad.mdx
+  s_f770b9351cac38::t_22ed60943af35d 32
+es/ayuda/produccion/crear-una-receta.mdx
+  s_f770b9351cac38::t_0e775963e76d6d 95
+es/ayuda/produccion/introduccion.mdx
+  s_f770b9351cac38::t_2adcd46c5aef6c 21,38,41,56
+es/ayuda/produccion/secuenciar-ordenes.mdx
+  s_f770b9351cac38::t_7272c7f3557222 56
+es/ayuda/ventas/crear-pedido-de-venta.mdx
+  s_f770b9351cac38::t_3f7bff2e371518 35
+es/conceptos/almacen/tipos-de-contenedores.mdx
+  s_f770b9351cac38::t_05aa52c557143e 17
+es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos.mdx
+  s_f770b9351cac38::t_31473a7d3cfe1d 2,7,9,13,19,27,30,35,37-38,43-44
+es/conceptos/planificacion/clientes.mdx
+  s_f770b9351cac38::t_404880690fed9f 9,18,27,61-62
+es/conceptos/planificacion/pedidos-de-venta.mdx
+  s_f770b9351cac38::t_13f88d80a2e8df 82-83
+es/conceptos/smart-factory.mdx
+  s_f770b9351cac38::t_bbb6a099b9a761 13,30,66
+es/ayuda/almacen/recibir-con-albaran.mdx
+  s_e14e45ff3250df::t_d304a3f37d2a0a 18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "defe422598fce0f7dff10974db3341cbe73eec49",
+  "prompts": {},
+  "humans": {
+    "h_55f2ba4d68b42c": {
+      "author": "Pablo López <pablo@bold-factory.com>"
+    }
+  },
+  "sessions": {
+    "s_0dd80b0f93a8c5": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f0049-4965-77d3-814d-519068c98059",
+        "model": "unknown"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_450f0be9b583f6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f05b7-3976-7771-a73d-5764720fcda1",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_65f22cefe7a610": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f05dc-629f-76e2-944d-cfd482a3a3df",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_c6ce3c7bec1ebe": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f063f-a256-7612-a2fc-cc57cbfefdbe",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_e14e45ff3250df": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019efffd-dcdf-7aa1-b60f-6733c01b178e",
+        "model": "unknown"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_f770b9351cac38": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f05c2-84d9-73e3-9e75-72127a871b24",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_fc022f22176985": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f053d-ec0b-70b1-979c-8da19c8ad16b",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
