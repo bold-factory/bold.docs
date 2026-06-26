@@ -47,6 +47,7 @@
                 "root": "es/ayuda/primeros-pasos/flujo-basico-de-trabajo",
                 "directory": "card",
                 "pages": [
+                  "es/ayuda/primeros-pasos/flujo-basico-de-trabajo",
                   "es/ayuda/primeros-pasos/configurar-tu-empresa",
                   "es/ayuda/primeros-pasos/crear-tu-primera-fabricacion"
                 ]
@@ -57,6 +58,7 @@
                 "root": "es/ayuda/articulos-y-skus/crear-un-producto",
                 "directory": "card",
                 "pages": [
+                  "es/ayuda/articulos-y-skus/crear-un-producto",
                   "es/ayuda/articulos-y-skus/crear-un-sku",
                   "es/ayuda/articulos-y-skus/editar-un-sku",
                   "es/ayuda/articulos-y-skus/trabajar-con-lotes"
@@ -68,6 +70,7 @@
                 "root": "es/ayuda/ventas/crear-pedido-de-venta",
                 "directory": "card",
                 "pages": [
+                  "es/ayuda/ventas/crear-pedido-de-venta",
                   "es/ayuda/ventas/preparar-salida",
                   "es/ayuda/ventas/completar-envio"
                 ]
@@ -78,6 +81,7 @@
                 "root": "es/ayuda/planificacion/saber-que-comprar",
                 "directory": "card",
                 "pages": [
+                  "es/ayuda/planificacion/saber-que-comprar",
                   "es/ayuda/compras/crear-pedido-de-compra",
                   "es/ayuda/compras/ver-compras-pendientes",
                   "es/ayuda/compras/recibir-pedido-de-compra"
@@ -89,6 +93,7 @@
                 "root": "es/ayuda/planificacion/saber-que-fabricar",
                 "directory": "card",
                 "pages": [
+                  "es/ayuda/planificacion/saber-que-fabricar",
                   "es/ayuda/produccion/crear-una-receta",
                   "es/ayuda/produccion/crear-una-orden-de-fabricacion",
                   "es/ayuda/produccion/asignar-recursos",
@@ -96,33 +101,32 @@
                   "es/ayuda/produccion/ejecutar-una-orden",
                   "es/ayuda/produccion/completar-operaciones",
                   "es/ayuda/produccion/consumir-componentes",
-                  "es/ayuda/produccion/registrar-produccion",
-                  "es/ayuda/produccion/solucion-de-problemas-de-produccion"
+                  "es/ayuda/produccion/registrar-produccion"
                 ]
               },
               {
-                "group": "Gestionar almacén",
+                "group": "Control del stock",
                 "icon": "warehouse",
                 "root": "es/ayuda/almacen/consultar-stock",
                 "directory": "card",
                 "pages": [
+                  "es/ayuda/almacen/consultar-stock",
                   "es/ayuda/almacen/crear-ubicaciones",
-                  "es/ayuda/almacen/recibir-material",
                   "es/ayuda/almacen/recibir-con-albaran",
                   "es/ayuda/almacen/mover-stock",
                   "es/ayuda/almacen/ajustar-stock",
                   "es/ayuda/almacen/hacer-inventario",
                   "es/ayuda/almacen/ver-movimientos-de-stock",
-                  "es/ayuda/almacen/solucion-de-problemas-de-stock",
-                  "es/ayuda/almacen/flujos-moviles"
+                  "es/ayuda/almacen/solucion-de-problemas-de-stock"
                 ]
               },
               {
-                "group": "Gestionar mantenimiento",
+                "group": "Mantenimiento",
                 "icon": "wrench",
                 "root": "es/ayuda/mantenimiento/crear-parte-de-trabajo",
                 "directory": "card",
                 "pages": [
+                  "es/ayuda/mantenimiento/crear-parte-de-trabajo",
                   "es/ayuda/mantenimiento/mantenimiento-preventivo"
                 ]
               },
@@ -132,6 +136,7 @@
                 "root": "es/ayuda/personal/empleados",
                 "directory": "card",
                 "pages": [
+                  "es/ayuda/personal/empleados",
                   "es/ayuda/personal/jornadas-laborales",
                   "es/ayuda/personal/calendarios-locales",
                   "es/ayuda/personal/turnos"
@@ -143,6 +148,7 @@
                 "root": "es/ayuda/costes/ordenes-de-fabricacion",
                 "directory": "card",
                 "pages": [
+                  "es/ayuda/costes/ordenes-de-fabricacion",
                   "es/ayuda/costes/articulos",
                   "es/ayuda/costes/empleados",
                   "es/ayuda/costes/partes-de-trabajo",
@@ -150,28 +156,24 @@
                 ]
               },
               {
-                "group": "Smart Factory",
+                "group": "Automatizaciones",
                 "icon": "sparkles",
                 "root": "es/ayuda/smart-factory/informes-powerbi",
                 "directory": "card",
                 "pages": [
+                  "es/ayuda/smart-factory/informes-powerbi",
                   "es/ayuda/smart-factory/boldy",
                   "es/ayuda/smart-factory/tareas-con-agentes"
                 ]
               },
               {
-                "group": "Administrar Bold",
+                "group": "Configuración",
                 "icon": "settings",
                 "pages": [
                   "es/ayuda/usuarios-y-permisos/invitar-usuarios",
-                  "es/ayuda/panel-de-control/mi-cuenta-y-plan",
                   "es/ayuda/panel-de-control/configuracion-de-empresa",
-                  "es/ayuda/panel-de-control/claves-api",
-                  "es/ayuda/panel-de-control/notificaciones",
-                  "es/ayuda/panel-de-control/disenos",
                   "es/ayuda/panel-de-control/importar-datos",
-                  "es/ayuda/panel-de-control/gestionar-archivos",
-                  "es/ayuda/panel-de-control/agentes"
+                  "es/ayuda/panel-de-control/gestionar-archivos"
                 ]
               }
             ]
