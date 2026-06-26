@@ -1,0 +1,45 @@
+---
+title: "Tipos de contenedores"
+description: "Entiende cómo clasificar bultos, palets, cajas y otros formatos físicos."
+icon: "container"
+---
+
+Un **tipo de contenedor** clasifica el formato físico de un bulto. Describe qué clase de unidad se mueve o identifica: palet, caja, carro, saco, contenedor, jaula o kit.
+
+## Qué define
+
+| Dato | Uso |
+| --- | --- |
+| Nombre | Identifica el formato para usuarios. |
+| Código | Permite integraciones, etiquetas o búsquedas. |
+| Dimensiones | Ayudan a calcular espacio o validar formato. |
+| Capacidad | Orienta cantidad esperada o límites físicos. |
+| Uso | Recepción, picking, producción, envío o retorno. |
+
+No hace falta modelar un tipo para cada proveedor si el formato físico es el mismo. Crea tipos cuando cambie la operación, la etiqueta, la capacidad o el análisis.
+
+## Relación con bultos
+
+El tipo de contenedor es la categoría. El bulto es la instancia real.
+
+| Tipo de contenedor | Bulto |
+| --- | --- |
+| Palet europeo | `PAL-000431` |
+| Caja pequeña | `CAJ-009812` |
+| Carro de línea | `CAR-000057` |
+
+## Cuándo separar tipos
+
+| Diferencia | Conviene separar |
+| --- | --- |
+| Capacidad distinta | Sí, si afecta a preparación o almacenamiento. |
+| Etiqueta distinta | Sí, si cambia impresión o lectura. |
+| Proveedor distinto, mismo formato | No necesariamente. |
+| Uso operativo distinto | Sí, si el equipo decide distinto por tipo. |
+| Solo cambia el color | Solo si el color tiene impacto operativo. |
+
+## Relacionado
+
+- [Bultos](/conceptos/almacen/bultos)
+- [Ubicaciones](/conceptos/almacen/ubicaciones)
+- [Tipos de contenedores en guías](/ayuda/almacen/tipos-de-contenedores)

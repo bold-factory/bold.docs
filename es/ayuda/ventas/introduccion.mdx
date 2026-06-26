@@ -1,10 +1,10 @@
 ---
-title: "Ventas"
-description: "Gestiona pedidos de venta, demanda, disponibilidad, preparación y envíos."
+title: "Pedidos"
+description: "Gestiona pedidos de cliente, líneas pendientes, disponibilidad y envíos."
 icon: "shopping-cart"
 ---
 
-El módulo **Ventas** registra compromisos con clientes. Cada pedido de venta genera demanda cuando sus líneas se confirman y puede terminar en uno o varios envíos.
+**Pedidos** registra compromisos con clientes. Cada pedido genera demanda cuando confirmas sus líneas y puede terminar en uno o varios envíos.
 
 ## Conceptos principales
 
@@ -12,13 +12,13 @@ El módulo **Ventas** registra compromisos con clientes. Cada pedido de venta ge
   <Card title="Cliente" icon="user-round">
     Persona o empresa que solicita artículos en una cantidad y fecha.
   </Card>
-  <Card title="Pedido de venta" icon="file-text" href="/ayuda/ventas/crear-pedido-de-venta">
+  <Card title="Pedido" icon="file-text" href="/ayuda/ventas/crear-pedido-de-venta">
     Cabecera con cliente, código, notas y líneas de artículos.
   </Card>
-  <Card title="Línea de venta" icon="list">
+  <Card title="Línea de pedido" icon="list">
     Define artículo, cantidad, fecha esperada y estado de entrega.
   </Card>
-  <Card title="Envío" icon="truck">
+  <Card title="Envío" icon="truck" href="/ayuda/ventas/completar-envio">
     Movimiento de salida que reduce stock y registra la expedición.
   </Card>
 </Columns>
@@ -54,10 +54,7 @@ La línea puede mostrar disponibilidad con conceptos como:
   <Step title="Confirma demanda">
     Confirma líneas cuando quieras que afecten a planificación.
   </Step>
-  <Step title="Prepara salida">
-    Revisa stock disponible, ubicación y lote.
-  </Step>
-  <Step title="Expide">
-    Crea y confirma el envío para reducir stock.
+  <Step title="Registra el envío">
+    Indica qué sale, desde qué ubicación y con qué lote cuando aplique.
   </Step>
 </Steps>

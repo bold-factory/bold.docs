@@ -1,0 +1,69 @@
+---
+title: "Propiedades"
+description: "Entiende las propiedades como atributos reutilizables para variantes, validación y condiciones."
+icon: "list-filter"
+---
+
+Las **propiedades** son atributos reutilizables para describir productos y artículos. Sirven para diferenciar variantes, validar datos y alimentar reglas de fabricación o planificación.
+
+Ejemplos habituales: color, material, largo, acabado, formato, calidad, clase logística o fecha técnica.
+
+## Para qué sirven
+
+| Uso | Ejemplo |
+| --- | --- |
+| Diferenciar variantes | Color y largo de una mesa. |
+| Validar artículos | Exigir que cada artículo tenga valores completos. |
+| Filtrar catálogo | Buscar materiales por acabado o formato. |
+| Condicionar recetas | Usar una operación solo para ciertos valores. |
+| Integrar datos | Relacionar opciones con referencias externas. |
+
+No uses propiedades para notas ocasionales. Si el valor no se va a filtrar, validar ni usar en reglas, suele bastar con descripción o notas.
+
+## Clases de propiedad
+
+| Clase | Úsala para | Ejemplo |
+| --- | --- | --- |
+| Selección de opción | Listas controladas y cerradas. | Color, acabado, familia logística. |
+| Sí/no | Características binarias. | Requiere frío, inflamable. |
+| Número entero | Cantidades sin decimales. | Número de capas. |
+| Número con decimales | Medidas o parámetros con precisión. | Espesor, densidad, longitud. |
+| Fecha/hora | Fechas relevantes para clasificación o control. | Fecha de certificación. |
+| Texto libre | Valores técnicos que no encajan en una lista. | Referencia corta. |
+
+Elige la clase antes de extender la propiedad a muchos productos. Cambiar el tipo después puede invalidar valores existentes.
+
+## Opciones controladas
+
+Usa **Selección de opción** cuando quieres evitar valores duplicados por escritura libre.
+
+| Propiedad | Opciones |
+| --- | --- |
+| Color | Rojo, azul, negro |
+| Acabado | Mate, brillo, satinado |
+| Formato | Caja, bolsa, bidón |
+
+Si cada producto necesita una lista distinta, crea propiedades distintas. No mezcles significados incompatibles en una propiedad global.
+
+## Validación de artículos
+
+Cuando asignas una propiedad a un producto, sus artículos deben informar un valor válido. Esto permite detectar variantes incompletas antes de usarlas en stock, pedidos o recetas.
+
+Si dos artículos tienen el mismo producto y los mismos valores de propiedades, revisa si son duplicados. Si no son duplicados, falta una propiedad que explique la diferencia.
+
+## Uso en fabricación
+
+Las recetas pueden usar propiedades para calcular cantidades, mostrar instrucciones o condicionar operaciones.
+
+Ejemplo: la propiedad **Largo** puede alimentar una fórmula de corte. La propiedad **Acabado** puede decidir si aparece una operación de pintura.
+
+## Importaciones e integraciones
+
+Usa referencias externas estables en propiedades y opciones cuando los valores vienen de un ERP, PIM, ecommerce o archivo de importación. Esto evita duplicados cuando el mismo valor llega con otro nombre visible.
+
+## Relacionado
+
+- [Productos](/conceptos/catalogo/productos)
+- [Artículos](/conceptos/catalogo/articulos)
+- [Recetas y versiones](/conceptos/fabricacion/recetas-y-versiones)
+- [Crear un producto](/ayuda/articulos-y-skus/crear-un-producto)

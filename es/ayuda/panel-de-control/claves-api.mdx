@@ -17,27 +17,27 @@ Las **claves API** permiten que sistemas externos llamen a la API de Bold sin us
 | Id | Identificador técnico de la clave. |
 | Nombre | Sistema, integración o responsable que usa la clave. |
 | Estado | Indica si la clave está activa o inactiva. |
-| Cabecera | Las llamadas usan `X-Api-Key`. |
+| Acciones | Permite desactivar claves activas. |
 
-Gestionar claves API requiere rol `App.Admin`.
+Gestionar claves API requiere ser administrador de la aplicación.
 
 ## Crear una clave API
 
 <Steps>
   <Step title="Abre Claves API">
-    Entra en **Panel de control** y abre **Claves API**.
+    Entra en **Panel de control** y abre **Claves API** dentro del grupo **Acceso**.
   </Step>
   <Step title="Crea una clave">
-    Usa un nombre descriptivo, por ejemplo `ERP producción`, `BI inventario` o `Conector compras`.
+    Haz clic en **Crear nueva clave API**. Usa un nombre descriptivo en **Nombre de la clave**, por ejemplo `ERP producción`, `BI inventario` o `Conector compras`.
   </Step>
   <Step title="Copia la clave">
-    Copia el valor en cuanto aparece. Guárdalo en el gestor de secretos del sistema que hará la integración.
+    Haz clic en **Crear clave**. Copia el valor en cuanto aparezca en **Clave API creada** y guárdalo en el gestor de secretos del sistema que hará la integración.
   </Step>
   <Step title="Prueba una lectura">
     Valida la credencial con un endpoint de lectura y paginación pequeña antes de activar escrituras.
   </Step>
   <Step title="Documenta el uso">
-    Registra qué sistema usa la clave, quién es responsable y cuándo debe revisarse.
+    Registra qué sistema usa la clave, quién es responsable y cuándo debe revisarse. Después confirma con **Ya la he copiado y guardado**.
   </Step>
 </Steps>
 
@@ -90,7 +90,7 @@ Todos estos endpoints requieren rol `App.Admin`.
 | La clave no vuelve a aparecer | Solo se muestra al crearla. Crea una nueva si no se guardó. |
 | La API responde `401` | Revisa cabecera `X-Api-Key`, entorno y si la clave sigue activa. |
 | La API responde `403` | La credencial existe, pero no tiene alcance suficiente para la operación. |
-| No puedes crear o desactivar claves | Necesitas rol `App.Admin`. |
+| No puedes crear o desactivar claves | Necesitas ser administrador de la aplicación. |
 | No sabes qué sistema usa una clave | Revisa nombre, responsable interno y registros de integración. |
 
 ## Relacionado

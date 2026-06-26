@@ -1,0 +1,64 @@
+---
+title: "Recetas y versiones"
+description: "Entiende las recetas como moldes de fabricación versionados para productos y variantes."
+icon: "book-open"
+---
+
+Una **receta** describe cómo fabricar un producto. Define operaciones, entradas, co-productos, pasos, controles, restricciones y condiciones.
+
+La receta no ejecuta trabajo. Sirve como molde para crear órdenes de fabricación con una estructura controlada.
+
+## Qué contiene una receta
+
+| Elemento | Uso |
+| --- | --- |
+| Producto | Familia que se fabrica. |
+| Versión | Estructura aprobada o editable de la receta. |
+| Operaciones | Etapas ejecutables del proceso. |
+| Entradas | Materiales o semielaborados que se consumen. |
+| Co-productos | Salidas adicionales generadas. |
+| Pasos | Instrucciones para operarios. |
+| Controles | Comprobaciones de calidad o proceso. |
+| Restricciones | Precedencias entre operaciones. |
+| Condiciones | Reglas que aplican según propiedades del artículo. |
+
+## Versiones
+
+Una versión conserva una estructura de fabricación en un momento concreto. Solo una versión debe estar activa para nuevas órdenes.
+
+| Estado | Significado |
+| --- | --- |
+| Editable | Permite cambios estructurales. |
+| Activa | Se usa para nuevas órdenes y protege la trazabilidad. |
+| Inactiva | Se conserva como histórico o referencia. |
+
+Activa una versión cuando representa el proceso aprobado. Si necesitas cambiar una receta en uso, crea o copia una nueva versión.
+
+## Condiciones y variantes
+
+Las condiciones permiten que una misma receta se adapte a diferentes artículos de un producto.
+
+| Condición | Decide |
+| --- | --- |
+| De receta | Si una versión aplica a una variante. |
+| De operación | Si una etapa debe existir. |
+| De entrada | Si se consume un material. |
+| De paso | Si se muestra una instrucción. |
+
+Ejemplo: una receta de mesa puede añadir una operación de pintura solo cuando la propiedad **Acabado** lo requiere.
+
+## Fórmulas
+
+Las fórmulas usan propiedades numéricas o datos de contexto para calcular cantidades, medidas o instrucciones.
+
+```text
+Cortar material a [Largo]+7 mm
+```
+
+Si el artículo fabricado tiene `Largo = 100`, la orden mostrará `Cortar material a 107 mm`.
+
+## Relacionado
+
+- [Operaciones y restricciones](/conceptos/fabricacion/operaciones-y-restricciones)
+- [Producto vs artículo](/conceptos/catalogo/producto-vs-articulo)
+- [Crear una receta](/ayuda/produccion/crear-una-receta)

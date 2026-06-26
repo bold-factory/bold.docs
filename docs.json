@@ -53,13 +53,26 @@
                 ]
               },
               {
-                "group": "Ventas",
+                "group": "Preparar catálogo",
+                "icon": "boxes",
+                "root": "es/ayuda/articulos-y-skus/introduccion",
+                "directory": "card",
+                "pages": [
+                  "es/ayuda/articulos-y-skus/crear-un-producto",
+                  "es/ayuda/articulos-y-skus/crear-un-sku",
+                  "es/ayuda/articulos-y-skus/editar-un-sku",
+                  "es/ayuda/articulos-y-skus/propiedades",
+                  "es/ayuda/articulos-y-skus/trabajar-con-lotes"
+                ]
+              },
+              {
+                "group": "Pedidos",
                 "icon": "shopping-cart",
                 "root": "es/ayuda/ventas/introduccion",
                 "directory": "card",
                 "pages": [
+                  "es/ayuda/planificacion/clientes",
                   "es/ayuda/ventas/crear-pedido-de-venta",
-                  "es/ayuda/ventas/preparar-salida",
                   "es/ayuda/ventas/completar-envio"
                 ]
               },
@@ -69,22 +82,11 @@
                 "root": "es/ayuda/compras/introduccion",
                 "directory": "card",
                 "pages": [
+                  "es/ayuda/planificacion/proveedores",
                   "es/ayuda/planificacion/saber-que-comprar",
                   "es/ayuda/compras/crear-pedido-de-compra",
                   "es/ayuda/compras/ver-compras-pendientes",
                   "es/ayuda/compras/recibir-pedido-de-compra"
-                ]
-              },
-              {
-                "group": "Cubrir demanda",
-                "icon": "radar",
-                "root": "es/ayuda/planificacion/introduccion",
-                "directory": "card",
-                "pages": [
-                  "es/ayuda/planificacion/entender-el-stock-proyectado",
-                  "es/ayuda/planificacion/crear-demanda",
-                  "es/ayuda/planificacion/crear-suministro",
-                  "es/ayuda/planificacion/revisar-recomendaciones"
                 ]
               },
               {
@@ -94,15 +96,16 @@
                 "directory": "card",
                 "pages": [
                   "es/ayuda/planificacion/saber-que-fabricar",
+                  "es/ayuda/produccion/procesos",
+                  "es/ayuda/produccion/recursos",
                   "es/ayuda/produccion/crear-una-receta",
+                  "es/ayuda/produccion/controles-de-calidad",
                   "es/ayuda/produccion/crear-una-orden-de-fabricacion",
                   "es/ayuda/produccion/ejecutar-una-orden",
-                  "es/ayuda/produccion/completar-operaciones",
-                  "es/ayuda/produccion/consumir-componentes",
-                  "es/ayuda/produccion/registrar-produccion",
                   "es/ayuda/produccion/asignar-recursos",
-                  "es/ayuda/produccion/secuenciar-ordenes",
-                  "es/ayuda/produccion/solucion-de-problemas-de-produccion"
+                  "es/ayuda/produccion/turnos-de-trabajo",
+                  "es/ayuda/produccion/motivos-de-pausa",
+                  "es/ayuda/produccion/secuenciar-ordenes"
                 ]
               },
               {
@@ -111,14 +114,15 @@
                 "root": "es/ayuda/almacen/introduccion",
                 "directory": "card",
                 "pages": [
+                  "es/ayuda/almacen/crear-ubicaciones",
+                  "es/ayuda/almacen/tipos-de-contenedores",
+                  "es/ayuda/almacen/bultos",
                   "es/ayuda/almacen/consultar-stock",
-                  "es/ayuda/almacen/recibir-material",
                   "es/ayuda/almacen/recibir-con-albaran",
                   "es/ayuda/almacen/mover-stock",
                   "es/ayuda/almacen/ajustar-stock",
                   "es/ayuda/almacen/hacer-inventario",
                   "es/ayuda/almacen/ver-movimientos-de-stock",
-                  "es/ayuda/almacen/flujos-moviles",
                   "es/ayuda/almacen/solucion-de-problemas-de-stock"
                 ]
               },
@@ -128,7 +132,23 @@
                 "root": "es/ayuda/mantenimiento/introduccion",
                 "directory": "card",
                 "pages": [
+                  "es/ayuda/mantenimiento/activos",
+                  "es/ayuda/mantenimiento/acciones",
+                  "es/ayuda/mantenimiento/causas",
+                  "es/ayuda/mantenimiento/crear-parte-de-trabajo",
                   "es/ayuda/mantenimiento/mantenimiento-preventivo"
+                ]
+              },
+              {
+                "group": "Gestionar personal",
+                "icon": "users",
+                "root": "es/ayuda/personal/introduccion",
+                "directory": "card",
+                "pages": [
+                  "es/ayuda/personal/empleados",
+                  "es/ayuda/personal/jornadas-laborales",
+                  "es/ayuda/personal/calendarios-locales",
+                  "es/ayuda/personal/turnos"
                 ]
               },
               {
@@ -139,9 +159,22 @@
                 "pages": [
                   "es/ayuda/costes/articulos",
                   "es/ayuda/costes/empleados",
+                  "es/ayuda/costes/coste-teorico-vs-coste-real",
                   "es/ayuda/costes/ordenes-de-fabricacion",
                   "es/ayuda/costes/partes-de-trabajo",
                   "es/ayuda/costes/valoracion-inventario"
+                ]
+              },
+              {
+                "group": "Smart Factory",
+                "icon": "sparkles",
+                "root": "es/ayuda/smart-factory/introduccion",
+                "directory": "card",
+                "pages": [
+                  "es/ayuda/smart-factory/informes-powerbi",
+                  "es/ayuda/smart-factory/boldy",
+                  "es/ayuda/smart-factory/tareas-con-agentes",
+                  "es/ayuda/panel-de-control/agentes"
                 ]
               },
               {
@@ -149,6 +182,13 @@
                 "icon": "settings",
                 "pages": [
                   "es/ayuda/usuarios-y-permisos/invitar-usuarios",
+                  "es/ayuda/usuarios-y-permisos/roles-y-permisos",
+                  "es/ayuda/usuarios-y-permisos/permisos-por-modulo",
+                  "es/ayuda/panel-de-control/mi-cuenta-y-plan",
+                  "es/ayuda/panel-de-control/configuracion-de-empresa",
+                  "es/ayuda/panel-de-control/claves-api",
+                  "es/ayuda/panel-de-control/notificaciones",
+                  "es/ayuda/panel-de-control/disenos",
                   "es/ayuda/panel-de-control/importar-datos",
                   "es/ayuda/panel-de-control/gestionar-archivos"
                 ]
@@ -160,127 +200,100 @@
             "icon": "network",
             "groups": [
               {
-                "group": "Modelo funcional",
+                "group": "Mapa de conceptos",
                 "icon": "network",
-                "root": "es/conceptos/introduccion",
-                "directory": "card",
                 "pages": [
-                  "es/conceptos/catalogo",
-                  "es/conceptos/planificacion",
-                  "es/conceptos/almacen",
-                  "es/conceptos/fabricacion",
-                  "es/conceptos/personal",
-                  "es/conceptos/mantenimiento",
-                  "es/conceptos/costes",
-                  "es/conceptos/smart-factory-y-control"
+                  "es/conceptos/introduccion"
                 ]
               },
               {
-                "group": "Operación y análisis",
-                "icon": "activity",
+                "group": "Catálogo",
+                "icon": "boxes",
+                "root": "es/conceptos/catalogo",
+                "expanded": false,
                 "pages": [
-                  "es/ayuda/produccion/cuadros-de-mando",
-                  "es/ayuda/mantenimiento/partes-de-trabajo"
+                  "es/conceptos/catalogo/productos",
+                  "es/conceptos/catalogo/articulos",
+                  "es/conceptos/catalogo/producto-vs-articulo",
+                  "es/conceptos/catalogo/propiedades",
+                  "es/conceptos/catalogo/lotes"
                 ]
               },
               {
-                "group": "Datos maestros",
-                "icon": "database",
+                "group": "Almacén",
+                "icon": "warehouse",
+                "root": "es/conceptos/almacen",
+                "expanded": false,
                 "pages": [
-                  {
-                    "group": "Catálogo",
-                    "icon": "boxes",
-                    "root": "es/ayuda/articulos-y-skus/introduccion",
-                    "expanded": false,
-                    "pages": [
-                      "es/ayuda/articulos-y-skus/crear-un-producto",
-                      "es/ayuda/articulos-y-skus/crear-un-sku",
-                      "es/ayuda/articulos-y-skus/editar-un-sku",
-                      "es/ayuda/articulos-y-skus/producto-vs-sku",
-                      "es/ayuda/articulos-y-skus/propiedades",
-                      "es/ayuda/articulos-y-skus/trabajar-con-lotes"
-                    ]
-                  },
-                  {
-                    "group": "Clientes y proveedores",
-                    "icon": "handshake",
-                    "expanded": false,
-                    "pages": [
-                      "es/ayuda/planificacion/clientes",
-                      "es/ayuda/planificacion/proveedores"
-                    ]
-                  },
-                  {
-                    "group": "Almacén",
-                    "icon": "warehouse",
-                    "expanded": false,
-                    "pages": [
-                      "es/ayuda/almacen/crear-ubicaciones",
-                      "es/ayuda/almacen/tipos-de-contenedores",
-                      "es/ayuda/almacen/bultos"
-                    ]
-                  },
-                  {
-                    "group": "Fabricación",
-                    "icon": "factory",
-                    "expanded": false,
-                    "pages": [
-                      "es/ayuda/produccion/procesos",
-                      "es/ayuda/produccion/recursos",
-                      "es/ayuda/produccion/motivos-de-pausa",
-                      "es/ayuda/produccion/controles-de-calidad",
-                      "es/ayuda/produccion/turnos-de-trabajo"
-                    ]
-                  },
-                  {
-                    "group": "Personal",
-                    "icon": "users",
-                    "root": "es/ayuda/personal/introduccion",
-                    "expanded": false,
-                    "pages": [
-                      "es/ayuda/personal/empleados",
-                      "es/ayuda/personal/jornadas-laborales",
-                      "es/ayuda/personal/calendarios-locales",
-                      "es/ayuda/personal/turnos"
-                    ]
-                  },
-                  {
-                    "group": "Mantenimiento",
-                    "icon": "wrench",
-                    "expanded": false,
-                    "pages": [
-                      "es/ayuda/mantenimiento/activos",
-                      "es/ayuda/mantenimiento/acciones",
-                      "es/ayuda/mantenimiento/causas"
-                    ]
-                  }
+                  "es/conceptos/almacen/stock-y-movimientos",
+                  "es/conceptos/almacen/ubicaciones",
+                  "es/conceptos/almacen/bultos",
+                  "es/conceptos/almacen/tipos-de-contenedores",
+                  "es/conceptos/almacen/recepciones-y-envios",
+                  "es/conceptos/almacen/inventarios-y-ajustes"
                 ]
               },
               {
-                "group": "Seguridad y configuración",
-                "icon": "shield-check",
-                "root": "es/ayuda/panel-de-control/introduccion",
-                "directory": "card",
+                "group": "Fabricación",
+                "icon": "factory",
+                "root": "es/conceptos/fabricacion",
+                "expanded": false,
                 "pages": [
-                  "es/ayuda/usuarios-y-permisos/roles-y-permisos",
-                  "es/ayuda/usuarios-y-permisos/permisos-por-modulo",
-                  "es/ayuda/panel-de-control/mi-cuenta-y-plan",
-                  "es/ayuda/panel-de-control/configuracion-de-empresa",
-                  "es/ayuda/panel-de-control/claves-api",
-                  "es/ayuda/panel-de-control/notificaciones",
-                  "es/ayuda/panel-de-control/disenos"
+                  "es/conceptos/fabricacion/recetas-y-versiones",
+                  "es/conceptos/fabricacion/operaciones-y-restricciones",
+                  "es/conceptos/fabricacion/recursos",
+                  "es/conceptos/fabricacion/ordenes-de-fabricacion",
+                  "es/conceptos/fabricacion/controles-consumos-y-pausas"
                 ]
               },
               {
-                "group": "Analítica e IA",
+                "group": "Personal",
+                "icon": "users",
+                "root": "es/conceptos/personal",
+                "expanded": false,
+                "pages": [
+                  "es/conceptos/personal/usuarios-roles-y-permisos",
+                  "es/conceptos/personal/empleados",
+                  "es/conceptos/personal/jornadas-calendarios-y-turnos"
+                ]
+              },
+              {
+                "group": "Mantenimiento",
+                "icon": "wrench",
+                "root": "es/conceptos/mantenimiento",
+                "expanded": false,
+                "pages": [
+                  "es/conceptos/mantenimiento/activos",
+                  "es/conceptos/mantenimiento/causas-y-acciones",
+                  "es/conceptos/mantenimiento/partes-de-trabajo",
+                  "es/conceptos/mantenimiento/mantenimiento-preventivo"
+                ]
+              },
+              {
+                "group": "Planificación",
+                "icon": "calendar-range",
+                "root": "es/conceptos/planificacion",
+                "expanded": false,
+                "pages": [
+                  "es/conceptos/planificacion/demanda-y-suministro",
+                  "es/conceptos/planificacion/clientes-y-proveedores"
+                ]
+              },
+              {
+                "group": "Costes",
+                "icon": "circle-dollar-sign",
+                "root": "es/conceptos/costes",
+                "expanded": false,
+                "pages": [
+                  "es/conceptos/costes/coste-teorico-vs-real",
+                  "es/conceptos/costes/valoracion-de-inventario"
+                ]
+              },
+              {
+                "group": "Smart Factory y control",
                 "icon": "sparkles",
-                "root": "es/ayuda/smart-factory/introduccion",
-                "directory": "card",
                 "pages": [
-                  "es/ayuda/smart-factory/informes-powerbi",
-                  "es/ayuda/smart-factory/boldy",
-                  "es/ayuda/smart-factory/tareas-con-agentes",
-                  "es/ayuda/panel-de-control/agentes"
+                  "es/conceptos/smart-factory-y-control"
                 ]
               },
               {
@@ -301,7 +314,8 @@
             "icon": "square-terminal",
             "groups": [
               {
-                "group": "Empezar",
+                "group": "Primeros pasos",
+                "icon": "rocket",
                 "pages": [
                   "es/desarrolladores/empezar/introduccion",
                   "es/desarrolladores/empezar/autenticacion",
@@ -311,6 +325,7 @@
               },
               {
                 "group": "Webhooks",
+                "icon": "webhook",
                 "pages": [
                   "es/desarrolladores/webhooks/introduccion",
                   "es/desarrolladores/webhooks/eventos-disponibles",
@@ -319,20 +334,12 @@
                 ]
               },
               {
-                "group": "API Reference",
-                "pages": [
-                  "es/desarrolladores/api-reference/analytics",
-                  "es/desarrolladores/api-reference/items",
-                  "es/desarrolladores/api-reference/warehouse",
-                  "es/desarrolladores/api-reference/planning",
-                  "es/desarrolladores/api-reference/production",
-                  "es/desarrolladores/api-reference/people",
-                  "es/desarrolladores/api-reference/maintenance",
-                  "es/desarrolladores/api-reference/notifications",
-                  "es/desarrolladores/api-reference/labels",
-                  "es/desarrolladores/api-reference/purchases",
-                  "es/desarrolladores/api-reference/sales"
-                ]
+                "group": "Referencia de API",
+                "icon": "square-terminal",
+                "openapi": {
+                  "source": "https://api.bold-factory.com/openapi/v1.json",
+                  "directory": "es/desarrolladores/referencia-api"
+                }
               }
             ]
           },
@@ -342,6 +349,7 @@
             "groups": [
               {
                 "group": "Historial de cambios",
+                "icon": "history",
                 "pages": [
                   "es/novedades/changelog"
                 ]
@@ -364,6 +372,14 @@
     {
       "source": "/ayuda/*",
       "destination": "/es/ayuda/*"
+    },
+    {
+      "source": "/desarrolladores/api-reference/*",
+      "destination": "https://api.bold-factory.com/docs/v1"
+    },
+    {
+      "source": "/es/desarrolladores/api-reference/*",
+      "destination": "https://api.bold-factory.com/docs/v1"
     },
     {
       "source": "/desarrolladores/*",

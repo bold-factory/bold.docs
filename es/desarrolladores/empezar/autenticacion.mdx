@@ -3,15 +3,34 @@ title: "Autenticación"
 description: "Autentica llamadas a la API de Bold con claves API o tokens bearer."
 ---
 
-Bold acepta dos métodos de autenticación para la API: tokens bearer para sesiones de usuario y claves API para integraciones de servidor a servidor.
+Bold acepta dos métodos de autenticación para la API: claves API para integraciones de servidor a servidor y tokens bearer para sesiones de usuario.
 
 <Info>
   Si la petición incluye la cabecera `X-Api-Key`, el backend usa autenticación por clave API. Si no la incluye, valida la petición como JWT bearer.
 </Info>
 
-## Claves API
+## Obtener una clave API
 
-Usa claves API para integraciones técnicas. La clave identifica el tenant y se trata como una credencial secreta.
+Necesitas ser administrador para crear o desactivar claves API. En la aplicación, esta gestión vive en **Panel de control > Acceso > Claves API**.
+
+<Steps>
+  <Step title="Abre Claves API">
+    Entra en **Panel de control** y abre **Claves API** dentro del grupo **Acceso**.
+  </Step>
+  <Step title="Crea una clave">
+    Haz clic en **Crear nueva clave API**. Escribe un valor en **Nombre de la clave**, por ejemplo `ERP producción` o `BI inventario`.
+  </Step>
+  <Step title="Guarda el secreto">
+    Haz clic en **Crear clave** y copia el valor que aparece en **Clave API creada**. La clave completa solo se muestra en ese momento.
+  </Step>
+  <Step title="Confirma la copia">
+    Guarda la clave en el gestor de secretos de la integración y confirma con **Ya la he copiado y guardado**.
+  </Step>
+</Steps>
+
+## Usar claves API
+
+Usa claves API para integraciones técnicas. La clave identifica el tenant y se trata como una credencial secreta. Envía la clave en la cabecera `X-Api-Key`.
 
 ```http
 GET /v1/items/products?pageNumber=1&pageSize=25
@@ -64,4 +83,4 @@ curl "https://api.bold-factory.com/v1/items/skus?pageNumber=1&pageSize=25" \
 
 ## Gestionar claves
 
-La creación, consulta y desactivación de claves se hace desde **Panel de control**. Consulta [Claves API](/ayuda/panel-de-control/claves-api) para el flujo administrativo.
+La creación, consulta y desactivación de claves se hace desde **Panel de control > Acceso > Claves API**. Consulta [Claves API](/ayuda/panel-de-control/claves-api) para el flujo administrativo.

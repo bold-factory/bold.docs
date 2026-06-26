@@ -1,12 +1,12 @@
 ---
 title: "Propiedades"
-description: "Define atributos reutilizables para clasificar productos, validar SKUs y usar variantes en recetas."
+description: "Define atributos reutilizables para clasificar productos, validar artículos y usar variantes en recetas."
 icon: "list-filter"
 ---
 
 Las propiedades son atributos reutilizables para describir artículos y variantes de producto. Ejemplos habituales son color, material, largo, acabado, tipo de envase o fecha de caducidad técnica.
 
-Primero creas la propiedad global. Después la asignas a los productos que la necesitan. Los SKUs de esos productos deben informar valores coherentes para quedar bien clasificados y validados.
+Primero creas la propiedad global. Después la asignas a los productos que la necesitan. Los artículos de esos productos deben informar valores coherentes para quedar bien clasificados y validados.
 
 ## Cuándo usar propiedades
 
@@ -26,7 +26,7 @@ No uses propiedades para notas ocasionales. Si el valor no se va a filtrar ni us
 | Texto libre | Valores técnicos que no encajan en una lista cerrada. | Código interno, observación corta. |
 
 <Warning>
-  Elige bien la clase antes de usar la propiedad en muchos productos. La clase define el tipo de valor que podrán guardar los SKUs.
+  Elige bien la clase antes de usar la propiedad en muchos productos. La clase define el tipo de valor que podrán guardar los artículos.
 </Warning>
 
 ## Selección de opción
@@ -45,16 +45,16 @@ Si cada producto necesita una lista distinta, crea propiedades distintas o usa u
 
 <Steps>
   <Step title="Crea la propiedad global">
-    Ve a **Artículos y SKUs > Propiedades** y crea la propiedad con **Nombre**, **Clase** y **Referencia externa** si viene de otro sistema.
+    Ve a **Catálogo > Propiedades** y crea la propiedad con **Nombre**, **Clase** y **Referencia externa** si viene de otro sistema.
   </Step>
   <Step title="Añade opciones si corresponde">
     Si la clase es **Selección de opción**, añade las opciones permitidas.
   </Step>
   <Step title="Asigna la propiedad al producto">
-    En la ficha del producto, añade la propiedad para que sus SKUs puedan usarla.
+    En la ficha del producto, añade la propiedad para que sus artículos puedan usarla.
   </Step>
-  <Step title="Rellena valores en los SKUs">
-    Informa el valor de cada SKU. Revisa los SKUs existentes después de asignar una propiedad nueva.
+  <Step title="Rellena valores en los artículos">
+    Informa el valor de cada artículo. Revisa los artículos existentes después de asignar una propiedad nueva.
   </Step>
   <Step title="Usa la propiedad en procesos">
     Filtra artículos, prepara variantes y usa propiedades en condiciones de receta cuando aplique.
@@ -63,11 +63,11 @@ Si cada producto necesita una lista distinta, crea propiedades distintas o usa u
 
 ## Qué cambia en Bold
 
-Al asignar o quitar una propiedad de un producto, Bold revisa el estado de validación de los SKUs de ese producto. Esto ayuda a detectar SKUs que todavía no tienen valores completos o que ya no cumplen la estructura del producto.
+Al asignar o quitar una propiedad de un producto, Bold revisa el estado de validación de los artículos de ese producto. Esto ayuda a detectar artículos que todavía no tienen valores completos o que ya no cumplen la estructura del producto.
 
 Las propiedades también aparecen como datos de referencia para:
 
-- Buscar y filtrar SKUs.
+- Buscar y filtrar artículos.
 - Diferenciar variantes dentro de un producto.
 - Configurar condiciones de receta basadas en atributos.
 - Definir valores fijos de semielaborados cuando una receta depende de propiedades.
@@ -88,7 +88,7 @@ Buenas prácticas:
 - Usa opciones controladas para valores que deben coincidir exactamente.
 - Evita texto libre si luego necesitarás agrupar o fabricar por ese valor.
 - No reutilices la misma propiedad para significados distintos.
-- Revisa SKUs incompletos después de asignar una propiedad nueva a un producto con variantes existentes.
+- Revisa artículos incompletos después de asignar una propiedad nueva a un producto con variantes existentes.
 
 ## Ejemplos
 
@@ -96,7 +96,7 @@ Buenas prácticas:
 | --- | --- |
 | Filtrar pinturas por acabado | Propiedad **Acabado** como **Selección de opción**. |
 | Guardar longitud de perfiles | Propiedad **Longitud** como **Número con decimales**. |
-| Indicar si un material requiere lote | Propiedad **Requiere lote** como **Sí/no** si solo clasifica; usa la configuración de lotes del SKU para controlar stock. |
+| Indicar si un material requiere lote | Propiedad **Requiere lote** como **Sí/no** si solo clasifica; usa la configuración de lotes del artículo para controlar stock. |
 | Elegir insumos según color del producto final | Propiedad **Color** asignada al producto y usada en condiciones de receta. |
 | Importar valores desde ERP | Referencia externa en propiedad y opciones. |
 
@@ -107,22 +107,22 @@ Buenas prácticas:
 | Ver propiedades y opciones | `Items.Properties.Read` |
 | Crear, editar, copiar o eliminar propiedades | `Items.Properties.Write` |
 | Asignar propiedades a productos | `Items.Products.Write` |
-| Editar valores de SKU | `Items.Skus.Write` |
+| Editar valores de artículo | `Items.Skus.Write` |
 
 ## Problemas habituales
 
 | Problema | Qué revisar |
 | --- | --- |
-| Una propiedad no aparece en el SKU | Comprueba que esté asignada al producto del SKU. |
+| Una propiedad no aparece en el artículo | Comprueba que esté asignada al producto del artículo. |
 | No puedes añadir opciones | Solo las propiedades de clase **Selección de opción** aceptan opciones. |
-| Los SKUs quedan incompletos | Rellena valores para las propiedades requeridas por el producto. |
+| Los artículos quedan incompletos | Rellena valores para las propiedades requeridas por el producto. |
 | Una importación no encuentra el valor | Revisa la referencia externa de la propiedad y de la opción. |
 | La lista de opciones se volvió confusa | Divide la propiedad si estás mezclando significados distintos. |
 
 ## Relacionado
 
 - [Crear un producto](/ayuda/articulos-y-skus/crear-un-producto)
-- [Crear un SKU](/ayuda/articulos-y-skus/crear-un-sku)
-- [Editar un SKU](/ayuda/articulos-y-skus/editar-un-sku)
-- [Producto vs SKU](/ayuda/articulos-y-skus/producto-vs-sku)
+- [Crear un artículo](/ayuda/articulos-y-skus/crear-un-sku)
+- [Editar un artículo](/ayuda/articulos-y-skus/editar-un-sku)
+- [Producto vs artículo](/conceptos/catalogo/producto-vs-articulo)
 - [Conceptos de catálogo](/conceptos/catalogo)

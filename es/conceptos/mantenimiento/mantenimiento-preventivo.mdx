@@ -1,0 +1,41 @@
+---
+title: "Mantenimiento preventivo"
+description: "Entiende las programaciones preventivas y cómo generan partes de trabajo recurrentes."
+icon: "calendar-clock"
+---
+
+El **mantenimiento preventivo** define reglas para generar partes de trabajo recurrentes.
+
+La programación no es el parte. La programación indica cuándo debe crearse un parte, sobre qué activo y con qué información inicial.
+
+## Qué define una programación
+
+| Dato | Uso |
+| --- | --- |
+| Activo | Equipo al que aplica. |
+| Frecuencia | Cada cuánto debe generarse. |
+| Próxima fecha | Momento previsto de la siguiente ocurrencia. |
+| Política | Qué hacer si hay partes abiertos. |
+| Plantilla | Causa, acciones y notas iniciales. |
+| Estado | Habilitada o deshabilitada. |
+
+## Políticas de generación
+
+| Política | Comportamiento |
+| --- | --- |
+| Generar cada ocurrencia | Crea un parte por cada vencimiento. |
+| Omitir si hay parte abierto | Evita duplicar trabajo si ya hay una intervención pendiente. |
+
+Usa la política según el riesgo de duplicar partes. Para revisiones críticas puede interesar cada ocurrencia. Para tareas repetibles de baja urgencia puede ser mejor omitir si hay trabajo abierto.
+
+## Relación con partes
+
+Cuando se genera un parte, ese parte contiene la ejecución real. Debe completarse con tiempos, acciones, materiales y observaciones como cualquier intervención.
+
+La programación conserva frecuencia e histórico de generación. El parte conserva qué se hizo.
+
+## Relacionado
+
+- [Partes de trabajo](/conceptos/mantenimiento/partes-de-trabajo)
+- [Activos](/conceptos/mantenimiento/activos)
+- [Programar mantenimientos preventivos](/ayuda/mantenimiento/mantenimiento-preventivo)

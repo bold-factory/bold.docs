@@ -1,0 +1,43 @@
+---
+title: "Demanda y suministro"
+description: "Entiende cómo planificación compara necesidades, entradas esperadas y stock proyectado."
+icon: "calendar-range"
+---
+
+La planificación compara **demanda**, **suministro** y **stock** para decidir qué falta, cuándo falta y cómo cubrirlo.
+
+## Conceptos
+
+| Concepto | Significado |
+| --- | --- |
+| Demanda | Necesidad de stock generada por venta, previsión o consumo previsto. |
+| Suministro | Entrada esperada por compra, fabricación o previsión. |
+| Stock proyectado | Evolución futura al aplicar demanda y suministro. |
+| Punto de pedido | Umbral desde el que conviene reponer. |
+| Pedido mínimo | Cantidad mínima recomendada. |
+| Tamaño de lote | Múltiplo operativo para redondear cantidades. |
+
+## Demanda
+
+La demanda puede venir de pedidos de venta, necesidades internas o consumos previstos. Una línea en borrador no debería tratarse igual que un compromiso confirmado.
+
+## Suministro
+
+El suministro puede venir de pedidos de compra, recepciones pendientes, peticiones de fabricación u órdenes planificadas.
+
+Cuando almacén recibe material o producción completa una orden, el suministro pendiente se transforma en stock físico.
+
+## Stock proyectado
+
+```text
+Stock disponible proyectado = stock físico - stock saliente + stock entrante
+```
+
+El proyectado permite detectar faltas antes de que el stock físico sea negativo.
+
+## Relacionado
+
+- [Planificación](/conceptos/planificacion)
+- [Stock y movimientos](/conceptos/almacen/stock-y-movimientos)
+- [Saber qué comprar](/ayuda/planificacion/saber-que-comprar)
+- [Saber qué fabricar](/ayuda/planificacion/saber-que-fabricar)

@@ -1,0 +1,49 @@
+---
+title: "Recursos"
+description: "Entiende áreas, estaciones, herramientas, características y capacidad de fabricación."
+icon: "wrench"
+---
+
+Los **recursos** representan la capacidad física o técnica necesaria para ejecutar operaciones.
+
+Pueden ser áreas, estaciones, máquinas, herramientas, equipos o características requeridas por una operación.
+
+## Entidades
+
+| Concepto | Uso |
+| --- | --- |
+| Área | Agrupa estaciones o zonas productivas. |
+| Estación de trabajo | Lugar donde se ejecuta una operación. |
+| Herramienta | Recurso seleccionable para una operación. |
+| Característica | Requisito que permite elegir herramientas compatibles. |
+| Tipo de capacidad | Define cómo aporta capacidad un recurso. |
+| Eficiencia | Ajusta duración prevista, coste y secuenciación. |
+
+## Estaciones y procesos
+
+Un proceso describe el tipo de trabajo. Una estación indica dónde puede ejecutarse.
+
+Ejemplo: el proceso **Corte** puede ejecutarse en las estaciones **Sierra 1** y **Sierra 2**. Si una estación tiene menor eficiencia, Bold puede planificar más duración.
+
+## Herramientas y características
+
+Usa características cuando una operación exige una condición técnica. Las herramientas que cumplen esa característica pueden seleccionarse durante planificación o ejecución.
+
+| Necesidad | Modelo |
+| --- | --- |
+| Cualquier operario puede usar una estación | Estación sin herramienta requerida. |
+| La operación necesita útil específico | Herramienta con característica. |
+| La máquina cambia duración | Eficiencia por estación. |
+| La diferencia solo es una nota | Paso o instrucción, no recurso. |
+
+## Relación con ubicaciones
+
+Una estación o área puede relacionarse con ubicaciones de planta si necesitas consumir o producir material cerca del recurso.
+
+Esto es útil cuando el stock se mueve físicamente a una línea, célula o zona de trabajo antes de ejecutarse.
+
+## Relacionado
+
+- [Operaciones y restricciones](/conceptos/fabricacion/operaciones-y-restricciones)
+- [Ubicaciones](/conceptos/almacen/ubicaciones)
+- [Asignar recursos](/ayuda/produccion/asignar-recursos)

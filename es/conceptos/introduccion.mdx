@@ -1,22 +1,21 @@
 ---
 title: "Conceptos de Bold"
-description: "Consulta el modelo funcional de Bold: entidades, reglas, estados y relaciones entre módulos."
+description: "Consulta entidades, reglas y relaciones por área funcional de Bold."
 icon: "book-open"
 ---
 
-Usa esta sección cuando necesites entender qué significa un dato, qué reglas aplica Bold o cómo se relacionan los módulos entre sí. Para ejecutar un proceso paso a paso, ve a **Guías**.
+Usa esta sección cuando necesites entender qué representa un dato, qué reglas aplica Bold o cómo se relacionan los módulos entre sí.
 
-## Cómo usar esta sección
+Para ejecutar un proceso paso a paso, ve a **Guías**.
+
+## Áreas principales
 
 <Columns cols={2}>
   <Card title="Catálogo" icon="boxes" href="/conceptos/catalogo">
-    Productos, artículos, propiedades, variantes, lotes y reglas de validación.
-  </Card>
-  <Card title="Planificación" icon="calendar-range" href="/conceptos/planificacion">
-    Demanda, suministro, stock proyectado, compras, ventas y asistentes.
+    Productos, artículos, propiedades, variantes y lotes.
   </Card>
   <Card title="Almacén" icon="warehouse" href="/conceptos/almacen">
-    Stock, ubicaciones, recepciones, envíos, inventarios, bultos y trazabilidad.
+    Stock, ubicaciones, movimientos, bultos, recepciones e inventarios.
   </Card>
   <Card title="Fabricación" icon="factory" href="/conceptos/fabricacion">
     Recetas, versiones, operaciones, órdenes, recursos, controles y ejecución.
@@ -27,30 +26,30 @@ Usa esta sección cuando necesites entender qué significa un dato, qué reglas 
   <Card title="Mantenimiento" icon="wrench" href="/conceptos/mantenimiento">
     Activos, causas, acciones, preventivos y partes de trabajo.
   </Card>
+</Columns>
+
+## Áreas secundarias
+
+<Columns cols={2}>
+  <Card title="Planificación" icon="calendar-range" href="/conceptos/planificacion">
+    Demanda, suministro, stock proyectado, compras, ventas y asistentes.
+  </Card>
   <Card title="Costes" icon="circle-dollar-sign" href="/conceptos/costes">
-    Costes de artículos, empleados, fabricación, mantenimiento e inventario.
+    Coste teórico, coste real y valoración de inventario.
   </Card>
   <Card title="Smart Factory y control" icon="sparkles" href="/conceptos/smart-factory-y-control">
     Boldy, agentes, informes, claves API, webhooks, notificaciones y datos.
   </Card>
 </Columns>
 
-## Lectura recomendada
+## Cómo está organizada
 
-<Steps>
-  <Step title="Empieza por el glosario">
-    Alinea el vocabulario antes de configurar datos maestros o revisar bloqueos.
-  </Step>
-  <Step title="Revisa el módulo que afecta a tu flujo">
-    Cada página explica entidades, reglas de edición, estados y efectos en otros módulos.
-  </Step>
-  <Step title="Usa los estados y reglas del sistema">
-    Cuando una acción esté bloqueada, comprueba primero el estado y la regla funcional que protege el dato.
-  </Step>
-  <Step title="Vuelve a las guías">
-    Después de entender el concepto, usa la sección **Guías** para ejecutar el proceso.
-  </Step>
-</Steps>
+| Tipo de página | Úsala para |
+| --- | --- |
+| Página de área | Entender el mapa general de un módulo. |
+| Página de concepto | Resolver qué representa una entidad y cuándo usarla. |
+| Referencia funcional | Consultar estados, reglas y vocabulario transversal. |
+| Guías | Ejecutar flujos como crear, recibir, mover, completar o configurar. |
 
 ## Referencias transversales
 

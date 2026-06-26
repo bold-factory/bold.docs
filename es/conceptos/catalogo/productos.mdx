@@ -1,0 +1,55 @@
+---
+title: "Productos"
+description: "Entiende cómo usar productos para agrupar artículos, variantes y recetas."
+icon: "package-open"
+---
+
+Un **producto** agrupa artículos que pertenecen al mismo concepto comercial o técnico. No representa stock por sí mismo. Sirve para ordenar variantes, definir propiedades comunes y conectar recetas con una familia de artículos.
+
+## Qué representa
+
+| Elemento | Papel |
+| --- | --- |
+| Producto | Familia que comparte nombre, propiedades o proceso. |
+| Artículo | Variante operativa con stock, compras, ventas, fabricación y coste. |
+| Propiedad | Atributo que explica las diferencias entre artículos del producto. |
+| Receta | Proceso definido sobre el producto y adaptado a sus artículos mediante propiedades. |
+
+Un producto puede tener un artículo o varios. La clave es que el producto explique una agrupación útil para negocio, fabricación o análisis.
+
+## Cuándo crear un producto
+
+Crea un producto cuando las variantes comparten una identidad común y necesitas gestionarlas como familia.
+
+| Caso | Ejemplo |
+| --- | --- |
+| Variantes comerciales | Mesa Nórdica en varios colores y medidas. |
+| Variantes técnicas | Perfil de aluminio con diferentes longitudes. |
+| Receta común | Misma estructura de fabricación con condiciones por propiedad. |
+| Análisis agrupado | Consultar actividad por familia además de por artículo. |
+| Validación de variantes | Exigir que todos los artículos informen color, medida o acabado. |
+
+## Cuándo no hace falta
+
+No crees un producto solo para rellenar catálogo. Un artículo aislado puede operar sin producto si no hay variantes, receta común ni necesidad de agrupación.
+
+Tampoco crees un producto distinto por cada variante. Si cada color o medida es un producto separado, pierdes la agrupación y duplicas reglas que deberían vivir en propiedades.
+
+## Relación con propiedades
+
+Las propiedades asignadas al producto definen qué información deben completar sus artículos. Si un producto tiene las propiedades **Color** y **Largo**, cada artículo de ese producto debe informar un valor coherente para ambas.
+
+Cuando falta un valor requerido, el artículo queda incompleto o inválido hasta corregirlo. Esa validación evita mezclar variantes que parecen iguales pero no lo son.
+
+## Relación con fabricación
+
+Las recetas se definen a nivel de producto. Después pueden usar propiedades para decidir qué operaciones, entradas, pasos o condiciones aplican a cada artículo.
+
+Ejemplo: el producto **Mesa Nórdica** puede tener una receta común. La propiedad **Largo** decide la cantidad de tablero y la propiedad **Acabado** decide si aparece una operación de pintura.
+
+## Guías relacionadas
+
+- [Crear un producto](/ayuda/articulos-y-skus/crear-un-producto)
+- [Producto vs artículo](/conceptos/catalogo/producto-vs-articulo)
+- [Propiedades](/conceptos/catalogo/propiedades)
+- [Recetas y versiones](/conceptos/fabricacion/recetas-y-versiones)

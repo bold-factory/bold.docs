@@ -1,0 +1,53 @@
+---
+title: "Operaciones y restricciones"
+description: "Entiende las operaciones de fabricación, su orden, estados y precedencias."
+icon: "route"
+---
+
+Una **operación** es una etapa ejecutable del proceso de fabricación. Puede tener entradas, pasos, controles, recursos, tiempos y restricciones.
+
+## Qué define una operación
+
+| Dato | Uso |
+| --- | --- |
+| Proceso | Tipo de trabajo que se ejecuta. |
+| Estación o recurso | Dónde se puede ejecutar. |
+| Entradas | Materiales consumidos durante la etapa. |
+| Pasos | Instrucciones visibles para el operario. |
+| Controles | Comprobaciones obligatorias o informativas. |
+| Tiempo previsto | Base para planificación, coste y eficiencia. |
+| Cantidad | Progreso que aporta a la orden. |
+
+## Restricciones
+
+Las restricciones definen el orden entre operaciones. Evitan secuencias imposibles y ayudan a derivar qué operación puede empezar.
+
+| Tipo | Efecto operativo |
+| --- | --- |
+| Total | La operación siguiente espera a que termine la anterior. |
+| Parcial | La operación siguiente puede empezar con progreso suficiente. |
+| No bloqueante | Conserva una precedencia recomendada sin bloquear. |
+
+No deben duplicarse ni crear ciclos. Un ciclo impediría saber qué operación desbloquea a otra.
+
+## Operación final
+
+La operación final suele ser la que no tiene restricciones salientes. Bold puede usarla para derivar cantidad completada, rechazada y pendiente de la orden.
+
+Define bien la operación final cuando hay ramas paralelas, co-productos o controles finales.
+
+## Granularidad
+
+| Operaciones demasiado grandes | Operaciones demasiado pequeñas |
+| --- | --- |
+| Ocultan cuellos de botella. | Obligan a registrar cambios constantes. |
+| Dificultan medir avance real. | Cargan al operario con exceso de interacción. |
+| Mezclan consumos y controles distintos. | Complican planificación sin aportar trazabilidad. |
+
+Elige el nivel en el que necesitas medir progreso, consumo, calidad o responsabilidad.
+
+## Relacionado
+
+- [Recetas y versiones](/conceptos/fabricacion/recetas-y-versiones)
+- [Recursos](/conceptos/fabricacion/recursos)
+- [Secuenciar órdenes](/ayuda/produccion/secuenciar-ordenes)

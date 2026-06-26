@@ -6,6 +6,20 @@ icon: "users"
 
 Personal separa acceso a la aplicación, personas operativas y capacidad planificada.
 
+## Conceptos de este grupo
+
+<Columns cols={2}>
+  <Card title="Usuarios, roles y permisos" icon="shield" href="/conceptos/personal/usuarios-roles-y-permisos">
+    Acceso, permisos y separación entre usuario y empleado.
+  </Card>
+  <Card title="Empleados" icon="user-round" href="/conceptos/personal/empleados">
+    Personas operativas para tiempos, asignaciones y costes.
+  </Card>
+  <Card title="Jornadas, calendarios y turnos" icon="calendar-clock" href="/conceptos/personal/jornadas-calendarios-y-turnos">
+    Horarios, excepciones y ciclos de trabajo.
+  </Card>
+</Columns>
+
 ## Entidades
 
 | Concepto | Uso |
@@ -37,22 +51,12 @@ Los roles evitan configurar permisos persona por persona. Crea roles por respons
 
 Una jornada define el patrón normal de trabajo. Un calendario local define excepciones. Un turno aplica esas reglas a personas o equipos.
 
-El orden recomendado es:
-
-<Steps>
-  <Step title="Define jornadas laborales">
-    Crea plantillas de horario reutilizables.
-  </Step>
-  <Step title="Configura calendarios locales">
-    Añade festivos, cierres y excepciones.
-  </Step>
-  <Step title="Crea turnos">
-    Programa cuándo trabaja cada equipo o empleado.
-  </Step>
-  <Step title="Relaciona con operación">
-    Usa esa capacidad en planificación, ejecución y análisis de costes.
-  </Step>
-</Steps>
+| Concepto | Qué decide |
+| --- | --- |
+| Jornada laboral | Qué tramos componen un día tipo. |
+| Calendario local | Qué excepciones alteran el patrón normal. |
+| Turno | Qué ciclo repetitivo se aplica a empleados o equipos. |
+| Relación operativa | Cómo esa capacidad afecta a planificación, ejecución y costes. |
 
 ## Impacto en otros módulos
 
@@ -72,4 +76,4 @@ El orden recomendado es:
 - [Invitar usuarios](/ayuda/usuarios-y-permisos/invitar-usuarios)
 - [Roles y permisos](/ayuda/usuarios-y-permisos/roles-y-permisos)
 - [Permisos por módulo](/ayuda/usuarios-y-permisos/permisos-por-modulo)
-- [People API](/desarrolladores/api-reference/people)
+- [People API](https://api.bold-factory.com/docs/v1)

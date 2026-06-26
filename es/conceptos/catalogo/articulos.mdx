@@ -1,0 +1,65 @@
+---
+title: "Artículos"
+description: "Entiende el artículo como unidad operativa de stock, compras, ventas, fabricación y costes."
+icon: "barcode"
+---
+
+Un **artículo** identifica un elemento físico concreto. Es la unidad que Bold usa para controlar stock, compras, ventas, fabricación, consumos, lotes y costes.
+
+En integraciones o documentación técnica puede aparecer como `sku`. En la interfaz de Bold, el término funcional es **Artículo**.
+
+## Qué controla
+
+| Área | Uso del artículo |
+| --- | --- |
+| Catálogo | Nombre, código, unidad, imagen, producto y valores de propiedades. |
+| Almacén | Stock por ubicación y lote opcional. |
+| Compras | Líneas de pedido, proveedor preferente y plazos. |
+| Ventas | Líneas de pedido y compromisos de entrega. |
+| Fabricación | Artículo fabricado, entradas consumidas y co-productos. |
+| Planificación | Origen, modo de aprovisionamiento, punto de pedido y cantidades recomendadas. |
+| Costes | Coste base, coste real, lote y valoración de inventario. |
+
+## Identidad del artículo
+
+El código debe ser estable. Cambiarlo cuando ya existe actividad complica búsquedas, integraciones y trazabilidad.
+
+La unidad define cómo se expresan cantidades. Debe ser la unidad con la que el equipo compra, almacena, consume o fabrica ese artículo de forma consistente.
+
+## Artículos con producto
+
+Un artículo puede pertenecer a un producto. En ese caso representa una variante de la familia.
+
+| Producto | Artículo |
+| --- | --- |
+| Mesa Nórdica | Mesa Nórdica - 160 cm - Roble |
+| Mesa Nórdica | Mesa Nórdica - 200 cm - Nogal |
+| Envase 500 ml | Envase 500 ml - Transparente |
+
+Si el producto tiene propiedades, el artículo debe completar los valores. Dos artículos activos con el mismo producto y los mismos valores suelen indicar un duplicado o una propiedad que falta.
+
+## Artículos sin producto
+
+Un artículo puede existir sin producto cuando no necesita agruparse con variantes.
+
+Usa esta opción para repuestos, consumibles o referencias únicas que no comparten receta ni propiedades comunes con otros artículos.
+
+## Datos que afectan a planificación
+
+| Campo | Qué decide |
+| --- | --- |
+| Origen de aprovisionamiento | Si se compra, se fabrica o se ignora en recomendaciones. |
+| Modo de aprovisionamiento | Si se cubre contra pedido o contra stock. |
+| Punto de pedido | Nivel que dispara reposición contra stock. |
+| Pedido mínimo | Cantidad mínima sugerida. |
+| Tamaño de lote | Múltiplo usado para redondear recomendaciones. |
+| Lead time | Anticipación necesaria para compra o fabricación. |
+
+Estos datos no describen el artículo físicamente. Describen cómo debe reponerse.
+
+## Guías relacionadas
+
+- [Crear un artículo](/ayuda/articulos-y-skus/crear-un-sku)
+- [Editar un artículo](/ayuda/articulos-y-skus/editar-un-sku)
+- [Planificación](/conceptos/planificacion)
+- [Stock y movimientos](/conceptos/almacen/stock-y-movimientos)

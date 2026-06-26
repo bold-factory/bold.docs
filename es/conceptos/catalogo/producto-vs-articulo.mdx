@@ -1,0 +1,59 @@
+---
+title: "Producto vs artículo"
+description: "Diferencia productos, artículos y variantes para modelar el catálogo sin duplicados."
+icon: "git-compare"
+---
+
+La diferencia entre **producto** y **artículo** decide cómo se organizan variantes, stock, recetas y análisis.
+
+Un **producto** agrupa variantes. Un **artículo** representa la unidad física concreta que compras, fabricas, almacenas, consumes o vendes.
+
+## Comparación rápida
+
+| Concepto | Qué representa | Ejemplo |
+| --- | --- | --- |
+| Producto | Familia o concepto comercial | Mesa Nórdica |
+| Propiedad | Atributo que diferencia variantes | Color, largo, acabado |
+| Artículo | Variante física concreta | Mesa Nórdica blanca 120 cm |
+| Lote | Conjunto trazable de unidades de un artículo | Lote fabricado el 2026-06-15 |
+
+## Decisión de modelado
+
+| Pregunta | Si la respuesta es sí |
+| --- | --- |
+| ¿Debe tener stock separado? | Crea artículos distintos. |
+| ¿Se compra, vende o fabrica por separado? | Crea artículos distintos. |
+| ¿Solo cambia una característica de una misma familia? | Usa un producto con propiedades. |
+| ¿La diferencia no afecta operación ni análisis? | No crees una variante nueva. |
+| ¿Necesitas una receta común con pequeñas diferencias? | Usa producto, propiedades y condiciones de receta. |
+
+## Producto con varios artículos
+
+Usa un producto con varios artículos cuando las variantes comparten identidad, pero deben operar por separado.
+
+Ejemplo: **Mesa Nórdica** es el producto. **Mesa Nórdica - 160 cm - Roble** y **Mesa Nórdica - 200 cm - Nogal** son artículos porque tienen stock, pedidos, coste y fabricación separados.
+
+## Producto con un solo artículo
+
+Un producto puede tener un único artículo si quieres mantener una familia preparada para crecer o si la receta se define a nivel de producto.
+
+No es obligatorio. Si no hay necesidad de agrupación, un artículo sin producto es suficiente.
+
+## Errores habituales
+
+| Error | Efecto |
+| --- | --- |
+| Crear un producto por variante | Pierdes agrupación y duplicas propiedades o recetas. |
+| Crear un solo artículo para variantes reales | Mezclas stock, coste y trazabilidad. |
+| Usar texto libre para variantes | Genera valores inconsistentes y filtros poco fiables. |
+| Duplicar artículos con las mismas propiedades | Oculta duplicados y dificulta consolidación. |
+
+## Regla práctica
+
+Empieza por el modelo más simple que conserve stock, trazabilidad y fabricación correctos. Añade propiedades cuando una diferencia tenga impacto operativo.
+
+## Relacionado
+
+- [Productos](/conceptos/catalogo/productos)
+- [Artículos](/conceptos/catalogo/articulos)
+- [Propiedades](/conceptos/catalogo/propiedades)

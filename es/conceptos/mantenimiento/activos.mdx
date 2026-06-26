@@ -1,0 +1,42 @@
+---
+title: "Activos"
+description: "Entiende los activos mantenibles y su relación con intervenciones, historial y costes."
+icon: "factory"
+---
+
+Un **activo** es una máquina, instalación, área, herramienta o equipo sobre el que se puede registrar mantenimiento.
+
+El activo da contexto al historial: qué falló, qué se hizo, cuánto costó y cuándo conviene volver a intervenir.
+
+## Qué representa
+
+| Tipo | Ejemplo |
+| --- | --- |
+| Máquina | Prensa, sierra, inyectora. |
+| Instalación | Aire comprimido, climatización, electricidad. |
+| Área | Zona de envasado, línea 1. |
+| Herramienta | Útil, molde, equipo auxiliar. |
+
+El nivel de detalle debe coincidir con cómo analizas averías y costes.
+
+## Jerarquía
+
+Puedes modelar activos en jerarquía si necesitas separar un equipo principal de sus componentes.
+
+| Nivel | Ejemplo |
+| --- | --- |
+| Línea | Línea de montaje 1 |
+| Máquina | Atornilladora automática |
+| Componente | Cabezal de apriete |
+
+No crees niveles que el equipo no vaya a usar. Una jerarquía demasiado profunda dificulta registrar partes.
+
+## Relación con partes
+
+Un parte de trabajo se registra sobre un activo. Eso permite consultar historial, tiempos, materiales, causas, acciones y costes por activo.
+
+## Relacionado
+
+- [Partes de trabajo](/conceptos/mantenimiento/partes-de-trabajo)
+- [Causas y acciones](/conceptos/mantenimiento/causas-y-acciones)
+- [Activos en guías](/ayuda/mantenimiento/activos)

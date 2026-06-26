@@ -1,0 +1,57 @@
+---
+title: "Stock y movimientos"
+description: "Entiende cómo Bold registra stock físico, disponible, entrante, saliente y movimientos."
+icon: "boxes"
+---
+
+El stock indica qué cantidad de un artículo existe o se espera. Los movimientos explican por qué cambió esa cantidad.
+
+## Unidad de stock
+
+Bold controla stock por la combinación de:
+
+| Dimensión | Significado |
+| --- | --- |
+| Artículo | Qué material es. |
+| Ubicación | Dónde está. |
+| Lote | Qué origen o conjunto trazable tiene, si aplica. |
+
+Esa combinación permite separar el mismo artículo por zona, proveedor, fabricación, coste o calidad.
+
+## Tipos de stock
+
+| Concepto | Significado |
+| --- | --- |
+| Stock físico | Cantidad registrada actualmente. |
+| Stock disponible | Cantidad libre después de reservas o compromisos. |
+| Stock entrante | Cantidad esperada por compras, recepciones o fabricación. |
+| Stock saliente | Cantidad comprometida por ventas, envíos o consumos. |
+| Stock proyectado | Evolución esperada al aplicar entradas y salidas futuras. |
+
+El stock físico responde a "qué hay ahora". El proyectado responde a "qué habrá si se cumplen los compromisos".
+
+## Movimientos de stock
+
+Un movimiento de stock es la auditoría de una mutación. Guarda cantidad, signo, origen, fecha, referencia y resultado esperado.
+
+| Movimiento | Efecto habitual |
+| --- | --- |
+| Recepción | Aumenta stock físico. |
+| Envío | Reduce stock físico. |
+| Consumo | Reduce stock por fabricación o mantenimiento. |
+| Producción | Aumenta stock fabricado o co-productos. |
+| Movimiento interno | Cambia ubicación, lote o bulto sin cambiar el total. |
+| Inventario o ajuste | Regulariza diferencias detectadas. |
+
+## Stock negativo
+
+Un saldo negativo indica que Bold registró una salida antes de tener una entrada que la cubra en la misma combinación de artículo, ubicación y lote.
+
+Puede ocurrir por consumos anticipados, recepciones pendientes, ubicaciones incorrectas o movimientos no registrados. Revisa el origen antes de ajustar, porque un ajuste manual puede ocultar la causa real.
+
+## Relacionado
+
+- [Almacén](/conceptos/almacen)
+- [Lotes](/conceptos/catalogo/lotes)
+- [Consultar stock](/ayuda/almacen/consultar-stock)
+- [Ver movimientos de stock](/ayuda/almacen/ver-movimientos-de-stock)

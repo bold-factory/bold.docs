@@ -1,63 +1,113 @@
 ---
 title: "Ejecutar una orden"
-description: "Inicia, sigue y completa el trabajo real de una orden de fabricación."
-icon: "play-circle"
+description: "Ejecuta operaciones de fabricación desde el modo de trabajo y registra progreso, consumos, controles y pausas."
+icon: "play"
 ---
 
-Ejecutar una orden significa avanzar sus operaciones y registrar lo que ocurre en planta: empleados, estaciones, tiempos, consumos, controles, interrupciones y producción.
+Ejecutar una orden significa registrar lo que ocurre en planta: quién trabaja, dónde se ejecuta, qué cantidad avanza, qué materiales se consumen, qué controles se completan y cuándo termina cada operación.
+
+La ejecución diaria se hace desde **Modo de trabajo**. Es la vista táctil para operarios y terminales de planta. La gestión de recetas, órdenes, recursos y secuenciación se mantiene en el modo de gestión.
 
 ## Antes de empezar
 
 Revisa:
 
 - que la orden no esté cancelada ni bloqueada;
-- que sus operaciones tengan la secuencia correcta;
-- que existan estaciones o recursos disponibles;
-- que los componentes críticos tengan stock;
+- que sus operaciones tengan estación o recurso cuando el proceso lo requiere;
+- que las restricciones de operaciones anteriores permitan avanzar;
+- que los componentes críticos tengan stock o una decisión clara de regularización;
 - que los controles iniciales estén preparados;
-- que las restricciones permitan iniciar la primera operación.
+- que el operario tenga acceso al **Modo de trabajo**.
 
-## Ejecutar operaciones
+## Entrar en modo de trabajo
 
 <Steps>
-  <Step title="Abre la orden">
-    Revisa el diagrama o la lista de operaciones para entender el flujo.
+  <Step title="Abre Modo de trabajo">
+    Entra en la vista de trabajo de planta. Esta vista está pensada para pantallas táctiles y uso por operarios.
   </Step>
-  <Step title="Selecciona operación">
-    Empieza por una operación disponible según sus restricciones.
+  <Step title="Identifica al empleado">
+    Selecciona o escanea el empleado activo cuando el puesto lo requiera.
   </Step>
-  <Step title="Asigna estación y operarios">
-    Indica quién trabaja y dónde se ejecuta la operación si el flujo lo requiere.
+  <Step title="Abre Fabricación">
+    Entra en **Fabricación** dentro del modo de trabajo.
   </Step>
-  <Step title="Inicia">
-    Al iniciar, Bold puede registrar tiempo, validar controles iniciales o solicitar consumos al comienzo.
+  <Step title="Localiza la operación">
+    Usa **Mis operaciones**, **Por estación**, **Por área** o **Por proceso**. También puedes escanear QR de operación, estación o empleado cuando estén disponibles.
   </Step>
-  <Step title="Registra avance">
-    Informa progreso, consumos, interrupciones, inspecciones o pasos realizados.
-  </Step>
-  <Step title="Termina">
-    Completa controles obligatorios, registra producción y cierra la operación.
+  <Step title="Abre la operación">
+    Revisa artículo, orden, cantidad planificada, cantidad completada, estación, estado y prioridad.
   </Step>
 </Steps>
 
-## Vistas útiles
+## Ejecutar la operación
 
-| Vista | Para qué sirve |
+<Steps>
+  <Step title="Revisa pasos, controles y materiales">
+    Usa **Pasos**, **Controles**, **Materiales** e información de la operación antes de iniciar.
+  </Step>
+  <Step title="Inicia">
+    Haz clic en **Iniciar** cuando la operación esté planificada y sus restricciones permitan empezar. Si hay controles iniciales pendientes, complétalos primero.
+  </Step>
+  <Step title="Asigna operarios si aplica">
+    El operario activo puede asignarse o desasignarse de la operación mientras está en curso.
+  </Step>
+  <Step title="Registra avance">
+    Usa **Registrar** para informar cantidad completada, cantidad rechazada, comentarios, materiales consumidos y co-productos.
+  </Step>
+  <Step title="Pausa si hay interrupción">
+    Usa **Pausar**, selecciona el motivo y añade comentarios si el trabajo se detiene.
+  </Step>
+  <Step title="Reanuda">
+    Usa **Reanudar** para cerrar la interrupción y continuar con el registro de avance.
+  </Step>
+  <Step title="Finaliza">
+    Confirma **y finalizar** cuando la operación quede cerrada. Si solo registras avance parcial, confirma **sin finalizar**.
+  </Step>
+</Steps>
+
+## Qué se registra
+
+| Registro | Cuándo usarlo |
 | --- | --- |
-| Diagrama | Ver operaciones y precedencias. |
-| Materias primas | Revisar entradas necesarias y disponibilidad. |
-| Operaciones | Ejecutar trabajo y controlar estados. |
-| Costes | Comparar materiales y mano de obra previstos y reales. |
+| Cantidad completada | Cuando una operación produce unidades correctas. |
+| Cantidad rechazada | Cuando quieres dejar trazada la producción defectuosa. |
+| Materiales consumidos | Cuando la operación consume componentes o semielaborados. |
+| Lotes consumidos | Cuando el artículo trabaja con trazabilidad por lote. |
+| Co-productos | Cuando la operación genera artículos adicionales. |
+| Controles | Cuando la receta exige inspecciones al inicio, por unidad o al final. |
+| Pausas | Cuando hay una interrupción con motivo y duración. |
+| Comentarios | Cuando necesitas explicar una diferencia o incidencia. |
 
-<Tip>
-  Separa operaciones cuando necesitas medir tiempos, progreso o consumos de forma independiente. Evita dividir tanto que el registro sea más costoso que el trabajo.
-</Tip>
+## Materiales y lotes
+
+Bold propone cantidades teóricas según la receta, el momento de consumo y la cantidad que estás registrando. Puedes ajustar la cantidad real antes de confirmar.
+
+Si el componente trabaja con lotes, asigna el lote físico que se consume. No uses un lote genérico para salir del paso: el lote explica trazabilidad, coste real y calidad.
 
 <Warning>
-  Una operación en curso, pausada o finalizada no se elimina directamente porque ya contiene histórico de ejecución.
+  Si registras consumo sin stock suficiente, puedes generar stock negativo. Regulariza el origen cuanto antes con una recepción, producción, inventario, ajuste o corrección del lote.
 </Warning>
+
+## Controles obligatorios
+
+Una operación puede tener controles al inicio, durante el avance o al final. Bold bloquea el inicio o la finalización cuando hay controles obligatorios pendientes.
+
+Si no puedes iniciar o finalizar, abre **Controles** y completa las inspecciones solicitadas. Algunos controles pueden pedir texto, número, sí/no, imagen o archivo según la configuración.
+
+## Finalizar con una cantidad distinta
+
+Puedes registrar una cantidad diferente a la planificada, pero Bold te pedirá confirmación cuando:
+
+- completas más unidades de las que permiten las operaciones anteriores;
+- completas más unidades de las pendientes;
+- finalizas con menos unidades de las planificadas;
+- registras cero unidades sin comentario ni consumo.
+
+Usa comentarios para dejar claro por qué la operación se cierra con diferencia.
 
 ## Relacionado
 
-- [Fabricación](/ayuda/produccion/introduccion)
-- [Solución de problemas de producción](/ayuda/produccion/solucion-de-problemas-de-produccion)
+- [Crear una orden de fabricación](/ayuda/produccion/crear-una-orden-de-fabricacion)
+- [Asignar recursos](/ayuda/produccion/asignar-recursos)
+- [Secuenciar órdenes](/ayuda/produccion/secuenciar-ordenes)
+- [Qué hago si tengo stock negativo](/ayuda/almacen/solucion-de-problemas-de-stock)

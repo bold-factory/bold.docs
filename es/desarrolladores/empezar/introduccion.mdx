@@ -6,48 +6,51 @@ description: "Conecta sistemas externos con Bold mediante la API, claves API y w
 La API de Bold permite leer y actualizar datos operativos desde sistemas externos. Úsala para sincronizar catálogo, stock, pedidos, producción, compras, ventas y eventos con ERP, BI, automatizaciones internas o herramientas propias.
 
 <Info>
-  La referencia completa generada por el backend está disponible en el entorno de API como `/docs/v1`. Esta sección resume los patrones que necesitas antes de consumirla.
+  La referencia completa se genera desde OpenAPI. Puedes consultarla en la sección **Referencia de API** o abrirla en `https://api.bold-factory.com/docs/v1`.
 </Info>
 
 ## Qué puedes integrar
 
 <Columns cols={2}>
-  <Card title="Datos maestros" icon="boxes" href="/desarrolladores/api-reference/items">
+  <Card title="Datos maestros" icon="boxes">
     Productos, artículos, propiedades, variantes y unidades.
   </Card>
-  <Card title="Almacén" icon="warehouse" href="/desarrolladores/api-reference/warehouse">
+  <Card title="Almacén" icon="warehouse">
     Ubicaciones, lotes, recepciones, envíos, inventarios y stock.
   </Card>
-  <Card title="Planificación" icon="calendar-range" href="/desarrolladores/api-reference/planning">
+  <Card title="Planificación" icon="calendar-range">
     Demanda, suministro, stock proyectado, clientes y proveedores.
   </Card>
-  <Card title="Producción" icon="factory" href="/desarrolladores/api-reference/production">
+  <Card title="Producción" icon="factory">
     Recetas, versiones, órdenes, operaciones, recursos y ejecución.
   </Card>
-  <Card title="Personas y permisos" icon="users" href="/desarrolladores/api-reference/people">
+  <Card title="Personas y permisos" icon="users">
     Usuarios, roles, empleados, jornadas, calendarios, turnos y tareas.
   </Card>
-  <Card title="Mantenimiento" icon="wrench" href="/desarrolladores/api-reference/maintenance">
+  <Card title="Mantenimiento" icon="wrench">
     Activos, acciones, causas, partes de trabajo, tiempos, materiales y preventivos.
   </Card>
-  <Card title="Notificaciones" icon="bell" href="/desarrolladores/api-reference/notifications">
+  <Card title="Compras y ventas" icon="shopping-cart">
+    Pedidos de compra, pedidos de venta, recepciones, envíos y líneas.
+  </Card>
+  <Card title="Notificaciones" icon="bell">
     Eventos, suscripciones personales, bandeja de app y lectura de avisos.
   </Card>
-  <Card title="Analítica" icon="chart-no-axes-combined" href="/desarrolladores/api-reference/analytics">
+  <Card title="Analítica" icon="chart-no-axes-combined">
     Informes Power BI embebidos, tokens de apertura, duplicación y creación de informes.
   </Card>
-  <Card title="Etiquetas" icon="tag" href="/desarrolladores/api-reference/labels">
+  <Card title="Etiquetas" icon="tag">
     Plantillas, elementos de diseño y generación de documentos PDF.
   </Card>
 </Columns>
 
 ## Referencia exacta
 
-Las páginas de esta sección explican familias de endpoints, permisos y relaciones funcionales. Para contratos exactos, esquemas de request/response y pruebas interactivas, consulta la referencia generada del backend en `/docs/v1` dentro del entorno de API.
+La sección **Referencia de API** usa `https://api.bold-factory.com/openapi/v1.json` para generar los endpoints, parámetros, esquemas de request y response, modelos y pruebas interactivas.
 
-<Info>
-  Este repositorio no incluye un archivo OpenAPI. Si se añade uno en el futuro, conviene conectarlo a `docs.json` para generar la referencia endpoint por endpoint.
-</Info>
+<Card title="Abrir referencia externa" icon="external-link" href="https://api.bold-factory.com/docs/v1">
+  Usa la referencia publicada por el backend si quieres verla fuera de esta documentación.
+</Card>
 
 ## Patrón base
 
@@ -66,7 +69,7 @@ Las respuestas y errores usan JSON. Los listados paginados devuelven una estruct
 
 <Steps>
   <Step title="Crea una clave API">
-    Crea una clave desde el panel de administración. Usa una clave distinta por integración para poder revocarla sin afectar otros sistemas.
+    Crea una clave desde **Panel de control > Acceso > Claves API**. Usa una clave distinta por integración para poder revocarla sin afectar otros sistemas.
   </Step>
   <Step title="Prueba lectura antes de escribir">
     Empieza con endpoints `GET` para validar autenticación, tenant, permisos y paginación.

@@ -1,0 +1,51 @@
+---
+title: "Órdenes de fabricación"
+description: "Diferencia peticiones, órdenes y ejecución real de fabricación."
+icon: "construction"
+---
+
+Una **orden de fabricación** es trabajo real que puede planificarse, ejecutarse, pausarse, completarse o cancelarse.
+
+La orden nace desde una petición o necesidad. Copia la estructura de una versión de receta para convertirla en ejecución trazable.
+
+## Petición frente a orden
+
+| Concepto | Papel |
+| --- | --- |
+| Petición de fabricación | Necesidad de fabricar una cantidad antes de una fecha. |
+| Orden de fabricación | Trabajo ejecutable con operaciones, entradas, pasos y controles. |
+| Operación | Etapa concreta dentro de la orden. |
+| Progreso | Cantidad completada, rechazada o pendiente. |
+
+La petición responde a "qué hace falta". La orden responde a "cómo y cuándo se ejecuta".
+
+## Qué copia una orden
+
+| Desde la receta | En la orden |
+| --- | --- |
+| Operaciones | Operaciones ejecutables. |
+| Entradas | Materiales previstos. |
+| Co-productos | Salidas adicionales esperadas. |
+| Pasos | Instrucciones de trabajo. |
+| Controles | Inspecciones obligatorias o informativas. |
+| Restricciones | Precedencia entre operaciones. |
+| Condiciones | Elementos aplicables a la variante fabricada. |
+
+## Estado y trazabilidad
+
+El estado de la orden se deriva de sus operaciones. Si las operaciones empiezan, pausan o finalizan, la orden refleja ese avance.
+
+La cantidad planificada solo debería cambiar antes de empezar. Después, el historial de progreso, consumos y producción protege la trazabilidad.
+
+## Relación con almacén y costes
+
+Los consumos reducen stock. La producción aumenta stock del artículo fabricado o de co-productos.
+
+Los tiempos, consumos y cantidades reales alimentan costes y eficiencia. Si faltan registros, el coste real será incompleto.
+
+## Relacionado
+
+- [Recetas y versiones](/conceptos/fabricacion/recetas-y-versiones)
+- [Controles, consumos y pausas](/conceptos/fabricacion/controles-consumos-y-pausas)
+- [Crear una orden de fabricación](/ayuda/produccion/crear-una-orden-de-fabricacion)
+- [Ejecutar una orden](/ayuda/produccion/ejecutar-una-orden)

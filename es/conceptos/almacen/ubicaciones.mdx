@@ -1,0 +1,74 @@
+---
+title: "Ubicaciones"
+description: "Entiende qué representan las ubicaciones de almacén y cómo decidir su nivel de detalle."
+icon: "map-pin"
+---
+
+Una **ubicación** representa un lugar físico o lógico donde Bold registra stock. Puede ser un almacén completo, una zona, un pasillo, una estantería, un hueco, una estación de producción o una zona temporal de recepción.
+
+La ubicación no es solo un nombre. Define dónde se espera encontrar el material y dónde se imputan entradas, salidas, movimientos, inventarios y consumos.
+
+## Qué representa
+
+| Tipo | Ejemplo | Uso |
+| --- | --- | --- |
+| Almacén general | `ALM-01` | Operación simple con poco detalle. |
+| Zona | `RECEPCION`, `PICKING`, `CALIDAD` | Separar estados físicos del material. |
+| Posición | `A-03-02` | Encontrar material con precisión. |
+| Planta | `LINEA-1`, `CORTE` | Consumir o producir cerca de la operación. |
+| Temporal | `CUARENTENA`, `NO-CONFORME` | Apartar stock que requiere revisión. |
+
+## Cuándo usar una sola ubicación
+
+Una ubicación única puede bastar si:
+
+- el equipo encuentra el material sin registrar posiciones internas;
+- no necesitas inventarios por zona;
+- los movimientos internos no aportan trazabilidad;
+- el almacén es pequeño o tiene bajo volumen;
+- la prioridad es empezar con un modelo simple.
+
+Este modelo reduce mantenimiento, pero ofrece menos precisión para búsqueda y diferencias.
+
+## Cuándo crear varias ubicaciones
+
+Crea varias ubicaciones cuando el lugar físico cambia decisiones operativas.
+
+| Necesidad | Ubicaciones útiles |
+| --- | --- |
+| Recepción separada de stock disponible | `RECEPCION` y `ALMACEN` |
+| Control de calidad antes de usar material | `CALIDAD` o `CUARENTENA` |
+| Picking diferenciado de reserva | `PICKING` y `RESERVA` |
+| Producción consume desde planta | Ubicaciones por línea, estación o célula. |
+| Inventarios por zona | Ubicaciones que coinciden con zonas de conteo. |
+| Material no conforme | Zona bloqueada o de revisión. |
+
+## Nivel de detalle
+
+Una estructura demasiado fina obliga a registrar movimientos constantes. Una estructura demasiado amplia dificulta encontrar diferencias.
+
+Diseña ubicaciones al nivel en el que el equipo trabaja:
+
+| Si el equipo decide por... | Modela como... |
+| --- | --- |
+| Almacén completo | Una ubicación por almacén. |
+| Zona operativa | Una ubicación por zona. |
+| Hueco exacto | Una ubicación por posición. |
+| Estación de consumo | Una ubicación por estación o línea. |
+
+## Casos de uso
+
+| Caso | Recomendación |
+| --- | --- |
+| Recepción de proveedor | Registra primero en una ubicación de recepción si hay revisión previa. |
+| Material listo para picking | Mueve a una ubicación disponible o de picking. |
+| Producción | Usa ubicaciones de planta si necesitas saber qué material está junto a cada recurso. |
+| Inventario | Cuenta ubicaciones que coincidan con el recorrido físico. |
+| Stock bloqueado | Usa una ubicación separada para evitar uso accidental. |
+
+## Relacionado
+
+- [Stock y movimientos](/conceptos/almacen/stock-y-movimientos)
+- [Bultos](/conceptos/almacen/bultos)
+- [Crear ubicaciones](/ayuda/almacen/crear-ubicaciones)
+- [Mover stock](/ayuda/almacen/mover-stock)

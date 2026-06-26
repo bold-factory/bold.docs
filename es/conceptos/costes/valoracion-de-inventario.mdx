@@ -1,0 +1,39 @@
+---
+title: "Valoración de inventario"
+description: "Entiende cómo se valora el stock por artículo, lote y ubicación."
+icon: "warehouse"
+---
+
+La **valoración de inventario** calcula el valor económico del stock registrado.
+
+Bold valora líneas de stock usando cantidad disponible y coste asociado, normalmente por lote u origen.
+
+## Qué se valora
+
+| Dato | Uso |
+| --- | --- |
+| Artículo | Referencia valorada. |
+| Ubicación | Lugar donde está el stock. |
+| Lote | Origen y coste del conjunto trazable. |
+| Cantidad | Stock positivo registrado. |
+| Coste unitario | Coste aplicado a esa línea. |
+| Valor | Cantidad por coste unitario. |
+
+## Fórmula
+
+```text
+Valor de línea = stock disponible x coste unitario
+Valor total = suma de líneas valoradas
+```
+
+## Diferencias habituales
+
+Dos líneas del mismo artículo pueden tener costes distintos si pertenecen a lotes distintos. Esto permite conservar diferencias por compra, fabricación o regularización.
+
+Si un lote no tiene coste, revisa su origen. Puede venir de una recepción sin precio, un ajuste, un consumo temporal o una fabricación incompleta.
+
+## Relacionado
+
+- [Lotes](/conceptos/catalogo/lotes)
+- [Stock y movimientos](/conceptos/almacen/stock-y-movimientos)
+- [Valoración del inventario en guías](/ayuda/costes/valoracion-inventario)

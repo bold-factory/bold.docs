@@ -1,34 +1,40 @@
 ---
-title: "Completar envío"
-description: "Registra la salida física de material y actualiza el pedido de venta."
+title: "Registrar un envío"
+description: "Registra la salida física de material y actualiza el pedido."
 icon: "truck"
 ---
 
-Completar un envío confirma que el material salió del almacén. Al hacerlo, Bold descuenta stock y actualiza las líneas de venta relacionadas.
+Un **envío** registra la salida física de material para un pedido. Al confirmarlo, Bold descuenta stock y actualiza las cantidades entregadas.
 
-## Antes de completar
+## Antes de registrar
 
-Revisa el envío mientras está **Pendiente**:
+Comprueba estos puntos antes de confirmar la salida:
 
-- Tiene al menos una línea.
-- Cada línea tiene artículo y cantidad.
+- El pedido tiene líneas confirmadas.
+- El material salió o va a salir físicamente.
 - La ubicación de salida es correcta.
-- El lote está informado cuando aplica.
-- La cantidad coincide con lo preparado físicamente.
+- El lote está informado cuando el artículo lo requiere.
+- La cantidad coincide con lo preparado.
 
-## Completar el envío
+## Registrar el envío
 
 <Steps>
-  <Step title="Abre el envío pendiente">
-    Verifica cabecera, ubicación, líneas y pedido relacionado.
+  <Step title="Abre el pedido">
+    Revisa cliente, fechas, líneas pendientes y disponibilidad.
   </Step>
-  <Step title="Compara con el material preparado">
-    Revisa cajas, unidades, lote y documentación de transporte.
+  <Step title="Crea o abre el envío">
+    Agrupa las líneas que saldrán juntas. Puedes registrar un envío parcial si no hay material suficiente para todo el pedido.
+  </Step>
+  <Step title="Indica ubicación y lote">
+    Selecciona de dónde sale el material. Si el artículo trabaja con lotes, selecciona el lote físico correcto.
+  </Step>
+  <Step title="Revisa cantidades">
+    Comprueba que la cantidad enviada coincide con el material preparado.
   </Step>
   <Step title="Haz clic en **Enviar**">
-    Bold registra la salida de stock y marca el envío como expedido.
+    Bold registra la salida de stock y marca el envío como enviado.
   </Step>
-  <Step title="Comprueba el pedido de venta">
+  <Step title="Comprueba el pedido">
     La línea quedará **Entregado** o **Parcialmente entregado** según la cantidad enviada.
   </Step>
 </Steps>
@@ -39,13 +45,21 @@ Revisa el envío mientras está **Pendiente**:
 | --- | --- |
 | Stock | Disminuye en la ubicación y lote indicados. |
 | Envío | Cambia de **Pendiente** a **Enviado**. |
-| Pedido de venta | Aumenta la cantidad entregada. |
-| Línea de venta | Puede cambiar a **Parcialmente entregado** o **Entregado**. |
+| Pedido | Aumenta la cantidad entregada. |
+| Línea de pedido | Puede cambiar a **Parcialmente entregado** o **Entregado**. |
 | Histórico | Se registra el movimiento de salida. |
 
 <Warning>
-  Después de enviar, las líneas y la ubicación quedan protegidas para conservar trazabilidad. Si cometiste un error, usa la acción de reversión cuando esté disponible.
+  Después de enviar, las líneas y la ubicación quedan protegidas para conservar trazabilidad. Si hay un error, usa la reversión cuando esté disponible.
 </Warning>
+
+## Envíos parciales
+
+Si solo puedes entregar parte de la línea, registra el envío con la cantidad disponible. Bold deja la línea como **Parcialmente entregado** y mantiene pendiente la cantidad restante.
+
+<Tip>
+  Usa notas o referencias de transporte para relacionar el envío de Bold con el albarán, transportista o documento externo.
+</Tip>
 
 ## Problemas habituales
 
@@ -63,5 +77,6 @@ Revisa el envío mientras está **Pendiente**:
 
 ## Relacionado
 
-- [Planificación](/ayuda/planificacion/introduccion)
-- [Entender el stock proyectado](/ayuda/planificacion/entender-el-stock-proyectado)
+- [Crear un pedido](/ayuda/ventas/crear-pedido-de-venta)
+- [Consultar stock](/ayuda/almacen/consultar-stock)
+- [Ver movimientos de stock](/ayuda/almacen/ver-movimientos-de-stock)

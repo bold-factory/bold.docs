@@ -1,55 +1,56 @@
 ---
-title: "Solución de problemas de stock"
-description: "Diagnostica stock negativo, diferencias por ubicación, lotes incorrectos y disponibilidad inesperada."
+title: "Qué hago si tengo stock negativo"
+description: "Diagnostica y corrige un saldo negativo de stock sin perder trazabilidad."
 icon: "triangle-alert"
 ---
 
-Los problemas de stock suelen venir de una diferencia entre lo que ocurrió físicamente y lo que se registró en Bold. Antes de corregir, identifica si el problema afecta a stock físico, disponible o proyectado.
+El **stock negativo** indica que Bold registró una salida antes de tener registrada la entrada que la cubre. Puede venir de un envío, consumo, ajuste o movimiento creado antes de recibir, producir o inventariar el material.
+
+No lo trates como un saldo normal. Úsalo como señal para encontrar qué ocurrió físicamente y qué falta registrar.
 
 ## Diagnóstico rápido
 
-| Síntoma | Causa probable | Qué revisar |
-| --- | --- | --- |
-| Stock físico negativo | Salida registrada antes que entrada | Recepciones, inventarios, consumos o envíos pendientes. |
-| Hay stock, pero no disponible | Demanda confirmada lo tiene comprometido | Pedidos de venta, reservas o necesidades abiertas. |
-| Hay stock en otra ubicación | Movimiento no registrado o picking en zona equivocada | Movimientos por ubicación. |
-| Falta un lote | Recepción o producción sin lote correcto | Histórico del artículo y documentos de origen. |
-| Stock proyectado cae en negativo | Entradas futuras no cubren demanda | Compras, fabricación, fechas y punto de pedido. |
+| Pregunta | Qué revisar |
+| --- | --- |
+| ¿Qué artículo está en negativo? | SKU, unidad, lote y ubicación afectados. |
+| ¿Qué movimiento lo dejó negativo? | Último envío, consumo, ajuste, inventario o movimiento de salida. |
+| ¿Falta una entrada real? | Recepción de compra, producción, devolución o movimiento interno pendiente. |
+| ¿El lote es correcto? | Puede haberse consumido o enviado desde un lote equivocado. |
+| ¿La ubicación es correcta? | El stock puede existir en otra ubicación y faltar un movimiento. |
 
-## Resolver stock negativo
+## Cómo corregirlo
 
 <Steps>
   <Step title="Consulta movimientos">
-    Filtra por artículo, ubicación y lote para encontrar la salida que dejó el saldo negativo.
+    Filtra por artículo, ubicación y lote para localizar la salida que dejó el saldo negativo.
   </Step>
   <Step title="Busca entradas pendientes">
-    Revisa si falta recibir compra, registrar producción o finalizar un inventario.
+    Revisa si falta recibir una compra, registrar producción, cerrar un inventario o mover stock desde otra ubicación.
   </Step>
   <Step title="Corrige el origen">
-    Si existe una recepción o producción real pendiente, regístrala. Si fue un error, usa reversión o ajuste.
+    Si la entrada existió físicamente, regístrala desde el flujo correcto. Si el problema fue un envío, consumo o lote equivocado, usa reversión cuando esté disponible.
   </Step>
-  <Step title="Comprueba planificación">
-    Revisa que stock disponible y proyectado se recalculan con el nuevo saldo.
+  <Step title="Ajusta solo si no hay origen trazable">
+    Usa un ajuste cuando no puedas reconstruir el movimiento real con confianza.
+  </Step>
+  <Step title="Comprueba el saldo">
+    Vuelve a consultar stock y movimientos para confirmar que el artículo, lote y ubicación quedan coherentes.
   </Step>
 </Steps>
 
-## Resolver diferencias por ubicación
+## Qué no hacer
 
-Si el stock total parece correcto, pero está en la ubicación equivocada, usa **Mover stock**. No uses un ajuste negativo en una ubicación y positivo en otra si en realidad es un traslado físico.
-
-## Resolver diferencias por lote
-
-Si el lote no coincide con el material físico, revisa la recepción, fabricación o movimiento que lo creó. Corrige con reversión cuando sea posible. Si no, registra un ajuste claro y documentado.
+- No compenses un negativo con un ajuste rápido si falta registrar una recepción o producción real.
+- No cambies el lote para cuadrar cantidades si el material físico pertenece a otro lote.
+- No ignores negativos pequeños: pueden afectar disponibilidad, costes y trazabilidad.
 
 <Warning>
   Corregir solo el saldo final puede ocultar el problema real. Revisa movimientos y documentos relacionados antes de ajustar.
 </Warning>
 
-## Cuándo hacer inventario
-
-Haz inventario cuando no puedes reconstruir la diferencia con confianza, cuando hay muchas referencias afectadas o cuando necesitas una regularización formal de una ubicación.
-
 ## Relacionado
 
-- [Almacén](/ayuda/almacen/introduccion)
+- [Consultar stock](/ayuda/almacen/consultar-stock)
 - [Ver movimientos de stock](/ayuda/almacen/ver-movimientos-de-stock)
+- [Recibir pedido de compra](/ayuda/compras/recibir-pedido-de-compra)
+- [Ejecutar una orden](/ayuda/produccion/ejecutar-una-orden)

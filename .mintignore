@@ -3,6 +3,7 @@
 # README.md, LICENSE.md, CHANGELOG.md, CONTRIBUTING.md
 
 sources/**
+.tmp/**
 AGENTS.md
 .claude/**
 .idea/**
