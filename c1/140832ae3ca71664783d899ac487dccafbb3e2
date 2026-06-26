@@ -1,0 +1,51 @@
+es/ayuda/smart-factory/tareas-con-agentes.mdx
+  s_94f44eadd2aab5::t_27e8777228f951 2,33
+es/ayuda/smart-factory/informes-powerbi.mdx
+  s_94f44eadd2aab5::t_27e8777228f951 2,34-35
+docs.json
+  s_94f44eadd2aab5::t_386b609fa4eac7 50,61,73,84,96,104,108,113,120,124,129,139,151,159,164,170,176
+es/ayuda/smart-factory/boldy.mdx
+  s_94f44eadd2aab5::t_27e8777228f951 2,23
+es/ayuda/smart-factory/introduccion.mdx
+  s_94f44eadd2aab5::t_27e8777228f951 2
+  s_94f44eadd2aab5::t_cd131039c8b3d5 6,49
+es/ayuda/panel-de-control/configuracion-de-empresa.mdx
+  s_94f44eadd2aab5::t_27e8777228f951 2
+es/ayuda/personal/calendarios-locales.mdx
+  s_e14e45ff3250df::t_9a82bcebf10df6 2
+es/ayuda/personal/empleados.mdx
+  s_e14e45ff3250df::t_091db6fb6031e8 2
+es/ayuda/personal/jornadas-laborales.mdx
+  s_e14e45ff3250df::t_25ca53111656b1 2
+es/ayuda/personal/turnos.mdx
+  s_94f44eadd2aab5::t_c2607b202d77f7 2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "c1140832ae3ca71664783d899ac487dccafbb3e2",
+  "prompts": {},
+  "humans": {
+    "h_55f2ba4d68b42c": {
+      "author": "Pablo López <pablo@bold-factory.com>"
+    }
+  },
+  "sessions": {
+    "s_94f44eadd2aab5": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f03c4-1d1c-7220-94e0-c0d73f71b242",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_e14e45ff3250df": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019efffd-dcdf-7aa1-b60f-6733c01b178e",
+        "model": "unknown"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
