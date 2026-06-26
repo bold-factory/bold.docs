@@ -62,6 +62,16 @@ Stock disponible proyectado = Stock disponible actual + Stock entrante
 
 El stock saliente nace de demanda activa, como pedidos de venta confirmados o consumos previstos. El stock entrante nace de suministro activo, como pedidos de compra confirmados, peticiones de fabricación, órdenes de fabricación o previsiones.
 
+## Estados de stock proyectado
+
+| Estado | Significado |
+| --- | --- |
+| **Disponible** | Hay stock suficiente ahora. |
+| **Planificado** | La necesidad queda cubierta por suministro futuro. |
+| **Parcialmente planificado** | Solo una parte está cubierta. |
+| **Pendiente** | Falta crear compra o fabricación. |
+| **No requerido** | No hace falta aprovisionar. |
+
 ## Demanda y pedidos de venta
 
 Un pedido de venta representa demanda de cliente. Sus líneas solo afectan a planificación cuando están confirmadas.
@@ -121,6 +131,18 @@ Los asistentes de compras y fabricación leen stock proyectado, demanda, suminis
 | Punto de pedido | Dispara recomendaciones cuando el proyectado cae por debajo del umbral. |
 | Pedido mínimo | Eleva la recomendación hasta una cantidad mínima. |
 | Tamaño de lote | Redondea cantidades a múltiplos operativos. |
+
+## Reglas principales
+
+- Una línea de venta en borrador no genera demanda.
+- Una línea de venta confirmada genera demanda.
+- Una línea de compra en borrador no genera suministro.
+- Una línea de compra confirmada genera suministro.
+- El stock proyectado combina stock actual, demanda y suministro futuro.
+- Una petición de fabricación no puede reducirse por debajo de la cantidad ya asignada.
+- Una petición relacionada con otro objeto no permite editar directamente solicitante o fecha requerida.
+- Una línea de compra no puede recibirse mientras esté en borrador.
+- Una línea de venta cancelada con cantidad entregada conserva la parte entregada como histórico.
 
 ## Ejemplo
 

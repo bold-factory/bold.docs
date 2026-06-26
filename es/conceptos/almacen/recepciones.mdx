@@ -1,0 +1,52 @@
+---
+title: "Recepciones"
+description: "Entiende cómo las recepciones registran entradas físicas de stock."
+icon: "package-plus"
+---
+
+Una **recepción** registra la entrada física de material en almacén. Aumenta stock cuando el material entra realmente en la empresa o queda disponible para operar.
+
+## Orígenes
+
+| Origen | Uso |
+| --- | --- |
+| Pedido de compra | Recibir material solicitado a proveedor. |
+| Recepción manual | Registrar entrada sin documento previo. |
+| Producción | Entrada de artículo fabricado o co-producto. |
+| Regularización | Entrada asociada a ajuste o inventario. |
+
+## Datos obligatorios
+
+Una recepción debe indicar artículo, cantidad, ubicación y lote cuando el artículo lo requiere. También debe tener completados los controles obligatorios antes de recibirse.
+
+| Dato | Por qué importa |
+| --- | --- |
+| Artículo | Define qué unidad operativa entra en stock. |
+| Cantidad | Aumenta el saldo físico. Debe ser positiva. |
+| Ubicación | Indica dónde queda disponible el material. |
+| Lote | Conserva trazabilidad cuando el artículo lo exige. |
+| Controles | Validan recepción, calidad o documentación antes de afectar stock. |
+
+## Estados y reglas
+
+| Estado | Significado |
+| --- | --- |
+| **Pendiente** | Puede editarse antes de registrar la entrada. |
+| **Recibida** | Ya aumentó stock y queda protegida. |
+
+Para recibir, la recepción debe estar pendiente, tener ubicación, contener al menos una línea y tener los controles obligatorios completados. Después de recibida, las líneas y la ubicación quedan protegidas para conservar trazabilidad.
+
+Si necesitas corregir una recepción ya recibida, usa una reversión, ajuste o movimiento correctivo cuando el flujo lo permita. No edites el documento como si la entrada no hubiera ocurrido.
+
+## Relación con planificación
+
+Cuando una recepción viene de compras, reduce el suministro pendiente de la línea recibida. La línea de compra no puede recibirse mientras esté en borrador y no puede reducirse por debajo de la cantidad ya recibida.
+
+El pedido de compra explica el compromiso con proveedor. La recepción explica la realidad física.
+
+## Relacionado
+
+- [Stock y movimientos](/conceptos/almacen/stock-y-movimientos)
+- [Lotes](/conceptos/catalogo/lotes)
+- [Recibir pedido de compra](/ayuda/compras/recibir-pedido-de-compra)
+- [Escanear albaranes con IA](/ayuda/almacen/recibir-con-albaran)

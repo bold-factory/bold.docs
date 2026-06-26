@@ -1,0 +1,54 @@
+---
+title: "Agentes"
+description: "Entiende agentes, tareas, estados, aclaraciones y créditos en Smart Factory."
+icon: "bot"
+---
+
+Un **agente** ejecuta tareas sobre Bold con instrucciones, herramientas y permisos concretos. En Smart Factory ves las tareas delegadas, su estado, el historial y el resultado.
+
+## Conceptos
+
+| Concepto | Uso |
+| --- | --- |
+| Agente | Configuración con nombre, instrucciones, permisos y nivel de inteligencia. |
+| Tarea con agente | Ejecución concreta iniciada manualmente, por evento o por automatización. |
+| Aclaración | Pregunta que el agente hace cuando necesita más información. |
+| Crédito | Unidad de consumo asociada al trabajo realizado. |
+| Historial | Mensajes, archivos, herramientas usadas, decisiones y resultado. |
+
+## Estados de tarea
+
+| Estado | Qué hacer |
+| --- | --- |
+| **Pendiente** | Espera a que el agente empiece a procesar. |
+| **En ejecución** | No respondas todavía. El agente está trabajando. |
+| **Requiere acción** | Responde a la aclaración o decisión que pide el agente. |
+| **Completada** | Revisa el resultado y continúa solo si necesitas ampliar el trabajo. |
+| **Fallida** | Revisa el error, ajusta instrucciones o crea una tarea nueva. |
+
+Las tareas caducan tras 28 días de inactividad. Crea una tarea nueva si necesitas retomar un trabajo caducado.
+
+## Nivel de inteligencia
+
+| Nivel | Cuándo usarlo |
+| --- | --- |
+| Bajo | Consultas directas, resúmenes simples o tareas muy acotadas. |
+| Medio | Tareas operativas habituales con equilibrio entre coste y razonamiento. |
+| Alto | Análisis con varios pasos, instrucciones ambiguas o decisiones con muchos matices. |
+
+Empieza por el nivel más bajo que cumpla la tarea. Sube el nivel si el agente omite pasos, no entiende el contexto o necesita razonar con varias áreas.
+
+## Relación con Panel de control
+
+Smart Factory muestra y permite trabajar con tareas. Panel de control configura agentes, permisos, memoria, preguntas y automatizaciones.
+
+<Warning>
+  Un agente solo debe tener los permisos que necesita. Si le das permisos amplios, podrá acceder a más datos y acciones durante sus tareas.
+</Warning>
+
+## Relacionado
+
+- [Smart Factory](/conceptos/smart-factory)
+- [Agentes del Panel de control](/conceptos/panel-de-control/agentes)
+- [Tareas con agentes](/ayuda/smart-factory/tareas-con-agentes)
+- [Configurar agentes](/ayuda/panel-de-control/agentes)

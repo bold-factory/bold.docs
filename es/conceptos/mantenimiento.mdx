@@ -56,6 +56,16 @@ Al añadir un tiempo activo, el parte empieza o se reanuda. Cuando todos los tie
 
 La eficiencia se calcula con tiempo teórico dividido por tiempo real cuando ambos valores son positivos.
 
+| Entidad | Estado | Significado |
+| --- | --- | --- |
+| Parte de trabajo | **Pendiente** | Existe, pero todavía no tiene trabajo activo. |
+| Parte de trabajo | **En curso** | Hay una entrada de tiempo activa. |
+| Parte de trabajo | **Pausado** | Se trabajó, pero no queda tiempo activo. |
+| Parte de trabajo | **Completado** | La intervención terminó y queda protegida. |
+| Parte de trabajo | **Cancelado** | La intervención se anuló y no debe ejecutarse. |
+| Acción | **Pendiente** | Falta completar el resultado requerido. |
+| Acción | **Completada** | El resultado quedó registrado. |
+
 ## Causas y acciones
 
 Un parte puede tener causa principal y causas auxiliares. Las causas auxiliares no pueden duplicar la principal ni duplicarse entre sí.
@@ -71,6 +81,15 @@ Las acciones pueden requerir distintos resultados:
 | Imagen o archivo | Requiere una URI segura `https`. |
 
 Completar una acción ya completada se bloquea para proteger el historial.
+
+## Reglas principales
+
+- Un parte completado o cancelado bloquea cabecera, acciones, tiempos y materiales.
+- Una causa auxiliar no puede duplicar la causa principal ni otra causa auxiliar.
+- Completar una acción exige un resultado compatible con su tipo.
+- Un material consumido debe tener cantidad positiva.
+- Los detalles por lote no pueden duplicarse ni superar la cantidad del material.
+- Completar un parte cierra tiempos abiertos, recalcula totales y fija el estado como completado.
 
 ## Preventivo
 
@@ -91,10 +110,9 @@ Los materiales consumidos deben tener cantidades positivas. Si detallas lotes, n
 
 ## Guías relacionadas
 
-- [Activos](/ayuda/mantenimiento/activos)
-- [Acciones](/ayuda/mantenimiento/acciones)
-- [Causas](/ayuda/mantenimiento/causas)
+- [Activos](/conceptos/mantenimiento/activos)
+- [Causas y acciones](/conceptos/mantenimiento/causas-y-acciones)
 - [Crear un parte de trabajo](/ayuda/mantenimiento/crear-parte-de-trabajo)
 - [Programar mantenimientos preventivos](/ayuda/mantenimiento/mantenimiento-preventivo)
-- [Coste teórico vs coste real](/ayuda/costes/coste-teorico-vs-coste-real)
-- [API de mantenimiento](https://api.bold-factory.com/docs/v1)
+- [Coste teórico vs coste real](/conceptos/costes/coste-teorico-vs-real)
+- [API de mantenimiento](https://api.bold-factory.com/docs)

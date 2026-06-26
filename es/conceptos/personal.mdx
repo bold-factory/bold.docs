@@ -1,17 +1,14 @@
 ---
 title: "Personal"
-description: "Referencia de usuarios, roles, empleados, jornadas, calendarios y turnos."
+description: "Referencia de empleados, jornadas, calendarios, turnos y capacidad operativa."
 icon: "users"
 ---
 
-Personal separa acceso a la aplicación, personas operativas y capacidad planificada.
+Personal agrupa personas operativas y capacidad planificada. El acceso a la aplicación, usuarios, roles y permisos se administra desde [Panel de control](/conceptos/panel-de-control).
 
 ## Conceptos de este grupo
 
 <Columns cols={2}>
-  <Card title="Usuarios, roles y permisos" icon="shield" href="/conceptos/personal/usuarios-roles-y-permisos">
-    Acceso, permisos y separación entre usuario y empleado.
-  </Card>
   <Card title="Empleados" icon="user-round" href="/conceptos/personal/empleados">
     Personas operativas para tiempos, asignaciones y costes.
   </Card>
@@ -24,9 +21,6 @@ Personal separa acceso a la aplicación, personas operativas y capacidad planifi
 
 | Concepto | Uso |
 | --- | --- |
-| Usuario | Persona con acceso a Bold. Tiene credenciales, permisos y roles. |
-| Rol | Conjunto reutilizable de permisos. |
-| Permiso | Capacidad concreta para leer, editar o ejecutar acciones. |
 | Empleado | Persona operativa que puede registrar tiempos, recibir asignaciones o participar en costes. |
 | Jornada laboral | Plantilla de tramos de trabajo. |
 | Calendario local | Excepciones por festivos, cierres o días especiales. |
@@ -37,15 +31,7 @@ Personal separa acceso a la aplicación, personas operativas y capacidad planifi
 
 Un usuario controla acceso. Un empleado representa trabajo operativo. Pueden estar relacionados, pero no son el mismo concepto.
 
-Usa un usuario para entrar en Bold, recibir permisos y administrar módulos. Usa un empleado para registrar mano de obra, calcular costes, asignar operaciones o medir presencia.
-
-## Roles y permisos
-
-Los roles evitan configurar permisos persona por persona. Crea roles por responsabilidad real: administración, planificación, almacén, producción, mantenimiento o solo lectura.
-
-<Tip>
-  Revisa permisos por módulo antes de invitar usuarios externos o perfiles temporales. Un rol demasiado amplio puede permitir acciones que cambian stock, órdenes o costes.
-</Tip>
+Usa un usuario para entrar en Bold, recibir permisos y administrar módulos. Usa un empleado para registrar mano de obra, calcular costes, asignar operaciones o medir presencia. Consulta [Usuarios, roles y permisos](/conceptos/panel-de-control/usuarios-roles-y-permisos) para la parte de acceso.
 
 ## Jornadas, calendarios y turnos
 
@@ -65,7 +51,7 @@ Una jornada define el patrón normal de trabajo. Un calendario local define exce
 | Producción | Asignación de empleados, registros de tiempo y análisis de eficiencia. |
 | Mantenimiento | Partes de trabajo, tiempo de intervención y empleado principal. |
 | Costes | Coste horario de empleados y coste real de mano de obra. |
-| Panel de control | Acceso, roles, permisos e invitaciones. |
+| Panel de control | Relación entre empleados, usuarios, roles, permisos e invitaciones. |
 
 ## Guías relacionadas
 
@@ -73,7 +59,6 @@ Una jornada define el patrón normal de trabajo. Un calendario local define exce
 - [Jornadas laborales](/ayuda/personal/jornadas-laborales)
 - [Calendarios locales](/ayuda/personal/calendarios-locales)
 - [Turnos](/ayuda/personal/turnos)
+- [Usuarios, roles y permisos](/conceptos/panel-de-control/usuarios-roles-y-permisos)
 - [Invitar usuarios](/ayuda/usuarios-y-permisos/invitar-usuarios)
-- [Roles y permisos](/ayuda/usuarios-y-permisos/roles-y-permisos)
-- [Permisos por módulo](/ayuda/usuarios-y-permisos/permisos-por-modulo)
-- [People API](https://api.bold-factory.com/docs/v1)
+- [People API](https://api.bold-factory.com/docs)

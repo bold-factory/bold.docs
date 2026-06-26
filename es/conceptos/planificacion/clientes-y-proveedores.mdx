@@ -8,33 +8,64 @@ Los **clientes** y **proveedores** identifican con quién se generan demanda, su
 
 ## Clientes
 
-Un cliente da contexto a pedidos de venta, entregas, referencias externas y análisis comercial.
+Un cliente da contexto a pedidos de venta, demanda, entregas, referencias externas y análisis comercial.
 
-| Dato | Uso |
-| --- | --- |
-| Código | Identificador estable. |
-| Nombre | Búsqueda y comunicación. |
-| Referencia externa | Integración con ERP, CRM o ecommerce. |
-| Dirección o datos fiscales | Entrega, facturación o documentación. |
+| Dato | Uso | Recomendación |
+| --- | --- | --- |
+| Nombre | Identifica al cliente en listas, pedidos de venta y filtros. | Usa el nombre que el equipo reconoce en operaciones. |
+| Referencia externa | Conecta el cliente con ERP, CRM, ecommerce o importaciones. | Mantén una referencia única y estable. |
+| Auditoría | Muestra creación y última modificación. | Úsala para revisar cambios, no como dato operativo. |
+
+La ficha actual de cliente no sustituye a un CRM. Mantén en Bold solo los datos que afectan a demanda, pedidos, entregas o integraciones.
 
 ## Proveedores
 
-Un proveedor da contexto a compras, plazos, precios y referencias de artículos.
+Un proveedor da contexto a compras, plazos, precios, referencias externas y condiciones de suministro.
 
-| Dato | Uso |
-| --- | --- |
-| Proveedor principal | Ayuda a recomendar compras. |
-| Código de proveedor | Relaciona el artículo con el catálogo externo. |
-| Lead time | Anticipa cuándo comprar. |
-| Cantidad mínima | Ajusta recomendaciones. |
+| Dato | Uso | Recomendación |
+| --- | --- | --- |
+| Nombre | Identifica al proveedor en pedidos, filtros y listas. | Usa el nombre operativo que reconoce compras. |
+| Referencia externa | Conecta el proveedor con otro sistema. | Mantén una referencia única y estable. |
+| Identificación fiscal | Ayuda a distinguir proveedores con nombres parecidos. | Rellénala si compras o integraciones la necesitan. |
+| Auditoría | Muestra creación y última modificación. | Úsala para revisar cambios de datos maestros. |
 
 ## Relación con artículos
 
 Para que una recomendación de compra sea útil, no basta con crear el proveedor. Debe existir una relación entre proveedor y artículo con los datos de suministro relevantes.
 
+| Dato | Uso |
+| --- | --- |
+| Tipo | Marca el proveedor como principal o secundario para ese artículo. |
+| Código del proveedor | Guarda la referencia que el proveedor usa para el artículo. |
+| Precio por unidad | Da contexto económico a compras y costes planificados. |
+| Plazo medio | Calcula cuándo puede estar disponible el suministro. |
+| Desviación del plazo | Representa la variabilidad real de entrega. |
+
+Mantén un proveedor principal por artículo cuando quieras que el asistente de compras proponga una fuente por defecto. Usa proveedores secundarios para alternativas reales.
+
+## Reglas operativas
+
+- Las líneas confirmadas de pedidos de venta generan demanda y pueden agruparse por cliente.
+- Los pedidos de compra confirmados generan suministro esperado hasta que almacén registra la recepción.
+- Si cambia el plazo de un proveedor principal, revisa las previsiones de compra relacionadas.
+- Si un cliente o proveedor llega de una integración, la referencia externa debe permanecer estable para evitar duplicados.
+- Si eliminas un cliente o proveedor con historial, conserva la trazabilidad de pedidos y eventos anteriores.
+
+## Permisos
+
+| Acción | Permiso necesario |
+| --- | --- |
+| Ver clientes | `Planning.Customers.Read` |
+| Crear, editar o eliminar clientes | `Planning.Customers.Write` |
+| Ver proveedores | `Planning.Suppliers.Read` |
+| Crear, editar o eliminar proveedores | `Planning.Suppliers.Write` |
+| Ver relaciones artículo-proveedor | `Planning.Skus.Read` |
+| Editar relaciones artículo-proveedor | `Planning.Skus.Write` |
+
 ## Relacionado
 
 - [Artículos](/conceptos/catalogo/articulos)
 - [Demanda y suministro](/conceptos/planificacion/demanda-y-suministro)
-- [Clientes en guías](/ayuda/planificacion/clientes)
-- [Proveedores en guías](/ayuda/planificacion/proveedores)
+- [Crear un pedido](/ayuda/ventas/crear-pedido-de-venta)
+- [Saber qué comprar](/ayuda/planificacion/saber-que-comprar)
+- [Crear pedido de compra](/ayuda/compras/crear-pedido-de-compra)

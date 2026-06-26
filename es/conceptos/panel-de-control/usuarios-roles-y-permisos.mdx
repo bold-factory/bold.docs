@@ -1,0 +1,90 @@
+---
+title: "Usuarios, roles y permisos"
+description: "Diferencia acceso, permisos y perfiles de trabajo en Bold."
+icon: "shield"
+---
+
+Un **usuario** accede a Bold. Un **rol** agrupa permisos. Un **permiso** habilita una acción concreta.
+
+Estos conceptos controlan qué puede ver y cambiar cada persona desde el Panel de control.
+
+## Entidades
+
+| Concepto | Uso |
+| --- | --- |
+| Usuario | Identidad con credenciales de acceso. |
+| Rol | Conjunto reutilizable de permisos. |
+| Permiso | Capacidad concreta para leer, editar o ejecutar una acción. |
+| Empleado | Persona operativa que registra trabajo, aunque no siempre tenga usuario. |
+
+Usuario y empleado pueden estar vinculados, pero no son lo mismo. El usuario responde a "quién entra y qué puede hacer". El empleado responde a "quién trabaja, registra tiempo o participa en costes".
+
+## Diseño de roles
+
+Crea roles por responsabilidad real, no por persona individual.
+
+| Rol típico | Alcance habitual |
+| --- | --- |
+| Administración | Configuración, usuarios y datos maestros. |
+| Almacén | Stock, recepciones, movimientos e inventarios. |
+| Producción | Órdenes, operaciones, consumos y progreso. |
+| Mantenimiento | Activos, preventivos y partes. |
+| Consulta | Lectura sin cambios operativos. |
+
+Evita roles demasiado amplios para perfiles temporales o externos. Un permiso de escritura puede cambiar stock, costes o trazabilidad.
+
+## Patrón de permisos
+
+Los permisos suelen seguir una estructura legible:
+
+```text
+Modulo.Area.Accion
+```
+
+Ejemplos:
+
+| Permiso | Lectura |
+| --- | --- |
+| `Warehouse.Receipts.Read` | Ver recepciones de almacén. |
+| `Warehouse.Receipts.Write` | Crear, editar, recibir o revertir recepciones. |
+| `Production.Orders.Work` | Ejecutar operaciones en modo trabajo. |
+| `Production.Orders.Sequence` | Secuenciar o planificar órdenes. |
+| `Production.Recipes.Activate` | Activar versiones de receta. |
+
+Las acciones más comunes son `Read` y `Write`, pero hay permisos específicos para tareas críticas, como `Work`, `Sequence`, `Activate`, `Presence`, `Upload` o `Delete`.
+
+## Permisos por módulo
+
+Los permisos suelen separar lectura y escritura. La lectura permite consultar; la escritura permite crear, editar, completar o cancelar según el módulo.
+
+Algunos flujos requieren permisos adicionales. Por ejemplo, subir evidencias puede requerir permisos de archivos además del permiso funcional.
+
+| Módulo | Permisos habituales |
+| --- | --- |
+| Acceso común | `Common.App.Access`, `Common.App.RegularMode`, `Common.App.WorkMode` |
+| Catálogo | `Items.Products.*`, `Items.Properties.*`, `Items.Skus.*` |
+| Almacén | `Warehouse.Locations.*`, `Warehouse.Receipts.*`, `Warehouse.Shipments.*`, `Warehouse.Counts.*`, `Warehouse.Containers.*` |
+| Planificación | `Planning.Customers.*`, `Planning.Suppliers.*`, `Planning.SalesOrders.*`, `Planning.PurchaseOrders.*`, `Planning.Skus.*` |
+| Producción | `Production.Recipes.*`, `Production.Orders.*`, `Production.Requests.*`, `Production.Workstations.*` |
+| Mantenimiento | `Maintenance.Assets.*`, `Maintenance.Causes.*`, `Maintenance.ActionDefinitions.*`, `Maintenance.WorkOrders.*`, `Maintenance.PreventiveSchedules.*` |
+| Personas | `People.Users.Read`, `People.Employees.*`, `People.ShiftScheduling.*`, `People.Tasks.Read` |
+| Archivos y etiquetas | `Files.Files.*`, `Labels.Templates.*` |
+| Informes y agentes | `Analytics.Reports.*`, `Agents.Questions.OtherUsers` |
+
+Administrar usuarios, roles y permisos requiere rol `App.Admin`. No se gestiona con un permiso funcional `People.Users.Write`.
+
+<Tip>
+  Si una acción no aparece o falla, revisa dos cosas: el estado del documento y los permisos del usuario.
+</Tip>
+
+## Claves API y agentes
+
+Las claves API y los agentes también necesitan alcance controlado. Usa credenciales separadas por integración y concede a cada agente solo los permisos que necesita para sus tareas.
+
+## Relacionado
+
+- [Panel de control](/conceptos/panel-de-control)
+- [Empleados](/conceptos/personal/empleados)
+- [Claves API y webhooks](/conceptos/panel-de-control/claves-api-y-webhooks)
+- [Agentes del Panel de control](/conceptos/panel-de-control/agentes)
+- [Invitar usuarios](/ayuda/usuarios-y-permisos/invitar-usuarios)

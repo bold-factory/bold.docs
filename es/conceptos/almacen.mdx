@@ -21,8 +21,11 @@ El almacén registra dónde está el material, por qué cambió la cantidad y qu
   <Card title="Tipos de contenedores" icon="container" href="/conceptos/almacen/tipos-de-contenedores">
     Formatos reutilizables para clasificar bultos.
   </Card>
-  <Card title="Recepciones y envíos" icon="truck" href="/conceptos/almacen/recepciones-y-envios">
-    Entradas y salidas físicas de material.
+  <Card title="Recepciones" icon="package-plus" href="/conceptos/almacen/recepciones">
+    Entradas físicas de material desde compras, fabricación o ajustes.
+  </Card>
+  <Card title="Envíos" icon="package-minus" href="/conceptos/almacen/envios">
+    Salidas físicas de material hacia clientes, consumos o destinos externos.
   </Card>
   <Card title="Inventarios y ajustes" icon="clipboard-check" href="/conceptos/almacen/inventarios-y-ajustes">
     Regularizaciones de stock con causa y trazabilidad.
@@ -54,6 +57,11 @@ El backend registra cada mutación como un cambio auditado con cantidad firmada,
 
 Una recepción registra entrada física de material. Puede venir de un pedido de compra o crearse manualmente.
 
+| Estado | Significado |
+| --- | --- |
+| **Pendiente** | Puede editarse antes de registrar la entrada. |
+| **Recibida** | Ya aumentó stock y queda protegida. |
+
 Para recibir, la recepción debe estar pendiente, tener ubicación, contener al menos una línea y tener completados los controles obligatorios. Al recibir, pasa a estado **Recibida** y emite eventos que aplican el efecto de stock.
 
 Después de recibir, no puedes editar líneas ni cambiar ubicación. Si necesitas deshacer una recepción, usa la reversión cuando esté disponible y todavía exista ubicación.
@@ -62,9 +70,18 @@ Después de recibir, no puedes editar líneas ni cambiar ubicación. Si necesita
 
 Un envío registra salida física de material. Puede venir de un pedido de venta o crearse como salida de almacén.
 
+| Estado | Significado |
+| --- | --- |
+| **Pendiente** | Puede editarse antes de registrar la salida. |
+| **Enviado** | Ya redujo stock y queda protegido. |
+
 Para enviar, debe estar pendiente, tener ubicación y contener al menos una línea. Al enviar, pasa a **Enviado** y emite eventos que reducen stock.
 
 Las líneas requieren cantidad positiva. Después del envío, las líneas y la ubicación quedan protegidas.
+
+<Tip>
+  Si una acción de almacén aparece bloqueada, revisa primero el estado del documento y después los permisos del usuario. Las restricciones protegen la trazabilidad después de movimientos reales.
+</Tip>
 
 ## Inventarios y ajustes
 
@@ -91,10 +108,11 @@ Usa bultos cuando el material viaje físicamente agrupado: cajas, palets, carros
 ## Guías relacionadas
 
 - [Crear ubicaciones](/ayuda/almacen/crear-ubicaciones)
-- [Tipos de contenedores](/ayuda/almacen/tipos-de-contenedores)
-- [Bultos](/ayuda/almacen/bultos)
+- [Tipos de contenedores](/conceptos/almacen/tipos-de-contenedores)
+- [Bultos](/conceptos/almacen/bultos)
 - [Consultar stock](/ayuda/almacen/consultar-stock)
 - [Recibir pedido de compra](/ayuda/compras/recibir-pedido-de-compra)
+- [Completar envío](/ayuda/ventas/completar-envio)
 - [Escanear albaranes con IA](/ayuda/almacen/recibir-con-albaran)
 - [Mover stock](/ayuda/almacen/mover-stock)
 - [Ajustar stock](/ayuda/almacen/ajustar-stock)

@@ -1,0 +1,49 @@
+---
+title: "Envíos"
+description: "Entiende cómo los envíos registran salidas físicas de stock."
+icon: "package-minus"
+---
+
+Un **envío** registra la salida física de material desde almacén. Reduce stock cuando el material sale de la empresa, se entrega a un destino externo o se consume en un flujo operativo.
+
+## Orígenes
+
+| Origen | Uso |
+| --- | --- |
+| Pedido de venta | Entregar material a cliente. |
+| Salida manual | Registrar salida no vinculada a pedido. |
+| Consumo | Reducir material usado en fabricación o mantenimiento. |
+
+## Datos obligatorios
+
+El envío debe salir de la ubicación y lote correctos. Si el stock está en otra ubicación, registra primero el movimiento interno o corrige la ubicación antes de enviar.
+
+| Dato | Por qué importa |
+| --- | --- |
+| Artículo | Define qué unidad operativa sale de stock. |
+| Cantidad | Reduce el saldo físico. Debe ser positiva. |
+| Ubicación | Indica de dónde sale el material. |
+| Lote | Conserva trazabilidad cuando el artículo lo exige. |
+| Documento origen | Explica si la salida viene de venta, consumo u otra operación. |
+
+## Estados y reglas
+
+| Estado | Significado |
+| --- | --- |
+| **Pendiente** | Puede editarse antes de registrar la salida. |
+| **Enviado** | Ya redujo stock y queda protegido. |
+
+Para enviar, el documento debe estar pendiente, tener ubicación y contener al menos una línea. Después de enviado, las líneas y la ubicación quedan protegidas para conservar histórico de entrega y trazabilidad de stock.
+
+Una línea de venta entregada queda limitada para conservar lo entregado. Si se cancela con cantidad entregada, Bold conserva la parte entregada como histórico y solo cancela la cantidad pendiente.
+
+## Relación con planificación
+
+Cuando un envío viene de ventas, reduce la demanda pendiente de la línea entregada. El pedido de venta explica el compromiso con cliente. El envío explica la realidad física.
+
+## Relacionado
+
+- [Stock y movimientos](/conceptos/almacen/stock-y-movimientos)
+- [Lotes](/conceptos/catalogo/lotes)
+- [Completar envío](/ayuda/ventas/completar-envio)
+- [Crear un pedido](/ayuda/ventas/crear-pedido-de-venta)

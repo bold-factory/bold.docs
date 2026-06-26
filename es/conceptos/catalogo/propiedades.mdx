@@ -61,6 +61,21 @@ Ejemplo: la propiedad **Largo** puede alimentar una fórmula de corte. La propie
 
 Usa referencias externas estables en propiedades y opciones cuando los valores vienen de un ERP, PIM, ecommerce o archivo de importación. Esto evita duplicados cuando el mismo valor llega con otro nombre visible.
 
+## Copiar propiedades
+
+Puedes copiar una propiedad de tipo **Selección de opción** para crear una lista nueva con las mismas opciones iniciales.
+
+Úsalo cuando quieras partir de una lista existente, pero mantenerla independiente desde ese momento. Por ejemplo, puedes copiar **Color comercial** para crear **Color técnico** y después ajustar opciones sin mezclar usos comerciales y de fabricación.
+
+## Permisos
+
+| Acción | Permiso necesario |
+| --- | --- |
+| Ver propiedades y opciones | `Items.Properties.Read` |
+| Crear, editar, copiar o eliminar propiedades | `Items.Properties.Write` |
+| Asignar propiedades a productos | `Items.Products.Write` |
+| Editar valores de artículo | `Items.Skus.Write` |
+
 ## Relacionado
 
 - [Productos](/conceptos/catalogo/productos)

@@ -140,6 +140,37 @@ La cantidad planificada solo puede cambiar antes de empezar. Si la orden ya est�
 
 El estado de la orden se deriva de sus operaciones. Se inicia, reanuda, pausa, finaliza o reabre según los cambios de estado de las operaciones contenidas.
 
+## Estados de ejecución
+
+| Entidad | Estado | Significado |
+| --- | --- | --- |
+| Orden | **Creada** | Existe, pero aún no está planificada. |
+| Orden | **Planificada** | Tiene planificación suficiente para ejecutar. |
+| Orden | **En curso** | Hay operaciones activas. |
+| Orden | **Pausada** | Se empezó, pero ahora no hay trabajo activo. |
+| Orden | **Finalizada** | La fabricación terminó. |
+| Orden | **Bloqueada** | No debe continuar hasta resolver el bloqueo. |
+| Orden | **Cancelada** | La fabricación se abortó. |
+| Operación | **Pendiente** | Falta planificación o requisitos. |
+| Operación | **Planificada** | Tiene planificación suficiente. |
+| Operación | **En curso** | Está siendo ejecutada. |
+| Operación | **Pausada** | Está detenida temporalmente. |
+| Operación | **Finalizada** | La operación terminó. |
+| Operación | **Cancelada** | La operación no se ejecutará. |
+
+## Reglas principales
+
+- Una receta define la estructura del trabajo, pero una orden guarda la ejecución real.
+- Activar una versión de receta la convierte en referencia para nuevas órdenes.
+- Activar una versión desactiva la versión activa anterior.
+- Hacer editable una versión activa deja la receta sin versión activa hasta volver a activarla.
+- Las restricciones entre operaciones no pueden duplicarse ni formar ciclos.
+- Una operación que exige herramienta requiere una característica y una herramienta compatible.
+- Empezar una operación requiere controles iniciales completos.
+- Finalizar una operación requiere controles obligatorios completos.
+- La cantidad planificada de una orden solo puede cambiar antes de empezar.
+- Cambiar la fecha objetivo de una orden actualiza las fechas objetivo de sus operaciones.
+
 ## Ejemplo
 
 Para fabricar una mesa:

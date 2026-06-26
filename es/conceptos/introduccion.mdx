@@ -17,11 +17,14 @@ Para ejecutar un proceso paso a paso, ve a **Guías**.
   <Card title="Almacén" icon="warehouse" href="/conceptos/almacen">
     Stock, ubicaciones, movimientos, bultos, recepciones e inventarios.
   </Card>
+  <Card title="Planificación" icon="calendar-range" href="/conceptos/planificacion">
+    Demanda, suministro, stock proyectado, compras, ventas y recomendaciones.
+  </Card>
   <Card title="Fabricación" icon="factory" href="/conceptos/fabricacion">
     Recetas, versiones, operaciones, órdenes, recursos, controles y ejecución.
   </Card>
   <Card title="Personal" icon="users" href="/conceptos/personal">
-    Usuarios, roles, empleados, jornadas, calendarios y turnos.
+    Empleados, jornadas, calendarios, turnos y capacidad operativa.
   </Card>
   <Card title="Mantenimiento" icon="wrench" href="/conceptos/mantenimiento">
     Activos, causas, acciones, preventivos y partes de trabajo.
@@ -31,14 +34,14 @@ Para ejecutar un proceso paso a paso, ve a **Guías**.
 ## Áreas secundarias
 
 <Columns cols={2}>
-  <Card title="Planificación" icon="calendar-range" href="/conceptos/planificacion">
-    Demanda, suministro, stock proyectado, compras, ventas y asistentes.
-  </Card>
   <Card title="Costes" icon="circle-dollar-sign" href="/conceptos/costes">
     Coste teórico, coste real y valoración de inventario.
   </Card>
-  <Card title="Smart Factory y control" icon="sparkles" href="/conceptos/smart-factory-y-control">
-    Boldy, agentes, informes, claves API, webhooks, notificaciones y datos.
+  <Card title="Smart Factory" icon="sparkles" href="/conceptos/smart-factory">
+    Informes, Boldy, tareas con agentes y automatizaciones inteligentes.
+  </Card>
+  <Card title="Panel de control" icon="settings" href="/conceptos/panel-de-control">
+    Cuenta, empresa, usuarios, permisos, claves API, notificaciones, datos y diseños.
   </Card>
 </Columns>
 
@@ -48,15 +51,12 @@ Para ejecutar un proceso paso a paso, ve a **Guías**.
 | --- | --- |
 | Página de área | Entender el mapa general de un módulo. |
 | Página de concepto | Resolver qué representa una entidad y cuándo usarla. |
-| Referencia funcional | Consultar estados, reglas y vocabulario transversal. |
+| Estados y reglas | Consultarlos dentro del área donde aplican. |
 | Guías | Ejecutar flujos como crear, recibir, mover, completar o configurar. |
 
-## Referencias transversales
+## Dónde consultar estados y reglas
 
-- [Glosario](/ayuda/referencia-funcional/glosario)
-- [Estados](/ayuda/referencia-funcional/estados)
-- [Reglas del sistema](/ayuda/referencia-funcional/reglas-del-sistema)
-- [Cobertura de la ayuda integrada](/conceptos/cobertura-ayuda-integrada)
+Los estados, validaciones y reglas de trazabilidad aparecen dentro de cada área. Por ejemplo, almacén explica cuándo una recepción queda protegida, planificación explica cuándo una línea genera demanda o suministro, y fabricación explica qué bloquea una versión activa o una orden con actividad.
 
 <Info>
   En la interfaz, Bold usa **Artículo** para el objeto operativo. En integraciones y notas técnicas puede aparecer como `sku`.
