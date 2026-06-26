@@ -1,0 +1,236 @@
+es/conceptos/costes.mdx
+  s_2183813152e897::t_f7c687d23cec72 9-18
+  s_6824c5f24c893a::t_0eb5d666a5654a 3,7,24,58
+  s_2183813152e897::t_db8e0ecf1219ae 8
+es/conceptos/personal/empleados.mdx
+  s_2183813152e897::t_b91198fa0508f0 1-42
+es/conceptos/fabricacion/recursos.mdx
+  s_2183813152e897::t_b91198fa0508f0 1-49
+.mintignore
+  s_6824c5f24c893a::t_3892ff20d2cc71 6
+  s_6824c5f24c893a::t_20a3e3e696d9d9 12
+es/conceptos/mantenimiento.mdx
+  s_6824c5f24c893a::t_0eb5d666a5654a 97-99
+  s_2183813152e897::t_f7c687d23cec72 9-25
+  s_6824c5f24c893a::t_88f4e46d43add9 100
+es/ayuda/smart-factory/informes-powerbi.mdx
+  s_2183813152e897::t_f33a74c6c9d2d6 59,80
+es/conceptos/mantenimiento/mantenimiento-preventivo.mdx
+  s_2183813152e897::t_b91198fa0508f0 1-41
+es/novedades/changelog.mdx
+  s_49a34ab6a4c06d::t_a27ed07a6f216a 11,18,22,35,41,56,62,75,81,95,102,117,121,137,141,152,165,173,182,190,199,204,209,218,223,229,243,249,258,263
+es/conceptos/fabricacion.mdx
+  s_2183813152e897::t_3ec5284f0e9178 29
+  s_2183813152e897::t_f7c687d23cec72 9-28
+es/conceptos/almacen.mdx
+  s_2183813152e897::t_f7c687d23cec72 9-31,94-95
+  s_6824c5f24c893a::t_0eb5d666a5654a 97-98,103
+es/conceptos/mantenimiento/activos.mdx
+  s_2183813152e897::t_b91198fa0508f0 1-42
+es/conceptos/almacen/tipos-de-contenedores.mdx
+  s_2183813152e897::t_0ee986288f5204 2-4,7,9,11-17,19,21,23,25,27-29,31,33,35-41,43-45
+es/ayuda/panel-de-control/notificaciones.mdx
+  s_ffa018bd719ad6::t_2959eacf7436d4 108
+es/conceptos/catalogo.mdx
+  s_2183813152e897::t_f7c687d23cec72 9-28,91-93
+es/ayuda/almacen/solucion-de-problemas-de-stock.mdx
+  s_6824c5f24c893a::t_2189b4b04d0365 2-3,7-9,13-19,21,25,28,31-34,36-37,41,43-45,53,55-56
+es/ayuda/costes/valoracion-inventario.mdx
+  s_6824c5f24c893a::t_47907ab2562330 89
+es/ayuda/articulos-y-skus/propiedades.mdx
+  s_2183813152e897::t_a2562eb45d9dd0 3,9,29,48,54,56-57,66,70,91,99,110,116,118,125-127
+es/conceptos/fabricacion/operaciones-y-restricciones.mdx
+  s_2183813152e897::t_b91198fa0508f0 1-53
+es/ayuda/almacen/recibir-con-albaran.mdx
+  s_6824c5f24c893a::t_0ab74e04777de2 2-3,7
+  s_6824c5f24c893a::t_3626292833b922 15,19
+es/conceptos/mantenimiento/causas-y-acciones.mdx
+  s_2183813152e897::t_b91198fa0508f0 1-47
+es/conceptos/planificacion/demanda-y-suministro.mdx
+  s_2183813152e897::t_b91198fa0508f0 1-43
+es/ayuda/almacen/introduccion.mdx
+  s_6824c5f24c893a::t_973bac77c5e4cc 15-16,18
+  s_6824c5f24c893a::t_b94c65c7febe28 19
+  s_6824c5f24c893a::t_c4dfe285dca8b8 30,39
+es/ayuda/mantenimiento/mantenimiento-preventivo.mdx
+  s_6824c5f24c893a::t_e43c98d99c6c8d 2,47,97
+  s_6824c5f24c893a::t_3154544e9baac3 53-54
+es/conceptos/fabricacion/controles-consumos-y-pausas.mdx
+  s_2183813152e897::t_b91198fa0508f0 1-52
+es/conceptos/personal/usuarios-roles-y-permisos.mdx
+  s_2183813152e897::t_b91198fa0508f0 2-4,7,9,11,13,15-18,20,22,24,26,28-32,34,36,38,40,44-45,47
+es/ayuda/planificacion/clientes.mdx
+  s_6824c5f24c893a::t_47907ab2562330 92
+es/conceptos/almacen/recepciones-y-envios.mdx
+  s_2183813152e897::t_0ee986288f5204 1-47
+es/ayuda/panel-de-control/claves-api.mdx
+  s_ffa018bd719ad6::t_18520533db24f4 20,22,28,31,34,40,93
+es/conceptos/mantenimiento/partes-de-trabajo.mdx
+  s_2183813152e897::t_b91198fa0508f0 2-4,7,9,11,13-21,23,25-31,33,35,37,39,41,43,45-48
+es/conceptos/almacen/ubicaciones.mdx
+  s_2183813152e897::t_0ee986288f5204 1-74
+es/conceptos/planificacion/clientes-y-proveedores.mdx
+  s_2183813152e897::t_b91198fa0508f0 1-40
+es/ayuda/panel-de-control/disenos.mdx
+  s_ffa018bd719ad6::t_2959eacf7436d4 80
+es/ayuda/mantenimiento/activos.mdx
+  s_6824c5f24c893a::t_47907ab2562330 74-75
+es/conceptos/almacen/inventarios-y-ajustes.mdx
+  s_2183813152e897::t_0ee986288f5204 2-4,7,9,11,13-18,20,22,24,26,28,30,32,34-43,45-48
+es/ayuda/articulos-y-skus/producto-vs-sku.mdx
+  s_2183813152e897::t_a2562eb45d9dd0 2
+  s_2183813152e897::t_8c201439d4668f 58
+es/desarrolladores/empezar/introduccion.mdx
+  s_ffa018bd719ad6::t_fdaa3d60627860 9,15,18,21,24,27,30,33-36,39,42,49,51-53,72
+es/conceptos/personal.mdx
+  s_2183813152e897::t_f7c687d23cec72 9-22,54-59
+es/ayuda/mantenimiento/crear-parte-de-trabajo.mdx
+  s_6824c5f24c893a::t_e43c98d99c6c8d 2-4,7,9-19,22-29,31-32,34-35,37-41,45,47-53,55-57,59,61-64,66,68-72
+es/ayuda/produccion/introduccion.mdx
+  s_6824c5f24c893a::t_e1508678c6c058 16-17
+  s_6824c5f24c893a::t_26438e6d787fa9 18-19
+  s_6824c5f24c893a::t_4870ce4848e2da 36
+es/ayuda/ventas/crear-pedido-de-venta.mdx
+  s_6824c5f24c893a::t_9cb51f32651134 2-3,7
+  s_6824c5f24c893a::t_67ea0dcb8e9f02 12-13,65-66
+es/conceptos/catalogo/lotes.mdx
+  s_2183813152e897::t_0ee986288f5204 1-57
+es/conceptos/personal/jornadas-calendarios-y-turnos.mdx
+  s_2183813152e897::t_b91198fa0508f0 2-4,7,9,11,13,15-28,30-45,49
+es/conceptos/catalogo/propiedades.mdx
+  s_2183813152e897::t_0ee986288f5204 1-69
+es/conceptos/fabricacion/ordenes-de-fabricacion.mdx
+  s_2183813152e897::t_b91198fa0508f0 1-51
+es/conceptos/fabricacion/recetas-y-versiones.mdx
+  s_2183813152e897::t_b91198fa0508f0 2-4,7-25,27,31-37,39,41,43-64
+docs.json
+  s_49a34ab6a4c06d::t_ebf46bbff80b6c 352
+  s_ffa018bd719ad6::t_2ea505f0f90705 317-318,328,337-342,376-383
+  s_2183813152e897::t_7b20c65bdf999f 56-68,74,85,99-100,102,106-107,117-119,135-137,142-153,168-179,185-191,203,206,210-213,215-219,223-226,228-233,237-240,242-246,250-293,296
+  s_6824c5f24c893a::t_c064c15fba9b54 69,108,138,162
+es/conceptos/almacen/stock-y-movimientos.mdx
+  s_2183813152e897::t_0ee986288f5204 2-4,7-13,15-37,39-44,46,48,50,55-57
+es/ayuda/costes/coste-teorico-vs-coste-real.mdx
+  s_6824c5f24c893a::t_020bd13f5d6657 1-69
+es/conceptos/introduccion.mdx
+  s_6824c5f24c893a::t_47907ab2562330 38
+  s_2183813152e897::t_f7c687d23cec72 3,7,9-11,15,18,29-35,45,47-52
+  s_2183813152e897::t_3b86ff0bf66d35 36
+es/conceptos/costes/valoracion-de-inventario.mdx
+  s_2183813152e897::t_b91198fa0508f0 1-39
+es/ayuda/mantenimiento/causas.mdx
+  s_6824c5f24c893a::t_47907ab2562330 74
+es/conceptos/catalogo/articulos.mdx
+  s_2183813152e897::t_0ee986288f5204 2-4,7-9,11,13-21,23,25,27,29,31,33,35-41,43,45-49,51-65
+es/conceptos/catalogo/producto-vs-articulo.mdx
+  s_2183813152e897::t_0ee986288f5204 2-4,7,9,11,13-18,20,22-28,30,32,34,36,38,40,42-44,46-59
+es/conceptos/planificacion.mdx
+  s_2183813152e897::t_f7c687d23cec72 9-19
+  s_6824c5f24c893a::t_ef444c2b10a7e2 141
+es/conceptos/almacen/bultos.mdx
+  s_2183813152e897::t_0ee986288f5204 2-4,7-9,11,13,15-19,21,23,25-45,49-51
+es/ayuda/produccion/ejecutar-una-orden.mdx
+  s_6824c5f24c893a::t_ceffc2bec3845f 3-4,7-9,16-18,20,22,25-32,34-35,37-46,49-52,55-58,60-64,68,70,72-83,85,88,91-107,110-113
+es/conceptos/cobertura-ayuda-integrada.mdx
+  s_2183813152e897::t_cf03892b9e926c 14-18,24,27-29,35-39,45-50,56-59
+  s_6824c5f24c893a::t_0eb5d666a5654a 25
+  s_2183813152e897::t_465cf6ba272158 65-66
+es/ayuda/mantenimiento/partes-de-trabajo.mdx
+  s_6824c5f24c893a::t_47907ab2562330 100
+es/conceptos/costes/coste-teorico-vs-real.mdx
+  s_2183813152e897::t_b91198fa0508f0 1-33
+es/conceptos/catalogo/productos.mdx
+  s_2183813152e897::t_0ee986288f5204 1-55
+es/ayuda/costes/introduccion.mdx
+  s_6824c5f24c893a::t_020bd13f5d6657 3,7,12-13,23
+  s_6824c5f24c893a::t_e651439e1055e8 24
+es/desarrolladores/empezar/autenticacion.mdx
+  s_ffa018bd719ad6::t_14709de861c922 6,12,14-33,86
+es/ayuda/ventas/completar-envio.mdx
+  s_6824c5f24c893a::t_c074eb9572b335 2-3,7,9,11,13-14,16-17,19,22-23,25-32,35,37,48-49,53,56-63
+  s_6824c5f24c893a::t_59363c06a80d0d 80-82
+es/ayuda/ventas/introduccion.mdx
+  s_6824c5f24c893a::t_940514ba8d24e9 2-3,7,15,18,21
+  s_6824c5f24c893a::t_d159b16ffc0331 57-58
+es/ayuda/almacen/consultar-stock.mdx
+  s_6824c5f24c893a::t_95982020af9287 71
+es/ayuda/articulos-y-skus/crear-un-sku.mdx
+  s_2183813152e897::t_f094e6bfc697a7 2,61,76-77,79-80
+es/ayuda/articulos-y-skus/editar-un-sku.mdx
+  s_2183813152e897::t_67f0bcedab263f 2,55,83-86
+es/ayuda/mantenimiento/introduccion.mdx
+  s_6824c5f24c893a::t_4f3caa23842cfe 21-24,56-57
+es/ayuda/personal/introduccion.mdx
+  s_2183813152e897::t_1eb973d2b158eb 56
+es/ayuda/planificacion/saber-que-fabricar.mdx
+  s_6824c5f24c893a::t_a0ec3255b9cbf4 66-68
+es/ayuda/produccion/asignar-recursos.mdx
+  s_e14e45ff3250df::t_f875f11a966cb0 55
+es/ayuda/produccion/controles-de-calidad.mdx
+  s_e14e45ff3250df::t_c86c9f43a12457 61
+es/ayuda/produccion/crear-una-orden-de-fabricacion.mdx
+  s_6824c5f24c893a::t_28bf25f907e486 70-71
+es/ayuda/produccion/crear-una-receta.mdx
+  s_6824c5f24c893a::t_105fb64cbe6e7c 146
+es/ayuda/produccion/cuadros-de-mando.mdx
+  s_6824c5f24c893a::t_c4d31509a06b23 64
+es/ayuda/produccion/secuenciar-ordenes.mdx
+  s_e14e45ff3250df::t_f8ad24ae7efa1d 69
+es/ayuda/usuarios-y-permisos/permisos-por-modulo.mdx
+  s_2183813152e897::t_dc131ac8b45baf 94-95
+es/conceptos/smart-factory-y-control.mdx
+  s_2183813152e897::t_304ff3f37a7142 95,97
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "173ad7e3b966067c3fa6092670bf975173a5a4c8",
+  "prompts": {},
+  "humans": {
+    "h_55f2ba4d68b42c": {
+      "author": "Pablo López <pablo@bold-factory.com>"
+    }
+  },
+  "sessions": {
+    "s_2183813152e897": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f0177-37be-7581-84cb-df28be05d5c8",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_49a34ab6a4c06d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f0174-5d47-7822-ba7f-79e877ed48ca",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_6824c5f24c893a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f015c-457d-7312-b607-5753270223a7",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_e14e45ff3250df": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019efffd-dcdf-7aa1-b60f-6733c01b178e",
+        "model": "unknown"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_ffa018bd719ad6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f0173-da6f-76d3-8746-83b671685dd3",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
