@@ -1,0 +1,70 @@
+---
+title: "Auditoría y eventos"
+description: "Entiende historial de cambios, eventos publicados, notificaciones y trazabilidad administrativa."
+icon: "history"
+---
+
+La **auditoría** explica quién cambió qué dato y cuándo. Los **eventos** explican qué ocurrió en Bold para sincronizar módulos, notificaciones, webhooks y automatizaciones.
+
+Ambos ayudan a depurar incidencias, revisar integraciones y proteger la trazabilidad.
+
+## Auditoría
+
+La auditoría permite revisar cambios sobre entidades de negocio.
+
+| Dato | Para qué sirve |
+| --- | --- |
+| Entidad | Identifica el registro afectado. |
+| Acción | Indica creación, cambio, eliminación u otra operación. |
+| Usuario o actor | Explica quién inició el cambio cuando está disponible. |
+| Fecha | Sitúa el cambio en el tiempo. |
+| Valores | Ayudan a comparar antes y después. |
+
+Usa auditoría cuando necesites entender por qué cambió un pedido, stock, coste, rol, receta, parte o configuración.
+
+## Eventos
+
+Un evento comunica que algo ocurrió. Puede alimentar proyecciones internas, notificaciones, webhooks o automatizaciones con agentes.
+
+| Uso | Ejemplo |
+| --- | --- |
+| Sincronización interna | Una recepción actualiza stock y planificación. |
+| Notificación | Un usuario recibe aviso por un cambio relevante. |
+| Webhook | Un sistema externo recibe el evento. |
+| Automatización | Un agente se ejecuta cuando el evento cumple una condición. |
+
+No todos los cambios generan el mismo tipo de evento público. Revisa la referencia de desarrolladores para integraciones externas.
+
+## Relación con notificaciones y webhooks
+
+Las [Notificaciones](/es/conceptos/panel-de-control/notificaciones) usan eventos para avisar dentro de la aplicación o por email.
+
+Los [webhooks](/es/conceptos/panel-de-control/claves-api-y-webhooks) envían eventos a sistemas externos. Conserva payloads durante el tiempo necesario para depurar entregas fallidas o discrepancias.
+
+## Relación con automatizaciones
+
+Las automatizaciones por evento ejecutan agentes cuando el evento seleccionado y su condición coinciden.
+
+Antes de activar una automatización crítica, verifica:
+
+- qué evento la dispara;
+- qué versión del evento usa;
+- qué condición filtra ejecuciones;
+- qué permisos tiene el agente;
+- quién revisará las tareas generadas.
+
+## Buenas prácticas
+
+- Usa usuarios nominales para mantener trazabilidad.
+- Evita compartir claves API entre integraciones distintas.
+- Revisa auditoría antes de corregir stock o pedidos manualmente.
+- Documenta automatizaciones por evento que afecten procesos críticos.
+- Mantén webhooks con endpoints observables y reintentos controlados.
+
+## Relacionado
+
+- [Usuarios, roles y permisos](/es/conceptos/panel-de-control/usuarios-roles-y-permisos)
+- [Claves API y webhooks](/es/conceptos/panel-de-control/claves-api-y-webhooks)
+- [Notificaciones](/es/conceptos/panel-de-control/notificaciones)
+- [Automatizaciones](/es/conceptos/smart-factory/automatizaciones)
+- [Eventos disponibles](/es/desarrolladores/webhooks/eventos-disponibles)

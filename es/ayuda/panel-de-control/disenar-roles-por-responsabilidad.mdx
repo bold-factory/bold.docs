@@ -1,0 +1,61 @@
+---
+title: "Diseñar roles por responsabilidad"
+description: "Agrupa permisos por trabajo real antes de invitar usuarios o ampliar acceso."
+---
+
+Diseña roles por responsabilidad para que cada persona vea y haga solo lo necesario. Este flujo ayuda a evitar permisos demasiado amplios o roles duplicados por cada usuario.
+
+## Antes de crear roles
+
+Haz una lista de responsabilidades reales:
+
+- administración de empresa;
+- compras;
+- ventas;
+- almacén;
+- planificación;
+- producción;
+- mantenimiento;
+- costes;
+- informes y análisis;
+- integraciones.
+
+## Crear una matriz simple
+
+<Steps>
+  <Step title="Lista responsabilidades">
+    Agrupa personas por trabajo diario, no por nombre individual.
+  </Step>
+  <Step title="Define acciones necesarias">
+    Separa lectura, creación, edición, aprobación, eliminación y administración.
+  </Step>
+  <Step title="Crea roles reutilizables">
+    Usa roles como Almacén, Compras, Producción o Administración cuando varias personas compartan permisos.
+  </Step>
+  <Step title="Asigna usuarios">
+    Invita o actualiza usuarios después de validar el rol.
+  </Step>
+  <Step title="Revisa excepciones">
+    Documenta permisos especiales y revisa si justifican un rol nuevo.
+  </Step>
+</Steps>
+
+## Revisión periódica
+
+| Revisión | Cuándo hacerla |
+| --- | --- |
+| Usuarios inactivos | Cada cierre de mes o salida de personal. |
+| Permisos administrativos | Cada cambio de responsable. |
+| Nuevos módulos | Antes de activar el módulo para más usuarios. |
+| Integraciones | Antes de crear claves API o webhooks. |
+| Auditoría | Cuando investigues cambios sensibles. |
+
+<Warning>
+  Evita usar un rol administrador para trabajo diario. Reserva permisos amplios para tareas de configuración y soporte.
+</Warning>
+
+## Relacionado
+
+- [Invitar usuarios](/es/ayuda/usuarios-y-permisos/invitar-usuarios)
+- [Roles y permisos](/es/conceptos/panel-de-control/usuarios-roles-y-permisos)
+- [Auditoría y eventos](/es/conceptos/panel-de-control/auditoria-y-eventos)

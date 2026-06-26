@@ -1,0 +1,58 @@
+---
+title: "Unidades de medida"
+description: "Entiende cómo las unidades afectan artículos, stock, compras, fabricación y API."
+icon: "ruler"
+---
+
+La **unidad de medida** indica cómo se cuantifica un artículo. Afecta stock, compras, ventas, consumos, producción, costes y redondeos.
+
+Elige unidades con cuidado. Cambiar la unidad de un artículo después de operar puede dificultar comparar histórico, integraciones y cantidades.
+
+## Dónde se usa
+
+| Área | Uso |
+| --- | --- |
+| Catálogo | Define cómo se expresa la cantidad del artículo. |
+| Almacén | Registra stock físico, movimientos, lotes y bultos. |
+| Planificación | Calcula demanda, suministro, punto de pedido y tamaños de lote. |
+| Compras y ventas | Expresa cantidades de líneas de pedido. |
+| Fabricación | Calcula entradas, co-productos, progreso y producción. |
+| Costes | Interpreta coste unitario y valoración de inventario. |
+
+## Unidad y precisión
+
+La unidad debe ir acompañada de una precisión coherente. No todas las unidades admiten la misma granularidad operativa.
+
+| Caso | Decisión práctica |
+| --- | --- |
+| Piezas indivisibles | Usa cantidades enteras si no vendes ni consumes fracciones. |
+| Peso, volumen o longitud | Define decimales suficientes para compras, stock y consumo. |
+| Material a granel | Alinea precisión con básculas, sistemas externos y tolerancias. |
+| Semielaborados | Usa la unidad que se moverá y consumirá realmente. |
+
+## Conversión y consistencia
+
+Bold registra cantidades en la unidad del artículo. Si compras, consumes o integras datos en otra unidad, el sistema externo o el proceso de importación debe enviar cantidades ya normalizadas.
+
+Evita mezclar unidades equivalentes para el mismo artículo, como `kg` y `g`, si eso puede generar errores de interpretación.
+
+## Impacto en planificación
+
+Punto de pedido, pedido mínimo, tamaño de lote, stock de seguridad y lead time dependen de cantidades en la unidad del artículo.
+
+Si cambias unidad o precisión, revisa:
+
+- stock físico;
+- demanda y suministro;
+- proveedores;
+- recetas e inputs;
+- costes;
+- importaciones e integraciones.
+
+## Relacionado
+
+- [Artículos](/es/conceptos/catalogo/articulos)
+- [Planificación](/es/conceptos/planificacion)
+- [Stock y movimientos](/es/conceptos/almacen/stock-y-movimientos)
+- [Recetas y versiones](/es/conceptos/fabricacion/recetas-y-versiones)
+- [Coste teórico vs coste real](/es/conceptos/costes/coste-teorico-vs-real)

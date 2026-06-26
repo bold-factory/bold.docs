@@ -1,0 +1,63 @@
+---
+title: "Herramientas y características"
+description: "Entiende herramientas, características y compatibilidad técnica en fabricación."
+icon: "wrench"
+---
+
+Las **herramientas** son recursos auxiliares que pueden requerirse para ejecutar operaciones. Las **características** describen requisitos reutilizables que esas herramientas cumplen.
+
+Úsalas cuando la operación no depende sólo de una estación, sino también de un útil, molde, accesorio, calibre, equipo o capacidad técnica concreta.
+
+## Conceptos
+
+| Concepto | Qué representa |
+| --- | --- |
+| Herramienta | Recurso auxiliar seleccionable en planificación o ejecución. |
+| Característica | Requisito técnico reutilizable, como diámetro, compatibilidad o función. |
+| Herramienta compatible | Herramienta que cumple una característica requerida. |
+| Proceso | Tipo de trabajo que puede exigir características o herramientas. |
+
+Una herramienta puede tener varias características. Una característica puede aplicarse a varias herramientas.
+
+## Cuándo modelar una herramienta
+
+| Necesidad | Modelo recomendado |
+| --- | --- |
+| El recurso se selecciona para ejecutar trabajo. | Herramienta. |
+| El recurso limita qué operaciones pueden hacerse. | Herramienta con características. |
+| El dato sólo informa al operario. | Paso o instrucción. |
+| La diferencia cambia la duración de una estación. | Eficiencia de estación o proceso. |
+| El recurso es el lugar principal de trabajo. | Estación de trabajo. |
+
+No conviertas cada accesorio menor en herramienta si no afecta planificación, ejecución o trazabilidad.
+
+## Relación con asignaciones
+
+Cuando un proceso exige una característica, la asignación debe seleccionar una herramienta compatible.
+
+Esto ayuda a:
+
+- evitar ejecutar operaciones con útiles incorrectos;
+- proponer recursos válidos;
+- detectar operaciones planificadas de forma incompleta;
+- analizar disponibilidad de recursos auxiliares.
+
+Consulta [Asignaciones y grupos de operaciones](/es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones) para ver cómo se usan durante la ejecución.
+
+## Relación con recursos
+
+Las herramientas forman parte del modelo de recursos, pero no son lo mismo que las estaciones.
+
+| Recurso | Papel |
+| --- | --- |
+| Área | Agrupa estaciones o zonas. |
+| Estación de trabajo | Lugar principal de ejecución. |
+| Herramienta | Recurso auxiliar necesario para una operación. |
+| Característica | Requisito que permite elegir herramientas compatibles. |
+
+## Relacionado
+
+- [Recursos](/es/conceptos/fabricacion/recursos)
+- [Procesos](/es/conceptos/fabricacion/procesos)
+- [Operaciones y restricciones](/es/conceptos/fabricacion/operaciones-y-restricciones)
+- [Asignar recursos](/es/ayuda/produccion/asignar-recursos)

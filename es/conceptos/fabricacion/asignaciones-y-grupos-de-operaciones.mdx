@@ -1,0 +1,70 @@
+---
+title: "Asignaciones y grupos de operaciones"
+description: "Entiende cómo Bold asigna operaciones a estaciones, herramientas, empleados y grupos de ejecución."
+icon: "list-tree"
+---
+
+Las **asignaciones** preparan una operación para ejecutarse. Indican dónde, cuándo y con qué recursos se realizará.
+
+Los **grupos de operaciones** reúnen varias operaciones para ejecutarlas como un bloque operativo cuando comparten contexto de trabajo.
+
+## Asignaciones
+
+Una operación queda preparada cuando tiene los datos mínimos para ejecutarse en planta.
+
+| Dato | Uso |
+| --- | --- |
+| Estación de trabajo | Lugar donde se ejecuta la operación. |
+| Fecha objetivo | Referencia para planificar y priorizar. |
+| Herramientas requeridas | Recursos auxiliares necesarios cuando el proceso los exige. |
+| Empleado asignado | Persona responsable o participante cuando aplica. |
+| Estado de stock | Indica si los materiales previstos están disponibles. |
+
+La asignación puede venir de una acción manual, de la secuenciación o de un plan de producción aplicado.
+
+## Grupos de operaciones
+
+Un grupo de operaciones permite trabajar varias operaciones juntas. Es útil cuando comparten estación, empleado, materiales, preparación o ritmo de avance.
+
+| Caso | Por qué usar grupo |
+| --- | --- |
+| Varias órdenes se ejecutan en una misma preparación. | Evita iniciar y pausar operaciones una a una. |
+| Un empleado trabaja en un lote de operaciones similares. | Centraliza progreso y pausas. |
+| Varias operaciones comparten disponibilidad de material. | Ayuda a revisar stock y controles juntos. |
+| La planta trabaja por células o colas de trabajo. | Refleja mejor cómo se ejecuta el trabajo real. |
+
+Un grupo no elimina las operaciones individuales. Cada operación conserva su trazabilidad, progreso, consumos y controles.
+
+## Estados habituales
+
+| Estado | Significado |
+| --- | --- |
+| **Planificado** | El grupo existe y puede prepararse para ejecución. |
+| **En curso** | El trabajo empezó. |
+| **Pausado** | El trabajo se detuvo temporalmente. |
+| **Finalizado** | El grupo terminó y las operaciones conservan su historial. |
+
+Los estados del grupo ayudan a operar en planta. Los estados de cada operación siguen explicando su avance real.
+
+## Relación con modo de trabajo
+
+En [Modo de trabajo](/es/conceptos/modo-de-trabajo), el operario ve operaciones activas, recientes o disponibles según empleado, estación, área y asignaciones.
+
+Cuando inicia, pausa, reanuda o registra progreso, Bold actualiza la ejecución y conserva quién hizo cada acción.
+
+## Reglas de diseño
+
+- Asigna estación antes de ejecutar si la operación necesita capacidad finita.
+- Selecciona herramientas cuando el proceso exige características concretas.
+- Agrupa sólo operaciones que el equipo ejecuta realmente juntas.
+- Revisa controles y stock antes de iniciar trabajo crítico.
+- No uses grupos para ocultar operaciones que deberían medirse por separado.
+
+## Relacionado
+
+- [Operaciones y restricciones](/es/conceptos/fabricacion/operaciones-y-restricciones)
+- [Recursos](/es/conceptos/fabricacion/recursos)
+- [Herramientas y características](/es/conceptos/fabricacion/herramientas-y-caracteristicas)
+- [Secuenciación](/es/conceptos/fabricacion/secuenciacion)
+- [Asignar recursos](/es/ayuda/produccion/asignar-recursos)
+- [Ejecutar una orden](/es/ayuda/produccion/ejecutar-una-orden)

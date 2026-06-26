@@ -1,0 +1,65 @@
+---
+title: "Automatizaciones"
+description: "Entiende automatizaciones periódicas y por evento para ejecutar agentes sin crear tareas manualmente."
+icon: "calendar-clock"
+---
+
+Una **automatización** ejecuta un agente sin que tengas que crear la tarea manualmente. Cada ejecución crea una tarea con agente, historial, estado, resultado y consumo de créditos propios.
+
+Úsalas para trabajos repetibles, revisiones programadas, alertas operativas o comprobaciones que deben quedar auditadas.
+
+## Tipos
+
+| Tipo | Cuándo se ejecuta |
+| --- | --- |
+| Periódica | En una frecuencia diaria, semanal, mensual, trimestral, semestral o anual. |
+| Por evento | Cuando Bold publica un evento compatible y se cumple la condición configurada. |
+
+Las automatizaciones periódicas dependen de frecuencia, zona horaria, próxima ejecución y responsable. Las automatizaciones por evento dependen de evento, versión y condición.
+
+## Qué conserva cada ejecución
+
+| Dato | Uso |
+| --- | --- |
+| Agente | Define instrucciones, herramientas y permisos disponibles. |
+| Responsable | Persona vinculada a la automatización. |
+| Origen | Indica si la tarea nació por calendario o por evento. |
+| Mensajes | Conservan la conversación y aclaraciones. |
+| Herramientas usadas | Permiten revisar qué acciones consultó o ejecutó el agente. |
+| Resultado | Respuesta final o estado de fallo. |
+| Créditos | Consumo asociado a la ejecución. |
+
+Consulta [Agentes](/es/conceptos/smart-factory/agentes) para entender tareas, estados y nivel de inteligencia.
+
+## Agentes válidos
+
+Usa agentes personalizados para automatizaciones. Los agentes de sistema están pensados para uso directo y no deben programarse ni suscribirse a eventos.
+
+Concede al agente sólo los permisos necesarios. Una automatización puede ejecutarse sin supervisión inmediata, así que los permisos amplios aumentan el impacto de instrucciones mal definidas.
+
+## Condiciones por evento
+
+Las automatizaciones por evento pueden filtrar cuándo se dispara la tarea. La condición evita ejecuciones irrelevantes y reduce ruido.
+
+Ejemplos de uso:
+
+- avisar si una orden cambia a un estado crítico;
+- revisar pedidos creados por una integración;
+- generar una tarea cuando una previsión supera un umbral;
+- analizar incidencias de calidad después de una recepción.
+
+## Buenas prácticas
+
+- Prueba la automatización con casos controlados antes de depender de ella.
+- Revisa las primeras ejecuciones y ajusta instrucciones.
+- Usa nombres claros para saber qué dispara cada tarea.
+- Desactiva automatizaciones que generen ruido.
+- Documenta permisos y propósito cuando afecten a datos críticos.
+
+## Relacionado
+
+- [Agentes](/es/conceptos/smart-factory/agentes)
+- [Boldy](/es/conceptos/smart-factory/boldy)
+- [Tareas con agentes](/es/ayuda/smart-factory/tareas-con-agentes)
+- [Claves API y webhooks](/es/conceptos/panel-de-control/claves-api-y-webhooks)
+- [Auditoría y eventos](/es/conceptos/panel-de-control/auditoria-y-eventos)

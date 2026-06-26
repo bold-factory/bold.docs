@@ -1,0 +1,62 @@
+---
+title: "Investigar diferencias de stock"
+description: "Consulta stock, movimientos y recuentos para corregir diferencias sin perder trazabilidad."
+---
+
+Investiga diferencias de stock cuando el sistema no coincide con el almacén físico, aparece stock negativo o una ubicación muestra cantidades inesperadas.
+
+El objetivo no es cuadrar rápido. Primero identifica qué movimiento falta o qué movimiento fue incorrecto.
+
+## Diagnóstico
+
+<Steps>
+  <Step title="Acota el problema">
+    Identifica artículo, ubicación, lote, bulto y unidad de medida afectados.
+  </Step>
+  <Step title="Consulta stock actual">
+    Comprueba el saldo por ubicación y lote. Revisa si hay stock en otro lugar.
+  </Step>
+  <Step title="Revisa movimientos">
+    Ordena movimientos recientes y localiza entradas, salidas, ajustes, inventarios, consumos o envíos.
+  </Step>
+  <Step title="Busca documentos pendientes">
+    Comprueba recepciones, envíos, producción, inventarios o movimientos internos no registrados.
+  </Step>
+  <Step title="Contrasta con el almacén">
+    Valida físicamente ubicación, lote, bulto y cantidad antes de corregir.
+  </Step>
+</Steps>
+
+## Corregir
+
+| Causa | Acción recomendada |
+| --- | --- |
+| Falta una recepción real | Registra la recepción desde compra o albarán. |
+| Falta producción | Registra la operación o salida fabricada pendiente. |
+| Material en otra ubicación | Crea un movimiento interno. |
+| Lote equivocado | Corrige desde el flujo operativo disponible o ajusta con explicación. |
+| Recuento físico distinto | Haz inventario o ajuste según alcance. |
+| Error sin origen trazable | Usa ajuste con comentario claro. |
+
+<Warning>
+  Evita compensar diferencias con ajustes si falta registrar una entrada o salida real. El ajuste cuadra el saldo, pero no explica el proceso que ocurrió.
+</Warning>
+
+## Stock negativo
+
+El stock negativo suele indicar que se registró una salida antes de registrar la entrada que la cubre. Revisa primero:
+
+- recepciones de compra pendientes;
+- producción no registrada;
+- consumos desde lote incorrecto;
+- envíos desde ubicación incorrecta;
+- inventarios sin cerrar;
+- movimientos internos omitidos.
+
+## Relacionado
+
+- [Crear ubicaciones](/es/ayuda/almacen/crear-ubicaciones)
+- [Mover stock](/es/ayuda/almacen/mover-stock)
+- [Ajustar stock](/es/ayuda/almacen/ajustar-stock)
+- [Hacer inventario](/es/ayuda/almacen/hacer-inventario)
+- [Stock y movimientos](/es/conceptos/almacen/stock-y-movimientos)

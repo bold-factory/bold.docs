@@ -27,6 +27,12 @@ Fabricación convierte necesidades en trabajo ejecutable. Conecta catálogo, pla
   <Card title="Recursos" icon="wrench" href="/es/conceptos/fabricacion/recursos">
     Áreas, estaciones, herramientas, características y capacidad.
   </Card>
+  <Card title="Herramientas y características" icon="wrench" href="/es/conceptos/fabricacion/herramientas-y-caracteristicas">
+    Útiles, requisitos técnicos y compatibilidad para ejecutar operaciones.
+  </Card>
+  <Card title="Asignaciones y grupos de operaciones" icon="list-tree" href="/es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones">
+    Estaciones, herramientas, empleados y grupos de ejecución.
+  </Card>
   <Card title="Turnos" icon="calendar-clock" href="/es/conceptos/fabricacion/turnos">
     Ventanas de disponibilidad productiva para planificar operaciones.
   </Card>
@@ -35,6 +41,9 @@ Fabricación convierte necesidades en trabajo ejecutable. Conecta catálogo, pla
   </Card>
   <Card title="Planes de producción" icon="calendar-check" href="/es/conceptos/fabricacion/planes-de-produccion">
     Escenarios de planificación que puedes resolver, comparar y aplicar.
+  </Card>
+  <Card title="Inspecciones y controles" icon="badge-check" href="/es/conceptos/fabricacion/inspecciones-y-controles">
+    Validaciones, evidencias y comprobaciones de calidad.
   </Card>
   <Card title="Controles, consumos y pausas" icon="badge-check" href="/es/conceptos/fabricacion/controles-consumos-y-pausas">
     Calidad, material, progreso, interrupciones y tiempos.
@@ -52,9 +61,10 @@ Fabricación convierte necesidades en trabajo ejecutable. Conecta catálogo, pla
 | Petición de fabricación | Qué artículo necesitas, qué cantidad y para cuándo. |
 | Orden de fabricación | Qué trabajo real se ejecutará para cubrir la petición. |
 | Operaciones | Qué pasos productivos componen la orden. |
-| Recursos y turnos | Dónde y cuándo puede ejecutarse cada operación. |
+| Recursos, herramientas y turnos | Dónde, con qué recursos y cuándo puede ejecutarse cada operación. |
+| Asignaciones y grupos | Qué operaciones quedan preparadas o agrupadas para trabajo en planta. |
 | Secuenciación y planes | Qué propuesta de ejecución conviene aplicar. |
-| Ejecución | Qué se hizo, quién participó, qué se consumió y qué se produjo. |
+| Ejecución | Qué se hizo, quién participó, qué se consumió, qué se produjo y qué controles se completaron. |
 | Cuadros de mando | Qué rendimiento, desviaciones o bloqueos muestra la planta. |
 
 ## Relaciones con otros módulos
@@ -74,6 +84,7 @@ Fabricación convierte necesidades en trabajo ejecutable. Conecta catálogo, pla
 - Una operación necesita planificación suficiente antes de ejecutarse.
 - Las restricciones entre operaciones no deben duplicarse ni formar ciclos.
 - Los recursos, turnos y materiales condicionan la secuenciación.
+- Las herramientas requeridas deben cumplir las características del proceso.
 - Los controles obligatorios pueden bloquear inicio o cierre de operaciones.
 - Los consumos, producciones, pausas y tiempos protegen la trazabilidad.
 
