@@ -200,33 +200,7 @@
                   "es/conceptos/catalogo/productos",
                   "es/conceptos/catalogo/articulos",
                   "es/conceptos/catalogo/producto-vs-articulo",
-                  "es/conceptos/catalogo/propiedades",
-                  "es/conceptos/catalogo/lotes"
-                ]
-              },
-              {
-                "group": "Almacén",
-                "icon": "warehouse",
-                "root": "es/conceptos/almacen",
-                "expanded": false,
-                "pages": [
-                  "es/conceptos/almacen/stock-y-movimientos",
-                  "es/conceptos/almacen/ubicaciones",
-                  "es/conceptos/almacen/bultos",
-                  "es/conceptos/almacen/tipos-de-contenedores",
-                  "es/conceptos/almacen/recepciones",
-                  "es/conceptos/almacen/envios",
-                  "es/conceptos/almacen/inventarios-y-ajustes"
-                ]
-              },
-              {
-                "group": "Planificación",
-                "icon": "calendar-range",
-                "root": "es/conceptos/planificacion",
-                "expanded": false,
-                "pages": [
-                  "es/conceptos/planificacion/demanda-y-suministro",
-                  "es/conceptos/planificacion/clientes-y-proveedores"
+                  "es/conceptos/catalogo/propiedades"
                 ]
               },
               {
@@ -236,20 +210,45 @@
                 "expanded": false,
                 "pages": [
                   "es/conceptos/fabricacion/recetas-y-versiones",
+                  "es/conceptos/fabricacion/peticiones-de-fabricacion",
+                  "es/conceptos/fabricacion/ordenes-de-fabricacion",
+                  "es/conceptos/fabricacion/procesos",
                   "es/conceptos/fabricacion/operaciones-y-restricciones",
                   "es/conceptos/fabricacion/recursos",
-                  "es/conceptos/fabricacion/ordenes-de-fabricacion",
-                  "es/conceptos/fabricacion/controles-consumos-y-pausas"
+                  "es/conceptos/fabricacion/turnos",
+                  "es/conceptos/fabricacion/secuenciacion",
+                  "es/conceptos/fabricacion/planes-de-produccion",
+                  "es/conceptos/fabricacion/controles-consumos-y-pausas",
+                  "es/conceptos/fabricacion/cuadros-de-mando"
                 ]
               },
               {
-                "group": "Personal",
-                "icon": "users",
-                "root": "es/conceptos/personal",
+                "group": "Planificación",
+                "icon": "calendar-range",
+                "root": "es/conceptos/planificacion",
                 "expanded": false,
                 "pages": [
-                  "es/conceptos/personal/empleados",
-                  "es/conceptos/personal/jornadas-calendarios-y-turnos"
+                  "es/conceptos/planificacion/demanda-y-suministro",
+                  "es/conceptos/planificacion/clientes",
+                  "es/conceptos/planificacion/proveedores",
+                  "es/conceptos/planificacion/pedidos-de-venta",
+                  "es/conceptos/planificacion/pedidos-de-compra"
+                ]
+              },
+              {
+                "group": "Almacén",
+                "icon": "warehouse",
+                "root": "es/conceptos/almacen",
+                "expanded": false,
+                "pages": [
+                  "es/conceptos/almacen/stock-y-movimientos",
+                  "es/conceptos/almacen/lotes",
+                  "es/conceptos/almacen/ubicaciones",
+                  "es/conceptos/almacen/bultos",
+                  "es/conceptos/almacen/tipos-de-contenedores",
+                  "es/conceptos/almacen/recepciones",
+                  "es/conceptos/almacen/envios",
+                  "es/conceptos/almacen/inventarios-y-ajustes"
                 ]
               },
               {
@@ -262,6 +261,16 @@
                   "es/conceptos/mantenimiento/causas-y-acciones",
                   "es/conceptos/mantenimiento/partes-de-trabajo",
                   "es/conceptos/mantenimiento/mantenimiento-preventivo"
+                ]
+              },
+              {
+                "group": "Personal",
+                "icon": "users",
+                "root": "es/conceptos/personal",
+                "expanded": false,
+                "pages": [
+                  "es/conceptos/personal/empleados",
+                  "es/conceptos/personal/jornadas-calendarios-y-turnos"
                 ]
               },
               {
@@ -355,228 +364,6 @@
       }
     ]
   },
-  "redirects": [
-    {
-      "source": "/ayuda/panel-de-control/webhooks",
-      "destination": "/es/desarrolladores/webhooks/introduccion"
-    },
-    {
-      "source": "/es/ayuda/panel-de-control/webhooks",
-      "destination": "/es/desarrolladores/webhooks/introduccion"
-    },
-    {
-      "source": "/es/ayuda/primeros-pasos/que-es-bold",
-      "destination": "/es/conceptos/introduccion"
-    },
-    {
-      "source": "/es/ayuda/articulos-y-skus/introduccion",
-      "destination": "/es/conceptos/catalogo"
-    },
-    {
-      "source": "/es/ayuda/articulos-y-skus/propiedades",
-      "destination": "/es/conceptos/catalogo/propiedades"
-    },
-    {
-      "source": "/es/ayuda/articulos-y-skus/producto-vs-sku",
-      "destination": "/es/conceptos/catalogo/producto-vs-articulo"
-    },
-    {
-      "source": "/es/ayuda/ventas/introduccion",
-      "destination": "/es/conceptos/planificacion/demanda-y-suministro"
-    },
-    {
-      "source": "/es/ayuda/planificacion/clientes",
-      "destination": "/es/conceptos/planificacion/clientes-y-proveedores"
-    },
-    {
-      "source": "/es/ayuda/planificacion/proveedores",
-      "destination": "/es/conceptos/planificacion/clientes-y-proveedores"
-    },
-    {
-      "source": "/es/ayuda/planificacion/introduccion",
-      "destination": "/es/conceptos/planificacion"
-    },
-    {
-      "source": "/es/ayuda/compras/introduccion",
-      "destination": "/es/conceptos/planificacion/demanda-y-suministro"
-    },
-    {
-      "source": "/es/ayuda/produccion/introduccion",
-      "destination": "/es/conceptos/fabricacion"
-    },
-    {
-      "source": "/es/ayuda/produccion/procesos",
-      "destination": "/es/conceptos/fabricacion/operaciones-y-restricciones"
-    },
-    {
-      "source": "/es/ayuda/produccion/recursos",
-      "destination": "/es/conceptos/fabricacion/recursos"
-    },
-    {
-      "source": "/es/ayuda/produccion/controles-de-calidad",
-      "destination": "/es/conceptos/fabricacion/controles-consumos-y-pausas"
-    },
-    {
-      "source": "/es/ayuda/produccion/turnos-de-trabajo",
-      "destination": "/es/conceptos/personal/jornadas-calendarios-y-turnos"
-    },
-    {
-      "source": "/es/ayuda/produccion/motivos-de-pausa",
-      "destination": "/es/conceptos/fabricacion/controles-consumos-y-pausas"
-    },
-    {
-      "source": "/es/ayuda/almacen/introduccion",
-      "destination": "/es/conceptos/almacen"
-    },
-    {
-      "source": "/es/ayuda/almacen/tipos-de-contenedores",
-      "destination": "/es/conceptos/almacen/tipos-de-contenedores"
-    },
-    {
-      "source": "/es/ayuda/almacen/bultos",
-      "destination": "/es/conceptos/almacen/bultos"
-    },
-    {
-      "source": "/es/ayuda/mantenimiento/introduccion",
-      "destination": "/es/conceptos/mantenimiento"
-    },
-    {
-      "source": "/es/ayuda/mantenimiento/activos",
-      "destination": "/es/conceptos/mantenimiento/activos"
-    },
-    {
-      "source": "/es/ayuda/mantenimiento/acciones",
-      "destination": "/es/conceptos/mantenimiento/causas-y-acciones"
-    },
-    {
-      "source": "/es/ayuda/mantenimiento/causas",
-      "destination": "/es/conceptos/mantenimiento/causas-y-acciones"
-    },
-    {
-      "source": "/es/ayuda/mantenimiento/partes-de-trabajo",
-      "destination": "/es/conceptos/mantenimiento/partes-de-trabajo"
-    },
-    {
-      "source": "/es/ayuda/personal/introduccion",
-      "destination": "/es/conceptos/personal"
-    },
-    {
-      "source": "/es/ayuda/costes/introduccion",
-      "destination": "/es/conceptos/costes"
-    },
-    {
-      "source": "/es/ayuda/costes/coste-teorico-vs-coste-real",
-      "destination": "/es/conceptos/costes/coste-teorico-vs-real"
-    },
-    {
-      "source": "/es/ayuda/smart-factory/introduccion",
-      "destination": "/es/conceptos/smart-factory"
-    },
-    {
-      "source": "/ayuda/panel-de-control/agentes",
-      "destination": "/es/ayuda/smart-factory/tareas-con-agentes"
-    },
-    {
-      "source": "/es/ayuda/panel-de-control/agentes",
-      "destination": "/es/ayuda/smart-factory/tareas-con-agentes"
-    },
-    {
-      "source": "/conceptos/panel-de-control/agentes",
-      "destination": "/es/conceptos/smart-factory/agentes"
-    },
-    {
-      "source": "/es/conceptos/panel-de-control/agentes",
-      "destination": "/es/conceptos/smart-factory/agentes"
-    },
-    {
-      "source": "/es/ayuda/panel-de-control/introduccion",
-      "destination": "/es/conceptos/panel-de-control"
-    },
-    {
-      "source": "/es/ayuda/usuarios-y-permisos/roles-y-permisos",
-      "destination": "/es/conceptos/panel-de-control/usuarios-roles-y-permisos"
-    },
-    {
-      "source": "/es/ayuda/usuarios-y-permisos/permisos-por-modulo",
-      "destination": "/es/conceptos/panel-de-control/usuarios-roles-y-permisos"
-    },
-    {
-      "source": "/ayuda/referencia-funcional/glosario",
-      "destination": "/es/conceptos/introduccion"
-    },
-    {
-      "source": "/es/ayuda/referencia-funcional/glosario",
-      "destination": "/es/conceptos/introduccion"
-    },
-    {
-      "source": "/ayuda/referencia-funcional/estados",
-      "destination": "/es/conceptos/introduccion"
-    },
-    {
-      "source": "/es/ayuda/referencia-funcional/estados",
-      "destination": "/es/conceptos/introduccion"
-    },
-    {
-      "source": "/ayuda/referencia-funcional/reglas-del-sistema",
-      "destination": "/es/conceptos/introduccion"
-    },
-    {
-      "source": "/es/ayuda/referencia-funcional/reglas-del-sistema",
-      "destination": "/es/conceptos/introduccion"
-    },
-    {
-      "source": "/ayuda/*",
-      "destination": "/es/ayuda/*"
-    },
-    {
-      "source": "/desarrolladores/api-reference/*",
-      "destination": "https://api.bold-factory.com/docs"
-    },
-    {
-      "source": "/es/desarrolladores/api-reference/*",
-      "destination": "https://api.bold-factory.com/docs"
-    },
-    {
-      "source": "/desarrolladores/*",
-      "destination": "/es/desarrolladores/*"
-    },
-    {
-      "source": "/conceptos/smart-factory-y-control",
-      "destination": "/es/conceptos/smart-factory"
-    },
-    {
-      "source": "/es/conceptos/smart-factory-y-control",
-      "destination": "/es/conceptos/smart-factory"
-    },
-    {
-      "source": "/conceptos/almacen/recepciones-y-envios",
-      "destination": "/es/conceptos/almacen/recepciones"
-    },
-    {
-      "source": "/es/conceptos/almacen/recepciones-y-envios",
-      "destination": "/es/conceptos/almacen/recepciones"
-    },
-    {
-      "source": "/conceptos/personal/usuarios-roles-y-permisos",
-      "destination": "/es/conceptos/panel-de-control/usuarios-roles-y-permisos"
-    },
-    {
-      "source": "/es/conceptos/personal/usuarios-roles-y-permisos",
-      "destination": "/es/conceptos/panel-de-control/usuarios-roles-y-permisos"
-    },
-    {
-      "source": "/conceptos/cobertura-ayuda-integrada",
-      "destination": "/es/conceptos/introduccion"
-    },
-    {
-      "source": "/es/conceptos/cobertura-ayuda-integrada",
-      "destination": "/es/conceptos/introduccion"
-    },
-    {
-      "source": "/conceptos/*",
-      "destination": "/es/conceptos/*"
-    }
-  ],
   "footer": {
     "socials": {
       "website": "https://bold-factory.com",
@@ -585,6 +372,16 @@
       "youtube": "https://www.youtube.com/@BoldFactory"
     }
   },
+  "redirects": [
+    {
+      "source": "/es/conceptos/catalogo/lotes",
+      "destination": "/es/conceptos/almacen/lotes"
+    },
+    {
+      "source": "/es/conceptos/planificacion/clientes-y-proveedores",
+      "destination": "/es/conceptos/planificacion"
+    }
+  ],
   "markdown": {
     "schema": false
   },

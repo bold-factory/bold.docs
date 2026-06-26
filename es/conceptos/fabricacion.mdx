@@ -1,6 +1,6 @@
 ---
 title: "Fabricación"
-description: "Referencia de recetas, versiones, operaciones, órdenes, recursos, controles y ejecución."
+description: "Referencia de recetas, peticiones, órdenes, procesos, recursos, turnos, planes, ejecución y análisis."
 icon: "factory"
 ---
 
@@ -9,188 +9,79 @@ Fabricación convierte necesidades en trabajo ejecutable. Conecta catálogo, pla
 ## Conceptos de este grupo
 
 <Columns cols={2}>
-  <Card title="Recetas y versiones" icon="book-open" href="/conceptos/fabricacion/recetas-y-versiones">
-    Moldes de fabricación, versiones, condiciones y fórmulas.
+  <Card title="Recetas y versiones" icon="book-open" href="/es/conceptos/fabricacion/recetas-y-versiones">
+    Moldes versionados que definen cómo fabricar un producto.
   </Card>
-  <Card title="Operaciones y restricciones" icon="route" href="/conceptos/fabricacion/operaciones-y-restricciones">
-    Etapas ejecutables, precedencias y granularidad del proceso.
+  <Card title="Peticiones de fabricación" icon="clipboard-list" href="/es/conceptos/fabricacion/peticiones-de-fabricacion">
+    Necesidades de fabricación antes de lanzar trabajo ejecutable.
   </Card>
-  <Card title="Recursos" icon="wrench" href="/conceptos/fabricacion/recursos">
+  <Card title="Órdenes de fabricación" icon="construction" href="/es/conceptos/fabricacion/ordenes-de-fabricacion">
+    Trabajo real con operaciones, entradas, pasos, controles y progreso.
+  </Card>
+  <Card title="Procesos" icon="workflow" href="/es/conceptos/fabricacion/procesos">
+    Tipos de trabajo productivo que conectan operaciones y estaciones.
+  </Card>
+  <Card title="Operaciones y restricciones" icon="route" href="/es/conceptos/fabricacion/operaciones-y-restricciones">
+    Etapas ejecutables, precedencias y granularidad del trabajo.
+  </Card>
+  <Card title="Recursos" icon="wrench" href="/es/conceptos/fabricacion/recursos">
     Áreas, estaciones, herramientas, características y capacidad.
   </Card>
-  <Card title="Órdenes de fabricación" icon="construction" href="/conceptos/fabricacion/ordenes-de-fabricacion">
-    Trabajo real derivado de peticiones y recetas.
+  <Card title="Turnos" icon="calendar-clock" href="/es/conceptos/fabricacion/turnos">
+    Ventanas de disponibilidad productiva para planificar operaciones.
   </Card>
-  <Card title="Controles, consumos y pausas" icon="badge-check" href="/conceptos/fabricacion/controles-consumos-y-pausas">
-    Calidad, material, progreso, pausas y tiempos.
+  <Card title="Secuenciación" icon="list-ordered" href="/es/conceptos/fabricacion/secuenciacion">
+    Ordenación de operaciones según recursos, fechas, restricciones y materiales.
+  </Card>
+  <Card title="Planes de producción" icon="calendar-check" href="/es/conceptos/fabricacion/planes-de-produccion">
+    Escenarios de planificación que puedes resolver, comparar y aplicar.
+  </Card>
+  <Card title="Controles, consumos y pausas" icon="badge-check" href="/es/conceptos/fabricacion/controles-consumos-y-pausas">
+    Calidad, material, progreso, interrupciones y tiempos.
+  </Card>
+  <Card title="Cuadros de mando" icon="layout-dashboard" href="/es/conceptos/fabricacion/cuadros-de-mando">
+    Indicadores de estado, rendimiento, pausas, calidad y OEE.
   </Card>
 </Columns>
 
-## Conceptos principales
+## Flujo conceptual
 
-| Concepto | Uso |
+| Etapa | Qué decide |
 | --- | --- |
-| Receta | Molde de fabricación para un producto. Define estructura, fórmulas y versiones. |
-| Versión de receta | Variante controlada de una receta. Solo una versión puede estar activa. |
-| Operación | Etapa ejecutable del proceso. Puede tener entradas, pasos, controles y restricciones. |
-| Entrada | Material o semielaborado que se consume. |
-| Paso | Instrucción para el operario. |
-| Control | Comprobación de calidad o inspección. |
-| Restricción | Relación de precedencia entre operaciones. |
-| Petición de fabricación | Necesidad de fabricar antes de lanzar órdenes. |
-| Orden de fabricación | Trabajo real que se planifica, ejecuta, pausa, termina o cancela. |
-| Recurso | Estación, área, herramienta o capacidad usada por una operación. |
+| Receta | Cómo se fabrica un producto y qué versión está aprobada. |
+| Petición de fabricación | Qué artículo necesitas, qué cantidad y para cuándo. |
+| Orden de fabricación | Qué trabajo real se ejecutará para cubrir la petición. |
+| Operaciones | Qué pasos productivos componen la orden. |
+| Recursos y turnos | Dónde y cuándo puede ejecutarse cada operación. |
+| Secuenciación y planes | Qué propuesta de ejecución conviene aplicar. |
+| Ejecución | Qué se hizo, quién participó, qué se consumió y qué se produjo. |
+| Cuadros de mando | Qué rendimiento, desviaciones o bloqueos muestra la planta. |
 
-## Recetas y versiones
+## Relaciones con otros módulos
 
-Las recetas se definen a nivel de producto. Después pueden usar condiciones para adaptarse a artículos concretos según propiedades.
-
-Una versión activa protege la trazabilidad. El backend valida operaciones, entradas, co-productos, pasos y fórmulas antes de activar la versión. Activar una versión desactiva la versión activa anterior. Si haces editable una versión activa, la receta queda inactiva hasta volver a activar una versión válida.
-
-| Estado de versión | Regla principal |
+| Módulo | Relación |
 | --- | --- |
-| Editable | Permite cambios estructurales. |
-| Activa | Se usa para nuevas órdenes y no permite edición estructural. |
-| Inactiva | Se conserva para histórico o referencia. |
-
-Copiar una versión puede incluir condiciones, entradas, pasos y restricciones. Las condiciones solo se copian si sus operandos siguen siendo válidos para las propiedades del producto destino. Las restricciones se remapean a las operaciones copiadas.
-
-<Warning>
-  No edites el proceso real sobre una versión activa. Crea o copia una nueva versión, revisa condiciones y actívala cuando represente el proceso aprobado.
-</Warning>
-
-## Condiciones, fórmulas e instrucciones
-
-Las condiciones permiten que una receta, operación, entrada o paso aplique solo a ciertas variantes del producto. Úsalas cuando el proceso cambia por propiedades como medida, material, color o acabado.
-
-Las entradas consumen una cantidad por cada unidad fabricada. Puedes usar cantidades fijas o fórmulas con propiedades numéricas del artículo. Al lanzar la orden, Bold sustituye esas propiedades por los valores reales del artículo fabricado.
-
-| Elemento | Qué define |
-| --- | --- |
-| Condición de receta | Si una versión o parte de la receta aplica a una variante. |
-| Condición de operación | Si una etapa debe existir para una variante. |
-| Condición de entrada | Si un material se consume en una variante. |
-| Condición de paso | Si una instrucción aparece para una variante. |
-| Fórmula | Cantidad, medida o texto calculado con propiedades numéricas. |
-
-Las fórmulas pueden usar propiedades numéricas y campos de contexto de la orden o petición, como cantidad de orden o cantidad solicitada. El backend valida que los operandos existan, sean numéricos cuando toca y que los paréntesis sean coherentes.
-
-| Tipo de entrada | Cuándo usarlo |
-| --- | --- |
-| Materia prima | Siempre consumes un artículo concreto. |
-| Semielaborado | Bold debe resolver el artículo a partir de un producto y valores de propiedades. |
-
-Las instrucciones son el texto que verá el operario. Deben permitir ejecutar el paso sin consultar fuentes externas. Puedes insertar valores de contexto para que la orden muestre medidas o referencias reales.
-
-```text
-Cortar material a [Largo]+7 mm
-```
-
-Si el artículo fabricado tiene `Largo = 100`, el operario verá `Cortar material a 107 mm`.
-
-## Operaciones, restricciones y recursos
-
-Una operación está planificada cuando tiene estación de trabajo, fecha objetivo y las herramientas requeridas. Si exige una característica, también necesita una herramienta compatible seleccionada.
-
-Las restricciones definen el orden entre operaciones. No pueden duplicarse ni crear ciclos. La operación final es la que no tiene restricciones salientes; Bold la usa para derivar cantidad completada, rechazada y pendiente de la orden.
-
-| Restricción | Efecto operativo |
-| --- | --- |
-| Total | La operación siguiente espera a que termine la anterior. |
-| Parcial | La operación siguiente puede empezar con progreso suficiente de la anterior. |
-| No bloqueante | Conserva la precedencia recomendada sin bloquear. |
-
-| Recurso | Uso |
-| --- | --- |
-| Área | Agrupa estaciones o zonas productivas. |
-| Estación de trabajo | Lugar donde se ejecuta una operación. |
-| Tipo de capacidad | Indica cómo aporta capacidad una estación o recurso. |
-| Herramienta | Recurso seleccionable cuando una operación exige una característica. |
-| Característica | Requisito que permite elegir herramientas compatibles. |
-
-## Ejecución
-
-Para empezar una operación, debe estar pendiente o planificada, tener controles iniciales completados y cumplir selección de herramientas. Para finalizar, debe tener estado ejecutable, estación de trabajo y controles obligatorios completados.
-
-Los registros de progreso pueden incluir cantidad completada, cantidad rechazada, comentarios, consumos de entradas o producción de co-productos. Al deshacer un progreso, Bold revierte consumos y producciones asociados y recalcula totales.
-
-Las pausas registran interrupciones. Una interrupción en tiempo real solo puede abrirse cuando la operación está en curso y no existe otra interrupción abierta.
-
-## Consumo, controles y tiempos
-
-El momento de consumo indica cuándo se registra material:
-
-| Momento | Entradas | Co-productos | Cuándo usarlo |
-| --- | --- | --- | --- |
-| Al comienzo | Registra consumo al iniciar. | Registra salida adicional al iniciar. | La cantidad ya se conoce. |
-| Por unidad | Registra consumo con el progreso. | Registra co-producto con el progreso. | Quieres precisión por avance. |
-| Al final | Registra consumo al cerrar. | Registra co-producto al cerrar. | El dato depende de mermas o ajustes. |
-
-Los controles obligan al operario a registrar comprobaciones al inicio o al final de la operación. Pueden ser confirmaciones, sí/no, números, texto, fotos o archivos adjuntos.
-
-La duración mide tiempo de operación. La mano de obra mide dedicación de personas. La eficiencia compara tiempo teórico y tiempo real cuando ambos datos existen.
-
-Si un paso u operación se configura por unidad, sus tiempos previstos se multiplican por la cantidad correspondiente. Una operación de 20 unidades con un paso de 1 minuto por unidad añade 20 minutos previstos.
-
-## Orden de fabricación
-
-Una orden nace desde una petición. Copia la estructura de la receta como trabajo real: operaciones, entradas, pasos, controles, co-productos y restricciones.
-
-La cantidad planificada solo puede cambiar antes de empezar. Si la orden ya está planificada, no puedes borrar la fecha objetivo sin deshacer la planificación dependiente. Cambiar la fecha objetivo de la orden actualiza las fechas objetivo de sus operaciones.
-
-El estado de la orden se deriva de sus operaciones. Se inicia, reanuda, pausa, finaliza o reabre según los cambios de estado de las operaciones contenidas.
-
-## Estados de ejecución
-
-| Entidad | Estado | Significado |
-| --- | --- | --- |
-| Orden | **Creada** | Existe, pero aún no está planificada. |
-| Orden | **Planificada** | Tiene planificación suficiente para ejecutar. |
-| Orden | **En curso** | Hay operaciones activas. |
-| Orden | **Pausada** | Se empezó, pero ahora no hay trabajo activo. |
-| Orden | **Finalizada** | La fabricación terminó. |
-| Orden | **Bloqueada** | No debe continuar hasta resolver el bloqueo. |
-| Orden | **Cancelada** | La fabricación se abortó. |
-| Operación | **Pendiente** | Falta planificación o requisitos. |
-| Operación | **Planificada** | Tiene planificación suficiente. |
-| Operación | **En curso** | Está siendo ejecutada. |
-| Operación | **Pausada** | Está detenida temporalmente. |
-| Operación | **Finalizada** | La operación terminó. |
-| Operación | **Cancelada** | La operación no se ejecutará. |
+| Catálogo | Las recetas se definen sobre productos y fabrican artículos. |
+| Planificación | Las recomendaciones pueden crear peticiones de fabricación. |
+| Almacén | Los consumos reducen stock y la producción aumenta stock. |
+| Personal | Los empleados registran trabajo, presencia o mano de obra. |
+| Costes | Los tiempos, consumos y cantidades reales alimentan el coste. |
 
 ## Reglas principales
 
-- Una receta define la estructura del trabajo, pero una orden guarda la ejecución real.
-- Activar una versión de receta la convierte en referencia para nuevas órdenes.
-- Activar una versión desactiva la versión activa anterior.
-- Hacer editable una versión activa deja la receta sin versión activa hasta volver a activarla.
-- Las restricciones entre operaciones no pueden duplicarse ni formar ciclos.
-- Una operación que exige herramienta requiere una característica y una herramienta compatible.
-- Empezar una operación requiere controles iniciales completos.
-- Finalizar una operación requiere controles obligatorios completos.
-- La cantidad planificada de una orden solo puede cambiar antes de empezar.
-- Cambiar la fecha objetivo de una orden actualiza las fechas objetivo de sus operaciones.
-
-## Ejemplo
-
-Para fabricar una mesa:
-
-| Elemento | Ejemplo |
-| --- | --- |
-| Producto | Mesa Nórdica |
-| Artículo final | Mesa Nórdica - 160 cm - Roble |
-| Entrada | Tablero roble, patas metálicas, herrajes |
-| Operación 1 | Corte |
-| Operación 2 | Montaje |
-| Control | Comprobar medidas y acabado |
-| Co-producto | Recorte reutilizable |
-
-La receta describe el proceso. La petición indica cuántas mesas necesitas y cuándo. La orden registra quién ejecutó cada operación, qué stock consumió y qué cantidad produjo.
+- Una receta define la estructura aprobada, pero una orden guarda la ejecución real.
+- Una petición expresa necesidad; una orden expresa trabajo ejecutable.
+- Una operación necesita planificación suficiente antes de ejecutarse.
+- Las restricciones entre operaciones no deben duplicarse ni formar ciclos.
+- Los recursos, turnos y materiales condicionan la secuenciación.
+- Los controles obligatorios pueden bloquear inicio o cierre de operaciones.
+- Los consumos, producciones, pausas y tiempos protegen la trazabilidad.
 
 ## Guías relacionadas
 
-- [Crear una receta](/ayuda/produccion/crear-una-receta)
-- [Crear una orden de fabricación](/ayuda/produccion/crear-una-orden-de-fabricacion)
-- [Ejecutar una orden](/ayuda/produccion/ejecutar-una-orden)
-- [Asignar recursos](/ayuda/produccion/asignar-recursos)
-- [Secuenciar órdenes](/ayuda/produccion/secuenciar-ordenes)
+- [Saber qué fabricar](/es/ayuda/planificacion/saber-que-fabricar)
+- [Crear una receta](/es/ayuda/produccion/crear-una-receta)
+- [Crear una orden de fabricación](/es/ayuda/produccion/crear-una-orden-de-fabricacion)
+- [Asignar recursos](/es/ayuda/produccion/asignar-recursos)
+- [Secuenciar órdenes](/es/ayuda/produccion/secuenciar-ordenes)
+- [Ejecutar una orden](/es/ayuda/produccion/ejecutar-una-orden)

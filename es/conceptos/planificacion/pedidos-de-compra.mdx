@@ -1,0 +1,93 @@
+---
+title: "Pedidos de compra"
+description: "Entiende cómo los pedidos de compra generan suministro, cómo funcionan sus líneas y cuál es su ciclo de vida."
+icon: "shopping-basket"
+---
+
+Un **pedido de compra** representa un compromiso firme con un proveedor. Sus líneas generan suministro entrante solo cuando están confirmadas.
+
+La cabecera identifica el proveedor, el código del pedido, fechas, notas y referencias externas. Las líneas indican qué artículo compras, en qué cantidad, con qué fecha esperada y en qué estado está la recepción.
+
+## Cabecera y líneas
+
+| Parte | Qué contiene | Para qué sirve |
+| --- | --- | --- |
+| Cabecera | Proveedor, código, nombre, fecha, notas y referencia externa. | Agrupa el compromiso de compra y lo conecta con integraciones. |
+| Línea | Artículo, cantidad, fecha esperada, precio, estado y cantidades recibidas o pendientes. | Genera suministro y permite seguir cada recepción. |
+
+Un pedido puede tener varias líneas. Usa líneas separadas cuando cambian el artículo, la fecha esperada, el precio o las condiciones de recepción.
+
+## Qué es una línea de pedido de compra
+
+Una línea es la unidad que planificación puede contar como suministro. No basta con que exista el pedido: el stock entrante nace en la línea cuando la confirmas.
+
+| Campo | Uso |
+| --- | --- |
+| Artículo | Referencia que entrará en stock. |
+| Cantidad solicitada | Cantidad total que compras. |
+| Cantidad recibida | Parte ya registrada mediante recepciones. |
+| Cantidad cancelada | Parte retirada del compromiso. |
+| Cantidad pendiente | Cantidad que sigue generando suministro esperado. |
+| Fecha esperada | Fecha que usa planificación para estimar la entrada. |
+| Precio | Coste de compra asociado a la línea cuando está informado. |
+| Referencia externa | Identificador del ERP, proveedor u otro sistema. |
+| Notas | Contexto operativo o comercial. |
+
+## Ciclo de vida de una línea
+
+| Estado | Efecto en planificación | Qué significa |
+| --- | --- | --- |
+| **Borrador no confirmado** | No genera stock entrante. | Puedes ajustar la línea antes de comprometer la compra. |
+| **Pendiente** | Genera suministro por la cantidad pendiente. | La línea está confirmada y falta recibirla. |
+| **Parcialmente recibido** | Genera suministro solo por la parte pendiente. | Ya hubo una o varias recepciones, pero queda cantidad por recibir. |
+| **Recibido** | No genera suministro pendiente. | La cantidad abierta quedó recibida en almacén. |
+| **Cancelada** | No genera suministro. | La cantidad abierta queda retirada del compromiso. |
+
+El estado del pedido se deriva de los estados de sus líneas.
+
+## Acciones principales
+
+| Acción | Resultado |
+| --- | --- |
+| Confirmar línea | Pasa de borrador a pendiente y empieza a generar suministro. |
+| Actualizar cantidad o fecha | Recalcula cantidad pendiente y fecha esperada cuando el estado lo permite. |
+| Registrar recepción | Aumenta la cantidad recibida, aumenta stock físico y reduce suministro pendiente. |
+| Cancelar línea pendiente | Retira la cantidad abierta. |
+| Deshacer cancelación | Devuelve una línea cancelada a borrador cuando las reglas lo permiten. |
+
+## Reglas operativas
+
+- Confirmar una línea exige un artículo activo y solo puede hacerse desde borrador.
+- Una línea en borrador no puede recibirse.
+- La cantidad no puede bajar por debajo de lo ya recibido.
+- No puedes cancelar una línea recibida o parcialmente recibida como si no hubiera existido.
+- Si cancelas cantidad pendiente después de una recepción parcial, Bold conserva la parte recibida como histórico.
+- La referencia externa de una línea es de escritura única.
+- Los cambios de fecha se bloquean en líneas canceladas o recibidas.
+- Los cambios de precio se bloquean en líneas canceladas.
+
+<Info>
+  El pedido de compra explica el compromiso con proveedor. La recepción explica la entrada física que aumenta stock.
+</Info>
+
+## Relación con planificación y almacén
+
+Una línea confirmada aumenta el stock entrante por su cantidad pendiente. Cuando almacén registra una recepción, Bold aumenta stock físico, reduce el suministro pendiente y actualiza el estado de la línea.
+
+La recepción no debe sustituir al pedido. Usa el pedido para el compromiso con proveedor y la recepción para reflejar lo que llegó físicamente.
+
+## Permisos
+
+| Acción | Permiso necesario |
+| --- | --- |
+| Ver pedidos de compra | `Planning.PurchaseOrders.Read` |
+| Crear, editar, confirmar o cancelar pedidos de compra | `Planning.PurchaseOrders.Write` |
+
+## Relacionado
+
+- [Proveedores](/es/conceptos/planificacion/proveedores)
+- [Demanda y suministro](/es/conceptos/planificacion/demanda-y-suministro)
+- [Recepciones](/es/conceptos/almacen/recepciones)
+- [Saber qué comprar](/es/ayuda/planificacion/saber-que-comprar)
+- [Crear pedido de compra](/es/ayuda/compras/crear-pedido-de-compra)
+- [Recibir pedido de compra](/es/ayuda/compras/recibir-pedido-de-compra)

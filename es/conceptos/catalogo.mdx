@@ -1,6 +1,6 @@
 ---
 title: "Catálogo"
-description: "Referencia de productos, artículos, propiedades, variantes, lotes y reglas de validación."
+description: "Referencia de productos, artículos, propiedades, variantes y reglas de validación."
 icon: "boxes"
 ---
 
@@ -9,20 +9,17 @@ El catálogo es la base de Bold. Define qué se compra, fabrica, almacena, consu
 ## Conceptos de este grupo
 
 <Columns cols={2}>
-  <Card title="Productos" icon="package-open" href="/conceptos/catalogo/productos">
+  <Card title="Productos" icon="package-open" href="/es/conceptos/catalogo/productos">
     Familias que agrupan artículos, propiedades y recetas.
   </Card>
-  <Card title="Artículos" icon="barcode" href="/conceptos/catalogo/articulos">
+  <Card title="Artículos" icon="barcode" href="/es/conceptos/catalogo/articulos">
     Unidades operativas para stock, compras, ventas, fabricación y costes.
   </Card>
-  <Card title="Producto vs artículo" icon="git-compare" href="/conceptos/catalogo/producto-vs-articulo">
+  <Card title="Producto vs artículo" icon="git-compare" href="/es/conceptos/catalogo/producto-vs-articulo">
     Criterios para separar familias, variantes y referencias físicas.
   </Card>
-  <Card title="Propiedades" icon="list-filter" href="/conceptos/catalogo/propiedades">
+  <Card title="Propiedades" icon="list-filter" href="/es/conceptos/catalogo/propiedades">
     Atributos reutilizables para variantes, validación y condiciones.
-  </Card>
-  <Card title="Lotes" icon="scan-line" href="/conceptos/catalogo/lotes">
-    Trazabilidad por compra, fabricación, calidad, origen y coste.
   </Card>
 </Columns>
 
@@ -31,10 +28,9 @@ El catálogo es la base de Bold. Define qué se compra, fabrica, almacena, consu
 | Concepto | Uso |
 | --- | --- |
 | Producto | Familia comercial o técnica que agrupa artículos relacionados. Define las propiedades que deben informar sus artículos. |
-| Artículo | Elemento físico único. Bold controla sobre él stock, compras, ventas, fabricación, lotes y costes. |
+| Artículo | Elemento físico único. Bold controla sobre él stock, compras, ventas, fabricación y costes. |
 | Propiedad | Atributo reutilizable que diferencia variantes, como color, medida, material o acabado. |
 | Valor de propiedad | Valor concreto que convierte un artículo en una variante válida de un producto. |
-| Lote | Conjunto trazable de unidades de un artículo. Conserva origen, fabricación, calidad o coste. |
 | Co-producto | Salida adicional generada durante una fabricación. |
 
 ## Producto y artículo
@@ -69,26 +65,21 @@ Bold puede proponer consolidar artículos cuando tienen el mismo producto y los 
 
 El backend solo permite fusionar artículos del mismo producto con el mismo conjunto de valores. La fusión emite eventos de consolidación y elimina de forma lógica el artículo absorbido.
 
-## Lotes
-
-Usa lotes cuando necesites trazabilidad por compra, fabricación, origen, caducidad, control de calidad o coste. Un lote se combina con artículo y ubicación para explicar dónde está cada cantidad.
-
-Gestionar múltiples lotes implica seleccionar el lote correcto al recibir, consumir, mover o enviar material. Si un artículo no requiere trazabilidad por lote, puedes operar con stock sin lote.
-
 ## Relación con otros módulos
 
 | Módulo | Dependencia del catálogo |
 | --- | --- |
 | Planificación | Las líneas de demanda y suministro necesitan artículos válidos, plazos, punto de pedido y origen de aprovisionamiento. |
-| Almacén | El stock se registra por artículo, ubicación y lote opcional. |
+| Almacén | El stock se registra por artículo, ubicación y lote opcional. Los lotes se gestionan desde almacén cuando necesitas trazabilidad. |
 | Fabricación | Las recetas se definen a nivel de producto y producen o consumen artículos. |
 | Costes | El coste se calcula sobre artículos, lotes, consumos, producción y valor de inventario. |
 | API | Las integraciones pueden usar `sku` para referirse al artículo operativo. |
 
 ## Guías relacionadas
 
-- [Crear un producto](/ayuda/articulos-y-skus/crear-un-producto)
-- [Crear un artículo](/ayuda/articulos-y-skus/crear-un-sku)
-- [Editar un artículo](/ayuda/articulos-y-skus/editar-un-sku)
-- [Propiedades](/conceptos/catalogo/propiedades)
-- [Trabajar con lotes](/ayuda/articulos-y-skus/trabajar-con-lotes)
+- [Crear un producto](/es/ayuda/articulos-y-skus/crear-un-producto)
+- [Crear un artículo](/es/ayuda/articulos-y-skus/crear-un-sku)
+- [Editar un artículo](/es/ayuda/articulos-y-skus/editar-un-sku)
+- [Propiedades](/es/conceptos/catalogo/propiedades)
+- [Lotes](/es/conceptos/almacen/lotes)
+- [Trabajar con lotes](/es/ayuda/articulos-y-skus/trabajar-con-lotes)

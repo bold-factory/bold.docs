@@ -1,0 +1,43 @@
+---
+title: "Turnos"
+description: "Entiende los turnos de fabricación como ventanas de disponibilidad productiva para recursos y operaciones."
+icon: "calendar-clock"
+---
+
+Los **turnos de fabricación** definen cuándo existe capacidad productiva para planificar operaciones.
+
+Un turno puede representar disponibilidad de planta, área, línea o recurso. No tiene por qué coincidir exactamente con los turnos de personal.
+
+## Turnos de fabricación frente a turnos de personal
+
+| Concepto | Uso |
+| --- | --- |
+| Turno de fabricación | Define capacidad productiva para operaciones y secuenciación. |
+| Turno de personal | Define jornadas, ciclos y disponibilidad de empleados. |
+
+Pueden estar alineados, pero resuelven preguntas distintas. Fabricación necesita saber cuándo una estación puede trabajar. Personal necesita saber cuándo una persona está asignada.
+
+## Qué condicionan
+
+| Elemento | Efecto |
+| --- | --- |
+| Días y horas | Limitan cuándo se puede planificar trabajo. |
+| Recurso o área | Define a qué capacidad afecta el turno. |
+| Cierres y excepciones | Evitan planificar en ventanas no disponibles. |
+| Capacidad finita | Hace que el turno limite la secuencia real. |
+
+Si una estación tiene capacidad infinita, el turno puede tener menos impacto en la propuesta. Si tiene capacidad finita, el turno marca ventanas reales de planificación.
+
+## Uso en secuenciación
+
+La secuenciación usa turnos para proponer operaciones dentro de horarios viables. Si los turnos no reflejan la realidad, una orden puede parecer viable en fecha aunque planta no tenga capacidad.
+
+Revisa turnos cuando veas operaciones fuera de horario, retrasos inesperados o capacidad disponible que no coincide con planta.
+
+## Relacionado
+
+- [Recursos](/es/conceptos/fabricacion/recursos)
+- [Secuenciación](/es/conceptos/fabricacion/secuenciacion)
+- [Planes de producción](/es/conceptos/fabricacion/planes-de-produccion)
+- [Jornadas, calendarios y turnos](/es/conceptos/personal/jornadas-calendarios-y-turnos)
+- [Turnos de trabajo en guías](/es/ayuda/produccion/turnos-de-trabajo)

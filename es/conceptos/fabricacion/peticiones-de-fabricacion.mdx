@@ -1,0 +1,58 @@
+---
+title: "Peticiones de fabricación"
+description: "Entiende cómo las peticiones convierten una necesidad de fabricación en trabajo pendiente de asignar."
+icon: "clipboard-list"
+---
+
+Una **petición de fabricación** indica que necesitas fabricar un artículo, una cantidad y una fecha objetivo. Todavía no define cómo se ejecutará el trabajo en planta.
+
+La petición actúa como puente entre planificación y órdenes de fabricación.
+
+## Petición frente a orden
+
+| Concepto | Papel |
+| --- | --- |
+| Petición de fabricación | Define qué hace falta fabricar y para cuándo. |
+| Orden de fabricación | Convierte esa necesidad en operaciones ejecutables. |
+| Cantidad asignada | Parte de la petición cubierta por órdenes. |
+| Cantidad pendiente | Parte que todavía necesita una orden o decisión. |
+
+La petición responde a "qué falta". La orden responde a "cómo se fabricará".
+
+## Origen
+
+Una petición puede nacer desde una recomendación de planificación o de forma manual.
+
+| Origen | Cuándo aparece |
+| --- | --- |
+| Asistente de fabricación | El stock proyectado cae por debajo de la necesidad o punto de pedido. |
+| Demanda concreta | Un pedido o necesidad interna exige fabricar un artículo. |
+| Decisión manual | El equipo decide crear una necesidad sin esperar recomendación. |
+
+## Estados
+
+| Estado | Significado |
+| --- | --- |
+| Sin asignar | Toda la cantidad sigue pendiente de convertir en órdenes. |
+| Parcialmente asignada | Algunas órdenes cubren parte de la cantidad. |
+| Asignada | La cantidad queda cubierta por órdenes de fabricación. |
+| Cancelada | La necesidad deja de estar activa. |
+
+Si la petición ya tiene cantidad asignada, no reduzcas la cantidad solicitada por debajo de lo asignado. La petición debe seguir explicando por qué existen las órdenes relacionadas.
+
+## Qué revisar antes de crear órdenes
+
+| Dato | Por qué importa |
+| --- | --- |
+| Artículo | Debe existir y representar la variante fabricable. |
+| Cantidad | Define el alcance de la necesidad. |
+| Fecha requerida | Orienta planificación, secuenciación y prioridad. |
+| Receta válida | Permite convertir la petición en trabajo ejecutable. |
+| Materiales críticos | Pueden condicionar cuándo lanzar o secuenciar órdenes. |
+
+## Relacionado
+
+- [Órdenes de fabricación](/es/conceptos/fabricacion/ordenes-de-fabricacion)
+- [Demanda y suministro](/es/conceptos/planificacion/demanda-y-suministro)
+- [Saber qué fabricar](/es/ayuda/planificacion/saber-que-fabricar)
+- [Crear una orden de fabricación](/es/ayuda/produccion/crear-una-orden-de-fabricacion)

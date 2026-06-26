@@ -9,11 +9,20 @@ La planificación conecta compromisos comerciales, compras, fabricación y stock
 ## Conceptos de este grupo
 
 <Columns cols={2}>
-  <Card title="Demanda y suministro" icon="calendar-range" href="/conceptos/planificacion/demanda-y-suministro">
+  <Card title="Demanda y suministro" icon="calendar-range" href="/es/conceptos/planificacion/demanda-y-suministro">
     Necesidades, entradas esperadas y stock proyectado.
   </Card>
-  <Card title="Clientes y proveedores" icon="handshake" href="/conceptos/planificacion/clientes-y-proveedores">
-    Relaciones comerciales, referencias externas y políticas de suministro.
+  <Card title="Clientes" icon="user-round" href="/es/conceptos/planificacion/clientes">
+    Datos maestros que identifican de dónde viene la demanda comercial.
+  </Card>
+  <Card title="Proveedores" icon="building-2" href="/es/conceptos/planificacion/proveedores">
+    Datos maestros y condiciones de suministro para compras.
+  </Card>
+  <Card title="Pedidos de venta" icon="shopping-cart" href="/es/conceptos/planificacion/pedidos-de-venta">
+    Compromisos con clientes que generan demanda al confirmar sus líneas.
+  </Card>
+  <Card title="Pedidos de compra" icon="shopping-basket" href="/es/conceptos/planificacion/pedidos-de-compra">
+    Compromisos con proveedores que generan suministro al confirmar sus líneas.
   </Card>
 </Columns>
 
@@ -60,7 +69,7 @@ Stock disponible actual = Stock físico - Stock saliente
 Stock disponible proyectado = Stock disponible actual + Stock entrante
 ```
 
-El stock saliente nace de demanda activa, como pedidos de venta confirmados o consumos previstos. El stock entrante nace de suministro activo, como pedidos de compra confirmados, peticiones de fabricación, órdenes de fabricación o previsiones.
+El stock saliente nace de demanda activa, como líneas confirmadas de pedidos de venta o consumos previstos. El stock entrante nace de suministro activo, como líneas confirmadas de pedidos de compra, peticiones de fabricación, órdenes de fabricación o previsiones.
 
 ## Estados de stock proyectado
 
@@ -72,52 +81,24 @@ El stock saliente nace de demanda activa, como pedidos de venta confirmados o co
 | **Pendiente** | Falta crear compra o fabricación. |
 | **No requerido** | No hace falta aprovisionar. |
 
-## Demanda y pedidos de venta
+## Pedidos y líneas
 
-Un pedido de venta representa demanda de cliente. Sus líneas solo afectan a planificación cuando están confirmadas.
+Los pedidos aportan demanda o suministro a planificación a través de sus líneas.
 
-Las líneas nuevas nacen en borrador. Al confirmarlas, el backend valida que el artículo exista y esté activo. La cantidad, el artículo y el modo de cumplimiento se editan solo mientras la línea está en borrador. Las fechas y notas pueden cambiar después para mantener la planificación actualizada.
+| Documento | Línea confirmada | Línea en borrador |
+| --- | --- | --- |
+| Pedido de venta | Genera demanda por la cantidad pendiente de entregar. | No genera demanda. |
+| Pedido de compra | Genera suministro por la cantidad pendiente de recibir. | No genera suministro. |
 
-La fecha objetivo de una línea se deriva de la fecha comprometida si existe. Si no existe, usa la fecha solicitada o la fecha del pedido más el plazo del artículo.
-
-| Estado de línea | Cómo afecta a demanda |
-| --- | --- |
-| Borrador | No aporta demanda. |
-| Pendiente | Aporta la cantidad pendiente. |
-| Parcialmente entregado | Aporta solo la parte pendiente de enviar. |
-| Entregado | Ya no aporta demanda pendiente. |
-| Cancelado | No aporta demanda. |
-
-La cantidad pendiente se calcula como cantidad solicitada menos cantidad enviada y cantidad cancelada. La disponibilidad de la línea se calcula aparte con stock disponible y suministro planificado.
-
-## Suministro y pedidos de compra
-
-Un pedido de compra representa suministro firme de proveedor. Sus líneas también nacen en borrador y solo aportan suministro pendiente después de confirmarse.
-
-La cantidad no puede bajar por debajo de lo ya recibido. Una línea recibida o parcialmente recibida no se cancela como si no hubiera existido; Bold conserva lo recibido y cancela solo la cantidad pendiente.
-
-| Estado de línea | Cómo afecta al suministro |
-| --- | --- |
-| Borrador | No aporta stock entrante. |
-| Pendiente | Aporta la cantidad pendiente como suministro esperado. |
-| Parcialmente recibido | Aporta solo la parte pendiente. |
-| Recibido | Ya no aporta suministro pendiente. |
-| Cancelado | No aporta suministro. |
-
-Cuando almacén recibe una línea de compra, Bold aumenta stock físico y planificación reduce el suministro pendiente de esa línea.
+La cabecera identifica la relación comercial, como cliente o proveedor, código, fechas, notas y referencias externas. La línea identifica el artículo, la cantidad, la fecha operativa y su estado.
 
 ## Peticiones de fabricación
 
-Una petición de fabricación indica que un artículo debe estar disponible en una fecha. Puede nacer manualmente o desde planificación.
+Una petición de fabricación indica que un artículo debe estar disponible en una fecha. Puede nacer desde una recomendación o de forma manual.
 
-La petición define la necesidad. La orden de fabricación define la ejecución. Si una petición ya tiene cantidad asignada, el backend bloquea cambios de artículo y no permite reducir la cantidad solicitada por debajo de la cantidad asignada.
+Para planificación, la petición representa suministro esperado o pendiente de cubrir. La orden de fabricación define después cómo se ejecuta esa necesidad en planta.
 
-| Estado de petición | Cómo afecta a planificación |
-| --- | --- |
-| Sin asignar | Mantiene toda la cantidad como pendiente de cubrir. |
-| Parcialmente asignada | Mantiene solo la cantidad no asignada. |
-| Asignada | La necesidad está cubierta por órdenes. |
-| Cancelada | La petición y sus entradas pendientes dejan de estar activas. |
+Consulta [Peticiones de fabricación](/es/conceptos/fabricacion/peticiones-de-fabricacion) para ver estados, reglas de asignación y relación con órdenes.
 
 ## Recomendaciones
 
@@ -141,8 +122,6 @@ Los asistentes de compras y fabricación leen stock proyectado, demanda, suminis
 - El stock proyectado combina stock actual, demanda y suministro futuro.
 - Una petición de fabricación no puede reducirse por debajo de la cantidad ya asignada.
 - Una petición relacionada con otro objeto no permite editar directamente solicitante o fecha requerida.
-- Una línea de compra no puede recibirse mientras esté en borrador.
-- Una línea de venta cancelada con cantidad entregada conserva la parte entregada como histórico.
 
 ## Ejemplo
 
@@ -158,7 +137,7 @@ Si el punto de pedido es 25, Bold puede recomendar reponer aunque el stock nunca
 
 ## Guías relacionadas
 
-- [Saber qué comprar](/ayuda/planificacion/saber-que-comprar)
-- [Saber qué fabricar](/ayuda/planificacion/saber-que-fabricar)
-- [Crear un pedido](/ayuda/ventas/crear-pedido-de-venta)
-- [Crear pedido de compra](/ayuda/compras/crear-pedido-de-compra)
+- [Saber qué comprar](/es/ayuda/planificacion/saber-que-comprar)
+- [Saber qué fabricar](/es/ayuda/planificacion/saber-que-fabricar)
+- [Crear un pedido de venta](/es/ayuda/ventas/crear-pedido-de-venta)
+- [Crear pedido de compra](/es/ayuda/compras/crear-pedido-de-compra)

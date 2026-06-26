@@ -1,0 +1,46 @@
+---
+title: "Secuenciación"
+description: "Entiende cómo la secuenciación ordena operaciones según recursos, turnos, restricciones, fechas y materiales."
+icon: "list-ordered"
+---
+
+La **secuenciación** decide en qué orden, en qué recurso y en qué ventana conviene ejecutar operaciones de fabricación.
+
+Puedes secuenciar una orden directamente o resolver un plan de producción para evaluar un conjunto de operaciones antes de aplicarlo.
+
+## Qué usa la secuenciación
+
+| Entrada | Por qué importa |
+| --- | --- |
+| Operaciones abiertas | Son el trabajo pendiente que se puede colocar en calendario. |
+| Procesos | Permiten buscar estaciones compatibles. |
+| Recursos | Definen capacidad, ubicación y restricciones físicas. |
+| Turnos | Marcan ventanas disponibles de trabajo. |
+| Restricciones | Mantienen precedencias entre operaciones. |
+| Fechas objetivo | Ordenan urgencia y retrasos. |
+| Materiales | Pueden bloquear o retrasar operaciones si falta stock. |
+
+## Resultado
+
+Una secuencia propone fechas, orden y recursos para las operaciones. Puede indicar operaciones no planificadas, retrasadas o incompatibles para que revises datos maestros antes de aplicar cambios.
+
+| Síntoma | Qué revisar |
+| --- | --- |
+| Operación sin recurso | Proceso, estación compatible y herramientas requeridas. |
+| Operación fuera de fecha | Fecha objetivo, duración, turnos y capacidad. |
+| Secuencia imposible | Restricciones duplicadas, ciclos o precedencias incompatibles. |
+| Falta material | Stock proyectado, consumos y fecha de disponibilidad. |
+
+## Secuenciación frente a plan de producción
+
+La secuenciación es el cálculo que ordena operaciones. El plan de producción es el escenario donde puedes resolver, comparar y aplicar ese cálculo sobre un alcance concreto.
+
+Usa un plan cuando quieras evaluar un conjunto amplio de órdenes sin modificar la ejecución real hasta aprobar la propuesta.
+
+## Relacionado
+
+- [Planes de producción](/es/conceptos/fabricacion/planes-de-produccion)
+- [Operaciones y restricciones](/es/conceptos/fabricacion/operaciones-y-restricciones)
+- [Procesos](/es/conceptos/fabricacion/procesos)
+- [Recursos](/es/conceptos/fabricacion/recursos)
+- [Secuenciar órdenes](/es/ayuda/produccion/secuenciar-ordenes)

@@ -1,0 +1,84 @@
+---
+title: "Proveedores"
+description: "Entiende cómo los proveedores conectan compras, artículos, plazos y suministro esperado."
+icon: "building-2"
+---
+
+Un **proveedor** es un dato maestro de planificación. Identifica a quién compras materiales, repuestos, servicios externos o productos terminados.
+
+La ficha del proveedor identifica la empresa. La relación entre proveedor y artículo indica cómo compras un artículo concreto: código del proveedor, precio, plazo y prioridad.
+
+## Para qué sirve
+
+| Uso | Qué aporta |
+| --- | --- |
+| Pedidos de compra | Indica a quién compras y permite seguir compromisos. |
+| Suministro | Agrupa entradas esperadas por proveedor. |
+| Recomendaciones | Ayuda al asistente de compras a proponer fuente, fecha y cantidad. |
+| Costes | Aporta precios de compra para estimaciones y análisis. |
+| Integraciones | Relaciona proveedores de Bold con ERP, compras o importaciones. |
+
+## Datos principales
+
+| Dato | Uso | Recomendación |
+| --- | --- | --- |
+| Nombre | Identifica al proveedor en pedidos, filtros y listas. | Usa el nombre operativo que reconoce compras. |
+| Referencia externa | Conecta el proveedor con otro sistema. | Mantén una referencia única y estable. |
+| Identificación fiscal | Ayuda a distinguir proveedores con nombres parecidos. | Rellénala si compras o integraciones la necesitan. |
+| Auditoría | Muestra creación y última modificación. | Úsala para revisar cambios de datos maestros. |
+
+## Relación con artículos
+
+Para que una recomendación de compra sea útil, no basta con crear el proveedor. Debe existir una relación entre proveedor y artículo con los datos de suministro relevantes.
+
+| Dato | Uso |
+| --- | --- |
+| Tipo | Marca el proveedor como **Principal** o **Secundario** para ese artículo. |
+| Código del proveedor | Guarda la referencia que el proveedor usa para el artículo. |
+| Precio por unidad | Da contexto económico a compras y costes planificados. |
+| Plazo medio | Calcula cuándo puede estar disponible el suministro. |
+| Desviación del plazo | Representa la variabilidad real de entrega. |
+
+Mantén un proveedor principal por artículo cuando quieras que el asistente de compras proponga una fuente por defecto. Usa proveedores secundarios para alternativas reales.
+
+## Relación con pedidos de compra
+
+Cada pedido de compra pertenece a un proveedor. La cabecera del pedido guarda el contexto comercial y sus líneas explican qué artículos compras, en qué cantidad y para qué fecha esperada.
+
+Las líneas confirmadas generan suministro pendiente. Las líneas en borrador no generan stock entrante.
+
+<Info>
+  El proveedor identifica la fuente de suministro. El pedido de compra explica el compromiso. La recepción registra la entrada física.
+</Info>
+
+## Ciclo de vida
+
+| Estado | Significado |
+| --- | --- |
+| **Activo** | Puedes usar el proveedor en compras, relaciones con artículos e integraciones. |
+| **Inactivo** | El proveedor se conserva para trazabilidad, pero no debes usarlo como fuente nueva. |
+
+Cuando eliminas un proveedor, Bold lo marca como inactivo mediante borrado lógico. Los pedidos, recepciones y eventos anteriores conservan la referencia para mantener el histórico.
+
+## Reglas operativas
+
+- La referencia externa debe permanecer estable si el proveedor llega desde una integración.
+- Si cambia el plazo de un proveedor principal, revisa recomendaciones y previsiones de compra relacionadas.
+- No marques como principal un proveedor que solo usas para urgencias.
+- Si el proveedor queda inactivo, revisa los artículos que lo tenían como proveedor principal.
+
+## Permisos
+
+| Acción | Permiso necesario |
+| --- | --- |
+| Ver proveedores | `Planning.Suppliers.Read` |
+| Crear, editar o eliminar proveedores | `Planning.Suppliers.Write` |
+| Ver relaciones artículo-proveedor | `Planning.Skus.Read` |
+| Editar relaciones artículo-proveedor | `Planning.Skus.Write` |
+
+## Relacionado
+
+- [Pedidos de compra](/es/conceptos/planificacion/pedidos-de-compra)
+- [Demanda y suministro](/es/conceptos/planificacion/demanda-y-suministro)
+- [Saber qué comprar](/es/ayuda/planificacion/saber-que-comprar)
+- [Proveedores](/es/ayuda/planificacion/proveedores)

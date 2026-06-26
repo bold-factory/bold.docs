@@ -4,13 +4,13 @@ description: "Entiende las operaciones de fabricación, su orden, estados y prec
 icon: "route"
 ---
 
-Una **operación** es una etapa ejecutable del proceso de fabricación. Puede tener entradas, pasos, controles, recursos, tiempos y restricciones.
+Una **operación** es una etapa ejecutable de una receta u orden de fabricación. Puede tener entradas, pasos, controles, recursos, tiempos y restricciones.
 
 ## Qué define una operación
 
 | Dato | Uso |
 | --- | --- |
-| Proceso | Tipo de trabajo que se ejecuta. |
+| Proceso | Tipo de trabajo que se ejecuta. Consulta [Procesos](/es/conceptos/fabricacion/procesos). |
 | Estación o recurso | Dónde se puede ejecutar. |
 | Entradas | Materiales consumidos durante la etapa. |
 | Pasos | Instrucciones visibles para el operario. |
@@ -28,7 +28,7 @@ Las restricciones definen el orden entre operaciones. Evitan secuencias imposibl
 | Parcial | La operación siguiente puede empezar con progreso suficiente. |
 | No bloqueante | Conserva una precedencia recomendada sin bloquear. |
 
-No deben duplicarse ni crear ciclos. Un ciclo impediría saber qué operación desbloquea a otra.
+No deben duplicarse ni crear ciclos. Un ciclo impediría saber qué operación desbloquea a otra y puede bloquear la [secuenciación](/es/conceptos/fabricacion/secuenciacion).
 
 ## Operación final
 
@@ -48,6 +48,8 @@ Elige el nivel en el que necesitas medir progreso, consumo, calidad o responsabi
 
 ## Relacionado
 
-- [Recetas y versiones](/conceptos/fabricacion/recetas-y-versiones)
-- [Recursos](/conceptos/fabricacion/recursos)
-- [Secuenciar órdenes](/ayuda/produccion/secuenciar-ordenes)
+- [Recetas y versiones](/es/conceptos/fabricacion/recetas-y-versiones)
+- [Procesos](/es/conceptos/fabricacion/procesos)
+- [Recursos](/es/conceptos/fabricacion/recursos)
+- [Secuenciación](/es/conceptos/fabricacion/secuenciacion)
+- [Secuenciar órdenes](/es/ayuda/produccion/secuenciar-ordenes)

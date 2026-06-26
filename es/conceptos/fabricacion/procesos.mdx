@@ -1,0 +1,50 @@
+---
+title: "Procesos"
+description: "Entiende los procesos como tipos de trabajo productivo reutilizables en recetas, operaciones y recursos."
+icon: "workflow"
+---
+
+Un **proceso** describe un tipo de trabajo productivo, como corte, montaje, soldadura, pintura, inspección o embalaje.
+
+Usa procesos para conectar operaciones con las estaciones capaces de ejecutarlas. El proceso no es el trabajo real. El trabajo real aparece como operación dentro de una receta u orden.
+
+## Diferencias clave
+
+| Concepto | Qué representa |
+| --- | --- |
+| Proceso | Tipo reutilizable de trabajo. |
+| Operación | Etapa concreta de una receta u orden. |
+| Estación | Lugar o recurso donde puede ejecutarse el proceso. |
+| Herramienta | Recurso auxiliar que puede exigir una operación. |
+
+Ejemplo: **Corte** puede ser un proceso. La operación **Cortar tablero** usa ese proceso dentro de una receta, y puede ejecutarse en **Sierra 1** o **Sierra 2**.
+
+## Compatibilidad con estaciones
+
+Cada proceso puede relacionarse con una o varias estaciones. Esa relación permite planificar operaciones en recursos compatibles y calcular duración con una eficiencia realista.
+
+| Configuración | Efecto |
+| --- | --- |
+| Estación principal | Recurso preferente para el proceso. |
+| Estación auxiliar | Recurso alternativo compatible. |
+| Eficiencia | Ajusta duración prevista, coste y secuenciación. |
+| Características | Requisitos técnicos o útiles necesarios para ejecutar. |
+
+Solo debería existir una estación principal por proceso. Si varias estaciones hacen el mismo trabajo, usa auxiliares o eficiencia para distinguirlas.
+
+## Granularidad
+
+Define procesos al nivel que el equipo usa para planificar, medir y analizar.
+
+| Proceso demasiado amplio | Proceso demasiado específico |
+| --- | --- |
+| Mezcla cuellos de botella distintos. | Fragmenta planificación y cuadros de mando. |
+| Oculta diferencias de duración o capacidad. | Obliga a mantener datos que planta no usa. |
+| Dificulta elegir estaciones compatibles. | Duplica procesos con diferencias irrelevantes. |
+
+## Relacionado
+
+- [Operaciones y restricciones](/es/conceptos/fabricacion/operaciones-y-restricciones)
+- [Recursos](/es/conceptos/fabricacion/recursos)
+- [Secuenciación](/es/conceptos/fabricacion/secuenciacion)
+- [Procesos en guías](/es/ayuda/produccion/procesos)

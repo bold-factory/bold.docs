@@ -1,0 +1,69 @@
+---
+title: "Clientes"
+description: "Entiende cómo los clientes identifican la demanda y conectan pedidos de venta, entregas e integraciones."
+icon: "user-round"
+---
+
+Un **cliente** es un dato maestro de planificación. Identifica quién genera demanda comercial y permite agrupar pedidos de venta, entregas, referencias externas y análisis de servicio.
+
+Un cliente no sustituye a un CRM. Mantén en Bold solo los datos que afectan a planificación, pedidos, entregas o integraciones.
+
+## Para qué sirve
+
+| Uso | Qué aporta |
+| --- | --- |
+| Pedidos de venta | Indica quién pide los artículos y permite filtrar compromisos. |
+| Demanda | Agrupa necesidades por cuenta, canal o cliente operativo. |
+| Envíos | Conserva el origen comercial de las salidas de almacén. |
+| Integraciones | Relaciona clientes de Bold con ERP, CRM, ecommerce o importaciones. |
+| Análisis | Ayuda a revisar cumplimiento, retrasos y demanda por cliente. |
+
+## Datos principales
+
+| Dato | Uso | Recomendación |
+| --- | --- | --- |
+| Nombre | Identifica al cliente en listas, pedidos de venta y filtros. | Usa el nombre que el equipo reconoce en operaciones. |
+| Referencia externa | Conecta el cliente con otro sistema. | Mantén una referencia única y estable. |
+| Código operativo | Diferencia clientes con nombres parecidos cuando tu operación lo necesita. | Usa códigos coherentes con ERP o administración. |
+| Auditoría | Muestra creación y última modificación. | Úsala para revisar cambios, no como dato operativo. |
+
+## Relación con pedidos de venta
+
+Cada pedido de venta pertenece a un cliente. La cabecera del pedido guarda el contexto comercial y sus líneas explican qué artículos se necesitan, en qué cantidad y para qué fecha.
+
+Las líneas confirmadas generan demanda y pueden agruparse por cliente. Las líneas en borrador no generan demanda.
+
+<Info>
+  El cliente identifica el origen de la demanda. El pedido de venta explica el compromiso. El envío registra la salida física.
+</Info>
+
+## Ciclo de vida
+
+| Estado | Significado |
+| --- | --- |
+| **Activo** | Puedes usar el cliente en nuevos pedidos e integraciones. |
+| **Inactivo** | El cliente se conserva para trazabilidad, pero no debes usarlo como dato operativo nuevo. |
+
+Cuando eliminas un cliente, Bold lo marca como inactivo mediante borrado lógico. Los pedidos y eventos anteriores conservan la referencia para mantener el histórico.
+
+## Reglas operativas
+
+- El nombre debe identificar al cliente de forma clara para operaciones.
+- La referencia externa debe permanecer estable si llega desde una integración.
+- Revisa duplicados antes de importar pedidos de venta.
+- No uses un cliente genérico si necesitas analizar servicio, entregas o retrasos por cuenta.
+- Si un cliente queda inactivo, crea o selecciona otro cliente para nuevos compromisos.
+
+## Permisos
+
+| Acción | Permiso necesario |
+| --- | --- |
+| Ver clientes | `Planning.Customers.Read` |
+| Crear, editar o eliminar clientes | `Planning.Customers.Write` |
+
+## Relacionado
+
+- [Pedidos de venta](/es/conceptos/planificacion/pedidos-de-venta)
+- [Demanda y suministro](/es/conceptos/planificacion/demanda-y-suministro)
+- [Crear un pedido de venta](/es/ayuda/ventas/crear-pedido-de-venta)
+- [Clientes](/es/ayuda/planificacion/clientes)
