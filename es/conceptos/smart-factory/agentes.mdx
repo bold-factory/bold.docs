@@ -38,9 +38,18 @@ Las tareas caducan tras 28 días de inactividad. Crea una tarea nueva si necesit
 
 Empieza por el nivel más bajo que cumpla la tarea. Sube el nivel si el agente omite pasos, no entiende el contexto o necesita razonar con varias áreas.
 
-## Relación con Panel de control
+## Automatizaciones
 
-Smart Factory muestra y permite trabajar con tareas. Panel de control configura agentes, permisos, memoria, preguntas y automatizaciones.
+Una automatización usa un agente personalizado para crear tareas sin intervención manual.
+
+| Tipo | Uso |
+| --- | --- |
+| Periódica | Ejecuta el agente según una programación diaria, semanal, mensual, trimestral, semestral o anual. |
+| Por evento | Ejecuta el agente cuando ocurre un evento de Bold y se cumplen las condiciones configuradas. |
+
+Cada ejecución genera una tarea con agente. Desde esa tarea puedes revisar instrucciones, mensajes, herramientas usadas, aclaraciones, resultado, créditos y origen de la ejecución.
+
+Las automatizaciones tienen responsable y estado activo o inactivo. Las periódicas conservan próxima ejecución, última ejecución y número de ejecuciones. Las de evento conservan evento, versión y condición.
 
 <Warning>
   Un agente solo debe tener los permisos que necesita. Si le das permisos amplios, podrá acceder a más datos y acciones durante sus tareas.
@@ -49,6 +58,4 @@ Smart Factory muestra y permite trabajar con tareas. Panel de control configura 
 ## Relacionado
 
 - [Smart Factory](/conceptos/smart-factory)
-- [Agentes del Panel de control](/conceptos/panel-de-control/agentes)
 - [Tareas con agentes](/ayuda/smart-factory/tareas-con-agentes)
-- [Configurar agentes](/ayuda/panel-de-control/agentes)

@@ -9,7 +9,7 @@ Smart Factory agrupa análisis, asistentes y tareas delegadas. Úsalo cuando nec
 ## Conceptos de este grupo
 
 <Columns cols={2}>
-  <Card title="Informes" icon="bar-chart-3" href="/conceptos/smart-factory/informes">
+  <Card title="Informes" icon="chart-bar" href="/conceptos/smart-factory/informes">
     Informes Power BI embebidos para analizar operación, producción, almacén, costes o mantenimiento.
   </Card>
   <Card title="Boldy" icon="message-circle" href="/conceptos/smart-factory/boldy">
@@ -27,11 +27,24 @@ Smart Factory agrupa análisis, asistentes y tareas delegadas. Úsalo cuando nec
 | Analizar tendencias o preparar reportes periódicos | **Informes**. |
 | Preguntar, explorar o resumir datos en conversación | **Boldy**. |
 | Delegar un trabajo largo, repetible o auditable | **Agentes**. |
-| Configurar agentes, permisos o automatizaciones | [Panel de control](/conceptos/panel-de-control/agentes). |
+| Ejecutar agentes sin crear tareas manualmente | **Automatizaciones**. |
 
 Los informes sirven para análisis periódico. No sustituyen a vistas operativas en vivo, como cuadros de mando de fabricación o pantallas de ejecución.
 
 Boldy sirve para interacción directa. Las tareas con agentes sirven para trabajos más largos, trazables o automatizados.
+
+## Automatizaciones
+
+Una **automatización** ejecuta un agente sin que tengas que crear la tarea manualmente. Cada ejecución crea una **tarea con agente** con historial, estado, resultado y créditos propios.
+
+| Tipo | Cuándo se ejecuta | Qué conserva |
+| --- | --- | --- |
+| Periódica | En una frecuencia diaria, semanal, mensual, trimestral, semestral o anual. | Próxima ejecución, última ejecución y número de ejecuciones. |
+| Por evento | Cuando Bold publica un evento compatible y se cumplen sus condiciones. | Evento, versión, condición, responsable y tarea generada. |
+
+Usa automatizaciones para tareas repetibles, revisiones programadas, alertas operativas o comprobaciones que deben quedar auditadas. Revisa las primeras ejecuciones antes de depender de ellas en procesos críticos.
+
+Los agentes de sistema no se automatizan. Usa agentes personalizados con instrucciones, permisos y nivel de inteligencia adecuados para el trabajo.
 
 ## Estados y reglas de tareas
 
@@ -47,12 +60,11 @@ Las tareas con agentes conservan instrucciones, mensajes, archivos adjuntos, her
 
 ## Relación con Panel de control
 
-Smart Factory es el espacio de uso. Panel de control es el espacio de administración. Desde Panel de control defines agentes, permisos, nivel de inteligencia, automatizaciones, claves API y notificaciones.
+Smart Factory cubre informes, Boldy, agentes, tareas y automatizaciones. Panel de control queda para cuenta, empresa, usuarios, permisos, claves API, webhooks, notificaciones, datos y diseños.
 
 ## Guías relacionadas
 
 - [Informes Power BI](/ayuda/smart-factory/informes-powerbi)
 - [Boldy](/ayuda/smart-factory/boldy)
 - [Tareas con agentes](/ayuda/smart-factory/tareas-con-agentes)
-- [Agentes en Panel de control](/ayuda/panel-de-control/agentes)
 - [Cuadros de mando de fabricación](/ayuda/produccion/cuadros-de-mando)

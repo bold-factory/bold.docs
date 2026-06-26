@@ -59,9 +59,20 @@ Una **tarea con agente** es un trabajo delegado a un agente especializado. Puede
 
 ## Automatizaciones y eventos
 
-Las automatizaciones pueden ejecutar agentes de forma recurrente. Cada ejecución crea una tarea con historial propio. También pueden existir tareas originadas por eventos, como cambios relevantes publicados por Bold.
+Las automatizaciones ejecutan agentes sin crear la tarea manualmente. Cada ejecución crea una tarea con historial propio, estado, resultado y créditos consumidos.
+
+| Tipo | Cuándo usarla | Qué revisar |
+| --- | --- | --- |
+| Periódica | Para revisiones o tareas recurrentes con frecuencia diaria, semanal, mensual, trimestral, semestral o anual. | Próxima ejecución, última ejecución, responsable, zona horaria y número de ejecuciones. |
+| Por evento | Para reaccionar a cambios publicados por Bold, como pedidos, órdenes, stock o partes. | Evento, versión, condición, agente responsable y si está habilitada. |
+
+Las automatizaciones periódicas se ejecutan cuando llega la próxima fecha programada. Las automatizaciones por evento se ejecutan cuando el evento coincide y la condición configurada se cumple.
 
 Para tareas críticas, revisa las primeras ejecuciones antes de confiar en la automatización. Ajusta instrucciones, permisos y nivel de inteligencia si el agente omite pasos o usa demasiado contexto.
+
+<Warning>
+  Usa agentes personalizados para automatizaciones. Los agentes de sistema no pueden programarse ni suscribirse a eventos.
+</Warning>
 
 ## Problemas habituales
 
@@ -76,5 +87,4 @@ Para tareas críticas, revisa las primeras ejecuciones antes de confiar en la au
 ## Relacionado
 
 - [Boldy](/ayuda/smart-factory/boldy)
-- [Agentes](/ayuda/panel-de-control/agentes)
 - [Agentes](/conceptos/smart-factory/agentes)
