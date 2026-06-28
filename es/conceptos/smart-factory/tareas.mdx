@@ -1,0 +1,90 @@
+---
+title: "Tareas con agentes"
+description: "Entiende cómo se crean, revisan y auditan los trabajos delegados a agentes."
+icon: "list-checks"
+---
+
+Una **tarea con agente** es un trabajo delegado a un agente especializado. Puede iniciarse manualmente, desde una automatización o cuando una integración crea la tarea mediante la API.
+
+La tarea conserva instrucciones, mensajes, archivos adjuntos, herramientas usadas, aclaraciones, resultado y créditos consumidos.
+
+## Qué muestra una tarea
+
+| Dato | Uso |
+| --- | --- |
+| Estado | Indica si la tarea espera procesamiento, está en curso, requiere acción, terminó o falló. |
+| Agente | Define instrucciones, permisos y nivel de inteligencia. |
+| Inicio | Fecha y hora de creación. |
+| Última interacción | Último cambio relevante de la tarea. |
+| Créditos | Consumo asociado al trabajo. |
+| Archivos | Contexto adicional que el agente puede usar. |
+
+Las tareas caducan tras 28 días de inactividad. Si necesitas retomar un trabajo caducado, crea una tarea nueva con el contexto necesario.
+
+## Estados
+
+| Estado | Qué hacer |
+| --- | --- |
+| **Pendiente** | Espera a que el agente empiece a procesar. |
+| **En ejecución** | No respondas todavía. El agente está trabajando. |
+| **Requiere acción** | Responde a la aclaración o decisión que pide el agente. |
+| **Completada** | Revisa el resultado y continúa solo si necesitas ampliar el trabajo. |
+| **Fallida** | Revisa el error, ajusta instrucciones o crea una tarea nueva. |
+
+## Crear una tarea
+
+<Steps>
+  <Step title="Elige el agente">
+    Selecciona un agente con permisos para los módulos que necesita el trabajo.
+  </Step>
+  <Step title="Añade instrucciones">
+    Describe objetivo, límites, formato esperado y datos de referencia. Las instrucciones adicionales admiten hasta `3000` caracteres.
+  </Step>
+  <Step title="Adjunta archivos si hacen falta">
+    Añade documentos, imágenes o archivos cuando el agente necesite contexto fuera de Bold.
+  </Step>
+  <Step title="Revisa el resultado">
+    Abre la tarea para ver mensajes, herramientas usadas, aclaraciones y resultado final.
+  </Step>
+</Steps>
+
+## Buenas instrucciones
+
+| Caso | Instrucción útil |
+| --- | --- |
+| Resumen operativo | `Resume órdenes de fabricación en progreso con retrasos, causas probables y próximos pasos.` |
+| Auditoría de mantenimiento | `Revisa partes abiertos del activo ENV-01 y destaca los que requieren acción del responsable.` |
+| Preparación de informe | `Con estos datos adjuntos, identifica inconsistencias antes de importarlos.` |
+
+Da contexto operativo: periodo, artículos, clientes, proveedores, órdenes, restricción real y formato esperado.
+
+## Automatizaciones y eventos
+
+Las automatizaciones ejecutan agentes sin crear la tarea manualmente. Cada ejecución crea una tarea con historial propio, estado, resultado y créditos consumidos.
+
+| Tipo | Cuándo usarla | Qué revisar |
+| --- | --- | --- |
+| Periódica | Revisiones o tareas recurrentes con frecuencia diaria, semanal, mensual, trimestral, semestral o anual. | Próxima ejecución, última ejecución, responsable, zona horaria y número de ejecuciones. |
+| Por evento | Reacciones a cambios relevantes de Bold. | Evento, versión, condición, agente responsable y si está habilitada. |
+
+Usa agentes personalizados para automatizaciones. Los agentes de sistema están pensados para uso directo y no deben programarse.
+
+## Problemas habituales
+
+| Problema | Qué revisar |
+| --- | --- |
+| La tarea requiere acción | Abre la tarea y responde a las preguntas pendientes. |
+| No puedes continuar | Puede estar en ejecución, fallida, esperando aclaración específica o caducada. |
+| El agente no encuentra datos | Revisa permisos del agente y si los datos existen en Bold. |
+| Consume demasiados créditos | Baja el nivel de inteligencia o acota mejor las instrucciones. |
+| La tarea caducó | Crea una tarea nueva con el contexto necesario. |
+
+<Warning>
+  Revisa tareas críticas antes de usar su resultado para cambiar datos operativos. La tarea acelera el análisis, pero el equipo conserva la responsabilidad del proceso.
+</Warning>
+
+## Relacionado
+
+- [Agentes](/es/conceptos/smart-factory/agentes)
+- [Automatizaciones](/es/conceptos/smart-factory/automatizaciones)
+- [Consultar o delegar con IA](/es/ayuda/smart-factory/consultar-o-delegar-con-ia)

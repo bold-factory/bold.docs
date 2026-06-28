@@ -322,6 +322,7 @@
                   "es/conceptos/smart-factory/informes",
                   "es/conceptos/smart-factory/boldy",
                   "es/conceptos/smart-factory/agentes",
+                  "es/conceptos/smart-factory/tareas",
                   "es/conceptos/smart-factory/automatizaciones"
                 ]
               },
@@ -404,108 +405,6 @@
       "youtube": "https://www.youtube.com/@BoldFactory"
     }
   },
-  "redirects": [
-    {
-      "source": "/es/conceptos/catalogo/lotes",
-      "destination": "/es/conceptos/almacen/lotes"
-    },
-    {
-      "source": "/es/conceptos/planificacion/clientes-y-proveedores",
-      "destination": "/es/conceptos/planificacion"
-    },
-    {
-      "source": "/es/ayuda/articulos-y-skus/introduccion",
-      "destination": "/es/ayuda/articulos/introduccion"
-    },
-    {
-      "source": "/es/ayuda/articulos-y-skus/crear-un-producto",
-      "destination": "/es/ayuda/articulos/crear-un-producto"
-    },
-    {
-      "source": "/es/ayuda/articulos-y-skus/crear-un-sku",
-      "destination": "/es/ayuda/articulos/crear-un-articulo"
-    },
-    {
-      "source": "/es/ayuda/articulos-y-skus/editar-un-sku",
-      "destination": "/es/ayuda/articulos/editar-un-articulo"
-    },
-    {
-      "source": "/es/ayuda/articulos-y-skus/trabajar-con-lotes",
-      "destination": "/es/ayuda/articulos/trabajar-con-lotes"
-    },
-    {
-      "source": "/es/ayuda/ventas/preparar-salida",
-      "destination": "/es/ayuda/ventas/preparar-y-registrar-envio"
-    },
-    {
-      "source": "/es/ayuda/ventas/completar-envio",
-      "destination": "/es/ayuda/ventas/preparar-y-registrar-envio"
-    },
-    {
-      "source": "/es/ayuda/produccion/asignar-recursos",
-      "destination": "/es/ayuda/produccion/configurar-recursos-de-produccion"
-    },
-    {
-      "source": "/es/ayuda/produccion/ejecutar-una-orden",
-      "destination": "/es/ayuda/produccion/ejecutar-operaciones-en-planta"
-    },
-    {
-      "source": "/es/ayuda/produccion/completar-operaciones",
-      "destination": "/es/ayuda/produccion/ejecutar-operaciones-en-planta"
-    },
-    {
-      "source": "/es/ayuda/produccion/consumir-componentes",
-      "destination": "/es/ayuda/produccion/ejecutar-operaciones-en-planta"
-    },
-    {
-      "source": "/es/ayuda/produccion/registrar-produccion",
-      "destination": "/es/ayuda/produccion/ejecutar-operaciones-en-planta"
-    },
-    {
-      "source": "/es/ayuda/almacen/consultar-stock",
-      "destination": "/es/ayuda/almacen/investigar-diferencias-de-stock"
-    },
-    {
-      "source": "/es/ayuda/almacen/ver-movimientos-de-stock",
-      "destination": "/es/ayuda/almacen/investigar-diferencias-de-stock"
-    },
-    {
-      "source": "/es/ayuda/almacen/solucion-de-problemas-de-stock",
-      "destination": "/es/ayuda/almacen/investigar-diferencias-de-stock"
-    },
-    {
-      "source": "/es/ayuda/personal/jornadas-laborales",
-      "destination": "/es/ayuda/personal/configurar-horarios-y-turnos"
-    },
-    {
-      "source": "/es/ayuda/personal/calendarios-locales",
-      "destination": "/es/ayuda/personal/configurar-horarios-y-turnos"
-    },
-    {
-      "source": "/es/ayuda/personal/turnos",
-      "destination": "/es/ayuda/personal/configurar-horarios-y-turnos"
-    },
-    {
-      "source": "/es/ayuda/costes/articulos",
-      "destination": "/es/ayuda/costes/preparar-datos-de-coste"
-    },
-    {
-      "source": "/es/ayuda/costes/empleados",
-      "destination": "/es/ayuda/costes/preparar-datos-de-coste"
-    },
-    {
-      "source": "/es/ayuda/smart-factory/boldy",
-      "destination": "/es/ayuda/smart-factory/consultar-o-delegar-con-ia"
-    },
-    {
-      "source": "/es/ayuda/smart-factory/tareas-con-agentes",
-      "destination": "/es/ayuda/smart-factory/crear-automatizacion-con-agente"
-    },
-    {
-      "source": "/es/conceptos/panel-de-control/claves-api-y-webhooks",
-      "destination": "/es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos"
-    }
-  ],
   "markdown": {
     "schema": false
   },

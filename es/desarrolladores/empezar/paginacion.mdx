@@ -1,9 +1,11 @@
 ---
-title: "Paginación"
-description: "Usa paginación para recorrer listados de la API."
+title: "Paginación, filtros y ordenación"
+description: "Usa pageNumber, pageSize, filterBy y sortBy para recorrer listados de la API."
 ---
 
 Las rutas de búsqueda y listado devuelven páginas de resultados. La paginación evita respuestas demasiado grandes y permite reconciliar datos de forma estable.
+
+Algunas rutas también aceptan `filterBy` y `sortBy`. Consulta la referencia OpenAPI de cada endpoint para saber qué campos admite.
 
 ## Parámetros
 
@@ -15,6 +17,50 @@ Las rutas de búsqueda y listado devuelven páginas de resultados. La paginació
 ```http
 GET /v1/items/skus?pageNumber=1&pageSize=50
 ```
+
+## Filtrar resultados
+
+`filterBy` usa expresiones con el formato `Campo[Operador]valor`.
+
+```http
+GET /v1/items/skus?filterBy=Name[Contains]mesa&pageNumber=1&pageSize=50
+```
+
+Usa los nombres exactos de campo que indique la referencia del endpoint. No todos los campos admiten los mismos operadores.
+
+| Operador | Uso habitual |
+| --- | --- |
+| `Contains` | El campo contiene el texto indicado. |
+| `Equals` | El campo coincide exactamente con el valor. |
+| `StartsWith` | El campo empieza por el texto indicado. |
+| `EndsWith` | El campo termina por el texto indicado. |
+| `IsNull` | El campo no tiene valor. |
+| `IsNotNull` | El campo tiene valor. |
+| `Gt` | Mayor que. |
+| `Gte` | Mayor o igual que. |
+| `Lt` | Menor que. |
+| `Lte` | Menor o igual que. |
+| `IsAfter` | Fecha posterior al valor indicado. |
+| `IsOnOrAfter` | Fecha igual o posterior al valor indicado. |
+| `IsBefore` | Fecha anterior al valor indicado. |
+| `IsOnOrBefore` | Fecha igual o anterior al valor indicado. |
+
+Puedes combinar filtros con `&&` para **Y** y `||` para **O**. Usa paréntesis cuando necesites agrupar condiciones.
+
+```http
+GET /v1/items/skus?filterBy=Name[Contains]mesa&&Code[StartsWith]SKU
+```
+
+## Ordenar resultados
+
+`sortBy` indica el campo de ordenación. Para ordenar en descendente, antepón `-` al campo.
+
+```http
+GET /v1/items/skus?sortBy=Name&pageNumber=1&pageSize=50
+GET /v1/items/skus?sortBy=-LastModifiedAt&pageNumber=1&pageSize=50
+```
+
+Los campos disponibles dependen del endpoint. Los campos de fecha como `CreatedAt` o `LastModifiedAt` suelen ser útiles para sincronizaciones incrementales cuando la ruta los expone.
 
 ## Respuesta
 

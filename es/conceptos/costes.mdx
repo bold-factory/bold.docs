@@ -27,6 +27,30 @@ Los costes explican cuánto cuesta comprar, fabricar, mantener y almacenar. Bold
 | Coste de mantenimiento | Coste de mano de obra y materiales consumidos en partes. |
 | Valoración de inventario | Valor económico del stock registrado por artículo, lote o ubicación. |
 
+## Coste de artículo
+
+El coste previsto por unidad se usa para estimar pedidos, recetas, órdenes de fabricación y comparativas frente al coste real.
+
+| Tipo de artículo | Origen habitual del cálculo |
+| --- | --- |
+| Compra | Precios de proveedor, pedidos de compra y cambios de coste de líneas de compra. |
+| Fabricación | Receta, versión activa, materiales, tiempos, recursos y costes base relacionados. |
+| Manual | Valor definido por el equipo cuando no quieres que se recalcule automáticamente. |
+
+El coste previsto no es lo mismo que el coste real del lote. El coste real se calcula con compras, fabricación, consumos, lotes y ajustes de stock.
+
+## Coste de empleado
+
+El coste de empleado es el coste por hora que Bold aplica a registros de mano de obra. Afecta a órdenes de fabricación, operaciones y partes de mantenimiento.
+
+Para estimarlo, usa el coste total para la empresa y divídelo entre las horas efectivas anuales.
+
+```text
+coste/hora = coste anual / horas anuales efectivas
+```
+
+En una jornada de 40 horas semanales, una referencia habitual son `1.826` horas anuales efectivas. Ajusta esa base a tu convenio, calendario y criterio interno.
+
 ## Actualización de costes
 
 Los costes pueden actualizarse de forma automática o manual según el tipo de artículo y el flujo operativo.
@@ -53,7 +77,18 @@ El coste de mantenimiento combina acciones, tiempos y materiales. Un parte compl
 
 La valoración de inventario usa el stock registrado y el coste asociado. Si operas con lotes, revisa la valoración por lote cuando el origen o precio de compra cambie entre entradas.
 
+## Problemas habituales
+
+| Problema | Qué revisar |
+| --- | --- |
+| El coste de artículo aparece a cero | Falta precio de compra, receta activa o coste manual. |
+| El coste cambia al modificar una receta | El artículo tiene actualización automática activa. |
+| Mano de obra real a cero | El empleado no tiene coste/hora o el tiempo no se registró sobre un empleado. |
+| Costes muy altos o bajos | Revisa si dividiste por horas anuales efectivas. |
+| El coste previsto no coincide con el real | El previsto usa datos planificados; el real usa consumos, lotes, tiempos y empleados registrados. |
+
 ## Guías relacionadas
 
 - [Coste teórico vs coste real](/es/conceptos/costes/coste-teorico-vs-real)
+- [Preparar datos de coste](/es/ayuda/costes/preparar-datos-de-coste)
 - [Valoración del inventario](/es/ayuda/costes/valoracion-inventario)

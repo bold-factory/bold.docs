@@ -4,29 +4,29 @@ description: "Entiende agentes, tareas, estados, aclaraciones y créditos en Sma
 icon: "bot"
 ---
 
-Un **agente** ejecuta tareas sobre Bold con instrucciones, herramientas y permisos concretos. En Smart Factory ves las tareas delegadas, su estado, el historial y el resultado.
+Un **agente** ejecuta tareas sobre Bold con instrucciones, herramientas y permisos concretos. Configúralo para que trabaje con un alcance claro y con los permisos mínimos necesarios.
 
 ## Conceptos
 
 | Concepto | Uso |
 | --- | --- |
 | Agente | Configuración con nombre, instrucciones, permisos y nivel de inteligencia. |
-| Tarea con agente | Ejecución concreta iniciada manualmente, por evento o por automatización. |
+| Tarea con agente | Ejecución concreta iniciada manualmente, por API o por automatización. |
 | Aclaración | Pregunta que el agente hace cuando necesita más información. |
 | Crédito | Unidad de consumo asociada al trabajo realizado. |
 | Historial | Mensajes, archivos, herramientas usadas, decisiones y resultado. |
 
-## Estados de tarea
+## Qué configurar
 
-| Estado | Qué hacer |
+| Campo | Uso |
 | --- | --- |
-| **Pendiente** | Espera a que el agente empiece a procesar. |
-| **En ejecución** | No respondas todavía. El agente está trabajando. |
-| **Requiere acción** | Responde a la aclaración o decisión que pide el agente. |
-| **Completada** | Revisa el resultado y continúa solo si necesitas ampliar el trabajo. |
-| **Fallida** | Revisa el error, ajusta instrucciones o crea una tarea nueva. |
+| Nombre | Ayuda a identificar para qué sirve el agente. |
+| Instrucciones | Definen objetivo, límites, tono y formato de respuesta. |
+| Permisos | Controlan qué datos puede consultar o modificar. |
+| Nivel de inteligencia | Ajusta capacidad de razonamiento y consumo de créditos. |
+| Preguntas | Decide si el agente puede pedir aclaraciones cuando falte contexto. |
 
-Las tareas caducan tras 28 días de inactividad. Crea una tarea nueva si necesitas retomar un trabajo caducado.
+Consulta [Tareas con agentes](/es/conceptos/smart-factory/tareas) para ver estados, caducidad, archivos y revisión de resultados.
 
 ## Nivel de inteligencia
 
@@ -58,5 +58,5 @@ Las automatizaciones tienen responsable y estado activo o inactivo. Las periódi
 ## Relacionado
 
 - [Smart Factory](/es/conceptos/smart-factory)
+- [Tareas con agentes](/es/conceptos/smart-factory/tareas)
 - [Automatizaciones](/es/conceptos/smart-factory/automatizaciones)
-- [Tareas con agentes](/es/ayuda/smart-factory/tareas-con-agentes)

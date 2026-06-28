@@ -39,6 +39,45 @@ Configura horarios y turnos para que Bold entienda cuándo trabaja cada equipo o
   Usuario y empleado no son lo mismo. El usuario da acceso a Bold; el empleado representa a la persona operativa que registra trabajo o capacidad.
 </Info>
 
+## Jornadas laborales
+
+Las jornadas laborales definen períodos de trabajo de un día tipo. Una jornada puede tener uno o varios períodos, incluidos turnos partidos o períodos que terminan al día siguiente.
+
+Al crear una jornada:
+
+- usa un nombre operativo, como **Mañana**, **Noche** o **Turno partido**;
+- añade hora de inicio y fin de cada tramo;
+- marca **Termina al día siguiente** para turnos nocturnos;
+- revisa que la duración calculada coincida con el horario real.
+
+Los períodos de una misma jornada no pueden solaparse. Actualizar períodos reemplaza el conjunto completo y recalcula la duración.
+
+## Calendarios locales
+
+Los calendarios locales definen excepciones por fecha: festivos, vacaciones colectivas, paradas de planta, inventarios generales o días con horario especial.
+
+Cada fecha del calendario se asocia a una jornada laboral. Cuando un empleado usa ese calendario, Bold sustituye el patrón normal del turno en esas fechas.
+
+Usa calendarios separados si distintas plantas, centros o colectivos tienen festivos diferentes.
+
+## Turnos
+
+Los turnos definen ciclos repetitivos de jornadas laborales. Sirven para expresar patrones como cinco días de mañana, dos de descanso y cinco de tarde sin configurar cada fecha una a una.
+
+Cada turno se compone de segmentos ordenados. Cada segmento indica qué jornada se aplica y cuántos días consecutivos dura.
+
+Antes de crear un turno, define la fecha de inicio del patrón. Para fechas anteriores a esa fecha, Bold no resuelve ninguna jornada del ciclo.
+
+## Prioridad de programación
+
+La programación efectiva de un empleado se resuelve con esta prioridad:
+
+1. Asignación explícita para una fecha concreta.
+2. Excepción del calendario local.
+3. Patrón repetitivo del turno.
+
+Si una fecha no muestra la jornada esperada, revisa si hay una asignación manual, si el calendario correcto está asociado o si la fecha está antes del inicio del turno.
+
 ## Relacionado
 
 - [Empleados](/es/ayuda/personal/empleados)

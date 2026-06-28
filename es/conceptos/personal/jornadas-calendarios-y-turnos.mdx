@@ -25,17 +25,23 @@ Una jornada define períodos de trabajo. Puede representar mañana, tarde, noche
 
 Si un tramo termina al día siguiente, úsalo para turnos nocturnos.
 
+Los períodos de una misma jornada no deben solaparse. Si la duración parece incorrecta, revisa si algún tramo cruza medianoche.
+
 ## Calendario local
 
 El calendario local introduce excepciones: festivos, cierres, jornadas especiales o cambios puntuales.
 
 Las excepciones deben ser claras y tener prioridad sobre el patrón repetitivo.
 
+Si una planta tiene festivos distintos, usa un calendario separado. Si una fecha muestra otra jornada, revisa si existe una asignación manual con más prioridad.
+
 ## Turnos
 
 Un turno define un ciclo. Por ejemplo: cinco días de mañana, dos de descanso, cinco de tarde.
 
 Cada segmento indica qué jornada aplica y cuántos días consecutivos dura.
+
+Cada segmento debe durar al menos un día. La fecha de inicio del turno define cómo se alinea el ciclo con el calendario.
 
 ## Prioridad de resolución
 
@@ -50,6 +56,4 @@ Cada segmento indica qué jornada aplica y cuántos días consecutivos dura.
 
 - [Empleados](/es/conceptos/personal/empleados)
 - [Periodos, tareas y presencia](/es/conceptos/personal/periodos-tareas-y-presencia)
-- [Jornadas laborales](/es/ayuda/personal/jornadas-laborales)
-- [Calendarios locales](/es/ayuda/personal/calendarios-locales)
-- [Turnos](/es/ayuda/personal/turnos)
+- [Configurar horarios y turnos](/es/ayuda/personal/configurar-horarios-y-turnos)

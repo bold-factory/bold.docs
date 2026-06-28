@@ -57,6 +57,23 @@ Configura recursos de producción antes de planificar órdenes. El objetivo es q
   </Step>
 </Steps>
 
+Una operación queda planificada cuando cumple los requisitos mínimos: estación de trabajo, fecha objetivo y herramientas requeridas seleccionadas.
+
+Cambiar estación, herramienta, característica requerida o fecha objetivo puede planificar o desplanificar una operación. Si cambias la fecha objetivo, Bold actualiza fechas pendientes de entradas y co-productos relacionados.
+
+<Warning>
+  No borres la fecha objetivo de una operación que ya está pausada, en curso o finalizada. Esos estados protegen la trazabilidad del trabajo real.
+</Warning>
+
+## Problemas habituales
+
+| Problema | Qué revisar |
+| --- | --- |
+| Una estación no aparece | Compatibilidad con el proceso de la operación. |
+| Falta herramienta | Característica requerida y herramientas compatibles. |
+| La operación no pasa a planificada | Estación, fecha objetivo y herramientas requeridas. |
+| No puedes cambiar un dato | La operación puede haber empezado y algunos cambios quedan bloqueados. |
+
 <Tip>
   Configura recursos con nombres que el equipo de planta reconozca. La claridad en modo de trabajo reduce errores de asignación y registro.
 </Tip>

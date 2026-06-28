@@ -5,6 +5,8 @@ description: "Comprueba disponibilidad, prepara la salida y registra el envío d
 
 Prepara y registra el envío cuando un pedido de venta ya tiene material listo para salir. Este flujo reduce stock y deja trazada la expedición.
 
+El pedido de venta explica la demanda. El envío explica el movimiento físico que reduce stock.
+
 ## Antes de empezar
 
 Revisa:
@@ -59,6 +61,24 @@ Revisa:
   Un envío completado explica una salida real de stock. Corrige errores desde el flujo operativo disponible en vez de modificar movimientos históricos.
 </Warning>
 
+## Qué cambia al enviar
+
+| Elemento | Resultado |
+| --- | --- |
+| Stock | Disminuye en la ubicación y lote indicados. |
+| Envío | Cambia de **Pendiente** a **Enviado**. |
+| Pedido | Aumenta la cantidad entregada. |
+| Línea de pedido | Puede cambiar a **Parcialmente entregado** o **Entregado**. |
+| Histórico | Se registra el movimiento de salida. |
+
+Después de enviar, las líneas y la ubicación quedan protegidas para conservar trazabilidad. Si hay un error, usa la reversión cuando esté disponible.
+
+## Salidas parciales
+
+Si solo puedes entregar parte de una línea, prepara el envío con la cantidad disponible. Bold dejará la línea como **Parcialmente entregado** y mantendrá pendiente la cantidad restante.
+
+Usa notas o referencias de transporte para relacionar el envío de Bold con el albarán, transportista o documento externo.
+
 ## Si no puedes enviar
 
 | Problema | Qué revisar |
@@ -67,6 +87,8 @@ Revisa:
 | El lote no aparece | Configuración de lotes y movimientos reales de entrada. |
 | La línea no está disponible | Estado de la línea y demanda confirmada. |
 | El pedido queda parcial | Cantidad pendiente y fecha comprometida con el cliente. |
+| El envío no tiene acción disponible | Líneas, cantidades positivas, ubicación válida y lote informado si aplica. |
+| El stock quedó negativo | Recepción, ajuste, inventario o movimiento previo pendiente. |
 
 ## Relacionado
 

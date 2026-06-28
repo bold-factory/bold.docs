@@ -34,11 +34,19 @@ El consumo descuenta material del almacén. Puede registrarse al comenzar, por u
 
 Si el artículo trabaja con lotes, el consumo debe indicar el lote físico correcto.
 
+La cantidad de una entrada se define por unidad fabricada. Si una operación produce `10` unidades y una entrada consume `2` unidades por cada una, el consumo previsto total será `20`.
+
+Usa consumo por progreso cuando necesitas medir materiales con precisión durante la operación. Usa consumo al final si la cantidad real se conoce al cierre.
+
 ## Producción y co-productos
 
 Registrar producción aumenta stock del artículo fabricado. Los co-productos registran salidas adicionales que aparecen durante la operación.
 
 Los co-productos también pueden tener momento de registro y lote si necesitan trazabilidad.
+
+La cantidad de un co-producto se define por unidad fabricada. Si una operación produce `10` unidades y el co-producto genera `0,5` por unidad, el registro previsto total será `5`.
+
+No registres producción para compensar consumos mal registrados. Corrige primero el origen del consumo, ubicación o lote.
 
 ## Pausas
 
@@ -55,5 +63,4 @@ Consulta [Motivos de pausa e interrupciones](/es/conceptos/fabricacion/motivos-d
 - [Motivos de pausa e interrupciones](/es/conceptos/fabricacion/motivos-de-pausa-e-interrupciones)
 - [Cuadros de mando](/es/conceptos/fabricacion/cuadros-de-mando)
 - [Lotes](/es/conceptos/almacen/lotes)
-- [Ejecutar una orden](/es/ayuda/produccion/ejecutar-una-orden)
-- [Consumir componentes](/es/ayuda/produccion/consumir-componentes)
+- [Ejecutar operaciones en planta](/es/ayuda/produccion/ejecutar-operaciones-en-planta)

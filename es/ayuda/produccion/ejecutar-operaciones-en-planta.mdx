@@ -45,7 +45,7 @@ Revisa:
     Empieza cuando la operación esté lista y las restricciones permitan avanzar.
   </Step>
   <Step title="Registra avance">
-    Informa cantidad completada, rechazos, comentarios y evidencias cuando corresponda.
+    Informa cantidad completada, cantidad rechazada, comentarios, materiales consumidos y co-productos cuando corresponda.
   </Step>
   <Step title="Consume materiales">
     Confirma componentes, cantidades reales, ubicación y lote físico.
@@ -73,19 +73,44 @@ Revisa:
 | Pausas | Explica disponibilidad, rendimiento y OEE. |
 | Comentarios | Justifica diferencias o incidencias. |
 
+## Materiales y lotes
+
+Bold propone cantidades teóricas según la receta, el momento de consumo y la cantidad que estás registrando. Puedes ajustar la cantidad real antes de confirmar.
+
+| Momento de consumo | Cuándo encaja |
+| --- | --- |
+| Al comienzo | La cantidad ya se conoce al iniciar. |
+| Por unidad o progreso | Necesitas precisión conforme avanza la producción. |
+| Al final | Puede haber mermas, ajustes o confirmación al terminar. |
+
+Si el componente trabaja con lotes, selecciona el lote físico que se consume. Un lote incorrecto rompe trazabilidad de fabricación, coste real y análisis de calidad.
+
+## Producción y co-productos
+
+Registrar producción aumenta stock del artículo fabricado y deja trazabilidad de orden, operación, ubicación, lote y cantidad.
+
+Los co-productos son artículos adicionales que se obtienen durante una operación. Pueden registrarse al comienzo, por progreso o al final, según la configuración de la receta.
+
+## Controles obligatorios
+
+Una operación puede tener controles al inicio, durante el avance o al final. Bold puede bloquear el inicio o la finalización cuando hay controles obligatorios pendientes.
+
+Si no puedes iniciar o finalizar, abre **Controles** y completa las inspecciones solicitadas. Algunos controles pueden pedir texto, número, sí/no, imagen o archivo según la configuración.
+
 <Warning>
   Si consumes material sin stock suficiente, puedes generar stock negativo. Regulariza el origen cuanto antes con recepción, producción, inventario, ajuste o corrección de lote.
 </Warning>
 
 ## Finalizar con diferencias
 
-Puedes cerrar una operación con una cantidad distinta a la planificada cuando la realidad lo exige. Usa comentarios para explicar:
+Puedes registrar una cantidad diferente a la planificada. Bold puede pedir confirmación cuando:
 
-- más unidades completadas de las previstas;
-- menos unidades completadas;
-- rechazos o merma;
-- consumo real distinto al teórico;
-- parada relevante durante la operación.
+- completas más unidades de las que permiten las operaciones anteriores;
+- completas más unidades de las pendientes;
+- finalizas con menos unidades de las planificadas;
+- registras cero unidades sin comentario ni consumo.
+
+Usa comentarios para explicar diferencias de cantidad, rechazos, consumo real distinto al teórico o paradas relevantes.
 
 ## Relacionado
 

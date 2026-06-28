@@ -65,6 +65,14 @@ GET /v1/production/orders
 
 Las respuestas y errores usan JSON. Los listados paginados devuelven una estructura común con `results`, `pageNumber`, `pageSize`, `totalPages` y `totalCount`.
 
+## Consistencia entre módulos
+
+Algunas acciones actualizan más de un módulo. Por ejemplo, una recepción aumenta stock físico y también puede cambiar datos usados por planificación.
+
+Esos cambios relacionados pueden tardar unos segundos en aparecer en todas las vistas y consultas. Si tu integración encadena operaciones, vuelve a leer el recurso antes de tomar decisiones críticas y usa reintentos breves cuando dependas de datos calculados.
+
+Para integraciones críticas, combina webhooks con reconciliaciones paginadas. El webhook avisa rápido y la reconciliación confirma el estado final.
+
 ## Flujo recomendado
 
 <Steps>
@@ -91,6 +99,8 @@ Las respuestas y errores usan JSON. Los listados paginados devuelven una estruct
 | `id` | Identificador técnico de una entidad. |
 | `pageNumber` | Número de página, empezando en `1`. |
 | `pageSize` | Tamaño de página. El máximo validado por Bold es `1000`. |
+| `filterBy` | Expresión para filtrar resultados cuando la ruta lo admite. |
+| `sortBy` | Campo de ordenación cuando la ruta lo admite. |
 
 <Tip>
   Para integraciones críticas, combina webhooks con reconciliaciones periódicas paginadas. El webhook te avisa rápido y la reconciliación detecta cualquier evento perdido.

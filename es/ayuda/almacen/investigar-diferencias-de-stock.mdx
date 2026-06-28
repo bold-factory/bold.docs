@@ -1,11 +1,23 @@
 ---
-title: "investigar diferencias de stock"
+title: "Investigar diferencias de stock"
 description: "Consulta stock, movimientos y recuentos para corregir diferencias sin perder trazabilidad."
 ---
 
 Investiga diferencias de stock cuando el sistema no coincide con el almacén físico, aparece stock negativo o una ubicación muestra cantidades inesperadas.
 
 El objetivo no es cuadrar rápido. Primero identifica qué movimiento falta o qué movimiento fue incorrecto.
+
+## Interpretar stock
+
+La consulta de stock responde a tres preguntas: cuánto hay físicamente, cuánto queda libre para comprometer y cómo quedará después de entradas y salidas previstas.
+
+| Métrica | Qué responde | Incluye |
+| --- | --- | --- |
+| Stock físico | ¿Qué hay ahora? | Movimientos reales ya registrados. |
+| Stock disponible | ¿Qué queda libre? | Stock físico menos demanda confirmada. |
+| Stock proyectado | ¿Cómo quedará? | Demanda futura, compras, fabricación y previsiones. |
+
+Usa stock físico para recuentos y almacén. Usa stock disponible para prometer a cliente. Usa stock proyectado para comprar o fabricar antes de una rotura.
 
 ## Diagnóstico
 
@@ -26,6 +38,31 @@ El objetivo no es cuadrar rápido. Primero identifica qué movimiento falta o qu
     Valida físicamente ubicación, lote, bulto y cantidad antes de corregir.
   </Step>
 </Steps>
+
+## Consultar por artículo, ubicación o lote
+
+| Vista | Cuándo usarla |
+| --- | --- |
+| Artículo | Para entender todo lo que afecta a una referencia: stock agregado, ubicaciones, lotes, movimientos y planificación. |
+| Ubicación | Para validar dónde está el material o revisar una zona de picking, recepción o expedición. |
+| Lote | Para elegir el origen correcto en consumos, envíos o investigaciones de calidad. |
+
+Si el stock físico existe pero la disponibilidad es baja o negativa, revisa pedidos confirmados, consumos previstos y reservas antes de mover material.
+
+## Revisar movimientos
+
+Los movimientos de stock explican por qué cambió una cantidad. Cada recepción, envío, consumo, fabricación, ajuste o inventario deja registros que puedes revisar.
+
+| Filtro | Uso |
+| --- | --- |
+| Artículo | Ver todo lo que afectó a una referencia. |
+| Ubicación | Revisar entradas y salidas de una zona. |
+| Lote | Seguir trazabilidad por origen. |
+| Fecha | Acotar el periodo de investigación. |
+| Tipo de movimiento | Separar recepciones, envíos, ajustes o consumos. |
+| Documento relacionado | Ir desde un pedido, recepción, envío u orden. |
+
+Empieza en el último momento en que el stock era correcto. Desde ahí, recorre movimientos por fecha y abre documentos relacionados antes de ajustar.
 
 ## Corregir
 
@@ -52,6 +89,8 @@ El stock negativo suele indicar que se registró una salida antes de registrar l
 - envíos desde ubicación incorrecta;
 - inventarios sin cerrar;
 - movimientos internos omitidos.
+
+No lo trates como un saldo normal. Si falta una entrada real, regístrala desde el flujo correcto. Si el problema fue un envío, consumo o lote equivocado, usa reversión cuando esté disponible. Ajusta solo cuando no puedas reconstruir el movimiento real con confianza.
 
 ## Relacionado
 

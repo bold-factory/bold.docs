@@ -47,6 +47,8 @@ Las condiciones permiten que una misma receta se adapte a diferentes artículos 
 
 Ejemplo: una receta de mesa puede añadir una operación de pintura solo cuando la propiedad **Acabado** lo requiere.
 
+Si no aparece una propiedad al crear una condición, revisa que exista en **Catálogo > Propiedades** y que esté asignada al producto de la receta. Las condiciones solo pueden usar propiedades que afectan al artículo fabricado.
+
 ## Fórmulas
 
 Las fórmulas usan propiedades numéricas o datos de contexto para calcular cantidades, medidas o instrucciones.
@@ -56,6 +58,12 @@ Cortar material a [Largo]+7 mm
 ```
 
 Si el artículo fabricado tiene `Largo = 100`, la orden mostrará `Cortar material a 107 mm`.
+
+## Edición y trazabilidad
+
+Una versión activa queda protegida para conservar trazabilidad. Si el botón de guardar está deshabilitado, revisa si estás intentando modificar una versión activa.
+
+Para cambiar una receta en uso, copia la versión o crea una nueva, edítala y actívala cuando esté revisada.
 
 ## Relacionado
 

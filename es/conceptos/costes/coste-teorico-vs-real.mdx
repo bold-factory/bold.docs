@@ -20,11 +20,24 @@ En fabricación, el coste real depende de materiales consumidos, lotes, cantidad
 
 Una orden con consumos sin lote, tiempos incompletos o costes horarios vacíos puede mostrar un coste real incompleto.
 
+| Coste | Origen previsto | Origen real |
+| --- | --- | --- |
+| Materiales | Materiales de receta y coste previsto de artículo. | Materiales consumidos y coste del lote consumido. |
+| Mano de obra | Tiempo planificado y coste horario previsto o promedio. | Tiempo registrado por empleado y coste/hora del empleado. |
+| Máquina | Duración planificada y coste/hora del recurso. | Tiempo real de máquina y coste/hora del recurso. |
+| Coste por unidad | Coste total previsto dividido por cantidad prevista. | Coste total real dividido por cantidad completada. |
+
 ## Mantenimiento
 
 En mantenimiento, el coste real combina materiales, tiempo de empleados y acciones realizadas.
 
 El histórico permite comparar activos, causas, acciones e intervenciones recurrentes.
+
+| Coste | Cálculo habitual |
+| --- | --- |
+| Material por línea | Cantidad consumida por coste por unidad del lote. |
+| Mano de obra por línea | Horas registradas por coste/hora del empleado. |
+| Coste total del parte | Coste de materiales más coste de mano de obra. |
 
 ## Relacionado
 
