@@ -1,0 +1,98 @@
+es/ayuda/produccion/configurar-recursos-de-produccion.mdx
+  s_fa07db4167ae56::t_295be18b423f22 60-76
+docs.json
+  s_fa07db4167ae56::t_87e0db4d615607 325
+es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones.mdx
+  s_fa07db4167ae56::t_054edb1d8e67a6 75-76
+es/conceptos/personal.mdx
+  s_fa07db4167ae56::t_673c0eff9be8d2 73
+es/conceptos/almacen/envios.mdx
+  s_fa07db4167ae56::t_5259ca7cc01dc2 48
+es/desarrolladores/empezar/introduccion.mdx
+  s_fa07db4167ae56::t_2250c701e1fcd1 68-75,102-103
+es/conceptos/costes/coste-teorico-vs-real.mdx
+  s_fa07db4167ae56::t_53ec09395000f6 23-29,36-40
+  s_fa07db4167ae56::t_2d411db981cf48 41
+es/conceptos/fabricacion/controles-consumos-y-pausas.mdx
+  s_fa07db4167ae56::t_bc7ed109692949 37-40,47-50,66
+es/conceptos/fabricacion/herramientas-y-caracteristicas.mdx
+  s_fa07db4167ae56::t_054edb1d8e67a6 63
+es/conceptos/smart-factory/agentes.mdx
+  s_fa07db4167ae56::t_4c51be8b9d8c41 7,14,19,21,23-27,29,61
+es/conceptos/fabricacion/recetas-y-versiones.mdx
+  s_fa07db4167ae56::t_977dde0d625ab3 50-51,62-66
+  s_fa07db4167ae56::t_4e325c86a43664 67
+es/ayuda/ventas/preparar-y-registrar-envio.mdx
+  s_fa07db4167ae56::t_b0e6db24ad13c3 8-9,64-81,90-91
+es/conceptos/catalogo.mdx
+  s_fa07db4167ae56::t_b57b7bfcafdd10 90
+es/desarrolladores/empezar/paginacion.mdx
+  s_fa07db4167ae56::t_2250c701e1fcd1 2-3,8-9,21-63
+  s_fa07db4167ae56::t_cf8bcec2d49c42 64
+es/ayuda/smart-factory/crear-automatizacion-con-agente.mdx
+  s_fa07db4167ae56::t_edb664636757df 58
+es/conceptos/smart-factory.mdx
+  s_fa07db4167ae56::t_561447c271fdbe 19-22,35,71,74-76
+es/conceptos/personal/jornadas-calendarios-y-turnos.mdx
+  s_fa07db4167ae56::t_e9250e2b4f8825 28-29,36-37,44-45,59
+es/conceptos/costes.mdx
+  s_fa07db4167ae56::t_53ec09395000f6 30-53,80-89,93
+es/ayuda/almacen/investigar-diferencias-de-stock.mdx
+  s_fa07db4167ae56::t_7799c31c87f16f 10-21,42-66,93
+  s_fa07db4167ae56::t_849bcd855d5259 2
+  s_fa07db4167ae56::t_e06644f015576d 94
+es/conceptos/almacen.mdx
+  s_fa07db4167ae56::t_5259ca7cc01dc2 126
+  s_fa07db4167ae56::t_b57b7bfcafdd10 124,131
+es/conceptos/almacen/lotes.mdx
+  s_fa07db4167ae56::t_b57b7bfcafdd10 83
+es/conceptos/fabricacion/ordenes-de-fabricacion.mdx
+  s_fa07db4167ae56::t_054edb1d8e67a6 67
+es/conceptos/smart-factory/tareas.mdx
+  s_fa07db4167ae56::t_eb5154c5f46971 2-4,7,9,11-13,15-16,19-22,28-32,38,41,44,59-60,67-68,70,80-84,89-90
+es/conceptos/almacen/inventarios-y-ajustes.mdx
+  s_fa07db4167ae56::t_b57b7bfcafdd10 48
+es/conceptos/fabricacion/recursos.mdx
+  s_fa07db4167ae56::t_054edb1d8e67a6 62
+es/conceptos/smart-factory/boldy.mdx
+  s_fa07db4167ae56::t_4dbbb64638453c 44-45
+es/conceptos/fabricacion.mdx
+  s_fa07db4167ae56::t_054edb1d8e67a6 103
+es/conceptos/smart-factory/automatizaciones.mdx
+  s_fa07db4167ae56::t_edb664636757df 32,63
+es/conceptos/fabricacion/inspecciones-y-controles.mdx
+  s_fa07db4167ae56::t_054edb1d8e67a6 63
+es/ayuda/personal/configurar-horarios-y-turnos.mdx
+  s_fa07db4167ae56::t_e9250e2b4f8825 42-80
+es/conceptos/planificacion/pedidos-de-venta.mdx
+  s_fa07db4167ae56::t_5259ca7cc01dc2 91
+es/conceptos/mantenimiento/mantenimiento-preventivo.mdx
+  s_fa07db4167ae56::t_977dde0d625ab3 37-48
+es/ayuda/smart-factory/consultar-o-delegar-con-ia.mdx
+  s_fa07db4167ae56::t_edb664636757df 58
+es/conceptos/catalogo/articulos.mdx
+  s_fa07db4167ae56::t_977dde0d625ab3 39-46
+es/ayuda/produccion/ejecutar-operaciones-en-planta.mdx
+  s_fa07db4167ae56::t_bc7ed109692949 48,76-99,106-111,113
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "f718e6889e1942f688f72087911b61365c47b024",
+  "prompts": {},
+  "humans": {
+    "h_55f2ba4d68b42c": {
+      "author": "Pablo López <pablo@bold-factory.com>"
+    }
+  },
+  "sessions": {
+    "s_fa07db4167ae56": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f0694-9598-7080-b3ad-d358c9c5d7a3",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
