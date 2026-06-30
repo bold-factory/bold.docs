@@ -8,6 +8,17 @@ Una **automatización** ejecuta un agente sin que tengas que crear la tarea manu
 
 Úsalas para trabajos repetibles, revisiones programadas, alertas operativas o comprobaciones que deben quedar auditadas.
 
+## Dónde se gestionan
+
+Las automatizaciones tienen su propia sección en **Ajustes → Automatizaciones**. La pantalla muestra dos pestañas:
+
+| Pestaña | Contiene |
+| --- | --- |
+| **Periódicas** | Automatizaciones que se ejecutan en una frecuencia de calendario. |
+| **Por eventos** | Suscripciones que se ejecutan cuando Bold publica un evento compatible. |
+
+Gestionar automatizaciones requiere rol de administrador. La sección de Agentes sigue dedicada a configurar agentes; programarlos se hace ahora desde Automatizaciones.
+
 ## Tipos
 
 | Tipo | Cuándo se ejecuta |
@@ -17,17 +28,53 @@ Una **automatización** ejecuta un agente sin que tengas que crear la tarea manu
 
 Las automatizaciones periódicas dependen de frecuencia, zona horaria, próxima ejecución y responsable. Las automatizaciones por evento dependen de evento, versión y condición.
 
+## Automatizaciones por evento
+
+Una automatización por evento es una **suscripción** del agente a un evento concreto que Bold publica. Cada suscripción guarda:
+
+| Dato | Uso |
+| --- | --- |
+| Agente | Define instrucciones, herramientas y permisos. |
+| Evento | Identifica el evento al que se suscribe el agente. |
+| Versión | Versión mayor del contrato del evento. |
+| Condición | Fórmula opcional sobre el payload que filtra cuándo se dispara. |
+| Responsable | Persona vinculada a la suscripción. |
+| Estado | Habilitada o deshabilitada. |
+
+### Catálogo de eventos
+
+Los eventos disponibles para suscripción son los mismos que ya publican avisos externos (webhooks) y notificaciones. Cada evento se identifica por nombre y versión. El selector muestra el catálogo completo y el detalle del payload aplicable a cada uno.
+
+Consulta [Claves de integración y avisos externos](/es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos) y [Auditoría y eventos](/es/conceptos/panel-de-control/auditoria-y-eventos) para entender qué eventos publica Bold y cuándo se emiten.
+
+### Editor de condiciones
+
+La condición es una **fórmula booleana** que se evalúa sobre el payload del evento. Si la fórmula no se cumple, la suscripción ignora ese evento y no crea tarea.
+
+- Sin condición, el agente se ejecuta cada vez que ocurra el evento.
+- Con condición, sólo se ejecuta cuando la expresión devuelve verdadero.
+- Los operandos de la fórmula son las propiedades del payload del evento seleccionado. El editor las ofrece según el tipo (texto, número, booleano, fecha o enumerado).
+
+Úsala para evitar ejecuciones irrelevantes y reducir ruido. Ejemplos:
+
+- avisar sólo si una orden cambia a un estado crítico;
+- revisar pedidos creados por una integración concreta;
+- generar una tarea cuando una previsión supera un umbral;
+- analizar incidencias de calidad después de una recepción de un proveedor concreto.
+
 ## Qué conserva cada ejecución
 
 | Dato | Uso |
 | --- | --- |
 | Agente | Define instrucciones, herramientas y permisos disponibles. |
 | Responsable | Persona vinculada a la automatización. |
-| Origen | Indica si la tarea nació por calendario o por evento. |
+| Origen | Indica si la tarea nació de forma `Manual`, `Por calendario` o `Por evento`. |
 | Mensajes | Conservan la conversación y aclaraciones. |
 | Herramientas usadas | Permiten revisar qué acciones consultó o ejecutó el agente. |
 | Resultado | Respuesta final o estado de fallo. |
 | Créditos | Consumo asociado a la ejecución. |
+
+En las tareas creadas por evento, el agente recibe en sus instrucciones el payload del evento que disparó la ejecución para usarlo como contexto.
 
 Consulta [Tareas con agentes](/es/conceptos/smart-factory/tareas) para entender estados, caducidad, archivos y revisión de resultados.
 
@@ -35,23 +82,13 @@ Consulta [Tareas con agentes](/es/conceptos/smart-factory/tareas) para entender 
 
 Usa agentes personalizados para automatizaciones. Los agentes de sistema están pensados para uso directo y no deben programarse ni suscribirse a eventos.
 
-Concede al agente sólo los permisos necesarios. Una automatización puede ejecutarse sin supervisión inmediata, así que los permisos amplios aumentan el impacto de instrucciones mal definidas.
-
-## Condiciones por evento
-
-Las automatizaciones por evento pueden filtrar cuándo se dispara la tarea. La condición evita ejecuciones irrelevantes y reduce ruido.
-
-Ejemplos de uso:
-
-- avisar si una orden cambia a un estado crítico;
-- revisar pedidos creados por una integración;
-- generar una tarea cuando una previsión supera un umbral;
-- analizar incidencias de calidad después de una recepción.
+Concede al agente sólo los permisos necesarios. Una automatización puede ejecutarse sin supervisión inmediata, así que los permisos amplios aumentan el impacto de instrucciones mal definidas. Si suscribes un agente sin permisos a un evento, probablemente no pueda completar la tarea.
 
 ## Buenas prácticas
 
 - Prueba la automatización con casos controlados antes de depender de ella.
-- Revisa las primeras ejecuciones y ajusta instrucciones.
+- Revisa las primeras ejecuciones y ajusta instrucciones o condición.
+- Acota la condición para evitar ejecuciones masivas en eventos frecuentes.
 - Usa nombres claros para saber qué dispara cada tarea.
 - Desactiva automatizaciones que generen ruido.
 - Documenta permisos y propósito cuando afecten a datos críticos.
