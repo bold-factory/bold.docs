@@ -35,6 +35,9 @@ GET /v1/notifications/events/versions
   <Card title="Costes y personal" icon="circle-dollar-sign">
     Cambios de coste, empleados y tareas relacionadas.
   </Card>
+  <Card title="Agentes" icon="bot">
+    Sesiones de agente, respuestas y aclaraciones pedidas durante una tarea de Smart Factory.
+  </Card>
 </Columns>
 
 ## Ejemplos de nombres
@@ -50,6 +53,8 @@ Los nombres siguen el patrón `Dominio.Entidad.Accion`.
 | `Warehouse.Shipment.Shipped` | Actualizar un sistema logístico tras una salida. |
 | `Production.Order.Finished` | Reaccionar al cierre de una orden de fabricación. |
 | `Maintenance.WorkOrder.Completed` | Enviar cierre de mantenimiento a una herramienta de análisis o a un sistema de gestión. |
+| `Agents.AgentSession.AgentResponded` | Reaccionar cuando un agente publica una respuesta en una sesión. |
+| `Agents.AgentSession.ClarificationRequested` | Saber que un agente pide una aclaración con preguntas y opciones para continuar. |
 
 <Warning>
   No construyas nombres de eventos a mano. Usa `/v1/notifications/events/versions` para leer `eventName` y `eventVersion` del entorno.
