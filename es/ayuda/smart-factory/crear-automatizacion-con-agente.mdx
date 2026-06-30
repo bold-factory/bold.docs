@@ -1,9 +1,9 @@
 ---
 title: "Crear una automatización con agente"
-description: "Define una tarea recurrente o por evento, revisa permisos y controla resultados generados por agentes."
+description: "Programa un agente por calendario o suscríbelo a un evento desde Ajustes → Automatizaciones."
 ---
 
-Crea una automatización con agente cuando una revisión o tarea se repite y quieres que Bold la ejecute de forma programada o por evento.
+Crea una automatización con agente cuando una revisión o tarea se repite y quieres que Bold la ejecute de forma programada o cuando ocurra un evento.
 
 ## Antes de automatizar
 
@@ -15,20 +15,31 @@ Comprueba que la tarea:
 - no depende de decisiones ambiguas sin criterio definido;
 - tiene responsable humano.
 
-## Configurar la automatización
+El agente debe estar creado y con los permisos necesarios. Si lo suscribes sin permisos, probablemente no pueda completar la automatización.
+
+## Dónde se crean
+
+Abre **Ajustes → Automatizaciones**. La pantalla tiene dos pestañas:
+
+- **Periódicas**: automatizaciones que se ejecutan en una frecuencia de calendario.
+- **Por eventos**: suscripciones que se ejecutan cuando Bold publica un evento compatible.
+
+Gestionar automatizaciones requiere rol de administrador.
+
+## Crear una automatización periódica
 
 <Steps>
+  <Step title="Abre Automatizaciones → Periódicas">
+    Pulsa **Crear automatización periódica**.
+  </Step>
+  <Step title="Elige el agente">
+    Selecciona un agente personalizado con permisos para los módulos que necesita la tarea.
+  </Step>
   <Step title="Describe la tarea">
-    Escribe qué debe revisar o hacer el agente y qué resultado esperas.
+    Escribe instrucciones claras: objetivo, alcance, filtros, periodo y formato de resultado esperado.
   </Step>
-  <Step title="Define disparador">
-    Elige si se ejecuta por calendario, por evento o de forma manual.
-  </Step>
-  <Step title="Acota el alcance">
-    Indica módulos, filtros, periodo, clientes, artículos, órdenes o condiciones.
-  </Step>
-  <Step title="Configura permisos">
-    Revisa qué datos puede leer y qué acciones puede ejecutar.
+  <Step title="Configura la frecuencia">
+    Define frecuencia (diaria, semanal, mensual, trimestral, semestral o anual), horas de ejecución, zona horaria y reglas adicionales de calendario.
   </Step>
   <Step title="Haz una prueba">
     Ejecuta con un caso controlado antes de activar el flujo recurrente.
@@ -38,15 +49,53 @@ Comprueba que la tarea:
   </Step>
 </Steps>
 
+Cada ejecución crea una tarea con origen `Por calendario`.
+
+## Crear una automatización por evento
+
+<Steps>
+  <Step title="Abre Automatizaciones → Por eventos">
+    Pulsa **Crear automatización por evento**.
+  </Step>
+  <Step title="Elige el agente">
+    Selecciona un agente personalizado. Si no tiene permisos asignados, el formulario te avisa.
+  </Step>
+  <Step title="Selecciona el evento">
+    El selector lista el catálogo de eventos disponibles para suscripción, con nombre y versión. Son los mismos eventos que Bold publica para avisos externos y notificaciones.
+  </Step>
+  <Step title="Añade condiciones (opcional)">
+    Usa el editor de condiciones para escribir una fórmula booleana sobre el payload del evento. Sin condición, el agente se ejecuta cada vez que ocurra el evento. Con condición, sólo cuando la fórmula se cumpla.
+  </Step>
+  <Step title="Activa la suscripción">
+    Guarda la automatización. Cada vez que Bold publique el evento y la condición se cumpla, se crea una tarea con origen `Por evento` y el payload del evento queda disponible en sus instrucciones.
+  </Step>
+  <Step title="Revisa primeras ejecuciones">
+    Comprueba que la condición filtra como esperas y ajusta si genera ruido.
+  </Step>
+</Steps>
+
+### Escribir la condición
+
+El editor de condiciones encadena bloques sobre las propiedades del payload del evento seleccionado. Cada bloque compara una propiedad (texto, número, booleano, fecha o enumerado) con un valor y se combina con otros bloques usando operadores lógicos.
+
+| Caso | Condición útil |
+| --- | --- |
+| Sólo órdenes urgentes | `priority` igual a `High`. |
+| Sólo recepciones con incidencia | `hasIncident` igual a verdadero. |
+| Sólo un cliente concreto | `customerId` igual al identificador. |
+| Sólo si el importe supera un umbral | `amount` mayor que `1000`. |
+
+Cuando una propiedad no existe en el evento, la fórmula no es válida y la suscripción no se puede guardar.
+
 ## Ejemplos útiles
 
-| Automatización | Resultado esperado |
-| --- | --- |
-| Revisar pedidos con riesgo de retraso | Lista priorizada con causa probable. |
-| Detectar stock negativo diario | Incidencias por artículo, lote y ubicación. |
-| Resumir paradas de la semana | Motivos principales y operaciones afectadas. |
-| Revisar recepciones pendientes | Pedidos atrasados por proveedor. |
-| Preparar informe de coste | Desviaciones destacadas por orden o parte. |
+| Automatización | Tipo | Resultado esperado |
+| --- | --- | --- |
+| Revisar pedidos con riesgo de retraso | Periódica | Lista priorizada con causa probable. |
+| Detectar stock negativo diario | Periódica | Incidencias por artículo, lote y ubicación. |
+| Resumir paradas de la semana | Periódica | Motivos principales y operaciones afectadas. |
+| Reaccionar a un pedido nuevo de un cliente clave | Por evento | Resumen y comprobación de disponibilidad. |
+| Analizar una recepción con incidencia | Por evento | Causa probable y siguientes pasos. |
 
 <Tip>
   Empieza con automatizaciones de lectura y análisis. Añade acciones que modifican datos solo cuando el criterio esté probado.
@@ -57,4 +106,5 @@ Comprueba que la tarea:
 - [Automatizaciones](/es/conceptos/smart-factory/automatizaciones)
 - [Tareas con agentes](/es/conceptos/smart-factory/tareas)
 - [Consultar o delegar con IA](/es/ayuda/smart-factory/consultar-o-delegar-con-ia)
+- [Claves de integración y avisos externos](/es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos)
 - [Auditoría y eventos](/es/conceptos/panel-de-control/auditoria-y-eventos)
