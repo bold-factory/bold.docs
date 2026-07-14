@@ -9,19 +9,19 @@ Una receta no ejecuta trabajo por sí sola, se usa como molde para crear **Órde
 
 ## Pasos a seguir
 
-**Fabricación \> Recetas** 
+**Fabricación \> Recetas**
 
 ### **1. Añadir Nueva Receta**
 
-**Producto:** selecciona el producto del cual quieras elaborar su receta.  
+**Producto:** selecciona el producto del cual quieras elaborar su receta.
 
-**Nombre:** Bold al seleccionar un producto, automáticamente asocia el nombre de la receta a ese producto, pero en caso de que hayan dos maneras de hacer ese producto lo puedes cambiar para identificarlos. 
+**Nombre:** Bold al seleccionar un producto, automáticamente asocia el nombre de la receta a ese producto, pero en caso de que hayan dos maneras de hacer ese producto lo puedes cambiar para identificarlos.
 
 ### 2. Añadir Versión
 
-**Nombre:** automáticamente Bold pone la fecha en la que lo estas creando para tener constancia, pero se le puede poner un nombre diferente. 
+**Nombre:** automáticamente Bold pone la fecha en la que lo estas creando para tener constancia, pero se le puede poner un nombre diferente.
 
-###  3. Hacer diagrama de operaciones
+### 3. Hacer diagrama de operaciones
 
 Antes de empezar, es importante tener en cuenta que, aunque Bold te permite añadir bloques en cualquier orden y moverlos libremente por el lienzo, el método más rápido y limpio para organizar tu diagrama visual es **construirlo en el mismo orden en que se fabrica el producto en la realidad**.
 
@@ -29,17 +29,17 @@ Antes de empezar, es importante tener en cuenta que, aunque Bold te permite aña
 
 Completa los siguientes campos:
 
-**Proceso principal:** selecciona uno de los procesos ya definidos anteriormente. 
+**Proceso principal:** selecciona uno de los procesos ya definidos anteriormente.
 
 **Nombre de la operación:** coloca un nombre específico de este paso dentro de esta receta concreta. Tienes la opción de copiar el nombre del proceso para no tener que reescribirlo en la parte derecha del recuadro.
 
 **Personas necesarias:** número exacto de operarios que se necesitan trabajando a la vez en la estación para ejecutar esta tarea.
 
-**Herramienta auxiliar (opcional):** selecciona si la tarea lo requiere el molde, matriz, utillaje o broca específica para hacer esta operación.  
+**Herramienta auxiliar (opcional):** selecciona si la tarea lo requiere el molde, matriz, utillaje o broca específica para hacer esta operación.
 
 - Conecta los bloques de operaciones:
 
-Para relacionar una operación con otra tienes dos opciones para hacerlo. La primera se hace arrastrando el punto inferior del primer bloque con el superior del siguiente. Te aparecerá un cuadro para que decidas que tipo de restricción quieres que haya entre ellas. 
+Para relacionar una operación con otra tienes dos opciones para hacerlo. La primera se hace arrastrando el punto inferior del primer bloque con el superior del siguiente. Te aparecerá un cuadro para que decidas que tipo de restricción quieres que haya entre ellas.
 
 **No bloqueante:** marca una precedencia recomendada, pero permite continuar aunque la anterior no haya terminado.
 
@@ -47,7 +47,7 @@ Para relacionar una operación con otra tienes dos opciones para hacerlo. La pri
 
 **Total:** la siguiente operación espera a que la anterior termine por completo.
 
-La otra opción es haciendo clic en "**\+ AÑADIR RESTRICCIÓN**", se abrirá una ventana donde deberás indicar tres datos: 
+La otra opción es haciendo clic en "**\+ AÑADIR RESTRICCIÓN**", se abrirá una ventana donde deberás indicar tres datos:
 
 **Operación de origen (La que restringe):** selecciona la tarea que va primero en el tiempo.
 
@@ -56,14 +56,14 @@ La otra opción es haciendo clic en "**\+ AÑADIR RESTRICCIÓN**", se abrirá un
 **Tipo de restricción:** elige el comportamiento que deseas para este flujo (Total, Parcial o No bloqueante).
 
 <Tip>
-  Para borrar una restricción, haz clic derecho encima de la línea del diagrama y confirma si estas seguro de eliminarlo. 
+  Para borrar una restricción, haz clic derecho encima de la línea del diagrama y confirma si estas seguro de eliminarlo.
 </Tip>
 
-- **Activar versión:** sirve para cuando termines de hacer la receta, que ya no se pueda modificar ningún detalle de esta versión. Evita que un supervisor o planificador altere por error una hoja de ruta a mitad de la semana, lo que provocaría que unos operarios fabricaran el producto de una forma y otros de otra. Si se necesita hacer un cambio en el futuro, la práctica correcta es crear una "Versión 2" nueva, dejando esta intacta. 
+- **Activar versión:** sirve para cuando termines de hacer la receta, que ya no se pueda modificar ningún detalle de esta versión. Evita que un supervisor o planificador altere por error una hoja de ruta a mitad de la semana, lo que provocaría que unos operarios fabricaran el producto de una forma y otros de otra. Si se necesita hacer un cambio en el futuro, la práctica correcta es crear una "Versión 2" nueva, dejando esta intacta.
 
 ## Casos donde la receta se tiene que dividir en dos
 
-En algunos casos, dependiendo el proceso de fabricación de un producto. Es necesario **añadir condiciones** en una receta cuando una propiedad cambia tanto el proceso que resulta más claro tener recetas separadas. 
+En algunos casos, dependiendo el proceso de fabricación de un producto. Es necesario **añadir condiciones** en una receta cuando una propiedad cambia tanto el proceso que resulta más claro tener recetas separadas.
 
 > **Ejemplo:** fabricas el modelo "Bici Pro" y la propiedad que cambia es el **Material del Cuadro**: el cliente puede elegir entre **Aluminio** o **Fibra de Carbono**. Esto lo cambia absolutamente todo en la fábrica:
 >
@@ -74,30 +74,27 @@ En algunos casos, dependiendo el proceso de fabricación de un producto. Es nece
 
 **Fabricación \> Recetas \> Receta creada**
 
-Desde el diagrama entra al bloque de operación donde se tenga que aplicar la condición. 
+Desde el diagrama entra al bloque de operación donde se tenga que aplicar la condición.
 
 **1. \+ AÑADIR CONDICIÓN**:
 
 **Origen:** es la regla que va a desviar o alterar la receta, puede ser por:
 
-- **<u>Propiedad</u>:** variantes del propio producto. Ejemplo: material, tamaño, voltaje, etc. 
-
-- **<u>Contexto de la OF</u>:** se activa cuando el producto es exactamente el mismo, pero lo que cambia son los datos administrativos, logísticos o las urgencias de ese pedido en particular. 
+- **<u>Propiedad</u>:** variantes del propio producto. Ejemplo: material, tamaño, voltaje, etc.
+- **<u>Contexto de la OF</u>:** se activa cuando el producto es exactamente el mismo, pero lo que cambia son los datos administrativos, logísticos o las urgencias de ese pedido en particular.
 
 **Campo:** eliges qué dato de la orden va a leer el sistema. Ejemplo: notas de la OF, código de la OF, cantidad de la OF, etc.
 
-**Operador:** dispones de 5 opciones lógicas para capturar información clave. 
+**Operador:** dispones de 5 opciones lógicas para capturar información clave.
 
-- **Igual a:**  la condición se cumplirá **únicamente** cuando el valor del producto coincida de forma exacta con el valor que escribas. 
-
+- **Igual a:**  la condición se cumplirá **únicamente** cuando el valor del producto coincida de forma exacta con el valor que escribas.
 - **Distinto de:** la condición se cumplirá en **cualquier caso, excepto** cuando el producto tenga el valor indicado.
-
 - **Contiene** (El más recomendado para Notas): la condición se cumple si la palabra que buscas **aparece en cualquier parte** del comentario, sin importar lo largo que sea el texto. _Ejemplo:_ Buscas la palabra `Frágil`. Si el administrativo escribió en la OF: _"Cliente nuevo, asegurar bien las esquinas porque el material es Frágil y se rompe"_, Bold detectará la palabra y activará automáticamente la operación especial de embalaje reforzado.
-
 - **Empieza por:** La condición se activa solo si el texto o código arranca con esos caracteres. Es ideal si usas plantillas de notas o códigos estandarizados. _Ejemplo:_ Si las notas de exportación siempre empiezan por `EXP-` (ej: `EXP-Francia`), configuras _Empieza por: EXP-_ y el sistema sabrá que es un proceso internacional.
-
 - **Termina por:** La condición se activa si el texto finaliza con esos caracteres exactos. _Ejemplo:_ Útil si tus operarios o sistemas cierran las notas con etiquetas como `-OK` o `-REVISADO`.
 
 **Valor/Opción:** es el **dato concreto, texto o número exacto** que el sistema va a buscar dentro de la ficha del producto para verificar si la condición se cumple o no.
 
 ### Siguiente paso
+
+- Especificar materiales, pasos y controles de cada operación de fabricación
