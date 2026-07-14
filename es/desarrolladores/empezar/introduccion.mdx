@@ -15,30 +15,39 @@ La API de Bold permite leer y actualizar datos operativos desde sistemas externo
   <Card title="Datos maestros" icon="boxes">
     Productos, artículos, propiedades, variantes y unidades.
   </Card>
+
   <Card title="Almacén" icon="warehouse">
     Ubicaciones, lotes, recepciones, envíos, inventarios y stock.
   </Card>
+
   <Card title="Planificación" icon="calendar-range">
     Demanda, suministro, stock proyectado, clientes y proveedores.
   </Card>
+
   <Card title="Producción" icon="factory">
     Recetas, versiones, órdenes, operaciones, recursos y ejecución.
   </Card>
+
   <Card title="Personas y permisos" icon="users">
     Usuarios, perfiles, empleados, jornadas, calendarios, turnos y tareas.
   </Card>
+
   <Card title="Mantenimiento" icon="wrench">
     Activos, acciones, causas, partes de trabajo, tiempos, materiales y preventivos.
   </Card>
+
   <Card title="Compras y ventas" icon="shopping-cart">
     Pedidos de compra, pedidos de venta, recepciones, envíos y líneas.
   </Card>
+
   <Card title="Notificaciones" icon="bell">
     Eventos, suscripciones personales, bandeja de app y lectura de avisos.
   </Card>
+
   <Card title="Analítica" icon="chart-no-axes-combined">
     Informes Power BI integrados, credenciales de apertura, duplicación y creación de informes.
   </Card>
+
   <Card title="Etiquetas" icon="tag">
     Plantillas, elementos de diseño y generación de documentos PDF.
   </Card>
@@ -77,10 +86,16 @@ Para integraciones críticas, combina webhooks con reconciliaciones paginadas. E
 
 <Steps>
   <Step title="Crea una clave API">
-    Crea una clave desde **Panel de control > Acceso > Claves API**. Usa una clave distinta por integración para poder revocarla sin afectar otros sistemas.
+    Crea una clave desde **Panel de control \> Acceso \> Claves API**. Usa una clave distinta por integración para poder revocarla sin afectar otros sistemas.
+  </Step>
+  <Step title="Prueba lectura antes de escribir">
+    Empieza con endpoints `GET` para validar autenticación, tenant, permisos y paginación.
   </Step>
   <Step title="Prueba lectura antes de escribir">
     Empieza con rutas `GET` para validar autenticación, organización, permisos y paginación.
+  </Step>
+  <Step title="Sincroniza identificadores">
+    Guarda las referencias de Bold que devuelven los endpoints. Evita depender solo de nombres visibles, porque los nombres pueden cambiar.
   </Step>
   <Step title="Sincroniza identificadores">
     Guarda las referencias de Bold que devuelven las rutas. Evita depender solo de nombres visibles, porque los nombres pueden cambiar.

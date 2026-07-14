@@ -5,45 +5,34 @@ description: "Gestiona empleados, jornadas, calendarios y turnos para coordinar 
 
 El módulo Personal mantiene empleados y programación básica para fabricación, mantenimiento y análisis de productividad.
 
-## Áreas de trabajo
-
-<Columns cols={2}>
-  <Card title="Empleados" icon="user-round" href="/es/ayuda/personal/empleados">
-    Mantén las personas operativas que registran trabajo, tiempos o asignaciones.
-  </Card>
-  <Card title="Horarios y turnos" icon="calendar-clock" href="/es/ayuda/personal/configurar-horarios-y-turnos">
-    Configura jornadas, calendarios locales y turnos para alimentar capacidad.
-  </Card>
-</Columns>
-
 ## Orden recomendado
 
-<Steps>
-  <Step title="Crea empleados">
-    Registra las personas que participan en producción, mantenimiento o costes.
-  </Step>
-  <Step title="Define jornadas">
-    Crea horarios base antes de programar turnos.
-  </Step>
-  <Step title="Añade calendarios locales">
-    Aplica festivos, cierres y excepciones por centro o equipo.
-  </Step>
-  <Step title="Programa turnos">
-    Relaciona empleados, jornadas y calendarios para alimentar capacidad y seguimiento.
-  </Step>
-</Steps>
+### 1. Dar de alta un empleado
 
-## Antes de empezar
+Registra las personas que participan en producción, mantenimiento o costes.
 
-Decide si una persona necesita usuario de acceso, empleado operativo o ambos. Un usuario gestiona permisos; un empleado registra trabajo y costes.
+### 2. Definir jornadas
 
-## Conceptos relacionados
+Crea horarios base antes de programar turnos.
 
-<Columns cols={2}>
-  <Card title="Referencia de personal" icon="book-open" href="/es/conceptos/personal">
-    Entiende usuarios, perfiles, empleados, jornadas, calendarios y turnos.
-  </Card>
-  <Card title="perfiles y permisos" icon="shield-check" href="/es/conceptos/panel-de-control/usuarios-roles-y-permisos">
-    Configura el acceso antes de invitar a nuevas personas.
-  </Card>
-</Columns>
+### 3. Programar turnos
+
+Define la jornada laboral, los días consecutivos y su posición en la secuencia.
+
+### 4. Añadir calendarios locales
+
+Aplica festivos, cierres y excepciones por centro o equipo.
+
+### 5. Configurar horario de empleados
+
+Define jornadas, calendarios locales y turnos para planificar capacidad y registrar trabajo.
+
+DUDA: 
+
+## Prioridad de programación
+
+La programación efectiva de un empleado se resuelve con esta prioridad:
+
+1. Asignación explícita para una fecha concreta.
+2. Excepción del calendario local.
+3. Patrón repetitivo del turno.

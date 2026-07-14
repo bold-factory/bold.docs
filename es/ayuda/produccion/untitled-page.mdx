@@ -1,0 +1,74 @@
+---
+title: "Especificar materiales, tareas y controles de cada paso de fabricación"
+---
+
+Definir con precisión cada operación de tu receta es el paso más crítico para convertir Bold en el verdadero cerebro de tu producción. En este apartado estructuraremos cada fase del proceso a través de sus tres pilares esenciales: **qué entra y sale** (materias primas, semielaborados y coproductos), **cómo se ejecuta** (pasos, tiempos y condiciones) y **cómo se valida** (controles de calidad). Este nivel de detalle es lo que permite al sistema automatizar el descuento de stock en tiempo real, retener el conocimiento técnico en la planta para que cualquier operario trabaje como un experto y, sobre todo, cruzar datos para calcular el margen de beneficio y el coste real de cada lote fabricado.
+
+## Operaciones donde entran materiales
+
+Representa el punto de partida físico y digital de cualquier línea de producción. Al especificar qué materiales exactos se introducen en la entrada de la máquina al arrancar la operación, **Bold** vincula de forma automática el consumo físico con el registro digital. Esto significa que en el instante exacto en que el operario alimenta la máquina, el sistema activa el inicio del proceso, comienza a medir los tiempos de ejecución y descuenta el stock del almacén en tiempo real, eliminando los descuadres manuales de inventario desde el minuto uno.
+
+**Fabricación \> Versión Activa \> Operación**
+
+**1. \+AÑADIR MP (Materia Prima):** es todo material en estado puro o bruto que compras a un proveedor externo y que entra directamente a la primera línea de producción sin haber sufrido ninguna transformación dentro de tu fábrica.
+
+**Artículo:** es un menú desplegable donde debes seleccionar el ingrediente o la materia prima específica que vas a incorporar a la receta.
+
+**Cantidad/unidad fabricada:** define el consumo por cada unidad fabricada y debe ingresarse usando el punto como separador decimal. Además, el botón \+ permite estructurar fórmulas matemáticas (utilizando sumas, restas, multiplicaciones, divisiones y paréntesis) basadas en propiedades numéricas, las cuales el sistema Bold sustituirá automáticamente por el valor real del artículo final al generar la orden de fabricación.
+
+**Momento de consumo:** te permite elegir el comportamiento del inventario o del proceso con dos opciones:
+
+- **Al final:** el ingrediente se consume por completo al terminar la operación.
+- **Cada unidad:** el consumo se calcula de forma proporcional y constante por cada unidad individual que se va fabricando (es la opción seleccionada por defecto).
+
+> **Ejemplo:** añadiendo el queso (Consumo por pieza individual)
+>
+> - **Artículo:** seleccionas _Queso Mozzarella Rallado_ en el menú desplegable.
+> - **Cantidad/unidad fabricada:** introduces `0.15` (indicando que cada pizza individual requiere 0.15 kg o 150 gramos de queso).
+> - **Momento de consumo:** eliges **Cada unidad**. El sistema descontará del inventario 150 gramos de mozzarella de forma progresiva cada vez que la línea de producción termine una pizza.
+
+**2.\+AÑADIR SEMIELABORADOS:** es un producto que ya ha sido transformado por alguna de tus máquinas, pero que aún no está terminado ni listo para vender al cliente final. Es el resultado de una operación que sirve obligatoriamente como "ingrediente" para la siguiente fase.
+
+**3.\+AÑADIR COPRODUCTOS:** es un producto secundario que se genera de forma automática e inevitable durante el proceso de fabricación del producto principal, pero que **tiene un valor económico** porque se puede vender a otra industria o reutilizar internamente.
+
+### **¿Para qué sirve añadir condiciones a las entradas?**
+
+Añade condiciones a una entrada cuando un material solo se consume para algunas variantes del artículo fabricado.
+
+Por ejemplo, si el color del producto determina qué pintura se usa, puedes crear una entrada para pintura roja y otra para pintura azul, condicionando cada una al valor correspondiente de la propiedad **Color**.
+
+Así, cada orden de fabricación incluirá solo los materiales que aplican a su artículo concreto.
+
+## Cómo se ejecuta una operación
+
+**1.\+AÑADIR PASO:** los **pasos** describen al operario qué debe hacer dentro de una operación.
+
+Un paso puede ser una instrucción puntual, como preparar una máquina, o una acción repetitiva, como realizar una comprobación por cada unidad.
+
+Los pasos pertenecen a una operación y pueden ejecutarse al comienzo, al final o según la cantidad producida, dependiendo de su configuración.
+
+**Nombre:** escribe una frase corta, clara y que empiece por un verbo de acción (ej. _"Limpiar matriz"_, _"Verter aditivo"_, _"Troquelar plancha"_).
+
+**¿Cuántas veces hay que ejecutar este paso?**
+
+Una orden de fabricación puede producir una unidad o muchas. El momento de ejecución indica si el paso se realiza una sola vez o se repite según la cantidad.
+
+- **Al comienzo**: preparación de máquina, carga inicial o revisión previa. (ej. _"Precalentar el horno a 180°C"_ o _"Montar el molde en la prensa"_).
+- **Cada unidad**: acciones repetitivas que dependen de la cantidad producida. (ej. _"Pulir bordes de la pieza"_ o _"Verificar el peso de la unidad"_).
+
+**Instrucciones:** es el espacio donde el manual de operaciones tradicional se convierte en una herramienta digital e interactiva para el operario. En lugar de ser un simple texto estático, **Bold** permite combinar cuatro elementos clave dentro de este mismo cuadro para estandarizar el trabajo, eliminar el papel y capturar datos en tiempo real:
+
+- **Texto técnico y de seguridad:** es la base del paso. Aquí se redacta el procedimiento detallado, los parámetros obligatorios de la máquina (ej. _Ajustar presión a 4 bar_) o las advertencias de seguridad críticas para el operario.
+- **Soporte visual (Botón "Subir Archivo"):** permite adjuntar planos en PDF, fichas técnicas o fotografías del acabado correcto. El operario visualiza estos archivos directamente en su pantalla o tablet, garantizando que siempre trabaje con la última versión aprobada y libre de errores.
+- **Recogida de datos (Icono** `+ `**Nuevo Atributo):** transforma la instrucción en un formulario dinámico. Al insertar un atributo (numérico, texto o casilla de verificación), obligas al operario a registrar un valor real medido en planta (ej. la temperatura de la máquina, el número de lote del proveedor o un check visual de conformidad) antes de permitirle avanzar al siguiente paso.
+- **Cálculos en tiempo real (Icono** `Σ `**Fórmula):** permite introducir operaciones matemáticas automáticas basadas en los atributos que el operario acaba de rellenar. El sistema hace los cálculos de forma instantánea en la pantalla, eliminando el uso de calculadoras físicas en la planta y evitando fallos humanos en mediciones críticas (ej. calcular el peso neto restando la tara).
+
+**Duración:** pon el tiempo estimado estándar (en minutos) que se tarda en realizar este paso. Si es un paso por unidad y tarda 30 segundos, puedes poner 0.5.
+
+### **¿Para qué sirve añadir condiciones a los pasos?**
+
+Añade condiciones a un paso cuando solo debe aparecer para algunas variantes del artículo fabricado.
+
+Por ejemplo, si un acabado requiere un tratamiento adicional, puedes crear ese paso y condicionarlo a la propiedad **Acabado**.
+
+Cuando la orden sea de un artículo que cumple la condición, el paso aparecerá. En el resto de órdenes no formará parte de la ejecución.

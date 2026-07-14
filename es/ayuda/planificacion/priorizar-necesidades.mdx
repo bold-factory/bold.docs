@@ -1,9 +1,11 @@
 ---
-title: "Priorizar necesidades"
-description: "Ordena qué comprar o fabricar según urgencia, stock proyectado y compromisos reales."
+title: "Asistente de fabricación"
+description: "Distingue urgencias reales de sugerencias que pueden esperar, agruparse o descartarse."
 ---
 
-Prioriza necesidades antes de lanzar compras o fabricación. El objetivo es distinguir urgencias reales de sugerencias que pueden esperar, agruparse o descartarse.
+Te ayuda a revisar las necesidades por período, consultar histórico y convertir una o varias sugerencias en **Peticiones de fabricación**.
+
+La recomendación no ejecuta producción por sí sola. La fabricación empieza a tomar forma operativa cuando se crea la petición y, después, una o varias **Órdenes de fabricación**.
 
 ## Cuándo usar esta guía
 
@@ -14,46 +16,47 @@ Usa este flujo cuando:
 - quieres revisar una previsión antes de comprometer compras o producción;
 - tienes varias recomendaciones y necesitas decidir por dónde empezar.
 
-## Revisión diaria
+## De recomendación a petición
+
+Entra en **Planificación \> Asistente de fabricación**.
 
 <Steps>
-  <Step title="Filtra por fecha">
-    Empieza por necesidades vencidas o con fecha más cercana. Revisa si tienen cliente, pedido o previsión asociada.
+  <Step title="Revisa artículos y fechas">
+    Identifica qué artículos necesitan fabricación y para cuándo.
   </Step>
-  <Step title="Compara stock físico y proyectado">
-    Confirma si el problema viene de una falta física, de demanda futura o de suministro no registrado.
+  <Step title="Consulta entradas necesarias">
+    Revisa componentes críticos si la fabricación depende de materiales con poco stock.
   </Step>
-  <Step title="Comprueba suministro existente">
-    Busca pedidos de compra, recepciones, peticiones u órdenes que ya cubran parte de la necesidad.
+  <Step title="Ajusta cantidades">
+    Aplica tamaño de lote, mínimos o decisiones de planificación.
   </Step>
-  <Step title="Clasifica por origen">
-    Separa artículos de compra, fabricación y aprovisionamiento mixto antes de crear documentos.
-  </Step>
-  <Step title="Agrupa decisiones">
-    Junta necesidades compatibles por proveedor, familia, recurso, fecha o lote económico.
-  </Step>
-  <Step title="Crea solo lo necesario">
-    Convierte en pedido de compra o petición de fabricación lo que ya tenga decisión clara.
+  <Step title="Crea peticiones">
+    Convierte las recomendaciones seleccionadas en peticiones de fabricación.
   </Step>
 </Steps>
 
-## Señales de prioridad
+## Petición frente a orden
 
-| Señal | Acción recomendada |
-| --- | --- |
-| Stock proyectado negativo | Revisa si falta entrada real o si debes comprar o fabricar. |
-| Fecha vencida | Comprueba compromiso con cliente y capacidad de recuperación. |
-| Pedido de venta confirmado | Prioriza sobre demanda no confirmada o previsión flexible. |
-| Componente crítico | Revisa impacto sobre órdenes de fabricación abiertas. |
-| Proveedor con plazo largo | Lanza compra antes de que la falta sea visible en planta. |
+Una **Petición de fabricación** indica qué se necesita fabricar, cantidad y fecha. Todavía no decide cómo se ejecutará.
 
-<Warning>
-  No conviertas todas las recomendaciones de forma automática. Agrupar sin revisar puede generar exceso de stock, compras duplicadas o fabricación sin capacidad real.
-</Warning>
+Una **Orden de fabricación** es el trabajo ejecutable con operaciones, entradas, pasos, controles y progreso.
 
-## Siguiente paso
+<Info>
+  La fabricación empieza a tener forma operativa cuando creas peticiones y después una o varias órdenes de fabricación.
+</Info>
 
-- [Saber qué comprar](/es/ayuda/planificacion/saber-que-comprar)
+## Si no aparece una necesidad
+
+Revisa que:
+
+- el artículo tenga origen de aprovisionamiento **Fabricación**;
+- el modo sea **Contra stock**;
+- el stock proyectado caiga por debajo del punto de pedido;
+- exista una receta válida si necesitas lanzar órdenes después;
+- las fechas de demanda y suministro sean correctas.
+
+## Siguientes pasos
+
+- Asistente de compras
 - [Saber qué fabricar](/es/ayuda/planificacion/saber-que-fabricar)
-- [Crear pedido de compra](/es/ayuda/compras/crear-pedido-de-compra)
 - [Crear una orden de fabricación](/es/ayuda/produccion/crear-una-orden-de-fabricacion)

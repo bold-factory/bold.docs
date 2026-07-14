@@ -1,68 +1,21 @@
 ---
-title: "Saber qué fabricar"
-description: "Usa el Asistente de fabricación para convertir necesidades en peticiones de fabricación."
+title: "Realizar pedidos de compra"
+description: "Planificación > Asistente de compras > Proveedor"
 ---
 
-El **Asistente de fabricación** agrupa necesidades de fabricación sugeridas por Bold antes de convertirlas en **Peticiones de fabricación**.
+Un **Pedido de compra** convierte una necesidad de aprovisionamiento en una transacción de compra.
 
-Aparecen aquí los artículos configurados con origen **Fabricación** y modo **Contra stock** cuando el stock proyectado cae por debajo del punto de pedido.
+### Generar pedido
 
-## Qué tiene en cuenta
+Al hacer clic, la compra se formaliza de inmediato y el pedido queda registrado en estado **"Pendiente de recibir"**. Esto activa dos fases automáticas:
 
-Bold puede revisar:
+- **Administrativa:** Se queda a la espera de que el proveedor confirme y acepte la orden.
+- **Logística:** Se inicia la cuenta atrás para la llegada física de la mercancía al almacén.
 
-- stock actual;
-- demanda y stock saliente;
-- stock entrante;
-- punto de pedido;
-- pedido mínimo;
-- tamaño de lote;
-- plazo de fabricación o planificación configurada;
-- necesidades urgentes y futuras.
+<Tip>
+  Si varias recomendaciones comparten proveedor y fechas cercanas, agrúpalas en un solo pedido para simplificar seguimiento.
+</Tip>
 
-## De recomendación a petición
+## Siguientes pasos
 
-<Steps>
-  <Step title="Abre el asistente">
-    Entra en **Planificación > Asistente de fabricación**.
-  </Step>
-  <Step title="Revisa artículos y fechas">
-    Identifica qué artículos necesitan fabricación y para cuándo.
-  </Step>
-  <Step title="Consulta entradas necesarias">
-    Revisa componentes críticos si la fabricación depende de materiales con poco stock.
-  </Step>
-  <Step title="Ajusta cantidades">
-    Aplica tamaño de lote, mínimos o decisiones de planificación.
-  </Step>
-  <Step title="Crea peticiones">
-    Convierte las recomendaciones seleccionadas en peticiones de fabricación.
-  </Step>
-</Steps>
-
-## Petición frente a orden
-
-Una **Petición de fabricación** indica qué se necesita fabricar, cantidad y fecha. Todavía no decide cómo se ejecutará.
-
-Una **Orden de fabricación** es el trabajo ejecutable con operaciones, entradas, pasos, controles y progreso.
-
-<Info>
-  La fabricación empieza a tener forma operativa cuando creas peticiones y después una o varias órdenes de fabricación.
-</Info>
-
-## Si no aparece una necesidad
-
-Revisa que:
-
-- el artículo tenga origen de aprovisionamiento **Fabricación**;
-- el modo sea **Contra stock**;
-- el stock proyectado caiga por debajo del punto de pedido;
-- exista una receta válida si necesitas lanzar órdenes después;
-- las fechas de demanda y suministro sean correctas.
-
-## Relacionado
-
-- [Política de aprovisionamiento](/es/conceptos/planificacion/politica-de-aprovisionamiento)
-- [Crear una orden de fabricación](/es/ayuda/produccion/crear-una-orden-de-fabricacion)
-- [Ejecutar operaciones en planta](/es/ayuda/produccion/ejecutar-operaciones-en-planta)
-- [Secuenciar órdenes](/es/ayuda/produccion/secuenciar-ordenes)
+- Recibir pedido de compra

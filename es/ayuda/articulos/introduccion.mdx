@@ -5,51 +5,22 @@ description: "Crea productos, artículos, propiedades y variantes antes de opera
 
 Preparar catálogo define qué compras, almacenas, fabricas y vendes. Si el catálogo está bien modelado, el resto de módulos pueden usar los mismos artículos sin duplicar referencias.
 
-## Entradas principales
+## Pasos a seguir
 
-<Columns cols={2}>
-  <Card title="Productos" icon="package-open" href="/es/ayuda/articulos/crear-un-producto">
+<Card title="1. Definir Propiedades" icon="list-filter" href="/es/conceptos/catalogo/propiedades">
+  Definen variantes como color, medida, material, acabado o formato.
+</Card>
+
+<Columns cols={1}>
+  <Card title="2. Crear Productos" icon="package-open" href="/es/ayuda/articulos/crear-un-producto">
     Agrupan artículos similares de una misma familia comercial o técnica.
   </Card>
-  <Card title="Artículos" icon="barcode" href="/es/ayuda/articulos/crear-un-articulo">
-    Representan la unidad física sobre la que controel stock, compras, fabricación y ventas.
+
+  <Card title="3. Crear Artículos" icon="barcode" href="/es/ayuda/articulos/crear-un-articulo">
+    Representan la unidad física sobre la que controlas el stock, compras, fabricación y ventas.
   </Card>
-  <Card title="Propiedades" icon="list-filter" href="/es/conceptos/catalogo/propiedades">
-    Definen variantes como color, medida, material, acabado o formato.
-  </Card>
-  <Card title="Lotes" icon="scan-line" href="/es/conceptos/almacen/lotes">
+
+  <Card title="4. Lotes" icon="scan-line" href="/es/conceptos/almacen/lotes">
     Consulta cuándo necesitas trazabilidad por compra, fabricación, origen, coste o calidad.
-  </Card>
-</Columns>
-
-## Orden recomendado
-
-<Steps>
-  <Step title="Define propiedades reutilizables">
-    Crea las propiedades que explican tus variantes antes de cargar muchos artículos.
-  </Step>
-  <Step title="Crea productos">
-    Usa productos para agrupar familias con variantes comunes.
-  </Step>
-  <Step title="Crea artículos operativos">
-    Cada artículo debe poder comprarse, almacenarse, consumirse, fabricarse o venderse sin ambigüedad.
-  </Step>
-  <Step title="Activa lotes solo donde aporten trazabilidad">
-    Usa lotes cuando necesites auditoría, calidad, caducidad, origen o coste independiente.
-  </Step>
-</Steps>
-
-## Antes de operar
-
-Revisa nombres, códigos, unidad de medida, origen de aprovisionamiento, lotes, proveedor preferente y relación con recetas. Cambiar datos maestros después de crear movimientos puede quedar limitado por trazabilidad.
-
-## Conceptos relacionados
-
-<Columns cols={2}>
-  <Card title="Referencia de catálogo" icon="book-open" href="/es/conceptos/catalogo">
-    Entiende productos, artículos, propiedades, variantes, lotes, validación y consolidación.
-  </Card>
-  <Card title="Reglas del catálogo" icon="shield-alert" href="/es/conceptos/catalogo">
-    Revisa qué cambios quedan protegidos cuando ya existe actividad histórica.
   </Card>
 </Columns>

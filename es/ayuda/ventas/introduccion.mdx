@@ -1,64 +1,52 @@
 ---
-title: "Pedidos"
-description: "Gestiona pedidos de cliente, líneas pendientes, disponibilidad y envíos."
+title: "Introducir pedidos"
+description: "Coordina pedidos de clientes, líneas pendientes, disponibilidad y envíos."
 ---
 
-**Pedidos** registra compromisos con clientes. Cada pedido genera demanda cuando confirmas sus líneas y puede terminar en uno o varios envíos.
+Consiste en registrar compromisos con clientes. Cada pedido genera demanda cuando confirmas sus líneas y puede terminar en uno o varios envíos.
 
-## Áreas del flujo
+## Crear un pedido
 
-<Columns cols={2}>
-  <Card title="Cliente" icon="user-round">
-    Persona o empresa que solicita artículos en una cantidad y fecha.
-  </Card>
-  <Card title="Pedido" icon="file-text" href="/es/ayuda/ventas/crear-pedido-de-venta">
-    Cabecera con cliente, código, notas y líneas de artículos.
-  </Card>
-  <Card title="Línea de pedido" icon="list">
-    Define artículo, cantidad, fecha esperada y estado de entrega.
-  </Card>
-  <Card title="Envío" icon="truck" href="/es/ayuda/ventas/preparar-y-registrar-envio">
-    Movimiento de salida que reduce stock y registra la expedición.
-  </Card>
-</Columns>
+Entra en **Planificación \> Pedidos de venta** 
 
-## Ciclo de vida de una línea
+### 1. Añade un nuevo pedido
 
-Una línea empieza como **Borrador no confirmado**. Mientras está en borrador, no genera demanda y puedes cambiar artículo, cantidad y modo de aprovisionamiento.
+**Número de pedido:** se puede usar la nomenclatura interna y actual de tu empresa, o automática, donde Bold asigna un código único, secuencial y libre de errores a cada pedido.
 
-Al confirmar una línea, Bold genera demanda. Después puede quedar **Pendiente**, **Parcialmente entregado**, **Entregado** o **Cancelada** según lo enviado.
+**Número de pedido del cliente: **tienes dos opciones; introducirlo manualmente utilizando los códigos que ya manejas en tu empresa, o dejar que Bold lo genere automáticamente cada vez que registres a un cliente nuevo.
 
-## Disponibilidad
+**Cliente:** puedes seleccionarlo de los ya registrados. 
 
-La línea puede mostrar disponibilidad con conceptos como:
+**Fecha pedido:** por defecto, Bold asigna **automáticamente la fecha del día actual**, pero tienes total libertad para modificarla manualmente si necesitas ingresar un registro que se te pasó hacer a tiempo. 
 
-- **Ya disponible**;
-- **Planificado**;
-- **Parcialmente planificado**;
-- **No planificado**.
+**Descripción corta:** este campo opcional funciona como una **etiqueta rápida** o **nota aclaratoria** que te permite identificar el propósito de la venta de un solo vistazo, sin necesidad de abrir el pedido y revisar todos los artículos que contiene.
 
-<Info>
-  La disponibilidad se calcula aparte del estado de entrega. Una línea puede estar pendiente, pero tener suministro planificado.
-</Info>
+**Adjuntar:** es una opción fundamental para **centralizar toda la documentación** de una compra en un solo lugar. **Ejemplo**: presupuestos, cotizaciones previas, fichas técnicas o planos del material. 
 
-## Flujo habitual
+**Notas:** sirve como un canal de **comunicación interna.** Es el lugar ideal para dejar comentarios, advertencias o recordatorios específicos que no caben en los campos estándar del sistema.
 
-<Steps>
-  <Step title="Crea el pedido">
-    Selecciona cliente, código, fechas y notas.
-  </Step>
-  <Step title="Añade líneas">
-    Indica artículos, cantidades y fechas esperadas.
-  </Step>
-  <Step title="Confirma demanda">
-    Confirma líneas cuando quieras que afecten a planificación.
-  </Step>
-  <Step title="Registra el envío">
-    Indica qué sale, desde qué ubicación y con qué lote cuando aplique.
-  </Step>
-</Steps>
+### 2. Añade líneas
+
+**Indica artículo:** selecciona el artículo que solicita el cliente del catálogo que tienes definido. 
+
+**Cantidad solicitada:** unidades demandadas. 
+
+**Fecha entrega solicitada:** es el día en que **tu cliente quiere recibir el producto terminado** en sus instalaciones. Si le das al check de comprometida, eso quiere decir, que **tú te comprometes formalmente** a entregarle el producto en esa fecha.
+
+**Notas: **nota **a nivel de artículo** sirve para dar instrucciones específicas sobre un material en concreto, sin que afecten al resto de la compra.
+
+**Adjuntar:** puedes asociar un documento, foto o plano que pertenece **única y exclusivamente a ese artículo concreto**, y no a todo el pedido en general.
+
+**Estado:** **Confirmado** o **Borrador**. El estado **Confirmado** indica que el cliente ya ha dado su visto bueno definitivo y el pedido entra oficialmente en la cola de producción. Por el contrario, el estado **Borrador** significa que el pedido aún se está negociando o completando; por lo tanto, no altera el inventario y permanece oculto para la planta de fabricación hasta que decidas activarlo, con opción de modificarlo. 
+
+**Aprovisionamiento:** Contra Stock o Contra Pedido. El primero, consiste en comprar y fabricar por adelantado basándose en previsiones de venta; busca tener el almacén siempre lleno para ofrecer una entrega inmediata al cliente. El segundo, el proceso se activa únicamente tras recibir un pedido en firme; elimina por completo los costes de almacenar sobrantes a cambio de un mayor tiempo de espera para la entrega.
+
+### Una vez tienes el pedido hecho: 
+
+Verás la tabla dónde pone **Líneas** con todos los artículos que hayas creado. 
+
+Su estado si esta confirmado puede quedar **Pendiente**, **Parcialmente entregado**, **Entregado** o **Cancelado** según lo enviado.
 
 ## Siguiente paso
 
-- [Crear pedido de venta](/es/ayuda/ventas/crear-pedido-de-venta)
-- [Preparar y registrar un envío](/es/ayuda/ventas/preparar-y-registrar-envio)
+- Asistente de fabricación 

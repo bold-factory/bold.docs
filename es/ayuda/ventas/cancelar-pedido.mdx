@@ -1,0 +1,39 @@
+---
+title: "Cancelar pedido"
+---
+
+Puedes cancelar un pedido entero o por artículos para un mismo cliente.
+
+Cuando configuras Bold, primero tienes que decidir como actuar en caso que se cancele un pedido una vez ya se mandó a la planta de fabricación.
+
+En la parte de **Configuración \> Cuenta: Configuración**
+
+En el apartado de **Peticiones de fabricación** puedes seleccionar como manejarlo:
+
+- **Bloquear siempre las órdenes asociadas:** Pase lo que pase, el sistema pone la orden de fabricación en "espera" o "congelada", sin importar si la producción ya había comenzado o si todavía estaba en cola.
+- **Cancelar siempre las órdenes asociadas:** El sistema destruye y da de baja la orden de producción de forma fulminante en el acto, esté en el estado en que esté.
+- **Cancelar si no han empezado; bloquear si ya han empezado:** la primera, la orden se **cancela** automáticamente. Desaparece de la lista de tareas de los operarios para no estorbar, ya que no se había gastado ni un céntimo en ella. En la segunda, la orden se **bloquea** (se congela a mitad de proceso). El sistema frena la máquina para que no se sigan gastando recursos, pero mantiene el registro vivo.
+
+### Cómo cancelar pedido entero
+
+**Planificación \> Pedidos de venta \> Pedido que deseas cancelar**
+
+En la parte inferior derecha tienes la opción de **Cancelar,** que dependiendo la configuración hecha previamente el sistema actuará de una manera u otra. 
+
+Este pedido quedará guardado como pedido cancelado en la tabla de **Pedidos de venta.** 
+
+### Cómo cancelar línea de pedido
+
+**Planificación \> Pedidos de venta \> Pedido \> Línea que deseas cancelar**
+
+En la parte inferior derecha tienes la opción de **Cancelar**.
+
+Si tienes más de un artículo en el pedido y no has cancelado todo, te seguirá apareciendo en la tabla de **Pedidos de venta** como pendiente de asignar. 
+
+### Cómo deshacer una cancelación 
+
+En cualquier momento se puede deshacer la cancelación, teniendo en cuenta que para deshacer un pedido tienes que entrar al artículo y hacer clic en **Deshacer Cancelación y Confirmar**. En el caso que haya más de un artículo, tendrás que entrar uno por uno a deshacer la cancelación. 
+
+## Edición y cancelación
+
+Si una línea ya empezó a entregarse, su edición y eliminación quedan limitadas para conservar trazabilidad.

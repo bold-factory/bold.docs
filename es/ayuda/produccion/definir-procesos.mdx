@@ -1,0 +1,54 @@
+---
+title: "Definir procesos"
+---
+
+Los **Procesos** son categorías reutilizables de trabajo productivo, como corte, montaje, soldadura, pintura o inspección.
+
+Sirven para conectar una operación de receta con los recursos capaces de realizarla. Una operación indica qué proceso necesita; Bold puede proponer o limitar las estaciones de trabajo compatibles con ese proceso.
+
+## Pasos a seguir
+
+**Fabricación \> Procesos \> Añadir Nuevo Tipo**
+
+**Nombre:** usar un nombre corto, claro y técnico que identifique de inmediato la acción global de transformación o el producto final que se obtiene.
+
+> **Ejemplo:** prensado, embalaje, perforación, control de calidad, etc. 
+
+**Descripción:** sirve para acotar técnicamente el alcance del proceso. Mientras que el nombre es genérico, la descripción detalla las tareas reales que ocurren dentro de él.
+
+> **Ejemplo:** proceso "unión de piezas" , sector textil.
+>
+> **Descripción:** confección y costura (remallado, pespunte plano) de los paneles frontales y traseros. 
+
+## Asignar Estaciones de Trabajo al Proceso
+
+Una vez creado el proceso, debes indicar **en qué máquinas o lugares físicos** de la fábrica se puede realizar. Puedes asignar una sola estación o varias si el proceso se puede hacer en distintos sitios.
+
+**Fabricación \> Procesos \> Proceso creado**
+
+\+ASIGNAR ESTACIÓN:
+
+**Estación de trabajo:** selecciona en el desplegable el nombre de la máquina, línea o mesa de trabajo donde se ejecuta este proceso.
+
+> **Ejemplo:** Si el proceso es "Soldadura", selecciona **Puesto de Soldadura TIG 02**. 
+
+<Tip>
+  Si no aparece la estación que buscas, asegúrate de haberla creado previamente en el apartado **Crear recursos**.
+</Tip>
+
+**Eficiencia (%):** indica el ritmo de trabajo de esta máquina en concreto para este proceso, tomando el 100% como la velocidad estándar o ideal.
+
+- **Si la máquina trabaja al ritmo normal:** Déjalo en 100%
+- **Si es una máquina antigua o más lenta:** Baja el porcentaje (por ejemplo, 80%). Así el sistema calculará tiempos de producción más largos y realistas cuando se use esta máquina.
+- Si no necesitas este nivel de detalle, deja el valor por defecto: 100%
+
+**Tipo de estación (Principal o Auxiliar):** define el rol de esta máquina para el proceso.
+
+- **Principal:** es la estación habitual donde se saca el trabajo en el día a día. Puedes marcar varias como principales si tienes, por ejemplo, tres líneas idénticas trabajando a la vez.
+- **Auxiliar:** es una estación de reserva, un cuello de botella secundario o un puesto manual que solo usas si la máquina principal está rota, saturada o para pedidos muy pequeños.
+
+> **Ejemplo:** Para un proceso de "Embotellado", la `Línea Automática 01` se marca como **Principal**, y la `Mesa de Envasado Manual` se marca como **Auxiliar** (solo para emergencias o lotes mini).
+
+### Siguiente paso
+
+- Paso a paso de fabricación

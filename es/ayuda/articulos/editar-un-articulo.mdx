@@ -1,86 +1,27 @@
 ---
-title: "Editar un artículo"
-description: "Actualiza un artículo sin romper stock, pedidos, producción ni trazabilidad histórica."
+title: "Configurar un artículo"
+description: "Catálogo > Artículos > Artículo a configurar"
 ---
 
-Puedes editar un **Artículo** para corregir datos, completar propiedades o ajustar información de almacén y planificación. Algunas ediciones quedan limitadas cuando el artículo ya participa en operaciones trazables.
+Esto nos sirve para **pasar de tener un simple inventario de papel a tener una fábrica inteligente y automatizada**. Si solo rellenas el nombre, el sistema es una simple agenda; si rellenas todo, se convierte en el director de operaciones de tu planta.
 
-## Qué puedes cambiar normalmente
+### 1. Darle un valor
 
-- Nombre y descripción.
-- Imagen.
-- Referencia externa.
-- Valores de propiedades.
-- Datos de proveedor y planificación.
-- Configuración de almacén si no contradice movimientos existentes.
+En la tabla de propiedades tienes que asignarle un valor: numérico, opción, texto, sí/no, etc. para que quede definido y el artículo sea válido. 
 
-<Info>
-  El código del artículo debe tratarse como identificador estable. Cambiarlo puede afectar búsquedas, integraciones y referencias operativas.
-</Info>
+### 2. Añadir valor de propiedad (opcional)
 
-## Editar datos básicos
+Esto sirve para **adaptar un artículo a sus características únicas o excepciones sin tener que alterar la estructura general** del catálogo ni crear categorías nuevas.
 
-<Steps>
-  <Step title="Abre el artículo">
-    Entra en **Catálogo > Artículos** y selecciona el artículo.
-  </Step>
-  <Step title="Revisa el estado">
-    Si aparece como inválido, abre los errores para saber qué información falta.
-  </Step>
-  <Step title="Actualiza los campos">
-    Cambia los datos necesarios. Si editas propiedades, asegúrate de respetar el tipo configurado.
-  </Step>
-  <Step title="Guarda y revisa impactos">
-    Comprueba que el artículo sigue siendo válido y que planificación, stock o recetas muestran los datos esperados.
-  </Step>
-</Steps>
+> **Ejemplo:** Imagina que vendes camisetas y la plantilla de esa categoría solo define dos propiedades: _Talla_ y _Color_. Si de pronto recibes una camiseta técnica que además requiere especificar el _Tipo de transpirabilidad_, o una de colección que necesita un _Número de serie_, puedes añadir esa propiedad extra solo a ese artículo concreto. No te ves obligado a crear una categoría entera nueva solo para un producto diferente.
 
-## Valores de propiedades
+### 3. Planificar
 
-Los valores de propiedades diferencian artículos de un mismo producto. Por ejemplo, para la propiedad **Color**, un artículo puede tener **Rojo** y otro **Azul**.
+En la pestaña de **planificación** podrás ver el stock que tienes a tiempo real. 
 
-El valor debe respetar la clase de la propiedad:
+**Campos a rellenar:**
 
-| Tipo de propiedad | Valor válido |
-| --- | --- |
-| Texto | Cualquier texto operativo. |
-| Sí/no | Verdadero o falso. |
-| Número | Cantidad numérica. |
-| Fecha/hora | Fecha válida. |
-| Selección de opción | Una opción existente de la propiedad. |
-
-## Cambiar planificación
-
-Los datos de planificación del artículo afectan a recomendaciones, compras y fabricación. Revisa el impacto antes de guardar cambios en artículos con demanda o suministro activo.
-
-| Cambio | Impacto esperado |
-| --- | --- |
-| Origen **Compra** | Las faltas pueden aparecer en el Asistente de compras o generar pedidos directos. |
-| Origen **Fabricación** | Las faltas pueden aparecer en el Asistente de fabricación o generar peticiones directas. |
-| Origen **Ignorar** | Bold elimina previsiones de compra o fabricación para ese artículo. |
-| Modo **Contra pedido** | Las demandas se cubren de forma vinculada cuando aplica. |
-| Modo **Contra stock** | Las demandas se agrupan contra el stock disponible y proyectado. |
-| Punto de pedido | Cambia cuándo se disparan recomendaciones. |
-| Pedido mínimo y tamaño de lote | Cambian la cantidad propuesta. |
-| Plazo de aprovisionamiento | Cambia cuándo conviene lanzar la reposición. |
-
-<Warning>
-  Cambiar origen, modo o cantidades de planificación puede crear, actualizar o retirar previsiones. Revisa el stock proyectado después de guardar.
-</Warning>
-
-## Consolidar duplicados
-
-Si Bold detecta dos artículos con el mismo producto y los mismos valores de propiedades, puede proponer consolidarlos. Consolidar deja un artículo como referencia válida y retira el duplicado, moviendo relaciones operativas al artículo que permanece.
-
-<Warning>
-  Consolida solo cuando ambos registros representan exactamente el mismo elemento físico. Si no son iguales, crea o completa una propiedad que explique la diferencia.
-</Warning>
-
-## Relacionado
-
-- [Catálogo](/es/conceptos/catalogo)
-- [Artículos](/es/conceptos/catalogo/articulos)
-- [Crear un artículo](/es/ayuda/articulos/crear-un-articulo)
-- [Saber qué comprar](/es/ayuda/planificacion/saber-que-comprar)
-- [Saber qué fabricar](/es/ayuda/planificacion/saber-que-fabricar)
-- [Artículos](/es/conceptos/catalogo/articulos)
+- **Punto de pedido:** es tu stock de seguridad. **Se debe rellenar** con el número mínimo de tableros por debajo del cual nunca quieres bajar.
+- **Pedido mínimo:** es la cantidad mínima que tu proveedor te exige para venderte. **Ejemplo:** Si el sistema detecta que necesitas comprar 2 tableros, pero tu pedido mínimo configurado es `10`, el sistema hará la orden por 10 de golpe.
+- **Tamaño de lote (Opcional):** se rellena si el material se compra o fabrica en paquetes cerrados (por ejemplo, palets de 6 tableros). Si te hacen falta 7 tableros, el sistema redondeará hacia arriba y te pedirá 12 (2 lotes de 6).
+- **Lead time aprovisionamiento (Opcional):** **muy importante rellenarlo.** Son los días laborables que tarda el proveedor en entregarte el tablero desde que le pasas el pedido. Con este dato, el sistema te avisará de la compra con los días exactos de antelación para que el material llegue antes de que te quedes a cero.

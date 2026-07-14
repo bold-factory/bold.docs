@@ -5,7 +5,7 @@ description: "Crea una familia de artículos y define sus propiedades esperadas.
 
 Un **Producto** agrupa artículos que pertenecen al mismo concepto comercial o técnico. Crea un producto cuando quieres organizar variantes bajo una misma familia.
 
-## Cuándo crear un producto
+## Cuándo crearlo
 
 Usa un producto cuando:
 
@@ -14,38 +14,25 @@ Usa un producto cuando:
 - necesitas recetas de fabricación a nivel de familia;
 - quieres analizar stock o actividad agrupada.
 
-Si solo tienes un artículo aislado y no necesitas agrupar variantes, puedes trabajar con el artículo directamente.
+> Si solo tienes un artículo aislado y no necesitas agrupar variantes, puedes trabajar con el artículo directamente.
 
-## Crear el producto
+## Pasos a seguir
 
-<Steps>
-  <Step title="Abre Catálogo">
-    Entra en **Catálogo > Productos**.
-  </Step>
-  <Step title="Crea el registro">
-    Haz clic en **Crear producto** y completa código, nombre, descripción y referencia externa si aplica.
-  </Step>
-  <Step title="Asigna propiedades">
-    Añade propiedades como color, medida, material o acabado si el producto tiene variantes.
-  </Step>
-  <Step title="Crea artículos">
-    Crea los artículos concretos de ese producto y completa los valores de cada propiedad.
-  </Step>
-</Steps>
+**Catálogo \> Productos \> Crear Nuevo**
 
-## Campos habituales
+### 1. Introducir datos
 
-| Campo | Uso |
-| --- | --- |
-| Código | Identificador de negocio único. |
-| Nombre | Nombre visible para búsquedas y listados. |
-| Descripción | Contexto adicional para administración interna. |
-| Referencia externa | Id de otro sistema si existe integración. |
-| Propiedades | Atributos que deben informar los artículos del producto. |
+**Nombre:** es el identificador principal y más visible de lo que fabricas o almacenas.
 
-<Tip>
-  Usa propiedades solo cuando cambien la definición física, comercial u operativa del artículo. No las uses como notas libres.
-</Tip>
+**Código** (opcional): es el identificador alfanumérico. Evita confusiones si tienes dos productos con nombres similares (por ejemplo, si tienes el mismo tornillo pero de dos materiales distintos). Además, sirve para que en el futuro puedas usar lectores de códigos de barras o enlazar este software con sistemas de facturación o ERPs.
+
+**Descripción** (opcional): es un espacio libre de texto para añadir detalles específicos del producto que no caben en el nombre. Puedes poner medidas, materiales, colores o incluso advertencias de almacenamiento.
+
+### 2. Asignar propiedades
+
+Dentro del producto creado puedes seleccionar todas las propiedades que definiste anteriormente. Esa elección depende de si la planta necesita ese dato técnico para poder ejecutar el trabajo correctamente. 
+
+> **_Ejemplo:_** Si fabricas camisetas, el "Color" y la "Talla" son propiedades obligatorias porque necesitas saber si estás fabricando una camiseta Roja M o una Azul XL.
 
 ## Efecto de las propiedades
 
@@ -53,7 +40,6 @@ Cuando asignas una propiedad al producto, todos sus artículos deben tener un va
 
 No debería haber dos artículos activos con el mismo producto y los mismos valores de propiedades. Si representan exactamente el mismo elemento físico, consolídalos. Si no son iguales, falta una propiedad para explicar la diferencia.
 
-## Relacionado
+## Siguiente paso
 
-- [Catálogo](/es/conceptos/catalogo)
-- [Catálogo](/es/conceptos/catalogo)
+- Crear un artículo

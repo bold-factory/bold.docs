@@ -1,72 +1,52 @@
 ---
-title: "Crear un parte de trabajo"
+title: "Registrar un trabajo de mantenimiento"
 description: "Registra una intervención de mantenimiento con activo, causa, acciones, tiempos y materiales."
 ---
 
-Un **parte de trabajo** registra una intervención sobre un activo. Puede ser correctivo, si responde a una avería o incidencia, o preventivo, si corresponde a una revisión planificada.
+En Bold usamos **partes de trabajo** para registrar las intervenciones sobre los activos. Pueden ser correctivos, si responden a una avería o incidencia, o preventivos, si se deben a una revisión planificada.
 
-Puedes crear y preparar el parte desde **Mantenimiento**. Si el técnico trabaja desde una tablet o un puesto compartido, registra tiempos, acciones y materiales desde **Modo de trabajo**.
+Puedes crear y preparar el parte desde el módulo de **Mantenimiento** o si el técnico trabaja desde una tablet o un puesto compartido, puede crearlo desde **Modo de trabajo**.
 
-## Antes de crear el parte
+## Crear el parte desde el modo de gestión 
 
-Revisa:
+**Mantenimiento \> Partes\> Añadir Nuevo**
 
-- que el activo exista;
-- que la causa principal esté creada;
-- que las acciones reutilizables estén definidas si quieres usar checklist;
-- que el empleado tenga permisos de mantenimiento;
-- que los repuestos estén disponibles si vas a consumir materiales.
+Selecciona tipo de parte, activo, causa principal y como opcional; el responsable de este mantenimiento, código y notas que quieres que lea el responsable.
 
-## Crear el parte
+<Note>
+  Recuerda que en la columna de **Acciones** puedes entrar a la línea creada para tener más información, modificar o añadir datos.
+</Note>
+
+En la ventana del parte creado tienes las siguientes pestañas:
 
 <Steps>
-  <Step title="Abre Mantenimiento">
-    Entra en **Mantenimiento** y abre **Partes de trabajo**.
+  <Step title="Información">
+    Contiene la información básica del parte y en la parte inferior derecha esta la opción de añadir causas adicionales del parte. **_Ejemplo de causas adicionales:_** El fallo eléctrico de una carretilla elevadora sería su causa principal, mientras que las causas adicionales serían el exceso de peso, enchufe del cargado estaba roto y pantalla del salpicadero estropeado. 
   </Step>
-  <Step title="Crea el parte">
-    Selecciona activo, tipo de parte, causa principal y notas iniciales.
+  <Step title="Materiales consumidos">
+    Sirve para añadir artículos y cantidades cuando usas repuestos o consumibles. 
   </Step>
-  <Step title="Añade causas auxiliares">
-    Úsalas solo si aportan contexto adicional. No repitas la causa principal.
+  <Step title="Acciones">
+    Consiste en registrar todas las acciones necesarias para realizar un determinado mantenimiento.
+
+    Al crearlas, puedes visualizarlas con su estado, tipo de acción, responsable, tiempo teórico, fecha en la que se creó, si se ha completado y resultado. 
   </Step>
-  <Step title="Añade acciones">
-    Usa acciones de la causa o añade acciones manuales. Cada acción puede pedir un resultado distinto.
+  <Step title=" Registros de tiempo">
+    Permite fichar el tiempo que lleva un determinado  mantenimiento. 
   </Step>
-  <Step title="Registra tiempos">
-    Añade tiempos por empleado para medir duración y coste real. En planta, el técnico puede iniciar y cerrar su tiempo desde **Modo de trabajo**.
-  </Step>
-  <Step title="Consume materiales">
-    Registra artículo, cantidad y lote cuando uses repuestos o consumibles.
-  </Step>
-  <Step title="Completa el parte">
-    Revisa acciones, tiempos y materiales antes de completar. Al completar, Bold bloquea cambios estructurales.
+  <Step title="Costes">
+    Puedes ver  los gastos totales que genera el material de repuesto y la mano de obra por hora de trabajo. 
   </Step>
 </Steps>
 
-## Estados del parte
-
-| Estado | Qué significa |
-| --- | --- |
-| Pendiente | El parte existe, pero no tiene tiempo activo. |
-| En progreso | Hay un registro de tiempo activo. |
-| En pausa | Los tiempos están cerrados, pero el parte no está completado. |
-| Completado | El trabajo queda cerrado y protegido. |
-| Cancelado | El parte queda anulado y protegido. |
-
-<Info>
-  Al añadir un tiempo activo, el parte empieza o se reanuda. Cuando todos los tiempos terminan, queda en pausa.
-</Info>
-
-## Buenas prácticas
+## Puntos a tener en cuenta
 
 - Usa causas estables para poder analizar recurrencia.
 - Añade acciones antes de empezar si quieres que el técnico siga un checklist.
-- Registra materiales con lote cuando afecten a trazabilidad o coste.
-- Completa el parte cuando el trabajo físico y el registro estén cerrados.
+- Completa el parte cuando acabes el trabajo físico para tener registros de tiempo precisos.
 
-## Relacionado
+## Conceptos clave
 
-- [Programar mantenimientos preventivos](/es/ayuda/mantenimiento/mantenimiento-preventivo)
 - [Activos](/es/conceptos/mantenimiento/activos)
 - [Acciones](/es/conceptos/mantenimiento/causas-y-acciones)
 - [Causas](/es/conceptos/mantenimiento/causas-y-acciones)

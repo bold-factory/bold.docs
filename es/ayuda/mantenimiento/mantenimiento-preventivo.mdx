@@ -1,81 +1,38 @@
 ---
-title: "Programar mantenimientos preventivos"
+title: "Programar mantenimiento preventivo"
 description: "Programa partes preventivos que se generan según una frecuencia definida."
 ---
 
 El **mantenimiento preventivo** define reglas para crear partes de trabajo recurrentes. La programación no es el parte: es la regla que indica cuándo generar partes y con qué información inicial.
 
-## Qué define una programación
+**Mantenimiento \> Preventivo \> Crear programación**
 
-| Campo | Uso |
-| --- | --- |
-| Nombre | Identifica la programación. |
-| Activo | Equipo, línea o espacio sobre el que se realizará el trabajo. |
-| Causa | Causa principal de los partes generados. |
-| Causas auxiliares | Contexto adicional opcional para el parte. |
-| Frecuencia | Periodicidad diaria, semanal, mensual, trimestral, semestral o anual. |
-| Hora y reglas de calendario | Hora de generación, día de semana, día de mes, último día del mes o patrón mensual. |
-| Política de generación | Decide qué hacer si llega una nueva ocurrencia y hay partes abiertos. |
-| Notas | Texto inicial del parte generado. |
-
-## Políticas de generación
+1. Añade el nombre que tendrá el mantenimiento que quieres programar.
+2. Selecciona el activo al cual se debe hacer.
+3. Causa por la cual se hace.
+4. Frecuencia con que quieres que se haga.
+5. Hora u horas en las que se debe hacer.
+6. Selecciona la política de generación que quieres aplicar: 
 
 | Política | Comportamiento |
 | --- | --- |
-| Generar en cada ocurrencia | Crea un parte cada vez que toca, aunque haya otro abierto de la misma programación. |
+| Generar siempre | Crea un parte cada vez que toca, aunque haya otro abierto de la misma programación. |
 | Omitir si hay un parte abierto | No crea un parte nuevo si existe un parte abierto de esa programación. Incrementa el contador de omitidos. |
 
-Bold evita crear dos partes para la misma programación y la misma ocurrencia. Si una ocurrencia ya fue generada, avanza a la siguiente.
-
-## Cómo se procesa una ocurrencia
-
-Cuando llega **Próxima generación**, Bold revisa programaciones habilitadas y crea partes en lotes. Cada programación se procesa con bloqueo para evitar duplicados.
-
-| Paso | Qué hace Bold |
-| --- | --- |
-| Revisa vencimiento | Solo procesa programaciones habilitadas con próxima generación vencida. |
-| Aplica política | Si la política es **Omitir si hay un parte abierto** y hay un parte generado sin completar ni cancelar, marca la ocurrencia como omitida. |
-| Comprueba duplicados | Si ya existe un parte no cancelado para esa programación y ocurrencia, no crea otro. |
-| Crea el parte | Usa activo, causa, causas auxiliares y notas de la plantilla. El tipo del parte generado es preventivo. |
-| Actualiza métricas | Registra última generación, generados u omitidos, y calcula la próxima generación. |
-
 <Info>
-  Un parte cancelado no bloquea la misma ocurrencia. Un parte pendiente, en progreso o en pausa sí cuenta como abierto para la política de omisión.
+  Un parte abierto es aquel que esta pendiente, en progreso o en pausa. 
 </Info>
 
-## Programar un mantenimiento preventivo
-
-<Steps>
-  <Step title="Prepara activos y causas">
-    Crea el activo y la causa que usarán los partes preventivos. Añade acciones recomendadas a la causa si quieres un checklist inicial.
-  </Step>
-  <Step title="Abre mantenimientos preventivos">
-    Entra en **Mantenimiento** y abre las programaciones preventivas.
-  </Step>
-  <Step title="Completa la plantilla del parte">
-    Selecciona activo, causa, causas auxiliares y notas. La causa auxiliar no puede repetir la causa principal.
-  </Step>
-  <Step title="Define frecuencia y hora">
-    Elige periodicidad, hora de generación y reglas de calendario. La zona horaria debe ser válida para calcular la próxima ejecución.
-  </Step>
-  <Step title="Elige política de generación">
-    Usa **Omitir si hay un parte abierto** para evitar acumulación de partes cuando el equipo no cierre el anterior a tiempo.
-  </Step>
-  <Step title="Activa y revisa">
-    Comprueba **Próxima generación**, **Última generación**, **Generados** y **Omitidos** en el listado.
-  </Step>
-</Steps>
+> **_Ejemplo:_** Quieres revisar la Envasadora ENV-01 cada lunes a las 06:00. Crea una causa Revisión semanal, añade acciones como Comprobar presión, Limpiar filtro y Adjuntar foto si hay desgaste, y usa la política Omitir si hay un parte abierto. Si el parte de la semana anterior sigue abierto, Bold no crea otro.
 
 ## Habilitar, deshabilitar y eliminar
 
-- Si una programación está habilitada, Bold genera partes cuando llega la próxima ocurrencia.
-- Si la deshabilitas, conserva su configuración pero no genera partes y borra la próxima generación pendiente.
+Estas opciones se pueden modificar desde la columna de **Acciones** de la vista principal de Mantenimiento Preventivo o accediendo a uno en concreto. 
+
+- Si una programación está habilitada (en verde) , Bold genera partes cuando llega la próxima ocurrencia.  
+- Si la deshabilitas (en rojo), conserva su configuración pero no genera partes y borra la próxima generación pendiente.
 - Si la vuelves a habilitar, Bold recalcula la próxima generación desde la regla.
-- Si la eliminas, queda deshabilitada y deja de generar partes.
-
-## Ejemplo
-
-Quieres revisar la `Envasadora ENV-01` cada lunes a las `06:00`. Crea una causa `Revisión semanal`, añade acciones como `Comprobar presión`, `Limpiar filtro` y `Adjuntar foto si hay desgaste`, y usa la política **Omitir si hay un parte abierto**. Si el parte de la semana anterior sigue abierto, Bold no crea otro y aumenta **Omitidos**.
+- Si la eliminas, queda deshabilitada y ya no podrás recuperarla.
 
 ## Problemas habituales
 
@@ -88,11 +45,10 @@ Quieres revisar la `Envasadora ENV-01` cada lunes a las `06:00`. Crea una causa 
 | La causa auxiliar no se guarda | Puede estar repetida o coincidir con la causa principal. |
 | La próxima generación no aparece | La programación puede estar deshabilitada o eliminada. |
 
-## Relacionado
+## Conceptos clave
 
 - [Activos](/es/conceptos/mantenimiento/activos)
 - [Causas](/es/conceptos/mantenimiento/causas-y-acciones)
 - [Acciones](/es/conceptos/mantenimiento/causas-y-acciones)
-- [Crear un parte de trabajo](/es/ayuda/mantenimiento/crear-parte-de-trabajo)
 - [Referencia de mantenimiento](/es/conceptos/mantenimiento)
 - [Mantenimiento preventivo](/es/conceptos/mantenimiento/mantenimiento-preventivo)

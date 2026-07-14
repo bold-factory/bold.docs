@@ -1,55 +1,42 @@
 ---
-title: "Crear un empleado"
+title: "Dar de alta un empleado"
 description: "Crea y mantiene empleados para turnos, asignaciones y análisis de productividad."
 ---
 
 Los **empleados** representan personas operativas. Se usan para registrar trabajo, tiempos, asignaciones, productividad, costes y programación.
 
-Un empleado no es lo mismo que un usuario. El **usuario** inicia sesión y tiene permisos. El **empleado** representa a la persona que trabaja en planta, almacén o mantenimiento.
+> **Ejemplo:** las personas que trabajan en planta, almacén, mantenimiento o administración (usuarios que vayan a usar el sistema de Bold).
 
-## Antes de empezar
+**Personal \> Empleados \> Registrar nuevo empleado**
 
-Decide si la persona necesita acceso a Bold, registro operativo o ambas cosas. Si debe entrar en la aplicación, crea o vincula también un usuario.
+### Completa identidad
 
-## Crear un empleado
+Indica nombre y apellidos. 
 
-<Steps>
-  <Step title="Abre empleados">
-    Entra en **Personal > Empleados**.
-  </Step>
-  <Step title="Completa identidad">
-    Indica nombre, apellidos, Correo electrónico y referencia externa si procede.
-  </Step>
-  <Step title="Vincula usuarios">
-    Añade los usuarios que pueden actuar como ese empleado en flujos operativos.
-  </Step>
-  <Step title="Define usuario principal">
-    Marca el usuario principal si quieres una relación por defecto.
-  </Step>
-  <Step title="Revisa uso operativo">
-    Comprueba que el empleado aparezca en modo trabajo, fabricación, mantenimiento o costes cuando corresponda.
-  </Step>
-</Steps>
+**El código de empleado (opcional):** actúa como el **identificador único e inequívoco** de cada operario. Si tienes un código de otro sistema lo puedes añadir aquí o sino lo dejas en blanco y Blod lo generara. 
 
-## Qué cambia en Bold
+## Asignación de puestos
 
-En **Modo trabajo**, el operario selecciona su empleado. A partir de ahí, acciones, tiempos y tareas quedan asociados a esa persona.
+**Personal \> Empleados \> Empleado registrado**
 
-Los empleados también se usan en órdenes de fabricación, partes de trabajo, cuadros de mando, costes y programación.
+La pestaña de **Producción** sirve para planificar turnos inteligentes, cubrir bajas al instante, seguridad y cumplimiento.
 
-<Warning>
-  No puedes quitar de los usuarios vinculados el Correo electrónico marcado como usuario principal. Cambia o borra primero el usuario principal.
-</Warning>
+**Asignar estación habitual:** dónde trabaja normalmente.
 
-## Problemas habituales
+**Asignar habilidad:** qué sabe hacer el empleado.
 
-- Si el empleado no aparece en un flujo, revisa si está activo y si el módulo usa empleados operativos.
-- Si no puedes retirar un usuario vinculado, comprueba si es el usuario principal.
-- Si no puedes eliminar un empleado, revisa si tiene usuario principal asignado o histórico operativo.
-- Si los costes no cuadran, revisa que los tiempos estén asociados al empleado correcto.
+> ### Ejemplo: Fábrica del sector Metal / Automoción
+>
+> **Empleado:** Carlos Ruiz (Operario de planta)
+>
+> - **Estaciones habituales** (Dónde trabaja el 80% de su tiempo):
+>   - _Línea de Ensamblaje B_
+>   - _Puesto de Atornillado Chasis_
+> - **Habilidades** (Qué está capacitado o certificado para hacer):
+>   - _Soldadura MIG/MAG_
+>   - _Uso de puente grúa_
+>   - _Lectura de planos técnicos_
 
-## Relacionado
+## Siguiente paso
 
-- [Personal](/es/conceptos/personal)
-- [Perfiles y permisos](/es/conceptos/panel-de-control/usuarios-roles-y-permisos)
-- [Referencia de personal](/es/conceptos/personal)
+- Definir jornadas

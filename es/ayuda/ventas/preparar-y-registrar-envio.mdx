@@ -3,96 +3,64 @@ title: "Preparar y registrar un envío"
 description: "Comprueba disponibilidad, prepara la salida y registra el envío de un pedido de venta."
 ---
 
-Prepara y registra el envío cuando un pedido de venta ya tiene material listo para salir. Este flujo reduce stock y deja trazada la expedición.
+Prepara y registra el envío cuando un pedido de venta ya esta listo para salir. Este flujo reduce stock y deja trazada la expedición.
 
-El pedido de venta explica la demanda. El envío explica el movimiento físico que reduce stock.
+Al momento de preparar y registrar la salida de un pedido de venta, tienes la opción de procesarlo como un **Pedido Completo** o un **Pedido Parcial**.
 
-## Antes de empezar
+Un **Pedido Completo** ocurre cuando cuentas con todo el stock físico disponible en tus ubicaciones y decides enviar la totalidad de los artículos y cantidades solicitadas en una sola expedición.
 
-Revisa:
+Un **Pedido Parcial** se genera cuando no dispones de todo el stock físico en ese momento (por ejemplo, por rotura de stock de un producto o falta de un lote específico) o cuando decides enviar solo una parte de la mercancía por razones logísticas.
 
-- pedido y líneas confirmadas;
-- cantidad pendiente de entregar;
-- stock disponible por artículo, ubicación y lote;
-- dirección, referencia de cliente y notas de transporte;
-- bultos o contenedores si preparas la expedición agrupada.
+## Registrar el envío completo
 
-## Preparar la salida
+Entra en **Planificación \> Pedidos de venta \> Pedido a enviar**
 
-<Steps>
-  <Step title="Abre el pedido">
-    Entra en el pedido de venta y revisa las líneas pendientes.
-  </Step>
-  <Step title="Comprueba disponibilidad">
-    Verifica que el stock físico cubre la cantidad a enviar desde la ubicación correcta.
-  </Step>
-  <Step title="Selecciona lote cuando aplique">
-    Usa el lote físico que vas a entregar. No cambies lote solo para cuadrar cantidades.
-  </Step>
-  <Step title="Prepara bultos si los usas">
-    Agrupa material en bultos o contenedores cuando quieras seguir la expedición como unidad física.
-  </Step>
-  <Step title="Revisa cantidades">
-    Decide si entregas todo o solo una parte. Deja pendiente lo que no salga.
-  </Step>
-</Steps>
+### 1. Genera el envío
 
-## Registrar el envío
+Haz clic en **crear envío** (parte inferior derecha).
 
-<Steps>
-  <Step title="Crea o abre el envío">
-    Usa las líneas del pedido para preparar el movimiento de salida.
-  </Step>
-  <Step title="Confirma artículos, lotes y ubicaciones">
-    Comprueba que cada línea saldrá del lugar correcto.
-  </Step>
-  <Step title="Añade información logística">
-    Completa referencias, comentarios o documentos si tu proceso lo requiere.
-  </Step>
-  <Step title="Completa el envío">
-    Confirma la expedición para reducir stock y actualizar el estado de entrega.
-  </Step>
-  <Step title="Revisa el pedido">
-    Comprueba si queda entregado, parcialmente entregado o con líneas pendientes.
-  </Step>
-</Steps>
+### 2. Añade la información
+
+**Número de albarán:** se puede introducir el número que tu empresa maneja o el que genera Bold automáticamente. 
+
+**Fecha:** es en la que sale de las instalaciones de la fábrica.
+
+**Ubicación de expedición:** lugar físico dentro de la fábrica desde donde sale la mercancía hacia el cliente.
+
+**Enviar inmediatamente:** sirve para fusionar dos pasos en uno solo; la creación del documento de envío y el registro de la salida física del inventario. Si dejas esta función desactivada, esto significa que el documento se genera en el sistema, pero se queda en estado de **Borrador** o **Abierto** a falta de expedirlo. 
+
+### 3. Crear
+
+Una vez has confirmado el envío puedes ir a **Almacén \> Envíos** para asegurarte que el envío se hizo correctamente. 
 
 <Warning>
-  Un envío completado explica una salida real de stock. Corrige errores desde el flujo operativo disponible en vez de modificar movimientos históricos.
+  Un envío completado significa una salida real de stock. Corrige errores desde el flujo operativo disponible en vez de modificar movimientos históricos.
 </Warning>
 
-## Qué cambia al enviar
+## Registrar el envío parcial
 
-| Elemento | Resultado |
-| --- | --- |
-| Stock | Disminuye en la ubicación y lote indicados. |
-| Envío | Cambia de **Pendiente** a **Enviado**. |
-| Pedido | Aumenta la cantidad entregada. |
-| Línea de pedido | Puede cambiar a **Parcialmente entregado** o **Entregado**. |
-| Histórico | Se registra el movimiento de salida. |
+**Almacén \> Envíos** 
 
-Después de enviar, las líneas y la ubicación quedan protegidas para conservar trazabilidad. Si hay un error, usa la reversión cuando esté disponible.
+### 1. Añadir Nuevo
 
-## Salidas parciales
+**Destino:** son los clientes que van a recibir físicamente el pedido que sale de la fábrica.
 
-Si solo puedes entregar parte de una línea, prepara el envío con la cantidad disponible. Bold dejará la línea como **Parcialmente entregado** y mantendrá pendiente la cantidad restante.
+**Número de albarán:** se puede introducir el número que tu empresa maneja o el que genera Bold automáticamente. 
 
-Usa notas o referencias de transporte para relacionar el envío de Bold con el albarán, transportista o documento externo.
+**Ubicación de expedición:** lugar físico dentro de la fábrica desde donde sale la mercancía hacia el cliente.
 
-## Si no puedes enviar
+### 2. Entrar en el envío
 
-| Problema | Qué revisar |
-| --- | --- |
-| No hay stock suficiente | stock por ubicación, lote, recepciones pendientes o producción pendiente. |
-| El lote no aparece | Configuración de lotes y movimientos reales de entrada. |
-| La línea no está disponible | Estado de la línea y demanda confirmada. |
-| El pedido queda parcial | Cantidad pendiente y fecha comprometida con el cliente. |
-| El envío no tiene acción disponible | Líneas, cantidades positivas, ubicación válida y lote informado si aplica. |
-| El stock quedó negativo | Recepción, ajuste, inventario o movimiento previo pendiente. |
+**Almacén \> Envíos \> Envío creado**
 
-## Relacionado
+### 3. Añadir Línea
 
-- [Crear pedido de venta](/es/ayuda/ventas/crear-pedido-de-venta)
-- [Investigar diferencias de stock](/es/ayuda/almacen/investigar-diferencias-de-stock)
-- [Bultos](/es/conceptos/almacen/bultos)
-- [Envíos](/es/conceptos/almacen/envios)
+Introducir uno por uno todos los artículos del pedido.
+
+**Línea de pedido:** puedes seleccionar los artículos pendientes por fabricar. 
+
+**Cantidad:** unidades que se solicitan.
+
+### 4. Expedir
+
+Dar salida oficial a la mercancía desde el almacén de la fábrica hacia su destino final.
