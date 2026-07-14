@@ -8,23 +8,18 @@ Existen **tres casos de uso clave** para aplicar estas condiciones en tu planta:
 
 ### **1. Condicionar una Operación (Etapas completas)**
 
-Añade condiciones a una operación cuando una etapa completa del proceso solo aplica para determinadas variantes del artículo fabricado.
+- Cuando una fase entera del proceso de producción aplica únicamente a ciertas variantes del artículo.
+- **Ejemplo:** La operación de _"Pintura"_ solo debe activarse si la propiedad _Acabado_ del producto requiere pintura. Si el cliente pide un cuadro de bicicleta con acabado en aluminio pulido (sin pintura), el sistema se salta esta etapa por completo.
 
-Por ejemplo, una operación de pintura puede aplicar solo si la propiedad **Acabado** requiere pintura.
+### **2. Condicionar una Entrada (Consumo de materiales)**
 
-Al condicionar operaciones, revisa siempre las **Restricciones**. Si una operación desaparece para una variante, las operaciones anteriores y posteriores deben seguir teniendo una secuencia correcta.
+- **¿Cuándo usarlo?:** Cuando un material o insumo específico solo se consume en algunas variantes del producto.
+- **Ejemplo:** Configuras dos entradas de material distintas en la misma operación: una para _"Pintura Roja"_ y otra para _"Pintura Azul"_. Al condicionar cada entrada a la propiedad _Color_, la Orden de Fabricación (OF) digital solo cargará, mostrará y descontará del inventario el color de pintura exacto que requiere esa bicicleta en particular.
 
-Añade condiciones a una entrada cuando un material solo se consume para algunas variantes del artículo fabricado.
+### **3. Condicionar un Paso (Instrucciones o tareas específicas)**
 
-Por ejemplo, si el color del producto determina qué pintura se usa, puedes crear una entrada para pintura roja y otra para pintura azul, condicionando cada una al valor correspondiente de la propiedad **Color**.
-
-Así, cada orden de fabricación incluirá solo los materiales que aplican a su artículo concreto.
-
-Añade condiciones a un paso cuando solo debe aparecer para algunas variantes del artículo fabricado.
-
-Por ejemplo, si un acabado requiere un tratamiento adicional, puedes crear ese paso y condicionarlo a la propiedad **Acabado**.
-
-Cuando la orden sea de un artículo que cumple la condición, el paso aparecerá. En el resto de órdenes no formará parte de la ejecución.
+- **¿Cuándo usarlo?:** Cuando una instrucción de trabajo, control de calidad o tarea concreta dentro de una operación solo debe realizarse para ciertas variantes.
+- **Ejemplo:** En la etapa de ensamblaje, decides que solo las bicicletas con la propiedad _Acabado: Premium_ requieran un paso adicional de _"Aplicación de cera protectora"_. Para el resto de las órdenes de modelos estándar, este paso ni siquiera aparecerá en la pantalla de ejecución del operario.
 
 ### 1. Añade condición:
 
