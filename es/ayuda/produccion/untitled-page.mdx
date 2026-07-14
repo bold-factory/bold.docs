@@ -9,18 +9,14 @@ Definir con precisión cada operación de tu receta es el paso más crítico par
 Es fundamental clasificar correctamente tus materiales y registrar sus movimientos en cada etapa del proceso. Aquí te explicamos cómo identificarlos y cómo utilizarlos en el sistema:
 
 - **Materias Primas (Tus entradas externas):** Son los insumos básicos en su estado inicial que compras a proveedores y entran a la planta sin ninguna transformación (como la leche cruda).**C_ómo usarlas:_** Regístralas en el sistema justo en el instante en que el operario alimenta la máquina de entrada. Esto activa de forma automática el inicio de la operación y descuenta el stock del almacén en tiempo real.
-- **Semielaborados (Tu trabajo en proceso):** Son los productos intermedios que ya han sido procesados en una fase de la fábrica, pero que aún requieren pasar por más etapas antes de estar listos para la venta (como la cuajada). _Cómo usarlos:_ Regístralos al terminar cada fase intermedia. Esto permite al sistema medir con precisión los tiempos de ejecución de cada máquina y evitar cuellos de botella en la línea.
-- **Coproductos (Tus salidas de valor simultáneas):** Son los múltiples bienes de alto valor comercial que se generan de forma inevitable y al mismo tiempo a partir de un único proceso o materia prima (como la nata y la leche desnatada al centrifugar). _Cómo usarlos:_ Regístralos como salidas finales del proceso correspondiente para que el sistema actualice su disponibilidad y se puedan comercializar de inmediato.
+- **Semielaborados (Tu trabajo en proceso):** Son los productos intermedios que ya han sido procesados en una fase de la fábrica, pero que aún requieren pasar por más etapas antes de estar listos para la venta (como la cuajada). **_Cómo usarlos:_** Regístralos al terminar cada fase intermedia. Esto permite al sistema medir con precisión los tiempos de ejecución de cada máquina y evitar cuellos de botella en la línea.
+- **Coproductos (Tus salidas de valor simultáneas):** Son los múltiples bienes de alto valor comercial que se generan de forma inevitable y al mismo tiempo a partir de un único proceso o materia prima (como la nata y la leche desnatada al centrifugar). **_Cómo usarlos:_** Se registran como salidas finales del proceso correspondiente para que el sistema actualice su disponibilidad y se puedan comercializar de inmediato.
 
 **Fabricación \> Versión Activa \> Operación**
 
-**1. \+AÑADIR MP (Materia Prima):** es todo material en estado puro o bruto que compras a un proveedor externo y que entra directamente a la primera línea de producción sin haber sufrido ninguna transformación dentro de tu fábrica.
+1. **Añadir el material**
 
-**2.\+AÑADIR SEMIELABORADOS:** es un producto que ya ha sido transformado por alguna de tus máquinas, pero que aún no está terminado ni listo para vender al cliente final. Es el resultado de una operación que sirve obligatoriamente como "ingrediente" para la siguiente fase.
-
-**3.\+AÑADIR COPRODUCTOS:** es un producto secundario que se genera de forma automática e inevitable durante el proceso de fabricación del producto principal, pero que **tiene un valor económico** porque se puede vender a otra industria o reutilizar internamente.
-
-**Artículo:** es un menú desplegable donde debes seleccionar el ingrediente o la materia prima específica que vas a incorporar a la receta.
+**Artículo:** es un menú desplegable donde debes seleccionar la materia prima, semielaborado o coproducto que vas a incorporar a la receta.
 
 **Cantidad/unidad fabricada:** define el consumo por cada unidad fabricada y debe ingresarse usando el punto como separador decimal. Además, el botón \+ permite estructurar fórmulas matemáticas (utilizando sumas, restas, multiplicaciones, divisiones y paréntesis) basadas en propiedades numéricas, las cuales el sistema Bold sustituirá automáticamente por el valor real del artículo final al generar la orden de fabricación.
 
@@ -34,18 +30,6 @@ Es fundamental clasificar correctamente tus materiales y registrar sus movimient
 > - **Artículo:** seleccionas _Queso Mozzarella Rallado_ en el menú desplegable.
 > - **Cantidad/unidad fabricada:** introduces `0.15` (indicando que cada pizza individual requiere 0.15 kg o 150 gramos de queso).
 > - **Momento de consumo:** eliges **Cada unidad**. El sistema descontará del inventario 150 gramos de mozzarella de forma progresiva cada vez que la línea de producción termine una pizza.
-
-**2.\+AÑADIR SEMIELABORADOS:** es un producto que ya ha sido transformado por alguna de tus máquinas, pero que aún no está terminado ni listo para vender al cliente final. Es el resultado de una operación que sirve obligatoriamente como "ingrediente" para la siguiente fase.
-
-**3.\+AÑADIR COPRODUCTOS:** es un producto secundario que se genera de forma automática e inevitable durante el proceso de fabricación del producto principal, pero que **tiene un valor económico** porque se puede vender a otra industria o reutilizar internamente.
-
-### **¿Para qué sirve añadir condiciones a las entradas?**
-
-Añade condiciones a una entrada cuando un material solo se consume para algunas variantes del artículo fabricado.
-
-Por ejemplo, si el color del producto determina qué pintura se usa, puedes crear una entrada para pintura roja y otra para pintura azul, condicionando cada una al valor correspondiente de la propiedad **Color**.
-
-Así, cada orden de fabricación incluirá solo los materiales que aplican a su artículo concreto.
 
 ## Cómo se ejecuta una operación
 
