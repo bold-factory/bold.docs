@@ -8,7 +8,7 @@ Definir con precisión cada operación de tu receta es el paso más crítico par
 
 Es fundamental clasificar correctamente tus materiales y registrar sus movimientos en cada etapa del proceso. Aquí te explicamos cómo identificarlos y cómo utilizarlos en el sistema:
 
-- **Materias Primas (Tus entradas externas):** Son los insumos básicos en su estado inicial que compras a proveedores y entran a la planta sin ninguna transformación (como la leche cruda).**C_ómo usarlas:_** Regístralas en el sistema justo en el instante en que el operario alimenta la máquina de entrada. Esto activa de forma automática el inicio de la operación y descuenta el stock del almacén en tiempo real.
+- **Materias Primas (Tus entradas externas):** Son los insumos básicos en su estado inicial que compras a proveedores y entran a la planta sin ninguna transformación (como la leche cruda).**C\_ómo usarlas:\_** Regístralas en el sistema justo en el instante en que el operario alimenta la máquina de entrada. Esto activa de forma automática el inicio de la operación y descuenta el stock del almacén en tiempo real.
 - **Semielaborados (Tu trabajo en proceso):** Son los productos intermedios que ya han sido procesados en una fase de la fábrica, pero que aún requieren pasar por más etapas antes de estar listos para la venta (como la cuajada). **_Cómo usarlos:_** Regístralos al terminar cada fase intermedia. Esto permite al sistema medir con precisión los tiempos de ejecución de cada máquina y evitar cuellos de botella en la línea.
 - **Coproductos (Tus salidas de valor simultáneas):** Son los múltiples bienes de alto valor comercial que se generan de forma inevitable y al mismo tiempo a partir de un único proceso o materia prima (como la nata y la leche desnatada al centrifugar). **_Cómo usarlos:_** Se registran como salidas finales del proceso correspondiente para que el sistema actualice su disponibilidad y se puedan comercializar de inmediato.
 
@@ -35,7 +35,7 @@ Es fundamental clasificar correctamente tus materiales y registrar sus movimient
 
 **Fabricación \> Versión Activa \> Operación**
 
-#### **1. Añadir pasos:** 
+#### **1. Añadir pasos:**
 
 Describir al operario qué debe hacer dentro de una operación.
 
@@ -60,11 +60,3 @@ Una orden de fabricación puede producir una unidad o muchas. El momento de ejec
 - **Cálculos en tiempo real (Icono** `Σ `**Fórmula):** permite introducir operaciones matemáticas automáticas basadas en los atributos que el operario acaba de rellenar. El sistema hace los cálculos de forma instantánea en la pantalla, eliminando el uso de calculadoras físicas en la planta y evitando fallos humanos en mediciones críticas (ej. calcular el peso neto restando la tara).
 
 **Duración:** pon el tiempo estimado estándar (en minutos) que se tarda en realizar este paso. Si es un paso por unidad y tarda 30 segundos, puedes poner 0.5.
-
-### **¿Para qué sirve añadir condiciones a los pasos?**
-
-Añade condiciones a un paso cuando solo debe aparecer para algunas variantes del artículo fabricado.
-
-Por ejemplo, si un acabado requiere un tratamiento adicional, puedes crear ese paso y condicionarlo a la propiedad **Acabado**.
-
-Cuando la orden sea de un artículo que cumple la condición, el paso aparecerá. En el resto de órdenes no formará parte de la ejecución.
