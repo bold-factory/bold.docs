@@ -2,6 +2,8 @@
 title: "Especificar materiales, pasos y controles de cada operación de fabricación"
 ---
 
+**Fabricación \> Versión Activa \> Operación**
+
 Definir con precisión cada operación de tu receta es el paso más crítico para convertir Bold en el verdadero cerebro de tu producción. En este apartado estructuraremos cada fase del proceso a través de sus tres pilares esenciales: **qué entra y sale** (materias primas, semielaborados y coproductos), **cómo se ejecuta** (pasos, tiempos y condiciones) y **cómo se valida** (controles de calidad). Este nivel de detalle es lo que permite al sistema automatizar el descuento de stock en tiempo real, retener el conocimiento técnico en la planta para que cualquier operario trabaje como un experto y, sobre todo, cruzar datos para calcular el margen de beneficio y el coste real de cada lote fabricado.
 
 ## Operaciones donde se consideran materiales
@@ -12,9 +14,7 @@ Es fundamental clasificar correctamente tus materiales y registrar sus movimient
 - **Semielaborados (Tu trabajo en proceso):** Son los productos intermedios que ya han sido procesados en una fase de la fábrica, pero que aún requieren pasar por más etapas antes de estar listos para la venta (como la cuajada). **Cómo usarlos:** Regístralos al terminar cada fase intermedia. Esto permite al sistema medir con precisión los tiempos de ejecución de cada máquina y evitar cuellos de botella en la línea.
 - **Coproductos (Tus salidas de valor simultáneas):** Son los múltiples bienes de alto valor comercial que se generan de forma inevitable y al mismo tiempo a partir de un único proceso o materia prima (como la nata y la leche desnatada al centrifugar). **Cómo usarlos:** Se registran como salidas finales del proceso correspondiente para que el sistema actualice su disponibilidad y se puedan comercializar de inmediato.
 
-**Fabricación \> Versión Activa \> Operación**
-
-1. **Añadir el material**
+### **1. Añadir el material**
 
 **Artículo:** es un menú desplegable donde debes seleccionar la materia prima, semielaborado o coproducto que vas a incorporar a la receta.
 
@@ -32,8 +32,6 @@ Es fundamental clasificar correctamente tus materiales y registrar sus movimient
 > - **Momento de consumo:** eliges **Cada unidad**. El sistema descontará del inventario 150 gramos de mozzarella de forma progresiva cada vez que la línea de producción termine una pizza.
 
 ## Cómo se ejecuta una operación
-
-**Fabricación \> Versión Activa \> Operación**
 
 #### **1. Añadir pasos:**
 
@@ -67,6 +65,8 @@ Los **controles** obligan al operario a registrar una comprobación al iniciar o
 
 Úsalos para capturar evidencias, parámetros de calidad o validaciones que deben quedar vinculadas a la operación.
 
+### 1. Añadir control
+
 **Nombre:** título breve y descriptivo de la tarea a realizar (por ejemplo: _"Medición de temperatura"_, _"Revisión visual de sellado"_ o _"Firma de seguridad"_).
 
 **Instrucciones:** es el espacio para detallar cómo se debe hacer el control. Puedes añadir texto, usar fórmulas o incluso adjuntar archivos (como planos, fotos de referencia o manuales en PDF).
@@ -86,3 +86,5 @@ Define en qué momento exacto del proceso el sistema debe exigirle esta tarea al
 **_Al final_**: limpieza, cierre documental o comprobación final.
 
 **Duración (minutos):** el tiempo estimado que toma realizar este control específico.
+
+### Siguiente paso
