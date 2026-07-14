@@ -1,5 +1,5 @@
 ---
-title: "Condicionar operaciones"
+title: "Condicionar: operaciones, entradas, pasos"
 ---
 
 Añade condiciones a una operación cuando una etapa completa del proceso solo aplica para determinadas variantes del artículo fabricado.
@@ -13,6 +13,12 @@ Añade condiciones a una entrada cuando un material solo se consume para algunas
 Por ejemplo, si el color del producto determina qué pintura se usa, puedes crear una entrada para pintura roja y otra para pintura azul, condicionando cada una al valor correspondiente de la propiedad **Color**.
 
 Así, cada orden de fabricación incluirá solo los materiales que aplican a su artículo concreto.
+
+Añade condiciones a un paso cuando solo debe aparecer para algunas variantes del artículo fabricado.
+
+Por ejemplo, si un acabado requiere un tratamiento adicional, puedes crear ese paso y condicionarlo a la propiedad **Acabado**.
+
+Cuando la orden sea de un artículo que cumple la condición, el paso aparecerá. En el resto de órdenes no formará parte de la ejecución.
 
 ### 1. Añade condición:
 
