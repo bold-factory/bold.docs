@@ -1,0 +1,205 @@
+es/ayuda/personal/introduccion.mdx
+  s_148ac92888f606::t_953fd736b7387d 10-19,22,25
+  s_148ac92888f606::t_7e8b5e888dab7b 20-21
+  s_148ac92888f606::t_33104c64db09b6 23-24
+  s_148ac92888f606::t_598a767e216b4a 26
+  s_148ac92888f606::t_20c49bd86383de 34
+es/ayuda/produccion/modificar-ordenes-de-fabricacion.mdx
+  s_148ac92888f606::t_d228898668db91 6,12
+  s_148ac92888f606::t_693001243d8ce1 16-17,19,28,30,32,36,40,42
+es/ayuda/planificacion/priorizar-necesidades.mdx
+  s_148ac92888f606::t_7415a5f8cf2498 2,12
+  s_148ac92888f606::t_41e8f36cd7e476 18-19,22,29-30,32,39,44,47,51,55,57
+es/ayuda/ventas/introduccion.mdx
+  s_148ac92888f606::t_55d7707acad56a 8,10
+  s_148ac92888f606::t_c09e4691d04d36 2,12,20,28,36,44
+es/ayuda/ventas/clientes.mdx
+  s_148ac92888f606::t_55d7707acad56a 6,8
+  s_148ac92888f606::t_eebda5f3935db7 2,12,14,16,18-20
+es/ayuda/articulos/crear-un-producto.mdx
+  s_148ac92888f606::t_e8d93a869f7348 6
+  s_148ac92888f606::t_55d5e032eeb596 17-19,23,37-39,45
+es/ayuda/produccion/generar-peticiones-manualmente.mdx
+  s_148ac92888f606::t_6372d8706ad840 6,8
+  s_148ac92888f606::t_25d40f9c825d58 10,12,30
+es/ayuda/almacen/recibir-con-albaran.mdx
+  s_148ac92888f606::t_1e60b88a6fbd20 6
+  s_148ac92888f606::t_8def1ca7be8dea 10,12,14,18,22,26,30,45
+es/ayuda/panel-de-control/configuracion-de-empresa.mdx
+  s_148ac92888f606::t_5cda7c9d5e03f7 82
+es/ayuda/produccion/modo-rapido.mdx
+  s_148ac92888f606::t_59639261ba326a 6
+  s_7500cd4e643e5c::t_4e44e824610d08 10
+  s_148ac92888f606::t_28476b6d0b778e 14,16,18,20-22,26
+es/ayuda/personal/programar-turnos.mdx
+  s_148ac92888f606::t_90b28e2713f8d9 6,8
+  s_148ac92888f606::t_1264590bef599e 22-30
+es/ayuda/personal/empleados.mdx
+  s_148ac92888f606::t_90b28e2713f8d9 2,9-10,12,14,42
+  s_148ac92888f606::t_953fd736b7387d 8,30
+  s_148ac92888f606::t_1e93734085db0d 31-33,39-41
+  s_148ac92888f606::t_768ef00164240a 22,34-38
+es/ayuda/ventas/preparar-y-registrar-envio.mdx
+  s_148ac92888f606::t_55d7707acad56a 8,10,12
+  s_148ac92888f606::t_89cb5e0f79d9b0 16,20,34,36,44,46
+es/ayuda/personal/anadir-calendarios-locales.mdx
+  s_148ac92888f606::t_953fd736b7387d 6,12
+  s_148ac92888f606::t_3e4cfd71db7cd7 14-16,18,20-22,24
+es/ayuda/ventas/cancelar-pedido.mdx
+  s_148ac92888f606::t_55d7707acad56a 8,10,12
+  s_148ac92888f606::t_c7ed32fc4211ca 2,16,18,24,26,28,32,34,38
+es/ayuda/primeros-pasos/preparar-datos-base.mdx
+  s_148ac92888f606::t_b357ae18cc3cc7 68
+es/ayuda/planificacion/proveedores.mdx
+  s_148ac92888f606::t_7415a5f8cf2498 8,10,12,14
+  s_148ac92888f606::t_646ddb4803f2a3 2,16,18,24,26-27,29-31
+es/ayuda/primeros-pasos/crear-pedido-y-lanzar-of.mdx
+  s_148ac92888f606::t_b357ae18cc3cc7 2
+es/ayuda/mantenimiento/como-configurar-el-mantenimiento.mdx
+  s_148ac92888f606::t_041d9ff668d450 13-14,26,32,46,52
+  s_148ac92888f606::t_6acec4e85b9108 12
+  s_148ac92888f606::t_691729223ce24b 30-31
+  s_148ac92888f606::t_0d18321192181d 44-45
+  s_148ac92888f606::t_11b08594a4684a 50-51
+  s_148ac92888f606::t_38a9851ca3df80 2,8,38
+es/ayuda/produccion/ejecutar-operaciones-en-planta.mdx
+  s_148ac92888f606::t_11cb59eb2dee6f 10,14-22
+  s_148ac92888f606::t_ff68a319fbd4c1 26-28,30,37,43,45,49,56,62,64,68,72-73
+es/ayuda/produccion/crear-recursos.mdx
+  s_148ac92888f606::t_0231b48b17e45f 16-18,23,27-29,34-35,41-43,47,49,58,60,72,74,84,90
+  s_148ac92888f606::t_6372d8706ad840 8-10,12,19,33,37
+  s_148ac92888f606::t_437f28dfb9a7ac 48
+  s_148ac92888f606::t_326ee75ade205a 59
+  s_148ac92888f606::t_6ddeef692efae0 73
+  s_148ac92888f606::t_8d90971b97578d 85-89
+  s_148ac92888f606::t_678a4351ca8acd 63,66,80
+es/ayuda/produccion/plan-de-produccion.mdx
+  s_148ac92888f606::t_59639261ba326a 6,12,16,18,20-22
+  s_148ac92888f606::t_b3401347a1a98a 8
+  s_148ac92888f606::t_3931f55fbe1f5c 37,45-46,48,50,52-56,58-66,72,74,76
+es/ayuda/produccion/secuenciar-ordenes.mdx
+  s_148ac92888f606::t_b3401347a1a98a 12-14,16
+  s_148ac92888f606::t_59639261ba326a 10
+  s_148ac92888f606::t_f11dfa525ef8c3 11
+  s_148ac92888f606::t_8be1b4df4efd89 15
+  s_148ac92888f606::t_d3acdb4bcbebe7 17
+  s_148ac92888f606::t_ae6daafe3aa3f7 25-27,42,44-45
+es/ayuda/articulos/crear-un-articulo.mdx
+  s_148ac92888f606::t_e8d93a869f7348 6,8,10,12
+  s_148ac92888f606::t_67f518e2754310 20,35,49,53,55-59
+es/ayuda/personal/definir-jornadas.mdx
+  s_7500cd4e643e5c::t_4e44e824610d08 12
+  s_148ac92888f606::t_953fd736b7387d 6,8,10,13
+  s_148ac92888f606::t_6160b523ea6a3d 14
+  s_148ac92888f606::t_b802e4a355a33e 16,18-20
+es/ayuda/primeros-pasos/configurar-receta-minima.mdx
+  s_148ac92888f606::t_5cda7c9d5e03f7 81
+es/ayuda/articulos/editar-un-articulo.mdx
+  s_148ac92888f606::t_e8d93a869f7348 6,8,12
+  s_148ac92888f606::t_a78a6502748372 16-18,20,22,26,28-29
+es/ayuda/compras/recibir-pedido-de-compra.mdx
+  s_148ac92888f606::t_953fd736b7387d 2,6,14-15
+  s_148ac92888f606::t_290ebad9da9fcf 19,21,33,35,45,49,55,57,65,67,69,75-76
+es/ayuda/produccion/crear-una-receta.mdx
+  s_148ac92888f606::t_3b49aca0c27b64 6,8,12,14,28,32
+  s_148ac92888f606::t_b3401347a1a98a 24-26,72,77
+  s_148ac92888f606::t_b887b23dfc93da 73-76
+  s_148ac92888f606::t_158981ec5f4179 20,44,54,66,68,81,85,89-90,98
+es/ayuda/produccion/crear-motivos-de-pausa.mdx
+  s_148ac92888f606::t_6372d8706ad840 6
+  s_148ac92888f606::t_aa854502d35642 14,18-20,24-26
+es/ayuda/mantenimiento/mantenimiento-preventivo.mdx
+  s_148ac92888f606::t_041d9ff668d450 8-28
+  s_148ac92888f606::t_cc293402d69b10 29-31
+  s_148ac92888f606::t_8e4aa0a2b91a9a 42-44
+es/ayuda/produccion/especificar-materiales-pasos-y-controles.mdx
+  s_148ac92888f606::t_3b49aca0c27b64 6,15-16,18
+  s_148ac92888f606::t_b3401347a1a98a 14
+  s_148ac92888f606::t_dd8bb516eebd3f 2,29-35,39,41,53-54,59,71,85,87,89
+es/ayuda/produccion/crear-turnos.mdx
+  s_148ac92888f606::t_6372d8706ad840 6
+  s_148ac92888f606::t_9849bd0a0accab 2,10-12,14
+es/ayuda/produccion/para-que-son-necesarias-las-condiciones.mdx
+  s_148ac92888f606::t_b3401347a1a98a 6,10,14-15,18,22,30,38
+  s_148ac92888f606::t_3b49aca0c27b64 16,24,32,40
+  s_148ac92888f606::t_fc3594948f915e 23
+  s_148ac92888f606::t_465b5df8d7f639 31
+  s_148ac92888f606::t_a7669b8227a27d 39
+  s_148ac92888f606::t_9d991f7ca1eb79 2,26,34,42
+es/ayuda/produccion/lanzar-ofs.mdx
+  s_7500cd4e643e5c::t_4e44e824610d08 10,25
+  s_148ac92888f606::t_d228898668db91 6,8,12,16,18-20,24,26-28,30
+  s_148ac92888f606::t_71c1ad383c09e3 34,41,47,51-55,57,59,61,63
+es/ayuda/articulos/definir-propiedades.mdx
+  s_148ac92888f606::t_e8d93a869f7348 6,10,14-15
+  s_148ac92888f606::t_d1d6403ba1a9be 16-18
+  s_148ac92888f606::t_3bc064e3ea0fea 19-24
+es/ayuda/planificacion/realizar-pedidos-de-compra.mdx
+  s_148ac92888f606::t_7415a5f8cf2498 6
+  s_148ac92888f606::t_36d170b6e844b5 2,8,12-13
+es/ayuda/produccion/asignar-recursos.mdx
+  s_148ac92888f606::t_0231b48b17e45f 13,17-18
+  s_148ac92888f606::t_6372d8706ad840 9
+  s_148ac92888f606::t_92c1e6c086055d 20,24,28-29,31-39
+es/ayuda/planificacion/asistente-de-compras.mdx
+  s_148ac92888f606::t_7415a5f8cf2498 6,8,12,14-15,17
+  s_148ac92888f606::t_7e90983f1b3263 19-21,23,25,29-30,34,44
+es/ayuda/produccion/definir-procesos.mdx
+  s_148ac92888f606::t_0231b48b17e45f 6,16,22,36,55
+  s_148ac92888f606::t_6372d8706ad840 12,17-18,24,38,57
+  s_148ac92888f606::t_925b7dacd45fb8 23
+  s_148ac92888f606::t_8b64b7789cb815 37
+  s_148ac92888f606::t_dd64d5a4e55b48 56
+  s_148ac92888f606::t_dbd814ccd33829 26,30,32,46-48
+es/ayuda/ventas/cambiar-un-pedido.mdx
+  s_148ac92888f606::t_55d7707acad56a 8-10,12
+  s_148ac92888f606::t_a1f0193fac7ba4 14,19,27,29,35-37
+es/ayuda/almacen/crear-ubicaciones.mdx
+  s_148ac92888f606::t_f78af1d39fdedb 6
+es/ayuda/almacen/mover-stock.mdx
+  s_148ac92888f606::t_72572ffb61f551 6,8,10
+es/ayuda/articulos/introduccion.mdx
+  s_148ac92888f606::t_66af8b76672360 10,15,19,23
+es/ayuda/mantenimiento/crear-parte-de-trabajo.mdx
+  s_148ac92888f606::t_a2bcb32b19e309 12,42
+es/ayuda/mantenimiento/introduccion.mdx
+  s_148ac92888f606::t_7f4f1b99dda340 15-16,20
+es/ayuda/personal/configurar-horarios.mdx
+  s_148ac92888f606::t_b13d64688040e6 2,8
+es/ayuda/planificacion/configuracion.mdx
+  s_148ac92888f606::t_0dd1232c3dc8b7 2,11,19,23
+es/ayuda/primeros-pasos/flujo-basico-de-trabajo.mdx
+  s_148ac92888f606::t_809dfa9cf0862d 10,33-34,111,124
+es/ayuda/primeros-pasos/introduccion.mdx
+  s_148ac92888f606::t_49bac07c365dd3 25,38,50-54
+es/ayuda/produccion/introduccion.mdx
+  s_148ac92888f606::t_e922c55fa99874 19,27
+es/ayuda/usuarios-y-permisos/invitar-usuarios.mdx
+  s_148ac92888f606::t_3a079967d28ada 21,25,29,31,33,35
+es/ayuda/ventas/vender.mdx
+  s_148ac92888f606::t_4266e23f359b64 11,15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "894999d1902130de3e6d2f308f2ce3b6e9fb2551",
+  "prompts": {},
+  "sessions": {
+    "s_148ac92888f606": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f7fdc-f2b0-7841-a99f-c6f5107892c8",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_7500cd4e643e5c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f7fbe-a627-70f1-a48f-2e4a50a43b5a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
