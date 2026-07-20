@@ -1,0 +1,114 @@
+es/conceptos/catalogo/articulos.mdx
+  s_6c7e05cc045cb7::t_4f0e99e63615fa 17
+es/conceptos/catalogo/unidades-de-medida.mdx
+  s_6c7e05cc045cb7::t_4f0e99e63615fa 19
+es/conceptos/fabricacion/controles-consumos-y-pausas.mdx
+  s_6c7e05cc045cb7::t_4f0e99e63615fa 41,43,45,47
+es/conceptos/fabricacion/recetas-y-versiones.mdx
+  s_6c7e05cc045cb7::t_4f0e99e63615fa 7,19
+package.json
+  s_6c7e05cc045cb7::t_344ad2b7d472cb 6-7
+es/desarrolladores/empezar/introduccion.mdx
+  s_6c7e05cc045cb7::t_427ae2ee86f730 2-3
+  s_6c7e05cc045cb7::t_8e0a72b1caf81b 123
+es/ayuda/smart-factory/introduccion.mdx
+  s_6c7e05cc045cb7::t_427ae2ee86f730 2
+  s_52f5d48f0bc74f::t_a0a89b989ae4d8 3
+es/conceptos/almacen/recepciones.mdx
+  s_6c7e05cc045cb7::t_4f0e99e63615fa 15
+es/conceptos/costes.mdx
+  s_6c7e05cc045cb7::t_4f0e99e63615fa 70
+es/conceptos/fabricacion/operaciones-y-restricciones.mdx
+  s_6c7e05cc045cb7::t_4f0e99e63615fa 37
+AGENTS.md
+  s_6c7e05cc045cb7::t_937f4c60716edd 19-20
+  s_52f5d48f0bc74f::t_de3d38dd21fe57 21-24,33-35,40,44-48
+es/desarrolladores/webhooks/payloads.mdx
+  s_6c7e05cc045cb7::t_427ae2ee86f730 33
+es/ayuda/mantenimiento/introduccion.mdx
+  s_6c7e05cc045cb7::t_427ae2ee86f730 2
+  s_6c7e05cc045cb7::t_b5d2b94c135149 3
+  s_52f5d48f0bc74f::t_0eacfec7db1696 21
+es/conceptos/almacen/stock-y-movimientos.mdx
+  s_6c7e05cc045cb7::t_4f0e99e63615fa 49
+es/desarrolladores/empezar/paginacion.mdx
+  s_6c7e05cc045cb7::t_b5d2b94c135149 72
+scripts/check-links.mjs
+  s_6c7e05cc045cb7::t_344ad2b7d472cb 1-112
+es/desarrolladores/webhooks/introduccion.mdx
+  s_6c7e05cc045cb7::t_427ae2ee86f730 2-3
+es/ayuda/articulos/crear-un-articulo.mdx
+  s_52f5d48f0bc74f::t_eac99ce74f1c19 33
+es/ayuda/articulos/definir-propiedades.mdx
+  s_52f5d48f0bc74f::t_0ac2dbe2dbafcc 12
+es/ayuda/compras/recibir-pedido-de-compra.mdx
+  s_6c7e05cc045cb7::t_e69c8614e4cee5 25
+es/ayuda/mantenimiento/crear-parte-de-trabajo.mdx
+  s_52f5d48f0bc74f::t_1a1068627f186f 32
+es/ayuda/personal/anadir-calendarios-locales.mdx
+  s_52f5d48f0bc74f::t_dc33f97da7a272 28
+es/ayuda/planificacion/asistente-de-compras.mdx
+  s_52f5d48f0bc74f::t_3ae1b42864e18e 38
+es/ayuda/produccion/asignar-recursos.mdx
+  s_52f5d48f0bc74f::t_9b93aa0419fe46 7
+es/ayuda/produccion/crear-una-receta.mdx
+  s_52f5d48f0bc74f::t_dd337b3673ad1a 30,99-100
+es/ayuda/produccion/ejecutar-operaciones-en-planta.mdx
+  s_52f5d48f0bc74f::t_88c68c0d4c3160 34
+es/ayuda/produccion/especificar-materiales-pasos-y-controles.mdx
+  s_52f5d48f0bc74f::t_6adf943eb07651 8-10
+es/ayuda/produccion/generar-peticiones-manualmente.mdx
+  s_52f5d48f0bc74f::t_01cf3529e44dae 26
+es/ayuda/produccion/modificar-ordenes-de-fabricacion.mdx
+  s_52f5d48f0bc74f::t_d4702102785ef6 38,42
+es/ayuda/produccion/plan-de-produccion.mdx
+  s_52f5d48f0bc74f::t_0f90c3f5f07858 24,30,32-33,68,70
+es/ayuda/ventas/cambiar-un-pedido.mdx
+  s_52f5d48f0bc74f::t_48964ef18500ae 33
+es/ayuda/ventas/cancelar-pedido.mdx
+  s_52f5d48f0bc74f::t_365073f70b1034 40,42-43
+es/ayuda/ventas/introduccion.mdx
+  s_52f5d48f0bc74f::t_4b9c3b939c2c41 14,18,20,24,26,30,32,34,38,40
+es/conceptos/catalogo.mdx
+  s_6c7e05cc045cb7::t_b98b0d637e5a19 38
+es/conceptos/fabricacion/ordenes-de-fabricacion.mdx
+  s_6c7e05cc045cb7::t_33226bad411ecc 28,54
+es/novedades/changelog.mdx
+  s_eec9b44521d2c7::t_7b10512b973b79 3
+README.md
+  s_6c7e05cc045cb7::t_da3f7a9ff2aafe 30-31
+es/desarrolladores/empezar/autenticacion.mdx
+  s_6c7e05cc045cb7::t_091606a5777569 86
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "d267bcc11359c917b34943b33520a6a96173f81f",
+  "prompts": {},
+  "sessions": {
+    "s_52f5d48f0bc74f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f7ffe-e08c-7ca1-b8a1-7d81a3d4e335",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_6c7e05cc045cb7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f802e-361b-7080-b3ab-56b0a76703cd",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_eec9b44521d2c7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f802a-5c7c-7282-a777-cb24f7a09672",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
