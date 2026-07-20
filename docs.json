@@ -69,8 +69,9 @@
               {
                 "group": "Vender",
                 "icon": "badge-dollar-sign",
+                "root": "es/ayuda/ventas/vender",
+                "directory": "card",
                 "pages": [
-                  "es/ayuda/ventas/vender",
                   "es/ayuda/ventas/clientes",
                   "es/ayuda/ventas/introduccion",
                   "es/ayuda/ventas/preparar-y-registrar-envio",
@@ -81,9 +82,9 @@
               {
                 "group": "Comprar",
                 "icon": "shopping-cart",
+                "root": "es/ayuda/planificacion/configuracion",
                 "directory": "card",
                 "pages": [
-                  "es/ayuda/planificacion/configuracion",
                   "es/ayuda/planificacion/proveedores",
                   "es/ayuda/planificacion/asistente-de-compras",
                   "es/ayuda/planificacion/realizar-pedidos-de-compra",

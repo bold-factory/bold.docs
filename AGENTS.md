@@ -29,6 +29,10 @@
 - Use sentence case for headings
 - Bold for UI elements: Click **Settings**
 - Code formatting for file names, commands, paths, and code references
+- In the **Guides** section, use short titles that describe tasks or typical industrial processes.
+- Do not use Bold-specific concepts in guide titles. Widely understood industrial terms and abbreviations, such as **OF**, are acceptable.
+- Introduce Bold-specific concepts in the guide body with a short explanation and a link to the relevant page in **Concepts**.
+- Each guide should explain how to complete a process in Bold, including alternative workflows when more than one is available.
 
 ## Content boundaries
 

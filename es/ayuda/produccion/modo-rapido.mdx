@@ -1,31 +1,48 @@
 ---
-title: "Modo simplificado"
-description: "Asigna fechas y recursos directamente a las operaciones sin crear un plan de producción."
+title: "Secuenciar manualmente"
+description: "Prioriza órdenes y operaciones ajustando sus fechas objetivo directamente."
 ---
 
 **Ruta:** **Fabricación \> Secuenciación**
 
-Para planificar con precisión, debes elegir la pestaña adecuada según el nivel de detalle que quieras organizar:
+Secuencia manualmente cuando necesites ajustar unas pocas órdenes u operaciones sin crear un plan de producción. Los cambios en las fechas objetivo afectan directamente al trabajo pendiente de la planta.
+
+## Elegir el nivel de trabajo
+
+La pantalla **Secuenciación de la fabricación** ofrece tres formas de revisar el trabajo pendiente:
+
+| Pestaña | Cuándo usarla |
+| --- | --- |
+| **Órdenes** | Para priorizar OF completas según su fecha requerida o fecha objetivo. |
+| **Híbrido** | Para priorizar OF que tienen trabajo en un área, estación o herramienta concreta. |
+| **Operaciones** | Para ajustar tareas concretas y agrupar operaciones que se ejecutarán juntas en una estación. |
 
 ## Órdenes
 
-Organiza la producción dándole prioridad a pedidos completos. Y con posibilidad de filtrar por área, estación de trabajo o herramienta para ver cómo impactan las órdenes globales en zonas específicas del taller.
+Usa **Órdenes** para revisar todas las OF abiertas. Ordena la lista por fecha requerida o fecha objetivo y modifica la fecha objetivo de cada orden cuando necesites cambiar su prioridad.
 
 ### Ordenar por
-
-Te ayuda a visualizar la secuenciación antes de planificar.
 
 - **Fecha requerida:** organiza toda la lista según la **fecha de entrega final comprometida con el cliente**.
 
 - **Fecha objetivo:** ordena las tareas según la **fecha interna de fabricación** que se ha estimado o planificado para ejecutar el trabajo en la planta.
 
-### Determinar la fecha objetivo
+### Ajustar la fecha objetivo
 
-Permite modificar las prioridades directamente sobre la producción real. En esta vista cuentas con una lista numerada de prioridad (1, 2, 3...) donde puedes ordenar las peticiones por su **fecha objetivo**. El sistema te mostrará alertas visuales en rojo si un pedido acumula retrasos respecto a su entrega (por ejemplo, marcando 10d de demora), permitiéndote cambiar fechas o reasignar recursos sobre la marcha para corregir el rumbo.
+La lista muestra la prioridad calculada de cada OF. Cambia su **fecha objetivo** para adelantarla o retrasarla. Bold muestra una alerta si la nueva fecha provoca un retraso respecto a la fecha requerida.
+
+## Híbrido
+
+Usa **Híbrido** cuando quieras priorizar OF completas, pero solo dentro de un área o estación concreta. Puedes filtrar también por herramienta para concentrarte en el trabajo que comparte una misma configuración de máquina.
 
 ## Operaciones
 
-Desglosa las órdenes en subtareas físicas (corte, fresado, pintura) vinculadas a recursos concretos. Es la pestaña clave para **eliminar tiempos muertos por cambio de herramientas o configuración de maquinaria**.
+Usa **Operaciones** para trabajar con tareas físicas como corte, fresado o pintura. Selecciona un área o estación y, si lo necesitas, filtra por herramienta.
 
-- **Uso de filtros:** Al seleccionar una **Estación de trabajo** (ej. _Sierra circular 1_) o una **Herramienta** específica, el sistema te muestra únicamente las tareas mecánicas de esa máquina.
-- **Organización de tiempos:** Puedes ordenar las operaciones de manera que se fabriquen seguidas todas las piezas que usen el mismo material, espesor o molde. Tu operario no tendrá que parar la máquina para reconfigurarla entre pedido y pedido, ahorrando horas de trabajo especializado a la semana.
+- Ajusta la fecha objetivo de una operación cuando su prioridad deba ser distinta a la del resto de la OF.
+- Agrupa operaciones cuando deban ejecutarse juntas en la misma estación.
+- Filtra por herramienta para preparar seguidas las operaciones que comparten molde, útil o configuración.
+
+<Card title="Crear un plan de producción" icon="calendar-range" href="/es/ayuda/produccion/plan-de-produccion">
+  Crea un escenario cuando necesites calcular y comparar la secuencia de muchas operaciones antes de aplicarla.
+</Card>

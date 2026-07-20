@@ -5,14 +5,14 @@ description: "Ordena operaciones para que la planta ejecute el trabajo en la pri
 
 La secuenciación ayuda a decidir cuándo y dónde ejecutar operaciones de fabricación.
 
-Puedes trabajar de dos formas:
+Elige el flujo según el alcance del cambio:
 
 <Columns cols={2}>
-  <Card title="Modo simplificado" icon="list-ordered" href="/es/ayuda/produccion/modo-rapido">
-    Asigna fechas objetivo y recursos directamente en las órdenes.
+  <Card title="Secuenciar manualmente" icon="list-ordered" href="/es/ayuda/produccion/modo-rapido">
+    Ajusta directamente las fechas objetivo de órdenes u operaciones concretas.
   </Card>
-  <Card title="Modo planificado" icon="calendar-range" href="/es/ayuda/produccion/plan-de-produccion">
-    Crea planes de producción para resolver un escenario completo antes de aplicarlo.
+  <Card title="Crear un plan de producción" icon="calendar-range" href="/es/ayuda/produccion/plan-de-produccion">
+    Calcula y revisa un escenario con muchas operaciones antes de aplicarlo.
   </Card>
 </Columns>
 
@@ -30,16 +30,4 @@ Puedes trabajar de dos formas:
 
 Revisa que las órdenes tengan operaciones abiertas, procesos definidos, estaciones compatibles, restricciones coherentes, fechas objetivo y disponibilidad de materiales cuando aplique.
 
-Para planificar con precisión, debes elegir la pestaña adecuada según el nivel de detalle que quieras organizar:
-
-**Órdenes:** organiza la producción por pedidos completos. Filtra por área, estación o herramienta para revisar cómo afectan las órdenes a zonas concretas del taller.
-
-**Operaciones:** desglosa las órdenes en tareas físicas, como corte, fresado o pintura, vinculadas a recursos concretos.
-
-- **Uso de filtros:** Al seleccionar una **Estación de trabajo** (ej. _Sierra circular 1_) o una **Herramienta** específica, el sistema te muestra únicamente las tareas mecánicas de esa máquina.
-- **Organización de tiempos:** Puedes ordenar las operaciones de manera que se fabriquen seguidas todas las piezas que usen el mismo material, espesor o molde. Tu operario no tendrá que parar la máquina para reconfigurarla entre pedido y pedido, ahorrando horas de trabajo especializado a la semana.
-
-## Planes de producción
-
-- **Para qué sirve:** es un entorno de prueba. Aquí se almacena el historial de simulaciones y puedes **Crear nuevos planes** de producción.
-- **Cómo te ayuda a planificar:** permite probar cambios en el calendario de la fábrica sin afectar al trabajo real. Puedes lanzar el algoritmo de Bold para que calcule una secuencia considerando restricciones como la falta de personal o los retrasos de materia prima. Sabrás si un escenario es viable cuando el sistema marque **Solución encontrada**. Los cambios no llegarán a las pantallas de los operarios hasta que revises los retrasos previstos y decidas **Aplicar** el plan.
+Secuencia manualmente cuando el cambio sea concreto y conozcas la prioridad que quieres aplicar. Crea un plan de producción cuando necesites calcular un escenario completo, comprobar restricciones o comparar el resultado antes de llevarlo a planta.

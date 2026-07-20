@@ -1,11 +1,13 @@
 ---
-title: "Generar peticiones manualmente"
-description: "Crea una petición de fabricación manual cuando no proceda generarla desde la demanda o el asistente."
+title: "Crear una OF manualmente"
+description: "Crea una OF cuando la necesidad no proceda de un pedido o del asistente de fabricación."
 ---
 
-También puedes generar una petición de fabricación manualmente.
+Usa este flujo cuando necesites crear una OF sin partir de un pedido de venta ni de una recomendación del asistente de fabricación.
 
-Es un flujo menos habitual porque no conserva toda la información que aporta el asistente de fabricación.
+En Bold, primero crearás una **petición de fabricación** y después la convertirás en una OF. La petición registra qué artículo necesitas fabricar, en qué cantidad y para cuándo. Consulta [Peticiones de fabricación](/es/conceptos/fabricacion/peticiones-de-fabricacion) para entender su relación con las órdenes.
+
+Este flujo conserva menos contexto de planificación que una petición generada desde la demanda o el asistente.
 
 ## Pasos a seguir
 
@@ -27,6 +29,6 @@ Es un flujo menos habitual porque no conserva toda la información que aporta el
 
 **Código (opcional):** un identificador interno para relacionar la petición. Puede ser el número de pedido de venta del cliente o un código generado por Bold.
 
-### 2. Lanzar la orden de fabricación
+### 2. Crear la OF
 
-Esto significa que la orden pasa de ser una planificación teórica (un borrador) a convertirse en una instrucción de trabajo real, activa e inmediata para el personal de planta. En Bold se representa con un cohete. 
+Guarda la petición y usa la acción identificada con un cohete para crear la OF. La orden convierte la necesidad registrada en trabajo que puedes planificar y ejecutar en planta.
