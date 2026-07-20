@@ -1,0 +1,56 @@
+---
+title: "Controlar órdenes de fabricación"
+---
+
+**Fabricación \> Órdenes de fabricación** 
+
+Una **Orden de fabricación** u **OF** representa la transformación real de materiales en un artículo terminado, semielaborado o coproducto.
+
+Normalmente se crea desde una **Petición de fabricación**. La petición define la necesidad. La OF define la ejecución.
+
+### 1. Elige tu perspectiva de trabajo (Pestañas superiores)
+
+En la parte superior de la pantalla verás tres pestañas que transforman por completo cómo se agrupa la información:
+
+**Órdenes:** Es la vista por defecto. Te permite ver cada petición de fabricación como un bloque único (por ejemplo: fabricar 50 unidades de una mesa de roble). Es la vista perfecta para el **seguimiento comercial y administrativo**: sabes quién solicita el producto, qué artículo es, la cantidad total y los plazos de entrega.
+
+1. **Cómo ordenar y priorizar tus tareas**
+
+Para asegurarte de que las prioridades de fabricación están alineadas con los plazos de entrega, utiliza las herramientas de control de la tabla:
+
+- **Ordenación por Fechas:** Las columnas **Creada**, **Requerida** (fecha solicitada por el cliente) y **Objetivo** (fecha interna de entrega) se pueden ordenar con un solo clic en su cabecera. Así puedes colocar arriba del todo los lanzamientos más urgentes o las entregas más críticas.
+- **Filtros de Limpieza Visual:** Utiliza los botones rápidos de la parte superior (**Ocultar canceladas**, **Ocultar finalizadas**) para limpiar la pantalla de "ruido" y concentrarte únicamente en las órdenes que están activas y pendientes de fabricar.
+- **Buscadores Predictivos:** Justo debajo de cada columna tienes un buscador rápido. Si quieres ver solo las órdenes de un cliente concreto, escribe su nombre en la casilla "Contiene" de la columna Solicitante. Si buscas un componente específico, hazlo en Cod. Art. o Artículo.
+
+**Operaciones:** Aquí es donde las órdenes de fabricación se descomponen en el paso a paso físico que deben realizar tus operarios y máquinas.
+
+En esta pantalla, cada fila representa una **tarea o fase de trabajo individual**. Así es como debes usarla para optimizar tu producción diaria:
+
+1. **Entiende el desglose de tus órdenes**
+
+Aquí no ves "un producto terminado", sino la **hoja de ruta** detallada para fabricarlo.
+
+- El sistema te muestra de forma consecutiva todas las tareas necesarias para completarla: desde el Corte de pata inclinada en la sierra, pasando por el Lijado, el Tratamiento exterior, el Pegado en la prensa, hasta el Embalaje final.
+- Esto te permite saber exactamente en qué punto del proceso se encuentra cada pedido en tiempo real.
+
+2. **Control de Estaciones de Trabajo**
+
+La columna **Estación de trabajo** te indica el lugar físico o la maquinaria donde se ejecuta la tarea (por ejemplo: Cabina de pintura, Prensa hidráulica 1 o Mesa de embalaje 1).
+
+- Si filtras esta columna por una máquina concreta (por ejemplo, escribiendo "Sierra circular 1" en el buscador de la columna), la pantalla te juntará todas las tareas de corte de todas las órdenes que tienes activas. Tu operario podrá cortar todas las piezas seguidas, evitando tener que reconfigurar o cambiar los ajustes de la máquina constantemente.
+
+3. **El triple control de cantidades** 
+
+Para llevar un control milimétrico del rendimiento y las mermas de tu fábrica, haz el seguimiento de estas tres columnas clave:
+
+- **Q. planificada (Cantidad Planificada):** El número de piezas que deben entrar en esa fase del proceso.
+- **Q. completada (Cantidad Completada):** Las unidades que el operario ya ha terminado y que están listas para pasar a la siguiente operación.
+- **Q. rechazada (Cantidad Rechazada):** El número de piezas que han salido defectuosas en esa fase. Esto te ayuda a detectar problemas de calidad al instante sin esperar a que el producto esté terminado.
+
+**Grupos de operaciones:** Te permite visualizar las tareas organizadas por lotes o familias de trabajo, ideal para balancear la carga entre distintos departamentos o secciones de la fábrica.
+
+### Elimina o cancela órdenes 
+
+**Eliminar:** Permite borrar la orden directamente si no tiene actividad registrada. Y por tanto, **l**a orden se borra de la base de datos como si nunca hubiera existido. Se pierde su número de folio, su historial y toda la información asociada.
+
+**Cancelar:** Si la orden ya había tenido movimientos de inventario, registros de tiempos de operarios o compras de material asociadas, el sistema solo te permitirá cancelar la orden. Esto es debido, a que eliminarla, crearía un desajuste contable e inconsistencias en el inventario.

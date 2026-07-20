@@ -7,114 +7,61 @@ Ejecuta operaciones en planta cuando una orden ya tiene trabajo preparado. Este 
 
 La ejecución diaria se hace desde **Modo de trabajo**. La gestión de recetas, órdenes, recursos y secuencia se mantiene en el modo de gestión.
 
-## Antes de empezar
-
-Revisa:
-
-- operación no cancelada ni bloqueada;
-- estación, fecha objetivo y herramientas cuando el proceso lo requiera;
-- restricciones de operaciones anteriores;
-- componentes críticos disponibles o decisión de regularización;
-- controles obligatorios configurados;
-- empleado con acceso al modo de trabajo.
-
-## Entrar en la operación
-
-<Steps>
-  <Step title="Abre modo de trabajo">
-    Entra en la vista de planta desde una tablet, terminal o equipo compartido.
-  </Step>
-  <Step title="Identifica al empleado">
-    Selecciona o escanea el empleado activo cuando tu puesto lo requiera.
-  </Step>
-  <Step title="Busca la operación">
-    Localízala por asignación, estación, área, proceso o código escaneado.
-  </Step>
-  <Step title="Revisa la ficha">
-    Comprueba orden, artículo, cantidad planificada, cantidad completada, estación y prioridad.
-  </Step>
-</Steps>
+En el caso de que alguien se le olvida fichar se puede usar el modo gestión para ejecutar las operaciones.
 
 ## Registrar trabajo
 
-<Steps>
-  <Step title="Completa controles iniciales">
-    Si la receta los exige, registra controles antes de iniciar.
-  </Step>
-  <Step title="Inicia la operación">
-    Empieza cuando la operación esté lista y las restricciones permitan avanzar.
-  </Step>
-  <Step title="Registra avance">
-    Informa cantidad completada, cantidad rechazada, comentarios, materiales consumidos y co-productos cuando corresponda.
-  </Step>
-  <Step title="Consume materiales">
-    Confirma componentes, cantidades reales, ubicación y lote físico.
-  </Step>
-  <Step title="Pausa con motivo">
-    Si el trabajo se detiene, registra la interrupción con motivo y comentario útil.
-  </Step>
-  <Step title="Reanuda">
-    Cierra la pausa cuando el trabajo continúe.
-  </Step>
-  <Step title="Finaliza">
-    Cierra la operación cuando no quede trabajo pendiente o cuando decidas terminar con diferencia justificada.
-  </Step>
-</Steps>
+1. Identifica al empleado
+2. Modo fabricación
+3. Elige tu lista de tareas (Pestañas superiores)
 
-## Qué queda trazado
+El operario puede cambiar la perspectiva de su cola de trabajo según cómo esté organizada la jornada:
 
-| Registro | Para qué sirve |
-| --- | --- |
-| Cantidad completada | Mide avance y producción válida. |
-| Cantidad rechazada | Explica defectos, merma o calidad. |
-| Consumos | Reduce stock y alimenta coste real. |
-| Lotes | Mantiene trazabilidad de materiales y salida. |
-| Controles | Guarda inspecciones y evidencias. |
-| Pausas | Explica disponibilidad, rendimiento y OEE. |
-| Comentarios | Justifica diferencias o incidencias. |
+- **Mis operaciones:** Muestra únicamente las tareas que han sido asignadas directamente a su perfil de usuario. Es su lista de tareas personal.
+- **Por estación:** Muestra los trabajos pendientes en la máquina o puesto donde se encuentra físicamente (por ejemplo, todas las tareas destinadas a la _Punzonadora_). Ideal si varios operarios rotan o comparten una misma máquina.
+- **Por área / Por proceso:** Agrupa las tareas por departamentos enteros (ej. _Carpintería, Montaje_) o tipos de tecnología.
 
-## Materiales y lotes
+4. ¿Cómo saber qué hacer primero?
 
-Bold propone cantidades teóricas según la receta, el momento de consumo y la cantidad que estás registrando. Puedes ajustar la cantidad real antes de confirmar.
+El operario debe trabajar siempre **de arriba hacia abajo**. Bold ordena las tarjetas verticalmente aplicando de forma automática la estrategia de secuenciación de la oficina técnica:
 
-| Momento de consumo | Cuándo encaja |
-| --- | --- |
-| Al comienzo | La cantidad ya se conoce al iniciar. |
-| Por unidad o progreso | Necesitas precisión conforme avanza la producción. |
-| Al final | Puede haber mermas, ajustes o confirmación al terminar. |
+- La primera tarjeta de la lista (arriba del todo) es siempre la prioridad absoluta (ej. la orden `OF-000060` para la _Perforación de Tablero_). Es la tarea que debe estar en marcha en la máquina en este momento.
+- Las tarjetas inferiores son los siguientes trabajos en cola. Al estar ordenadas de forma consecutiva, el operario puede anticipar qué materiales o herramientas va a necesitar para el siguiente cambio de lote sin necesidad de parar la producción para preguntar al encargado.
 
-Si el componente trabaja con lotes, selecciona el lote físico que se consume. Un lote incorrecto rompe trazabilidad de fabricación, coste real y análisis de calidad.
+5. Componentes de la tarjeta de trabajo
 
-## Producción y co-productos
+Cada fila contiene toda la información técnica necesaria para ejecutar la tarea sin necesidad de papeles:
 
-Registrar producción aumenta stock del artículo fabricado y deja trazabilidad de orden, operación, ubicación, lote y cantidad.
+- **Identificación rápida:** Código de la orden, nombre exacto de la operación y descripción del artículo.
+- **Control de avance:** Indica el progreso del pedido. Por ejemplo, en la segunda tarjeta (`00023-01`), el operario ve que ya se ha completado `1 de 2 ud`, por lo que sabe que le falta exactamente una unidad para cerrar esa tarea.
+- **Icono del camión (Disponibilidad de material):** Es un semáforo visual crítico para el operario. Si el icono está activo (en verde o azul), le confirma que la materia prima ya está disponible en su puesto o en el almacén y puede empezar a trabajar sin riesgo de quedarse desabastecido.
 
-Los co-productos son artículos adicionales que se obtienen durante una operación. Pueden registrarse al comienzo, por progreso o al final, según la configuración de la receta.
+6. Limpieza visual con filtros rápidos
 
-## Controles obligatorios
+Para evitar distracciones en el taller, la barra de **Filtros** ayuda a limpiar la pantalla. Los botones **Ocultar bloqueadas** y **Ocultar finalizadas** vienen activados por defecto para que el operario solo vea en su pantalla las tareas que están listas para ser ejecutadas, eliminando de su vista los trabajos antiguos o aquellos que están pausados por incidencias ajenas a su puesto.
 
-Una operación puede tener controles al inicio, durante el avance o al final. Bold puede bloquear el inicio o la finalización cuando hay controles obligatorios pendientes.
+7. Controla el tiempo de ejecución
 
-Si no puedes iniciar o finalizar, abre **Controles** y completa las inspecciones solicitadas. Algunos controles pueden pedir texto, número, sí/no, imagen o archivo según la configuración.
+El sistema realiza un cronometraje automático del tiempo invertido en la máquina.
 
-<Warning>
-  Si consumes material sin stock suficiente, puedes generar stock negativo. Regulariza el origen cuanto antes con recepción, producción, inventario, ajuste o corrección de lote.
-</Warning>
+- **Pausar el tiempo:** Si el operario debe detener la producción por un descanso, un cambio de herramienta o una incidencia menor, debe pulsar el botón rojo **PARAR**. Esto detiene el contador para no adulterar las métricas de eficiencia de la planta.
+- **Reanudar:** Al volver al puesto, el botón cambiará a _Iniciar_, reactivando el tiempo en directo con un solo clic.
 
-## Finalizar con diferencias
+8.  Reporta las unidades fabricadas (Cantidad completada)
 
-Puedes registrar una cantidad diferente a la planificada. Bold puede pedir confirmación cuando:
+A medida que se van terminando físicamente las piezas del pedido, el operario debe registrar el avance en el sistema:
 
-- completas más unidades de las que permiten las operaciones anteriores;
-- completas más unidades de las pendientes;
-- finalizas con menos unidades de las planificadas;
-- registras cero unidades sin comentario ni consumo.
+- Puede usar los botones **\+** y **-** para introducir unidades sueltas.
+- Puede escribir directamente la cifra exacta en la casilla numérica.
+- **Tip de rapidez:** Si ha procesado el lote completo de una sola vez sin incidencias, puede pulsar el botón **TODAS (50)** para rellenar automáticamente el objetivo total planificado.
 
-Usa comentarios para explicar diferencias de cantidad, rechazos, consumo real distinto al teórico o paradas relevantes.
+9.  Registra los desperdicios o piezas defectuosas
 
-## Relacionado
+Si durante el proceso una pieza sale mal, se rompe o no pasa el estándar de calidad, el operario debe pulsar el botón **REGISTRAR DEFECTOS**.
 
-- [Modo de trabajo](/es/conceptos/modo-de-trabajo)
-- [Controles, consumos y pausas](/es/conceptos/fabricacion/controles-consumos-y-pausas)
-- [Investigar diferencias de stock](/es/ayuda/almacen/investigar-diferencias-de-stock)
-- [Secuenciar órdenes](/es/ayuda/produccion/secuenciar-ordenes)
+10.  Confirma el trabajo y actualiza el estado
+
+Para enviar los datos introducidos a la oficina técnica, el operario debe elegir entre dos opciones de guardado al final de su turno o al terminar el lote:
+
+- **CONFIRMAR sin finalizar:** Se utiliza si el operario ha terminado su turno o tiene que pausar la tarea, pero **todavía quedan piezas pendientes por fabricar** del lote total. Guarda las unidades hechas hasta el momento y mantiene la tarjeta abierta para continuar más tarde.
+- **CONFIRMAR y finalizar:** Se activa y se pulsa únicamente cuando se ha completado la totalidad del lote objetivo (ej. las 50 unidades requeridas) o cuando la operación se da por terminada definitivamente. Al pulsar este botón, la tarjeta se cierra y desaparece de la pantalla del operario, dando paso automático a la siguiente tarea de la lista.

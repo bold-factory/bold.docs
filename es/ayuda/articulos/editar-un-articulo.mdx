@@ -7,7 +7,7 @@ Esto nos sirve para **pasar de tener un simple inventario de papel a tener una f
 
 ### 1. Darle un valor
 
-En la tabla de propiedades tienes que asignarle un valor: numérico, opción, texto, sí/no, etc. para que quede definido y el artículo sea válido. 
+En la tabla de propiedades tienes que asignarle un valor: numérico, opción, texto, sí/no, etc. para que quede definido y el artículo sea válido.
 
 ### 2. Añadir valor de propiedad (opcional)
 
@@ -17,11 +17,11 @@ Esto sirve para **adaptar un artículo a sus características únicas o excepcio
 
 ### 3. Planificar
 
-En la pestaña de **planificación** podrás ver el stock que tienes a tiempo real. 
+En la pestaña de **planificación** podrás ver el stock que tienes a tiempo real.
 
 **Campos a rellenar:**
 
-- **Punto de pedido:** es tu stock de seguridad. **Se debe rellenar** con el número mínimo de tableros por debajo del cual nunca quieres bajar.
-- **Pedido mínimo:** es la cantidad mínima que tu proveedor te exige para venderte. **Ejemplo:** Si el sistema detecta que necesitas comprar 2 tableros, pero tu pedido mínimo configurado es `10`, el sistema hará la orden por 10 de golpe.
+- **Punto de pedido:** es tu stock de seguridad. **Se debe rellenar** con el número mínimo de tableros por debajo del cual quieres comenzar un ciclo de reaprovisionamiento, ya sea fabricacion o compra.
+- **Pedido mínimo:** es la cantidad mínima que tu proveedor te exige para venderte, o que tu necesitas para fabricar seguido. **Ejemplo:** Si el sistema detecta que necesitas comprar 2 tableros, pero tu pedido mínimo configurado es `10`, el sistema hará la orden por 10 de golpe.
 - **Tamaño de lote (Opcional):** se rellena si el material se compra o fabrica en paquetes cerrados (por ejemplo, palets de 6 tableros). Si te hacen falta 7 tableros, el sistema redondeará hacia arriba y te pedirá 12 (2 lotes de 6).
 - **Lead time aprovisionamiento (Opcional):** **muy importante rellenarlo.** Son los días laborables que tarda el proveedor en entregarte el tablero desde que le pasas el pedido. Con este dato, el sistema te avisará de la compra con los días exactos de antelación para que el material llegue antes de que te quedes a cero.

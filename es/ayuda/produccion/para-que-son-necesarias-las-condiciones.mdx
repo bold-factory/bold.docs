@@ -1,33 +1,46 @@
 ---
-title: "Condicionar: operaciones, entradas o pasos"
+title: "Condicionar: operaciones, entradas, pasos o controles"
 ---
 
 Las **Condiciones** te permiten diseñar una única ruta de fabricación "inteligente" para múltiples variantes de un mismo producto. En lugar de crear rutas distintas para cada modelo, el sistema muestra u oculta elementos en la pantalla del operario basándose en las propiedades del artículo que se está fabricando.
 
-Existen **tres casos de uso clave** para aplicar estas condiciones en tu planta:
+Existen **cuatro casos de uso clave** para aplicar estas condiciones en tu planta:
 
-### **1. Condicionar una Operación (Etapas completas)**
+### **1. Condicionar operaciones (Etapas completas)**
 
-- Cuando una fase entera del proceso de producción aplica únicamente a ciertas variantes del artículo.
-- **Ejemplo:** La operación de _"Pintura"_ solo debe activarse si la propiedad _Acabado_ del producto requiere pintura. Si el cliente pide un cuadro de bicicleta con acabado en aluminio pulido (sin pintura), el sistema se salta esta etapa por completo.
+Cuando una fase entera del proceso de producción aplica únicamente a ciertas variantes del artículo.
 
-### **2. Condicionar una Entrada (Consumo de materiales)**
+> **Ejemplo:** La operación de _"_Pintura_"_ solo debe activarse si la propiedad _Acabado_ del producto requiere pintura. Si el cliente pide un cuadro de bicicleta con acabado en aluminio pulido (sin pintura), el sistema se salta esta etapa por completo.
 
-- **¿Cuándo usarlo?:** Cuando un material o insumo específico solo se consume en algunas variantes del producto.
-- **Ejemplo:** Configuras dos entradas de material distintas en la misma operación: una para _"Pintura Roja"_ y otra para _"Pintura Azul"_. Al condicionar cada entrada a la propiedad _Color_, la Orden de Fabricación (OF) digital solo cargará, mostrará y descontará del inventario el color de pintura exacto que requiere esa bicicleta en particular.
+### **2. Condicionar entradas (Consumo de materiales)**
 
-### **3. Condicionar un Paso (Instrucciones o tareas específicas)**
+Cuando un material o insumo específico solo se consume en algunas variantes del producto.
 
-- **¿Cuándo usarlo?:** Cuando una instrucción de trabajo, control de calidad o tarea concreta dentro de una operación solo debe realizarse para ciertas variantes.
-- **Ejemplo:** En la etapa de ensamblaje, decides que solo las bicicletas con la propiedad _Acabado: Premium_ requieran un paso adicional de _"Aplicación de cera protectora"_. Para el resto de las órdenes de modelos estándar, este paso ni siquiera aparecerá en la pantalla de ejecución del operario.
+> **Ejemplo:** Configuras dos entradas de material distintas en la misma operación: una para _"Pintura Roja"_ y otra para _"Pintura Azul"_. Al condicionar cada entrada a la propiedad _Color_, la Orden de Fabricación (OF) digital solo cargará, mostrará y descontará del inventario el color de pintura exacto que requiere esa bicicleta en particular.
+
+### **3. Condicionar pasos**
+
+Cuando una instrucción de trabajo dentro de una operación solo debe realizarse para ciertas variantes.
+
+> **Ejemplo:** En la etapa de ensamblaje, decides que solo las bicicletas con la propiedad **acabado premium** requieran un paso adicional de _"Aplicación de cera protectora"_. Para el resto de las órdenes de modelos estándar, este paso ni siquiera aparecerá en la pantalla de ejecución del operario. 
+
+### **4. Condicionar controles** 
+
+Sirve para que el sistema adapte la inspección al producto exacto que está en la máquina.
+
+> **Ejemplo:** Prueba de presión de bomba de agua (15 bares)
+>
+> _Condición:_ Solo se activa si el **Modelo** es igual a "Profesional / Hostelería". 
+>
+> Al condicionarlo, solo se le exige al operario realizar este test cuando pasa una máquina destinada a cafeterías.
 
 ### 1. Añade condición:
 
 **Origen (Propiedad / Contexto de la OF):** le indica al sistema dónde tiene que ir a buscar la información para validar la regla.
 
-- **Propiedad:** Se refiere a las características técnicas fijas del artículo (ej. el material del cuadro: _Aluminio_, el color: _Rojo_, el tamaño: _XL_).
-- **Contexto de la OF (Orden de Fabricación):** Se refiere a los datos dinámicos de ese lote de producción en particular (ej. el nombre del cliente, la cantidad total a fabricar, si es un pedido urgente).
+- **Propiedad:** se refiere a las características técnicas fijas del artículo (ej. el material del cuadro: Aluminio, el color: Rojo, el tamaño: XL).
+- **Contexto de la OF (Orden de Fabricación):** se refiere a los datos dinámicos de ese producto en particular (ej. el nombre del cliente, la cantidad total a fabricar, si es un pedido urgente).
 
-**Propiedad:** seleccionas la variable exacta que quieres evaluar (ej. _Material_, _Grosor_, _Voltaje_, o _Cantidad de unidades_). Este campo se activa y se adapta según lo que hayas elegido en el paso anterior (Origen).
+**Operador:** la lógica matemática que conecta la propiedad con el resultado esperado (ej. igual a, distinto de, contiene, empieza por o termina por). 
 
-**Operador:** la lógica matemática que conecta la propiedad con el resultado esperado (ej. _Es igual a_, _Es mayor que_, _Contiene_, _Es diferente de_). Una vez seleccionado el operador, el sistema te pedirá el valor final (ej. Propiedad: _Material_ / Operador: _Es igual a_ / Valor: _Carbono_).
+**Valor/Opción:** el sistema te pedirá el valor final (ej. Propiedad: material / Operador: igual a / Valor: carbono).

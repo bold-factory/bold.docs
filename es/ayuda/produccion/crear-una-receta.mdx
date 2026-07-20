@@ -15,11 +15,13 @@ Una receta no ejecuta trabajo por sí sola, se usa como molde para crear **Órde
 
 **Producto:** selecciona el producto del cual quieras elaborar su receta.
 
-**Nombre:** Bold al seleccionar un producto, automáticamente asocia el nombre de la receta a ese producto, pero en caso de que hayan dos maneras de hacer ese producto lo puedes cambiar para identificarlos.
+**Nombre:** Bold al seleccionar un producto, automáticamente asocia el nombre de la receta a ese producto, pero en caso de que hayan dos maneras distintas de hacer ese producto, se puede modificar el nombre para identificarlos.  
 
 ### 2. Añadir Versión
 
 **Nombre:** automáticamente Bold pone la fecha en la que lo estas creando para tener constancia, pero se le puede poner un nombre diferente.
+
+> **Ejemplo:** ponerle de nombre "Versión inicial", "16 de julio de 2026", "Versión actualizada", etc. 
 
 ### 3. Hacer diagrama de operaciones
 
@@ -49,9 +51,9 @@ Para relacionar una operación con otra tienes dos opciones para hacerlo. La pri
 
 La otra opción es haciendo clic en "**\+ AÑADIR RESTRICCIÓN**", se abrirá una ventana donde deberás indicar tres datos:
 
-**Operación de origen (La que restringe):** selecciona la tarea que va primero en el tiempo.
+**Operación de origen (la que restringe):** selecciona la tarea que va primero en el tiempo.
 
-**Operación de destino (La restringida):** selecciona la tarea que va después.
+**Operación de destino (la restringida):** selecciona la tarea que va después.
 
 **Tipo de restricción:** elige el comportamiento que deseas para este flujo (Total, Parcial o No bloqueante).
 
@@ -63,7 +65,7 @@ La otra opción es haciendo clic en "**\+ AÑADIR RESTRICCIÓN**", se abrirá un
 
 ## Casos donde la receta se tiene que dividir en dos
 
-En algunos casos, dependiendo el proceso de fabricación de un producto. Es necesario **añadir condiciones** en una receta cuando una propiedad cambia tanto el proceso que resulta más claro tener recetas separadas.
+En algunos casos, dependiendo el proceso de fabricación de un producto. Es necesario **añadir condiciones** en una receta cuando una propiedad cambia tanto el proceso que resulta más claro tener recetas separadas. 
 
 > **Ejemplo:** fabricas el modelo "Bici Pro" y la propiedad que cambia es el **Material del Cuadro**: el cliente puede elegir entre **Aluminio** o **Fibra de Carbono**. Esto lo cambia absolutamente todo en la fábrica:
 >
@@ -95,6 +97,6 @@ Desde el diagrama entra al bloque de operación donde se tenga que aplicar la co
 
 **Valor/Opción:** es el **dato concreto, texto o número exacto** que el sistema va a buscar dentro de la ficha del producto para verificar si la condición se cumple o no.
 
-### Siguiente paso
-
-- Especificar materiales, pasos y controles de cada operación de fabricación
+<Tip>
+  Cuando se quiera hacer una versión actualizada del producto (porque se cambio una operación), entra a la receta y haz clic a la opción de "Copiar desde otra receta".
+</Tip>

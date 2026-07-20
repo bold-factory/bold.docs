@@ -101,7 +101,6 @@
                   {
                     "group": "Definir el proceso de fabricación",
                     "pages": [
-                      "es/ayuda/produccion/definir-el-proceso-de-fabricacion",
                       "es/ayuda/produccion/definir-procesos",
                       "es/ayuda/produccion/crear-una-receta",
                       "es/ayuda/produccion/untitled-page",
@@ -110,13 +109,20 @@
                   },
                   "es/ayuda/produccion/crear-turnos",
                   "es/ayuda/produccion/crear-motivos-de-pausa",
-                  "es/ayuda/produccion/actualizar-version",
-                  "es/ayuda/produccion/configurar-recursos-de-produccion",
-                  "es/ayuda/produccion/crear-una-orden-de-fabricacion",
-                  "es/ayuda/produccion/secuenciar-ordenes",
+                  "es/ayuda/planificacion/priorizar-necesidades",
+                  "es/ayuda/produccion/untitled-page-1",
+                  "es/ayuda/produccion/lanzar-ofs",
+                  "es/ayuda/produccion/modificar-ordenes-de-fabricacion",
+                  {
+                    "group": "Secuenciar órdenes",
+                    "pages": [
+                      "es/ayuda/produccion/secuenciar-ordenes",
+                      "es/ayuda/produccion/modo-rapido",
+                      "es/ayuda/produccion/plan-de-produccion"
+                    ]
+                  },
                   "es/ayuda/produccion/ejecutar-operaciones-en-planta",
-                  "es/ayuda/produccion/configurar-controles-de-calidad",
-                  "es/ayuda/planificacion/priorizar-necesidades"
+                  "es/ayuda/produccion/asignar-recursos"
                 ]
               },
               {
@@ -199,12 +205,6 @@
                   "es/ayuda/panel-de-control/importar-datos",
                   "es/ayuda/panel-de-control/gestionar-archivos",
                   "es/ayuda/panel-de-control/crear-etiquetas-y-codigos"
-                ]
-              },
-              {
-                "group": "Accesos a Bold",
-                "pages": [
-                  "configurar-usuarios"
                 ]
               }
             ]

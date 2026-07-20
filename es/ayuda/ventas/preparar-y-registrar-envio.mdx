@@ -1,6 +1,5 @@
 ---
 title: "Preparar y registrar un envío"
-description: "Comprueba disponibilidad, prepara la salida y registra el envío de un pedido de venta."
 ---
 
 Prepara y registra el envío cuando un pedido de venta ya esta listo para salir. Este flujo reduce stock y deja trazada la expedición.
@@ -11,7 +10,7 @@ Un **Pedido Completo** ocurre cuando cuentas con todo el stock físico disponibl
 
 Un **Pedido Parcial** se genera cuando no dispones de todo el stock físico en ese momento (por ejemplo, por rotura de stock de un producto o falta de un lote específico) o cuando decides enviar solo una parte de la mercancía por razones logísticas.
 
-## Registrar el envío completo
+## Registrar un envío completo
 
 Entra en **Planificación \> Pedidos de venta \> Pedido a enviar**
 
@@ -21,46 +20,36 @@ Haz clic en **crear envío** (parte inferior derecha).
 
 ### 2. Añade la información
 
-**Número de albarán:** se puede introducir el número que tu empresa maneja o el que genera Bold automáticamente. 
+**Número de albarán:** se puede introducir el número que tu empresa maneja o dejarlo blanco para que Bold lo genere automáticamente.
 
 **Fecha:** es en la que sale de las instalaciones de la fábrica.
 
 **Ubicación de expedición:** lugar físico dentro de la fábrica desde donde sale la mercancía hacia el cliente.
 
-**Enviar inmediatamente:** sirve para fusionar dos pasos en uno solo; la creación del documento de envío y el registro de la salida física del inventario. Si dejas esta función desactivada, esto significa que el documento se genera en el sistema, pero se queda en estado de **Borrador** o **Abierto** a falta de expedirlo. 
+**Enviar inmediatamente:** sirve para fusionar dos pasos en uno solo; la creación del documento de envío y el registro de la salida física del inventario. Si dejas esta función desactivada, esto significa que el documento se genera en el sistema, pero se queda en estado de **Borrador** o **Abierto** a falta de expedirlo.
 
-### 3. Crear
+## Registrar un envío parcial
 
-Una vez has confirmado el envío puedes ir a **Almacén \> Envíos** para asegurarte que el envío se hizo correctamente. 
-
-<Warning>
-  Un envío completado significa una salida real de stock. Corrige errores desde el flujo operativo disponible en vez de modificar movimientos históricos.
-</Warning>
-
-## Registrar el envío parcial
-
-**Almacén \> Envíos** 
+**Almacén \> Envíos**
 
 ### 1. Añadir Nuevo
 
-**Destino:** son los clientes que van a recibir físicamente el pedido que sale de la fábrica.
+**Destino:** el cliente que van a recibir físicamente el pedido que sale de la fábrica.
 
-**Número de albarán:** se puede introducir el número que tu empresa maneja o el que genera Bold automáticamente. 
+**Número de albarán:** se puede introducir el número que tu empresa maneja o el que genera Bold automáticamente.
 
 **Ubicación de expedición:** lugar físico dentro de la fábrica desde donde sale la mercancía hacia el cliente.
 
-### 2. Entrar en el envío
+### 2. Añadir Líneas
 
 **Almacén \> Envíos \> Envío creado**
 
-### 3. Añadir Línea
+Introducir uno por uno todos los artículos del pedido o pedidos que vayas a enviar. Un envío puede compartir líneas de diferentes pedidos, siempre que vayan dirigidos al mismo cliente.
 
-Introducir uno por uno todos los artículos del pedido.
+**Línea de pedido:** puedes seleccionar sólo las pendientes.
 
-**Línea de pedido:** puedes seleccionar los artículos pendientes por fabricar. 
+**Cantidad:** unidades que se quieren enviar.
 
-**Cantidad:** unidades que se solicitan.
+### 3. Expedir
 
-### 4. Expedir
-
-Dar salida oficial a la mercancía desde el almacén de la fábrica hacia su destino final.
+Dar salida oficial a la mercancía desde el almacén de la fábrica hacia su destino final. Esto causa los movimientos de stock.

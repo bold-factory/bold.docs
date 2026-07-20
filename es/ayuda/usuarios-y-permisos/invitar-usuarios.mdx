@@ -16,34 +16,27 @@ Un usuario es la cuenta con la que una persona entra en Bold. Invita usuarios cu
 - Decide si debe vincularse a un empleado operativo.
 - Evita compartir una cuenta entre varias personas si necesitas auditoría.
 
-## Datos del usuario
-
-| Campo | Para qué sirve |
-| --- | --- |
-| Correo electrónico | Identifica la cuenta y se usa para iniciar sesión. |
-| Nombre y apellidos | Ayudan a reconocer a la persona en listas y auditoría. |
-| Empleado | Vincula la cuenta con una persona operativa para trabajo, turnos y asignaciones. |
-| perfiles | Definen qué módulos ve y qué acciones puede ejecutar. |
-
 ## Invitar a una persona
 
-<Steps>
-  <Step title="Abre **Panel de control > Usuarios**">
-    Entra con un usuario con perfil de administración de la aplicación.
-  </Step>
-  <Step title="Crea el usuario">
-    Introduce Correo electrónico, nombre, apellidos y empleado si aplica.
-  </Step>
-  <Step title="Asigna perfiles">
-    Selecciona uno o varios perfiles que reflejen sus responsabilidades reales.
-  </Step>
-  <Step title="Vincula empleado si aplica">
-    Relaciona el usuario con el empleado operativo cuando deba registrar trabajo o actuar en planta.
-  </Step>
-  <Step title="Confirma el acceso">
-    Pide a la persona que inicie sesión y comprueba que ve solo los módulos necesarios.
-  </Step>
-</Steps>
+**Panel de control \> Usuarios \< Invitar**
+
+Campos a completar:
+
+**Email:** Dirección de correo electrónico corporativa o personal del trabajador.
+
+A esta dirección se enviará la invitación oficial para que el usuario active su cuenta, cree su contraseña e ingrese al sistema.
+
+**Tipo de Empleado:** 
+
+- **Asociar a empleado existente:** Si el trabajador ya está registrado previamente en la base de datos de la fábrica.
+
+- **Crear nuevo empleado:** Si es la primera vez que se da de alta a la persona en la plataforma.
+
+**Empleado:** Asociar a empleado existente, despliega la lista y elige la persona correspondiente.
+
+**Rol:** Nivel de permisos asignado al usuario ( acceso completo, admin, operario o sólo lectura).
+
+- **Para qué sirve:** Restringe o habilita las pantallas, funcionalidades y acciones que el usuario podrá ver y ejecutar dentro de la aplicación para mantener la seguridad de la información.
 
 ## Vincular usuario y empleado
 
@@ -55,8 +48,6 @@ Casos habituales:
 - Un responsable que actúa en nombre de un empleado en un flujo operativo.
 - Una cuenta que necesita consultar datos, pero no registrar trabajo. En este caso puede no necesitar vínculo con empleado.
 
-Revisa la vinculación cuando una persona cambia de puesto o cuando se reutiliza un dispositivo compartido.
-
 ## Recomendaciones
 
 | Situación | Recomendación |
@@ -66,20 +57,6 @@ Revisa la vinculación cuando una persona cambia de puesto o cuando se reutiliza
 | Planificador | Asigna lectura y escritura de planificación, compras y producción según proceso. |
 | Integración técnica | Usa una credencial técnica gestionada por un administrador en vez de una cuenta personal. |
 | Usuario temporal | Usa perfiles mínimos y define una fecha de revisión del acceso. |
-
-<Warning>
-  Retira o ajusta perfiles cuando una persona cambia de responsabilidad. Mantener accesos antiguos aumenta el riesgo operativo.
-</Warning>
-
-## Problemas habituales
-
-| Problema | Qué revisar |
-| --- | --- |
-| No puedes crear el usuario | Necesitas perfil de administración de la aplicación. |
-| La persona entra, pero no ve módulos | Falta acceso común o permisos de lectura. |
-| Puede ver, pero no guardar | Falta permiso de escritura o acción específica. |
-| Las acciones no aparecen asociadas al empleado correcto | Revisa el vínculo usuario-empleado. |
-| Conserva accesos antiguos | Quita perfiles que ya no correspondan a su responsabilidad actual. |
 
 ## Relacionado
 

@@ -5,57 +5,42 @@ description: "Configura recetas, recursos, órdenes, operaciones, consumos, prod
 
 Fabricación convierte necesidades en trabajo ejecutable. Conecta recetas, recursos, órdenes, operaciones, controles, consumos, salidas y datos de productividad.
 
-## Áreas de trabajo
+## Pasos recomendados
 
-<Columns cols={2}>
-  <Card title="Recetas" icon="book-open" href="/es/ayuda/produccion/crear-una-receta">
-    Define operaciones, entradas, salidas, pasos, controles, versiones y restricciones.
-  </Card>
-  <Card title="Recursos" icon="settings-2" href="/es/ayuda/produccion/configurar-recursos-de-produccion">
+<Columns cols={1}>
+  <Card title="Crear recursos" icon="settings-2" href="/es/ayuda/produccion/configurar-recursos-de-produccion">
     Prepara procesos, estaciones, herramientas y asignaciones.
   </Card>
-  <Card title="Órdenes" icon="factory" href="/es/ayuda/produccion/crear-una-orden-de-fabricacion">
-    Convierten una necesidad en operaciones ejecutables.
+
+  <Card title="Definir el proceso de fabricación " icon="book-open" href="/es/ayuda/produccion/crear-una-receta">
+    Define operaciones, entradas, salidas, pasos, controles, versiones y restricciones.
   </Card>
-  <Card title="Ejecución" icon="play" href="/es/ayuda/produccion/ejecutar-operaciones-en-planta">
-    Registra avance, consumos, controles, pausas y producción desde **Modo de trabajo**.
+
+  <Card title="Definir horarios de trabajo" icon="alarm-clock" href="/es/ayuda/produccion/crear-una-orden-de-fabricacion">
+    Capacidad productiva que puede usar la planificación de operaciones.
   </Card>
-  <Card title="Secuenciación" icon="route" href="/es/ayuda/produccion/secuenciar-ordenes">
-    Ordena operaciones para que planta sepa qué hacer en cada momento.
+
+  <Card title="Crear motivos de pausa" icon="play" href="/es/ayuda/produccion/ejecutar-operaciones-en-planta">
+    Clasifica por qué se detiene una operación o un grupo de operaciones.
+  </Card>
+
+  <Card title="Cómo decido que fabrico" icon="factory" href="/es/ayuda/produccion/secuenciar-ordenes">
+    Distingue urgencias reales de sugerencias que pueden esperar, agruparse o descartarse.
+  </Card>
+
+  <Card title="Controlar órdenes de fabricación" icon="chart-column-big">
+    Representa la transformación real de materiales en un artículo terminado, semielaborado o coproducto.
+  </Card>
+
+  <Card title="Modificar órdenes de fabricación" icon="file-pen-line">
+    Editar flujo de trabajo si surge cualquier imprevisto en la planta.
   </Card>
 </Columns>
 
-## Flujo habitual
+<Card title="Secuenciar órdenes" icon="route" href="/es/ayuda/produccion/secuenciar-ordenes">
+  Ordena operaciones para que la planta ejecute el trabajo en la prioridad correcta.
+</Card>
 
-<Steps>
-  <Step title="Configura el proceso">
-    Crea recursos, procesos, motivos de pausa y recetas con controles claros.
-  </Step>
-  <Step title="Crea trabajo ejecutable">
-    Convierte peticiones en órdenes y asigna recursos si el proceso lo requiere.
-  </Step>
-  <Step title="Ejecuta operaciones">
-    Usa **Modo de trabajo** para iniciar operaciones, registrar avances, completar controles, consumir componentes y cerrar producción.
-  </Step>
-  <Step title="Analiza resultados">
-    Revisa pausas, tiempos, rendimiento, defectos, actividad y desviaciones de coste desde [Analizar datos](/es/ayuda/analisis/introduccion).
-  </Step>
-</Steps>
-
-<Warning>
-  Una orden con actividad conserva histórico. Corrige con acciones operativas cuando existan en vez de editar datos que ya explican trabajo real.
-</Warning>
-
-## Conceptos relacionados
-
-<Columns cols={2}>
-  <Card title="Referencia de fabricación" icon="book-open" href="/es/conceptos/fabricacion">
-    Entiende recetas, versiones, operaciones, restricciones, recursos, controles y órdenes.
-  </Card>
-  <Card title="Cuadros de mando" icon="gauge" href="/es/conceptos/fabricacion/cuadros-de-mando">
-    Entiende indicadores de fabricación, productividad, tiempos, pausas y calidad.
-  </Card>
-  <Card title="Estados de producción" icon="list-checks" href="/es/conceptos/fabricacion">
-    Consulta los estados de versiones, peticiones, órdenes y operaciones.
-  </Card>
-</Columns>
+<Card title="Ejecutar operaciones en planta" icon="pen-tool" href="/es/ayuda/produccion/ejecutar-operaciones-en-planta">
+  Registra avance, consumos, controles, pausas y producción desde **Modo de trabajo**.
+</Card>

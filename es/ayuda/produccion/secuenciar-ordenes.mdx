@@ -1,71 +1,39 @@
 ---
 title: "Secuenciar órdenes"
-description: "Ordena operaciones para que planta ejecute el trabajo en la prioridad correcta."
+description: "Ordena operaciones para que la planta ejecute el trabajo en la prioridad correcta."
 ---
 
-La **secuenciación** ayuda a decidir cuándo y dónde ejecutar operaciones de fabricación.
+La secuenciación ayuda a decidir cuándo y dónde ejecutar operaciones de fabricación.
 
-Puedes asignar fechas y recursos directamente en órdenes, o crear un **plan de producción** para resolver un escenario completo antes de aplicarlo.
+Puedes trabajar de dos formas:
+
+- **Modo simplificado:** Asignando fechas objetivo y recursos directamente en las órdenes.
+- **Modo planificado:** Creando **planes de producción** para resolver un escenario completo antes de aplicarlo.
+
+<Tip>
+  Lo ideal es revisar y procesar la secuenciación de forma periódica (diaria o semanalmente) para dejar listos los lanzamientos del próximo turno.
+</Tip>
+
+**Ante imprevistos críticos:** Se debe recurrir a ella inmediatamente cuando la realidad de la fábrica cambia. 
+
+> **Por ejemplo:** si se avería una máquina principal, si un proveedor se retrasa con una materia prima esencial o si entra un pedido de extrema urgencia que obliga a romper la planificación actual.
+
+Para planificar con precisión, debes elegir la pestaña adecuada según el nivel de detalle que quieras organizar:
 
 ## Antes de empezar
 
 Revisa que las órdenes tengan operaciones abiertas, procesos definidos, estaciones compatibles, restricciones coherentes, fechas objetivo y disponibilidad de materiales cuando aplique.
 
-## Qué es un plan de producción
+Para planificar con precisión, debes elegir la pestaña adecuada según el nivel de detalle que quieras organizar:
 
-Un plan es un escenario. Copia operaciones activas, disponibilidad de recursos, restricciones, fechas y contexto de stock para calcular una propuesta.
+**Órdenes:** Organiza la producción dándole prioridad a pedidos completos. Y con posibilidad de filtrar por área, estación de trabajo o herramienta para ver cómo impactan las órdenes globales en zonas específicas del taller.
 
-Puedes tener varios planes en paralelo para comparar alternativas. Nada cambia en las operaciones reales hasta que aplicas el plan.
+**Operaciones:** Desglosa las órdenes en subtareas físicas (corte, fresado, pintura) vinculadas a recursos concretos. Es la pestaña clave para **eliminar tiempos muertos por cambio de herramientas o configuración de maquinaria**.
 
-<Info>
-  Al aplicar un plan, Bold solo modifica operaciones reales que siguen abiertas. No cambia operaciones finalizadas ni canceladas.
-</Info>
+- **Uso de filtros:** Al seleccionar una **Estación de trabajo** (ej. _Sierra circular 1_) o una **Herramienta** específica, el sistema te muestra únicamente las tareas mecánicas de esa máquina.
+- **Organización de tiempos:** Puedes ordenar las operaciones de manera que se fabriquen seguidas todas las piezas que usen el mismo material, espesor o molde. Tu operario no tendrá que parar la máquina para reconfigurarla entre pedido y pedido, ahorrando horas de trabajo especializado a la semana.
 
-## Crear y aplicar un plan
+### 4. Pestaña: Planes (Entorno de Simulación Seguro)
 
-<Steps>
-  <Step title="Crea el plan">
-    Define el alcance de órdenes, fechas y recursos que quieres secuenciar.
-  </Step>
-  <Step title="Actualiza el plan">
-    Carga la realidad operativa actual: operaciones, recursos, restricciones y disponibilidad.
-  </Step>
-  <Step title="Resuelve la secuencia">
-    Ejecuta el algoritmo y revisa la propuesta.
-  </Step>
-  <Step title="Revisa feedback">
-    Corrige operaciones no planificadas, retrasadas o con restricciones faltantes.
-  </Step>
-  <Step title="Ajusta si hace falta">
-    Cambia recursos, fechas o prioridades antes de aplicar.
-  </Step>
-  <Step title="Aplica el plan">
-    Aplica solo cuando la propuesta sea ejecutable para planta.
-  </Step>
-</Steps>
-
-## Por qué puede fallar
-
-Un plan puede no resolver si faltan recursos compatibles, hay restricciones imposibles, no existe disponibilidad suficiente o las fechas de materiales son incompatibles con la entrega esperada.
-
-| Síntoma | Qué revisar |
-| --- | --- |
-| Operación sin recurso | Proceso, estación compatible y capacidad. |
-| Operación retrasada | Fecha objetivo, turno de trabajo y disponibilidad de estación. |
-| Secuencia imposible | Restricciones duplicadas, ciclos o precedencias incompatibles. |
-| Falta material | stock proyectado, entradas pendientes y fecha de necesidad. |
-| Plan desactualizado | Cambios recientes en órdenes, recursos o requisitos. |
-
-<Warning>
-  Si cambian operaciones, recursos o requisitos después de resolver, actualiza o resuelve de nuevo el plan antes de aplicarlo.
-</Warning>
-
-## Relacionado
-
-- [Fabricación](/es/conceptos/fabricacion)
-- [Secuenciación](/es/conceptos/fabricacion/secuenciacion)
-- [Planes de producción](/es/conceptos/fabricacion/planes-de-produccion)
-- [Configurar recursos de producción](/es/ayuda/produccion/configurar-recursos-de-produccion)
-- [Turnos de fabricación](/es/conceptos/fabricacion/turnos)
-- [Saber qué fabricar](/es/ayuda/planificacion/saber-que-fabricar)
-- [Referencia de fabricación](/es/conceptos/fabricacion)
+- **Para qué sirve:** Es tu banco de pruebas o "sandbox". Aquí se almacena el historial de simulaciones y puedes **Crear nuevos planes** de producción.
+- **Cómo te ayuda a planificar:** Te permite jugar con el calendario de la fábrica sin riesgo. Puedes lanzar el algoritmo de Bold para que calcule la secuencia óptima considerando restricciones duras (como la falta de personal o retrasos de materia prima). Sabrás si un escenario es viable cuando el sistema marque **"Solución encontrada"**. Nada de lo que organices aquí cambiará las pantallas de los operarios en el taller hasta que revises los retrasos previstos y decidas **Aplicar** el plan de forma definitiva.

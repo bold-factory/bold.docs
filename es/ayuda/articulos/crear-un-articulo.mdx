@@ -5,15 +5,13 @@ description: "Crea un artículo operativo para comprar, fabricar, almacenar, con
 
 Un **Artículo** identifica un elemento físico concreto. Es la unidad sobre la que Bold controla stock, pedidos, fabricaciones, consumos, lotes y costes.
 
-El artículo se puede añadir desde el producto creado para vincularlos o desde artículos. 
+El artículo se puede añadir desde el producto creado para vincularlos o desde artículos.
 
-Al crear el artículo dentro de la ficha del producto, este **hereda automáticamente** la información que ya introdujiste en el paso anterior (como el nombre base, la descripción o la categoría). Solo tienes que añadir el detalle que lo hace único, ahorrándote teclear todo de nuevo.
-
-## Pasos a seguir
+## Crearlo desde la vista de articulos
 
 **Catálogo \> Artículos \> Crear Nuevo**
 
-Al crear el artículo directamente desde su propio módulo independiente, el sistema abre un formulario limpio. Como en este caso no estás dentro de la ficha de ningún producto, el sistema te pide definir desde cero cómo se mide el artículo en el almacén y a qué "familia" pertenece.
+Al crear el artículo directamente desde el listado de artículos, el sistema abre un formulario limpio. Como en este caso no estás dentro de la ficha de ningún producto, el sistema te pide definir desde cero cómo se mide el artículo en el almacén y a qué "familia" pertenece.
 
 ### 1. Datos requeridos
 
@@ -43,19 +41,15 @@ Al crear el artículo directamente desde su propio módulo independiente, el sis
 **Descripción (opcional):** espacio para hacer cualquier anotación técnica que ayude al operario a identificar el material.
 
 <Warning>
-  Si el artículo pertenece a un producto y faltan propiedades obligatorias, Bold te pondrá en rojo el artículo (inválido), para solucionarlo rellena las propiedades faltantes.  
+  Si el artículo pertenece a un producto y faltan propiedades obligatorias, Bold te pondrá en rojo el artículo (inválido), para solucionarlo rellena las propiedades faltantes.
 
   **Ejemplo:** Tienes un producto que se llama "ventana" y tiene como propiedades: altura y material del marco. El artículo "ventana-120-PVC" para que sea válido tiene que tener como mínimo esas propiedades definidas: altura=120cm y material del marco=PVC.
 </Warning>
 
-### Otra manera para añadir artículos se puede hacer desde el producto  
+### Crearlo desde un producto en concreto
 
-**Catálogo \> Productos \> producto creado**
+Al crear el artículo dentro de la ficha del producto, este **hereda automáticamente** la información que ya introdujiste en el paso anterior (como el nombre base, la descripción o la categoría). Solo tienes que añadir el detalle que lo hace único, ahorrándote teclear todo de nuevo.
 
-### Crear artículo
+**Catálogo \> Productos \> Producto creado**
 
 Los campos requeridos son idénticos a los de la ficha general del artículo. La única diferencia es el campo del nombre, que al acceder directamente desde el producto, el sistema sugiere automáticamente una denominación base (por ejemplo: _ventana_). Este valor se puede mantener tal cual o modificar para especificar una variante concreta.                                  **_Ejemplo:_** `Ventana de Aluminio Corredera 120x120` o `Ventana Madera Rústica.`
-
-## Siguiente paso
-
-- Configurar un artículo

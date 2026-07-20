@@ -4,9 +4,9 @@ title: "Crear recursos "
 
 Los **Recursos** son los elementos productivos que organizan la ejecución en Fabricación.  El objetivo es que cada paso pueda ejecutarse en una estación compatible, con las herramientas y restricciones necesarias.
 
-> **Ejemplos:** maquinaria fija o automatizada, líneas de producción completas, puestos o estaciones de trabajo manuales, zonas de inspección y servicios, etc. 
+> **Ejemplos:** maquinaria fija o automatizada, líneas de producción completas, puestos o estaciones de trabajo manuales, zonas de inspección y servicios, etc.
 
-**Fabricación \> Recursos** 
+**Fabricación \> Recursos**
 
 Desde esta vista se gestionan:
 
@@ -19,9 +19,9 @@ Desde esta vista se gestionan:
 
 ### 1. Añadir Área
 
-**Nombre:** aquí debes colocar el nombre técnico o común con el que todo el mundo en la fábrica conoce a esa **zona, sección, planta o línea principal**. 
+**Nombre:** aquí debes colocar el nombre técnico o común con el que todo el mundo en la fábrica conoce a esa **zona, sección, planta o línea principal**.
 
-> **Ejemplos:** inyección de plástico, mecanizado, línea de ensamblaje, planta 1-logística, etc. 
+> **Ejemplos:** inyección de plástico, mecanizado, línea de ensamblaje, planta 1-logística, etc.
 
 **Descripción (opcional):** sirve para detallar qué se hace exactamente en esa zona, qué tipo de producto se procesa o alguna observación clave de la distribución. Esto ayuda a dar contexto a los supervisores, responsables de turno o nuevos operarios que utilicen Bold.
 
@@ -31,19 +31,18 @@ Desde esta vista se gestionan:
 
 **Nombre:** es el identificador único del punto de trabajo. Debe ser un nombre claro y específico que los operarios reconozcan al instante en sus pantallas.
 
-> **Ejemplos:** línea de etiquetado automático, estación de inspección visual 2, torno CNC Haas 01, etc.  
+> **Ejemplos:** línea de etiquetado automático, estación de inspección visual 2, torno CNC Haas 01, etc.
 
-**Descripción (opcional):** sirve para añadir contexto técnico, restricciones o notas que ayuden a los supervisores y planificadores a saber qué se hace exactamente ahí. 
+**Descripción (opcional):** sirve para añadir contexto técnico, restricciones o notas que ayuden a los supervisores y planificadores a saber qué se hace exactamente ahí.
 
 > **Ejemplo:** "Prensa para moldeado de piezas metálicas de hasta 5mm de espesor."
 
-**Capacidad:** este campo le dice a Bold cuánto trabajo puede procesar este punto a la vez. 
+**Capacidad:** este campo le dice a Bold cuánto trabajo puede procesar este punto a la vez.
 
-- **Si no marcas la casilla**, el sistema entenderá que la estación tiene un límite estricto (por ejemplo, que solo puede procesar 1 pieza o 1 orden a la vez). **_Ejemplos:_**_ Máquinas CNC, robots de soldadura, o un operario en una mesa._ 
-
+- **Si no marcas la casilla**, el sistema entenderá que la estación tiene un límite estricto (por ejemplo, que solo puede procesar 1 pieza o 1 orden a la vez). **_Ejemplos:_**\_ Máquinas CNC, robots de soldadura, o un operario en una mesa.\_
 - **_Si marcas la casilla_**_,_ le indicas al sistema que esta estación puede absorber cualquier cantidad de trabajo simultáneamente sin colapsar ni generar retrasos en la planificación. **Ejemplos:** _Un horno industrial grande (donde caben muchos lotes), una cinta transportadora larga, o una zona de secado/enfriamiento al aire._
 
-**Área:** sirve para conectar la estación con el área en que pertenece. Tienes que seleccionar un área de los que creaste anteriormente.  
+**Área:** sirve para conectar la estación con el área en que pertenece. Tienes que seleccionar un área de los que creaste anteriormente.
 
 > **Ejemplo:** si tu estación es `Mesa de Ensamblaje B`,  selecciona el área: `Montaje Final`.
 
@@ -57,7 +56,7 @@ Nos referimos con herramienta al **elemento auxiliar, molde, matriz, utillaje o 
 
 **Nombre:** introduce el nombre técnico, código de inventario o identificador único con el que tu equipo de producción y mantenimiento reconoce ese utillaje.
 
-> **Ejemplo:** un "Molde Carcasa Frontal AC-40" sería una herramienta en una fábrica de inyección de plástico. 
+> **Ejemplo:** un "Molde Carcasa Frontal AC-40" sería una herramienta en una fábrica de inyección de plástico.
 
 <Note>
   Si cambiar este elemento por otro implica detener la máquina y perder tiempo de configuración, entonces **es una herramienta** y debe registrarse aquí.
@@ -74,7 +73,3 @@ Nos referimos con herramienta al **elemento auxiliar, molde, matriz, utillaje o 
 > **Número de cavidades:** `4` _(significa que fabrica 4 piezas en un solo golpe)_
 >
 > **Tonalidad/Color:** `Plástico Negro`
-
-### Siguiente paso
-
-- Definir procesos
