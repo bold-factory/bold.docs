@@ -1,46 +1,47 @@
 ---
 title: "Configuración inicial"
+description: "Crea activos, acciones y causas para registrar trabajos de mantenimiento con criterios consistentes."
 ---
 
 ## Crear un activo
 
-**Mantenimiento \> Activo** 
+**Mantenimiento \> Activos**
 
-En la pantalla de activos tendrás una lista de los recursos introducidos en el módulo de fabricación. Así como la posibilidad de crear un equipo o espacio físico nuevo susceptible de recibir mantenimiento.
+En la pantalla de activos puedes consultar los recursos introducidos en Fabricación y crear equipos o espacios físicos que necesiten mantenimiento.
 
-> **_Ejemplos:_** Cortadoras, hornos industriales, líneas de ensamblaje, área de empaquetado, etc.
+> **Ejemplos:** cortadoras, hornos industriales, líneas de ensamblaje o áreas de empaquetado.
 
 Para registrar un activo en el sistema completa los siguientes campos:
 
-- **Tipo de activo**
-- **Nombre:** Asigna un nombre descriptivo y claro que todo el equipo de planta pueda reconocer fácilmente.
-- **Ubicación o Jerarquía:** Indica si este activo está dentro de un espacio físico concreto (zona, planta o almacén) o si forma parte de un equipo más grande (como un componente o subequipo).
-- **Código de identificación:** Si ya utilizas un código interno, introdúcelo en este campo. En caso contrario, déjalo en blanco para que el sistema te genere uno automáticamente. 
-- **Datos complementarios:** Añade cualquier otra información que facilite su identificación rápida, como el fabricante, el modelo o el número de serie.
+- **Tipo de activo:** selecciona la clase de elemento que vas a mantener.
+- **Nombre:** asigna un nombre descriptivo que el equipo de planta pueda reconocer.
+- **Ubicación o jerarquía:** indica si el activo está dentro de una zona, planta o almacén, o si forma parte de un equipo mayor.
+- **Código de identificación:** introduce el código interno existente. Si no tienes uno, deja el campo en blanco para que el sistema lo genere.
+- **Datos complementarios:** añade información como el fabricante, el modelo o el número de serie.
 
 ## Crear acciones
 
-**Mantenimiento \> Acciones \> Añadir Nuevo**
+**Mantenimiento \> Acciones \> Añadir nuevo**
 
 Define las tareas reutilizables que pueden añadirse a un trabajo de mantenimiento.
 
-> **_Ejemplos:_** Cambio de cuchilla, limpiar filtros, sustitución de correas, etc.
+> **Ejemplos:** cambiar una cuchilla, limpiar filtros o sustituir correas.
 
-Al crearlo se necesitan datos como el tiempo aproximado que lleva hacerlo y el tipo de resultado que quieres que registre el operario.
+Indica el tiempo aproximado de ejecución y el tipo de resultado que debe registrar el operario.
 
 ## Crear causas
 
-**Mantenimiento \> Causas \> Añadir Nuevo**
+**Mantenimiento \> Causas \> Añadir nuevo**
 
-Aquí tienes que nombrar de forma estandarizada los motivos y orígenes que hacen necesaria una intervención de mantenimiento.
+Define de forma estandarizada los motivos que hacen necesaria una intervención.
 
-Esto simplifica el reporte diario del técnico y permite identificar más tarde cuáles son las fallas más recurrentes en la fábrica.
+Esto simplifica el registro diario y permite identificar las averías más recurrentes.
 
-> **_Ejemplos:_** Desgaste de correas, Fallo eléctrico, suciedad, etc.
+> **Ejemplos:** desgaste de correas, fallo eléctrico o suciedad.
 
-Una vez creada la causa puedes asignarle las acciones habituales que se deben de tomar para resolver es tipo de problema.
+Cuando hayas creado la causa, asígnale las acciones habituales para resolver ese tipo de problema.
 
-> **_Por ejemplo:_**  Si ante un desgaste de correas siempre se hace un cambio de correas puedes asociarlo y así la acción se planificara automáticamente en esta situación.
+> **Ejemplo:** Si ante un desgaste de correas siempre realizas un cambio de correas, asocia la acción para que quede planificada en esa situación.
 
 <Note>
   Recuerda que en la columna de **Acciones** de todos estos campos puedes entrar a la línea creada para tener más información, modificar o añadir datos.

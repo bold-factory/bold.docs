@@ -1,5 +1,6 @@
 ---
 title: "Modo planificado"
+description: "Crea y compara planes de producción antes de aplicar una secuencia de operaciones a la planta."
 ---
 
 **Fabricación \> Secuenciación \> Planes**
@@ -51,7 +52,7 @@ La pestaña **Diagrama** traduce las órdenes a un calendario visual de ocupaci�
 - **RESOLVER:** Vuelve a ejecutar el algoritmo inteligente de Bold para que reorganice la cola de trabajo optimizando los tiempos de entrega.
   - **Minimizar el retraso total (Objetivo Principal):** El sistema prioriza las tareas de los pedidos que están más ajustados de tiempo frente a la fecha de entrega prometida al cliente, buscando reducir las demoras a cero.
   - **Minimizar el WIP o Trabajo en Curso (Objetivo Secundario):** Evita que la fábrica se sature acumulando material parado. El motor ajusta los tiempos para que, en cuanto termine una operación (por ejemplo, el corte), la pieza pase casi de inmediato a la siguiente (el lijado), manteniendo el flujo de la planta ágil y limpio.
-  > ⚠️ **Nota para el planificador:** Cada vez que ejecutas esta acción, el algoritmo recalcula la distribución desde cero, por lo que cualquier ordenación automática previa será reemplazada por esta nueva propuesta optimizada.
+  > **Nota para el planificador:** Cada vez que ejecutas esta acción, el algoritmo recalcula la distribución desde cero. La nueva propuesta reemplaza cualquier ordenación automática previa.
 
 4. Revisa visualmente el resultado en el diagrama de Gantt.
 5. **Realiza el ajuste fino manualmente**

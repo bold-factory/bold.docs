@@ -11,15 +11,15 @@ Una receta no ejecuta trabajo por sí sola, se usa como molde para crear **Órde
 
 **Fabricación \> Recetas**
 
-### **1. Añadir Nueva Receta**
+### 1. Añadir nueva receta
 
 **Producto:** selecciona el producto del cual quieras elaborar su receta.
 
-**Nombre:** Bold al seleccionar un producto, automáticamente asocia el nombre de la receta a ese producto, pero en caso de que hayan dos maneras distintas de hacer ese producto, se puede modificar el nombre para identificarlos.  
+**Nombre:** al seleccionar un producto, Bold asocia automáticamente el nombre de la receta. Modifícalo si hay dos maneras distintas de fabricar el mismo producto y necesitas diferenciarlas.
 
-### 2. Añadir Versión
+### 2. Añadir versión
 
-**Nombre:** automáticamente Bold pone la fecha en la que lo estas creando para tener constancia, pero se le puede poner un nombre diferente.
+**Nombre:** Bold usa automáticamente la fecha de creación, pero puedes indicar un nombre diferente.
 
 > **Ejemplo:** ponerle de nombre "Versión inicial", "16 de julio de 2026", "Versión actualizada", etc. 
 
@@ -37,11 +37,11 @@ Completa los siguientes campos:
 
 **Personas necesarias:** número exacto de operarios que se necesitan trabajando a la vez en la estación para ejecutar esta tarea.
 
-**Herramienta auxiliar (opcional):** selecciona si la tarea lo requiere el molde, matriz, utillaje o broca específica para hacer esta operación.
+**Herramienta auxiliar (opcional):** selecciona el molde, la matriz, el utillaje o la broca que requiera la operación.
 
 - Conecta los bloques de operaciones:
 
-Para relacionar una operación con otra tienes dos opciones para hacerlo. La primera se hace arrastrando el punto inferior del primer bloque con el superior del siguiente. Te aparecerá un cuadro para que decidas que tipo de restricción quieres que haya entre ellas.
+Para relacionar dos operaciones, arrastra el punto inferior del primer bloque hasta el punto superior del siguiente. Después selecciona qué tipo de restricción quieres aplicar.
 
 **No bloqueante:** marca una precedencia recomendada, pero permite continuar aunque la anterior no haya terminado.
 
@@ -58,21 +58,21 @@ La otra opción es haciendo clic en "**\+ AÑADIR RESTRICCIÓN**", se abrirá un
 **Tipo de restricción:** elige el comportamiento que deseas para este flujo (Total, Parcial o No bloqueante).
 
 <Tip>
-  Para borrar una restricción, haz clic derecho encima de la línea del diagrama y confirma si estas seguro de eliminarlo.
+  Para borrar una restricción, haz clic con el botón derecho sobre la línea del diagrama y confirma que quieres eliminarla.
 </Tip>
 
 - **Activar versión:** sirve para cuando termines de hacer la receta, que ya no se pueda modificar ningún detalle de esta versión. Evita que un supervisor o planificador altere por error una hoja de ruta a mitad de la semana, lo que provocaría que unos operarios fabricaran el producto de una forma y otros de otra. Si se necesita hacer un cambio en el futuro, la práctica correcta es crear una "Versión 2" nueva, dejando esta intacta.
 
 ## Casos donde la receta se tiene que dividir en dos
 
-En algunos casos, dependiendo el proceso de fabricación de un producto. Es necesario **añadir condiciones** en una receta cuando una propiedad cambia tanto el proceso que resulta más claro tener recetas separadas. 
+En algunos casos, el proceso de fabricación depende de una propiedad del producto. Añade condiciones cuando esa propiedad cambie el proceso y resulte más claro separar los recorridos de la receta.
 
 > **Ejemplo:** fabricas el modelo "Bici Pro" y la propiedad que cambia es el **Material del Cuadro**: el cliente puede elegir entre **Aluminio** o **Fibra de Carbono**. Esto lo cambia absolutamente todo en la fábrica:
 >
 > - **Si es de Aluminio:** El material son tubos de metal. Pasan por la estación de _Sierra_, luego por un robot de _Soldadura_, y después por un _Horno de Tratamiento Térmico_.
 > - **Si es de Fibra de Carbono:** El material son rollos de tejido de carbono. Pasan por un _Corte Láser_, luego van a una sala limpia para _Laminado Manual_, entran a un _Horno Autoclave de Alta Presión_ y requieren un _Control de Calidad por Ultrasonidos_.
 
-### Pasos a seguir
+### Configurar condiciones
 
 **Fabricación \> Recetas \> Receta creada**
 
@@ -98,5 +98,5 @@ Desde el diagrama entra al bloque de operación donde se tenga que aplicar la co
 **Valor/Opción:** es el **dato concreto, texto o número exacto** que el sistema va a buscar dentro de la ficha del producto para verificar si la condición se cumple o no.
 
 <Tip>
-  Cuando se quiera hacer una versión actualizada del producto (porque se cambio una operación), entra a la receta y haz clic a la opción de "Copiar desde otra receta".
+  Para crear una versión actualizada después de cambiar una operación, entra en la receta y haz clic en **Copiar desde otra receta**.
 </Tip>

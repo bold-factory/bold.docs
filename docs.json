@@ -60,7 +60,7 @@
                 "root": "es/ayuda/articulos/introduccion",
                 "directory": "card",
                 "pages": [
-                  "definir-propiedades",
+                  "es/ayuda/articulos/definir-propiedades",
                   "es/ayuda/articulos/crear-un-producto",
                   "es/ayuda/articulos/crear-un-articulo",
                   "es/ayuda/articulos/editar-un-articulo"
@@ -70,7 +70,7 @@
                 "group": "Vender",
                 "icon": "badge-dollar-sign",
                 "pages": [
-                  "es/ayuda/ventas/untitled-page",
+                  "es/ayuda/ventas/vender",
                   "es/ayuda/ventas/clientes",
                   "es/ayuda/ventas/introduccion",
                   "es/ayuda/ventas/preparar-y-registrar-envio",
@@ -86,7 +86,7 @@
                   "es/ayuda/planificacion/configuracion",
                   "es/ayuda/planificacion/proveedores",
                   "es/ayuda/planificacion/asistente-de-compras",
-                  "es/ayuda/planificacion/saber-que-fabricar",
+                  "es/ayuda/planificacion/realizar-pedidos-de-compra",
                   "es/ayuda/compras/recibir-pedido-de-compra",
                   "es/ayuda/almacen/recibir-con-albaran"
                 ]
@@ -103,14 +103,14 @@
                     "pages": [
                       "es/ayuda/produccion/definir-procesos",
                       "es/ayuda/produccion/crear-una-receta",
-                      "es/ayuda/produccion/untitled-page",
+                      "es/ayuda/produccion/especificar-materiales-pasos-y-controles",
                       "es/ayuda/produccion/para-que-son-necesarias-las-condiciones"
                     ]
                   },
                   "es/ayuda/produccion/crear-turnos",
                   "es/ayuda/produccion/crear-motivos-de-pausa",
                   "es/ayuda/planificacion/priorizar-necesidades",
-                  "es/ayuda/produccion/untitled-page-1",
+                  "es/ayuda/produccion/generar-peticiones-manualmente",
                   "es/ayuda/produccion/lanzar-ofs",
                   "es/ayuda/produccion/modificar-ordenes-de-fabricacion",
                   {
@@ -159,7 +159,7 @@
                   "es/ayuda/personal/empleados",
                   "es/ayuda/personal/programar-turnos",
                   "es/ayuda/personal/definir-jornadas",
-                  "es/ayuda/personal/untitled-page",
+                  "es/ayuda/personal/anadir-calendarios-locales",
                   "es/ayuda/personal/configurar-horarios"
                 ]
               },

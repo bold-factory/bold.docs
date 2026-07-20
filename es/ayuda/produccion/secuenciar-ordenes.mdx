@@ -7,18 +7,16 @@ La secuenciación ayuda a decidir cuándo y dónde ejecutar operaciones de fabri
 
 Puedes trabajar de dos formas:
 
-- **Modo simplificado:** Asignando fechas objetivo y recursos directamente en las órdenes.
-- **Modo planificado:** Creando **planes de producción** para resolver un escenario completo antes de aplicarlo.
+- **Modo simplificado:** asigna fechas objetivo y recursos directamente en las órdenes.
+- **Modo planificado:** crea **planes de producción** para resolver un escenario completo antes de aplicarlo.
 
 <Tip>
   Lo ideal es revisar y procesar la secuenciación de forma periódica (diaria o semanalmente) para dejar listos los lanzamientos del próximo turno.
 </Tip>
 
-**Ante imprevistos críticos:** Se debe recurrir a ella inmediatamente cuando la realidad de la fábrica cambia. 
+**Ante imprevistos críticos:** revisa la secuencia cuando cambie la realidad de la fábrica.
 
 > **Por ejemplo:** si se avería una máquina principal, si un proveedor se retrasa con una materia prima esencial o si entra un pedido de extrema urgencia que obliga a romper la planificación actual.
-
-Para planificar con precisión, debes elegir la pestaña adecuada según el nivel de detalle que quieras organizar:
 
 ## Antes de empezar
 
@@ -26,14 +24,14 @@ Revisa que las órdenes tengan operaciones abiertas, procesos definidos, estacio
 
 Para planificar con precisión, debes elegir la pestaña adecuada según el nivel de detalle que quieras organizar:
 
-**Órdenes:** Organiza la producción dándole prioridad a pedidos completos. Y con posibilidad de filtrar por área, estación de trabajo o herramienta para ver cómo impactan las órdenes globales en zonas específicas del taller.
+**Órdenes:** organiza la producción por pedidos completos. Filtra por área, estación o herramienta para revisar cómo afectan las órdenes a zonas concretas del taller.
 
-**Operaciones:** Desglosa las órdenes en subtareas físicas (corte, fresado, pintura) vinculadas a recursos concretos. Es la pestaña clave para **eliminar tiempos muertos por cambio de herramientas o configuración de maquinaria**.
+**Operaciones:** desglosa las órdenes en tareas físicas, como corte, fresado o pintura, vinculadas a recursos concretos.
 
 - **Uso de filtros:** Al seleccionar una **Estación de trabajo** (ej. _Sierra circular 1_) o una **Herramienta** específica, el sistema te muestra únicamente las tareas mecánicas de esa máquina.
 - **Organización de tiempos:** Puedes ordenar las operaciones de manera que se fabriquen seguidas todas las piezas que usen el mismo material, espesor o molde. Tu operario no tendrá que parar la máquina para reconfigurarla entre pedido y pedido, ahorrando horas de trabajo especializado a la semana.
 
-### 4. Pestaña: Planes (Entorno de Simulación Seguro)
+### Pestaña Planes
 
 - **Para qué sirve:** Es tu banco de pruebas o "sandbox". Aquí se almacena el historial de simulaciones y puedes **Crear nuevos planes** de producción.
 - **Cómo te ayuda a planificar:** Te permite jugar con el calendario de la fábrica sin riesgo. Puedes lanzar el algoritmo de Bold para que calcule la secuencia óptima considerando restricciones duras (como la falta de personal o retrasos de materia prima). Sabrás si un escenario es viable cuando el sistema marque **"Solución encontrada"**. Nada de lo que organices aquí cambiará las pantallas de los operarios en el taller hasta que revises los retrasos previstos y decidas **Aplicar** el plan de forma definitiva.

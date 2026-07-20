@@ -1,10 +1,11 @@
 ---
-title: "Crear recursos "
+title: "Crear recursos"
+description: "Configura estaciones, herramientas y características para planificar y ejecutar operaciones."
 ---
 
-Los **Recursos** son los elementos productivos que organizan la ejecución en Fabricación.  El objetivo es que cada paso pueda ejecutarse en una estación compatible, con las herramientas y restricciones necesarias.
+Los **recursos** son los elementos productivos que organizan la ejecución en Fabricación. El objetivo es que cada paso pueda ejecutarse en una estación compatible, con las herramientas y restricciones necesarias.
 
-> **Ejemplos:** maquinaria fija o automatizada, líneas de producción completas, puestos o estaciones de trabajo manuales, zonas de inspección y servicios, etc.
+> **Ejemplos:** maquinaria fija o automatizada, líneas de producción, puestos manuales, zonas de inspección y servicios.
 
 **Fabricación \> Recursos**
 
@@ -17,7 +18,7 @@ Desde esta vista se gestionan:
 
 ## Pasos a seguir
 
-### 1. Añadir Área
+### 1. Añadir área
 
 **Nombre:** aquí debes colocar el nombre técnico o común con el que todo el mundo en la fábrica conoce a esa **zona, sección, planta o línea principal**.
 
@@ -39,12 +40,12 @@ Desde esta vista se gestionan:
 
 **Capacidad:** este campo le dice a Bold cuánto trabajo puede procesar este punto a la vez.
 
-- **Si no marcas la casilla**, el sistema entenderá que la estación tiene un límite estricto (por ejemplo, que solo puede procesar 1 pieza o 1 orden a la vez). **_Ejemplos:_**\_ Máquinas CNC, robots de soldadura, o un operario en una mesa.\_
-- **_Si marcas la casilla_**_,_ le indicas al sistema que esta estación puede absorber cualquier cantidad de trabajo simultáneamente sin colapsar ni generar retrasos en la planificación. **Ejemplos:** _Un horno industrial grande (donde caben muchos lotes), una cinta transportadora larga, o una zona de secado/enfriamiento al aire._
+- **Si no marcas la casilla**, el sistema entiende que la estación tiene un límite estricto. Por ejemplo, una máquina CNC, un robot de soldadura o un puesto manual pueden procesar una pieza u orden a la vez.
+- **Si marcas la casilla**, indicas que la estación puede procesar trabajo simultáneo. Por ejemplo, puede ser un horno industrial, una cinta transportadora o una zona de secado.
 
-**Área:** sirve para conectar la estación con el área en que pertenece. Tienes que seleccionar un área de los que creaste anteriormente.
+**Área:** selecciona el área a la que pertenece la estación.
 
-> **Ejemplo:** si tu estación es `Mesa de Ensamblaje B`,  selecciona el área: `Montaje Final`.
+> **Ejemplo:** si la estación es `Mesa de ensamblaje B`, selecciona el área `Montaje final`.
 
 <Note>
   Ninguna estación puede existir flotando en el aire; siempre debe pertenecer a un área.
