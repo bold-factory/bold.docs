@@ -21,16 +21,16 @@ El plan permite probar cambios en el calendario sin afectar al trabajo real. Pue
   **Ejemplos:** `Planificación turno mañana`, `Simulación de pedido urgente Cliente X` o `Secuenciación sin restricciones de stock`.
 </Note>
 
-**Restringir según disponibilidad de materias primas:** Este parámetro decide si el inventario actual de tu almacén es una barrera infranqueable o no para la planificación.
+**Restringir según disponibilidad de materias primas:** este parámetro determina si el stock disponible limita la planificación.
 
 - **Si lo activas (Recomendado para el día a día):** Bold comprobará el stock real y las fechas de llegada de los proveedores. Si falta un componente para una tarea, el algoritmo **no la programará** hasta el día en que el material esté físicamente disponible en la fábrica. Evita que planifiques trabajos que tus operarios no pueden empezar por falta de material.
 
 - **Si lo dejas desactivado:** El sistema asumirá "stock infinito". Es útil para planes a largo plazo donde quieres saber cuánto tardarías en fabricar todo si no tuvieras problemas de suministro, o para generar la lista de compras que debes pasar a tu proveedor.
 
-**Considerar empleados como factor limitante:** Este campo cruza la planificación de las tareas con el calendario laboral y turnos de tu plantilla.
+**Considerar empleados como factor limitante:** este campo cruza la planificación de las tareas con el calendario laboral y los turnos de tu plantilla.
 
-- **Si lo activas:** El algoritmo tiene en cuenta que las máquinas no funcionan solas. Si tienes 5 sierras disponibles pero solo 2 operarios en ese turno, el sistema solo programará 2 operaciones de corte a la vez. Es la mejor opción para obtener un calendario de fábrica 100% fiel a la realidad.
-- **Si lo dejas desactivado:** El sistema planifica basándose únicamente en la disponibilidad de las máquinas o estaciones de trabajo, asumiendo que siempre habrá personal suficiente para operarlas.
+- **Si lo activas:** el algoritmo tiene en cuenta la disponibilidad de los empleados. Si tienes 5 sierras disponibles, pero solo 2 operarios en ese turno, el sistema programa como máximo 2 operaciones de corte a la vez. Usa esta opción para reflejar la capacidad de personal en el calendario.
+- **Si lo dejas desactivado:** el sistema planifica según la disponibilidad de las máquinas o estaciones de trabajo y asume que habrá personal suficiente para operarlas.
 
 **Crear:** Bold generará el entorno de simulación y empieza a calcular la propuesta de orden óptima.
 
@@ -65,9 +65,9 @@ Revisa visualmente el resultado en el diagrama.
 
 ### 5. Ajustar manualmente
 
-- **Arrastrar y Soltar Bloques:** Si consideras que una operación específica debe retrasarse, adelantarse o ejecutarse en otra máquina compatible, puedes hacer clic sobre su bloque de color en el gráfico de Gantt y moverlo libremente en el tiempo.
+- **Arrastrar y soltar bloques:** si una operación debe retrasarse, adelantarse o ejecutarse en otra máquina compatible, mueve su bloque en el gráfico de Gantt.
 
-- **Modificación Dinámica en Cadena:** No tienes que preocuparte por descuadrar el resto del proceso. Bold mantiene las restricciones lógicas de fabricación. Si mueves una tarea inicial (como el _Corte de sobre_) hacia adelante en el tiempo, el sistema **desplazará automáticamente todas las tareas posteriores que dependan de ella** (como el _Lijado_ y el _Ensamblaje_). Todo el calendario se reajusta de forma elástica en tiempo real.
+- **Modificación dinámica en cadena:** Bold mantiene las restricciones de fabricación cuando mueves una tarea. Si retrasas una tarea inicial, como el _Corte de sobre_, el sistema desplaza las tareas posteriores que dependen de ella, como el _Lijado_ y el _Ensamblaje_. Revisa el resultado antes de aplicar el plan.
 
 ### 6. Guardar o aplicar el plan
 

@@ -27,6 +27,8 @@ pnpm validate
 pnpm broken-links
 ```
 
+The project link checker resolves localized `/es/` routes against their MDX files. You can also run `pnpm broken-links:mintlify` to compare the result with the Mintlify CLI.
+
 ## Project structure
 
 | Path | Purpose |

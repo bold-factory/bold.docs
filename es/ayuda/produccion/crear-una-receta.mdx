@@ -27,7 +27,7 @@ Una receta no ejecuta trabajo por sí sola. Se usa como plantilla para crear **�
 
 ### 3. Crear el diagrama de operaciones
 
-Antes de empezar, es importante tener en cuenta que, aunque Bold te permite añadir bloques en cualquier orden y moverlos libremente por el lienzo, el método más rápido y limpio para organizar tu diagrama visual es **construirlo en el mismo orden en que se fabrica el producto en la realidad**.
+Aunque puedes añadir y mover los bloques libremente, organiza el diagrama en el mismo orden en que fabricas el producto. Así podrás revisar el flujo con mayor facilidad.
 
 Haz clic en **+ Añadir operación** y completa los siguientes campos:
 
@@ -96,8 +96,8 @@ Desde el diagrama entra al bloque de operación donde se tenga que aplicar la co
 - **Igual a:**  la condición se cumplirá **únicamente** cuando el valor del producto coincida de forma exacta con el valor que escribas.
 - **Distinto de:** la condición se cumplirá en **cualquier caso, excepto** cuando el producto tenga el valor indicado.
 - **Contiene:** la condición se cumple si la palabra que buscas **aparece en cualquier parte** del comentario. Por ejemplo, si buscas `Frágil` y las notas de la OF contienen esa palabra, Bold activará la operación especial de embalaje reforzado.
-- **Empieza por:** La condición se activa solo si el texto o código arranca con esos caracteres. Es ideal si usas plantillas de notas o códigos estandarizados. _Ejemplo:_ Si las notas de exportación siempre empiezan por `EXP-` (ej: `EXP-Francia`), configuras _Empieza por: EXP-_ y el sistema sabrá que es un proceso internacional.
-- **Termina por:** La condición se activa si el texto finaliza con esos caracteres exactos. _Ejemplo:_ Útil si tus operarios o sistemas cierran las notas con etiquetas como `-OK` o `-REVISADO`.
+- **Empieza por:** la condición se activa si el texto o código comienza con esos caracteres. Úsala con plantillas de notas o códigos estandarizados. Por ejemplo, si las notas de exportación comienzan por `EXP-`, como `EXP-Francia`, configura **Empieza por: EXP-**.
+- **Termina por:** la condición se activa si el texto finaliza con esos caracteres exactos. Úsala si tus operarios o sistemas cierran las notas con etiquetas como `-OK` o `-REVISADO`.
 
 **Valor/Opción:** es el **dato concreto, texto o número exacto** que el sistema va a buscar dentro de la ficha del producto para verificar si la condición se cumple o no.
 

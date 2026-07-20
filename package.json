@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "node scripts/mint.mjs dev",
     "validate": "node scripts/mint.mjs validate",
-    "broken-links": "node scripts/mint.mjs broken-links"
+    "broken-links": "node scripts/check-links.mjs",
+    "broken-links:mintlify": "node scripts/mint.mjs broken-links"
   },
   "devDependencies": {
     "mint": "^4.2.638"
