@@ -1,0 +1,31 @@
+es/novedades/changelog.mdx
+  s_eec9b44521d2c7::t_5903cbd6d9b7f7 7-109
+es/conceptos/fabricacion/motivos-de-pausa-e-interrupciones.mdx
+  s_4ac5adf4d2b59d::t_520f7cbd901217 4
+docs.json
+  s_eec9b44521d2c7::t_28adc96b294a7d 411
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "57545f7a93028534bd60cde482f8a411978d6494",
+  "prompts": {},
+  "sessions": {
+    "s_4ac5adf4d2b59d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f8029-59bb-7e10-857c-195246075ffd",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_eec9b44521d2c7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f802a-5c7c-7282-a777-cb24f7a09672",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
