@@ -5,6 +5,109 @@ rss: true
 ---
 
 <Update
+  label="2026-07-20"
+  tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
+>
+  ## Nuevas funcionalidades
+
+  - Almacén permite planificar órdenes de carga desde pedidos de venta pendientes o líneas listas para enviar, programarlas en un calendario y completar el trabajo desde el modo de operario.
+  - Los equipos pueden consultar movimientos internos de stock, gestionar equipos de manutención, como carretillas elevadoras, y guiar al operario durante la recogida, el traslado y la entrega del stock.
+  - Se pueden crear y mantener transportes. Las ubicaciones muestran su stock actual y las estaciones de trabajo pueden usar ubicaciones de entrada y salida distintas.
+  - Las suscripciones a notificaciones admiten condiciones independientes para los canales de la aplicación y del correo electrónico.
+  - Los registros de tiempo de una orden de fabricación se pueden editar o eliminar, incluidas sus asignaciones, empleados, pausas, marcas de tiempo y comentarios.
+  - Las automatizaciones por eventos incorporan una vista de auditoría para consultar su historial y sus cambios.
+  - La exportación de datos amplía su catálogo de artículos, personal, planificación, almacén, producción y mantenimiento, en formato CSV o Excel.
+  - Los administradores pueden decidir si **Mis operaciones** usa las estaciones habituales o las habilidades de los empleados, y configurar el aprovisionamiento automático de órdenes de carga.
+
+  ## Mejoras
+
+  - La planificación de ventas muestra las instrucciones de entrega y las fechas previstas de envío.
+  - Las tarjetas de indicadores de empleados enumeran cada operación activa y enlazan con su detalle.
+  - Las sesiones con agentes usan los controles **Permitir cambios** y **Solo lectura** para aclarar si el agente puede ejecutar acciones.
+  - La navegación agrupa las herramientas de almacén por flujo de trabajo, denomina **Panel de control** al área de configuración y ofrece acceso a la documentación desde la cabecera.
+  - Las opciones para detener el trabajo son más claras y el filtro de producción usa el término correcto para las operaciones restringidas.
+
+  ## Correcciones
+
+  - Al detener el trabajo en una operación compartida, puedes elegir entre pausar a todo el equipo o dejar que los demás continúen. El sistema muestra los motivos de pausa adecuados para estaciones compartidas.
+  - Los interruptores de notificaciones en la aplicación y por correo mantienen estados de guardado independientes.
+  - El Asistente de compras crea el pedido y sus líneas en una sola operación y descarta el estado de éxito anterior cuando cambia la propuesta.
+  - Las automatizaciones de agentes sin fecha de inicio se pueden editar sin errores.
+</Update>
+
+<Update
+  label="2026-07-13"
+  tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
+>
+  ## Modo Plan en sesiones con agentes
+
+  - Las sesiones con agentes de Smart Factory incorporan el modo Plan. Puedes activarlo al iniciar una sesión o enviar un mensaje, distinguir las respuestas de planificación y modificar o ejecutar el último plan mediante acciones rápidas.
+
+  ## Mejoras
+
+  - El diagrama de la orden de fabricación aprovecha mejor la altura disponible y mantiene visibles los controles de acción.
+  - La acción de progreso del modo de trabajo ahora se denomina **Completar** en lugar de **Registrar**.
+
+  ## Correcciones
+
+  - Al desasignar una sola operación, aparecen los motivos de pausa de su estación. Para varias operaciones o estaciones, aparece una lista más amplia.
+  - El detalle de una operación individual en modo de trabajo ya no muestra una acción de pausa fuera de contexto.
+</Update>
+
+<Update
+  label="2026-07-06"
+  tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
+>
+  ## Nuevas funcionalidades
+
+  - Los usuarios autorizados pueden exportar productos, pedidos de venta, líneas de venta y pedidos de compra desde el Panel de control, en formato CSV o Excel.
+  - El modo de trabajo de producción incorpora una búsqueda de operaciones activas con texto, lectura de códigos QR y filtros por estado y fecha.
+  - La secuenciación incluye un conjunto más amplio de órdenes, operaciones y grupos abiertos. Las listas relacionadas se actualizan después de agrupar o mover trabajo.
+
+  ## Mejoras
+
+  - Las tablas de costes y registros de tiempo de mantenimiento usan etiquetas más claras para empleados y códigos de artículo.
+
+  ## Correcciones
+
+  - Las acciones de mantenimiento se pueden completar desde el modo de trabajo con el contexto correcto del parte. El botón **Completar** ya no abre ni cierra la fila de forma involuntaria.
+  - Si una pantalla falla al renderizarse, la aplicación muestra un mensaje de recuperación con opciones para reintentar o volver al inicio.
+  - Las versiones de producción reciben la configuración pública correcta durante la compilación, lo que evita conexiones rotas con la API y la pérdida de informes de errores.
+</Update>
+
+<Update
+  label="2026-06-29"
+  tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
+>
+  ## Nuevas funcionalidades
+
+  - Las automatizaciones por eventos se incorporan junto a las programadas. Puedes elegir un agente y un evento de negocio, añadir condiciones sobre los datos del evento y activar, desactivar, editar o eliminar la automatización.
+  - Los pedidos y las líneas de venta se pueden cancelar desde las pantallas de planificación. La fecha de cancelación queda visible en el historial.
+  - Producción permite crear una petición de fabricación de material desde la fila donde se detecta una falta de un componente fabricado bajo pedido.
+  - Los agentes, las automatizaciones y las sesiones de Smart Factory muestran quién creó o modificó cada registro y cuándo lo hizo.
+  - El detalle del tipo de operación muestra los empleados que pueden ejecutar el proceso.
+  - La personalización de empresa permite seleccionar español o inglés como idioma.
+
+  ## Mejoras
+
+  - Las notificaciones y los enlaces de la aplicación abren más registros relacionados, como materiales, asignaciones, coproductos y líneas de venta.
+  - Las notificaciones de Smart Factory distinguen con más claridad las respuestas de agentes y las solicitudes de aclaración.
+  - Las pestañas de materiales, controles y progreso de una orden de fabricación muestran la operación relacionada. El progreso final se separa del registrado en otras operaciones.
+  - Las pantallas de recetas y producción añaden ayudas para coproductos y entradas semielaboradas, incluidos textos explicativos e indicadores de valor fijo.
+  - Las automatizaciones programadas se agrupan en el área **Automatizaciones**. La página **Agentes** se centra en gestionar agentes y ejecutar tareas.
+
+  ## Correcciones
+
+  - El chat de las sesiones de Smart Factory vuelve a mostrar en tiempo real los mensajes de agentes y las solicitudes de aclaración.
+  - El formulario de automatizaciones por eventos conserva los cambios al abrir o guardar. Si no reconoce un evento, muestra un nombre alternativo seguro.
+  - El Asistente de producción solo vincula una nueva petición a una entrada de orden cuando la previsión procede de esa demanda.
+  - Si un material ya tiene una petición de fabricación vinculada, la fila enlaza con ella y no ofrece crear otra.
+  - Los enlaces de notificaciones identifican los registros con mayor precisión y llevan los avisos de materiales y coproductos a la pestaña correcta de entradas de la orden.
+  - La selección de idioma se guarda con el valor esperado.
+  - Las nuevas acciones de mantenimiento parten de una duración válida de cero minutos.
+</Update>
+
+<Update
   label="2026-06-22"
   tags={["Mejoras", "Correcciones", "Documentación"]}
 >
