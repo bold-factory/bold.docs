@@ -1,5 +1,5 @@
 ---
-title: "Cómo decido qué fabrico"
+title: "Decidir qué fabricar"
 description: "Distingue urgencias reales de sugerencias que pueden esperar, agruparse o descartarse."
 ---
 
@@ -9,49 +9,49 @@ Para que una petición de fabricación sea correcta y optimice realmente los tie
 
 Sigue estos pasos para procesar tus necesidades de fabricación con la máxima eficiencia:
 
-**Planificación \> Asistente de fabricación**
+**Ruta:** **Planificación \> Asistente de fabricación**
 
 ### 1. Configura tus filtros de entrada
 
 Antes de mirar la lista de artículos, debes decirle a Bold cómo trabaja tu fábrica para que agrupe las necesidades correctamente:
 
-- **Selecciona la Frecuencia de fabricación:** Elige entre Diaria, Semanal o Mensual según cómo organices tus turnos. Si en tu fábrica planificáis los lanzamientos cada lunes, selecciona **Semanal**. Esto adaptará las tarjetas resumen a ese bloque de tiempo.
-- **Ajusta la fecha en "Incluir necesidades hasta":** Este campo es el más importante para la eficiencia. Si estás planificando la semana actual, pon la fecha del domingo de esta semana.
+- **Frecuencia de fabricación:** elige entre diaria, semanal o mensual según cómo organices tus turnos. Si en tu fábrica planificáis los lanzamientos cada lunes, selecciona **Semanal**. Esto adaptará las tarjetas resumen a ese bloque de tiempo.
+- **Incluir necesidades hasta:** si estás planificando la semana actual, indica la fecha del domingo de esta semana.
 
 <Tip>
-  _Tip de eficiencia:_ Si ves que la producción va adelantada o quieres ahorrar tiempos de preparación de máquina, amplía esta fecha unos días hacia el futuro. Así, el sistema rastreará pedidos futuros y te permitirá **adelantar y agrupar la fabricación de piezas idénticas** en un solo lote grande.
+  Si la producción va adelantada o quieres ahorrar tiempos de preparación de máquina, amplía esta fecha unos días. Así, el sistema rastreará pedidos futuros y te permitirá **adelantar y agrupar la fabricación de piezas idénticas** en un solo lote grande.
 </Tip>
 
 ### 2. Detecta urgencias
 
 Mira el panel de control de cuatro bloques antes de lanzar nada a producción. Te da el diagnóstico de salud de tus plazos:
 
-- **URGENCIAS:** Si este contador es mayor que cero, significa que hay pedidos cuyo plazo ya ha vencido y deberías haber empezado a fabricar. **Estas peticiones deben procesarse de forma prioritaria inmediatamente.**
-- **ESTE PERIODO/SIGUIENTE PERIODO:** Te permite balancear la carga de trabajo. Si esta semana (_Este periodo_) tienes poca carga, mira qué hay en el _Siguiente periodo_ para meterlo en la orden actual y mantener las máquinas trabajando a ritmo constante.
+- **Urgencias:** si este contador es mayor que cero, significa que hay pedidos cuyo plazo ya ha vencido y deberías haber empezado a fabricar. **Procesa estas peticiones de forma prioritaria.**
+- **Este periodo / Siguiente periodo:** te permite equilibrar la carga de trabajo. Si esta semana tienes poca carga, revisa el siguiente periodo para incluir trabajo en la orden actual y mantener las máquinas a un ritmo constante.
 
-### 3. Analiza la columna "Más urgente" en la tabla 
+### 3. Analizar la columna **Más urgente**
 
 Cuando el Asistente te agrupa las necesidades, te muestra el total acumulado en la columna **Cantidad** (por ejemplo, fabricar 10 ud de Sillas de comedor). Para que tu petición sea correcta, debes fijarte obligatoriamente en la columna **Más urgente.**
 
 - Esta columna te indica la fecha límite del pedido más antiguo que forma parte de ese grupo.
 - **Qué información extraer:** Esto te advierte de que, aunque estés juntando material para fabricar 10 mesas y optimizar la máquina, hay un cliente concreto que lleva esperando desde el día 13. Te ayuda a decidir si realmente te da tiempo a fabricar las 10 unidades juntas o si debes lanzar primero un lote más pequeño para cumplir con el cliente que va retrasado.
 
-### 4. Propuesta de stock
+### 4. Revisar la propuesta de stock
 
 Es el cálculo automático del sistema. Al restar el stock saliente (10) del disponible actual más el entrante (4 \+ 3), la fábrica se queda en un saldo negativo de 3. El sistema te propone fabricar exactamente esas 3 unidades para equilibrar la balanza y no quedar desabastecido.
 
 <Tip>
-  **Tip de eficiencia:** El campo de **Propuesta es completamente editable**. Si el sistema te sugiere 3 unidades, pero al mirar el histórico prefieres redondear a 5 unidades para amortizar mejor el arranque de las máquinas, puedes borrar el número y teclear tu propia cantidad antes de hacer clic en **Generar petición**.
+  El campo **Propuesta** es editable. Si el sistema te sugiere 3 unidades, pero al mirar el histórico prefieres redondear a 5 para amortizar mejor el arranque de las máquinas, puedes escribir tu propia cantidad antes de hacer clic en **Generar petición**.
 </Tip>
 
-### 2. Historial y Contexto de Planta (Bloques inferiores)
+### 5. Revisar el historial y el contexto de planta
 
 Para ayudarte a decidir si modificas o no la propuesta de fabricación, apóyate en las tres herramientas de la parte inferior:
 
-- **OFs anteriores:** Te muestra un listado de las últimas órdenes de fabricación reales de este producto. Te sirve para comprobar de un vistazo qué cantidades soléis fabricar habitualmente o si hay alguna orden huérfana en el sistema.
+- **OF anteriores:** muestra un listado de las últimas órdenes de fabricación de este producto. Te sirve para comprobar qué cantidades soléis fabricar habitualmente o si hay alguna orden huérfana en el sistema.
 - **Previsión de stock:** Gráfico que proyecta visualmente la evolución de tu inventario a lo largo de los próximos días o semanas. Te permite comprobar de forma gráfica el día exacto en el que el stock caerá en negativo si no lanzas esta petición.
 - **Histórico de consumos:** Registra la velocidad de salida real que ha tenido este artículo en fechas pasadas. Si ves que es un artículo de alta rotación (que se gasta o vende muy rápido), es un indicador claro de que te conviene aumentar la propuesta del sistema para tener stock de reserva.
 
-### 3. Generar petición 
+### 6. Generar la petición
 
-Una vez comprobado que las cantidades tienen lógica y que las fechas son viables, haz clic en **Generar Petición** para enviar la cantidad definitiva a la orden de fabricación.
+Una vez comprobado que las cantidades tienen lógica y que las fechas son viables, haz clic en **Generar petición** para enviar la cantidad definitiva a fabricación.

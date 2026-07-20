@@ -5,38 +5,48 @@ description: "Configura estaciones, herramientas y características para planifi
 
 Los **recursos** son los elementos productivos que organizan la ejecución en Fabricación. El objetivo es que cada paso pueda ejecutarse en una estación compatible, con las herramientas y restricciones necesarias.
 
-> **Ejemplos:** maquinaria fija o automatizada, líneas de producción, puestos manuales, zonas de inspección y servicios.
+<Note>
+  **Ejemplos:** maquinaria fija o automatizada, líneas de producción, puestos manuales, zonas de inspección y servicios.
+</Note>
 
-**Fabricación \> Recursos**
+**Ruta:** **Fabricación \> Recursos**
 
 Desde esta vista se gestionan:
 
-- **Estaciones**: máquinas, líneas, mesas o zonas donde se ejecutan operaciones.
-- **Áreas**: jerarquía para organizar estaciones por planta, sección o línea.
-- **Herramientas**: elementos auxiliares que pueden requerirse para ejecutar una operación.
-- **Diagrama**: vista visual de áreas y estaciones.
+- **Estaciones:** máquinas, líneas, mesas o zonas donde se ejecutan operaciones.
+- **Áreas:** jerarquía para organizar estaciones por planta, sección o línea.
+- **Herramientas:** elementos auxiliares que pueden requerirse para ejecutar una operación.
+- **Diagrama:** vista visual de áreas y estaciones.
 
 ## Pasos a seguir
 
-### 1. Añadir área
+### 1. Añadir un área
 
 **Nombre:** aquí debes colocar el nombre técnico o común con el que todo el mundo en la fábrica conoce a esa **zona, sección, planta o línea principal**.
 
-> **Ejemplos:** inyección de plástico, mecanizado, línea de ensamblaje, planta 1-logística, etc.
+<Note>
+  **Ejemplos:** inyección de plástico, mecanizado, línea de ensamblaje o planta 1-logística.
+</Note>
 
 **Descripción (opcional):** sirve para detallar qué se hace exactamente en esa zona, qué tipo de producto se procesa o alguna observación clave de la distribución. Esto ayuda a dar contexto a los supervisores, responsables de turno o nuevos operarios que utilicen Bold.
 
-> **Ejemplo:** _para el Área de Inyección de Plástico, descripción:_`"Zona destinada al moldeo de piezas plásticas de alta densidad. Incluye las prensas hidráulicas de la 1 a la 5."`
+<Note>
+  **Ejemplo:** para el área `Inyección de plástico`, usa la descripción `Zona destinada al moldeo de piezas plásticas de alta densidad. Incluye las prensas hidráulicas de la 1 a la 5.`
+</Note>
 
-### 2. Añadir Estación
+### 2. Añadir una estación
 
 **Nombre:** es el identificador único del punto de trabajo. Debe ser un nombre claro y específico que los operarios reconozcan al instante en sus pantallas.
 
-> **Ejemplos:** línea de etiquetado automático, estación de inspección visual 2, torno CNC Haas 01, etc.
+<Note>
+  **Ejemplos:** línea de etiquetado automático, estación de inspección visual 2 o torno CNC Haas 01.
+</Note>
 
 **Descripción (opcional):** sirve para añadir contexto técnico, restricciones o notas que ayuden a los supervisores y planificadores a saber qué se hace exactamente ahí.
 
-> **Ejemplo:** "Prensa para moldeado de piezas metálicas de hasta 5mm de espesor."
+<Note>
+  **Ejemplo:** `Prensa para moldeado de piezas metálicas de hasta 5 mm de espesor.`
+</Note>
 
 **Capacidad:** este campo le dice a Bold cuánto trabajo puede procesar este punto a la vez.
 
@@ -45,32 +55,36 @@ Desde esta vista se gestionan:
 
 **Área:** selecciona el área a la que pertenece la estación.
 
-> **Ejemplo:** si la estación es `Mesa de ensamblaje B`, selecciona el área `Montaje final`.
-
 <Note>
-  Ninguna estación puede existir flotando en el aire; siempre debe pertenecer a un área.
+  **Ejemplo:** si la estación es `Mesa de ensamblaje B`, selecciona el área `Montaje final`.
 </Note>
 
-### 3. Añadir herramienta
+<Note>
+  Todas las estaciones deben pertenecer a un área.
+</Note>
+
+### 3. Añadir una herramienta
 
 Nos referimos con herramienta al **elemento auxiliar, molde, matriz, utillaje o consumible crítico** que se monta y desmonta en las estaciones para poder fabricar un producto específico.
 
 **Nombre:** introduce el nombre técnico, código de inventario o identificador único con el que tu equipo de producción y mantenimiento reconoce ese utillaje.
 
-> **Ejemplo:** un "Molde Carcasa Frontal AC-40" sería una herramienta en una fábrica de inyección de plástico.
+<Note>
+  **Ejemplo:** `Molde carcasa frontal AC-40` sería una herramienta en una fábrica de inyección de plástico.
+</Note>
 
 <Note>
   Si cambiar este elemento por otro implica detener la máquina y perder tiempo de configuración, entonces **es una herramienta** y debe registrarse aquí.
 </Note>
 
-**Fabricación \> Recursos \> Herramienta**
+**Ruta:** **Fabricación \> Recursos \> Herramienta**
 
 **Asignar características:** esta información sirve principalmente para **filtrar búsquedas rápidas** y para **automatizar la compatibilidad** (evitar que el sistema asigne un trabajo a una herramienta que no está capacitada para hacerlo).
 
-> **Ejemplo:** imagina que has creado la herramienta llamada `Molde Carcasa Frontal X`. Si solo pones el nombre, el sistema no sabe nada más. Al editarla, le asignas las siguientes **características**:
->
-> **Material compatible:** `Polipropileno (PP)`
->
-> **Número de cavidades:** `4` _(significa que fabrica 4 piezas en un solo golpe)_
->
-> **Tonalidad/Color:** `Plástico Negro`
+<Note>
+  **Ejemplo:** para la herramienta `Molde carcasa frontal X`, asigna estas características:
+
+  - **Material compatible:** `Polipropileno (PP)`.
+  - **Número de cavidades:** `4`.
+  - **Tonalidad/color:** `Plástico negro`.
+</Note>

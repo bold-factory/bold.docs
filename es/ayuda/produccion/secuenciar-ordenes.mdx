@@ -7,8 +7,14 @@ La secuenciación ayuda a decidir cuándo y dónde ejecutar operaciones de fabri
 
 Puedes trabajar de dos formas:
 
-- **Modo simplificado:** asigna fechas objetivo y recursos directamente en las órdenes.
-- **Modo planificado:** crea **planes de producción** para resolver un escenario completo antes de aplicarlo.
+<Columns cols={2}>
+  <Card title="Modo simplificado" icon="list-ordered" href="/es/ayuda/produccion/modo-rapido">
+    Asigna fechas objetivo y recursos directamente en las órdenes.
+  </Card>
+  <Card title="Modo planificado" icon="calendar-range" href="/es/ayuda/produccion/plan-de-produccion">
+    Crea planes de producción para resolver un escenario completo antes de aplicarlo.
+  </Card>
+</Columns>
 
 <Tip>
   Lo ideal es revisar y procesar la secuenciación de forma periódica (diaria o semanalmente) para dejar listos los lanzamientos del próximo turno.
@@ -16,7 +22,9 @@ Puedes trabajar de dos formas:
 
 **Ante imprevistos críticos:** revisa la secuencia cuando cambie la realidad de la fábrica.
 
-> **Por ejemplo:** si se avería una máquina principal, si un proveedor se retrasa con una materia prima esencial o si entra un pedido de extrema urgencia que obliga a romper la planificación actual.
+<Note>
+  **Ejemplos:** una máquina principal se avería, un proveedor retrasa una materia prima esencial o entra un pedido urgente que obliga a cambiar la planificación actual.
+</Note>
 
 ## Antes de empezar
 
@@ -31,7 +39,7 @@ Para planificar con precisión, debes elegir la pestaña adecuada según el nive
 - **Uso de filtros:** Al seleccionar una **Estación de trabajo** (ej. _Sierra circular 1_) o una **Herramienta** específica, el sistema te muestra únicamente las tareas mecánicas de esa máquina.
 - **Organización de tiempos:** Puedes ordenar las operaciones de manera que se fabriquen seguidas todas las piezas que usen el mismo material, espesor o molde. Tu operario no tendrá que parar la máquina para reconfigurarla entre pedido y pedido, ahorrando horas de trabajo especializado a la semana.
 
-### Pestaña Planes
+## Planes de producción
 
-- **Para qué sirve:** Es tu banco de pruebas o "sandbox". Aquí se almacena el historial de simulaciones y puedes **Crear nuevos planes** de producción.
-- **Cómo te ayuda a planificar:** Te permite jugar con el calendario de la fábrica sin riesgo. Puedes lanzar el algoritmo de Bold para que calcule la secuencia óptima considerando restricciones duras (como la falta de personal o retrasos de materia prima). Sabrás si un escenario es viable cuando el sistema marque **"Solución encontrada"**. Nada de lo que organices aquí cambiará las pantallas de los operarios en el taller hasta que revises los retrasos previstos y decidas **Aplicar** el plan de forma definitiva.
+- **Para qué sirve:** es un entorno de prueba. Aquí se almacena el historial de simulaciones y puedes **Crear nuevos planes** de producción.
+- **Cómo te ayuda a planificar:** permite probar cambios en el calendario de la fábrica sin afectar al trabajo real. Puedes lanzar el algoritmo de Bold para que calcule una secuencia considerando restricciones como la falta de personal o los retrasos de materia prima. Sabrás si un escenario es viable cuando el sistema marque **Solución encontrada**. Los cambios no llegarán a las pantallas de los operarios hasta que revises los retrasos previstos y decidas **Aplicar** el plan.

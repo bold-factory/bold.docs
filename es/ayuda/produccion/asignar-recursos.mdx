@@ -6,32 +6,34 @@ hidden: true
 
 Es el cuadro de mando donde el planificador o el responsable de producción decide qué máquina, operario o puesto de trabajo físico se va a encargar de ejecutar cada tarea. Su objetivo principal es equilibrar la carga de trabajo de la fábrica y asegurar que ningún recurso esté saturado mientras otros están parados.
 
-**Fabricación \> Asignación de recursos**
+**Ruta:** **Fabricación \> Asignación de recursos**
 
 Esto es lo que puedes visualizar y gestionar en este panel:
 
-### 1. Operaciones pendientes 
+## Operaciones pendientes
 
 Cada tarjeta rectangular representa una operación concreta que necesita ser ejecutada. Sin necesidad de abrir el pedido, la tarjeta te muestra toda su información crítica:
 
-- **Vínculo directo:** Sabes a qué pedido pertenece (`OF-00029-01`) y qué fase exacta se está evaluando (ej. Corte de pata inclinada, Pegado, o Lijado del sobre).
-- **Datos de prioridad:** Ves la fecha límite en la esquina superior derecha (`18/06/2026`), el cliente que lo solicita (`LA CASA DEL SOFÁ`) y el contador de unidades necesarias (ej. `0/12`piezas).
+- **Vínculo directo:** sabes a qué pedido pertenece (`OF-00029-01`) y qué fase exacta se está evaluando (por ejemplo, corte de pata inclinada, pegado o lijado del sobre).
+- **Datos de prioridad:** ves la fecha límite en la esquina superior derecha (`18/06/2026`), el cliente que lo solicita (`LA CASA DEL SOFÁ`) y el contador de unidades necesarias (por ejemplo, `0/12 piezas`).
 
-### 2. Asignación y cambio rápido de maquinaria 
+## Asignar o cambiar maquinaria
 
 **Estación de trabajo:**  En algunos casos, una operación se puede hacer en más de una estación de trabajo, donde se puede distinguir entre principal o secundaria. El sistema te muestra las máquinas o bancos de trabajo aptos para esa tarea concreta.
 
-### 3. Filtros avanzados para evitar cuellos de botella
+## Filtrar para detectar cuellos de botella
 
 Cuando la fábrica gestiona cientos de operaciones a la vez, los filtros de la parte superior se vuelven indispensables para limpiar la vista:
 
-- **Filtros por Área o Estación:** Puedes filtrar para ver únicamente las tareas del área de "Pintura" o del puesto "Lijadora banda". Esto te permite auditar la cola de trabajo de una sección específica de la fábrica para ver si va retrasada.
-- **Filtros rápidos de estado:** El botón **ocultar empezadas** te permite quitar de la pantalla las tareas que los operarios ya están ejecutando en el taller, ayudándote a concentrarte solo en planificar lo que viene a continuación.
+- **Filtros por área o estación:** puedes filtrar para ver únicamente las tareas del área de _Pintura_ o del puesto _Lijadora de banda_. Esto te permite revisar la cola de trabajo de una sección específica de la fábrica para ver si va retrasada.
+- **Filtros rápidos de estado:** el botón **Ocultar empezadas** quita de la pantalla las tareas que los operarios ya están ejecutando en el taller para que puedas concentrarte en lo que viene a continuación.
 
-> **Ejemplo de uso:** Gestión de una avería en directo
->
-> Imagina que la **Prensa hidráulica 1** sufre una avería mecánica y va a estar parada dos días. En lugar de tener que buscar este componente orden por orden:
->
-> 1. Vas a esta pantalla y en el filtro de **Estación de trabajo** seleccionas Prensa hidráulica 1.
-> 2. El sistema te mostrará en pantalla únicamente las tarjetas de las operaciones que se han quedado "atrapadas" en esa máquina.
-> 3. Simplemente abres el desplegable de esas tarjetas y las reasignas a la **Prensa hidráulica 2** o a un banco de trabajo alternativo.
+<Note>
+  **Ejemplo: gestionar una avería**
+
+  Si la **Prensa hidráulica 1** va a estar parada dos días:
+
+  1. Selecciona **Prensa hidráulica 1** en el filtro **Estación de trabajo**.
+  2. Revisa las operaciones asignadas a esa máquina.
+  3. Abre cada tarjeta y reasígnala a la **Prensa hidráulica 2** o a un banco de trabajo alternativo.
+</Note>

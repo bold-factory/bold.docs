@@ -5,14 +5,30 @@ description: "Programa partes preventivos que se generan según una frecuencia d
 
 El **mantenimiento preventivo** define reglas para crear partes de trabajo recurrentes. La programación no es el parte: es la regla que indica cuándo generar partes y con qué información inicial.
 
-**Mantenimiento \> Preventivo \> Crear programación**
+**Ruta:** **Mantenimiento \> Preventivo \> Crear programación**
 
-1. Añade el nombre que tendrá el mantenimiento que quieres programar.
-2. Selecciona el activo al cual se debe hacer.
-3. Causa por la cual se hace.
-4. Frecuencia con que quieres que se haga.
-5. Hora u horas en las que se debe hacer.
-6. Selecciona la política de generación que quieres aplicar:
+<Steps>
+  <Step title="Identifica la programación">
+    Añade el nombre que tendrá el mantenimiento que quieres programar.
+  </Step>
+  <Step title="Selecciona el activo">
+    Indica el activo sobre el que se debe realizar.
+  </Step>
+  <Step title="Define la causa">
+    Selecciona la causa por la que se realiza el mantenimiento.
+  </Step>
+  <Step title="Configura la frecuencia">
+    Indica con qué frecuencia quieres que se realice.
+  </Step>
+  <Step title="Configura la hora">
+    Indica la hora o las horas en las que se debe realizar.
+  </Step>
+  <Step title="Selecciona la política de generación">
+    Elige cómo debe actuar Bold si ya existe un parte abierto.
+  </Step>
+</Steps>
+
+## Políticas de generación
 
 | Política | Comportamiento |
 | --- | --- |
@@ -23,7 +39,9 @@ El **mantenimiento preventivo** define reglas para crear partes de trabajo recur
   Un parte abierto es aquel que está pendiente, en progreso o en pausa.
 </Info>
 
-> **_Ejemplo:_** Quieres revisar la Envasadora ENV-01 cada lunes a las 06:00. Crea una causa Revisión semanal, añade acciones como Comprobar presión, Limpiar filtro y Adjuntar foto si hay desgaste, y usa la política Omitir si hay un parte abierto. Si el parte de la semana anterior sigue abierto, Bold no crea otro.
+<Note>
+  **Ejemplo:** quieres revisar la envasadora ENV-01 cada lunes a las 06:00. Crea una causa **Revisión semanal**, añade acciones como **Comprobar presión**, **Limpiar filtro** y **Adjuntar foto si hay desgaste**, y usa la política **Omitir si hay un parte abierto**. Si el parte de la semana anterior sigue abierto, Bold no crea otro.
+</Note>
 
 ## Habilitar, deshabilitar y eliminar
 

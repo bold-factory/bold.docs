@@ -3,21 +3,23 @@ title: "Modo planificado"
 description: "Crea y compara planes de producción antes de aplicar una secuencia de operaciones a la planta."
 ---
 
-**Fabricación \> Secuenciación \> Planes**
+**Ruta:** **Fabricación \> Secuenciación \> Planes**
 
-Para cambios complejos, puedes crear un **Plan de producción**. Esto es un escenario ficticio que realiza una copia exacta de la fábrica en ese instante: importa el stock disponible, las máquinas libres, las restricciones de ruta y las fechas de entrega.
+Para cambios complejos, puedes crear un **plan de producción**. Es un escenario de simulación que toma el estado de la fábrica en ese instante: stock disponible, máquinas libres, restricciones de ruta y fechas de entrega.
 
 Aquí se almacena el historial de simulaciones y puedes **crear nuevos planes** de producción.
 
-**Cómo te ayuda a planificar:** Te permite jugar con el calendario de la fábrica sin riesgo. Puedes lanzar el algoritmo de Bold para que calcule la secuencia óptima considerando restricciones duras (como la falta de personal o retrasos de materia prima). Sabrás si un escenario es viable cuando el sistema marque **"Solución encontrada"**. Nada de lo que organices aquí cambiará las pantallas de los operarios en el taller hasta que revises los retrasos previstos y decidas **Aplicar** el plan de forma definitiva.
+**Cómo te ayuda a planificar:** permite probar cambios en el calendario de la fábrica sin afectar al trabajo real. Puedes lanzar el algoritmo de Bold para que calcule una secuencia considerando restricciones como la falta de personal o los retrasos de materia prima. Sabrás si un escenario es viable cuando el sistema marque **Solución encontrada**. Los cambios no llegarán a las pantallas de los operarios hasta que revises los retrasos previstos y decidas **Aplicar** el plan.
 
 ## Pasos a seguir
 
-1. Crear nuevo plan
+### 1. Crear un plan
 
-**Nombre del plan:** Por defecto, el sistema te sugiere la fecha actual. Lo ideal es cambiarlo por un nombre descriptivo que te permita identificar el objetivo de la simulación cuando revises el historial de planes.
+**Nombre del plan:** por defecto, el sistema te sugiere la fecha actual. Cámbialo por un nombre descriptivo que te permita identificar el objetivo de la simulación cuando revises el historial de planes.
 
-> **Ejemplos:** "Planificación Turno Mañana", "Simulación pedido urgente Cliente X" o "Secuenciación sin restricciones de stock".
+<Note>
+  **Ejemplos:** `Planificación turno mañana`, `Simulación de pedido urgente Cliente X` o `Secuenciación sin restricciones de stock`.
+</Note>
 
 **Restringir según disponibilidad de materias primas:** Este parámetro decide si el inventario actual de tu almacén es una barrera infranqueable o no para la planificación.
 
@@ -32,7 +34,7 @@ Aquí se almacena el historial de simulaciones y puedes **crear nuevos planes** 
 
 **Crear:** Bold generará el entorno de simulación y empieza a calcular la propuesta de orden óptima.
 
-2. Entrar al plan de producción creado, analiza los datos y el gráfico:
+### 2. Analizar el plan
 
 - **Fechas de ejecución:** Muestra la **fecha inicio** (cuándo empezará la primera tarea) y la **fecha fin** (cuándo se terminará físicamente el último componente del plan).
 - **Retraso medio por orden:** Es el indicador crítico de rendimiento. Te dice, de media, cuánto se van a demorar tus entregas respecto a los plazos pactados. Si ves una cifra elevada (como _50d 2h_), el plan te está avisando de que la fábrica está saturada o faltan recursos para cumplir con las fechas comprometidas.
@@ -40,32 +42,38 @@ Aquí se almacena el historial de simulaciones y puedes **crear nuevos planes** 
 
 La pestaña **Diagrama** traduce las órdenes a un calendario visual de ocupación:
 
-- **Eje Vertical (Recursos):** Lista las máquinas, puestos y líneas de la fábrica (ej. _Banco de ensamblaje, Cabina de pintura, Lijadora banda_).
-- **Eje Horizontal (Tiempo):** Divide los días por horas y turnos de trabajo.
+- **Eje vertical (recursos):** lista las máquinas, puestos y líneas de la fábrica (por ejemplo, _Banco de ensamblaje_, _Cabina de pintura_ o _Lijadora de banda_).
+- **Eje horizontal (tiempo):** divide los días por horas y turnos de trabajo.
 - **Bloques de color:** Representan las tareas programadas en cada máquina.
-- **Panel de Leyenda (Derecha):** Se puede seleccionar el coloreado por; orden de fabricación, operación, incumpliendo restricciones, retraso previsto, producto, artículo o proceso. El sistema asignará un color exclusivo a cada pedido en el caso de haber seleccionado orden de fabricación. De este modo, puedes seguir visualmente la ruta de un pedido concreto a través de la fábrica; por ejemplo, si sigues los bloques naranjas, sabrás exactamente en qué momento la orden `000014` pasa por la lijadora, la cabina de pintura y el banco de ensamblaje.
+- **Panel de leyenda (derecha):** permite seleccionar el color por orden de fabricación, operación, incumplimiento de restricciones, retraso previsto, producto, artículo o proceso. Si seleccionas orden de fabricación, el sistema asigna un color a cada pedido. Así puedes seguir visualmente su ruta por la fábrica.
 
-3. Utiliza la barra inferior para gestionar el escenario:
+### 3. Gestionar el escenario
 
-- **LIMPIAR:** Borra la propuesta actual del gráfico para empezar la organización desde cero de forma manual.
-- **ACTUALIZAR:** Vuelve a leer el estado en tiempo real del almacén y el taller para asegurar que estás simulando sobre datos reales del minuto actual.
-- **RESOLVER:** Vuelve a ejecutar el algoritmo inteligente de Bold para que reorganice la cola de trabajo optimizando los tiempos de entrega.
-  - **Minimizar el retraso total (Objetivo Principal):** El sistema prioriza las tareas de los pedidos que están más ajustados de tiempo frente a la fecha de entrega prometida al cliente, buscando reducir las demoras a cero.
-  - **Minimizar el WIP o Trabajo en Curso (Objetivo Secundario):** Evita que la fábrica se sature acumulando material parado. El motor ajusta los tiempos para que, en cuanto termine una operación (por ejemplo, el corte), la pieza pase casi de inmediato a la siguiente (el lijado), manteniendo el flujo de la planta ágil y limpio.
-  > **Nota para el planificador:** Cada vez que ejecutas esta acción, el algoritmo recalcula la distribución desde cero. La nueva propuesta reemplaza cualquier ordenación automática previa.
+- **Limpiar:** borra la propuesta actual del gráfico para empezar la organización desde cero de forma manual.
+- **Actualizar:** vuelve a leer el estado en tiempo real del almacén y el taller para asegurar que estás simulando con datos actuales.
+- **Resolver:** vuelve a ejecutar el algoritmo de Bold para reorganizar la cola de trabajo y optimizar los tiempos de entrega.
+  - **Minimizar el retraso total (objetivo principal):** el sistema prioriza las tareas de los pedidos más ajustados frente a la fecha de entrega prometida al cliente.
+  - **Minimizar el WIP o trabajo en curso (objetivo secundario):** evita que la fábrica se sature acumulando material parado. El motor ajusta los tiempos para que, al terminar una operación, la pieza pase a la siguiente con menos espera.
 
-4. Revisa visualmente el resultado en el diagrama de Gantt.
-5. **Realiza el ajuste fino manualmente**
+<Info>
+  Cada vez que ejecutas **Resolver**, el algoritmo recalcula la distribución desde cero. La nueva propuesta reemplaza cualquier ordenación automática previa.
+</Info>
+
+### 4. Revisar el diagrama de Gantt
+
+Revisa visualmente el resultado en el diagrama.
+
+### 5. Ajustar manualmente
 
 - **Arrastrar y Soltar Bloques:** Si consideras que una operación específica debe retrasarse, adelantarse o ejecutarse en otra máquina compatible, puedes hacer clic sobre su bloque de color en el gráfico de Gantt y moverlo libremente en el tiempo.
 
 - **Modificación Dinámica en Cadena:** No tienes que preocuparte por descuadrar el resto del proceso. Bold mantiene las restricciones lógicas de fabricación. Si mueves una tarea inicial (como el _Corte de sobre_) hacia adelante en el tiempo, el sistema **desplazará automáticamente todas las tareas posteriores que dependan de ella** (como el _Lijado_ y el _Ensamblaje_). Todo el calendario se reajusta de forma elástica en tiempo real.
 
-6. Cuando el calendario encaje a la perfección con tu estrategia:
+### 6. Guardar o aplicar el plan
 
-**GUARDAR:** Almacena los cambios realizados en este escenario para poder cerrar la pantalla y continuar optimizándolo en otro momento, **sin alterar el trabajo del taller**.
+**Guardar:** almacena los cambios realizados en este escenario para poder cerrar la pantalla y continuar ajustándolo en otro momento, **sin alterar el trabajo del taller**.
 
-**APLICAR:** Envía de forma definitiva este calendario a la producción real. Al pulsarlo, las colas de trabajo de los operarios en las pantallas del taller se actualizarán instantáneamente con el nuevo orden establecido.
+**Aplicar:** envía de forma definitiva este calendario a la producción real. Al pulsarlo, las colas de trabajo de los operarios en las pantallas del taller se actualizan con el nuevo orden establecido.
 
 <Warning>
   Si cambian operaciones, recursos o requisitos después de resolver, actualiza o resuelve de nuevo el plan antes de aplicarlo.

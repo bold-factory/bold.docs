@@ -1,41 +1,45 @@
 ---
-title: "Condicionar: operaciones, entradas, pasos o controles"
+title: "Condicionar operaciones, entradas, pasos y controles"
 description: "Activa operaciones, materiales, pasos o controles solo cuando se cumplan condiciones definidas."
 ---
 
-Las **Condiciones** te permiten diseñar una única ruta de fabricación "inteligente" para múltiples variantes de un mismo producto. En lugar de crear rutas distintas para cada modelo, el sistema muestra u oculta elementos en la pantalla del operario basándose en las propiedades del artículo que se está fabricando.
+Las **condiciones** te permiten diseñar una única ruta de fabricación para múltiples variantes de un mismo producto. En lugar de crear rutas distintas para cada modelo, el sistema muestra u oculta elementos en la pantalla del operario basándose en las propiedades del artículo que se está fabricando.
 
 Existen **cuatro casos de uso clave** para aplicar estas condiciones en tu planta:
 
-### **1. Condicionar operaciones (Etapas completas)**
+## Condicionar operaciones
 
 Cuando una fase entera del proceso de producción aplica únicamente a ciertas variantes del artículo.
 
-> **Ejemplo:** La operación de _"_Pintura_"_ solo debe activarse si la propiedad _Acabado_ del producto requiere pintura. Si el cliente pide un cuadro de bicicleta con acabado en aluminio pulido (sin pintura), el sistema se salta esta etapa por completo.
+<Note>
+  **Ejemplo:** la operación de _Pintura_ solo debe activarse si la propiedad _Acabado_ del producto requiere pintura. Si el cliente pide un cuadro de bicicleta con acabado en aluminio pulido, el sistema omite esta etapa.
+</Note>
 
-### **2. Condicionar entradas (Consumo de materiales)**
+## Condicionar entradas
 
 Cuando un material o insumo específico solo se consume en algunas variantes del producto.
 
-> **Ejemplo:** Configuras dos entradas de material distintas en la misma operación: una para _"Pintura Roja"_ y otra para _"Pintura Azul"_. Al condicionar cada entrada a la propiedad _Color_, la Orden de Fabricación (OF) digital solo cargará, mostrará y descontará del inventario el color de pintura exacto que requiere esa bicicleta en particular.
+<Note>
+  **Ejemplo:** configuras dos entradas de material en la misma operación: una para _Pintura roja_ y otra para _Pintura azul_. Al condicionar cada entrada a la propiedad _Color_, la OF solo cargará, mostrará y descontará del inventario el color que requiere esa bicicleta.
+</Note>
 
-### **3. Condicionar pasos**
+## Condicionar pasos
 
 Cuando una instrucción de trabajo dentro de una operación solo debe realizarse para ciertas variantes.
 
-> **Ejemplo:** En la etapa de ensamblaje, decides que solo las bicicletas con la propiedad **acabado premium** requieran un paso adicional de _"Aplicación de cera protectora"_. Para el resto de las órdenes de modelos estándar, este paso ni siquiera aparecerá en la pantalla de ejecución del operario. 
+<Note>
+  **Ejemplo:** en la etapa de ensamblaje, decides que solo las bicicletas con la propiedad **acabado premium** requieran un paso adicional de _Aplicación de cera protectora_. Para los modelos estándar, este paso no aparecerá en la pantalla del operario.
+</Note>
 
-### **4. Condicionar controles** 
+## Condicionar controles
 
 Sirve para que el sistema adapte la inspección al producto exacto que está en la máquina.
 
-> **Ejemplo:** Prueba de presión de bomba de agua (15 bares)
->
-> _Condición:_ Solo se activa si el **Modelo** es igual a "Profesional / Hostelería". 
->
-> Al condicionarlo, solo se le exige al operario realizar este test cuando pasa una máquina destinada a cafeterías.
+<Note>
+  **Ejemplo:** una prueba de presión de bomba de agua a 15 bares solo se activa si el **Modelo** es igual a `Profesional / Hostelería`. Así, el operario solo realiza esta prueba cuando pasa una máquina destinada a cafeterías.
+</Note>
 
-### 1. Añade condición:
+## Añadir una condición
 
 **Origen (Propiedad / Contexto de la OF):** le indica al sistema dónde tiene que ir a buscar la información para validar la regla.
 

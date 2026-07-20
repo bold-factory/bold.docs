@@ -3,25 +3,27 @@ title: "Configurar un artículo"
 description: "Completa las propiedades y reglas operativas de un artículo para comprarlo, fabricarlo o almacenarlo."
 ---
 
-Esto nos sirve para **pasar de tener un simple inventario de papel a tener una fábrica inteligente y automatizada**. Si solo rellenas el nombre, el sistema es una simple agenda; si rellenas todo, se convierte en el director de operaciones de tu planta.
+Esta configuración sirve para **pasar de un inventario básico a una gestión de fábrica más automatizada**. Si solo rellenas el nombre, el sistema funciona como una agenda; si completas los datos, puede coordinar más operaciones de la planta.
 
-### 1. Darle un valor
+## Asignar valores a las propiedades
 
 En la tabla de propiedades tienes que asignarle un valor: numérico, opción, texto, sí/no, etc. para que quede definido y el artículo sea válido.
 
-### 2. Añadir valor de propiedad (opcional)
+## Añadir una propiedad adicional (opcional)
 
 Esto sirve para **adaptar un artículo a sus características únicas o excepciones sin tener que alterar la estructura general** del catálogo ni crear categorías nuevas.
 
-> **Ejemplo:** Imagina que vendes camisetas y la plantilla de esa categoría solo define dos propiedades: _Talla_ y _Color_. Si de pronto recibes una camiseta técnica que además requiere especificar el _Tipo de transpirabilidad_, o una de colección que necesita un _Número de serie_, puedes añadir esa propiedad extra solo a ese artículo concreto. No te ves obligado a crear una categoría entera nueva solo para un producto diferente.
+<Note>
+  **Ejemplo:** imagina que vendes camisetas y la plantilla de esa categoría solo define dos propiedades: _talla_ y _color_. Si recibes una camiseta técnica que además requiere especificar el _tipo de transpirabilidad_, o una de colección que necesita un _número de serie_, puedes añadir esa propiedad extra solo a ese artículo concreto. No necesitas crear una categoría nueva para un solo artículo diferente.
+</Note>
 
-### 3. Planificar
+## Configurar la planificación
 
-En la pestaña de **planificación** podrás ver el stock que tienes a tiempo real.
+En la pestaña **Planificación** podrás ver el stock que tienes en tiempo real.
 
 **Campos a rellenar:**
 
-- **Punto de pedido:** es tu stock de seguridad. **Se debe rellenar** con el número mínimo de tableros por debajo del cual quieres comenzar un ciclo de reaprovisionamiento, ya sea fabricacion o compra.
+- **Punto de pedido:** es tu stock de seguridad. **Se debe rellenar** con el número mínimo de tableros por debajo del cual quieres comenzar un ciclo de reaprovisionamiento, ya sea fabricación o compra.
 - **Pedido mínimo:** es la cantidad mínima que tu proveedor exige para venderte o que tú necesitas para fabricar de forma continua. **Ejemplo:** si el sistema detecta que necesitas comprar 2 tableros, pero el pedido mínimo configurado es `10`, propondrá comprar 10.
-- **Tamaño de lote (Opcional):** se rellena si el material se compra o fabrica en paquetes cerrados (por ejemplo, palets de 6 tableros). Si te hacen falta 7 tableros, el sistema redondeará hacia arriba y te pedirá 12 (2 lotes de 6).
-- **Lead time aprovisionamiento (Opcional):** **muy importante rellenarlo.** Son los días laborables que tarda el proveedor en entregarte el tablero desde que le pasas el pedido. Con este dato, el sistema te avisará de la compra con los días exactos de antelación para que el material llegue antes de que te quedes a cero.
+- **Tamaño de lote (opcional):** se rellena si el material se compra o fabrica en paquetes cerrados (por ejemplo, palets de 6 tableros). Si te hacen falta 7 tableros, el sistema redondeará hacia arriba y te pedirá 12 (2 lotes de 6).
+- **Plazo de aprovisionamiento (opcional):** es importante rellenarlo. Son los días laborables que tarda el proveedor en entregarte el tablero desde que le pasas el pedido. Con este dato, el sistema te avisará de la compra con los días exactos de antelación para que el material llegue antes de que te quedes a cero.

@@ -7,61 +7,67 @@ Ejecuta operaciones en planta cuando una orden ya tiene trabajo preparado. Este 
 
 La ejecución diaria se hace desde **Modo de trabajo**. La gestión de recetas, órdenes, recursos y secuencia se mantiene en el modo de gestión.
 
-En el caso de que alguien se le olvida fichar se puede usar el modo gestión para ejecutar las operaciones.
+Si alguien olvida fichar, puedes usar el modo de gestión para registrar la ejecución de las operaciones.
 
 ## Registrar trabajo
 
-1. Identifica al empleado
-2. Modo fabricación
-3. Elige tu lista de tareas (Pestañas superiores)
+### 1. Identificar al empleado
+
+Selecciona el empleado que va a registrar el trabajo.
+
+### 2. Abrir fabricación
+
+Entra en el modo de fabricación desde **Modo de trabajo**.
+
+### 3. Elegir la lista de tareas
 
 El operario puede cambiar la perspectiva de su cola de trabajo según cómo esté organizada la jornada:
 
-- **Mis operaciones:** Muestra únicamente las tareas que han sido asignadas directamente a su perfil de usuario. Es su lista de tareas personal.
-- **Por estación:** Muestra los trabajos pendientes en la máquina o puesto donde se encuentra físicamente (por ejemplo, todas las tareas destinadas a la _Punzonadora_). Ideal si varios operarios rotan o comparten una misma máquina.
-- **Por área / Por proceso:** Agrupa las tareas por departamentos enteros (ej. _Carpintería, Montaje_) o tipos de tecnología.
+- **Mis operaciones:** muestra únicamente las tareas que han sido asignadas directamente a su perfil de usuario. Es su lista de tareas personal.
+- **Por estación:** muestra los trabajos pendientes en la máquina o puesto donde se encuentra físicamente (por ejemplo, todas las tareas destinadas a la _punzonadora_). Es útil si varios operarios rotan o comparten una misma máquina.
+- **Por área / Por proceso:** agrupa las tareas por departamentos (por ejemplo, _Carpintería_ o _Montaje_) o tipos de tecnología.
 
-4. ¿Cómo saber qué hacer primero?
+### 4. Revisar la prioridad
 
 El operario debe trabajar siempre **de arriba hacia abajo**. Bold ordena las tarjetas verticalmente aplicando de forma automática la estrategia de secuenciación de la oficina técnica:
 
 - La primera tarjeta de la lista (arriba del todo) es siempre la prioridad absoluta (ej. la orden `OF-000060` para la _Perforación de Tablero_). Es la tarea que debe estar en marcha en la máquina en este momento.
 - Las tarjetas inferiores son los siguientes trabajos en cola. Al estar ordenadas de forma consecutiva, el operario puede anticipar qué materiales o herramientas va a necesitar para el siguiente cambio de lote sin necesidad de parar la producción para preguntar al encargado.
 
-5. Componentes de la tarjeta de trabajo
+### 5. Revisar la tarjeta de trabajo
 
 Cada fila contiene toda la información técnica necesaria para ejecutar la tarea sin necesidad de papeles:
 
 - **Identificación rápida:** Código de la orden, nombre exacto de la operación y descripción del artículo.
 - **Control de avance:** Indica el progreso del pedido. Por ejemplo, en la segunda tarjeta (`00023-01`), el operario ve que ya se ha completado `1 de 2 ud`, por lo que sabe que le falta exactamente una unidad para cerrar esa tarea.
-- **Icono del camión (Disponibilidad de material):** Es un semáforo visual crítico para el operario. Si el icono está activo (en verde o azul), le confirma que la materia prima ya está disponible en su puesto o en el almacén y puede empezar a trabajar sin riesgo de quedarse desabastecido.
+- **Icono del camión (disponibilidad de material):** indica si la materia prima está disponible en el puesto o en el almacén para empezar a trabajar.
 
-6. Limpieza visual con filtros rápidos
+### 6. Aplicar filtros rápidos
 
 Para evitar distracciones en el taller, la barra de **Filtros** ayuda a limpiar la pantalla. Los botones **Ocultar bloqueadas** y **Ocultar finalizadas** vienen activados por defecto para que el operario solo vea en su pantalla las tareas que están listas para ser ejecutadas, eliminando de su vista los trabajos antiguos o aquellos que están pausados por incidencias ajenas a su puesto.
 
-7. Controla el tiempo de ejecución
+### 7. Controlar el tiempo de ejecución
 
 El sistema realiza un cronometraje automático del tiempo invertido en la máquina.
 
 - **Pausar el tiempo:** Si el operario debe detener la producción por un descanso, un cambio de herramienta o una incidencia menor, debe pulsar el botón rojo **PARAR**. Esto detiene el contador para no adulterar las métricas de eficiencia de la planta.
 - **Reanudar:** Al volver al puesto, el botón cambiará a _Iniciar_, reactivando el tiempo en directo con un solo clic.
 
-8.  Reporta las unidades fabricadas (Cantidad completada)
+### 8. Registrar las unidades fabricadas
 
 A medida que se van terminando físicamente las piezas del pedido, el operario debe registrar el avance en el sistema:
 
 - Puede usar los botones **\+** y **-** para introducir unidades sueltas.
 - Puede escribir directamente la cifra exacta en la casilla numérica.
-- **Tip de rapidez:** Si ha procesado el lote completo de una sola vez sin incidencias, puede pulsar el botón **TODAS (50)** para rellenar automáticamente el objetivo total planificado.
+- Si ha procesado el lote completo de una sola vez sin incidencias, puede pulsar el botón **Todas (50)** para rellenar automáticamente el objetivo total planificado.
 
-9.  Registra los desperdicios o piezas defectuosas
+### 9. Registrar desperdicios o piezas defectuosas
 
 Si durante el proceso una pieza sale mal, se rompe o no pasa el estándar de calidad, el operario debe pulsar el botón **REGISTRAR DEFECTOS**.
 
-10.  Confirma el trabajo y actualiza el estado
+### 10. Confirmar el trabajo y actualizar el estado
 
 Para enviar los datos introducidos a la oficina técnica, el operario debe elegir entre dos opciones de guardado al final de su turno o al terminar el lote:
 
-- **CONFIRMAR sin finalizar:** Se utiliza si el operario ha terminado su turno o tiene que pausar la tarea, pero **todavía quedan piezas pendientes por fabricar** del lote total. Guarda las unidades hechas hasta el momento y mantiene la tarjeta abierta para continuar más tarde.
-- **CONFIRMAR y finalizar:** Se activa y se pulsa únicamente cuando se ha completado la totalidad del lote objetivo (ej. las 50 unidades requeridas) o cuando la operación se da por terminada definitivamente. Al pulsar este botón, la tarjeta se cierra y desaparece de la pantalla del operario, dando paso automático a la siguiente tarea de la lista.
+- **Confirmar sin finalizar:** se utiliza si el operario ha terminado su turno o tiene que pausar la tarea, pero **todavía quedan piezas pendientes por fabricar** del lote total. Guarda las unidades hechas hasta el momento y mantiene la tarjeta abierta para continuar más tarde.
+- **Confirmar y finalizar:** se utiliza cuando se ha completado la totalidad del lote objetivo (por ejemplo, las 50 unidades requeridas) o cuando la operación se da por terminada definitivamente. Al pulsar este botón, la tarjeta se cierra y desaparece de la pantalla del operario, dando paso a la siguiente tarea de la lista.
