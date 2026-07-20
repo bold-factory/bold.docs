@@ -1,0 +1,98 @@
+es/ayuda/articulos/definir-propiedades.mdx
+  s_52f5d48f0bc74f::t_9a8ee40a885c34 2-3
+  s_52f5d48f0bc74f::t_dcdac22826487c 8
+es/ayuda/articulos/crear-un-producto.mdx
+  s_52f5d48f0bc74f::t_9a8ee40a885c34 2-3
+  s_52f5d48f0bc74f::t_94a9306f5d6229 6
+es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones.mdx
+  s_52f5d48f0bc74f::t_b02efbc7968f85 75
+es/conceptos/fabricacion/peticiones-de-fabricacion.mdx
+  s_52f5d48f0bc74f::t_b02efbc7968f85 58
+es/ayuda/primeros-pasos/configurar-receta-minima.mdx
+  s_52f5d48f0bc74f::t_9a8ee40a885c34 2-3,6-8,22
+es/conceptos/catalogo.mdx
+  s_52f5d48f0bc74f::t_b02efbc7968f85 84
+es/ayuda/produccion/generar-peticiones-manualmente.mdx
+  s_52f5d48f0bc74f::t_9a8ee40a885c34 2-3,6,8-9
+  s_52f5d48f0bc74f::t_66f063276185ff 10
+  s_52f5d48f0bc74f::t_0204322f3817aa 32,34
+es/conceptos/catalogo/productos.mdx
+  s_52f5d48f0bc74f::t_b02efbc7968f85 52
+es/conceptos/fabricacion/recursos.mdx
+  s_52f5d48f0bc74f::t_b02efbc7968f85 62
+es/conceptos/catalogo/propiedades.mdx
+  s_52f5d48f0bc74f::t_b02efbc7968f85 84
+es/ayuda/smart-factory/crear-automatizacion-con-agente.mdx
+  s_52f5d48f0bc74f::t_9a8ee40a885c34 2-3,6
+es/ayuda/primeros-pasos/crear-pedido-y-lanzar-of.mdx
+  s_52f5d48f0bc74f::t_243b05624e8619 92
+es/ayuda/panel-de-control/gestionar-archivos.mdx
+  s_52f5d48f0bc74f::t_b02efbc7968f85 77
+es/ayuda/produccion/ver-estado-de-las-estaciones.mdx
+  s_52f5d48f0bc74f::t_b02efbc7968f85 35
+es/ayuda/produccion/plan-de-produccion.mdx
+  s_52f5d48f0bc74f::t_9a8ee40a885c34 2-3,8,10
+  s_52f5d48f0bc74f::t_c3ad4a95868e26 12
+es/ayuda/smart-factory/consultar-o-delegar-con-ia.mdx
+  s_52f5d48f0bc74f::t_b02efbc7968f85 55
+es/conceptos/fabricacion/herramientas-y-caracteristicas.mdx
+  s_52f5d48f0bc74f::t_b02efbc7968f85 63
+es/ayuda/primeros-pasos/preparar-datos-base.mdx
+  s_52f5d48f0bc74f::t_b02efbc7968f85 62,71,80
+es/conceptos/fabricacion.mdx
+  s_52f5d48f0bc74f::t_b02efbc7968f85 102-103
+es/ayuda/produccion/modo-rapido.mdx
+  s_52f5d48f0bc74f::t_9a8ee40a885c34 2-3,8-18,22,30,32-36,40-43
+  s_52f5d48f0bc74f::t_3a081b905bc51a 44
+  s_52f5d48f0bc74f::t_c52b2f982f4c82 46-48
+es/conceptos/fabricacion/ordenes-de-fabricacion.mdx
+  s_52f5d48f0bc74f::t_b02efbc7968f85 66
+es/ayuda/produccion/para-que-son-necesarias-las-condiciones.mdx
+  s_52f5d48f0bc74f::t_9a8ee40a885c34 2-3
+  s_52f5d48f0bc74f::t_dfe731803624d0 6
+es/ayuda/produccion/crear-recursos.mdx
+  s_52f5d48f0bc74f::t_9a8ee40a885c34 2-3
+  s_52f5d48f0bc74f::t_1ba676158f37d5 6
+AGENTS.md
+  s_52f5d48f0bc74f::t_166d24108934f4 32-35
+docs.json
+  s_eb31eae1e8a4a0::t_572ba7e81487c1 72-73,85
+es/ayuda/articulos/introduccion.mdx
+  s_52f5d48f0bc74f::t_bd1b65dd4f734a 10,15
+es/ayuda/primeros-pasos/flujo-basico-de-trabajo.mdx
+  s_52f5d48f0bc74f::t_49075c2034060f 107
+es/ayuda/primeros-pasos/introduccion.mdx
+  s_52f5d48f0bc74f::t_23f8f710542825 21
+es/ayuda/produccion/definir-procesos.mdx
+  s_52f5d48f0bc74f::t_8a5159055d07bb 41
+es/ayuda/produccion/introduccion.mdx
+  s_52f5d48f0bc74f::t_dca8cc9d7f1d27 11
+es/ayuda/produccion/secuenciar-ordenes.mdx
+  s_52f5d48f0bc74f::t_19272017a52b1e 8,11-12,14-15,33
+es/ayuda/smart-factory/introduccion.mdx
+  s_52f5d48f0bc74f::t_4e11f856afec93 17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "143cb17b536b1efa7646f470cd549effb7313277",
+  "prompts": {},
+  "sessions": {
+    "s_52f5d48f0bc74f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f7ffe-e08c-7ca1-b8a1-7d81a3d4e335",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_eb31eae1e8a4a0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f7fd9-0300-78b1-b800-c6e9fd2be391",
+        "model": "unknown"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
