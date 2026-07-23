@@ -1,6 +1,6 @@
 ---
 title: "Almacén"
-description: "Referencia de stock, órdenes de carga, movimientos operativos, ubicaciones, envíos, inventarios y trazabilidad."
+description: "Referencia de stock, órdenes de carga, movimientos de almacén, ubicaciones, envíos, inventarios y trazabilidad."
 icon: "warehouse"
 ---
 
@@ -15,7 +15,7 @@ El almacén registra dónde está el material, por qué cambió la cantidad y qu
   <Card title="Órdenes de carga" icon="list-checks" href="/es/conceptos/almacen/ordenes-de-carga">
     Planificación, aprovisionamiento, validación y salida de cargas.
   </Card>
-  <Card title="Movimientos operativos" icon="route" href="/es/conceptos/almacen/movimientos-de-almacen">
+  <Card title="Movimientos de almacén" icon="route" href="/es/conceptos/almacen/movimientos-de-almacen">
     Demandas, planes, reservas y ejecución de traslados internos.
   </Card>
   <Card title="Equipos y transportes" icon="forklift" href="/es/conceptos/almacen/equipos-y-transportes">
@@ -55,7 +55,7 @@ Bold controla stock por **artículo**, **ubicación** y **lote** opcional. Esa c
 | Stock entrante | Cantidad esperada por compras, recepciones o fabricación. |
 | Stock saliente | Cantidad comprometida por ventas, envíos o consumos. |
 | Movimiento de stock | Auditoría de cada aumento, disminución o ajuste. |
-| Movimiento operativo | Tarea planificada o libre para recoger y entregar material. |
+| Movimiento de almacén | Tarea planificada o libre para recoger y entregar material. |
 | Orden de carga | Agrupación de envíos que se prepara para un transporte y una fecha. |
 | Lote | Conjunto trazable de unidades de un artículo. Conserva origen, calidad, coste o fabricación. |
 | Ubicación | Lugar físico o lógico donde se almacena material. |
@@ -94,7 +94,7 @@ Para enviar, debe estar pendiente, tener ubicación y contener al menos una lín
 
 Las líneas requieren cantidad positiva. Después del envío, las líneas y la ubicación quedan protegidas.
 
-## Órdenes de carga y movimientos operativos
+## Órdenes de carga y movimientos de almacén
 
 Una orden de carga agrupa líneas pendientes de pedidos de venta. Define transporte, fecha y ubicación de carga. Al solicitar materiales, Bold reserva lo que ya está disponible en esa ubicación y crea movimientos de **Preparación** para trasladar lo que falta.
 
@@ -149,7 +149,7 @@ Si un artículo no requiere trazabilidad por lote, puede operar con stock sin lo
 - [Hacer inventario](/es/ayuda/almacen/hacer-inventario)
 - [Stock y movimientos](/es/conceptos/almacen/stock-y-movimientos)
 - [Órdenes de carga](/es/conceptos/almacen/ordenes-de-carga)
-- [Movimientos operativos de almacén](/es/conceptos/almacen/movimientos-de-almacen)
+- [Movimientos de almacén](/es/conceptos/almacen/movimientos-de-almacen)
 - [Equipos de almacén y transportes](/es/conceptos/almacen/equipos-y-transportes)
 - [Planificar una carga](/es/ayuda/almacen/planificar-una-carga)
 - [Preparar materiales para una carga](/es/ayuda/almacen/preparar-materiales-para-una-carga)
