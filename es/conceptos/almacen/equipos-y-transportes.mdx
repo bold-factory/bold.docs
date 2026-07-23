@@ -1,0 +1,55 @@
+---
+title: "Equipos de almacén y transportes"
+description: "Distingue los recursos que trasladan material dentro del almacén de los transportes asignados a las cargas."
+icon: "forklift"
+---
+
+Bold distingue los **equipos de almacén** que mueven material dentro de la fábrica de los **transportes** que se asignan a órdenes de carga.
+
+## Diferencias
+
+| Concepto | Uso | Ejemplos |
+| --- | --- | --- |
+| Equipo de almacén | Ejecuta movimientos entre ubicaciones internas. | Carretilla, transpaleta, carro o traslado manual. |
+| Transporte | Identifica el recurso logístico asociado a una orden de carga. | Camión propio, ruta, transportista o vehículo. |
+
+Un transporte no ejecuta movimientos internos. Un equipo de almacén no sustituye el transporte indicado en una carga.
+
+## Equipos de almacén
+
+Cada equipo tiene:
+
+| Dato | Uso |
+| --- | --- |
+| Nombre | Identificación que ve el empleado en el modo de trabajo. |
+| Tipo | **Máquina** o **Manual**. |
+| Ubicación relacionada | Ubicación interna donde Bold registra el material mientras el equipo lo transporta. |
+
+Al crear un equipo, Bold crea también su ubicación relacionada. Las recogidas mueven el material hacia esa ubicación. Las entregas lo mueven desde ella al destino.
+
+Un equipo solo puede tener un movimiento en curso. No puedes desactivarlo mientras ejecuta un movimiento o conserva stock en su ubicación relacionada.
+
+<Warning>
+  Antes de desactivar un equipo, completa su movimiento y comprueba que **Carga actual** está vacía.
+</Warning>
+
+## Transportes
+
+Un transporte es un registro con nombre que puedes reutilizar en varias cargas. La orden de carga conserva el transporte asignado para planificación y trazabilidad.
+
+El transporte es obligatorio al crear una orden de carga. Bold no registra capacidad, matrícula ni restricciones de peso en este concepto. Si necesitas distinguir vehículos, rutas o proveedores, usa nombres que el equipo reconozca.
+
+Cuando eliminas un transporte, deja de estar disponible para nuevas selecciones. Las órdenes existentes conservan su referencia histórica.
+
+## Cuándo configurar cada uno
+
+Configura un **equipo de almacén** cuando una persona necesite seleccionar con qué medio va a recoger y entregar material desde el modo de trabajo.
+
+Configura un **transporte** cuando el planificador necesite agrupar envíos y asignarlos a una carga concreta.
+
+## Relacionado
+
+- [Movimientos operativos de almacén](/es/conceptos/almacen/movimientos-de-almacen)
+- [Órdenes de carga](/es/conceptos/almacen/ordenes-de-carga)
+- [Planificar una carga](/es/ayuda/almacen/planificar-una-carga)
+- [Aprovisionar materias primas](/es/ayuda/almacen/aprovisionar-materias-primas)

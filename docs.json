@@ -133,6 +133,10 @@
                 "directory": "card",
                 "pages": [
                   "es/ayuda/almacen/crear-ubicaciones",
+                  "es/ayuda/almacen/planificar-una-carga",
+                  "es/ayuda/almacen/preparar-materiales-para-una-carga",
+                  "es/ayuda/almacen/aprovisionar-materias-primas",
+                  "es/ayuda/almacen/cargar-y-cerrar-una-expedicion",
                   "es/ayuda/almacen/mover-stock",
                   "es/ayuda/almacen/ajustar-stock",
                   "es/ayuda/almacen/hacer-inventario",
@@ -288,6 +292,9 @@
                 "expanded": false,
                 "pages": [
                   "es/conceptos/almacen/stock-y-movimientos",
+                  "es/conceptos/almacen/ordenes-de-carga",
+                  "es/conceptos/almacen/movimientos-de-almacen",
+                  "es/conceptos/almacen/equipos-y-transportes",
                   "es/conceptos/almacen/lotes",
                   "es/conceptos/almacen/ubicaciones",
                   "es/conceptos/almacen/bultos",

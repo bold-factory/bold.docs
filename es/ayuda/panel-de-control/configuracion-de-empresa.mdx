@@ -15,7 +15,8 @@ Usa **Configuración de empresa** para definir ajustes transversales de la organ
 | Zona horaria | Afecta a fechas, horas, programaciones y automatizaciones. |
 | Idioma | Define preferencias de visualización y contexto de empresa. |
 | Cancelación de peticiones | Controla qué ocurre con órdenes asociadas al cancelar una petición de fabricación. |
-| Automatizaciones de producción | Permiten generar o planificar órdenes de producción automáticamente. |
+| Automatizaciones de fabricación | Permiten generar o planificar OF automáticamente. |
+| Aprovisionamiento de cargas | Solicita materiales antes de la fecha planificada de una carga. |
 | Prefijos de código | Se aplican a códigos generados por Bold. |
 
 ## Ajustes críticos
@@ -30,6 +31,7 @@ Usa **Configuración de empresa** para definir ajustes transversales de la organ
 | Prefijos | Que no entren en conflicto con códigos ya usados o integraciones externas. |
 | Generar órdenes automáticamente | Que planificación y recetas estén preparadas para crear órdenes sin revisión manual. |
 | Planificar órdenes automáticamente | Que recursos, turnos y prioridades estén bien definidos. |
+| Aprovisionar cargas automáticamente | Que cada carga tenga ubicación, fecha y líneas antes de entrar en el plazo. |
 | Cancelación de peticiones | Si quieres bloquear siempre, cancelar siempre o cancelar solo órdenes no iniciadas. |
 
 ## Actualizar la configuración
@@ -45,7 +47,7 @@ Usa **Configuración de empresa** para definir ajustes transversales de la organ
     Define plazo de entrega por defecto, zona horaria e idioma.
   </Step>
   <Step title="Revisa automatizaciones">
-    Activa generación o planificación automática solo si el dato base ya es fiable.
+    Activa la generación o planificación automática de OF y el aprovisionamiento automático de cargas solo si los datos base ya son fiables.
   </Step>
   <Step title="Normaliza prefijos">
     Usa prefijos cortos, claros y estables. La pantalla limita cada prefijo a 4 caracteres.
@@ -55,6 +57,20 @@ Usa **Configuración de empresa** para definir ajustes transversales de la organ
   </Step>
 </Steps>
 
+## Aprovisionamiento automático de cargas
+
+En **Órdenes de carga**, activa **Aprovisionar órdenes de carga automáticamente** para solicitar material sin abrir cada carga.
+
+Define la **Antelación del aprovisionamiento (días laborables)**. Bold procesa las órdenes que:
+
+- están **Planificadas**;
+- todavía no han solicitado materiales;
+- tienen una fecha planificada dentro del plazo configurado.
+
+El valor mínimo es `0`. Con `0`, la carga entra cuando su fecha planificada ya ha llegado. Con `1`, entra un día laborable antes.
+
+La solicitud reserva el stock disponible en la ubicación de carga y crea [movimientos de preparación](/es/conceptos/almacen/movimientos-de-almacen) para lo que falta.
+
 ## Prefijos de código
 
 Los prefijos se aplican a entidades como artículos, productos, empleados, pedidos, órdenes de fabricación, grupos de operaciones, bultos, recepciones, envíos, partes de trabajo, activos y lotes.
@@ -63,7 +79,7 @@ Ejemplo:
 
 ```text
 ART -> Artículos
-OF  -> Órdenes de producción
+OF  -> Órdenes de fabricación
 WO  -> Partes de trabajo
 ```
 
@@ -75,9 +91,12 @@ WO  -> Partes de trabajo
 | Las horas de automatización no encajan | Revisa la zona horaria de empresa. |
 | Una cancelación no permite cerrar órdenes asociadas | Revisa la política de cancelación de peticiones. |
 | La IA responde con poco contexto de negocio | Completa la actividad de la empresa. |
+| Una carga no solicita materiales automáticamente | Revisa que esté planificada, que no se haya solicitado antes y que su fecha esté dentro del plazo. |
 
 ## Relacionado
 
 - [Cuenta y empresa](/es/conceptos/panel-de-control/cuenta-y-empresa)
 - [Crear un pedido y lanzar una OF](/es/ayuda/primeros-pasos/crear-pedido-y-lanzar-of)
 - [Smart Factory](/es/conceptos/smart-factory)
+- [Órdenes de carga](/es/conceptos/almacen/ordenes-de-carga)
+- [Preparar materiales para una carga](/es/ayuda/almacen/preparar-materiales-para-una-carga)

@@ -1,0 +1,100 @@
+---
+title: "Cargar y cerrar una expedición"
+description: "Registra el trabajo de carga, valida la mercancía y completa los envíos asociados."
+---
+
+Carga y cierra una expedición cuando la mercancía ya está preparada y el equipo va a introducirla en el transporte.
+
+Este flujo registra quién trabajó, qué cantidades se comprobaron y cuándo salieron los envíos.
+
+## Antes de empezar
+
+Comprueba que la orden:
+
+- está planificada;
+- tiene transporte, fecha, ubicación de carga y líneas;
+- muestra **Stock listo** o has revisado qué material sigue pendiente;
+- tiene definida la validación que requiere el proceso.
+
+## Abrir la carga
+
+**Ruta:** **Modo de trabajo > Almacén > Órdenes de carga**
+
+La lista muestra cargas **Planificadas**, **En carga** o **Pausadas** con fecha planificada. Puedes buscar por nombre, transporte o ubicación, y limitar la fecha con **Planificadas hasta**.
+
+<Steps>
+  <Step title="Identifica al empleado">
+    Selecciona el empleado que va a trabajar en la carga.
+  </Step>
+  <Step title="Abre la orden">
+    Revisa el transporte, la ubicación, la fecha, las líneas y el estado de aprovisionamiento.
+  </Step>
+  <Step title="Empieza el trabajo">
+    Haz clic en **Empezar**. Si otra persona ya trabaja en la carga, usa **Asignarme**. Para continuar una carga pausada, usa **Reanudar**.
+  </Step>
+</Steps>
+
+Cada empleado tiene su propio registro de tiempo. La orden permanece **En carga** mientras quede al menos uno activo. Pasa a **Pausada** cuando todos hacen clic en **Parar**.
+
+## Revisar los envíos
+
+La carga agrupa las líneas por envío. Abre cada envío para ver el destino y los artículos incluidos.
+
+Una orden puede contener varios envíos. Al completar, Bold los expide juntos, pero cada uno conserva su destino, número y líneas.
+
+## Validar artículos y lotes
+
+Si la carga requiere validación, debes estar asignado y la orden debe estar **En carga**.
+
+<Steps>
+  <Step title="Abre un envío">
+    Selecciona el bloque del envío que estás cargando.
+  </Step>
+  <Step title="Indica la cantidad">
+    Usa **1**, los botones **+** y **-**, escribe la cantidad o selecciona **Todo**.
+  </Step>
+  <Step title="Desglosa por lotes">
+    Si el artículo gestiona lotes, haz clic en **Desglosar lotes** y reparte la cantidad. El desglose debe sumar la cantidad que vas a validar.
+  </Step>
+  <Step title="Valida la línea">
+    Haz clic en **Validar**. Repite hasta que la línea muestre **Línea validada**.
+  </Step>
+</Steps>
+
+Bold no permite superar la cantidad pendiente. Cuando varias líneas del mismo envío usan el mismo artículo, distribuye la validación siguiendo su orden.
+
+## Completar la carga
+
+Puedes completar desde **En carga** o **Pausada**.
+
+<Steps>
+  <Step title="Revisa todas las líneas">
+    Comprueba cantidades y lotes antes de cerrar.
+  </Step>
+  <Step title="Haz clic en Completar">
+    Si la validación está completa o no era obligatoria, Bold completa la orden y sus envíos.
+  </Step>
+  <Step title="Resuelve cantidades sin validar">
+    Si la validación era obligatoria, cancela para seguir validando o elige **Completar y excluir pendientes**.
+  </Step>
+</Steps>
+
+Al excluir pendientes, Bold reduce o retira esas cantidades tanto de la orden como de los envíos. No puedes completar si la exclusión deja la carga sin líneas.
+
+<Warning>
+  **Completar** registra la salida física del stock desde la ubicación de carga. No lo uses mientras la mercancía siga en el almacén.
+</Warning>
+
+## Corregir una finalización
+
+En el modo de gestión, abre **Almacén > Cargas y envíos > Órdenes de carga** y entra en la orden completada.
+
+Haz clic en **Deshacer finalización** para revertir los envíos y devolver la orden a **Pausada**. La acción solo está disponible si los envíos todavía se pueden revertir y conservan las mismas líneas que la carga.
+
+Si la carga no debía ejecutarse, usa **Cancelar** mientras esté **En carga** o **Pausada**. Si todavía no ha empezado, elimina la orden pendiente de planificar o planificada.
+
+## Relacionado
+
+- [Órdenes de carga](/es/conceptos/almacen/ordenes-de-carga)
+- [Preparar materiales para una carga](/es/ayuda/almacen/preparar-materiales-para-una-carga)
+- [Envíos](/es/conceptos/almacen/envios)

@@ -1,0 +1,96 @@
+---
+title: "Preparar materiales para una carga"
+description: "Consulta qué necesita una carga, solicita el material y sigue lo que está listo o en camino."
+---
+
+Prepara los materiales de una carga para reunir la mercancía en su ubicación antes de la expedición.
+
+Bold separa la cantidad total **A cargar**, la cantidad **Lista** en la ubicación y la cantidad **En camino** mediante movimientos de almacén.
+
+## Consultar lo que necesita la carga
+
+**Ruta:** **Almacén > Cargas y envíos > Órdenes de carga**
+
+<Steps>
+  <Step title="Abre la orden de carga">
+    Busca por nombre, transporte, fecha o ubicación y abre la carga.
+  </Step>
+  <Step title="Revisa la cabecera">
+    Comprueba el transporte, la fecha y hora y la ubicación de carga.
+  </Step>
+  <Step title="Abre Líneas">
+    Revisa el artículo, la cantidad **A cargar**, el envío y la línea de pedido de origen.
+  </Step>
+  <Step title="Compara disponibilidad">
+    Usa **Lista** para saber qué cantidad ya está preparada. Usa **En camino** para saber qué cantidad tiene un movimiento planificado o en curso.
+  </Step>
+</Steps>
+
+El indicador **Aprov.** resume la situación de cada línea. El indicador junto al nombre de la carga muestra el estado menos avanzado de toda la orden.
+
+## Interpretar el aprovisionamiento
+
+| Estado | Qué indica | Acción |
+| --- | --- | --- |
+| **Aprovisionamiento no solicitado** | Bold todavía no ha reservado ni planificado el material. | Haz clic en **Solicitar materiales**. |
+| **Aprovisionamiento pendiente** | Falta stock libre para preparar un plan. | Revisa la incidencia del movimiento y el stock. |
+| **Aprovisionamiento en curso** | Parte está lista o en camino. | Ejecuta los movimientos disponibles y revisa la cantidad restante. |
+| **Aprovisionamiento planificado** | Toda la necesidad está lista o cubierta por movimientos. | Ejecuta los movimientos pendientes. |
+| **Stock listo** | Todo está disponible en la ubicación de carga. | Continúa con la carga y validación. |
+| **No requiere aprovisionamiento** | No queda material que preparar. | No necesitas solicitar movimientos. |
+
+## Solicitar los materiales
+
+La orden debe estar planificada, en carga o pausada, tener líneas y disponer de ubicación de carga.
+
+Haz clic en **Solicitar materiales**. Bold:
+
+1. reserva el stock libre que ya está en la ubicación de carga;
+2. calcula lo que falta por artículo;
+3. crea movimientos de **Preparación** para la cantidad no cubierta;
+4. vuelve a calcular las columnas **Lista** y **En camino**.
+
+Si todo el stock ya está en la ubicación, el estado puede pasar directamente a **Stock listo** sin crear un movimiento.
+
+## Solicitar automáticamente
+
+**Ruta:** **Panel de control > Configuración > Órdenes de carga**
+
+Activa **Aprovisionar órdenes de carga automáticamente** y define la **Antelación del aprovisionamiento (días laborables)**.
+
+Bold solicita materiales para órdenes planificadas que todavía no los han solicitado y cuya fecha entra en ese plazo. Puedes seguir usando **Solicitar materiales** para adelantar una carga concreta.
+
+## Ejecutar los movimientos de preparación
+
+Los empleados ejecutan los movimientos desde **Modo de trabajo > Almacén > Movimientos**.
+
+El flujo es el mismo que para el aprovisionamiento de fabricación:
+
+1. selecciona un equipo de almacén;
+2. abre una tarea de **Preparación**;
+3. inicia el movimiento con el empleado identificado;
+4. sigue las ubicaciones de recogida;
+5. confirma artículos, lotes, cantidades o bultos;
+6. entrega todo en la ubicación de carga;
+7. completa el movimiento cuando **Carga actual** esté vacía.
+
+Consulta [Aprovisionar materias primas](/es/ayuda/almacen/aprovisionar-materias-primas) para ver el flujo operativo completo.
+
+## Resolver material pendiente
+
+**Ruta:** **Almacén > Movimientos**
+
+Abre el movimiento pendiente y revisa **Incidencia de planificación**.
+
+| Incidencia | Qué revisar |
+| --- | --- |
+| Stock insuficiente | Cantidad física, lote, ubicación y recepciones pendientes. |
+| Bulto no disponible | Ubicación, reservas y contenido del bulto. |
+| Contenido del bulto distinto | Artículos, lotes y cantidades registrados en el bulto. |
+| Conflicto de reserva | Otras cargas, operaciones o movimientos que usan el mismo stock. |
+
+Bold vuelve a intentar planificar cuando aumenta el stock o se libera una reserva. Si solo puede cubrir una parte, prepara un movimiento para esa parte y mantiene el resto pendiente.
+
+## Siguiente paso
+
+Cuando el estado sea **Stock listo**, continúa con [Cargar y cerrar una expedición](/es/ayuda/almacen/cargar-y-cerrar-una-expedicion).

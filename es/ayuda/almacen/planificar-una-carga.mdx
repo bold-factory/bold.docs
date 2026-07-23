@@ -1,0 +1,117 @@
+---
+title: "Planificar una carga"
+description: "Agrupa pedidos o líneas de venta, asigna un transporte y programa la carga en el calendario."
+---
+
+Planifica una carga para decidir qué mercancía viajará junta, en qué transporte, cuándo se cargará y desde qué ubicación.
+
+Consulta [Órdenes de carga](/es/conceptos/almacen/ordenes-de-carga) si necesitas entender la relación entre carga, líneas de pedido y envíos.
+
+## Antes de empezar
+
+Comprueba que:
+
+- existen pedidos de venta pendientes o parcialmente entregados;
+- las líneas tienen cantidad disponible para cargar;
+- existe al menos un transporte en **Almacén > Cargas y envíos > Transportes**;
+- existe la ubicación desde la que vas a cargar.
+
+<Info>
+  Un transporte es un nombre reutilizable para identificar el vehículo, la ruta o el servicio logístico. Bold no solicita capacidad ni matrícula.
+</Info>
+
+## Crear o revisar un transporte
+
+**Ruta:** **Almacén > Cargas y envíos > Transportes**
+
+<Steps>
+  <Step title="Añade el transporte">
+    Haz clic en **Añadir nuevo** e introduce un nombre reconocible.
+  </Step>
+  <Step title="Usa una convención estable">
+    Distingue los vehículos o servicios con nombres como `Camión 1`, `Ruta norte` o `Transportista Atlas`.
+  </Step>
+</Steps>
+
+También puedes crear el transporte desde el selector al preparar una orden de carga.
+
+## Seleccionar la mercancía
+
+**Ruta:** **Almacén > Cargas y envíos > Planificador de cargas**
+
+Usa **Vista de tabla** para crear una carga. Elige una de estas alternativas:
+
+<Tabs>
+  <Tab title="Pedidos completos">
+    Selecciona uno o varios pedidos. Al crear la carga, Bold incorpora todas sus líneas que todavía tengan cantidad disponible.
+  </Tab>
+  <Tab title="Líneas">
+    Selecciona artículos concretos cuando quieras dividir un pedido entre varias cargas.
+  </Tab>
+</Tabs>
+
+La selección se conserva al cambiar de página. Antes de abrir el formulario, Bold vuelve a comprobar la disponibilidad. Excluye las líneas que ya no tengan cantidad disponible.
+
+## Crear la orden de carga
+
+<Steps>
+  <Step title="Inicia la creación">
+    Haz clic en **Crear orden de carga**.
+  </Step>
+  <Step title="Selecciona el transporte">
+    El transporte es obligatorio.
+  </Step>
+  <Step title="Define el nombre">
+    Escribe un nombre o deja el campo vacío para que Bold lo genere.
+  </Step>
+  <Step title="Planifica fecha y hora">
+    Indica cuándo debe prepararse o cargarse la mercancía. Puedes dejarlo pendiente y programarlo después.
+  </Step>
+  <Step title="Selecciona la ubicación de carga">
+    Elige la ubicación de almacén donde debe quedar preparado el material.
+  </Step>
+  <Step title="Decide si requiere validación">
+    Activa **Requiere validación antes de completar** si el equipo debe comprobar artículos, cantidades o lotes durante la carga.
+  </Step>
+  <Step title="Crea la carga">
+    Revisa las líneas y confirma. Bold abre la nueva orden de carga.
+  </Step>
+</Steps>
+
+La orden queda **Planificada** cuando tiene fecha, ubicación de carga y al menos una línea. Si falta alguno, queda **Pendiente de planificar**.
+
+## Añadir mercancía a una carga existente
+
+En lugar de crear otra orden, selecciona pedidos o líneas y haz clic en **Añadir a una existente**.
+
+Solo puedes elegir órdenes pendientes de planificar o planificadas que todavía no hayan empezado. Después de añadir, revisa los envíos y el aprovisionamiento de la carga.
+
+## Programar en el calendario
+
+En **Planificador de cargas**, cambia a **Vista de calendario**.
+
+<Steps>
+  <Step title="Elige la escala">
+    Usa **Semanas** para la planificación próxima o **Meses** para revisar un horizonte más amplio.
+  </Step>
+  <Step title="Localiza las cargas sin fecha">
+    La columna **Sin planificar** muestra las órdenes que todavía no tienen fecha.
+  </Step>
+  <Step title="Arrastra cada carga">
+    Suelta la carga en el día previsto. Si ya tenía hora, Bold la conserva. Una carga sin hora se coloca a las `08:00`.
+  </Step>
+  <Step title="Ajusta la hora">
+    Haz doble clic en la carga, revisa **Fecha y hora planificada** y guarda.
+  </Step>
+  <Step title="Retira una fecha si hace falta">
+    Arrastra la carga de vuelta a **Sin planificar**.
+  </Step>
+</Steps>
+
+<Warning>
+  Revisa el transporte, la fecha, la ubicación y la validación antes de que empiece el trabajo. Esos datos quedan protegidos cuando la carga entra en ejecución.
+</Warning>
+
+## Siguiente paso
+
+Consulta [Preparar materiales para una carga](/es/ayuda/almacen/preparar-materiales-para-una-carga) para reservar el stock y trasladar lo que falta.

@@ -1,0 +1,105 @@
+---
+title: "Aprovisionar materias primas"
+description: "Solicita las entradas de una operación y trasládalas hasta la ubicación de consumo de la estación."
+---
+
+Aprovisiona materias primas para trasladar las entradas pendientes de una operación hasta la ubicación donde se consumirán.
+
+La operación origina la necesidad. Almacén ejecuta el movimiento físico. Consulta [Movimientos operativos de almacén](/es/conceptos/almacen/movimientos-de-almacen) para entender la planificación y las reservas.
+
+## Antes de empezar
+
+Comprueba que:
+
+- la operación tiene entradas con cantidad pendiente;
+- la operación no está finalizada ni cancelada;
+- tiene una estación asignada;
+- la estación tiene una **Ubicación de consumo**;
+- existe al menos un equipo de almacén.
+
+Para definir la ubicación, abre **Fabricación > Recursos > Estaciones**, entra en la estación y selecciona **Ubicación de consumo**.
+
+<Warning>
+  Sin ubicación de consumo, Bold conoce los materiales pendientes pero no puede liberar la demanda ni crear el movimiento hacia la estación.
+</Warning>
+
+## Solicitar los materiales de la operación
+
+**Ruta:** **Fabricación > Órdenes de fabricación > OF > Operación**
+
+<Steps>
+  <Step title="Revisa las entradas">
+    Comprueba artículos y cantidades pendientes en la operación.
+  </Step>
+  <Step title="Revisa el estado de aprovisionamiento">
+    El indicador muestra si los materiales no se han solicitado, están pendientes, en camino o listos en la estación.
+  </Step>
+  <Step title="Solicita los materiales">
+    Haz clic en **Solicitar materiales**.
+  </Step>
+</Steps>
+
+Bold reserva primero el stock que ya existe en la ubicación de consumo. Después crea movimientos de **Aprovisionamiento** solo para la cantidad que falta.
+
+## Ejecutar el traslado
+
+**Ruta:** **Modo de trabajo > Almacén > Movimientos**
+
+<Steps>
+  <Step title="Identifica al empleado">
+    Selecciona el empleado que realizará el traslado.
+  </Step>
+  <Step title="Selecciona un equipo">
+    Elige la carretilla, transpaleta, carro o equipo manual que transportará el material.
+  </Step>
+  <Step title="Filtra la carga planificada">
+    Selecciona **Carga planificada** y abre una tarea de tipo **Aprovisionamiento**. Las tareas se ordenan por fecha límite.
+  </Step>
+  <Step title="Inicia el movimiento">
+    Haz clic en **Iniciar**. La tarea queda asignada al equipo y al empleado.
+  </Step>
+  <Step title="Ve al primer origen">
+    Sigue la ubicación indicada. Puedes leer su QR o hacer clic en **Ya estoy aquí**.
+  </Step>
+  <Step title="Confirma la recogida">
+    Comprueba artículo, lote, cantidad o bulto. Haz clic en **Recogido** para cada acción.
+  </Step>
+  <Step title="Continúa por las paradas">
+    Haz clic en **Continuar** al terminar una ubicación. Repite las recogidas que indique el plan.
+  </Step>
+  <Step title="Entrega en la estación">
+    Ve a la ubicación de consumo y confirma **Dejado** para cada material o bulto.
+  </Step>
+  <Step title="Completa la tarea">
+    Comprueba que **Carga actual** está vacía. Haz clic en **Completar movimiento**.
+  </Step>
+</Steps>
+
+Durante la recogida, el stock pasa a la ubicación interna del equipo. Durante la entrega, pasa a la ubicación de consumo de la estación.
+
+## Comprobar que la operación está lista
+
+Vuelve a la operación o consulta su tarjeta en el modo de trabajo.
+
+| Estado | Significado |
+| --- | --- |
+| **Materiales no solicitados** | Todavía no se ha iniciado el aprovisionamiento. |
+| **Aprovisionamiento pendiente** | Falta stock libre o un plan ejecutable. |
+| **Aprovisionamiento en curso** | Hay parte del material lista o en camino. |
+| **Aprovisionamiento planificado** | Todo está cubierto por stock en destino o movimientos. |
+| **Stock aprovisionado en la ubicación** | Todas las entradas pendientes están disponibles en la ubicación de consumo. |
+| **No requiere aprovisionamiento** | La operación no tiene entradas pendientes. |
+
+## Si el movimiento no está disponible
+
+Abre **Almacén > Movimientos** en el modo de gestión y busca tareas **Pendientes**.
+
+Revisa **Incidencia de planificación** para saber si falta stock, el bulto no está disponible, su contenido no coincide o existe un conflicto de reserva.
+
+Bold vuelve a intentar la planificación cuando entra stock o se libera una reserva. Si cambia la cantidad pendiente de la operación antes de empezar, recalcula los movimientos todavía no ejecutados.
+
+## Movimiento libre
+
+Si necesitas guardar material sin una solicitud de fabricación o carga, usa **Nuevo movimiento** desde **Modo de trabajo > Almacén > Movimientos**.
+
+En ese flujo eliges el origen, recoges stock suelto o bultos y seleccionas el destino durante la ejecución. Úsalo para almacenamiento o traslados internos. No sustituye la solicitud de materiales de una operación, porque no queda vinculado a su demanda.
