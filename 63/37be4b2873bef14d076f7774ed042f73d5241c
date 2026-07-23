@@ -1,0 +1,37 @@
+es/conceptos/almacen/movimientos-de-almacen.mdx
+  s_6b76d8d6d66f56::t_8a5189b319d81f 2-3
+  s_6b76d8d6d66f56::t_d9e3391fc62d57 8,10
+es/conceptos/almacen.mdx
+  s_6b76d8d6d66f56::t_8a5189b319d81f 3
+  s_6b76d8d6d66f56::t_4eda28de723c96 18,58,97,152
+es/ayuda/almacen/aprovisionar-materias-primas.mdx
+  s_6b76d8d6d66f56::t_1b0395a6c22a11 8
+es/ayuda/almacen/introduccion.mdx
+  s_6b76d8d6d66f56::t_101630216fe48e 50,69
+es/ayuda/almacen/mover-stock.mdx
+  s_6b76d8d6d66f56::t_3e9569ae26df02 9,64
+es/conceptos/almacen/equipos-y-transportes.mdx
+  s_6b76d8d6d66f56::t_81684d8619cb7c 52
+es/conceptos/almacen/ordenes-de-carga.mdx
+  s_6b76d8d6d66f56::t_d89bb8a2ca90a7 138
+es/conceptos/almacen/stock-y-movimientos.mdx
+  s_6b76d8d6d66f56::t_3fcec7a454a43f 12,87
+es/conceptos/introduccion.mdx
+  s_6b76d8d6d66f56::t_7e9a6c41bc9865 24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "6337be4b2873bef14d076f7774ed042f73d5241c",
+  "prompts": {},
+  "sessions": {
+    "s_6b76d8d6d66f56": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f8cb3-34dc-7d80-aaf7-32b51f4974bf",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
