@@ -1,0 +1,67 @@
+es/conceptos/almacen/equipos-y-transportes.mdx
+  s_6b76d8d6d66f56::t_da9d6295e10dd0 1-55
+es/ayuda/panel-de-control/configuracion-de-empresa.mdx
+  s_6b76d8d6d66f56::t_8cb8d143719b55 18-19
+  s_52f5d48f0bc74f::t_06e83be12586de 34,50,60-73,82,94,101-102
+es/ayuda/almacen/cargar-y-cerrar-una-expedicion.mdx
+  s_6b76d8d6d66f56::t_4a8a353949bcdf 1-100
+es/conceptos/almacen/ordenes-de-carga.mdx
+  s_6b76d8d6d66f56::t_da9d6295e10dd0 1-139
+es/ayuda/almacen/mover-stock.mdx
+  s_6b76d8d6d66f56::t_8cb8d143719b55 11
+  s_52f5d48f0bc74f::t_749337f27be318 8-10,64-65
+es/conceptos/almacen.mdx
+  s_6b76d8d6d66f56::t_4ccb1dd53df095 3,15-23,58-59,97-104,151-157
+es/ayuda/almacen/aprovisionar-materias-primas.mdx
+  s_6b76d8d6d66f56::t_4a8a353949bcdf 1-105
+es/ayuda/almacen/introduccion.mdx
+  s_6b76d8d6d66f56::t_4ccb1dd53df095 14-25,68,71
+  s_52f5d48f0bc74f::t_ccbd8e39e4b569 50-51,66-67,69-70
+es/ayuda/almacen/planificar-una-carga.mdx
+  s_6b76d8d6d66f56::t_8cb8d143719b55 29
+  s_6b76d8d6d66f56::t_4a8a353949bcdf 1-28,30-117
+es/ayuda/almacen/preparar-materiales-para-una-carga.mdx
+  s_6b76d8d6d66f56::t_4a8a353949bcdf 1-96
+es/conceptos/almacen/stock-y-movimientos.mdx
+  s_6b76d8d6d66f56::t_4ccb1dd53df095 11-14,87
+es/conceptos/almacen/movimientos-de-almacen.mdx
+  s_6b76d8d6d66f56::t_da9d6295e10dd0 1-111
+es/conceptos/introduccion.mdx
+  s_6b76d8d6d66f56::t_4ccb1dd53df095 24
+docs.json
+  s_eec9b44521d2c7::t_4a6839b9fbd33f 136-139,295-297
+es/ayuda/produccion/crear-recursos.mdx
+  s_52f5d48f0bc74f::t_616d484e0188aa 66-73
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "2279f86c94c89412271d52fdd9fa43942e8ddeed",
+  "prompts": {},
+  "sessions": {
+    "s_52f5d48f0bc74f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f7ffe-e08c-7ca1-b8a1-7d81a3d4e335",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_6b76d8d6d66f56": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f8cb3-34dc-7d80-aaf7-32b51f4974bf",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_eec9b44521d2c7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f802a-5c7c-7282-a777-cb24f7a09672",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
