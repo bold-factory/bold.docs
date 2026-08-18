@@ -5,6 +5,79 @@ rss: true
 ---
 
 <Update
+  label="2026-08-17"
+  tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
+>
+  ## Tareas y automatizaciones
+
+  - Smart Factory separa **Tareas** y **Automatizaciones**. Puedes iniciar una tarea puntual, elegir visibilidad y nivel de inteligencia, y consultar el historial de trabajo con Boldy.
+  - Las automatizaciones se pueden lanzar a demanda con **Ejecutar ahora** y un mensaje adicional opcional. También puedes configurar **Preguntas de aclaración** y **Memoria**.
+  - **Cuadros de mando** se mueve a Smart Factory, junto a informes y agentes.
+
+  ## Aplicabilidad de recetas
+
+  - Las recetas se vinculan a familias o a artículos concretos, con condiciones de aplicabilidad y prioridad.
+  - El artículo muestra si cada receta está **Lista**, **Falta información** o **Inactiva**, y qué propiedades faltan para usarla.
+
+  ## Nuevas funcionalidades
+
+  - En el modo de trabajo, los controles de recepción se agrupan por línea como **Controles pendientes para esta línea**.
+  - Los envíos muestran la **Orden de carga** asociada.
+
+  ## Mejoras
+
+  - Las conversaciones de tareas muestran mejor el estado de las herramientas y explican cuándo el contexto es demasiado largo para continuar.
+
+  ## Correcciones
+
+  - Los controles del modo de trabajo respetan el orden de completar y el bloqueo al recibir.
+  - Al eliminar un proveedor se limpian sus vínculos de artículo y las previsiones de compra asociadas.
+</Update>
+
+<Update
+  label="2026-08-10"
+  tags={["Nuevas funcionalidades", "Mejoras"]}
+>
+  ## Familias
+
+  - El catálogo denomina **Familias** a lo que antes aparecía como productos. Una familia agrupa artículos, propiedades y recetas bajo el mismo concepto.
+
+  ## Mejoras
+
+  - Los artículos indican si falta información de propiedades, con **Falta información** o **Todo en orden**.
+</Update>
+
+<Update
+  label="2026-07-27"
+  tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
+>
+  ## Nuevas funcionalidades
+
+  - Al entrar en modo de trabajo puedes buscar un empleado si no aparece en la lista. Al reanudar, eliges **Reanudamos todos** o **Solo yo**.
+  - **Cambiar estación de trabajo** permite aplicar el cambio solo a esta operación, a las inmediatamente posteriores o a todas las pendientes de la orden.
+  - Puedes **Cancelar movimiento** cuando aún no transporta stock, indicando el motivo.
+  - Las recetas permiten **Copiar operación en otra receta**, con entradas, pasos y condiciones.
+  - Desde una orden de fabricación puedes **Resolver con el asistente de compras**, consultar **Órdenes relacionadas** y ajustar la **Fecha objetivo**.
+  - **Importar datos** acepta CSV o Excel y añade empleados, ubicaciones, áreas, estaciones, tipos de operación, activos de mantenimiento, propiedades y proveedores de artículo.
+  - **Exportar datos** incorpora costes de artículos, órdenes de fabricación y operaciones.
+  - Al preparar una orden de carga puedes indicar una **Cantidad a cargar** parcial y filtrar las líneas pendientes.
+  - Los partes de trabajo admiten **Deshacer finalización**. Los grupos de operaciones pueden incluir operaciones pausadas.
+
+  ## Mejoras
+
+  - La secuenciación unifica las vistas de **Órdenes**, **Operaciones** y **Planes**, con filtros por área, estación y herramienta, y la opción **Ocultar planificadas**.
+  - La asignación de recursos añade filtros por código de orden, operación, solicitante, proceso, área y estación.
+  - Al definir un valor de propiedad en un artículo, solo aparecen las propiedades que le corresponden.
+  - La ayuda **¿Qué es esto?** enlaza con la documentación mediante **Más información**.
+
+  ## Correcciones
+
+  - Al pausar en modo de trabajo, las asignaciones no se cierran. Puedes cambiar de estación aunque la operación esté en curso.
+  - El asistente de compras de una orden de fabricación descarta propuestas anteriores cuando cambia la necesidad.
+  - Si no se pueden cargar todas las órdenes relacionadas, la tabla lo indica en lugar de ocultar el resto.
+</Update>
+
+<Update
   label="2026-07-20"
   tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
 >
