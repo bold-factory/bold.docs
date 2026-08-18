@@ -1,0 +1,19 @@
+es/novedades/changelog.mdx
+  s_eec9b44521d2c7::t_5bb615cdb45e9e 7-79
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "72cf8a13586388c0362afdac9e17ec790be1a2a4",
+  "prompts": {},
+  "sessions": {
+    "s_eec9b44521d2c7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f802a-5c7c-7282-a777-cb24f7a09672",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
