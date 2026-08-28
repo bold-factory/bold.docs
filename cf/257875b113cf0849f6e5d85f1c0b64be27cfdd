@@ -1,0 +1,23 @@
+docs.json
+  s_72cb57fdbc11b8::t_754cdeb8d7ecb5 382-383
+es/desarrolladores/empezar/expandir-datos-relacionados.mdx
+  s_72cb57fdbc11b8::t_7c7cb68cdb77c8 92
+  s_72cb57fdbc11b8::t_754cdeb8d7ecb5 1-11,13-14,17-91,93-104,106-109
+  s_72cb57fdbc11b8::t_50b444014f6516 12,15-16,105
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "cf257875b113cf0849f6e5d85f1c0b64be27cfdd",
+  "prompts": {},
+  "sessions": {
+    "s_72cb57fdbc11b8": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a045e0-0473-75b1-957c-039318f5d7a4",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
