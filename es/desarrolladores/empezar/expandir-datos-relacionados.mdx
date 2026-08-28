@@ -1,0 +1,109 @@
+---
+title: "Expandir datos relacionados en listados"
+sidebarTitle: "Expandir datos relacionados"
+description: "Usa Expand para incluir objetos y colecciones relacionados en los resultados de la API de Bold."
+---
+
+Las rutas de listado devuelven respuestas compactas por defecto. Cuando un resultado tiene datos relacionados, la respuesta conserva sus identificadores y deja el objeto o la colección relacionada a `null`.
+
+Usa el parámetro `Expand` para incluir esos datos en la misma petición. La expansión se aplica a cada elemento de `results`.
+
+<Info>
+  Cada endpoint define sus expansiones mediante un enum propio. En OpenAPI, `Expand` aparece como un array cuyos elementos pertenecen a ese enum. Por eso la documentación de cada endpoint muestra directamente todos los valores admitidos.
+</Info>
+
+Consulta el parámetro `Expand` en la [Referencia de API](/es/desarrolladores/referencia-api/introduccion). No todos los endpoints admiten expansiones ni comparten los mismos valores.
+
+## Expandir una relación
+
+Por ejemplo, el listado de pedidos de venta devuelve `customerId`, pero no carga el objeto `customer` si no lo solicitas.
+
+```http
+GET /v1/planning/salesOrders?pageSize=25
+```
+
+El fragmento relevante de cada resultado es:
+
+```json
+{
+  "id": "<sales-order-id>",
+  "customerId": "<customer-id>",
+  "customer": null,
+  "code": "PV-2026-0042",
+  "name": "Pedido semanal"
+}
+```
+
+Añade `Expand=Customer` para incluir el cliente en cada pedido de la página:
+
+```bash
+curl --get "https://api.bold-factory.com/v1/planning/salesOrders" \
+  -H "X-Api-Key: $BOLD_API_KEY" \
+  -H "Accept: application/json" \
+  --data-urlencode "Expand=Customer" \
+  --data-urlencode "pageSize=25"
+```
+
+La respuesta mantiene `customerId` y rellena `customer`:
+
+```json
+{
+  "id": "<sales-order-id>",
+  "customerId": "<customer-id>",
+  "customer": {
+    "id": "<customer-id>",
+    "externalReference": "CLI-0042",
+    "name": "Industrias Norte"
+  },
+  "code": "PV-2026-0042",
+  "name": "Pedido semanal"
+}
+```
+
+Si un elemento no tiene la relación solicitada, la propiedad relacionada permanece a `null`.
+
+## Expandir varias relaciones
+
+Repite `Expand` para solicitar más de una relación. Este ejemplo incluye la causa, el activo y el empleado principal de cada parte de trabajo:
+
+```http
+GET /v1/maintenance/workOrders?Expand=Cause&Expand=Asset&Expand=MainEmployee
+```
+
+No separes los valores con comas. Envía una instancia del parámetro por cada valor.
+
+## Expandir un nivel relacionado
+
+Usa la notación con punto para llegar a una relación dentro de otra relación. Por ejemplo, puedes incluir las líneas de la orden de carga vinculada a cada envío:
+
+```http
+GET /v1/warehouse/shipments?Expand=LoadOrder.Lines&pageSize=10
+```
+
+Al solicitar `LoadOrder.Lines`, Bold también incluye `LoadOrder`. No necesitas enviar ambos valores.
+
+La profundidad máxima es de dos niveles: `Parent` o `Parent.Child`. La referencia de cada ruta enumera las combinaciones admitidas.
+
+## Combinar expansiones con una consulta
+
+Puedes usar `Expand` junto con paginación, filtros, búsqueda y ordenación cuando la ruta admita esos parámetros.
+
+```http
+GET /v1/planning/salesOrders?filterBy=Status[Equals]Pending&sortBy=-OrderedAt&Expand=Customer&pageNumber=1&pageSize=50
+```
+
+La expansión cambia los datos relacionados incluidos. No cambia qué elementos cumplen el filtro ni la estructura de paginación.
+
+## Gestionar valores no admitidos
+
+La API responde con `400 Bad Request` si envías un valor que no está definido para la ruta.
+
+```http
+GET /v1/planning/salesOrders?Expand=Supplier
+```
+
+Revisa el enum del parámetro `Expand` en la documentación del endpoint. Los valores disponibles pueden variar entre endpoints aunque sus respuestas contengan relaciones parecidas.
+
+<Tip>
+  Solicita solo los datos que vayas a utilizar. Las expansiones aumentan el trabajo de la consulta y el tamaño de la respuesta. Limita especialmente las colecciones anidadas y combínalas con un `pageSize` adecuado para tu integración.
+</Tip>

@@ -379,7 +379,8 @@
                   "es/desarrolladores/empezar/introduccion",
                   "es/desarrolladores/empezar/autenticacion",
                   "es/desarrolladores/empezar/errores",
-                  "es/desarrolladores/empezar/paginacion"
+                  "es/desarrolladores/empezar/paginacion",
+                  "es/desarrolladores/empezar/expandir-datos-relacionados"
                 ]
               },
               {
