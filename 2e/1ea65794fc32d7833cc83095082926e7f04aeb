@@ -1,0 +1,35 @@
+es/ayuda/smart-factory/consultar-o-delegar-con-ia.mdx
+  s_cf1bc4eb51dac6::t_0725eb03f8473f 55
+es/desarrolladores/mcp.mdx
+  s_b9665bc0c46bab::t_c6aceaeaf3f913 4,11,13-20,22-26,29,37-38,40-41,43-45,47-49,51,53-61,66,76,88,108-112
+  s_cf1bc4eb51dac6::t_0725eb03f8473f 1-3,5-6,8-10,12,21,27-28,30-36,39,42,46,50,52,62-65,67-75,77-87,89-98,103-107,113-114
+  s_b9665bc0c46bab::t_58be8b4ce68118 7,99-102
+es/desarrolladores/empezar/introduccion.mdx
+  s_cf1bc4eb51dac6::t_0725eb03f8473f 9-10
+docs.json
+  s_cf1bc4eb51dac6::t_0725eb03f8473f 381
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "2e1ea65794fc32d7833cc83095082926e7f04aeb",
+  "prompts": {},
+  "sessions": {
+    "s_b9665bc0c46bab": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a06d89-bba9-7671-8299-a365715dc418",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_cf1bc4eb51dac6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a06971-c2de-7d31-adcb-27bf6de78fff",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
