@@ -378,6 +378,7 @@
                 "pages": [
                   "es/desarrolladores/empezar/introduccion",
                   "es/desarrolladores/empezar/autenticacion",
+                  "es/desarrolladores/mcp",
                   "es/desarrolladores/empezar/errores",
                   "es/desarrolladores/empezar/paginacion",
                   "es/desarrolladores/empezar/expandir-datos-relacionados"

@@ -1,0 +1,114 @@
+---
+title: "Conectar ChatGPT y Claude Code por MCP"
+sidebarTitle: "Servidor MCP"
+description: "Conecta ChatGPT Desktop o Claude Code con Bold para consultar información desde tu asistente."
+---
+
+MCP conecta tu asistente con Bold para que puedas consultar información usando preguntas normales, sin programar. Por ejemplo, puedes pedirle que busque órdenes de fabricación o revise el stock de un artículo.
+
+## Antes de empezar
+
+Necesitas:
+
+- Tener MCP habilitado en tu cuenta de Bold. Si no sabes si lo tienes, consulta al administrador de tu cuenta.
+- Una [clave API](/es/desarrolladores/empezar/autenticacion#obtener-una-clave-api). Un administrador puede crearla en **Panel de control > Acceso > Claves API**.
+
+Crea una clave distinta para cada asistente. Así podrás retirar su acceso sin afectar a otras conexiones.
+
+Ten a mano estos datos durante la configuración:
+
+| Campo | Qué debes introducir |
+| --- | --- |
+| Nombre | `Bold` |
+| Tipo de conexión | `Streamable HTTP` |
+| Dirección del servidor | `https://api.bold-factory.com/mcp` |
+| Nombre de la cabecera | `X-Api-Key` |
+| Valor de la cabecera | Tu clave API de Bold |
+
+<Note>
+  Usa la dirección completa que aparece en la tabla. Esta conexión no requiere iniciar sesión en Bold desde el asistente.
+</Note>
+
+## Conectar tu asistente
+
+<Tabs>
+  <Tab title="ChatGPT Desktop">
+    <Steps>
+      <Step title="Abre la configuración de MCP">
+        En ChatGPT Desktop, ve a **Settings > MCP servers** y selecciona **Add server**.
+      </Step>
+      <Step title="Introduce los datos de Bold">
+        Usa los valores de la tabla anterior: pon `Bold` como nombre, elige **Streamable HTTP**, pega la dirección del servidor y añade la cabecera `X-Api-Key` con tu clave API como valor.
+      </Step>
+      <Step title="Guarda y comprueba la conexión">
+        Guarda el servidor y selecciona **Restart**. Abre una tarea local y escribe `/mcp`. Si `bold` aparece como conectado, la configuración está lista.
+      </Step>
+    </Steps>
+
+    <Accordion title="Configuración manual">
+      Si no puedes añadir la conexión desde la pantalla de configuración, abre el archivo `~/.codex/config.toml`. En Windows está en `%USERPROFILE%\.codex\config.toml`.
+
+      Añade este bloque y sustituye `TU_CLAVE_API` por tu clave de Bold:
+
+      ```toml
+      [mcp_servers.bold]
+      url = "https://api.bold-factory.com/mcp"
+      http_headers = { "X-Api-Key" = "TU_CLAVE_API" }
+      ```
+
+      Guarda el archivo y reinicia el servidor desde **Settings > MCP servers**.
+    </Accordion>
+
+    Consulta la [configuración MCP de ChatGPT Desktop](https://learn.chatgpt.com/docs/extend/mcp) para más opciones.
+  </Tab>
+
+  <Tab title="Claude Code">
+    Necesitas tener [Claude Code instalado](https://code.claude.com/docs/en/setup) y poder abrir una terminal.
+
+    <Steps>
+      <Step title="Añade el servidor">
+        Ejecuta este comando en la terminal y sustituye `TU_CLAVE_API` por tu clave de Bold:
+
+        ```bash
+        claude mcp add --transport http --scope user bold https://api.bold-factory.com/mcp --header "X-Api-Key: TU_CLAVE_API"
+        ```
+
+        Este comando guarda la conexión en tu configuración personal para que puedas usarla desde distintos proyectos.
+      </Step>
+      <Step title="Comprueba la conexión">
+        Abre una nueva sesión de Claude Code y ejecuta `/mcp`. Comprueba que `bold` está conectado y que puedes ver sus herramientas.
+      </Step>
+    </Steps>
+
+    Consulta la [configuración MCP de Claude Code](https://code.claude.com/docs/en/mcp) para más opciones.
+  </Tab>
+</Tabs>
+
+<Warning>
+  Trata la clave API como una contraseña: no la compartas ni la guardes en archivos que otras personas puedan ver. Si la introduces en una terminal, puede quedar guardada en el historial de comandos.
+</Warning>
+
+## Prueba una consulta
+
+Pide al asistente:
+
+```text
+Usa Bold para mostrar las órdenes de fabricación abiertas.
+Incluye su referencia y estado. No modifiques ningún dato.
+```
+
+<Check>
+  Si el asistente devuelve información de Bold, la conexión funciona correctamente.
+</Check>
+
+## Si no conecta
+
+| Problema | Qué revisar |
+| --- | --- |
+| Dice que la clave no es válida (`401`) | Vuelve a copiar la clave completa, sin espacios, y comprueba que sigue activa. |
+| Indica que no tienes permiso (`403`) | Pide al administrador de Bold que revise tu clave y el acceso a MCP. |
+| No encuentra el servidor (`404`) | Comprueba que has usado exactamente `https://api.bold-factory.com/mcp`. Si sigue fallando, confirma con Bold que MCP está habilitado. |
+| Bold aparece desconectado | Reinicia el servidor desde **Settings > MCP servers** o abre una nueva sesión de Claude Code. |
+| Solicita iniciar sesión | Revisa que el nombre de la cabecera sea `X-Api-Key` y que hayas pegado la clave en su valor. |
+
+Para retirar el acceso, desactiva la clave correspondiente en **Panel de control > Acceso > Claves API** y elimina el servidor de la configuración de tu asistente.
