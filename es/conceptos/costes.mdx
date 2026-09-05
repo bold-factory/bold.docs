@@ -37,6 +37,17 @@ El coste previsto por unidad se usa para estimar pedidos, recetas, órdenes de f
 | Fabricación | Receta, versión activa, materiales, tiempos, recursos y costes base relacionados. |
 | Manual | Valor definido por el equipo cuando no quieres que se recalcule automáticamente. |
 
+### Desglose del coste previsto
+
+Cuando el coste se actualiza automáticamente, Bold guarda el total y su desglose por unidad en materiales, mano de obra y máquina:
+
+- En un artículo de compra, todo el coste se considera material; mano de obra y máquina son cero.
+- En un artículo de fabricación, materiales incluye el coste previsto vigente de los componentes directos de la receta. Si un componente también se fabrica, su coste completo se incorpora como material del artículo padre.
+- La mano de obra se calcula con el tiempo-persona previsto de las operaciones y la media de los costes horarios positivos de los empleados activos.
+- La máquina se calcula con la duración prevista de cada operación y el coste horario del puesto de trabajo principal de su tipo de operación.
+
+El cálculo evalúa una unidad de catálogo. Los tiempos con frecuencia «por unidad» se multiplican por la cantidad relativa de la receta; los demás tiempos se aplican una vez. Si no existe una receta principal activa y utilizable, el desglose automático queda a cero. Un artículo de fabricación con coste manual, o un artículo ignorado, conserva el total pero no muestra desglose.
+
 El coste previsto no es lo mismo que el coste real del lote. El coste real se calcula con compras, fabricación, consumos, lotes y ajustes de stock.
 
 ## Coste de empleado
