@@ -1,0 +1,44 @@
+es/conceptos/panel-de-control/cuenta-y-empresa.mdx
+  s_4a8c7a0030a199::t_7d430f7ea345b5 53-54
+  s_800bee99467d75::t_d21529aefbe6c9 39-43
+  s_4a8c7a0030a199::t_6ce0acd043d23a 31-32
+es/novedades/changelog.mdx
+  s_4a8c7a0030a199::t_6ce0acd043d23a 14
+  s_3cb909ec1fb7f1::t_a4e154d1f9cde2 8-11,15-52
+  s_4a8c7a0030a199::t_7d430f7ea345b5 13
+  s_3cb909ec1fb7f1::t_01c26b0d3681e3 7
+  s_3cb909ec1fb7f1::t_936ddabb7e0d5c 53-54
+  s_4a8c7a0030a199::t_0640cb3d61506a 12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "bf57c52c4056cae7a64c850a54c2cca5a38ddefb",
+  "prompts": {},
+  "sessions": {
+    "s_3cb909ec1fb7f1": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a06ed6-f181-7dd1-9dab-1e59409a2a11",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_4a8c7a0030a199": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0718a-4fdc-7222-8909-c8eb77772ea4",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_800bee99467d75": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0719e-e4ed-7830-9f38-1d8e64c062ae",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
