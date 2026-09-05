@@ -1,0 +1,19 @@
+es/conceptos/panel-de-control/cuenta-y-empresa.mdx
+  s_6618a0014ac894::t_baaaced1f1ee52 55
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "eb696f1b9f70ba736cc59818a07659b1b463d496",
+  "prompts": {},
+  "sessions": {
+    "s_6618a0014ac894": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0729b-e143-7963-a36d-f3fb27f7bad4",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
