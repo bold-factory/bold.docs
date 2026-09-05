@@ -28,13 +28,19 @@ Para completar los datos de facturación, indica la razón social, la identifica
 
 Durante el alta, debes aceptar los términos y el mandato de pago antes de continuar con la configuración del método de pago. Si reintentas este paso, la aceptación también debe estar marcada.
 
+El segundo paso del alta muestra el formulario seguro de Stripe integrado en Bold. Puedes registrar el método de pago sin abandonar la experiencia de onboarding.
+
 Las facturas de tu cuenta se emiten en Holded, que asigna su numeración según la serie asociada a tu contacto de facturación. Bold muestra el número definitivo de la factura aprobada.
 
 El contacto de facturación en Holded utiliza la razón social y el nombre de tu empresa en Bold como nombre comercial. Se registra como empresa, con el NIF también en el campo de identificación VAT y el país indicado por su código y nombre.
 
 El código de país debe ser un código ISO de dos letras reconocido, como `ES`. Si no es válido, Bold lo indica antes de guardar el perfil fiscal.
 
-Al aprobar la factura, Bold solicita a Holded que la envíe a tu correo de facturación. El envío usa la plantilla y el remitente configurados en Holded. También puedes descargar el PDF desde **Plan y facturación > Facturas**.
+En **Panel de control > Suscripción > Facturas** puedes consultar la razón social, la identificación fiscal, el domicilio y el contacto que se usarán en las próximas facturas. Para cambiar la identidad o el domicilio fiscal, contacta con Bold para revisar el cambio antes de aplicarlo.
+
+Desde esa misma pestaña, los administradores pueden configurar hasta diez destinatarios. El primer email es el principal del contacto de facturación y los demás reciben también cada factura. Bold añade siempre `billing@bold-factory.com` como destinatario interno, aunque no aparezca como un campo editable.
+
+Al aprobar la factura, Bold solicita a Holded que la envíe a todos los destinatarios configurados. El envío usa la plantilla y el remitente configurados en Holded. También puedes descargar el PDF desde **Panel de control > Suscripción > Facturas**.
 
 Si la emisión necesita un reintento, Bold busca primero la factura por su referencia de facturación para recuperar la existente.
 
@@ -43,6 +49,8 @@ Si un pago necesita autenticación o falla, utiliza la acción disponible en **F
 ## Suscripción y créditos de IA
 
 En **Panel de control > Suscripción** puedes consultar el plan principal, las integraciones contratadas, los créditos de IA y las facturas. Los precios se muestran sin IVA y se identifican con **+ IVA**.
+
+La pestaña **Método de pago** muestra el método actual con su tipo y sus últimos cuatro dígitos. Desde esa misma pestaña puedes añadirlo o cambiarlo mediante el formulario seguro de Stripe integrado en Bold, sin salir de la aplicación.
 
 Las integraciones pueden tener un precio mensual acordado de 0 € cuando el servicio es gratuito, aunque tengan un precio de referencia superior. El precio acordado determina el importe que se factura.
 

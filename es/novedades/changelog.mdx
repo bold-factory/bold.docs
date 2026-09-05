@@ -5,6 +5,54 @@ rss: true
 ---
 
 <Update
+  label="2026-08-31"
+  tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
+>
+  ## Suscripción y créditos de IA
+
+  - **Panel de control > Suscripción** reúne el plan principal, las integraciones contratadas, los créditos de IA y las facturas. La pestaña **Método de pago** muestra el método actual y permite cambiarlo mediante el formulario seguro de Stripe integrado en Bold. Los administradores también pueden descargar facturas y completar pagos que necesiten intervención.
+  - El paso de método de pago del alta de administradores utiliza el formulario de Stripe integrado, sin enviar al usuario fuera de la experiencia de onboarding.
+  - Los créditos incluidos en el plan y los adquiridos se muestran por separado. Puedes consultar el consumo mensual y comprar paquetes; el saldo adquirido se conserva de un mes a otro.
+  - **Smart Factory > Tareas** avisa cuando queda un 20 % o menos de los créditos disponibles. Los administradores pueden iniciar la compra desde el propio aviso.
+
+  ## Asistentes e integraciones
+
+  - Puedes conectar ChatGPT Desktop o Claude Code con Bold mediante MCP y una clave API para consultar información operativa con lenguaje natural.
+  - Los listados de la API unifican paginación, búsqueda, filtros y ordenación. El parámetro `Expand` permite solicitar datos relacionados de forma explícita, incluidas relaciones de hasta dos niveles cuando la ruta las admite.
+
+  ## Mejoras
+
+  - Las condiciones de receta distinguen correctamente la **Cantidad de la OF** y la **Cantidad solicitada**, muestran las etiquetas en español y validan la fórmula al guardarla.
+
+  ## Correcciones
+
+  - Las recepciones muestran correctamente el pedido y el artículo de las líneas de compra pendientes.
+  - Los enlaces antiguos de versiones de receta llevan a su dirección actual y los movimientos de almacén conservan su ruta de navegación.
+</Update>
+
+<Update
+  label="2026-08-24"
+  tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
+>
+  ## Tareas y automatizaciones
+
+  - Las tareas con Boldy permiten reintentar cuando el proveedor de IA no tiene capacidad temporal y explican cuándo se han agotado los créditos. Las conversaciones identifican al autor de cada mensaje y muestran la explicación de las opciones de aclaración.
+  - Las automatizaciones en **Solo lectura** pueden actualizar su propia memoria sin obtener permiso para modificar datos de negocio.
+
+  ## Producción e indicadores
+
+  - **Actividad de los empleados** permite filtrar entre empleados activos y empleados sin operación.
+  - Al iniciar o reanudar una operación se registra el empleado responsable. Bold usa el empleado vinculado al usuario o permite seleccionarlo cuando no existe ese vínculo.
+  - El registro de progreso de producción incorpora paginación para consultar, ordenar y filtrar todos los resultados.
+
+  ## Correcciones
+
+  - Puedes lanzar una OF para un artículo que no pertenece a ninguna familia.
+  - Para retirar la última asignación activa de una operación, primero debes pausarla, lo que evita dejar trabajo en curso sin empleado.
+  - Las tareas se adaptan mejor a pantallas móviles y el calendario de órdenes de carga evita barras de desplazamiento al arrastrar una orden.
+</Update>
+
+<Update
   label="2026-08-17"
   tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
 >
