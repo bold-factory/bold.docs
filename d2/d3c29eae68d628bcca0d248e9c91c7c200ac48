@@ -1,0 +1,20 @@
+es/conceptos/costes.mdx
+  s_43a390c3235000::t_ffb30262d29c4b 44
+  s_43a390c3235000::t_f115ab25517751 42-43,45
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "d2d3c29eae68d628bcca0d248e9c91c7c200ac48",
+  "prompts": {},
+  "sessions": {
+    "s_43a390c3235000": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a076b5-8461-7082-8859-4af10155c735",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
