@@ -42,17 +42,17 @@ El coste previsto por unidad se usa para estimar pedidos, recetas, órdenes de f
 Cuando el coste se actualiza automáticamente, Bold guarda el total y su desglose por unidad en materiales, mano de obra y máquina:
 
 - En un artículo de compra, todo el coste se considera material; mano de obra y máquina son cero.
-- En un artículo de fabricación, materiales incluye el coste previsto vigente de los componentes directos de la receta. Si un componente también se fabrica, su coste completo se incorpora como material del artículo padre.
-- La mano de obra se calcula con el tiempo-persona previsto de las operaciones y la media de los costes horarios positivos de los empleados activos.
-- La máquina se calcula con la duración prevista de cada operación y el coste horario del puesto de trabajo principal de su tipo de operación.
+- En un artículo de fabricación, el material directo procede de los componentes comprados que consume su propia receta. El material heredado procede de materiales consumidos previamente dentro de los componentes fabricados o semielaborados de esa receta.
+- La mano de obra directa se calcula con el tiempo-persona previsto de las operaciones del propio artículo y la media de los costes horarios positivos de los empleados activos. La mano de obra heredada ya se consumió en sus semielaborados.
+- La máquina directa se calcula con la duración prevista de las operaciones del propio artículo y el coste horario del puesto de trabajo principal. El coste de máquina heredado ya se consumió en sus semielaborados.
 
 El cálculo estima lo necesario para obtener una unidad del artículo de catálogo. Dentro de esa unidad, una operación puede tener una cantidad relativa distinta de uno: los tiempos con frecuencia «por unidad» se escalan con esa cantidad relativa, mientras que los demás tiempos se aplican una sola vez. Si no existe una receta principal activa y utilizable, el desglose automático queda a cero. Un artículo de fabricación con coste manual, o un artículo ignorado, conserva el total pero no muestra desglose.
 
 El coste previsto no es lo mismo que el coste real del lote. El coste real se calcula con compras, fabricación, consumos, lotes y ajustes de stock.
 
-En los artículos fabricados, Bold conserva la categoría de los costes que aportan los componentes. Su material se suma como material, su mano de obra como mano de obra y su uso de máquina como máquina. La ficha del artículo distingue el coste directo de mano de obra y máquina del coste heredado de sus componentes.
+En los artículos fabricados, Bold conserva la categoría de los costes que aportan los semielaborados. Su material se suma como material heredado, su mano de obra como mano de obra heredada y su uso de máquina como máquina heredada. La ficha del artículo separa el coste directo y el heredado de semielaborados en las tres categorías.
 
-Los costes previstos de artículo se redondean a un máximo de cuatro decimales. Si un componente tiene un coste manual sin desglose, Bold conserva el criterio anterior e imputa ese importe a materiales.
+Los costes previstos de artículo se redondean a un máximo de cuatro decimales. Si un componente tiene un coste manual sin desglose, Bold imputa ese importe a material directo cuando se compra y a material heredado cuando se fabrica.
 
 ## Coste de empleado
 
