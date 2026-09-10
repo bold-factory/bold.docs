@@ -1,0 +1,23 @@
+es/ayuda/articulos/editar-un-articulo.mdx
+  s_504f78264d6406::t_c5388d107f6c52 8-13
+es/ayuda/articulos/crear-un-articulo.mdx
+  s_504f78264d6406::t_c5388d107f6c52 22
+es/conceptos/catalogo/unidades-de-medida.mdx
+  s_504f78264d6406::t_c5388d107f6c52 7,22,24,33,35,37-47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "1bfe7c7efe9fa8e6bf79eec692c26eac6713975b",
+  "prompts": {},
+  "sessions": {
+    "s_504f78264d6406": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a08d71-4ddf-79b1-aa07-22e1898ff824",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
