@@ -4,7 +4,7 @@ description: "Entiende cómo las unidades afectan artículos, stock, compras, fa
 icon: "ruler"
 ---
 
-La **unidad de medida** indica cómo se cuantifica un artículo. Afecta stock, compras, ventas, consumos, producción, costes y redondeos.
+La **unidad de medida** indica cómo se cuantifica un artículo. Afecta stock, compras, ventas, consumos, producción, costes y redondeos. Bold mantiene un catálogo reutilizable de unidades para que todos los artículos empleen códigos y nombres consistentes.
 
 Elige unidades con cuidado. Cambiar la unidad de un artículo después de operar puede dificultar comparar histórico, integraciones y cantidades.
 
@@ -19,9 +19,9 @@ Elige unidades con cuidado. Cambiar la unidad de un artículo después de operar
 | Fabricación | Calcula entradas, coproductos, progreso y producción. |
 | Costes | Interpreta coste unitario y valoración de inventario. |
 
-## Unidad y precisión
+## Unidad base y precisión
 
-La unidad debe ir acompañada de una precisión coherente. No todas las unidades admiten la misma granularidad operativa.
+Cada artículo tiene una **unidad base**. Bold almacena y devuelve sus cantidades normalizadas en esa unidad, junto con la precisión que debe mostrarse. No todas las unidades admiten la misma granularidad operativa.
 
 | Caso | Decisión práctica |
 | --- | --- |
@@ -30,11 +30,21 @@ La unidad debe ir acompañada de una precisión coherente. No todas las unidades
 | Material a granel | Alinea precisión con básculas, sistemas externos y tolerancias. |
 | Semielaborados | Usa la unidad que se moverá y consumirá realmente. |
 
-## Conversión y consistencia
+## Unidades alternativas y conversión
 
-Bold registra cantidades en la unidad del artículo. Si compras, consumes o integras datos en otra unidad, el sistema externo o el proceso de importación debe enviar cantidades ya normalizadas.
+Puedes añadir unidades alternativas a un artículo e indicar cuánta unidad base contiene cada una. Por ejemplo, si la unidad base es `ud` y una caja contiene 12 unidades, configura el factor así:
 
-Evita mezclar unidades equivalentes para el mismo artículo, como `kg` y `g`, si eso puede generar errores de interpretación.
+`1 caja = 12 ud`
+
+Cuando una operación admite indicar la unidad de la cantidad, Bold aplica ese factor y guarda el resultado en la unidad base. Cada alternativa también tiene su propia precisión de visualización.
+
+La misma unidad no puede ser a la vez base y alternativa del artículo, ni repetirse entre sus alternativas. El factor de conversión debe ser mayor que cero.
+
+<Warning>
+  Para cambiar la unidad base, elimina antes las unidades alternativas del artículo. El cambio no recalcula las cantidades históricas: revisa stock, pedidos, recetas, costes e integraciones antes de guardarlo.
+</Warning>
+
+Evita crear equivalencias ambiguas o mezclar factores con sentidos distintos. Define siempre el factor como **cantidad de unidad base contenida en una unidad alternativa**.
 
 ## Impacto en planificación
 
