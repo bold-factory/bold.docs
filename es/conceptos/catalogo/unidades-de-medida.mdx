@@ -21,7 +21,7 @@ Elige unidades con cuidado. Cambiar la unidad de un artículo después de operar
 
 ## Unidad base y precisión
 
-Cada artículo tiene una **unidad base**. Bold almacena y devuelve sus cantidades normalizadas en esa unidad, junto con la precisión que debe mostrarse. No todas las unidades admiten la misma granularidad operativa.
+Cada artículo tiene una **unidad base**. Bold almacena y devuelve sus cantidades normalizadas en la unidad base vigente, junto con la precisión que debe mostrarse. No todas las unidades admiten la misma granularidad operativa.
 
 | Caso | Decisión práctica |
 | --- | --- |
@@ -38,11 +38,22 @@ Puedes añadir unidades alternativas a un artículo e indicar cuánta unidad bas
 
 Cuando una operación admite indicar la unidad de la cantidad, Bold aplica ese factor y guarda el resultado en la unidad base. Cada alternativa también tiene su propia precisión de visualización.
 
+Bold conserva además la cantidad y la unidad alternativas introducidas en:
+
+- líneas de pedidos de compra y venta;
+- recepciones y envíos;
+- inventarios y ajustes de stock;
+- cantidades fabricadas y rechazadas, consumos y coproductos registrados durante la fabricación.
+
+Los registros devueltos incluyen ese dato original cuando está disponible. En las tablas de la aplicación puedes consultarlo en el detalle emergente de la cantidad. La cifra principal siempre se muestra en la unidad base vigente del artículo.
+
 La misma unidad no puede ser a la vez base y alternativa del artículo, ni repetirse entre sus alternativas. El factor de conversión debe ser mayor que cero.
 
 <Warning>
-  Para cambiar la unidad base, elimina antes las unidades alternativas del artículo. El cambio no recalcula las cantidades históricas: revisa stock, pedidos, recetas, costes e integraciones antes de guardarlo.
+  Para cambiar la unidad base, elimina antes las unidades alternativas del artículo. El cambio no convierte ni modifica las cifras ya registradas. Si una existencia era `10 ud` y corriges la unidad base a `m³`, pasa a interpretarse como `10 m³`.
 </Warning>
+
+Usa el cambio de unidad base para corregir una unidad que se configuró mal. No lo uses para transformar cantidades entre unidades: si necesitas esa transformación, configura una unidad alternativa con su factor de conversión.
 
 Evita crear equivalencias ambiguas o mezclar factores con sentidos distintos. Define siempre el factor como **cantidad de unidad base contenida en una unidad alternativa**.
 
