@@ -1,0 +1,68 @@
+---
+title: "Exportar datos"
+description: "Descarga colecciones de Bold en CSV o Excel para analizarlas, archivarlas o tratarlas en otras herramientas."
+---
+
+Usa **Exportar datos** para descargar una colección completa en el momento de la consulta. La pantalla no aplica filtros ni rangos de fechas a la exportación.
+
+## Antes de empezar
+
+- Necesitas acceso a los informes y a **Panel de control > Exportar datos**.
+- Decide si vas a tratar el archivo de forma automática o a revisarlo manualmente.
+- Prepara una ubicación segura para guardarlo. La exportación puede contener información operativa o personal.
+
+## Elegir formato y colección
+
+**Ruta:** **Panel de control > Datos > Exportar datos**
+
+| Formato | Uso habitual |
+| --- | --- |
+| CSV | Texto plano para integraciones, scripts y herramientas de análisis. |
+| Excel | Libro `.xlsx` para revisión y tratamiento en una hoja de cálculo. |
+
+Las colecciones están agrupadas por área:
+
+| Área | Ejemplos disponibles |
+| --- | --- |
+| Catálogo | Familias, artículos, propiedades y opciones de propiedad. |
+| Fabricación | Áreas, procesos, estaciones, OF, operaciones, consumos, progreso, controles y pausas. |
+| Planificación | Clientes, proveedores y pedidos de venta o compra con sus líneas. |
+| Almacén | Ubicaciones, lotes, recepciones, controles, envíos y sus líneas. |
+| Personal | Empleados y tareas de empleados. |
+| Costes | Artículos, OF y operaciones. |
+| Mantenimiento | Activos, causas, acciones, partes, tiempos y materiales. |
+
+## Descargar una exportación
+
+<Steps>
+  <Step title="Selecciona el formato">
+    Elige **CSV** o **Excel**.
+  </Step>
+  <Step title="Selecciona el objeto">
+    Abre **Objeto a exportar** y elige una colección dentro del área correspondiente.
+  </Step>
+  <Step title="Descarga el archivo">
+    Haz clic en **Descargar CSV** o **Descargar Excel**.
+  </Step>
+  <Step title="Identifica la instantánea">
+    El nombre del archivo incluye la colección y la fecha de descarga, por ejemplo `articulos_2026-09-16.xlsx`.
+  </Step>
+</Steps>
+
+<Info>
+  El archivo es una instantánea. Los cambios posteriores en Bold no actualizan una exportación ya descargada.
+</Info>
+
+<Warning>
+  La exportación descarga todos los datos disponibles de la colección, no solo las filas que hayas consultado antes en otros listados. Revisa quién puede acceder al archivo y evita enviarlo por canales no autorizados.
+</Warning>
+
+## Si necesitas otra estructura
+
+Exporta las colecciones relacionadas por separado y combínalas en tu herramienta de análisis mediante sus identificadores o referencias. No modifiques estos archivos esperando que los cambios regresen a Bold. Para cargas masivas, usa [Importar datos](/es/ayuda/panel-de-control/importar-datos).
+
+## Relacionado
+
+- [Datos y archivos](/es/conceptos/panel-de-control/datos-y-archivos)
+- [Importar datos](/es/ayuda/panel-de-control/importar-datos)
+- [Gestionar archivos](/es/ayuda/panel-de-control/gestionar-archivos)

@@ -3,18 +3,54 @@ title: "Configurar el horario de los empleados"
 description: "Asigna calendarios, turnos, zonas horarias y excepciones a cada empleado."
 ---
 
-Configura horarios y turnos para que Bold entienda cuándo trabaja cada equipo o empleado. Esta configuración afecta capacidad, asignaciones, seguimiento de planta y análisis de productividad.
+Asigna la programación a cada empleado para que Bold pueda resolver qué jornada le corresponde en una fecha concreta. Esta configuración interviene en la capacidad, las asignaciones, el seguimiento de planta y el análisis de productividad.
 
-**Ruta:** **Personal \> Empleados \> Empleado \> Horarios**
+## Antes de empezar
 
-Aquí es donde unes todo lo que has creado anteriormente y se lo aplicas directamente a la ficha individual del empleado.
+Necesitas:
 
-**Calendario local:** le dice al sistema qué días del año este empleado no tiene la obligación de ir a trabajar por ser festivo en su zona. 
+- un empleado registrado;
+- las jornadas laborales y el turno que quieras asignar;
+- un calendario local si la persona debe seguir festivos o cierres específicos de una sede;
+- permiso para gestionar la programación de personal.
 
-**Turno:** seleccionas el patrón de rotación o el horario fijo que le corresponde (por ejemplo: _Rotación Mañanas Estándar_ o _Oficinas 8 a 5_).
+Si todavía no has creado estos elementos, consulta [Configurar turnos y calendarios](/es/ayuda/personal/configurar-turnos-y-calendarios).
 
-**Fecha de inicio:** indica cuándo empieza a trabajar.
+## Asignar la programación habitual
 
-**Zona horaria:** selecciona la zona correspondiente al lugar donde trabaja, por ejemplo, `Europe/Madrid`.
+**Ruta:** **Personal > Empleados > Empleado > Horarios**
 
-**Asignación de fechas:** añade vacaciones o cambios de turno para fechas concretas. Por ejemplo, Lucas tendrá vacaciones del 15 al 27 de junio y, cuando regrese, cubrirá dos días el turno nocturno por la baja de un compañero.
+<Steps>
+  <Step title="Asigna el calendario local">
+    Selecciona el calendario que contiene los festivos, cierres y jornadas especiales aplicables al empleado. Déjalo sin asignar si no necesita esas excepciones compartidas.
+  </Step>
+  <Step title="Asigna el turno">
+    Selecciona el patrón fijo o rotativo que le corresponde. Indica en **Fecha de inicio** cuándo empieza el ciclo del turno.
+  </Step>
+  <Step title="Selecciona la zona horaria">
+    Elige la zona del lugar donde trabaja, por ejemplo **Europa/Madrid**.
+  </Step>
+  <Step title="Guarda los cambios">
+    Pulsa **Guardar Cambios** para aplicar el calendario, el turno y la zona horaria.
+  </Step>
+</Steps>
+
+## Añadir excepciones individuales
+
+Usa **Asignaciones de fechas** para vacaciones, cambios puntuales de turno u otras excepciones que solo afecten al empleado.
+
+<Steps>
+  <Step title="Busca la fecha">
+    Navega por el calendario hasta el mes correspondiente y pulsa la fecha que quieras modificar.
+  </Step>
+  <Step title="Selecciona la jornada">
+    Elige el **Tipo de jornada** que debe aplicarse ese día y pulsa **Asignar**.
+  </Step>
+  <Step title="Retira una excepción">
+    Pulsa una fecha que ya tenga una asignación para eliminarla. Bold volverá a resolver esa fecha con el calendario local y el turno del empleado.
+  </Step>
+</Steps>
+
+<Note>
+  Una asignación para una fecha concreta tiene prioridad sobre el calendario local y el patrón repetitivo del turno. Consulta [Jornadas, calendarios y turnos](/es/conceptos/personal/jornadas-calendarios-y-turnos) para entender el orden completo.
+</Note>

@@ -14,12 +14,15 @@ La tarea conserva instrucciones, mensajes, archivos adjuntos, herramientas usada
 | --- | --- |
 | Estado | Indica si la tarea espera procesamiento, está en curso, requiere acción, terminó o falló. |
 | Agente | Define instrucciones, permisos y nivel de inteligencia. |
+| Canal | Indica si la conversación se inició en la web o en Telegram. |
 | Inicio | Fecha y hora de creación. |
 | Última interacción | Último cambio relevante de la tarea. |
 | Créditos | Consumo asociado al trabajo. |
 | Archivos | Contexto adicional que el agente puede usar. |
 
 Las tareas caducan tras 28 días de inactividad. Si necesitas retomar un trabajo caducado, crea una tarea nueva con el contexto necesario.
+
+Una tarea iniciada desde Telegram conserva allí su conversación. Puedes abrirla en la web para consultar la actividad y el resultado, pero debes responder desde la misma conversación de Telegram.
 
 ## Estados
 
@@ -74,7 +77,7 @@ Usa agentes personalizados para automatizaciones. Los agentes de sistema están 
 | Problema | Qué revisar |
 | --- | --- |
 | La tarea requiere acción | Abre la tarea y responde a las preguntas pendientes. |
-| No puedes continuar | Puede estar en ejecución, fallida, esperando aclaración específica o caducada. |
+| No puedes continuar | Puede estar en ejecución, fallida, esperando aclaración específica, caducada o haberse iniciado desde Telegram. |
 | El agente no encuentra datos | Revisa permisos del agente y si los datos existen en Bold. |
 | Consume demasiados créditos | Baja el nivel de inteligencia o acota mejor las instrucciones. |
 | La tarea caducó | Crea una tarea nueva con el contexto necesario. |
@@ -87,4 +90,4 @@ Usa agentes personalizados para automatizaciones. Los agentes de sistema están 
 
 - [Agentes](/es/conceptos/smart-factory/agentes)
 - [Automatizaciones](/es/conceptos/smart-factory/automatizaciones)
-- [Consultar o delegar con IA](/es/ayuda/smart-factory/consultar-o-delegar-con-ia)
+- [Consultar datos y ejecutar tareas con IA](/es/ayuda/smart-factory/consultar-o-delegar-con-ia)

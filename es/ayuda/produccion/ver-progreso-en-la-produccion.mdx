@@ -1,37 +1,76 @@
 ---
-title: "Ver el progreso en la producción"
-description: "Consulta operaciones realizadas, cantidades producidas y avance pendiente."
+title: "Supervisar la producción en tiempo real"
+description: "Consulta la actividad de los empleados, las estaciones activas y los registros de producción desde los cuadros de mando."
 ---
 
-Usa **Progreso en la producción** para revisar qué operaciones avanzan, qué cantidad se ha producido y qué queda pendiente.
+Usa los cuadros de mando para saber quién trabaja, dónde se ejecuta cada operación y qué cantidades ha registrado el equipo. Estas vistas dependen de las asignaciones y los registros creados desde el [modo de trabajo](/es/conceptos/modo-de-trabajo).
 
-## Revisar progreso
+**Ruta:** **Smart Factory > Cuadros de mando**
 
-Ruta: **Smart Factory > Cuadros de mando > Progreso en la producción** 
+## Consultar la actividad de los empleados
+
+Abre **Actividad de los empleados** para distinguir quién tiene una operación activa y quién no.
 
 <Steps>
-  <Step title="Filtra el periodo">
-    Acota por fecha, orden, área, estación o artículo si necesitas investigar un caso concreto.
+  <Step title="Filtra por estado">
+    Haz clic en **Sin operación** o **Activo** dentro de la leyenda. Haz clic otra vez en el mismo estado para volver a mostrar a todos los empleados.
   </Step>
-  <Step title="Compara cantidades">
-    Revisa cantidad planificada, completada, rechazada y pendiente.
+  <Step title="Identifica la operación">
+    Cada empleado activo muestra el código de la OF y el nombre de las operaciones que está ejecutando.
   </Step>
-  <Step title="Abre operaciones con desviación">
-    Revisa operaciones en las que los tiempos o consumos reales registrados en planta han diferido significativamente respecto a los valores teóricos o previstos definidos en la receta de fabricación. Consulta comentarios, pausas, controles y consumos antes de corregir.
+  <Step title="Abre el detalle">
+    Haz clic en el empleado para consultar su ficha o en una operación para revisar su ejecución.
   </Step>
 </Steps>
 
-## Señales de revisión
+<Info>
+  Si un empleado está trabajando pero aparece **Sin operación**, comprueba que haya iniciado o reanudado la operación correcta en el modo de trabajo.
+</Info>
 
-| Señal | Qué revisar |
+## Consultar las estaciones activas
+
+Abre **Estado de las estaciones de trabajo** para ver las estaciones que tienen actividad en curso. La vista agrupa las asignaciones activas por estación y por operación.
+
+En cada operación puedes revisar:
+
+- el código de la OF y el nombre de la operación;
+- la cantidad completada frente a la planificada;
+- el artículo y el solicitante de la orden;
+- los empleados asignados y cuánto tiempo ha pasado desde que empezaron.
+
+Haz clic en la operación para abrir su detalle. Si la página muestra **No hay ninguna actividad en curso ahora mismo**, no hay asignaciones activas asociadas a una estación.
+
+## Revisar los registros de producción
+
+Abre **Progreso en la producción** para consultar las cantidades que el equipo ha registrado durante las operaciones.
+
+<Steps>
+  <Step title="Acota el periodo">
+    Selecciona **Fecha inicio** y **Fecha fin**. Por defecto, la vista muestra el día actual.
+  </Step>
+  <Step title="Filtra el contexto">
+    Limita los resultados por área, estación de trabajo o empleado. También puedes filtrar y ordenar las columnas de la tabla.
+  </Step>
+  <Step title="Revisa cada registro">
+    Compara **Completado** y **Rechazado**. Consulta también la fecha, el empleado, la OF, la operación, el solicitante, el artículo, la estación y los comentarios.
+  </Step>
+  <Step title="Abre el origen">
+    Usa los enlaces de la tabla para ir a la ficha del empleado, la OF, la operación, el artículo o la estación de trabajo.
+  </Step>
+</Steps>
+
+## Qué revisar ante una diferencia
+
+| Señal | Comprobación |
 | --- | --- |
-| Mucha cantidad pendiente | Secuencia, recursos, materiales o restricciones. |
-| Rechazos altos | Controles, lote de material, proceso o estación. |
-| Avance sin cierre | Operaciones iniciadas que no se finalizaron correctamente. |
-| Cantidad mayor que la prevista | Comentarios y motivo operativo de la diferencia. |
+| Un empleado figura sin operación | Confirma que inició la operación y que no la pausó o finalizó por error. |
+| Una estación no aparece | Comprueba que haya una asignación activa vinculada a esa estación. |
+| Hay cantidades rechazadas | Abre la operación y revisa los controles, comentarios y materiales utilizados. |
+| Falta un registro esperado | Comprueba el periodo, los filtros y el empleado que registró la producción. |
 
 ## Relacionado
 
 - [Ejecutar operaciones en planta](/es/ayuda/produccion/ejecutar-operaciones-en-planta)
 - [Ver el OEE por estación](/es/ayuda/produccion/ver-oee-por-estacion)
+- [Analizar paradas y pérdidas de producción](/es/ayuda/produccion/revisar-oee-y-paradas)
 - [Cuadros de mando](/es/conceptos/fabricacion/cuadros-de-mando)

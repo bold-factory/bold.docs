@@ -1,0 +1,72 @@
+---
+title: "Analizar costes de artículos"
+description: "Compara el coste previsto por unidad y su desglose en materiales, mano de obra y máquina."
+---
+
+Usa **Costes de artículos** para localizar artículos con un coste previsto inesperado y abrir el detalle que explica ese importe.
+
+## Antes de empezar
+
+- Necesitas acceso de lectura a los costes de artículos.
+- Los artículos deben existir en el catálogo.
+- Para interpretar el desglose de un artículo fabricado, revisa también su receta, sus componentes y los costes horarios de empleados y recursos.
+- Para interpretar un artículo comprado, revisa sus pedidos de compra.
+
+## Revisar el listado
+
+**Ruta:** **Costes > Objetos de coste > Artículos**
+
+<Steps>
+  <Step title="Localiza el artículo">
+    Busca por código o nombre. Puedes ordenar y filtrar el listado para acotar la revisión.
+  </Step>
+  <Step title="Compara el coste previsto">
+    Revisa **Materiales/ud**, **Mano de obra/ud**, **Máquina/ud** y **Coste prev. por ud**.
+  </Step>
+  <Step title="Abre el detalle">
+    En **Acciones**, entra en el artículo. Bold abre directamente su pestaña **Costes**.
+  </Step>
+</Steps>
+
+## Interpretar el detalle
+
+La pestaña **Costes** muestra el coste total previsto por unidad y su desglose.
+
+| Campo | Qué revisar |
+| --- | --- |
+| Coste total previsto por unidad | Importe previsto que puedes editar si gestionas el coste manualmente. |
+| Materiales por unidad | Coste previsto de los materiales directos y de los semielaborados incluidos. |
+| Mano de obra por unidad | Coste previsto del tiempo de los empleados. |
+| Máquina por unidad | Coste previsto del tiempo de los recursos. |
+| Actualizar coste automáticamente | Indica si Bold debe recalcular el coste previsto cuando cambien los datos que lo sustentan. |
+
+En artículos de compra, el detalle incluye los pedidos de compra relacionados. En artículos de fabricación, muestra los componentes usados para calcular el coste previsto.
+
+<Info>
+  El desglose de materiales, mano de obra y máquina es informativo. El importe editable es **Coste total previsto por unidad**.
+</Info>
+
+## Corregir un coste previsto
+
+<Steps>
+  <Step title="Decide cómo mantener el coste">
+    Selecciona **Sí** en **Actualizar coste automáticamente** para recalcularlo desde los datos de compra o fabricación. Selecciona **No** para mantener un importe manual.
+  </Step>
+  <Step title="Introduce el importe manual si corresponde">
+    Si has desactivado la actualización automática, completa **Coste total previsto por unidad (€)**.
+  </Step>
+  <Step title="Guarda los cambios">
+    Haz clic en **Guardar**. El botón solo está disponible si tienes permiso de edición y has cambiado algún dato.
+  </Step>
+</Steps>
+
+<Warning>
+  Antes de sustituir un coste automático por uno manual, revisa compras, recetas, componentes, tiempos y costes horarios. Un importe manual puede ocultar un dato maestro incompleto.
+</Warning>
+
+## Relacionado
+
+- [Coste teórico vs coste real](/es/conceptos/costes/coste-teorico-vs-real)
+- [Preparar datos de coste](/es/ayuda/costes/preparar-datos-de-coste)
+- [Costes de órdenes de fabricación](/es/ayuda/costes/ordenes-de-fabricacion)
+- [Artículos](/es/conceptos/catalogo/articulos)

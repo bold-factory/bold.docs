@@ -1,0 +1,82 @@
+---
+title: "Investigar la trazabilidad de un lote"
+description: "Sigue el origen, los componentes, los movimientos y el coste de un lote para investigar una incidencia."
+---
+
+Usa **Lotes** para reconstruir de dónde procede el material, cómo ha cambiado su stock y qué documentos explican esos cambios.
+
+## Antes de empezar
+
+- Necesitas acceso a **Almacén > Lotes**.
+- Prepara el código del lote, el artículo o una referencia relacionada.
+- Si investigas una diferencia económica, consulta también el periodo y el coste esperado.
+
+## Localizar el lote
+
+**Ruta:** **Almacén > Control del stock > Lotes**
+
+<Steps>
+  <Step title="Busca el registro">
+    Filtra por código de lote, código de artículo o nombre del artículo.
+  </Step>
+  <Step title="Comprueba que es el lote correcto">
+    Revisa estado, artículo, tipo, procedencia, stock actual y fecha de creación.
+  </Step>
+  <Step title="Abre el lote">
+    En **Acciones**, entra en su detalle.
+  </Step>
+</Steps>
+
+## Seguir el origen y la composición
+
+En **Información**, revisa primero **Tipo de lote**, **Artículo** y **Stock actual**.
+
+| Tipo | Cómo seguirlo |
+| --- | --- |
+| Origen | Abre la compra o la OF mostrada en **Origen**. Si la procedencia es desconocida, no habrá un documento operativo enlazado. |
+| Fusionado | Revisa los dos lotes iniciales y la tabla **Componentes**. La tabla muestra cada lote de origen, su referencia y su proporción. |
+
+Puedes abrir un componente y repetir la revisión hasta llegar a sus lotes de origen.
+
+## Reconstruir los movimientos
+
+La tabla **Historial de movimientos** muestra:
+
+- ubicación afectada;
+- tipo de movimiento;
+- causa o documento relacionado;
+- cantidad del cambio;
+- stock después del cambio;
+- fecha y hora.
+
+<Steps>
+  <Step title="Empieza por el primer movimiento">
+    Comprueba si la entrada coincide con la compra, fabricación o regularización esperada.
+  </Step>
+  <Step title="Sigue las causas">
+    Abre los enlaces de la columna **Causa** para revisar el documento que originó cada entrada o salida.
+  </Step>
+  <Step title="Comprueba el saldo">
+    Recorre **Cambio** y **Stock después** para localizar el movimiento a partir del cual aparece la diferencia.
+  </Step>
+  <Step title="Contrasta la ubicación">
+    Abre la ubicación cuando necesites comparar el lote con el stock almacenado allí.
+  </Step>
+</Steps>
+
+## Revisar el coste
+
+Abre la pestaña **Costes**. Bold muestra el **Coste unitario** y los componentes que lo forman.
+
+Cada componente indica su tipo, el documento o lote relacionado, la proporción y su coste unitario. Usa estos enlaces para comprobar si la diferencia procede de una compra, una OF o un lote componente.
+
+<Warning>
+  No sustituyas un lote por otro para cuadrar una incidencia. Conserva la referencia física real y corrige el movimiento o el documento que explique la diferencia.
+</Warning>
+
+## Relacionado
+
+- [Lotes](/es/conceptos/almacen/lotes)
+- [Stock y movimientos](/es/conceptos/almacen/stock-y-movimientos)
+- [Investigar diferencias de stock](/es/ayuda/almacen/investigar-diferencias-de-stock)
+- [Valoración del inventario](/es/ayuda/costes/valoracion-inventario)

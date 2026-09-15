@@ -5,23 +5,31 @@ description: "Gestiona empleados, jornadas, calendarios y turnos para coordinar 
 
 El módulo Personal mantiene empleados y programación básica para fabricación, mantenimiento y análisis de productividad.
 
+## Áreas de trabajo
+
+<Columns cols={2}>
+  <Card title="Registrar un empleado" icon="user-plus" href="/es/ayuda/personal/empleados">
+    Crea empleados para asignar trabajo, registrar actividad y calcular costes.
+  </Card>
+  <Card title="Configurar turnos y calendarios" icon="calendar-range" href="/es/ayuda/personal/configurar-turnos-y-calendarios">
+    Define jornadas, patrones de turno, festivos y excepciones locales.
+  </Card>
+  <Card title="Asignar horarios a empleados" icon="clock" href="/es/ayuda/personal/configurar-horarios">
+    Aplica un calendario, un turno y excepciones a cada empleado.
+  </Card>
+</Columns>
+
 ## Orden recomendado
 
 <Steps>
   <Step title="Registrar un empleado">
     Registra las personas que participan en producción, mantenimiento o costes.
   </Step>
-  <Step title="Definir jornadas">
-    Crea horarios base antes de programar turnos.
+  <Step title="Configurar turnos y calendarios">
+    Crea las jornadas base, compón los patrones de turno y registra festivos o cierres por sede.
   </Step>
-  <Step title="Programar turnos">
-    Define la jornada laboral, los días consecutivos y su posición en la secuencia.
-  </Step>
-  <Step title="Añadir calendarios locales">
-    Aplica festivos, cierres y excepciones por centro o equipo.
-  </Step>
-  <Step title="Configurar el horario de los empleados">
-    Define jornadas, calendarios locales y turnos para planificar capacidad y registrar trabajo.
+  <Step title="Asignar horarios a empleados">
+    Aplica el turno, el calendario local y las excepciones que correspondan a cada persona.
   </Step>
 </Steps>
 

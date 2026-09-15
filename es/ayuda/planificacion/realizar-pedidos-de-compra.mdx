@@ -1,39 +1,71 @@
 ---
 title: "Crear un pedido de compra"
-description: "Convierte recomendaciones de aprovisionamiento en pedidos de compra para un proveedor."
+description: "Crea un pedido de compra desde el asistente o registra directamente lo acordado con un proveedor."
 ---
 
-Un **pedido de compra** convierte una necesidad de aprovisionamiento en una transacción de compra.
+Un pedido de compra convierte una necesidad de aprovisionamiento en un compromiso con un proveedor. Puedes generarlo desde una recomendación del **Asistente de compras** o crearlo manualmente cuando ya sepas qué pedir.
 
-## Cómo generar un pedido de compra con el asistente
+## Elegir el punto de partida
 
-El asistente de compras analiza automáticamente las necesidades de inventario de cada proveedor y te sugiere las cantidades exactas a comprar para no quedarte sin stock.
+| Opción | Cuándo usarla |
+| --- | --- |
+| Asistente de compras | Cuando quieras calcular y agrupar las necesidades según stock, demanda y plazos. |
+| Creación manual | Cuando ya hayas acordado los artículos y las cantidades con el proveedor. |
 
-Ruta: **Planificación > Asistente de compras > Línea Proveedor**
+## Crear el pedido desde el asistente
 
-1. Define la fecha límite en el campo **Necesidades hasta** de la esquina superior derecha. El sistema calculará la propuesta teniendo en cuenta la demanda prevista hasta ese día.
-2. Revisa la propuesta. Para cada artículo del proveedor verás la siguiente información:
+**Ruta:** **Planificación > Asistente de compras > Proveedor**
 
-Stock actual, entrante y saliente: el estado actual de tus almacenes y los compromisos pendientes.
-
-Punto de pedido: el nivel mínimo de inventario configurado.
-
-Propuesta: la cantidad calculada automáticamente que necesitas pedir.
-
-3. Ajusta o valida las cantidades.
-
-Modificar manualmente: puedes cambiar el número dentro del recuadro de la columna propuesta si deseas ajustar la cantidad.
-
-Icono recargar (flecha circular): restablece el valor al cálculo inicial sugerido por el sistema.
-
-Icono limpiar: te deja en blanco el recuadro de la propuesta para que puedas ajustar la cantidad.
-
-4. Consulta la información detallada. Al seleccionar un artículo, en la parte inferior de la pantalla se activarán tres paneles:
-   - **Pedidos de compra:** historial de pedidos abiertos.
-   - **Previsión de stock:** proyección de cómo evolucionará el inventario en los próximos días.
-   - **Histórico de consumos:** registro de las salidas y ventas pasadas.
-5. Genera el pedido. Tras revisar las cantidades, pulsa **Generar pedido** en la esquina inferior derecha. Bold creará un pedido de compra en borrador para el proveedor. Ábrelo con **Ver pedido**, revisa sus líneas y confírmalas cuando el compromiso sea firme.
+<Steps>
+  <Step title="Define el horizonte">
+    Indica en **Necesidades hasta** la fecha límite que debe usar el cálculo. El asistente revisará la demanda prevista hasta ese día.
+  </Step>
+  <Step title="Revisa la propuesta">
+    Comprueba el stock actual, entrante y saliente, el punto de pedido y la cantidad propuesta para cada artículo.
+  </Step>
+  <Step title="Ajusta las cantidades">
+    Modifica la propuesta cuando sea necesario. Usa el icono de recarga para recuperar el cálculo inicial o limpia el campo para excluir el artículo del pedido actual.
+  </Step>
+  <Step title="Consulta el detalle">
+    Selecciona un artículo para revisar **Pedidos de compra**, **Previsión de stock** e **Histórico de consumos**.
+  </Step>
+  <Step title="Genera el pedido">
+    Pulsa **Generar pedido**. Bold creará un borrador para el proveedor. Ábrelo con **Ver Pedido** y revisa sus líneas.
+  </Step>
+  <Step title="Confirma las líneas">
+    Confirma cada línea cuando el compromiso sea firme. La cantidad confirmada pasa a formar parte del suministro previsto.
+  </Step>
+</Steps>
 
 <Tip>
-  El asistente ya agrupa las necesidades por proveedor. Revisa la fecha esperada y la cantidad de cada línea antes de confirmarla.
+  El asistente agrupa las necesidades por proveedor. Revisa la fecha esperada y la cantidad de cada línea antes de confirmarla.
 </Tip>
+
+## Crear el pedido manualmente
+
+**Ruta:** **Planificación > Pedidos de compra**
+
+<Steps>
+  <Step title="Crea el pedido">
+    Pulsa **Crear nuevo pedido**, selecciona el proveedor y completa, si procede, **Nº pedido**, **Nº pedido del proveedor**, **Descripción corta** y **Notas**. Pulsa **Crear** para guardar el borrador.
+  </Step>
+  <Step title="Añade las líneas">
+    Pulsa **Añadir línea**. Selecciona el artículo e indica **Cantidad**, **Fecha entrega**, **Precio total** y **Notas** cuando correspondan.
+  </Step>
+  <Step title="Confirma cada línea">
+    Abre la línea, revisa el detalle y pulsa **Confirmar**. La cantidad confirmada pasa a formar parte del suministro previsto.
+  </Step>
+  <Step title="Registra la llegada">
+    Cuando llegue el material, pulsa **Crear recepción** desde el pedido o crea la recepción desde **Almacén > Recepciones**.
+  </Step>
+</Steps>
+
+<Warning>
+  Cancelar una línea confirmada anula ese stock entrante y puede afectar a la planificación de otros artículos.
+</Warning>
+
+## Siguiente paso
+
+<Card title="Recibir un pedido de compra" icon="calendar-check" href="/es/ayuda/compras/recibir-pedido-de-compra">
+  Registra la llegada del material y actualiza las cantidades recibidas.
+</Card>

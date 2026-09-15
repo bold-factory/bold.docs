@@ -7,11 +7,31 @@ En Bold usamos **partes de trabajo** para registrar las intervenciones sobre los
 
 Puedes crear y preparar el parte desde el módulo de **Mantenimiento** o si el técnico trabaja desde una tablet o un puesto compartido, puede crearlo desde **Modo de trabajo**.
 
+## Antes de empezar
+
+- Crea el activo y las causas que vas a utilizar.
+- Define acciones reutilizables si quieres que el técnico siga comprobaciones o tareas estandarizadas.
+- Para trabajar desde **modo de trabajo**, selecciona un empleado activo.
+- Comprueba que el técnico tiene acceso a mantenimiento y a los artículos que puede registrar como material consumido.
+
 ## Crear el parte desde el modo de gestión
 
 **Ruta:** **Mantenimiento \> Partes \> Añadir nuevo**
 
-Selecciona el tipo de parte, el activo y la causa principal. También puedes indicar el responsable, el código y las notas que debe leer.
+<Steps>
+  <Step title="Crea el parte">
+    Selecciona el tipo de parte, el activo y la causa principal. También puedes indicar el responsable, el código y las notas que debe leer.
+  </Step>
+  <Step title="Añade el trabajo previsto">
+    Incorpora las acciones que debe completar el técnico. Puedes registrar una acción ya definida y añadir observaciones para esta intervención.
+  </Step>
+  <Step title="Registra la ejecución">
+    Añade los materiales consumidos y los tiempos de los empleados que intervienen.
+  </Step>
+  <Step title="Revisa y completa">
+    Comprueba causas, acciones, tiempos y materiales antes de cerrar el parte.
+  </Step>
+</Steps>
 
 <Note>
   Recuerda que en la columna de **Acciones** puedes entrar a la línea creada para tener más información, modificar o añadir datos.
@@ -39,8 +59,66 @@ En la ventana del parte creado tienes las siguientes pestañas:
   </Step>
 </Steps>
 
+## Trabajar desde el modo de trabajo
+
+**Ruta:** **Modo de trabajo > Mantenimiento**
+
+El modo de trabajo organiza los partes en **Mis partes**, **Todos los partes** y **Nuevo parte**. **Mis partes** muestra los partes cuyo responsable principal es el empleado activo. **Todos los partes** permite localizar otros trabajos y asignarte a ellos.
+
+### Crear un parte en planta
+
+<Steps>
+  <Step title="Selecciona Nuevo parte">
+    Abre la pestaña **Nuevo parte**.
+  </Step>
+  <Step title="Describe la intervención">
+    Selecciona el tipo de parte, el activo y la causa. El código y las notas son opcionales.
+  </Step>
+  <Step title="Crea el parte">
+    Haz clic en **Crear**. El empleado activo queda como responsable principal y el parte se abre en **Mis partes**.
+  </Step>
+</Steps>
+
+### Ejecutar el trabajo
+
+<Steps>
+  <Step title="Abre el parte">
+    Búscalo en **Mis partes** o **Todos los partes**. Puedes ocultar partes no empezados o finalizados y buscar por código, activo o causa.
+  </Step>
+  <Step title="Inicia el registro de tiempo">
+    Haz clic en **Comenzar**, **Reanudar** o **Asignarme**, según el estado del parte. Bold abre un registro de tiempo para el empleado activo.
+  </Step>
+  <Step title="Consulta las instrucciones">
+    Abre **Información** para leer las notas del parte.
+  </Step>
+  <Step title="Registra acciones">
+    En **Acciones**, completa las tareas planificadas o añade una acción. Según su tipo, registra una confirmación, un resultado de sí/no, un número, texto, imagen o archivo.
+  </Step>
+  <Step title="Registra materiales">
+    En **Materiales**, selecciona el artículo consumido, introduce la cantidad y haz clic en **Añadir material**.
+  </Step>
+  <Step title="Detén el tiempo si interrumpes el trabajo">
+    Haz clic en **Parar** para cerrar tu registro de tiempo. Después podrás reanudar el parte.
+  </Step>
+  <Step title="Finaliza el parte">
+    Cuando la intervención esté terminada, haz clic en **Finalizar** y confirma el cierre.
+  </Step>
+</Steps>
+
+<Warning>
+  El modo de trabajo no permite revertir la finalización. Mientras el parte esté completado, no puedes añadir registros de tiempo, materiales ni acciones. Si necesitas reabrirlo, entra en **Mantenimiento > Partes**, abre el parte completado y usa **Deshacer finalización**.
+</Warning>
+
 ## Recomendaciones
 
 - Usa causas estables para poder analizar recurrencia.
 - Añade acciones antes de empezar si quieres que el técnico siga un checklist.
-- Completa el parte cuando acabes el trabajo físico para tener registros de tiempo precisos.
+- Usa **Parar** cuando interrumpas el trabajo para que el tiempo registrado represente la intervención real.
+- Revisa materiales y resultados antes de finalizar.
+
+## Relacionado
+
+- [Partes de trabajo](/es/conceptos/mantenimiento/partes-de-trabajo)
+- [Configurar el mantenimiento](/es/ayuda/mantenimiento/como-configurar-el-mantenimiento)
+- [Modo de trabajo](/es/conceptos/modo-de-trabajo)
+- [Costes de partes de trabajo](/es/ayuda/costes/partes-de-trabajo)

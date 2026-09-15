@@ -1,0 +1,61 @@
+---
+title: "Configurar costes del personal"
+description: "Revisa y actualiza el coste por hora de cada empleado para calcular mano de obra prevista y real."
+---
+
+Configura el coste por hora de cada empleado para que los tiempos registrados puedan formar parte del coste de fabricación y mantenimiento.
+
+## Antes de empezar
+
+- Necesitas acceso a **Costes > Empleados** para consultar los importes.
+- Necesitas permiso para editar empleados si vas a cambiar su coste por hora.
+- El empleado debe existir en **Personal > Empleados**.
+- Calcula un coste horario coherente con el criterio económico de tu empresa.
+
+Una forma de estimarlo es dividir el coste laboral anual que quieras imputar entre las horas efectivas anuales:
+
+```text
+Coste por hora = coste laboral anual / horas efectivas anuales
+```
+
+## Revisar los costes horarios
+
+**Ruta:** **Costes > Objetos de coste > Empleados**
+
+<Steps>
+  <Step title="Localiza al empleado">
+    Busca por código o nombre en **Costes por empleado**.
+  </Step>
+  <Step title="Revisa el importe">
+    Consulta la columna **Coste/hora** y compárala con el criterio definido por tu empresa.
+  </Step>
+  <Step title="Abre el empleado">
+    En **Acciones**, entra en su ficha para actualizar el importe.
+  </Step>
+  <Step title="Actualiza el coste">
+    Introduce el nuevo valor en **Coste por hora (€)** y haz clic en **Guardar**.
+  </Step>
+</Steps>
+
+## Qué cálculos usan este dato
+
+| Uso | Cómo interviene el coste horario |
+| --- | --- |
+| Fabricación | Los registros de tiempo del empleado aportan coste real de mano de obra. |
+| Mantenimiento | Los tiempos registrados en un parte aportan coste de mano de obra al parte. |
+| Planificación | Cuando todavía no se conoce el empleado que ejecutará una operación, Bold puede mostrar costes previstos basados en promedios. |
+
+<Warning>
+  Usa el mismo criterio para todos los empleados. Mezclar salario bruto, coste empresarial y tarifas internas produce comparaciones poco fiables.
+</Warning>
+
+## Comprobar el resultado
+
+Después de actualizar el coste, vuelve a **Costes > Empleados** y confirma el importe. Para revisar su efecto operativo, consulta una orden de fabricación o un parte con tiempo registrado por ese empleado.
+
+## Relacionado
+
+- [Empleados](/es/conceptos/personal/empleados)
+- [Coste teórico vs coste real](/es/conceptos/costes/coste-teorico-vs-real)
+- [Costes de órdenes de fabricación](/es/ayuda/costes/ordenes-de-fabricacion)
+- [Costes de partes de trabajo](/es/ayuda/costes/partes-de-trabajo)

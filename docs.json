@@ -31,6 +31,48 @@
       }
     ]
   },
+  "redirects": [
+    {
+      "source": "/es/ayuda/primeros-pasos/flujo-basico-de-trabajo",
+      "destination": "/es/ayuda/primeros-pasos/introduccion"
+    },
+    {
+      "source": "/es/ayuda/planificacion/crear-pedido-de-compra-manualmente",
+      "destination": "/es/ayuda/planificacion/realizar-pedidos-de-compra"
+    },
+    {
+      "source": "/es/ayuda/personal/definir-jornadas",
+      "destination": "/es/ayuda/personal/configurar-turnos-y-calendarios"
+    },
+    {
+      "source": "/es/ayuda/personal/programar-turnos",
+      "destination": "/es/ayuda/personal/configurar-turnos-y-calendarios"
+    },
+    {
+      "source": "/es/ayuda/personal/anadir-calendarios-locales",
+      "destination": "/es/ayuda/personal/configurar-turnos-y-calendarios"
+    },
+    {
+      "source": "/es/ayuda/almacen/anadir-transportes",
+      "destination": "/es/ayuda/almacen/planificar-una-carga"
+    },
+    {
+      "source": "/es/ayuda/almacen/controlar-ordenes-de-carga",
+      "destination": "/es/ayuda/almacen/planificar-una-carga"
+    },
+    {
+      "source": "/es/ayuda/almacen/preparar-materiales-para-una-carga",
+      "destination": "/es/ayuda/almacen/planificar-una-carga"
+    },
+    {
+      "source": "/es/ayuda/produccion/ver-actividad-de-los-empleados",
+      "destination": "/es/ayuda/produccion/ver-progreso-en-la-produccion"
+    },
+    {
+      "source": "/es/ayuda/produccion/ver-estado-de-las-estaciones",
+      "destination": "/es/ayuda/produccion/ver-progreso-en-la-produccion"
+    }
+  ],
   "navigation": {
     "languages": [
       {
@@ -45,9 +87,7 @@
                 "group": "Primeros pasos",
                 "icon": "sparkles",
                 "root": "es/ayuda/primeros-pasos/introduccion",
-                "directory": "card",
                 "pages": [
-                  "es/ayuda/primeros-pasos/flujo-basico-de-trabajo",
                   "es/ayuda/primeros-pasos/preparar-datos-base",
                   "es/ayuda/primeros-pasos/configurar-receta-minima",
                   "es/ayuda/primeros-pasos/crear-pedido-y-lanzar-of",
@@ -58,7 +98,6 @@
                 "group": "Preparar catálogo",
                 "icon": "boxes",
                 "root": "es/ayuda/articulos/introduccion",
-                "directory": "card",
                 "pages": [
                   "es/ayuda/articulos/definir-propiedades",
                   "es/ayuda/articulos/crear-un-producto",
@@ -71,7 +110,6 @@
                 "group": "Vender",
                 "icon": "badge-dollar-sign",
                 "root": "es/ayuda/ventas/vender",
-                "directory": "card",
                 "pages": [
                   "es/ayuda/ventas/clientes",
                   "es/ayuda/ventas/introduccion",
@@ -84,12 +122,10 @@
                 "group": "Comprar",
                 "icon": "shopping-cart",
                 "root": "es/ayuda/planificacion/configuracion",
-                "directory": "card",
                 "pages": [
                   "es/ayuda/planificacion/proveedores",
                   "es/ayuda/planificacion/asistente-de-compras",
                   "es/ayuda/planificacion/realizar-pedidos-de-compra",
-                  "es/ayuda/planificacion/crear-pedido-de-compra-manualmente",
                   "es/ayuda/compras/recibir-pedido-de-compra"
                 ]
               },
@@ -97,7 +133,6 @@
                 "group": "Fabricar",
                 "icon": "factory",
                 "root": "es/ayuda/produccion/introduccion",
-                "directory": "card",
                 "pages": [
                   "es/ayuda/produccion/crear-recursos",
                   {
@@ -128,15 +163,15 @@
                 ]
               },
               {
-                "group": "Control del stock",
+                "group": "Gestionar almacén",
                 "icon": "warehouse",
                 "root": "es/ayuda/almacen/introduccion",
-                "directory": "card",
                 "pages": [
                   "es/ayuda/almacen/aprovisionar-materias-primas",
                   "es/ayuda/almacen/ajustar-stock",
                   "es/ayuda/almacen/hacer-inventario",
                   "es/ayuda/almacen/investigar-diferencias-de-stock",
+                  "es/ayuda/almacen/investigar-trazabilidad-de-un-lote",
                   {
                     "group": "Tener múltiples ubicaciones",
                     "pages": [
@@ -147,18 +182,16 @@
                   },
                   {
                     "group": "Gestionar cargas",
-                    "root": "es/ayuda/almacen/controlar-ordenes-de-carga",
+                    "root": "es/ayuda/almacen/planificar-una-carga",
                     "pages": [
-                      "es/ayuda/almacen/anadir-transportes",
-                      "es/ayuda/almacen/planificar-una-carga",
-                      "es/ayuda/almacen/preparar-materiales-para-una-carga",
                       "es/ayuda/almacen/cargar-y-cerrar-una-expedicion"
                     ]
                   },
                   {
                     "group": "Recepciones",
                     "pages": [
-                      "es/ayuda/almacen/recibir-con-albaran"
+                      "es/ayuda/almacen/recibir-con-albaran",
+                      "es/ayuda/almacen/configurar-y-completar-controles-de-recepcion"
                     ]
                   },
                   "es/ayuda/almacen/trabajar-con-bultos-y-contenedores"
@@ -168,7 +201,6 @@
                 "group": "Mantenimiento",
                 "icon": "wrench",
                 "root": "es/ayuda/mantenimiento/introduccion",
-                "directory": "card",
                 "pages": [
                   "es/ayuda/mantenimiento/como-configurar-el-mantenimiento",
                   "es/ayuda/mantenimiento/crear-parte-de-trabajo",
@@ -179,12 +211,9 @@
                 "group": "Gestionar personal",
                 "icon": "users",
                 "root": "es/ayuda/personal/introduccion",
-                "directory": "card",
                 "pages": [
                   "es/ayuda/personal/empleados",
-                  "es/ayuda/personal/programar-turnos",
-                  "es/ayuda/personal/definir-jornadas",
-                  "es/ayuda/personal/anadir-calendarios-locales",
+                  "es/ayuda/personal/configurar-turnos-y-calendarios",
                   "es/ayuda/personal/configurar-horarios"
                 ]
               },
@@ -192,26 +221,24 @@
                 "group": "Analizar datos",
                 "icon": "chart-line",
                 "root": "es/ayuda/analisis/introduccion",
-                "directory": "card",
                 "pages": [
                   "es/ayuda/produccion/ver-oee-por-estacion",
                   "es/ayuda/produccion/ver-evolucion-del-oee",
-                  "es/ayuda/produccion/ver-actividad-de-los-empleados",
-                  "es/ayuda/produccion/ver-estado-de-las-estaciones",
                   "es/ayuda/produccion/ver-progreso-en-la-produccion",
                   "es/ayuda/produccion/revisar-oee-y-paradas",
                   "es/ayuda/costes/introduccion",
                   "es/ayuda/costes/preparar-datos-de-coste",
+                  "es/ayuda/costes/analizar-costes-de-articulos",
+                  "es/ayuda/costes/configurar-costes-del-personal",
                   "es/ayuda/costes/ordenes-de-fabricacion",
                   "es/ayuda/costes/partes-de-trabajo",
                   "es/ayuda/costes/valoracion-inventario"
                 ]
               },
               {
-                "group": "Automatizaciones",
+                "group": "IA, informes y automatizaciones",
                 "icon": "sparkles",
                 "root": "es/ayuda/smart-factory/introduccion",
-                "directory": "card",
                 "pages": [
                   "es/ayuda/smart-factory/informes-powerbi",
                   "es/ayuda/smart-factory/consultar-o-delegar-con-ia",
@@ -219,15 +246,16 @@
                 ]
               },
               {
-                "group": "Configuración",
+                "group": "Administrar la empresa",
                 "icon": "settings",
                 "root": "es/ayuda/panel-de-control/introduccion",
-                "directory": "card",
                 "pages": [
                   "es/ayuda/usuarios-y-permisos/invitar-usuarios",
+                  "es/ayuda/panel-de-control/vincular-telegram",
                   "es/ayuda/panel-de-control/disenar-roles-por-responsabilidad",
                   "es/ayuda/panel-de-control/configuracion-de-empresa",
                   "es/ayuda/panel-de-control/importar-datos",
+                  "es/ayuda/panel-de-control/exportar-datos",
                   "es/ayuda/panel-de-control/gestionar-archivos",
                   "es/ayuda/panel-de-control/crear-etiquetas-y-codigos",
                   "es/ayuda/panel-de-control/configurar-webhooks",

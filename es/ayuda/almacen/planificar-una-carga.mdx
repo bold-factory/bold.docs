@@ -1,23 +1,82 @@
 ---
-title: "Planificar una carga"
-description: "Agrupa líneas pendientes de envío y programa su orden de carga."
+title: "Planificar y preparar una carga"
+description: "Agrupa mercancía pendiente, programa la orden de carga y solicita su traslado a la ubicación de carga."
 ---
 
-El planificador muestra las líneas de pedidos de venta que todavía tienen cantidad disponible para enviar.
+Una [orden de carga](/es/conceptos/almacen/ordenes-de-carga) agrupa las cantidades de pedidos de venta que saldrán juntas. Antes de ejecutarla, define el transporte, la fecha y la ubicación donde debe quedar preparada la mercancía.
 
-**Ruta:** **Almacén > Planificador de cargas**
+## Registrar los transportes
+
+Los **transportes** representan el vehículo, la agencia, la ruta o el medio que asignas a una orden de carga.
+
+**Ruta:** **Almacén > Cargas y envíos > Transportes**
+
+1. Haz clic en **Crear nuevo transporte**.
+2. Introduce un **Nombre** reconocible, como `SEUR`, `Furgón propio` o `Recogida por el cliente`.
+3. Haz clic en **Crear**.
+
+Registra el transporte antes de planificar la primera carga. En el formulario, es el único campo obligatorio además de las líneas que ya has seleccionado.
+
+## Agrupar la mercancía pendiente
+
+**Ruta:** **Almacén > Cargas y envíos > Planificador de cargas**
+
+La vista de tabla ofrece dos formas de seleccionar la mercancía:
+
+- **Pedidos completos** incluye todas las líneas del pedido que todavía tienen cantidad disponible para cargar.
+- **Líneas** permite elegir cantidades concretas de una o varias líneas.
 
 <Steps>
-  <Step title="Selecciona las líneas">
-    Marca las líneas que quieras incluir e indica, cuando corresponda, la cantidad que se cargará.
+  <Step title="Selecciona pedidos o líneas">
+    Marca los pedidos completos o abre la pestaña **Líneas**. Si trabajas por líneas, indica la **Cantidad a cargar** sin superar la disponible.
   </Step>
-  <Step title="Crea o amplía una orden">
-    Crea una orden de carga nueva o añade las líneas a una existente.
+  <Step title="Elige el destino de la selección">
+    Haz clic en **Crear orden de carga** para iniciar una nueva o en **Añadir a una existente** para ampliar una orden que todavía no ha empezado.
   </Step>
   <Step title="Completa la planificación">
-    Selecciona el **Transporte** y configura, si procede, **Nombre**, **Fecha y hora planificada**, **Ubicación de carga** y **Requiere validación antes de completar**.
-  </Step>
-  <Step title="Revisa el calendario">
-    Usa la vista de calendario para cambiar la fecha de una orden o devolverla a pendientes.
+    Para una orden nueva, selecciona el **Transporte**. Configura también **Nombre**, **Fecha y hora planificada**, **Ubicación de carga** y **Requiere validación antes de completar** según el proceso.
   </Step>
 </Steps>
+
+<Info>
+  Una orden queda **Pendiente de planificar** mientras le falten la fecha, la ubicación de carga o las líneas. Pasa a **Planificada** cuando tiene los tres elementos.
+</Info>
+
+## Programar las cargas en el calendario
+
+Cambia a **Vista de calendario** para organizar las órdenes por semanas o meses.
+
+- Arrastra una orden desde **Sin planificar** hasta el día en que quieras cargarla.
+- Arrastra una orden a otro día para reprogramarla.
+- Devuélvela a **Sin planificar** para retirar su fecha.
+- Haz doble clic en una orden para abrir su detalle.
+
+Si asignas una fecha desde el calendario a una orden que no la tenía, Bold conserva los demás datos y fija la hora a las 08:00. Si la orden ya tenía hora, la mantiene al cambiar de día.
+
+## Revisar la orden y solicitar materiales
+
+**Ruta:** **Almacén > Cargas y envíos > Órdenes de carga**
+
+El listado muestra el estado, el nombre, el transporte, la fecha planificada, la ubicación de carga y el número de líneas y envíos. Usa los filtros **Ocultar canceladas** y **Ocultar completadas** para centrarte en las cargas pendientes.
+
+Abre una orden para revisar sus pestañas **Líneas**, **Envíos**, **Validación** y **Registros de tiempo**. Antes de empezar también puedes modificar sus datos de planificación y añadir o retirar líneas.
+
+Solicita materiales cuando necesites trasladar mercancía hasta la ubicación de carga:
+
+<Steps>
+  <Step title="Comprueba la preparación">
+    Revisa el estado de aprovisionamiento y las cantidades **Listo** y **En camino** de cada línea.
+  </Step>
+  <Step title="Solicita los materiales">
+    Haz clic en **Solicitar materiales**. Esta acción está disponible para órdenes **Planificadas**, **En carga** o **Pausadas** que tengan líneas y no se hayan solicitado antes.
+  </Step>
+  <Step title="Ejecuta los movimientos">
+    El equipo de almacén puede completar los movimientos generados desde **Modo de trabajo > Almacén > Movimientos**.
+  </Step>
+</Steps>
+
+Bold confirma si ha solicitado los materiales o si no queda ninguno pendiente. Cuando la orden queda marcada como solicitada, el botón deja de mostrarse.
+
+## Siguiente paso
+
+Cuando la mercancía esté preparada, [ejecuta y cierra la orden de carga](/es/ayuda/almacen/cargar-y-cerrar-una-expedicion) desde el modo de trabajo.

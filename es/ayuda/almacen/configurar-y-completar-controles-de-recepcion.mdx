@@ -1,0 +1,102 @@
+---
+title: "Configurar y completar controles de recepción"
+description: "Define controles por artículo, añade comprobaciones puntuales y registra sus resultados antes de recibir material."
+---
+
+Los controles de recepción permiten registrar comprobaciones de calidad, cantidad o documentación antes de que el material entre en stock.
+
+Puedes definir controles reutilizables en un artículo o añadir un control puntual a una recepción concreta.
+
+## Antes de empezar
+
+- El artículo debe existir en el catálogo.
+- Para completar un control necesitas un empleado.
+- La recepción debe estar pendiente.
+- Si trabajas desde **modo de trabajo**, selecciona primero el empleado activo.
+
+## Tipos de control
+
+| Tipo | Resultado que se registra |
+| --- | --- |
+| Simple (check) | Confirmación de que la comprobación se ha realizado. |
+| Sí/no | Resultado afirmativo o negativo. |
+| Número | Valor numérico. |
+| Texto | Observación escrita. |
+| Foto | Imagen tomada o seleccionada como evidencia. |
+
+## Definir controles reutilizables por artículo
+
+**Ruta:** **Catálogo > Artículos > Artículo > Controles**
+
+<Steps>
+  <Step title="Añade el control">
+    Haz clic en **Añadir control**.
+  </Step>
+  <Step title="Describe la comprobación">
+    Introduce un nombre que el equipo pueda reconocer y elige el tipo de resultado.
+  </Step>
+  <Step title="Decide si debe bloquear la recepción">
+    Marca **Obligatorio** si el material no puede recibirse sin completar el control.
+  </Step>
+  <Step title="Guarda la definición">
+    Haz clic en **Añadir**. Puedes abrir el control más adelante para modificarlo o eliminarlo.
+  </Step>
+</Steps>
+
+Cuando añades una línea de ese artículo a una recepción, Bold crea una copia de sus controles para esa línea. Si la misma referencia aparece en varias líneas, cada línea conserva sus propios controles.
+
+## Añadir un control puntual a una recepción
+
+**Ruta:** **Almacén > Recepciones > Recepción > Controles**
+
+<Steps>
+  <Step title="Abre la recepción pendiente">
+    Entra en la recepción y abre la pestaña **Controles**.
+  </Step>
+  <Step title="Crea el control">
+    Haz clic en **Añadir control** y completa nombre, tipo y condición **Obligatorio**.
+  </Step>
+  <Step title="Comprueba el alcance">
+    El control añadido desde esta pestaña pertenece a la recepción. Los controles copiados desde un artículo quedan asociados a su línea.
+  </Step>
+</Steps>
+
+## Completar los controles
+
+Puedes registrar resultados desde el modo de gestión o desde el modo de trabajo.
+
+### Desde el modo de gestión
+
+**Ruta:** **Almacén > Recepciones > Recepción > Controles**
+
+<Steps>
+  <Step title="Selecciona el control pendiente">
+    Haz clic en **Completar control** desde el listado o abre su detalle.
+  </Step>
+  <Step title="Identifica al empleado">
+    Selecciona quién ha realizado la comprobación.
+  </Step>
+  <Step title="Registra el resultado">
+    Completa el valor solicitado. En un control de foto, toma o selecciona la imagen.
+  </Step>
+  <Step title="Confirma">
+    Haz clic en **Completar**. El listado muestra el resultado, la fecha y si el control era obligatorio.
+  </Step>
+</Steps>
+
+### Desde el modo de trabajo
+
+**Ruta:** **Modo de trabajo > Almacén > Recepciones > Recepción**
+
+Los controles generales aparecen al comienzo de la recepción. Los controles de artículo aparecen dentro de su línea. Introduce el resultado y usa el botón de confirmación. El empleado activo queda registrado como responsable.
+
+<Warning>
+  **Recibir** queda bloqueado mientras exista algún control obligatorio pendiente. Los controles opcionales pendientes no impiden la recepción.
+</Warning>
+
+## Relacionado
+
+- [Recepciones](/es/conceptos/almacen/recepciones)
+- [Escanear albaranes con IA](/es/ayuda/almacen/recibir-con-albaran)
+- [Recibir pedido de compra](/es/ayuda/compras/recibir-pedido-de-compra)
+- [Modo de trabajo](/es/conceptos/modo-de-trabajo)
