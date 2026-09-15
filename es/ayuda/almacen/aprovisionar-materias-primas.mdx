@@ -3,9 +3,9 @@ title: "Aprovisionar materias primas"
 description: "Solicita las entradas de una operación y trasládalas hasta la ubicación de consumo de la estación."
 ---
 
-Aprovisiona materias primas para trasladar las entradas pendientes de una operación hasta la ubicación donde se consumirán.
+Aprovisiona materias primas para trasladar los materiales pendientes de una operación hasta la ubicación donde se consumirán.
 
-La operación origina la necesidad. Almacén ejecuta el movimiento físico. Consulta [Movimientos de almacén](/es/conceptos/almacen/movimientos-de-almacen) para entender la planificación y las reservas.
+La operación genera la necesidad de material y el equipo de almacén ejecuta el traslado físico. Consulta [Movimientos de almacén](/es/conceptos/almacen/movimientos-de-almacen) para entender la planificación y las reservas.
 
 ## Antes de empezar
 
@@ -20,7 +20,7 @@ Comprueba que:
 Para definir la ubicación, abre **Fabricación > Recursos > Estaciones**, entra en la estación y selecciona **Ubicación de consumo**.
 
 <Warning>
-  Sin ubicación de consumo, Bold conoce los materiales pendientes pero no puede liberar la demanda ni crear el movimiento hacia la estación.
+  Sin una ubicación de consumo, Bold identifica los materiales pendientes, pero no puede planificar el movimiento hacia la estación.
 </Warning>
 
 ## Solicitar los materiales de la operación
@@ -29,10 +29,10 @@ Para definir la ubicación, abre **Fabricación > Recursos > Estaciones**, entra
 
 <Steps>
   <Step title="Revisa las entradas">
-    Comprueba artículos y cantidades pendientes en la OF.
+    Comprueba los artículos y las cantidades pendientes de la OF.
   </Step>
   <Step title="Revisa el estado de aprovisionamiento">
-    El indicador muestra si los materiales no se han solicitado, están pendientes, en camino o listos en la estación.
+    Consulta el indicador para saber si los materiales están sin solicitar, pendientes, en camino o listos en la estación.
   </Step>
   <Step title="Solicita los materiales">
     Haz clic en **Solicitar materiales**.
@@ -59,7 +59,7 @@ Bold reserva primero el stock que ya existe en la ubicación de consumo. Despué
     Sigue la ubicación indicada. Puedes leer su QR o hacer clic en **Ya estoy aquí**.
   </Step>
   <Step title="Confirma la recogida">
-    Comprueba artículo, lote, cantidad o bulto. Haz clic en **Recogido** para cada acción.
+    Comprueba el artículo, el lote, la cantidad o el bulto. Haz clic en **Recogido** para confirmar cada recogida.
   </Step>
   <Step title="Continúa por las paradas">
     Haz clic en **Continuar** al terminar una ubicación. Repite las recogidas que indique el plan.
@@ -91,7 +91,7 @@ Vuelve a la operación o consulta su tarjeta en el modo de trabajo.
 
 Abre **Almacén > Movimientos** en el modo de gestión y busca tareas **Pendientes**.
 
-Revisa **Incidencia de planificación** para saber si falta stock, el bulto no está disponible, su contenido no coincide o existe un conflicto de reserva.
+Revisa **Incidencia de planificación** para saber si falta stock, si el bulto no está disponible, si su contenido no coincide o si existe un conflicto de reserva.
 
 Bold vuelve a intentar la planificación cuando entra stock o se libera una reserva. Si cambia la cantidad pendiente de la operación antes de empezar, recalcula los movimientos todavía no ejecutados.
 

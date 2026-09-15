@@ -9,26 +9,26 @@ Puedes añadir el artículo desde una familia para vincularlos o directamente de
 
 ## Crear el artículo desde el listado
 
-**Ruta:** **Catálogo \> Artículos \> Crear nuevo**
+**Ruta:** **Catálogo > Artículos > Crear nuevo**
 
-Al crear el artículo directamente desde el listado de artículos, el sistema abre un formulario limpio. Como en este caso no estás dentro de la ficha de ninguna familia, el sistema te pide definir desde cero cómo se mide el artículo en el almacén y a qué "familia" pertenece.
+Al crear el artículo desde el listado, el formulario no hereda los datos de ninguna familia. Debes indicar cómo se mide el artículo y, si corresponde, a qué familia pertenece.
 
-### 1. Datos requeridos
+### Datos requeridos
 
 **Nombre:** escribe un nombre completo y reconocible para el artículo, por ejemplo _Perfil de aluminio lacado blanco 2 m_.
 
 **Familia (opcional):** selecciona una familia para vincular el artículo como una de sus variantes. Si lo dejas vacío, el artículo quedará independiente, lo que puede resultar útil para consumibles o EPI.
 
-**Unidad:** es la unidad base con la que se contabiliza el artículo. Si solo existe la unidad con código `ud`, Bold la selecciona automáticamente. Puedes elegir metros, kilogramos, litros u otra unidad configurada. Después de crear el artículo podrás añadir unidades alternativas y su factor de conversión.
+**Unidad:** selecciona la unidad base con la que se contabiliza el artículo. Si solo existe la unidad con código `ud`, Bold la selecciona automáticamente. Puedes elegir metros, kilogramos, litros u otra unidad configurada. Después de crear el artículo, podrás añadir unidades alternativas y su factor de conversión.
 
 **Precisión:** indica la cantidad de decimales que el sistema va a aceptar para este artículo.
 
-- Si se cuenta por piezas enteras (como cajas, motores o ventanas), se deja en `0`.
+- Si se cuenta por piezas enteras, como cajas, motores o ventanas, usa `0`.
 - Si se mide por peso o longitud, como `1,5 m` de cable o `2,75 kg` de resina, indica los decimales necesarios.
 
 **Origen de aprovisionamiento:** define si el artículo se adquiere externamente (**Compra**), se procesa en el taller (**Fabricación**) o no requiere planificación (**Ignorar**).
 
-**Modo de aprovisionamiento:** determina si trabajas **Contra stock** para mantener un almacén mínimo, o **Contra pedido** activando la compra o fabricación únicamente cuando entra un pedido de cliente.
+**Modo de aprovisionamiento:** determina si trabajas **Contra stock** para mantener existencias o **Contra pedido** para activar la compra o fabricación cuando entra un pedido de cliente.
 
 **Permitir múltiples lotes:** si seleccionas **Sí**, Bold conserva separados los lotes según su origen. Los inventarios, consumos y envíos pueden pedir el lote concreto. Si seleccionas **No**, Bold puede fusionarlos para simplificar la gestión a cambio de reducir el detalle de trazabilidad.
 
@@ -38,21 +38,21 @@ Al crear el artículo directamente desde el listado de artículos, el sistema ab
   El código del artículo debe tratarse como identificador estable. Cambiarlo puede afectar búsquedas, integraciones y referencias operativas.
 </Info>
 
-**Descripción (opcional):** espacio para hacer cualquier anotación técnica que ayude al operario a identificar el material.
+**Descripción (opcional):** añade información técnica que ayude a identificar el material.
 
-<Warning>
-  Si el artículo pertenece a una familia y faltan propiedades obligatorias, Bold te pondrá en rojo el artículo (inválido), para solucionarlo rellena las propiedades faltantes.
+<Info>
+  Si al artículo le falta alguna propiedad obligatoria de su familia, Bold lo marca en rojo como no válido. Completa las propiedades que faltan para corregirlo.
 
-  **Ejemplo:** Tienes un producto que se llama "ventana" y tiene como propiedades: altura y material del marco. El artículo "ventana-120-PVC" para que sea válido tiene que tener como mínimo esas propiedades definidas: altura=120cm y material del marco=PVC.
-</Warning>
+  **Ejemplo:** la familia `Ventana` requiere las propiedades **Altura** y **Material del marco**. Para que el artículo `Ventana-120-PVC` sea válido, indica `120 cm` como altura y `PVC` como material del marco.
+</Info>
 
 ## Crear el artículo desde una familia
 
 Al crear el artículo dentro de la ficha de una familia, Bold lo vincula automáticamente a esa familia y propone el nombre de la familia como nombre inicial.
 
-**Ruta:** **Catálogo \> Familias > Familia creada**
+**Ruta:** **Catálogo > Familias > Familia creada**
 
-Completa **Nombre**, **Origen de aprovisionamiento**, **Modo de aprovisionamiento**, **Permitir múltiples lotes**, **Código** y **Descripción**. Después de crear el artículo, abre su ficha para revisar la unidad principal, la precisión decimal, las propiedades y las unidades alternativas.
+Completa **Nombre**, **Origen de aprovisionamiento**, **Modo de aprovisionamiento**, **Permitir múltiples lotes**, **Código** y **Descripción**. Después de crear el artículo, abre su ficha y revisa la unidad principal, la precisión decimal, las propiedades y las unidades alternativas.
 
 <Note>
   **Ejemplos:** `Ventana de aluminio corredera 120x120` o `Ventana de madera rústica`.

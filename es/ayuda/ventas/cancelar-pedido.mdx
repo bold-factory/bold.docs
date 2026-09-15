@@ -3,11 +3,11 @@ title: "Cancelar un pedido"
 description: "Cancela un pedido de venta y revisa cómo afecta a su demanda y a los documentos relacionados."
 ---
 
-Puedes cancelar un pedido entero o por artículos para un mismo cliente.
+Puedes cancelar un pedido completo o solo una de sus líneas.
 
 ## Cancelar el pedido completo
 
-**Ruta:** **Planificación \> Pedidos de venta \> Pedido que deseas cancelar**
+**Ruta:** **Planificación > Pedidos de venta > Pedido que deseas cancelar**
 
 En la parte inferior de la ficha aparece la acción disponible según el estado: **Eliminar** para un borrador o **Cancelar** para un pedido confirmado que todavía admita la cancelación.
 
@@ -15,30 +15,28 @@ Eliminar un borrador borra el pedido. Cancelar un pedido confirmado cancela sus 
 
 ## Cancelar una línea del pedido
 
-**Ruta:** **Planificación \> Pedidos de venta \> Pedido \> Línea que deseas cancelar**
+**Ruta:** **Planificación > Pedidos de venta > Pedido > Línea que deseas cancelar**
 
-En la parte inferior derecha tienes la opción de **Cancelar**.
+En la parte inferior derecha, pulsa **Cancelar**.
 
-Si tienes más de un artículo en el pedido y no has cancelado todo, te seguirá apareciendo en la tabla de **Pedidos de venta** en el estado que corresponda.
+Si el pedido tiene otras líneas activas, seguirá apareciendo en la tabla de **Pedidos de venta** con el estado que corresponda.
 
 ## Deshacer una cancelación
 
-En cualquier momento puedes deshacer la cancelación. Para recuperar un pedido, entra en la línea del artículo y haz clic en **Deshacer cancelación**. La línea quedará en estado borrador para que puedas modificarla y confirmarla de nuevo. Si el pedido tiene varias líneas, tendrás que recuperarlas una por una.
+Para recuperar una línea, ábrela y pulsa **Deshacer cancelación**. La línea volverá al estado de borrador para que puedas modificarla y confirmarla de nuevo. Si cancelaste varias líneas, recupéralas una por una.
 
 ## Límites de la cancelación
 
-Si una línea ya empezó a entregarse, su edición y eliminación quedan limitadas para conservar trazabilidad.
-
-Sí puedes cancelar las unidades restantes.
+Si una línea ya empezó a entregarse, su edición y eliminación quedan limitadas para conservar la trazabilidad. Puedes cancelar las unidades restantes.
 
 ## Consecuencias de la cancelación
 
-Puedes decidir como actuar en caso que se cancele un pedido una vez ya se mandó a la planta de fabricación.
+Configura cómo debe actuar Bold cuando cancelas un pedido que ya ha generado trabajo de fabricación.
 
-**Ruta:** **Panel de control \> Configuración**
+**Ruta:** **Panel de control > Configuración**
 
 En el apartado de **Peticiones de fabricación** puedes seleccionar cómo gestionarlas:
 
 - **Bloquear siempre las órdenes asociadas:** el sistema oculta esas órdenes de la vista de trabajo para que una persona las revise, tanto si la fabricación ya comenzó como si sigue en cola.
 - **Cancelar siempre las órdenes asociadas:** el sistema cancela las órdenes de fabricación asociadas, incluso si el trabajo ya comenzó. Usa esta opción cuando quieras detenerlas definitivamente.
-- **Cancelar si no han empezado; bloquear si ya han empezado:** un híbrido entre las otras dos según el estado de la fabricación.
+- **Cancelar si no han empezado; bloquear si ya han empezado:** aplica una acción u otra según el estado de la fabricación.

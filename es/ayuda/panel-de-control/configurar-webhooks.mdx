@@ -9,14 +9,24 @@ Los **webhooks** permiten que otro sistema reciba una notificación cuando ocurr
 
 ## Crear una suscripción
 
-1. Obtén del sistema receptor una URL HTTPS preparada para procesar el evento.
-2. Pulsa **Suscribirse a un nuevo evento**.
-3. Introduce la **URL** y selecciona el evento.
-4. Pulsa **Crear**.
+<Steps>
+  <Step title="Prepara el sistema receptor">
+    Obtén una URL HTTPS capaz de procesar el evento.
+  </Step>
+  <Step title="Crea la suscripción">
+    Pulsa **Suscribirse a un nuevo evento**.
+  </Step>
+  <Step title="Configura el envío">
+    Introduce la **URL** y selecciona el evento.
+  </Step>
+  <Step title="Guarda la suscripción">
+    Pulsa **Crear**.
+  </Step>
+</Steps>
 
 ## Comprobar los envíos
 
-Abre la pestaña **Notificaciones** de la página de webhooks para consultar el evento, la fecha, la versión, el estado, la URL y el contenido enviado.
+Abre la pestaña **Notificaciones** para consultar el evento, la fecha, la versión, el estado, la URL y el contenido enviado.
 
 <Warning>
   El sistema receptor debe validar la autenticidad del mensaje y responder correctamente. No incluyas datos sensibles en una URL de destino.

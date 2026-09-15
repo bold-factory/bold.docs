@@ -5,11 +5,9 @@ description: "Organiza puestos, máquinas y herramientas para planificar y ejecu
 
 Prepara las máquinas, líneas, mesas y zonas donde se realizará el trabajo. En Bold, estos elementos se configuran como **recursos** para que cada operación pueda ejecutarse en una estación compatible y con las herramientas necesarias. Consulta [Recursos](/es/conceptos/fabricacion/recursos) para conocer el modelo completo.
 
-<Note>
-  **Ejemplos:** maquinaria fija o automatizada, líneas de producción, puestos manuales, zonas de inspección y servicios.
-</Note>
+Los recursos pueden ser maquinaria fija o automatizada, líneas de producción, puestos manuales, zonas de inspección o servicios.
 
-**Ruta:** **Fabricación \> Recursos**
+**Ruta:** **Fabricación > Recursos**
 
 Desde esta vista se gestionan:
 
@@ -22,42 +20,22 @@ Desde esta vista se gestionan:
 
 ### 1. Añadir un área
 
-**Nombre:** aquí debes colocar el nombre técnico o común con el que todo el mundo en la fábrica conoce a esa **zona, sección, planta o línea principal**.
+**Nombre:** escribe el nombre técnico o habitual de la zona, sección, planta o línea principal. Por ejemplo: `Inyección de plástico`, `Mecanizado`, `Línea de ensamblaje` o `Planta 1 - Logística`.
 
-<Note>
-  **Ejemplos:** inyección de plástico, mecanizado, línea de ensamblaje o planta 1-logística.
-</Note>
-
-**Descripción (opcional):** sirve para detallar qué se hace exactamente en esa zona, qué tipo de producto se procesa o alguna observación clave de la distribución. Esto ayuda a dar contexto a los supervisores, responsables de turno o nuevos operarios que utilicen Bold.
-
-<Note>
-  **Ejemplo:** para el área `Inyección de plástico`, usa la descripción `Zona destinada al moldeo de piezas plásticas de alta densidad. Incluye las prensas hidráulicas de la 1 a la 5.`
-</Note>
+**Descripción (opcional):** explica qué se hace en el área, qué productos se procesan o qué particularidad de la distribución debe conocer el equipo. Por ejemplo: `Zona de moldeo de piezas plásticas de alta densidad. Incluye las prensas hidráulicas de la 1 a la 5.`
 
 ### 2. Añadir una estación
 
-**Nombre:** es el identificador único del punto de trabajo. Debe ser un nombre claro y específico que los operarios reconozcan al instante en sus pantallas.
+**Nombre:** usa un identificador claro y específico que los operarios puedan reconocer en sus pantallas. Por ejemplo: `Línea de etiquetado automático`, `Estación de inspección visual 2` o `Torno CNC Haas 01`.
 
-<Note>
-  **Ejemplos:** línea de etiquetado automático, estación de inspección visual 2 o torno CNC Haas 01.
-</Note>
+**Descripción (opcional):** añade contexto técnico, restricciones o notas sobre el trabajo que se realiza en la estación. Por ejemplo: `Prensa para moldear piezas metálicas de hasta 5 mm de espesor.`
 
-**Descripción (opcional):** sirve para añadir contexto técnico, restricciones o notas que ayuden a los supervisores y planificadores a saber qué se hace exactamente ahí.
-
-<Note>
-  **Ejemplo:** `Prensa para moldeado de piezas metálicas de hasta 5 mm de espesor.`
-</Note>
-
-**Capacidad:** este campo le dice a Bold cuánto trabajo puede procesar este punto a la vez.
+**Capacidad:** indica si la estación puede procesar varios trabajos a la vez.
 
 - **Si no marcas la casilla**, el sistema entiende que la estación tiene un límite estricto. Por ejemplo, una máquina CNC, un robot de soldadura o un puesto manual pueden procesar una pieza u orden a la vez.
 - **Si marcas la casilla**, indicas que la estación puede procesar trabajo simultáneo. Por ejemplo, puede ser un horno industrial, una cinta transportadora o una zona de secado.
 
-**Área:** selecciona el área a la que pertenece la estación.
-
-<Note>
-  **Ejemplo:** si la estación es `Mesa de ensamblaje B`, selecciona el área `Montaje final`.
-</Note>
+**Área:** selecciona el área a la que pertenece la estación. Por ejemplo, asigna `Mesa de ensamblaje B` al área `Montaje final`.
 
 <Note>
   Todas las estaciones deben pertenecer a un área.
@@ -73,21 +51,17 @@ Desde esta vista se gestionan:
 
 ### 3. Añadir una herramienta
 
-Nos referimos con herramienta al **elemento auxiliar, molde, matriz, utillaje o consumible crítico** que se monta y desmonta en las estaciones para poder fabricar un producto específico.
+Una **herramienta** es un elemento auxiliar, molde, matriz, utillaje o consumible crítico que se monta y desmonta en una estación para fabricar un producto concreto.
 
-**Nombre:** introduce el nombre técnico, código de inventario o identificador único con el que tu equipo de producción y mantenimiento reconoce ese utillaje.
+**Nombre:** introduce el nombre técnico, el código de inventario o el identificador con el que los equipos de producción y mantenimiento reconocen el utillaje. Por ejemplo: `Molde carcasa frontal AC-40`.
 
-<Note>
-  **Ejemplo:** `Molde carcasa frontal AC-40` sería una herramienta en una fábrica de inyección de plástico.
-</Note>
+<Tip>
+  Registra el elemento como herramienta si sustituirlo obliga a detener la máquina y cambiar su configuración.
+</Tip>
 
-<Note>
-  Si cambiar este elemento por otro implica detener la máquina y perder tiempo de configuración, entonces **es una herramienta** y debe registrarse aquí.
-</Note>
+**Ruta:** **Fabricación > Recursos > Herramienta**
 
-**Ruta:** **Fabricación \> Recursos \> Herramienta**
-
-**Asignar características:** esta información sirve principalmente para **filtrar búsquedas rápidas** y para **automatizar la compatibilidad** (evitar que el sistema asigne un trabajo a una herramienta que no está capacitada para hacerlo).
+**Asignar características:** añade propiedades para filtrar herramientas y determinar su compatibilidad con cada trabajo.
 
 <Note>
   **Ejemplo:** para la herramienta `Molde carcasa frontal X`, asigna estas características:

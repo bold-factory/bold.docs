@@ -3,24 +3,24 @@ title: "Valoración del inventario"
 description: "Consulta el valor actual de stock por artículo, lote y ubicación."
 ---
 
-Usa **Valoración del inventario** para ver el valor económico del stock disponible. Bold calcula el valor desde las unidades de stock con cantidad positiva y el coste por unidad de sus lotes.
+Usa **Valoración del inventario** para consultar el valor económico del stock disponible. Bold lo calcula a partir de las existencias positivas y del coste por unidad de sus lotes.
 
-## Qué estás revisando
+## Datos que puedes revisar
 
 | Campo | Qué significa |
 | --- | --- |
 | Valor total del inventario | Suma del valor de todas las unidades de stock positivas. |
-| Artículo | artículo valorado. |
+| Artículo | Artículo valorado. |
 | Ubicación | Lugar donde está el stock. |
 | Lote | Lote que aporta el coste por unidad. |
 | Stock | Cantidad disponible en la unidad del artículo. |
 | Coste/ud | Coste por unidad del lote. |
-| Valor total | stock x coste/ud. |
+| Valor total | Stock multiplicado por el coste por unidad. |
 
 ## Cómo se calcula
 
 ```text
-Valor de una línea = stock disponible x coste por unidad del lote
+Valor de una línea = stock disponible × coste por unidad del lote
 Valor total del inventario = suma de las líneas con stock positivo
 ```
 
@@ -37,7 +37,7 @@ El origen del lote determina el coste usado:
 
 <Steps>
   <Step title="Abre Costes">
-    Entra en **Costes** **\> Almacén** **(Valoración del inventario)**.
+    Entra en **Costes > Almacén > Valoración del inventario**.
   </Step>
   <Step title="Revisa el valor total">
     Usa el total como visión rápida del inventario valorado.

@@ -3,24 +3,22 @@ title: "Recibir un pedido de compra"
 description: "Registra material recibido desde un pedido de compra y actualiza stock y cantidades recibidas."
 ---
 
-Recibir un pedido de compra crea una **recepción** vinculada a sus líneas. Al recibir, Bold aumenta stock y actualiza las cantidades recibidas del pedido.
+Recibir un pedido de compra crea una **recepción** vinculada a sus líneas. Al recibirla, Bold aumenta el stock y actualiza las cantidades recibidas del pedido.
 
 <Info>
   Necesitas acceso de lectura para consultar recepciones y acceso de edición para crear, recibir, revertir o completar controles.
 </Info>
 
-Hay dos tipos de recepción en Bold:
+Una recepción puede ser completa o parcial:
 
-- **Recepción completa:** ocurre cuando el proveedor entrega **la totalidad** de los artículos solicitados en el pedido. Al recibirse todo lo esperado, el proceso de entrega de ese pedido se da por cerrado.
-- **Recepción parcial:** significa que se ha recibido **una cantidad menor** a la solicitada. En este caso, la línea del pedido quedará registrada como _parcialmente recibida_, manteniendo el resto de los artículos como **pendientes** hasta que el proveedor realice la entrega restante.
+- **Recepción completa:** registra todos los artículos y cantidades pendientes del pedido.
+- **Recepción parcial:** registra una cantidad menor que la solicitada. La línea queda parcialmente recibida y el resto continúa pendiente.
 
 ## Crear una recepción desde el pedido
 
-En el modo de gestión:
-
 **Ruta:** **Planificación > Pedidos de compra > Pedido > Crear recepción**
 
-### Crear nueva recepción
+### Completar la recepción
 
 Para registrar la llegada de la mercancía, completa los siguientes campos:
 
@@ -30,58 +28,57 @@ Para registrar la llegada de la mercancía, completa los siguientes campos:
 
 **Ubicación de recepción (opcional):** selecciona dónde se deposita el material.
 
-Si eliges una ubicación, puedes mantener activada la opción **Recibir inmediatamente** para crear y recibir el documento en una sola acción. Si la desactivas o no indicas una ubicación, la recepción se crea en estado pendiente para revisarla antes de pulsar **Recibir**.
+Si eliges una ubicación, puedes mantener activada la opción **Recibir inmediatamente** para crear y recibir el documento en una sola acción. Si desactivas la opción o no indicas una ubicación, la recepción se crea en estado pendiente. Revísala antes de pulsar **Recibir**.
 
 Pulsa **Crear** para generar la recepción con las líneas pendientes del pedido.
 
-## Crear recepción de un pedido parcial
+## Crear una recepción parcial
 
-En el modo de gestión:
+**Ruta:** **Almacén > Recepciones**
 
-**Ruta:** **Almacén \> Recepciones**
+<Steps>
+  <Step title="Añade una recepción">
+    **Origen:** selecciona el proveedor al que realizaste la compra.
 
-### 1. Añadir una recepción
+    **Número de albarán:** introduce el número del documento que entrega el transportista.
 
-**Origen:** Proveedores a los que se les ha hecho una compra.
+    **Fecha de albarán:** indica la fecha que figura en el documento de entrega.
 
-**Número de albarán:** es el número de documento impreso en el papel que te entrega el transportista (el albarán del proveedor).
+    **Ubicación de recepción:** selecciona el lugar físico donde se descarga y guarda el pedido, como un almacén, una estantería o una zona de la fábrica.
+  </Step>
+  <Step title="Abre la recepción">
+    En la columna de acciones, abre la recepción que acabas de crear.
+  </Step>
+  <Step title="Añade las líneas">
+    Añade los artículos que hayan llegado.
 
-**Fecha de albarán:** fecha que figura en el documento de entrega.
+    **Línea de pedido:** selecciona una línea pendiente de los pedidos del proveedor. Si has recibido más de un artículo, añade una línea para cada uno.
 
-**Ubicación de recepción:** lugar físico donde se descarga y guarda el pedido. Ejemplo: el almacén, estantería o zona física de tu fábrica.
+    **Cantidad:** indica las unidades que has contado al descargar.
 
-### 2. Abrir la recepción
+    **Lote de proveedor:** indica el lote, la partida o la serie que el fabricante asignó a las piezas. Suele aparecer en una etiqueta del palé o de la caja.
+  </Step>
+  <Step title="Recibe el material">
+    Revisa las líneas y pulsa **Recibir**.
 
-Desde la columna acciones haz clic en la recepción creada.
-
-### 3. Añadir líneas
-
-Se añaden todos los artículos que hayan llegado a la fábrica.
-
-**Línea de pedido:** muestra las líneas pendientes de los pedidos del proveedor. Selecciona la que corresponda. Si has recibido más de un artículo, añade una línea para cada uno.
-
-**Cantidad:** es el número real de unidades que el operario del almacén ha contado al descargar.
-
-**Lote de proveedor:** es el número de lote, partida o serie que el fabricante ha asignado a ese grupo de piezas. Suele venir impreso en una etiqueta del palet o de la caja.
-
-### 4. Recibir
-
-<Warning>
-  La acción **Recibir** exige ubicación, al menos una línea y todos los controles obligatorios completados. Esto se encuentra dentro de las recepciones desde almacén.
-</Warning>
+    <Warning>
+      La acción **Recibir** exige una ubicación, al menos una línea y todos los controles obligatorios completados.
+    </Warning>
+  </Step>
+</Steps>
 
 ## Corregir o deshacer una recepción
 
-**Ruta:** **Almacén \> Recepciones \> Pedido recibido**
+**Ruta:** **Almacén > Recepciones > Pedido recibido**
 
 ### Deshacer la recepción
 
-Es el botón de "marcha atrás" del almacén. Si cometes un error al registrar la entrada de mercancía (por ejemplo, te equivocaste en el número de patas que llegaron o el lote), este botón te permite corregirlo.
+Si registras una cantidad o un lote incorrectos, pulsa **Deshacer recepción** para corregir el documento.
 
 Al pulsar **Deshacer recepción**, ocurren dos cosas automáticamente:
 
-- **Corrección de stock:** el sistema resta del inventario las unidades que acababas de introducir por error, dejando el stock como estaba antes.
-- **Cambio de estado:** el pedido regresa al estado **Pendiente de recibir**, permitiéndote volver a editar las cantidades, añadir artículos que faltaban o corregir los datos.
+- **Corrección de stock:** el sistema resta las unidades que había añadido y recupera el stock anterior a la recepción.
+- **Cambio de estado:** el documento vuelve a **Pendiente de recibir** para que puedas corregir las cantidades, los artículos o los demás datos.
 
 <Warning>
   No corrijas una recepción recibida con ajustes si puedes revertirla. La reversión conserva mejor la relación con el pedido de compra.

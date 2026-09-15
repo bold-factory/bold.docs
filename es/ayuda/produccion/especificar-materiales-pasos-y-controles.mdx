@@ -3,7 +3,7 @@ title: "Especificar materiales, pasos y controles"
 description: "Define materiales, instrucciones y controles para ejecutar y validar cada operación de una receta."
 ---
 
-**Ruta:** **Fabricación \> Recetas \> Receta \> Versión editable \> Operación**
+**Ruta:** **Fabricación > Recetas > Receta > Versión editable > Operación**
 
 Solo las versiones en estado **Editable** admiten cambios estructurales. Si la versión está activa, crea una versión editable antes de modificar sus materiales, pasos o controles.
 
@@ -11,24 +11,24 @@ Define cada operación para indicar **qué entra y sale**, **cómo se ejecuta** 
 
 Con estos datos, Bold registra consumos, conserva las instrucciones de trabajo y aporta información para calcular el coste de los artículos fabricados.
 
-## Operaciones donde se consideran materiales
+## Definir los materiales
 
-Es fundamental clasificar correctamente tus materiales y registrar sus movimientos en cada etapa del proceso. Aquí te explicamos cómo identificarlos y cómo utilizarlos en el sistema:
+Clasifica los materiales según el papel que desempeñan en la operación:
 
-- **Materias primas (entradas externas):** son los materiales básicos que compras a proveedores y entran en la planta sin transformación, como la leche cruda. **Cómo usarlas:** regístralas en el sistema cuando el operario alimente la máquina. Esto descuenta el stock del almacén según la configuración de consumo.
-- **Semielaborados (trabajo en proceso):** son los productos intermedios que ya han sido procesados en una fase de la fábrica, pero que aún requieren pasar por más etapas antes de estar listos para la venta, como las patas de una mesa. **Cómo usarlos:** regístralos como entrada en la fase intermedia de su fabricación. Esto permite al sistema medir con precisión los tiempos de ejecución de cada máquina y evitar cuellos de botella en la línea.
-- **Coproductos (salidas simultáneas):** son los bienes que se generan al mismo tiempo a partir de un único proceso o materia prima, como la nata y la leche desnatada al centrifugar. **Cómo usarlos:** se registran como salidas finales del proceso correspondiente para que el sistema actualice su disponibilidad.
+- **Materias primas (entradas externas):** materiales que entran en la planta sin transformar, como la leche cruda. Regístralas como entradas de la operación que las consume.
+- **Semielaborados (trabajo en curso):** productos intermedios que ya han pasado por una fase, pero todavía necesitan más operaciones, como las patas de una mesa. Regístralos como entradas de la siguiente operación.
+- **Coproductos (salidas simultáneas):** artículos que se obtienen al mismo tiempo en un proceso, como la nata y la leche desnatada al centrifugar. Regístralos como salidas de la operación que los genera.
 
 ### 1. Añadir el material
 
-**Artículo:** es un menú desplegable donde debes seleccionar la materia prima, semielaborado o coproducto que vas a incorporar a la receta.
+**Artículo:** selecciona la materia prima, el semielaborado o el coproducto que quieres incorporar a la receta.
 
 **Cantidad/unidad fabricada:** define el consumo por cada unidad fabricada. El botón **+** permite crear fórmulas con sumas, restas, multiplicaciones, divisiones, paréntesis y propiedades numéricas. Bold sustituye cada propiedad por el valor del artículo al generar la OF.
 
-**Momento de consumo:** te permite elegir el comportamiento del inventario o del proceso con dos opciones:
+**Momento de consumo:** elige cuándo se registra el consumo:
 
 - **Al final:** el ingrediente se consume por completo al terminar la operación.
-- **Cada unidad:** el consumo se calcula de forma proporcional y constante por cada unidad individual que se va fabricando (es la opción seleccionada por defecto).
+- **Cada unidad:** el consumo se calcula de forma proporcional por cada unidad fabricada. Es la opción seleccionada por defecto.
 
 <Note>
   **Ejemplo: consumo de queso por unidad**
@@ -48,21 +48,21 @@ Un paso puede ser una instrucción puntual, como preparar una máquina, o una ac
 
 Los pasos pertenecen a una operación y pueden ejecutarse al comienzo, al final o según la cantidad producida, dependiendo de su configuración.
 
-**Nombre:** escribe una frase corta, clara y que empiece por un verbo de acción (ej. _"Limpiar matriz"_, _"Verter aditivo"_, _"Troquelar plancha"_).
+**Nombre:** escribe una instrucción breve que empiece por un verbo de acción, como `Limpiar la matriz`, `Verter el aditivo` o `Troquelar la plancha`.
 
 **¿Cuántas veces hay que ejecutar este paso?**
 
 Una orden de fabricación puede producir una unidad o muchas. El momento de ejecución indica si el paso se realiza una sola vez o se repite según la cantidad.
 
-- **Al comienzo:** preparación de máquina, carga inicial o revisión previa (por ejemplo, _Precalentar el horno a 180 °C_ o _Montar el molde en la prensa_).
-- **Cada unidad:** acciones repetitivas que dependen de la cantidad producida (por ejemplo, _Pulir bordes de la pieza_ o _Verificar el peso de la unidad_).
+- **Al comienzo:** para preparar la máquina, realizar una carga inicial o completar una revisión previa. Por ejemplo: `Precalentar el horno a 180 °C`.
+- **Cada unidad:** para acciones que se repiten con cada unidad producida. Por ejemplo: `Verificar el peso de la unidad`.
 
-**Instrucciones:** es el espacio donde el manual de operaciones tradicional se convierte en una herramienta digital e interactiva para el operario. En lugar de ser un simple texto estático, **Bold** permite combinar cuatro elementos clave dentro de este mismo cuadro para estandarizar el trabajo, eliminar el papel y capturar datos en tiempo real:
+**Instrucciones:** combina los elementos que necesite el operario para ejecutar el paso:
 
-- **Texto técnico y de seguridad:** es la base del paso. Aquí se redacta el procedimiento detallado, los parámetros obligatorios de la máquina (ej. _Ajustar presión a 4 bar_) o las advertencias de seguridad críticas para el operario.
-- **Soporte visual:** el botón **Subir archivo** permite adjuntar planos en PDF, fichas técnicas o fotografías del acabado correcto. El operario puede consultar estos archivos directamente en su pantalla o tablet para trabajar con la última versión aprobada.
-- **Recogida de datos (icono `+ Nuevo atributo`):** transforma la instrucción en un formulario. Al insertar un atributo numérico, de texto o de casilla de verificación, pides al operario que registre un valor medido en planta antes de avanzar al siguiente paso. Puede ser la temperatura de la máquina, el lote del proveedor o una comprobación visual.
-- **Cálculos en tiempo real (icono `Σ Fórmula`):** permite introducir operaciones matemáticas basadas en los atributos que el operario acaba de rellenar. Por ejemplo, puedes calcular el peso neto restando la tara.
+- **Texto técnico y de seguridad:** describe el procedimiento, los parámetros de la máquina o las advertencias necesarias. Por ejemplo: `Ajustar la presión a 4 bar`.
+- **Archivos:** usa **Subir archivo** para adjuntar planos en PDF, fichas técnicas o fotografías de referencia.
+- **Recogida de datos:** usa **+ Nuevo atributo** para pedir un valor numérico, texto o una confirmación antes de avanzar. Por ejemplo, la temperatura de la máquina o el lote del proveedor.
+- **Fórmulas:** usa **Σ Fórmula** para calcular un resultado a partir de los atributos registrados, como el peso neto después de restar la tara.
 
 **Duración:** indica el tiempo estimado estándar en minutos. Si es un paso por unidad y tarda 30 segundos, introduce `0,5`.
 
@@ -74,17 +74,17 @@ Los **controles** obligan al operario a registrar una comprobación al iniciar o
 
 ### 1. Añadir un control
 
-**Nombre:** título breve y descriptivo de la tarea a realizar (por ejemplo: _"Medición de temperatura"_, _"Revisión visual de sellado"_ o _"Firma de seguridad"_).
+**Nombre:** escribe un título breve y descriptivo, como `Medición de temperatura`, `Revisión visual del sellado` o `Firma de seguridad`.
 
-**Instrucciones:** es el espacio para detallar cómo se debe hacer el control. Puedes añadir texto, usar fórmulas o incluso adjuntar archivos (como planos, fotos de referencia o manuales en PDF).
+**Instrucciones:** explica cómo realizar el control. Puedes añadir texto, usar fórmulas o adjuntar planos, fotografías de referencia o manuales en PDF.
 
 **¿Qué tipo de control se requiere?**
 
-Define el formato en el que el operario debe registrar el resultado. Puedes elegir entre: **_Simple_** (check) para confirmar que se hizo, **_Sí/no_**, **_Número_** (para métricas exactas), **_Texto_** (para observaciones), **_Foto_** (para evidencia visual) o **subir un _Archivo_**.
+Elige el formato del resultado: **Simple** para confirmar que se realizó, **Sí/no**, **Número**, **Texto**, **Foto** o **Archivo**.
 
 **¿Cuándo hay que realizar el control?**
 
-Define en qué momento exacto del proceso el sistema debe exigirle esta tarea al trabajador:
+Elige cuándo debe realizarse:
 
 **Al comienzo:** preparación de máquina, carga inicial o revisión previa.
 
@@ -92,4 +92,4 @@ Define en qué momento exacto del proceso el sistema debe exigirle esta tarea al
 
 **Al final:** limpieza, cierre documental o comprobación final.
 
-**Duración (minutos):** el tiempo estimado que toma realizar este control específico.
+**Duración (minutos):** indica el tiempo estimado para completar el control.

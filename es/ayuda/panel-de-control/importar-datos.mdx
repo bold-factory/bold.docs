@@ -3,7 +3,7 @@ title: "Importar datos"
 description: "Carga datos desde CSV o Excel para crear, actualizar, fusionar, cancelar o eliminar registros en bloque."
 ---
 
-Usa **Importar datos** para ejecutar cargas masivas desde CSV o Excel. Cada importación está asociada a una entidad y una acción concreta, como crear productos, actualizar artículos, añadir líneas de pedidos o cancelar órdenes.
+Usa **Importar datos** para realizar cambios en bloque desde un archivo CSV o Excel. Cada importación combina un objeto con una acción, como crear productos, actualizar artículos, añadir líneas de pedido o cancelar OF.
 
 ## Qué puedes importar
 
@@ -11,19 +11,19 @@ Usa **Importar datos** para ejecutar cargas masivas desde CSV o Excel. Cada impo
 | --- | --- |
 | Catálogo | Crear o eliminar productos y artículos, fusionar artículos, añadir o eliminar valores. |
 | Planificación | Crear, editar o eliminar clientes, proveedores, pedidos de venta y pedidos de compra. |
-| Fabricación | Crear recetas, versiones, operaciones, materiales, pasos, controles y cancelar órdenes o peticiones. |
+| Fabricación | Crear recetas, versiones, operaciones, materiales, pasos y controles, o cancelar OF y peticiones. |
 | Almacén | Crear recepciones y envíos, añadir o eliminar líneas, recibir, enviar, revertir e importar inventarios. |
 | Datos operativos | Actualizar planificación, gestión de lotes y relaciones según la plantilla disponible. |
 
 ## Antes de importar datos
 
-Para garantizar que el proceso se realice de forma correcta y sin errores de validación, debes cumplir las siguientes reglas generales antes de cargar cualquier archivo:
+Antes de cargar un archivo, comprueba estas reglas:
 
 1. **Formatos aceptados:** se permiten archivos con extensión `.xlsx` o `.csv`.
 2. **En Excel:** Bold solo lee la **primera hoja** y toma los nombres de las columnas ubicados en la **primera fila**.
 3. **En CSV:** la primera fila debe contener los nombres de las columnas.
-4. **Campos obligatorios:** en la parte de datos relevantes, hay una lista de datos obligatorios a relacionar con el nombre de las columnas de tu archivo.
-5. **Uso responsable**: Las acciones como cancelar, borrar o fusionar datos afectan directamente al stock, pedidos, trazabilidad e histórico de fabricación. Limita este tipo de importaciones a personal autorizado.
+4. **Campos obligatorios:** la pantalla indica qué campos de Bold debes relacionar con las columnas del archivo.
+5. **Acciones con impacto:** cancelar, borrar o fusionar datos puede afectar al stock, los pedidos, la trazabilidad y el historial de fabricación. Limita estas importaciones a personal autorizado.
 
 ## Acciones disponibles por entidad
 
@@ -53,18 +53,18 @@ La pantalla organiza las plantillas por entidad y acción. Revisa siempre la pla
 
 <Steps>
   <Step title="Selecciona el objeto y la acción">
-    **Objeto a importar:** Define sobre qué información vas a trabajar. Por ejemplo: **artículo** (para gestionar tu catálogo de materias primas, semielaborados o productos terminados).
+    En **Objeto a importar**, elige la información que vas a cambiar. Por ejemplo, selecciona **Artículo** para trabajar con materias primas, semielaborados o productos terminados.
 
-    **Acción a realizar:** Define qué cambio masivo le vas a aplicar a ese objeto.  Por ejemplo: **editar** (para cambiar datos de elementos que ya existen; nombres, descripciones, plazos de entrega) usando su código como referencia.
+    En **Acción a realizar**, elige el cambio. Por ejemplo, **Editar** permite actualizar nombres, descripciones o plazos de entrega de registros existentes mediante su código.
   </Step>
   <Step title="Sube tu archivo">
-    Haz clic en seleccionar archivo y elige tu Excel/CSV. Bold leerá automáticamente el número de filas y columnas detectadas.
+    Haz clic en **Seleccionar archivo** y elige el CSV o Excel. Bold mostrará el número de filas y columnas detectadas.
   </Step>
   <Step title="Relaciona las columnas">
-    El sistema te mostrará una lista de los campos requeridos por Bold y desplegables para alinearlos con las columnas de tu Excel.
+    Relaciona cada campo requerido por Bold con la columna correspondiente del archivo.
   </Step>
   <Step title="Revisa y confirma">
-    Una vez completados los campos obligatorios, el botón de revisión se activará. Haz clic en él para procesar la carga.
+    Cuando hayas relacionado los campos obligatorios, pulsa el botón de revisión para procesar la carga.
   </Step>
 </Steps>
 

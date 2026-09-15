@@ -3,7 +3,7 @@ title: "Gestionar órdenes de fabricación"
 description: "Consulta, filtra, lanza, bloquea o cancela órdenes de fabricación según su estado."
 ---
 
-**Ruta:** **Fabricación \> Órdenes de fabricación**
+**Ruta:** **Fabricación > Órdenes de fabricación**
 
 Una **orden de fabricación** u **OF** representa la transformación real de materiales en un artículo terminado, semielaborado o coproducto.
 
@@ -11,15 +11,15 @@ Normalmente se crea desde una **petición de fabricación**. La petición define
 
 ## Elegir la perspectiva de trabajo
 
-En la parte superior de la pantalla verás tres pestañas que transforman por completo cómo se agrupa la información:
+En la parte superior puedes elegir tres formas de agrupar la información:
 
 ### Órdenes
 
-Es la vista por defecto. Te permite ver cada OF como un bloque único (por ejemplo, fabricar 50 unidades de una mesa de roble). Es la vista para el seguimiento general: muestra el solicitante, el artículo, la cantidad y las fechas de la orden.
+Es la vista predeterminada. Muestra cada OF como una unidad y permite revisar su solicitante, artículo, cantidad y fechas.
 
 #### Ordenar y priorizar tareas
 
-Para asegurarte de que las prioridades de fabricación están alineadas con los plazos de entrega, utiliza las herramientas de control de la tabla:
+Usa las herramientas de la tabla para revisar y priorizar las órdenes:
 
 - **Ordenación por fechas:** las columnas **Creada**, **Requerida** (fecha solicitada por el cliente) y **Objetivo** (fecha interna de entrega) se pueden ordenar desde su cabecera. Así puedes colocar primero los lanzamientos más urgentes o las entregas más críticas.
 - **Filtros de estado:** utiliza los botones rápidos **Ocultar canceladas** y **Ocultar finalizadas** para concentrarte en las órdenes activas y pendientes de fabricar.
@@ -27,34 +27,34 @@ Para asegurarte de que las prioridades de fabricación están alineadas con los 
 
 ### Operaciones
 
-Aquí las órdenes de fabricación se descomponen en el paso a paso físico que deben realizar tus operarios y máquinas.
+Esta pestaña desglosa las órdenes de fabricación en las operaciones que deben ejecutar los empleados y las máquinas.
 
-En esta pantalla, cada fila representa una **tarea o fase de trabajo individual**. Así es como debes usarla para optimizar tu producción diaria:
+Cada fila representa una operación concreta.
 
 #### Entender el desglose de las órdenes
 
-Aquí no ves "un producto terminado", sino la **hoja de ruta** detallada para fabricarlo.
+La vista muestra la hoja de ruta de cada producto:
 
-- El sistema te muestra de forma consecutiva todas las tareas necesarias para completarla: desde el Corte de pata inclinada en la sierra, pasando por el Lijado, el Tratamiento exterior, el Pegado en la prensa, hasta el Embalaje final.
-- Esto te permite saber exactamente en qué punto del proceso se encuentra cada pedido en tiempo real.
+- Las operaciones aparecen en el orden necesario para completar el trabajo, desde la preparación hasta el embalaje.
+- El estado de cada operación indica en qué punto del proceso se encuentra la OF.
 
 #### Revisar las estaciones de trabajo
 
 La columna **Estación de trabajo** te indica el lugar físico o la maquinaria donde se ejecuta la tarea (por ejemplo: Cabina de pintura, Prensa hidráulica 1 o Mesa de embalaje 1).
 
-- Si filtras esta columna por una máquina concreta (por ejemplo, escribiendo "Sierra circular 1" en el buscador de la columna), la pantalla te juntará todas las tareas de corte de todas las órdenes que tienes activas. Tu operario podrá cortar todas las piezas seguidas, evitando tener que reconfigurar o cambiar los ajustes de la máquina constantemente.
+- Filtra esta columna por una máquina, como `Sierra circular 1`, para reunir las operaciones activas asignadas a ella. Esto ayuda a preparar trabajos que comparten la misma configuración.
 
 #### Revisar las cantidades
 
-Para llevar un control milimétrico del rendimiento y las mermas de tu fábrica, haz el seguimiento de estas tres columnas clave:
+Revisa estas tres columnas para comparar el objetivo con el avance y los rechazos:
 
 - **Q. planificada (cantidad planificada):** el número de piezas que deben entrar en esa fase del proceso.
 - **Q. completada (cantidad completada):** las unidades que el operario ya ha terminado y que están listas para pasar a la siguiente operación.
-- **Q. rechazada (cantidad rechazada):** el número de piezas que han salido defectuosas en esa fase. Esto te ayuda a detectar problemas de calidad sin esperar a que el producto esté terminado.
+- **Q. rechazada (cantidad rechazada):** unidades rechazadas durante esa operación.
 
 ### Grupos de operaciones
 
-Muestra las tareas organizadas por lotes o familias de trabajo para equilibrar la carga entre distintos departamentos o secciones de la fábrica.
+Muestra las tareas agrupadas por lotes o familias de trabajo para revisar la carga de las distintas áreas.
 
 ## Lanzar una orden
 

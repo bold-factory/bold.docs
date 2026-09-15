@@ -3,13 +3,13 @@ title: "Automatizar tareas"
 description: "Programa una tarea recurrente o por evento y controla sus resultados."
 ---
 
-Automatiza una revisión o tarea repetitiva cuando quieras que Bold la ejecute de forma programada o al ocurrir un evento. Para hacerlo, Bold usa un **agente** con instrucciones y permisos concretos. 
+Automatiza una revisión o tarea repetitiva para que Bold la ejecute según un horario o cuando ocurra un evento. Cada automatización usa un **agente** con instrucciones y permisos concretos.
 
 ## Antes de automatizar
 
 Comprueba que la tarea:
 
-- tiene objetivo claro;
+- tiene un objetivo claro;
 - usa datos disponibles en Bold;
 - se puede revisar con un resultado trazable;
 - no depende de decisiones ambiguas sin criterio definido;
@@ -17,64 +17,46 @@ Comprueba que la tarea:
 
 ## Configurar la automatización
 
-Ruta: **Smart Factory > Automatizaciones**
+**Ruta:** **Smart Factory > Automatizaciones**
 
 <Steps>
-  <Step title="Crear automatización">
-    Pulsa **Crear nueva automatización** y completa los campos solicitados.
+  <Step title="Crea la automatización">
+    Pulsa **Crear nueva automatización**.
   </Step>
-  <Step title="Asignar un nombre">
-    Escribe un nombre descriptivo para identificar fácilmente el trabajo (por ejemplo: _"Revisión diaria de paradas de planta"_ o _"Control semanal de stock bajo"_).
+  <Step title="Asigna un nombre">
+    Escribe un nombre que identifique el trabajo, como `Revisión diaria de paradas de planta` o `Control semanal de stock bajo`.
   </Step>
-  <Step title="Definir las instrucciones">
-    Describe de forma clara y directa el objetivo, las fuentes de datos que debe consultar y el formato que esperas.
+  <Step title="Define las instrucciones">
+    Indica el objetivo, las fuentes de datos que debe consultar y el formato del resultado.
 
-    **_Ejemplo:_** _"Revisa las órdenes de fabricación de ayer, busca si hubo paradas no planificadas de más de 15 minutos y genera un resumen con el motivo y la estación afectada."_
+    **Ejemplo:** «Revisa las OF de ayer, identifica las paradas no planificadas de más de 15 minutos y genera un resumen con el motivo y la estación afectada».
   </Step>
-  <Step title="Seleccionar el nivel de inteligencia">
+  <Step title="Selecciona el nivel de inteligencia">
     - **Baja:** para consultas sencillas o lecturas directas.
-    - **Media (recomendado):** para análisis habituales que requieren relacionar varios datos.
-    - **Alta:** para tareas complejas que exigen más razonamiento.
+    - **Media:** para análisis habituales que requieran relacionar varios datos.
+    - **Alta:** para tareas complejas que exijan más razonamiento.
   </Step>
-  <Step title="Configurar los parámetros de operación">
-    **Modo de trabajo:**
-
-    - **Solo lectura (Recomendado):** El agente únicamente consulta datos y genera informes sin modificar registros de la planta.
-    - **Permite cambios:** Úsalo solo si necesitas que el agente modifique estados o realice acciones sobre el sistema.
-
-    **Preguntas de aclaración:**
-
-    - **Permitir:** Si al agente le falta algún dato para completar el trabajo, pausará la tarea y te pedirá aclaraciones.
-    - **No permitir:** El agente intentará resolver la tarea de forma autónoma con los datos disponibles.
-
-    **Memoria:**
-
-    - **Permitir / No permitir:** Actívalo si necesitas que el agente recuerde el contexto de ejecuciones anteriores para comparar datos en el tiempo.
+  <Step title="Configura la ejecución">
+    - En **Modo de trabajo**, usa **Solo lectura** para consultar datos sin modificarlos. Selecciona **Permite cambios** solo si el agente debe actuar en el sistema.
+    - En **Preguntas de aclaración**, elige **Permitir** para que el agente pause la tarea cuando necesite información. Con **No permitir**, trabajará con los datos disponibles.
+    - Activa **Memoria** si el agente necesita conservar contexto entre ejecuciones, por ejemplo para comparar periodos.
   </Step>
-  <Step title="Definir disparadores">
-    Definir **cuándo o qué provocará que se ejecute** tu automatización. Tienes tres opciones principales según cómo quieras usarla:
+  <Step title="Define los disparadores">
+    Elige cuándo debe ejecutarse:
 
-    - **Ejecutar por horario fijo:** Haz clic en **Añadir programado** si quieres que se lance automáticamente a una hora y frecuencia determinadas (por ejemplo, todos los días a las 09:00 o cada lunes).
-    - **Ejecutar tras una acción específica:** Haz clic en **Añadir por evento** si prefieres que se active cuando ocurra uno de los eventos de Bold disponibles en el selector. Puedes añadir condiciones cuando el esquema del evento exponga propiedades compatibles.
-    - **Ejecutar manualmente o guardar:**
-      - Si solo la vas a lanzar tú cuando quieras a demanda, pulsa en **Guardar cambios**.
-      - Si deseas probarla inmediatamente en este momento, haz clic en el botón verde **Ejecutar ahora**.
+    - Pulsa **Añadir programado** para indicar una hora y una frecuencia, como cada día a las 09:00.
+    - Pulsa **Añadir por evento** para activarla cuando ocurra uno de los eventos disponibles. Añade condiciones si el evento admite propiedades compatibles.
+    - No añadas un disparador si solo vas a iniciarla de forma manual con **Ejecutar ahora**.
   </Step>
-  <Step title="Atribuir permisos">
-    En esta sección defines exactamente **a qué información y acciones tiene acceso Boldy** durante la ejecución de esta automatización. Funciona como un control de seguridad para garantizar que la automatización solo lea o modifique las áreas estrictamente necesarias.
+  <Step title="Asigna los permisos">
+    Concede solo el acceso necesario para la tarea:
 
-    **Permisos de visualización ("Ver"):**
-
-    - **Cuándo marcarlos:** Siempre que la automatización necesite consultar o analizar información de esa área (por ejemplo, leer costes de _Empleados_ o revisar _Archivos_ existentes para elaborar un resumen).
-    - **Cuándo desmarcarlos:** Si la automatización no requiere datos de ese módulo o contiene información confidencial a la que esta automatización no debe acceder.
-
-    **Permisos de modificación ("Editar" / "Subir" / "Eliminar" / "Gestionar"):**
-
-    - **Cuándo marcarlos:** Únicamente si la automatización está diseñada para **realizar acciones** activas, como actualizar costes, subir informes terminados a la sección de _Archivos_ o gestionar otras _Tareas/Automatizaciones_.
-    - **Cuándo desmarcarlos:** Si quieres que la automatización trabaje de forma segura en modo **Solo lectura**, asegurando que no altere, borre ni cree datos por error.
+    - Activa **Ver** en las áreas que deba consultar, como **Empleados** o **Archivos**.
+    - Activa **Editar**, **Subir**, **Eliminar** o **Gestionar** únicamente si debe realizar esas acciones.
+    - Si has elegido **Solo lectura**, no concedas permisos de modificación.
   </Step>
   <Step title="Guarda y prueba la automatización">
-    Guarda los cambios para que los disparadores programados o por evento queden configurados. Pulsa **Ejecutar ahora** si quieres probar una ejecución manual; esta acción no sustituye a los disparadores.
+    Pulsa **Guardar cambios**. Después, usa **Ejecutar ahora** para probarla manualmente. La prueba no sustituye los disparadores configurados.
   </Step>
 </Steps>
 

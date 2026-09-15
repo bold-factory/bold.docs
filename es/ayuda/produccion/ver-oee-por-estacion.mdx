@@ -3,21 +3,21 @@ title: "Ver el OEE por estación"
 description: "Consulta disponibilidad, rendimiento y calidad de una estación de trabajo en un periodo."
 ---
 
-Usa **OEE por estación** para entender el rendimiento de una estación de trabajo en un periodo concreto. La vista separa el resultado en disponibilidad, rendimiento y calidad
+Usa **OEE por estación** para analizar una estación de trabajo durante un periodo concreto. La vista separa el resultado en ocupación, disponibilidad, rendimiento y calidad.
 
 ## Revisar OEE
 
-Ruta: **Smart Factory > Cuadros de mando > OEE por estación** 
+**Ruta:** **Smart Factory > Cuadros de mando > OEE por estación**
 
-### 1. Elige estación y periodo 
+### 1. Elegir la estación y el periodo
 
 Filtra por estación de trabajo y el intervalo que quieres analizar. 
 
-### 2. Interpreta los resultados de ocupación, disponibilidad, rendimiento, calidad y OEE
+### 2. Interpretar los resultados
 
-Descubre el motivo real por el que baja tu rendimiento en planta.
+Compara los componentes para localizar dónde se concentra la pérdida.
 
-**Ocupación**
+#### Ocupación
 
 Mide el aprovechamiento global del recurso respecto al _tiempo total que la fábrica o el turno estuvo abierto_.
 
@@ -25,28 +25,28 @@ Mide el aprovechamiento global del recurso respecto al _tiempo total que la fáb
 
 Ocupación (%) = (Tiempo real en producción / Tiempo total disponible en calendario) \* 100
 
-- **Tiempo Real en Producción:** Suma de las duraciones reales reportadas por los operarios mientras la estación de trabajo tuvo órdenes de fabricación o tareas activas.
-- **Tiempo Total Disponible en Calendario:** Total de horas teóricas en las que la planta o el turno estuvo operativo según la configuración de calendarios, turnos y jornadas laborales.
+- **Tiempo real en producción:** suma de las duraciones registradas mientras la estación tuvo operaciones activas.
+- **Tiempo total disponible en calendario:** horas en las que la planta o el turno estuvo operativo según la configuración de calendarios, turnos y jornadas laborales.
 
 **¿Qué significa un porcentaje bajo de ocupación?**
 
-Un porcentaje bajo de ocupación indica que la máquina estuvo parada o sin carga de trabajo durante una parte significativa del tiempo en el que la fábrica estuvo abierta. En plantas con fichaje manual, las causas habituales son:
+Un porcentaje bajo indica que la estación estuvo parada o sin carga de trabajo durante parte del tiempo disponible. Revisa estas posibles causas:
 
-- **Falta de carga de trabajo / Planificación vacía:** La estación no tenía órdenes asignadas ni peticiones de fabricación programadas durante el turno.
-- **Paradas prolongadas o cuellos de botella:** Tiempos muertos esperando materia prima, herramientas o la finalización de una operación previa en la secuencia.
-- **Falta de personal disponible:** La máquina estaba disponible en calendario, pero no había operarios asignados para hacerla funcionar.
+- **Falta de carga de trabajo:** la estación no tenía órdenes asignadas ni peticiones de fabricación programadas durante el turno.
+- **Paradas prolongadas o cuellos de botella:** la estación esperaba material, herramientas o la finalización de una operación anterior.
+- **Falta de personal:** la estación estaba disponible, pero no había empleados asignados para utilizarla.
 
-#### **Disponibilidad**
+#### Disponibilidad
 
 Mide la proporción de tiempo que la estación estuvo realmente produciendo frente al tiempo en que estaba planificado que trabajara.
 
 **¿Cómo se calcula?**
 
-Disponibilidad (%) = (Tiempo Real de Funcionamiento / Tiempo Planificado de Producción)\* 100
+Disponibilidad (%) = (Tiempo real de funcionamiento / Tiempo planificado de producción) \* 100
 
-- **Tiempo Real de Funcionamiento:** Es el tiempo efectivo en que las operaciones estuvieron en marcha. Bold lo calcula automáticamente restando del tiempo planificado las pausas no planificadas que registran los operarios (averías, falta de material, preparaciones, etc.).
+- **Tiempo real de funcionamiento:** tiempo efectivo durante el que las operaciones estuvieron en marcha. Bold lo calcula restando del tiempo planificado las pausas no planificadas registradas.
 
-- **Tiempo Planificado de Producción:** Es el tiempo total que la estación debía estar trabajando según su turno o jornada configurada (ej. un turno de 8 horas).
+- **Tiempo planificado de producción:** tiempo durante el que la estación debía trabajar según el turno o la jornada configurada.
 
 **¿Qué significa un porcentaje bajo de disponibilidad?**
 
@@ -55,9 +55,9 @@ Un valor bajo indica que la estación pasa demasiado tiempo parada y no está pr
 - Averías imprevistas o fallos técnicos.
 - Falta de materia prima o materiales en la estación de trabajo.
 - Tiempos excesivos en cambios de lote, ajuste de herramientas o preparación.
-- Un mal fichaje manual: Si los operarios olvidan pausar o reanudar las operaciones en Bold (por ejemplo, en descansos o paradas por falta de material), el tiempo de parada puede quedar registrado como tiempo productivo o viceversa, distorsionando la disponibilidad.
+- Registros incompletos: si los operarios olvidan pausar o reanudar las operaciones, el tiempo de parada puede quedar registrado como productivo o al contrario.
 
-#### **Rendimiento**
+#### Rendimiento
 
 Mide la velocidad real de fabricación comparada con la velocidad o tiempo teórico estándar definido en la receta o proceso.
 
@@ -65,9 +65,9 @@ Mide la velocidad real de fabricación comparada con la velocidad o tiempo teór
 
 Rendimiento (%) = (Tiempo Teórico / Tiempo Real en Producción) \* 100
 
-- **Tiempo Teórico:** Se obtiene multiplicando la cantidad total de piezas producidas por el tiempo estándar definido en la receta/proceso (ajustado según la eficiencia teórica asignada a la estación).
+- **Tiempo teórico:** se obtiene al multiplicar la cantidad producida por el tiempo estándar definido en la receta o el proceso, ajustado según la eficiencia asignada a la estación.
 
-- **Tiempo Real en Producción:** Suma de las duraciones reales o asignaciones de tiempo reportadas por los operarios mientras la orden estuvo en ejecución activa.
+- **Tiempo real en producción:** suma de las duraciones registradas mientras la orden estuvo en ejecución.
 
 **¿Qué significa un porcentaje bajo de rendimiento?**
 
@@ -75,9 +75,9 @@ Un valor bajo indica que la máquina o el operario están trabajando por debajo 
 
 - Velocidades reducidas debido al desgaste de la máquina o equipos.
 - Pequeñas micro-paradas recurrentes que no quedan registradas formalmente.
-- Que el tiempo teórico o la velocidad estándar definida en Bold sea irrealmente optimista.
+- Un tiempo teórico o una velocidad estándar demasiado exigentes.
 
-#### **Calidad**
+#### Calidad
 
 Mide el porcentaje de piezas buenas fabricadas respecto al total de piezas producidas (buenas + rechazadas).
 
@@ -85,33 +85,33 @@ Mide el porcentaje de piezas buenas fabricadas respecto al total de piezas produ
 
 Calidad (%) = (Cantidad de Unidades Buenas / Cantidad Total Producida) \* 100
 
-- **Cantidad de Unidades Buenas:** Número de piezas o unidades conformes que cumplen los estándares de calidad y pasan a la siguiente fase o a stock.
-- **Cantidad Total Producida:** Suma total de piezas fabricadas en la estación, resultando de la combinación de piezas buenas + piezas rechazadas (mermas/defectuosas).
+- **Cantidad de unidades buenas:** piezas conformes que pasan a la siguiente operación o a stock.
+- **Cantidad total producida:** suma de las unidades buenas y rechazadas registradas en la estación.
 
 **¿Qué significa un porcentaje bajo de calidad?**
 
-Un valor bajo de calidad indica una tasa elevada de desperdicio y falta de conformidad en el proceso. En un entorno con nivel de digitalización inicial y fichaje manual, las causas principales suelen ser:
+Un valor bajo indica una proporción elevada de unidades rechazadas. Revisa estas posibles causas:
 
 - **Materia prima o semielaborado de entrada defectuoso:** piezas o materiales que llegan con fallos de proveedores o de operaciones previas.
-- **Errores de ajuste en el arranque de lote:** Ajustes o calibraciones manuales incorrectas al inicio de la orden de fabricación que generan mermas hasta estabilizar la máquina.
-- **Desgaste o desajuste mecánico de la herramienta/máquina:** Puntos de trabajo o útiles desgastados que provocan desviaciones fuera de tolerancia durante la tirada.
-- **Errores operativos o de manipulación:** Fallos humanos al posicionar, manipular o procesar la pieza.
+- **Errores de ajuste en el arranque de lote:** calibraciones incorrectas que generan rechazos hasta estabilizar la máquina.
+- **Desgaste de la herramienta o la máquina:** útiles desgastados que provocan desviaciones fuera de tolerancia.
+- **Errores de manipulación:** fallos al posicionar, manipular o procesar la pieza.
 
-**OEE (Overall Equipment Effectiveness)**
+#### OEE (Overall Equipment Effectiveness)
 
 Es el indicador global de eficiencia productiva de la estación.
 
 **¿Cómo se calcula?**
 
-OEE (%) = (Disponibilidad / 100)  (Rendimiento / 100)  (Calidad / 100) \* 100
+OEE (%) = (Disponibilidad / 100) \* (Rendimiento / 100) \* (Calidad / 100) \* 100
 
 **¿Qué significa un porcentaje bajo de OEE?**
 
 Un valor bajo de OEE significa que la estación está operando por debajo de su potencial teórico. Dependiendo de los componentes del cálculo, las causas principales suelen ser:
 
-- **Pérdidas por disponibilidad:** Frecuentes averías, preparaciones largas (_setups_), falta de material o paradas no planificadas en el turno.
-- **Pérdidas por rendimiento:** Operación a menor velocidad por desgaste de máquina, micro-paradas no registradas o tiempos teóricos de receta irrealistas.
-- **Pérdidas por calidad:** Generación de chatarra/mermas, desajustes en el arranque de lote o problemas en la materia prima entrante.
+- **Pérdidas por disponibilidad:** averías frecuentes, preparaciones largas, falta de material o paradas no planificadas.
+- **Pérdidas por rendimiento:** menor velocidad por desgaste, microparadas o tiempos teóricos poco realistas.
+- **Pérdidas por calidad:** mermas, desajustes en el arranque de lote o problemas en la materia prima.
 
 <Info>
   Un OEE bajo no siempre significa el mismo problema. Revisa primero qué componente cae y después abre el detalle operativo.

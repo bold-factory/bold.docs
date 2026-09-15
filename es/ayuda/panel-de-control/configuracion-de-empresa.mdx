@@ -3,7 +3,7 @@ title: "Configurar la empresa"
 description: "Gestiona logo, actividad, zona horaria, idioma, automatizaciones y prefijos de códigos."
 ---
 
-Usa **Configuración de empresa** para definir ajustes transversales de la organización. Estos valores afectan a cálculos, automatizaciones, códigos generados, documentos y contexto usado por la IA.
+Usa **Configuración de empresa** para definir ajustes comunes a toda la organización. Estos valores afectan a cálculos, automatizaciones, códigos generados, documentos y al contexto que usa la IA.
 
 ## Qué puedes configurar
 
@@ -44,36 +44,32 @@ Usa **Configuración de empresa** para definir ajustes transversales de la organ
     Sube un logo en formato recomendado (PNG o SVG) con fondo transparente y describe la actividad de la empresa.
   </Step>
   <Step title="Ajusta valores generales">
-    Define plazo de entrega por defecto: es el número de días laborables estándar que tarda la fábrica en entregar un pedido cuando no se haya especificado un plazo concreto en la ficha del artículo.
+    En **Plazo de entrega por defecto**, indica los días laborables que tarda la fábrica en entregar un pedido cuando el artículo no tenga un plazo específico. Por ejemplo, introduce `5` si suele tardar cinco días. Si defines el plazo en cada artículo, puedes dejar el valor en `0`.
 
-    Ejemplo: si la fábrica suele tardar, por ejemplo, 5 días en procesar y entregar pedidos estándar, introduce 5. Si se suele definir el plazo artículo a artículo, puedes dejarlo en 0.
+    En **Zona horaria**, selecciona la correspondiente a la planta o sede principal. Afecta a los registros del modo de trabajo, los turnos, las automatizaciones y la presentación de fechas y horas.
 
-    Zona horaria: es la franja horaria correspondiente a la ubicación física de la planta o de la sede principal. Afecta a los fichajes del operario en el modo de trabajo, los registros de turnos, las automatizaciones y la presentación de fechas y horas.
+    En **Idioma**, selecciona la configuración regional de la empresa entre las opciones disponibles.
 
-    Idioma: selecciona la configuración regional de la empresa. Las opciones actuales son **Español (España)** y **English (United States)**.
+    En **Origen de Mis operaciones**, elige el criterio que usará el modo de trabajo para mostrar las operaciones pendientes al empleado identificado en la tableta:
 
-    Origen de Mis operaciones: este campo determina **el criterio que usa el modo de trabajo** para mostrar a un operario las tareas u operaciones pendientes cuando se identifica en la tablet de planta.
-
-    Tiene dos opciones en el desplegable:
-
-    - **Habilidades:** Las operaciones se filtran y muestran en la tablet según la destreza o capacitación que tiene asignada el empleado en su ficha (por ejemplo: si el empleado tiene la habilidad de "Soldadura", le aparecerán las operaciones de ese tipo).
-    - **Puestos de trabajo habituales:** Las operaciones se filtran según las estaciones o máquinas (puestos de trabajo) a las que el empleado suele estar asignado habitualmente.
+    - **Habilidades:** muestra las operaciones asociadas a las habilidades del empleado, como `Soldadura`.
+    - **Puestos de trabajo habituales:** muestra las operaciones de las estaciones o máquinas a las que suele estar asignado.
   </Step>
   <Step title="Define el comportamiento al cancelar peticiones">
-     
+    Elige una de estas opciones:
 
-    1. **Bloquear siempre las órdenes asociadas:** las órdenes quedan bloqueadas para que una persona revise el caso antes de continuar. El bloqueo se puede retirar.
-    2. **Cancelar siempre las órdenes asociadas:** las órdenes se cancelan y dejan de poder ejecutarse.
-    3. **Cancelar si no han empezado; bloquear si ya han empezado:** las órdenes sin actividad se cancelan y las que ya han empezado quedan bloqueadas para su revisión.
+    - **Bloquear siempre las órdenes asociadas:** las OF quedan bloqueadas hasta que una persona revise el caso. El bloqueo se puede retirar.
+    - **Cancelar siempre las órdenes asociadas:** las OF se cancelan y ya no se pueden ejecutar.
+    - **Cancelar si no han empezado; bloquear si ya han empezado:** las OF sin actividad se cancelan y las iniciadas quedan bloqueadas para su revisión.
   </Step>
-  <Step title="Automatiza la planificación de Órdenes de Fabricación">
-    **Generar órdenes de producción automáticamente**
+  <Step title="Automatiza la planificación de OF">
+    **Generar OF automáticamente**
 
     Marca la casilla si no necesitas que la oficina técnica convierta manualmente cada petición en una OF. Déjala desmarcada si prefieres acumular demanda o revisar cantidades antes de generar el trabajo.
 
-    **Ejemplo:** si entra una petición de 100 tableros, Bold genera la OF sin esperar a que un responsable lance la petición a mano. Su planificación depende del ajuste siguiente.
+    Por ejemplo, ante una petición de 100 tableros, Bold puede generar la OF sin esperar a que un responsable la lance manualmente. Su planificación depende del ajuste siguiente.
 
-    **Planificar órdenes de producción automáticamente**
+    **Planificar OF automáticamente**
 
     Marca la casilla si quieres que Bold planifique automáticamente las OF nuevas. Déjala desmarcada si necesitas revisar cada orden antes de planificarla.
   </Step>
@@ -82,25 +78,25 @@ Usa **Configuración de empresa** para definir ajustes transversales de la organ
 
     Marca la casilla si quieres que Bold solicite automáticamente los movimientos necesarios para preparar una orden de carga. Si prefieres revisar cada carga antes de pedir los materiales, déjala desmarcada.
 
-    **Ejemplo:** si una carga incluye 20 unidades de un artículo almacenado en otra ubicación, Bold puede solicitar su traslado hasta la ubicación de carga cuando se cumpla el plazo configurado.
+    Por ejemplo, si una carga incluye 20 unidades almacenadas en otra ubicación, Bold puede solicitar su traslado a la ubicación de carga cuando se cumpla el plazo configurado.
 
     **Antelación del aprovisionamiento (días laborables)**
 
-     Introduce el margen de días que necesita tu equipo de almacén para preparar  o mover el material a la zona de trabajo. El valor mínimo es `0`. Con `0`, la carga entra cuando su fecha planificada ya ha llegado. Con `1`, entra un día laborable antes.
+    Introduce los días que necesita el equipo de almacén para preparar o mover el material a la zona de trabajo. El valor mínimo es `0`. Con `0`, la carga se aprovisiona al llegar su fecha planificada; con `1`, un día laborable antes.
 
     La solicitud reserva el stock disponible en la ubicación de carga y crea [movimientos de preparación](/es/conceptos/almacen/movimientos-de-almacen) para lo que falta.
 
-    **Ejemplo:** poner `1` significa que si la carga está planificada para el martes, la solicitud puede generarse un día laborable antes.
+    Por ejemplo, con `1`, la solicitud de una carga planificada para el martes puede generarse un día laborable antes.
   </Step>
   <Step title="Normaliza prefijos">
-    Los prefijos son códigos cortos de hasta 4 caracteres que se anteponen de forma automática a los identificadores numéricos correlativos que genera Bold. Su objetivo es facilitar la lectura rápida e identificar el tipo de documento o entidad a simple vista en etiquetas, albaranes y pantallas.
+    Los prefijos son códigos de hasta cuatro caracteres que se anteponen a los identificadores numéricos correlativos que genera Bold. Permiten reconocer el tipo de documento o entidad en etiquetas, albaranes y pantallas.
 
     **Recomendaciones de uso:**
 
-    - **Cortos y claros:** Utiliza siglas estándar de 2 a 4 letras que todo el personal de planta y oficina reconozca fácilmente.
-    - **Estables:** No modifiques los prefijos una vez que la fábrica comience a operar en Bold, ya que esto mantendrá la coherencia en la trazabilidad y la búsqueda histórica.
+    - **Cortos y claros:** usa siglas de dos a cuatro letras que el equipo reconozca.
+    - **Estables:** evita modificarlos cuando ya existan registros para conservar la coherencia en búsquedas y trazabilidad.
 
-    **Ejemplos:** 
+    **Ejemplos:**
 
     ```text
     ART -> Artículos

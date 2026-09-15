@@ -3,7 +3,7 @@ title: "Decidir qué comprar"
 description: "Revisa necesidades, stock y plazos para decidir qué materiales debes comprar y cuándo pedirlos."
 ---
 
-**Ruta:** **Planificación \> Asistente de compras**
+**Ruta:** **Planificación > Asistente de compras**
 
 El **Asistente de compras** agrupa necesidades de artículos configurados para aprovisionarse mediante **Compra** y **Contra stock**. Bold propone comprar cuando el stock proyectado cae por debajo del punto de pedido.
 
@@ -14,14 +14,16 @@ Antes de revisar los datos de esta vista, ajusta:
 - **Frecuencia de compra (diaria, semanal o mensual):** define los periodos con los que se agrupan las necesidades.
 - **Incluir necesidades hasta:** limita el horizonte de necesidades que se consulta.
 
-1. **Urgencias:** necesidades cuya fecha ya exige atención.
-2. **Este periodo:** necesidades incluidas en el periodo actual.
-3. **Siguiente periodo:** necesidades del periodo siguiente.
-4. **Futuro:** necesidades posteriores dentro del horizonte elegido.
+Después, utiliza los bloques de resumen para acotar la revisión:
+
+- **Urgencias:** necesidades cuya fecha ya exige atención.
+- **Este periodo:** necesidades incluidas en el periodo actual.
+- **Siguiente periodo:** necesidades del periodo siguiente.
+- **Futuro:** necesidades posteriores dentro del horizonte elegido.
 
 ## Organizar por proveedor o artículo
 
-Al seleccionar uno de los cuatro bloques puedes ver todas las necesidades de compra ordenadas por urgencia.
+Selecciona uno de los cuatro bloques para ver las necesidades de compra de ese periodo, ordenadas por urgencia.
 
 Bold te permite cambiar la vista según tu estrategia de compra mediante dos pestañas:
 
@@ -30,18 +32,19 @@ Bold te permite cambiar la vista según tu estrategia de compra mediante dos pes
 
 ## Análisis de compra
 
-**Ruta:** **Planificación \> Asistente de compras \> Proveedor**
+**Ruta:** **Planificación > Asistente de compras > Proveedor**
 
-### 1. Interpretar el stock
+<Steps>
+  <Step title="Interpreta el stock">
+    Revisa los datos de stock de cada columna antes de comprar. El sistema combina las variables disponibles y propone una cantidad. Contrasta la propuesta con los plazos, las cantidades mínimas y la previsión de stock.
 
-Revisa los datos de stock de cada columna antes de comprar. El sistema combina las variables disponibles y propone una cantidad. Comprueba la propuesta con los plazos, las cantidades mínimas y la previsión de stock.
+    **Punto de pedido:** nivel de stock proyectado a partir del cual Bold propone iniciar el aprovisionamiento.
 
-**Punto de pedido:** es el nivel de stock proyectado a partir del cual Bold propone iniciar el aprovisionamiento.
+    **Propuesta:** cantidad calculada por Bold. Puedes modificarla, restablecer el cálculo o limpiar el campo para excluir el artículo del pedido actual.
+  </Step>
+  <Step title="Abre el artículo">
+    Selecciona un artículo para desplegar sus gráficos y tablas de análisis.
 
-**Propuesta:** es la cantidad calculada por Bold. Puedes modificarla, restablecer el cálculo o limpiarla para excluir el artículo del pedido actual.
-
-### 2. Abrir el artículo
-
-Esto hará que se desplieguen tres gráficos y tablas analíticas.
-
-Usa **Pedidos de compra** para comparar la propuesta con pedidos abiertos o anteriores, **Previsión de stock** para revisar el efecto estimado de la compra y **Histórico de consumos** para contrastarla con las salidas registradas.
+    Usa **Pedidos de compra** para comparar la propuesta con pedidos abiertos o anteriores, **Previsión de stock** para revisar el efecto estimado de la compra e **Histórico de consumos** para contrastarla con las salidas registradas.
+  </Step>
+</Steps>

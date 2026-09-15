@@ -3,19 +3,19 @@ title: "Diseñar el paso a paso de fabricación"
 description: "Define el proceso de fabricación con operaciones, entradas, pasos, controles y versiones."
 ---
 
-En Bold, todo el flujo y el orden de fabricación de tus productos se gestiona mediante **recetas**. Una receta combina lista de materiales, operaciones, pasos, controles, coproductos, restricciones y condiciones.
+En Bold, una **receta** define el flujo de fabricación de un producto. Combina materiales, operaciones, pasos, controles, coproductos, restricciones y condiciones.
 
 Una receta no ejecuta trabajo por sí sola. Se usa como plantilla para crear **órdenes de fabricación** con una estructura consistente.
 
 ## Pasos a seguir
 
-**Ruta:** **Fabricación \> Recetas**
+**Ruta:** **Fabricación > Recetas**
 
 ### 1. Añadir una receta
 
-**Producto:** selecciona el producto del cual quieras elaborar su receta.
+**Producto:** selecciona el producto cuya fabricación quieres definir.
 
-**Nombre:** al seleccionar un producto, Bold asocia automáticamente el nombre de la receta. Modifícalo si hay dos maneras distintas de fabricar el mismo producto y necesitas diferenciarlas.
+**Nombre:** al seleccionar un producto, Bold asigna automáticamente el nombre de la receta. Cámbialo si necesitas distinguir varias formas de fabricar el mismo producto.
 
 ### 2. Añadir una versión
 
@@ -31,13 +31,11 @@ Aunque puedes añadir y mover los bloques libremente, organiza el diagrama en el
 
 Haz clic en **+ Añadir operación** y completa los siguientes campos:
 
-Completa los siguientes campos:
-
 **Proceso principal:** selecciona uno de los procesos ya definidos anteriormente.
 
-**Nombre de la operación:** coloca un nombre específico de este paso dentro de esta receta concreta. Tienes la opción de copiar el nombre del proceso para no tener que reescribirlo en la parte derecha del recuadro.
+**Nombre de la operación:** escribe un nombre específico para esta operación. Puedes copiar el nombre del proceso desde la parte derecha del campo.
 
-**Personas necesarias:** número exacto de operarios que se necesitan trabajando a la vez en la estación para ejecutar esta tarea.
+**Personas necesarias:** indica cuántos operarios deben trabajar a la vez en la estación para ejecutar la operación.
 
 **Herramienta auxiliar (opcional):** selecciona el molde, la matriz, el utillaje o la broca que requiera la operación.
 
@@ -78,28 +76,28 @@ En algunos casos, el proceso de fabricación depende de una propiedad del produc
 
 ### Configurar condiciones
 
-**Ruta:** **Fabricación \> Recetas \> Receta creada**
+**Ruta:** **Fabricación > Recetas > Receta creada**
 
 Desde el diagrama entra al bloque de operación donde se tenga que aplicar la condición.
 
 ### Añadir una condición
 
-**Origen:** es la regla que va a desviar o alterar la receta, puede ser por:
+**Origen:** indica de dónde obtiene Bold el dato que evalúa la condición:
 
 - **Propiedad:** variantes del propio producto, como material, tamaño o voltaje.
 - **Contexto de la OF:** se activa cuando el producto es el mismo, pero cambian los datos administrativos, logísticos o la urgencia de ese pedido.
 
-**Campo:** eliges qué dato de la orden va a leer el sistema. Ejemplo: notas de la OF, código de la OF, cantidad de la OF, etc.
+**Campo:** elige el dato que debe evaluar Bold, como las notas, el código o la cantidad de la OF.
 
-**Operador:** dispones de 5 opciones lógicas para capturar información clave.
+**Operador:** elige cómo se compara el campo con el valor de la condición.
 
-- **Igual a:**  la condición se cumplirá **únicamente** cuando el valor del producto coincida de forma exacta con el valor que escribas.
-- **Distinto de:** la condición se cumplirá en **cualquier caso, excepto** cuando el producto tenga el valor indicado.
-- **Contiene:** la condición se cumple si la palabra que buscas **aparece en cualquier parte** del comentario. Por ejemplo, si buscas `Frágil` y las notas de la OF contienen esa palabra, Bold activará la operación especial de embalaje reforzado.
+- **Igual a:** el campo coincide exactamente con el valor indicado.
+- **Distinto de:** el campo tiene cualquier valor excepto el indicado.
+- **Contiene:** el texto incluye el valor en cualquier posición. Por ejemplo, si buscas `Frágil` y las notas de la OF contienen esa palabra, Bold activará la operación condicionada.
 - **Empieza por:** la condición se activa si el texto o código comienza con esos caracteres. Úsala con plantillas de notas o códigos estandarizados. Por ejemplo, si las notas de exportación comienzan por `EXP-`, como `EXP-Francia`, configura **Empieza por: EXP-**.
 - **Termina por:** la condición se activa si el texto finaliza con esos caracteres exactos. Úsala si tus operarios o sistemas cierran las notas con etiquetas como `-OK` o `-REVISADO`.
 
-**Valor/Opción:** es el **dato concreto, texto o número exacto** que el sistema va a buscar dentro de la ficha del producto para verificar si la condición se cumple o no.
+**Valor/Opción:** indica el texto, número u opción con el que Bold debe comparar el campo.
 
 <Tip>
   Para crear una versión actualizada después de cambiar una operación, entra en la receta y haz clic en **Copiar desde otra receta**.

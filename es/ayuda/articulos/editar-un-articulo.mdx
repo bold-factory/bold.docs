@@ -3,20 +3,20 @@ title: "Configurar un artículo"
 description: "Completa las propiedades y reglas operativas de un artículo para comprarlo, fabricarlo o almacenarlo."
 ---
 
-Esta configuración sirve para **pasar de un inventario básico a una gestión de fábrica más automatizada**. Si solo rellenas el nombre, el sistema funciona como una agenda; si completas los datos, puede coordinar más operaciones de la planta.
+Completa la configuración del artículo para que Bold pueda utilizarlo en stock, planificación, compras y fabricación. Define solo los datos que correspondan a tu operativa.
 
-**Ruta:** **Catálogo \> Artículos \> Artículo a configurar**
+**Ruta:** **Catálogo > Artículos > Artículo a configurar**
 
 ## Asignar valores a las propiedades
 
-En la tabla de propiedades tienes que asignarle un valor: numérico, opción, texto, sí/no, etc. para que quede definido y el artículo sea válido.
+Asigna un valor a cada propiedad obligatoria de la familia. Según su configuración, el valor puede ser un número, una opción, texto, sí/no o una fecha. El artículo será válido cuando tenga completas todas las propiedades requeridas.
 
 ## Añadir una propiedad adicional (opcional)
 
-Esto sirve para **adaptar un artículo a sus características únicas o excepciones sin tener que alterar la estructura general** del catálogo ni crear categorías nuevas.
+Añade una propiedad adicional cuando un artículo tenga una característica propia que no deba aplicarse a toda la familia.
 
 <Note>
-  **Ejemplo:** imagina que vendes camisetas y la plantilla de esa categoría solo define dos propiedades: _talla_ y _color_. Si recibes una camiseta técnica que además requiere especificar el _tipo de transpirabilidad_, o una de colección que necesita un _número de serie_, puedes añadir esa propiedad extra solo a ese artículo concreto. No necesitas crear una categoría nueva para un solo artículo diferente.
+  **Ejemplo:** una familia de camisetas requiere **Talla** y **Color**. Si solo una camiseta técnica necesita indicar el **Tipo de transpirabilidad**, añade esa propiedad al artículo sin modificar toda la familia.
 </Note>
 
 ## Configurar unidades alternativas
@@ -37,11 +37,11 @@ Bold convierte a la unidad base las cantidades introducidas con una alternativa 
 
 ## Configurar la planificación
 
-En la pestaña **Planificación** podrás ver el stock que tienes en tiempo real.
+En la pestaña **Planificación** puedes consultar el stock y configurar el aprovisionamiento.
 
-**Campos a rellenar:**
+Completa los campos que correspondan:
 
-- **Punto de pedido:** es tu stock de seguridad. **Se debe rellenar** con el número mínimo de tableros por debajo del cual quieres comenzar un ciclo de reaprovisionamiento, ya sea fabricación o compra.
-- **Pedido mínimo:** es la cantidad mínima que tu proveedor exige para venderte o que tú necesitas para fabricar de forma continua. **Ejemplo:** si el sistema detecta que necesitas comprar 2 tableros, pero el pedido mínimo configurado es `10`, propondrá comprar 10.
-- **Tamaño de lote (opcional):** se rellena si el material se compra o fabrica en paquetes cerrados (por ejemplo, palets de 6 tableros). Si te hacen falta 7 tableros, el sistema redondeará hacia arriba y te pedirá 12 (2 lotes de 6).
+- **Punto de pedido:** indica el nivel de stock por debajo del cual quieres iniciar el aprovisionamiento mediante compra o fabricación.
+- **Pedido mínimo:** indica la cantidad mínima que compras o fabricas. Por ejemplo, si necesitas 2 tableros y el pedido mínimo es `10`, Bold propondrá 10.
+- **Tamaño de lote (opcional):** úsalo si compras o fabricas en paquetes cerrados. Por ejemplo, con lotes de 6 tableros, una necesidad de 7 se redondea a 12.
 - **Lead time aprovisionamiento (días laborables, opcional):** indica cuánto tarda en estar disponible el artículo desde que se inicia su compra o fabricación. Bold lo utiliza para calcular cuándo debe comenzar el aprovisionamiento.

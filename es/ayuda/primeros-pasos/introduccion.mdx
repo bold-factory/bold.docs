@@ -3,7 +3,7 @@ title: "Primeros pasos"
 description: "Prepara los datos mínimos, lanza una OF desde un pedido y registra la primera ejecución en planta."
 ---
 
-Primeros pasos te guía por el recorrido mínimo para usar Bold: prepara los datos base, define cómo se fabrica un producto habitual, crea un pedido, conviértelo en una orden de fabricación y registra su ejecución.
+Esta sección recorre el flujo mínimo para empezar a usar Bold: preparar los datos base, definir cómo se fabrica un producto habitual, crear un pedido, convertirlo en una orden de fabricación y registrar su ejecución.
 
 Empieza con un caso pequeño. Usa un producto habitual, una receta corta, un empleado operativo y un recurso de producción. Después amplía catálogo, permisos, ubicaciones y controles.
 
@@ -43,7 +43,7 @@ Empieza con un caso pequeño. Usa un producto habitual, una receta corta, un emp
     Revisa la necesidad de fabricación, crea una petición si corresponde y genera la OF con la receta activa.
   </Step>
   <Step title="Ejecuta en planta">
-    Entra en **Modo de trabajo**, selecciona el empleado, inicia la operación, registra avance y consumos, y finaliza la OF.
+    Entra en el **modo de trabajo**, selecciona el empleado, inicia la operación, registra el avance y los consumos, y finaliza la OF.
   </Step>
 </Steps>
 
@@ -58,7 +58,7 @@ flowchart LR
   pedido --> demanda["Demanda<br/>cantidad y fecha"]
   demanda --> peticion["Petición de fabricación<br/>qué falta"]
   peticion --> of["OF<br/>cómo se fabrica"]
-  of --> ejecucion["Modo de trabajo<br/>ejecución y trazabilidad"]
+  of --> ejecucion["modo de trabajo<br/>ejecución y trazabilidad"]
   ejecucion --> stock["Stock producido<br/>artículo terminado"]
   stock -. opcional .-> envio["Envío<br/>salida al cliente"]
 ```
@@ -74,7 +74,7 @@ El pedido explica la demanda. La petición de fabricación explica qué falta fa
 | Área | Resultado esperado |
 | --- | --- |
 | Catálogo | La familia y el artículo terminado se usan en pedido, receta y OF. |
-| Personal | El empleado aparece en **Modo de trabajo** y queda asociado al registro operativo. |
+| Personal | El empleado aparece en el **modo de trabajo** y queda asociado al registro operativo. |
 | Recursos | La operación puede ejecutarse en una estación o recurso compatible. |
 | Receta | La versión activa copia operaciones, entradas y salidas a la OF. |
 | Pedido | La línea confirmada genera demanda para el artículo fabricado. |
@@ -115,7 +115,7 @@ No necesitas configurar toda la fábrica antes de validar el flujo. Añade estos
 | Elemento | Cuándo añadirlo |
 | --- | --- |
 | Catálogo completo | Cuando el equipo haya validado cómo modelar productos y artículos. |
-| Perfiles detallados | Cuando sepas qué acciones hará cada responsabilidad. |
+| Perfiles detallados | Cuando sepas qué acciones necesita realizar cada función. |
 | Lotes, bultos y contenedores | Cuando necesites trazabilidad física o preparación logística. |
 | Controles de calidad complejos | Cuando la receta mínima ya genere operaciones ejecutables. |
 | Costes y cuadros de mando | Cuando los datos de ejecución sean estables. |

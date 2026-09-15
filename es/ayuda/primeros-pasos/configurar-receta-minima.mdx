@@ -3,11 +3,11 @@ title: "Definir un proceso de fabricación"
 description: "Define un proceso sencillo para fabricar el producto del primer recorrido."
 ---
 
-Para definir el proceso en Bold, crea una **receta** sencilla que permita generar una OF ejecutable sin modelar todavía toda la fabricación. Una receta describe las operaciones, los materiales y las instrucciones necesarias para fabricar un producto. Consulta [Recetas y versiones](/es/conceptos/fabricacion/recetas-y-versiones) para conocer su estructura completa.
+Para definir el proceso en Bold, crea una **receta** sencilla que permita generar una OF ejecutable sin modelar todavía todo el proceso de fabricación. Una receta describe las operaciones, los materiales y las instrucciones necesarias para fabricar un producto. Consulta [Recetas y versiones](/es/conceptos/fabricacion/recetas-y-versiones) para conocer su estructura completa.
 
 Empieza con una operación principal, los consumos imprescindibles y una salida clara del artículo terminado.
 
-Después podrás añadir más operaciones, controles, restricciones, condiciones, herramientas y variantes.
+Podrás añadir más operaciones, controles, restricciones, condiciones, herramientas y variantes cuando hayas validado este primer recorrido.
 
 ## Antes de empezar
 
@@ -32,13 +32,13 @@ Necesitas:
     Crea una operación que represente el trabajo central, por ejemplo **Montaje**, **Mezcla**, **Corte** o **Envasado**.
   </Step>
   <Step title="Asocia el proceso">
-    Selecciona el proceso que puede ejecutarse en el recurso que creaste. Esto permite que la OF encuentre estaciones compatibles.
+    Selecciona un proceso que pueda ejecutarse en el recurso que creaste. Así, la OF podrá encontrar estaciones compatibles.
   </Step>
   <Step title="Añade entradas">
     Indica los componentes y la cantidad consumida por unidad fabricada. Usa cantidades fáciles de comprobar en el primer recorrido.
   </Step>
   <Step title="Define la salida">
-    Revisa que la receta produzca el artículo terminado esperado. La OF usará esta información para registrar producción.
+    Revisa que la receta produzca el artículo terminado esperado. La OF usará esta información para registrar la producción.
   </Step>
   <Step title="Activa la versión">
     Activa la versión cuando la estructura sea coherente. Solo las versiones activas se usan para crear nuevas órdenes.
@@ -52,12 +52,12 @@ Necesitas:
 | Operaciones | Una operación principal. | Varias etapas con precedencias. |
 | Entradas | Componentes imprescindibles. | Fórmulas, variantes y consumos por momento. |
 | Pasos | Instrucciones cortas si ayudan a planta. | Instrucciones detalladas por etapa. |
-| Controles | Solo si bloquean un riesgo real. | Controles de calidad obligatorios. |
+| Controles | Solo si permiten comprobar un requisito imprescindible. | Controles de calidad adicionales. |
 | Restricciones | Ninguna si solo hay una operación. | Restricciones parciales, totales o no bloqueantes. |
 | Herramientas | Solo si son obligatorias para ejecutar. | Útiles, moldes y características requeridas. |
 
 <Warning>
-  Si añades controles obligatorios, asegúrate de que el equipo sabe completarlos en **Modo de trabajo**. Un control obligatorio puede bloquear el inicio o el cierre de una operación.
+  Si añades controles obligatorios, asegúrate de que el equipo sepa completarlos en el **modo de trabajo**. Un control obligatorio puede bloquear el inicio o el cierre de una operación.
 </Warning>
 
 ## Comprobación rápida

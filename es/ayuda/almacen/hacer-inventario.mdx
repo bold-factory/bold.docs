@@ -3,31 +3,48 @@ title: "Hacer inventario"
 description: "Cuenta el stock físico de una o varias ubicaciones y aplica las diferencias detectadas."
 ---
 
-Un **inventario** permite comparar el stock físico con el registrado en Bold. Los ajustes se aplican al finalizar el conteo.
+Un **inventario** compara el stock físico con la cantidad registrada en Bold. Las diferencias se aplican al finalizar el conteo.
 
 ## Preparar el inventario
 
 **Ruta:** **Almacén > Inventarios**
 
-1. Pulsa **Crear nuevo inventario**.
-2. Revisa el **Nombre** propuesto y modifícalo si necesitas identificar mejor el recuento.
-3. Abre el inventario y añade las **Ubicaciones a contar**.
+<Steps>
+  <Step title="Crea el inventario">
+    Pulsa **Crear nuevo inventario**.
+  </Step>
+  <Step title="Identifica el recuento">
+    Revisa el **Nombre** propuesto y modifícalo si necesitas identificar mejor el inventario.
+  </Step>
+  <Step title="Añade las ubicaciones">
+    Abre el inventario y selecciona las **Ubicaciones a contar**.
+  </Step>
+</Steps>
 
 ## Contar desde modo de trabajo
 
 **Ruta:** **Modo de trabajo > Almacén > Inventarios**
 
-1. Abre un inventario activo y selecciona la ubicación.
-2. Busca por **Familia**, **Artículo** o **Lote**. También puedes escanear el código del artículo.
-3. Selecciona el resultado correcto.
-4. Introduce la **Cantidad contada** y, si procede, un **Comentario**.
-5. Pulsa **Confirmar**.
+<Steps>
+  <Step title="Selecciona la ubicación">
+    Abre un inventario activo y selecciona la ubicación que vas a contar.
+  </Step>
+  <Step title="Busca el stock">
+    Busca por **Familia**, **Artículo** o **Lote**. También puedes escanear el código del artículo.
+  </Step>
+  <Step title="Registra el recuento">
+    Selecciona el resultado correcto e introduce la **Cantidad contada**. Añade un **Comentario** si necesitas explicar el recuento.
+  </Step>
+  <Step title="Confirma la entrada">
+    Pulsa **Confirmar**.
+  </Step>
+</Steps>
 
 Puedes editar una entrada mientras el inventario siga abierto. En una misma ubicación solo debe existir una entrada por combinación de artículo y lote.
 
 ## Finalizar el conteo
 
-Vuelve a **Almacén > Inventarios**, revisa las entradas y pulsa **Finalizar conteo**. Bold aplica en ese momento los ajustes de stock.
+Vuelve a **Almacén > Inventarios**, revisa las entradas y pulsa **Finalizar conteo**. En ese momento, Bold aplica las diferencias al stock.
 
 <Warning>
   Finalizar el conteo no se puede deshacer. Evita registrar movimientos físicos en las mismas ubicaciones durante el recuento o trabaja con alcances pequeños y controlados.

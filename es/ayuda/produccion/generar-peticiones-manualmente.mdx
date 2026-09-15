@@ -3,27 +3,27 @@ title: "Crear una OF sin pedido de venta"
 description: "Registra una necesidad interna y conviértela en una OF sin partir de un pedido de venta."
 ---
 
-Usa este flujo cuando necesites crear una OF sin partir de un pedido de venta ni de una recomendación del asistente de fabricación.
+Usa este flujo para crear una OF que no parte de un pedido de venta ni de una recomendación del asistente de fabricación.
 
 En Bold, primero crearás una **petición de fabricación** y después la convertirás en una OF. La petición registra qué artículo necesitas fabricar, en qué cantidad y para cuándo. Consulta [Peticiones de fabricación](/es/conceptos/fabricacion/peticiones-de-fabricacion) para entender su relación con las órdenes.
 
-Este flujo conserva menos contexto de planificación que una petición generada desde la demanda o el asistente.
+Como la petición se crea manualmente, no incluye el contexto de demanda que aportaría un pedido de venta o una recomendación del asistente.
 
 ## Pasos a seguir
 
-**Ruta:** **Fabricación \> Peticiones de fabricación \> Añadir nueva petición**
+**Ruta:** **Fabricación > Peticiones de fabricación > Añadir nueva petición**
 
 ### 1. Rellena los campos
 
-**Artículo:** elige el artículo que se quiere fabricar. Para convertir después la petición en una OF, debe disponer de una receta activa.
+**Artículo:** elige el artículo que quieres fabricar. Para convertir después la petición en una OF, el artículo debe tener una receta activa.
 
-**Cantidad:** indica la cantidad exacta de unidades, litros, kilogramos o la unidad de medida correspondiente que se necesita producir de ese artículo. 
+**Cantidad:** indica cuánto necesitas producir en la unidad de medida del artículo, como unidades, litros o kilogramos.
 
 **Solicitante (opcional):** indica quién origina la necesidad, por ejemplo un cliente, un departamento o una referencia interna.
 
 **Notas (opcional):** añade observaciones para el equipo de planta. Desde el editor también puedes adjuntar archivos si tienes permiso para subirlos.
 
-**Fecha requerida (opcional):** indica cuándo necesita el cliente el pedido.
+**Fecha requerida (opcional):** indica cuándo necesitas disponer del artículo.
 
 **Firme:** marca esta opción cuando la fecha requerida sea un compromiso estricto. Si la dejas desmarcada, la petición se considera tentativa.
 
@@ -31,4 +31,4 @@ Este flujo conserva menos contexto de planificación que una petición generada 
 
 ### 2. Crear la OF
 
-Guarda la petición y usa la acción identificada con un cohete para crear la OF. La orden convierte la necesidad registrada en trabajo que puedes planificar y ejecutar en planta.
+Guarda la petición y usa la acción con el icono de cohete para crear la OF. La orden convierte la necesidad registrada en trabajo que puedes planificar y ejecutar en planta.

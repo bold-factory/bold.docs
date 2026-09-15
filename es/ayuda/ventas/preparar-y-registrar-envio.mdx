@@ -5,21 +5,20 @@ description: "Prepara envíos completos o parciales y registra la salida física
 
 Prepara y registra el envío cuando un pedido de venta ya está listo para salir. Este flujo reduce stock y deja trazada la expedición.
 
-Al preparar y registrar la salida de un pedido de venta, tienes la opción de procesarlo como un **pedido completo** o un **pedido parcial**.
+Puedes registrar un envío completo o parcial:
 
-Un **pedido completo** ocurre cuando cuentas con todo el stock físico disponible en tus ubicaciones y decides enviar la totalidad de los artículos y cantidades solicitadas en una sola expedición.
-
-Un **pedido parcial** se genera cuando no dispones de todo el stock físico en ese momento (por ejemplo, por rotura de stock de un producto o falta de un lote específico) o cuando decides enviar solo una parte de la mercancía por razones logísticas.
+- **Envío completo:** incluye todos los artículos y cantidades pendientes del pedido.
+- **Envío parcial:** incluye solo una parte de la mercancía, ya sea por disponibilidad de stock o por una decisión logística.
 
 ## Registrar un envío completo
 
-**Ruta:** **Planificación \> Pedidos de venta \> Pedido a enviar**
+**Ruta:** **Planificación > Pedidos de venta > Pedido a enviar**
 
-### 1. Genera el envío
+### Genera el envío
 
 Haz clic en **Crear envío** en la parte inferior derecha.
 
-### 2. Añade la información
+### Añade la información
 
 **Número de albarán:** puedes introducir el número que utiliza tu empresa o dejarlo en blanco para que Bold lo genere automáticamente.
 
@@ -31,26 +30,24 @@ Haz clic en **Crear envío** en la parte inferior derecha.
 
 ## Registrar un envío parcial
 
-**Ruta:** **Almacén \> Envíos**
+**Ruta:** **Almacén > Envíos**
 
-### 1. Añadir un envío
+<Steps>
+  <Step title="Añade un envío">
+    **Destino:** selecciona el cliente que recibirá la mercancía.
 
-**Destino:** el cliente que recibirá físicamente el pedido que sale de la fábrica.
+    **Número de albarán (opcional):** introduce el número que utiliza tu empresa o déjalo en blanco.
 
-**Número de albarán (opcional):** puedes introducir el número que utiliza tu empresa o dejarlo en blanco.
+    **Ubicación de expedición:** selecciona el lugar físico desde donde sale la mercancía.
+  </Step>
+  <Step title="Añade las líneas">
+    Entra en **Almacén > Envíos > Envío creado** y añade los artículos que vayas a enviar. Un envío puede incluir líneas de distintos pedidos dirigidos al mismo cliente.
 
-**Ubicación de expedición:** lugar físico dentro de la fábrica desde donde sale la mercancía hacia el cliente.
+    **Línea de pedido:** selecciona una línea pendiente.
 
-### 2. Añadir líneas
-
-**Ruta:** **Almacén \> Envíos \> Envío creado**
-
-Añade uno por uno los artículos del pedido o pedidos que vayas a enviar. Un envío puede incluir líneas de distintos pedidos dirigidos al mismo cliente.
-
-**Línea de pedido:** puedes seleccionar solo las líneas pendientes.
-
-**Cantidad:** unidades que se quieren enviar.
-
-### 3. Expedir
-
-Pulsa **Enviar** para registrar la salida física de la mercancía. Esta acción crea los movimientos de stock.
+    **Cantidad:** indica las unidades que quieres enviar.
+  </Step>
+  <Step title="Registra la salida">
+    Pulsa **Enviar** para registrar la salida física de la mercancía. Esta acción crea los movimientos de stock.
+  </Step>
+</Steps>

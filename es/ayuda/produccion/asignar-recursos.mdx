@@ -4,18 +4,16 @@ description: "Asigna estaciones compatibles a operaciones pendientes antes de ej
 hidden: true
 ---
 
-En esta pantalla, el planificador o responsable de producción asigna la estación de trabajo y, cuando corresponde, la herramienta que ejecutará cada operación. La vista ayuda a revisar la carga y a detectar trabajo sin recursos asignados.
+En esta pantalla puedes asignar la estación de trabajo y, cuando corresponda, la herramienta que se usará en cada operación. La vista también permite revisar la carga y detectar operaciones sin recursos asignados.
 
-**Ruta:** **Fabricación \> Asignación de recursos**
-
-Esto es lo que puedes ver y gestionar en este panel:
+**Ruta:** **Fabricación > Asignación de recursos**
 
 ## Operaciones pendientes
 
-Cada tarjeta rectangular representa una operación concreta que necesita ser ejecutada. Sin necesidad de abrir el pedido, la tarjeta te muestra toda su información crítica:
+Cada tarjeta representa una operación pendiente. Puedes consultar sus datos principales sin abrir la OF:
 
-- **Vínculo directo:** sabes a qué pedido pertenece (`OF-00029-01`) y qué fase exacta se está evaluando (por ejemplo, corte de pata inclinada, pegado o lijado del sobre).
-- **Datos de prioridad:** ves la fecha límite en la esquina superior derecha (`18/06/2026`), el cliente que lo solicita (`LA CASA DEL SOFÁ`) y el contador de unidades necesarias (por ejemplo, `0/12 piezas`).
+- **Identificación:** código de la OF, como `OF-00029-01`, y nombre de la operación, como corte, pegado o lijado.
+- **Prioridad:** fecha límite, solicitante y cantidad completada respecto a la necesaria, como `0/12 piezas`.
 
 ## Asignar o cambiar maquinaria
 
@@ -23,19 +21,17 @@ Cada tarjeta rectangular representa una operación concreta que necesita ser eje
 
 **Herramienta:** aparece cuando la operación requiere una característica concreta. El selector muestra las herramientas compatibles.
 
-## Filtrar para detectar cuellos de botella
+## Filtrar las operaciones
 
-Cuando la fábrica gestiona cientos de operaciones a la vez, los filtros de la parte superior se vuelven indispensables para limpiar la vista:
+Usa los filtros de la parte superior para acotar la lista:
 
-- **Filtros por área o estación:** puedes filtrar para ver únicamente las tareas del área de _Pintura_ o del puesto _Lijadora de banda_. Esto te permite revisar la cola de trabajo de una sección específica de la fábrica para ver si va retrasada.
+- **Área o estación:** muestra solo las tareas de un área, como _Pintura_, o de una estación, como _Lijadora de banda_. Así puedes revisar la cola de trabajo de una sección concreta.
 - **Filtros rápidos de estado:** usa **Ocultar planificadas** y **Ocultar empezadas** para concentrarte en el trabajo que aún necesita asignación.
 
-<Note>
-  **Ejemplo: gestionar una avería**
+### Ejemplo: reasignar trabajo por una avería
 
-  Si la **Prensa hidráulica 1** va a estar parada dos días:
+Si la **Prensa hidráulica 1** va a estar parada dos días:
 
-  1. Selecciona **Prensa hidráulica 1** en el filtro **Estación de trabajo**.
-  2. Revisa las operaciones asignadas a esa máquina.
-  3. Abre cada tarjeta y reasígnala a la **Prensa hidráulica 2** o a un banco de trabajo alternativo.
-</Note>
+1. Selecciona **Prensa hidráulica 1** en el filtro **Estación de trabajo**.
+2. Revisa las operaciones asignadas a esa máquina.
+3. Abre cada tarjeta y reasígnala a la **Prensa hidráulica 2** o a un banco de trabajo alternativo.
