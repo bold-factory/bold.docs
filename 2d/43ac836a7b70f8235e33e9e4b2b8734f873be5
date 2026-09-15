@@ -1,0 +1,115 @@
+es/ayuda/articulos/editar-un-articulo.mdx
+  s_1d7c6624c76f0b::t_14b931efb94fe1 8,22-37
+anadir-transportes.mdx
+  s_e77f93ec41b055::t_04d9858e88dd8a 1-15
+configurar-ubicaciones.mdx
+  s_e77f93ec41b055::t_c06658d7c6e2e2 5,7,9,11,13,15,17,19,21,23-26
+definir-bultos-y-contenedores.mdx
+  s_e77f93ec41b055::t_a1a52e05241cce 5-6,19-43
+docs.json
+  s_e77f93ec41b055::t_6e1c6d66525a23 66-67,92-93,138,140-165,232,234-238
+es/ayuda/almacen/ajustar-stock.mdx
+  s_e77f93ec41b055::t_0e9c2ec5845236 25-26,31-40
+es/ayuda/almacen/aprovisionar-materias-primas.mdx
+  s_e77f93ec41b055::t_cd18d5942daa3b 28,32
+es/ayuda/articulos/crear-un-articulo.mdx
+  s_e77f93ec41b055::t_e3d806ae3d9c93 8,14,20,44,49,51,53,55
+es/ayuda/articulos/crear-un-producto.mdx
+  s_e77f93ec41b055::t_7038d314a05170 6,14,20,22,34,36
+es/ayuda/articulos/definir-propiedades.mdx
+  s_e77f93ec41b055::t_32dd6941d0f265 10
+es/ayuda/articulos/introduccion.mdx
+  s_e77f93ec41b055::t_ad96c8f500c5ee 3,23-28
+es/ayuda/compras/recibir-pedido-de-compra.mdx
+  s_e77f93ec41b055::t_abd3e9383975cc 19,21,23,25,27,29-35,39-40
+es/ayuda/costes/preparar-datos-de-coste.mdx
+  s_e77f93ec41b055::t_e5f292c2a39e94 12-16,22,25
+es/ayuda/costes/valoracion-inventario.mdx
+  s_e77f93ec41b055::t_d7b00ab30dd2c1 40
+es/ayuda/panel-de-control/configuracion-de-empresa.mdx
+  s_e77f93ec41b055::t_b66a5965cddbf4 44,47-60,62-67,69-80,82-83,85,87,89,91,93,95-98,100,102-103,105,107-113
+es/ayuda/panel-de-control/crear-etiquetas-y-codigos.mdx
+  s_e77f93ec41b055::t_b3a07b4bea3b7d 10-11,19-25,27-52,54-55
+es/ayuda/panel-de-control/disenar-roles-por-responsabilidad.mdx
+  s_e77f93ec41b055::t_7c45ccc12ffba5 8-13,29-31,35-37,39-40,42-43
+es/ayuda/panel-de-control/gestionar-archivos.mdx
+  s_e77f93ec41b055::t_c8b47a88338ca3 2,6,17,43,60
+es/ayuda/panel-de-control/importar-datos.mdx
+  s_e77f93ec41b055::t_424b90326b3a37 3,6,18-27,50-52,55-58,60-61,63-64,66-67,88
+es/ayuda/panel-de-control/introduccion.mdx
+  s_e77f93ec41b055::t_767e7a22a586b8 21
+es/ayuda/planificacion/realizar-pedidos-de-compra.mdx
+  s_e77f93ec41b055::t_ac99ee3d5f387b 8,10-35
+es/ayuda/primeros-pasos/configurar-receta-minima.mdx
+  s_e77f93ec41b055::t_c356e5dbe7b46d 16-17,26
+es/ayuda/primeros-pasos/crear-pedido-y-lanzar-of.mdx
+  s_e77f93ec41b055::t_f4347fcba46c02 24,27
+es/ayuda/primeros-pasos/flujo-basico-de-trabajo.mdx
+  s_e77f93ec41b055::t_a7ae299eeef184 8,14,37,40,81
+es/ayuda/primeros-pasos/preparar-datos-base.mdx
+  s_e77f93ec41b055::t_23afdce3bdff81 15,25,48,78
+es/ayuda/produccion/revisar-oee-y-paradas.mdx
+  s_e77f93ec41b055::t_78ca2a8f030669 10-11
+es/ayuda/produccion/ver-actividad-de-los-empleados.mdx
+  s_e77f93ec41b055::t_b2ea03ae65db48 12-13,18-19
+es/ayuda/produccion/ver-estado-de-las-estaciones.mdx
+  s_e77f93ec41b055::t_3b853b98d22af9 10-11,17
+es/ayuda/produccion/ver-evolucion-del-oee.mdx
+  s_e77f93ec41b055::t_374dda1b221fd7 10-11,13-14,17-24,27,29,31-33
+es/ayuda/produccion/ver-oee-por-estacion.mdx
+  s_e77f93ec41b055::t_e713bffb6c5829 6,8,10,12,14-110,112-114
+es/ayuda/produccion/ver-progreso-en-la-produccion.mdx
+  s_e77f93ec41b055::t_6ecd5ee7f2c41c 10-11,14,20
+es/ayuda/smart-factory/consultar-o-delegar-con-ia.mdx
+  s_e77f93ec41b055::t_9328cacae625b1 3,10-11,13-18,23-27,29,60
+es/ayuda/smart-factory/crear-automatizacion-con-agente.mdx
+  s_e77f93ec41b055::t_ab7b4a102b9a35 6,20-21,23-32,34-37,39-52,54-61,63-74,76-77
+es/ayuda/smart-factory/informes-powerbi.mdx
+  s_e77f93ec41b055::t_283a8ac6d43232 6,33-34,37,40-45
+es/ayuda/smart-factory/introduccion.mdx
+  s_e77f93ec41b055::t_e8113f3f179ee0 30,40-49,58
+es/conceptos/almacen/inventarios-y-ajustes.mdx
+  s_e77f93ec41b055::t_1d048b0c8aaf3d 22-29
+hacer-inventario.mdx
+  s_e77f93ec41b055::t_56d6a9ff6c2863 5-7,24,26-45,47,49-70,75,82,84,86,88,90,92
+planificar-ordenes-de-cargas.mdx
+  s_e77f93ec41b055::t_2decf35136d5ad 1-24
+registrar-movimientos-internos.mdx
+  s_e77f93ec41b055::t_b2d95faac45219 2,5,13,22-58,64-70,72-74,76,78
+untitled-page-1.mdx
+  s_e77f93ec41b055::t_89f168e3c7bb64 1-25
+untitled-page-2.mdx
+  s_e77f93ec41b055::t_625bb1cf1ee33e 1-17
+untitled-page-3.mdx
+  s_e77f93ec41b055::t_534227c4558a7b 1-39
+untitled-page-4.mdx
+  s_e77f93ec41b055::t_ecff3ad4021570 1-16
+untitled-page-5.mdx
+  s_e77f93ec41b055::t_450e8e17f52583 1-46
+untitled-page.mdx
+  s_e77f93ec41b055::t_051275a472073f 1-44
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "2d43ac836a7b70f8235e33e9e4b2b8734f873be5",
+  "prompts": {},
+  "sessions": {
+    "s_1d7c6624c76f0b": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0a6fb-f72b-71e0-89cf-9ff0b677d57b",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_e77f93ec41b055": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0a170-769f-7be2-9ac2-a2b11dc20075",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
