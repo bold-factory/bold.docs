@@ -1,0 +1,141 @@
+es/ayuda/analisis/introduccion.mdx
+  s_b725db51f03b7b::t_1c7f086befc7a2 17-18,31-36
+es/ayuda/smart-factory/introduccion.mdx
+  s_b725db51f03b7b::t_f34fb008a2cb06 2-4,7,15-16
+es/ayuda/smart-factory/consultar-o-delegar-con-ia.mdx
+  s_b725db51f03b7b::t_f34fb008a2cb06 2-4
+es/conceptos/fabricacion/ordenes-de-fabricacion.mdx
+  s_b725db51f03b7b::t_adca84a29de78b 66
+es/ayuda/planificacion/realizar-pedidos-de-compra.mdx
+  s_b725db51f03b7b::t_a0ff816400e563 3,6,8,10-13,15,17,19-32,34-38,40-42,44,46,48-61,63-65,67,69-71
+  s_b725db51f03b7b::t_2b0919322a29b4 33
+es/conceptos/fabricacion/peticiones-de-fabricacion.mdx
+  s_b725db51f03b7b::t_adca84a29de78b 58
+es/conceptos/almacen.mdx
+  s_b725db51f03b7b::t_279ef62260fa2b 155
+es/conceptos/fabricacion/cuadros-de-mando.mdx
+  s_b725db51f03b7b::t_279ef62260fa2b 45
+es/conceptos/smart-factory/boldy.mdx
+  s_b725db51f03b7b::t_adca84a29de78b 44
+es/conceptos/almacen/lotes.mdx
+  s_b725db51f03b7b::t_4e032f2cd4a123 83
+es/ayuda/primeros-pasos/crear-pedido-y-lanzar-of.mdx
+  s_b725db51f03b7b::t_adca84a29de78b 92
+es/ayuda/almacen/planificar-una-carga.mdx
+  s_b725db51f03b7b::t_ba6ecc0206360d 2-3,6,8-17,19-27,30-31,33-34,37-71,73-74,77,79-82
+  s_b725db51f03b7b::t_2af9ddcfe2c282 18
+  s_b725db51f03b7b::t_75f4bc36434f88 78
+es/conceptos/almacen/movimientos-de-almacen.mdx
+  s_b725db51f03b7b::t_279ef62260fa2b 108
+es/ayuda/almacen/configurar-y-completar-controles-de-recepcion.mdx
+  s_b725db51f03b7b::t_237c85c4c87bab 2-3,6,8,10-29,32-33,35-36,38-39,41-42,46-50,53-54,56-57,59-60,62-74,76-77,79-80,82-83,87,89,91,94,99-102
+es/conceptos/panel-de-control/datos-y-archivos.mdx
+  s_b725db51f03b7b::t_4e032f2cd4a123 32
+es/novedades/changelog.mdx
+  s_12187e24a83f6f::t_954ae00d1584a5 7-12
+es/ayuda/personal/configurar-turnos-y-calendarios.mdx
+  s_b725db51f03b7b::t_58322e01fb7a9a 1-91
+es/ayuda/smart-factory/crear-automatizacion-con-agente.mdx
+  s_b725db51f03b7b::t_adca84a29de78b 99
+es/ayuda/panel-de-control/vincular-telegram.mdx
+  s_b725db51f03b7b::t_adca84a29de78b 65
+  s_d96a16c9603faf::t_6b647ef3dfb674 1-64,66-67
+es/conceptos/smart-factory/tareas.mdx
+  s_b725db51f03b7b::t_adca84a29de78b 17,25-26,80,93
+es/ayuda/primeros-pasos/preparar-datos-base.mdx
+  s_b725db51f03b7b::t_adca84a29de78b 62
+es/ayuda/panel-de-control/introduccion.mdx
+  s_d96a16c9603faf::t_6b647ef3dfb674 14-15
+  s_b725db51f03b7b::t_c14abbacb2a6da 2-3,6,20-22
+  s_b725db51f03b7b::t_5e952efe38a1cb 16,29-31
+  s_b725db51f03b7b::t_fa1a8f84b08ef2 49-50
+es/conceptos/fabricacion.mdx
+  s_b725db51f03b7b::t_adca84a29de78b 102
+es/ayuda/articulos/introduccion.mdx
+  s_b725db51f03b7b::t_f34fb008a2cb06 10-11,15-16
+es/ayuda/almacen/cargar-y-cerrar-una-expedicion.mdx
+  s_b725db51f03b7b::t_ba6ecc0206360d 2-3,99
+es/ayuda/produccion/crear-turnos.mdx
+  s_b725db51f03b7b::t_f34fb008a2cb06 2
+es/ayuda/costes/configurar-costes-del-personal.mdx
+  s_b725db51f03b7b::t_237c85c4c87bab 2-3,6,8,10-13,15-23,26-33,35-36,40-54,59-61
+es/ayuda/panel-de-control/exportar-datos.mdx
+  s_b725db51f03b7b::t_237c85c4c87bab 2-3,6,8-35,38-39,41-42,44-45,47-48,52-55,57,59-68
+es/conceptos/costes.mdx
+  s_b725db51f03b7b::t_4e032f2cd4a123 109-110
+es/ayuda/personal/introduccion.mdx
+  s_b725db51f03b7b::t_d1134fbf3317a0 8-21,28-29,31-32
+es/ayuda/costes/analizar-costes-de-articulos.mdx
+  s_b725db51f03b7b::t_237c85c4c87bab 1-72
+es/ayuda/produccion/lanzar-ofs.mdx
+  s_b725db51f03b7b::t_f7e1ce113c0e48 59-77
+  s_b725db51f03b7b::t_f34fb008a2cb06 2
+es/ayuda/produccion/introduccion.mdx
+  s_b725db51f03b7b::t_f34fb008a2cb06 19,31
+es/ayuda/produccion/ver-progreso-en-la-produccion.mdx
+  s_b725db51f03b7b::t_ba6ecc0206360d 2-3,6,8,10-45,48-52,54-55,57-58,62,64,66-69,75
+es/ayuda/articulos/crear-un-producto.mdx
+  s_b725db51f03b7b::t_f34fb008a2cb06 2-3
+es/ayuda/personal/configurar-horarios.mdx
+  s_b725db51f03b7b::t_760598d02ceeba 6-56
+es/ayuda/panel-de-control/configuracion-de-empresa.mdx
+  s_b725db51f03b7b::t_279ef62260fa2b 129
+es/ayuda/primeros-pasos/introduccion.mdx
+  s_b725db51f03b7b::t_552c1f4283965e 3,10,12-50,52-85,87,91,95,99-103,123,125-126
+es/ayuda/costes/introduccion.mdx
+  s_b725db51f03b7b::t_5e952efe38a1cb 14-19
+es/conceptos/almacen/ordenes-de-carga.mdx
+  s_b725db51f03b7b::t_279ef62260fa2b 136
+es/ayuda/almacen/investigar-trazabilidad-de-un-lote.mdx
+  s_b725db51f03b7b::t_237c85c4c87bab 2-3,6,8,10-16,19-23,25-26,30-76,79-82
+docs.json
+  s_b725db51f03b7b::t_1d63a164fd1874 166,239,249
+  s_d96a16c9603faf::t_6b647ef3dfb674 254
+  s_b725db51f03b7b::t_2587510c20b8e0 34-75,174,185,193-194,216,231-232,258
+es/ayuda/almacen/introduccion.mdx
+  s_b725db51f03b7b::t_c18fa9724f9463 2-3,6
+  s_b725db51f03b7b::t_1c7f086befc7a2 14-15,20,26-31
+es/ayuda/mantenimiento/crear-parte-de-trabajo.mdx
+  s_b725db51f03b7b::t_9660452c0ba5f6 109
+  s_b725db51f03b7b::t_237c85c4c87bab 10-16,21-34,62-108,110-111,116-124
+es/ayuda/produccion/generar-peticiones-manualmente.mdx
+  s_b725db51f03b7b::t_f34fb008a2cb06 2-3
+es/conceptos/almacen/recepciones.mdx
+  s_b725db51f03b7b::t_4e032f2cd4a123 53
+es/ayuda/costes/preparar-datos-de-coste.mdx
+  s_b725db51f03b7b::t_c7f8c834e0704e 67-68
+es/ayuda/articulos/definir-propiedades.mdx
+  s_b725db51f03b7b::t_f34fb008a2cb06 2-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "b8838663284421213b50899fa22962e8b6bc0430",
+  "prompts": {},
+  "sessions": {
+    "s_12187e24a83f6f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0868e-c579-7831-8385-e69acc58474d",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_b725db51f03b7b": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0a750-642d-7013-8dbe-bf3d2653201a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_d96a16c9603faf": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0a752-f9bd-7ce1-87f4-c87f045205cf",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
