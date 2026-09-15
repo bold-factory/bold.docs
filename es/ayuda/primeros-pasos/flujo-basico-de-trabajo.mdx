@@ -5,13 +5,13 @@ description: "Sigue el recorrido inicial desde datos maestros hasta ejecución d
 
 El flujo básico de Bold empieza con pocos datos maestros y termina con una orden de fabricación ejecutada en planta. El objetivo no es configurar toda la empresa. El objetivo es comprobar que un pedido puede convertirse en trabajo real y trazable.
 
-Usa un producto común. Por ejemplo, **Mesa Nórdica - 160 cm - Roble**. Mantén el caso corto para que el equipo vea el recorrido antes de añadir variantes, controles, turnos, costes o reglas avanzadas.
+Usa una familia común. Por ejemplo, **Mesa Nórdica**. Mantén el caso corto para que el equipo vea el recorrido antes de añadir variantes, controles, turnos, costes o reglas avanzadas.
 
 ## Flujo operativo general
 
 <Steps>
   <Step title="Crea el catálogo">
-    Define productos y artículos. Añade propiedades si necesitas variantes como color, medida, material o acabado.
+    Define familias y artículos. Añade propiedades si necesitas variantes como color, medida, material o acabado.
   </Step>
   <Step title="Prepara el almacén">
     Crea ubicaciones y decide qué artículos trabajan con lotes. Esto permite registrar recepciones, movimientos, inventarios y envíos con trazabilidad.
@@ -34,10 +34,10 @@ Usa un producto común. Por ejemplo, **Mesa Nórdica - 160 cm - Roble**. Mantén
 
 <Steps>
   <Step title="Crea el catálogo mínimo">
-    Crea el producto, el artículo terminado y los componentes que quieras consumir durante la fabricación. Marca el artículo terminado como fabricable.
+    Crea la familia, el artículo terminado y los componentes que quieras consumir durante la fabricación. Marca el artículo terminado como fabricable.
   </Step>
   <Step title="Crea empleados">
-    Añade al menos un empleado operativo. Lo usarás para registrar quién trabaja en **Modo de trabajo**.
+    Añade al menos un empleado operativo. Lo usarás para registrar quién trabaja en **modo de trabajo**.
   </Step>
   <Step title="Crea recursos de producción">
     Define un proceso y una estación, máquina, línea o puesto compatible con la operación que vas a ejecutar.
@@ -78,7 +78,7 @@ El pedido explica la demanda. La petición de fabricación explica qué falta fa
 
 | Área | Resultado esperado |
 | --- | --- |
-| Catálogo | El producto y el artículo terminado se usan en pedido, receta y OF. |
+| Catálogo | La familia y el artículo terminado se usan en pedido, receta y OF. |
 | Personal | El empleado aparece en **Modo de trabajo** y queda asociado al registro operativo. |
 | Recursos | La operación puede ejecutarse en una estación o recurso compatible. |
 | Receta | La versión activa copia operaciones, entradas y salidas a la OF. |

@@ -5,6 +5,8 @@ description: "Completa las propiedades y reglas operativas de un artículo para 
 
 Esta configuración sirve para **pasar de un inventario básico a una gestión de fábrica más automatizada**. Si solo rellenas el nombre, el sistema funciona como una agenda; si completas los datos, puede coordinar más operaciones de la planta.
 
+Ruta: **Catálogo > Artículos > Artículo a configurar**
+
 ## Asignar valores a las propiedades
 
 En la tabla de propiedades tienes que asignarle un valor: numérico, opción, texto, sí/no, etc. para que quede definido y el artículo sea válido.
@@ -16,6 +18,18 @@ Esto sirve para **adaptar un artículo a sus características únicas o excepcio
 <Note>
   **Ejemplo:** imagina que vendes camisetas y la plantilla de esa categoría solo define dos propiedades: _talla_ y _color_. Si recibes una camiseta técnica que además requiere especificar el _tipo de transpirabilidad_, o una de colección que necesita un _número de serie_, puedes añadir esa propiedad extra solo a ese artículo concreto. No necesitas crear una categoría nueva para un solo artículo diferente.
 </Note>
+
+## Añadir unidades alternativas
+
+En el entorno industrial, un mismo material a menudo se compra, almacena o consume en diferentes unidades. Esto nos permite definir equivalencias automáticas para que el sistema convierta las cantidades sin necesidad de hacer cálculos manuales.
+
+**Unidad alternativa:** selecciona la unidad correspondiente que creaste previamente en el catálogo. 
+
+**Número de decimales:** establece la precisión requerida. Si la unidad alternativa no se puede fraccionar (como una caja o un bote completo), pon `0`. Si permite fracciones, indica `2` o los decimales necesarios.
+
+**Factor de conversión:** introduce cuántas unidades base del artículo equivalen a **1 unidad** de la unidad alternativa seleccionada.
+
+> Ejemplo: 1 bote contiene 5 kg de resina. Cuando compras o mueves 10 botes en la fábrica, el sistema traduce automáticamente la operación a 50 kg en tu inventario principal. Por lo tanto, los kilogramos son la unidad principal y los botes la unidad alternativa. 
 
 ## Configurar la planificación
 
