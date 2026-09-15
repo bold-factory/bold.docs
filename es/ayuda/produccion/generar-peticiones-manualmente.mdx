@@ -15,17 +15,17 @@ Este flujo conserva menos contexto de planificación que una petición generada 
 
 ### 1. Rellena los campos
 
-**Artículo:** elige el producto final que se quiere fabricar. Se debe seleccionar un producto que ya tenga su receta o estructura de fabricación previamente creada en el sistema. 
+**Artículo:** elige el artículo que se quiere fabricar. Para convertir después la petición en una OF, debe disponer de una receta activa.
 
 **Cantidad:** indica la cantidad exacta de unidades, litros, kilogramos o la unidad de medida correspondiente que se necesita producir de ese artículo. 
 
-**Solicitante (opcional):** indica el nombre del cliente que está solicitando esta producción. Sirve para mantener la trazabilidad de quién originó la necesidad.
+**Solicitante (opcional):** indica quién origina la necesidad, por ejemplo un cliente, un departamento o una referencia interna.
 
-**Notas (opcional) y botón ADJUNTAR:** espacio para añadir observaciones importantes para el equipo de planta (instrucciones especiales de envasado, alertas de alérgenos, etc.). Con el botón **ADJUNTAR**, se pueden subir archivos de soporte, como planos técnicos, diseños de etiquetas en PDF o la orden de compra del cliente.
+**Notas (opcional):** añade observaciones para el equipo de planta. Desde el editor también puedes adjuntar archivos si tienes permiso para subirlos.
 
 **Fecha requerida (opcional):** indica cuándo necesita el cliente el pedido.
 
-**Casilla "Firme":** si se marca esta opción, se le indica al sistema que la _Fecha requerida_ es inamovible (prioritaria por compromiso de entrega). Si se deja desmarcada, el planificador de producción entiende que la fecha es flexible y puede moverla en la fase de secuenciación si hay saturación en las líneas.
+**Firme:** marca esta opción cuando la fecha requerida sea un compromiso estricto. Si la dejas desmarcada, la petición se considera tentativa.
 
 **Código (opcional):** un identificador interno para relacionar la petición. Puede ser el número de pedido de venta del cliente o un código generado por Bold.
 

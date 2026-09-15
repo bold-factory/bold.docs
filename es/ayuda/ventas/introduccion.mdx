@@ -11,19 +11,19 @@ Consiste en registrar compromisos con clientes. Cada pedido genera demanda cuand
 
 ### 1. Añadir un pedido
 
-**Número de pedido:** puedes usar la nomenclatura actual de tu empresa. Si lo dejas vacío, Bold asigna un código único y secuencial.
+**Nº pedido (opcional):** puedes usar la nomenclatura actual de tu empresa. Si lo dejas vacío, Bold asigna un código.
 
-**Número de pedido del cliente:** usa este campo cuando tu cliente sea una empresa grande que te facilite su propio número o código para hacer referencia a este pedido. Te ayudará a hablar su idioma y comunicaros más rápido.
+**Nº pedido del cliente (opcional):** registra la referencia con la que el cliente identifica el pedido.
 
 **Cliente:** puedes seleccionarlo de los ya registrados.
 
-**Fecha del pedido:** por defecto, si lo dejas vacío, Bold asigna **automáticamente la fecha del día actual**, pero puedes modificarla manualmente si necesitas introducir un registro anterior.
+**Fecha pedido (opcional):** indica cuándo se formalizó el pedido.
 
-**Descripción corta:** este campo opcional funciona como una **etiqueta rápida** o **nota aclaratoria** que te permite identificar el propósito de la venta de un solo vistazo, sin necesidad de abrir el pedido y revisar todos los artículos que contiene. Fíjate en cómo hablarías con un compañero sobre un pedido, eso debería ser lo que pongas aquí. Por defecto se pone el número y el nombre del cliente.
+**Descripción corta (opcional):** añade un nombre breve que permita reconocer el pedido en los listados.
 
-**Adjuntar:** es una opción para **centralizar toda la documentación** de una venta en un solo lugar. _Ejemplo:_ presupuestos, cotizaciones previas, fichas técnicas o planos del material.
+**Instrucciones de entrega (opcional):** indica requisitos que deban tenerse en cuenta al preparar o entregar el pedido.
 
-**Notas:** usa este campo como canal de comunicación interna para dejar comentarios, advertencias o recordatorios que no caben en los campos del pedido.
+**Notas (opcional):** deja comentarios internos. Desde el editor puedes adjuntar presupuestos, fichas técnicas o planos si tienes permiso para subir archivos.
 
 ### 2. Añadir líneas
 
@@ -33,12 +33,12 @@ Añade una línea por cada artículo solicitado. El pedido debe contener al meno
 
 **Cantidad solicitada:** unidades demandadas.
 
-**Fecha de entrega solicitada:** es el día en que **tu cliente pide recibir el producto terminado** en sus instalaciones. Puede dejarse vacío si no te da indicaciones al respecto. Si marcas la fecha como comprometida, **te comprometes formalmente** a entregar el producto en esa fecha y el sistema la prioriza frente a otros pedidos.
+**Fecha entrega solicitada:** es el día en que el cliente solicita recibir el artículo. Si marcas **Comprometida**, la misma fecha se registra también como fecha comprometida de entrega.
 
 **Notas:** usa la nota de la línea para dar instrucciones sobre un artículo sin afectar al resto del pedido. Por ejemplo, puedes indicar una etiqueta o un esquema de paletización específicos.
 
-**Adjuntar:** puedes asociar documentos, fotos o planos que pertenezcan a ese artículo concreto y no al pedido completo.
+Desde el editor de notas puedes adjuntar documentos, fotos o planos de la línea si tienes permiso para subir archivos.
 
-**Estado:** **Confirmado** o **Borrador**. El estado **Confirmado** indica que el cliente ya ha dado su visto bueno definitivo y el pedido entra oficialmente en la cola de producción o compra. Por el contrario, el estado **Borrador** significa que el pedido aún se está negociando o completando; por lo tanto, no altera el inventario y permanece oculto para el resto de secciones hasta que decidas activarlo, con opción de modificarlo antes.
+**Estado:** **Confirmado** o **Borrador**. Una línea confirmada genera demanda y pasa a tenerse en cuenta en planificación. Una línea en borrador no genera demanda y permite cambiar el artículo, la cantidad y el modo de aprovisionamiento.
 
 **Aprovisionamiento:** **Contra stock** o **Contra pedido**. El primero consiste en comprar o fabricar por adelantado basándose en previsiones de venta; busca mantener existencias para ofrecer una entrega inmediata al cliente. En el segundo, el proceso se activa únicamente tras recibir un pedido en firme; reduce los costes de almacenar sobrantes a cambio de un mayor tiempo de espera para la entrega.

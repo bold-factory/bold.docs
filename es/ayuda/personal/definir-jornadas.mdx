@@ -13,12 +13,12 @@ Definir jornadas permite crear **plantillas de turnos reutilizables**. En lugar 
   **Ejemplos:** _Turno mañana L-V_, _Turno de noche_ o _Jornada partida taller_.
 </Note>
 
-**Hora de inicio y hora de fin:** establecen el horario teórico que el operario debe cumplir. Sirve para que Bold compare este horario con los fichajes reales en la entrada de la fábrica. Si un operario tiene este turno (09:00 a 17:00) y ficha a las 09:15, el sistema registrará automáticamente una **alerta de retraso**.
+**Hora de inicio y hora de fin:** establecen el periodo de disponibilidad de esa jornada. Bold utiliza estos periodos al resolver la programación del empleado.
 
-**Termina al día siguiente:** es fundamental para los **turnos de noche**. Si un empleado entra a trabajar a las 22:00 y sale a las 06:00 del día siguiente, marcar esta casilla indica a Bold que el fichaje de salida matutino pertenece al turno que empezó la noche anterior, evitando que el sistema lo compute como un error o como un día ausente.
+**Termina al día siguiente:** permite definir periodos que cruzan la medianoche. Si el horario va de 22:00 a 06:00, marca esta opción para que Bold calcule correctamente la duración.
 
 **+ Añadir periodo:** sirve para configurar **jornadas partidas**. Si en tu fábrica los operarios paran para comer y no quieres que ese tiempo cuente como horas trabajadas, crea dos periodos en esta misma pantalla.
 
 <Tip>
-  Necesitas definir una jornada que se llame "No Laborable", para programar los turnos con sus fines de semana y marcar los festivos en el calendario local.
+  Crea una jornada de descanso sin periodos de trabajo para representar fines de semana, festivos o cierres. Puedes darle un nombre reconocible, como `No laborable`.
 </Tip>

@@ -5,20 +5,19 @@ description: "Revisa necesidades, stock y plazos para decidir qué materiales de
 
 **Ruta:** **Planificación \> Asistente de compras**
 
-El **Asistente de compras** ayuda a gestionar el aprovisionamiento de la fábrica. Su objetivo es doble: **evitar que la producción se detenga por falta de material** y **evitar comprar de más**, manteniendo el inventario ajustado a las necesidades.
+El **Asistente de compras** agrupa necesidades de artículos configurados para aprovisionarse mediante **Compra** y **Contra stock**. Bold propone comprar cuando el stock proyectado cae por debajo del punto de pedido.
 
-Para sacarle el máximo partido, debes entender cómo divide el tiempo y cómo automatiza el trabajo.
+La propuesta tiene en cuenta stock actual, entradas y salidas previstas, punto de pedido, pedido mínimo, tamaño de lote, proveedor y plazos configurados.
 
 Antes de revisar los datos de esta vista, ajusta:
 
-- **Frecuencia de compra (diaria, semanal o mensual):** define cada cuánto se revisan las necesidades de compra. Para muchas fábricas, la frecuencia **Semanal** permite agrupar necesidades y ahorrar costes de transporte.
-- **Incluir necesidades hasta:** este calendario permite anticipar compras. Si sabes que viene un pico de producción el mes que viene o que un proveedor cierra por vacaciones, puedes indicar una fecha límite futura para que el sistema sugiera adelantar esas compras. En los cuatro bloques puedes ver las fechas límite para realizarlas.
+- **Frecuencia de compra (diaria, semanal o mensual):** define los periodos con los que se agrupan las necesidades.
+- **Incluir necesidades hasta:** limita el horizonte de necesidades que se consulta.
 
-1. **Urgencias:** aquí aparecen los artículos que **ya deberían estar pedidos** porque la fábrica los necesita de inmediato o la fecha teórica ya ha pasado.
-   - _Acción obligatoria:_ Esta tarjeta es la prioridad número uno del día. Debe estar siempre a cero.
-2. **Este periodo:** muestra las necesidades reales para los días en curso. Son los pedidos que debes lanzar esta semana para que la fábrica funcione al ritmo previsto.
-3. **Siguiente periodo:** muestra compras preventivas para la semana siguiente. Te da margen de maniobra para proveedores que tardan varios días en entregar la mercancía.
-4. **Futuro:** muestra previsiones a largo plazo basadas en pedidos de clientes planificados. Sirve para analizar tendencias o negociar contratos de volumen con proveedores.
+1. **Urgencias:** necesidades cuya fecha ya exige atención.
+2. **Este periodo:** necesidades incluidas en el periodo actual.
+3. **Siguiente periodo:** necesidades del periodo siguiente.
+4. **Futuro:** necesidades posteriores dentro del horizonte elegido.
 
 ## Organizar por proveedor o artículo
 
@@ -37,18 +36,12 @@ Bold te permite cambiar la vista según tu estrategia de compra mediante dos pes
 
 Revisa los datos de stock de cada columna antes de comprar. El sistema combina las variables disponibles y propone una cantidad. Comprueba la propuesta con los plazos, las cantidades mínimas y la previsión de stock.
 
-**Punto pedido:** es el nivel crítico de inventario que actúa como el "disparador" de una compra. Indica la cantidad mínima de stock disponible que debes tener para cubrir las ventas mientras esperas a que el proveedor te entregue el nuevo pedido.
+**Punto de pedido:** es el nivel de stock proyectado a partir del cual Bold propone iniciar el aprovisionamiento.
 
-**Propuesta:** su objetivo principal es quitarte el trabajo de adivinar o hacer cálculos a mano. Puedes reiniciarla y limpiarla. Esto te sirve para rectificar un cambio manual, para actualizar los datos si cambias las fechas y para excluir un artículo del pedido actual.
+**Propuesta:** es la cantidad calculada por Bold. Puedes modificarla, restablecer el cálculo o limpiarla para excluir el artículo del pedido actual.
 
 ### 2. Abrir el artículo
 
 Esto hará que se desplieguen tres gráficos y tablas analíticas.
 
-El objetivo de esta pantalla es:
-
-Evitar que rompas tus presupuestos habituales o satures tu capacidad de almacenamiento de golpe. La tabla de **pedidos de compra** te sirve para comparar la propuesta actual con el volumen de unidades que sueles pedirle habitualmente a ese proveedor en tu día a día.
-
-Validar con la **previsión de stock** si la cantidad que vas a comprar realmente va a solucionar el problema. Te da una simulación visual de cómo se comportará tu almacén en los próximos 30 días si realizas el pedido hoy, asegurándote de que no te vas a quedar corto ni vas a llenar el almacén de mercancía innecesaria.
-
-Demostrar con datos reales el **Histórico de consumos.** Te aclara si necesitas comprar tanto porque vendes de forma constante o porque tuviste un pico de demanda aislado. Esto te ayuda a decidir si esa tendencia se va a repetir o no.
+Usa **Pedidos de compra** para comparar la propuesta con pedidos abiertos o anteriores, **Previsión de stock** para revisar el efecto estimado de la compra y **Histórico de consumos** para contrastarla con las salidas registradas.

@@ -15,22 +15,22 @@ Al crear el artículo directamente desde el listado de artículos, el sistema ab
 
 ### 1. Datos requeridos
 
-**Nombre**: a diferencia de la pantalla anterior, aquí el campo aparece totalmente vacío. Tienes que escribir el nombre completo, claro e identificable del artículo (por ejemplo, _Perfil de aluminio lacado blanco 2m_).
+**Nombre:** escribe un nombre completo y reconocible para el artículo, por ejemplo _Perfil de aluminio lacado blanco 2 m_.
 
-**Familia (opcional):** al hacer clic en el desplegable, verás la lista de todas las familias que has creado previamente en Bold. Si seleccionas uno, este artículo quedará enlazado como una variante de esa familia. Si lo dejas vacío, el artículo quedará independiente en tu inventario, lo cual es útil para registrar consumibles de fábrica, herramientas o EPI que no forman parte directa de tu catálogo de producción.
+**Familia (opcional):** selecciona una familia para vincular el artículo como una de sus variantes. Si lo dejas vacío, el artículo quedará independiente, lo que puede resultar útil para consumibles o EPI.
 
-**Unidad:** es la unidad base bajo la cual se va a contabilizar este artículo en el stock. Por defecto viene en **unidades**, pero puedes desplegar el catálogo para seleccionar **metros, kilogramos, litros, cajas**, etc. Configurar esto bien es crítico para que las órdenes de compra a proveedores y los consumos de material de los operarios coincidan con la realidad de la planta. Después de crear el artículo podrás añadir unidades alternativas y su factor de conversión.
+**Unidad:** es la unidad base con la que se contabiliza el artículo. Si solo existe la unidad con código `ud`, Bold la selecciona automáticamente. Puedes elegir metros, kilogramos, litros u otra unidad configurada. Después de crear el artículo podrás añadir unidades alternativas y su factor de conversión.
 
-**Precisión**: indica la cantidad de **decimales** que el sistema va a aceptar para este artículo.
+**Precisión:** indica la cantidad de decimales que el sistema va a aceptar para este artículo.
 
 - Si se cuenta por piezas enteras (como cajas, motores o ventanas), se deja en `0`.
-- Si se mide por peso o longitud (como `1.5 metros` de cable o `2.75 kg` de resina), debes cambiarlo a `1`, `2` o `3` según el nivel de detalle que requiera tu control de inventario.
+- Si se mide por peso o longitud, como `1,5 m` de cable o `2,75 kg` de resina, indica los decimales necesarios.
 
 **Origen de aprovisionamiento:** define si el artículo se adquiere externamente (**Compra**), se procesa en el taller (**Fabricación**) o no requiere planificación (**Ignorar**).
 
 **Modo de aprovisionamiento:** determina si trabajas **Contra stock** para mantener un almacén mínimo, o **Contra pedido** activando la compra o fabricación únicamente cuando entra un pedido de cliente.
 
-**Permitir múltiples lotes:** si seleccionas **Sí**, el sistema te obliga a registrar un número de lote cada vez que entra o sale stock. Así puedes seguir el origen y el destino de cada lote cuando investigas un problema de calidad.
+**Permitir múltiples lotes:** si seleccionas **Sí**, Bold conserva separados los lotes según su origen. Los inventarios, consumos y envíos pueden pedir el lote concreto. Si seleccionas **No**, Bold puede fusionarlos para simplificar la gestión a cambio de reducir el detalle de trazabilidad.
 
 **Código (opcional):** introduce el código alfanumérico único, como una referencia o SKU.
 
@@ -48,11 +48,11 @@ Al crear el artículo directamente desde el listado de artículos, el sistema ab
 
 ## Crear el artículo desde una familia
 
-Al crear el artículo dentro de la ficha de familia, este **hereda automáticamente** la información que ya introdujiste en el paso anterior (como el nombre base, la descripción o la categoría). Solo tienes que añadir el detalle que lo hace único, ahorrándote teclear todo de nuevo.
+Al crear el artículo dentro de la ficha de una familia, Bold lo vincula automáticamente a esa familia y propone el nombre de la familia como nombre inicial.
 
 **Ruta:** **Catálogo \> Familias > Familia creada**
 
-Los campos requeridos son idénticos a los de la ficha general del artículo. La única diferencia es el campo del nombre, que al acceder directamente desde la familia, el sistema sugiere automáticamente una denominación base (por ejemplo, _ventana_). Este valor se puede mantener o modificar para especificar una variante concreta.
+Completa **Nombre**, **Origen de aprovisionamiento**, **Modo de aprovisionamiento**, **Permitir múltiples lotes**, **Código** y **Descripción**. Después de crear el artículo, abre su ficha para revisar la unidad principal, la precisión decimal, las propiedades y las unidades alternativas.
 
 <Note>
   **Ejemplos:** `Ventana de aluminio corredera 120x120` o `Ventana de madera rústica`.

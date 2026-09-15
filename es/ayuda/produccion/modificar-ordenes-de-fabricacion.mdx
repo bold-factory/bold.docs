@@ -5,33 +5,34 @@ description: "Actualiza operaciones, materiales y cantidades de una orden cuando
 
 **Ruta:** **Fabricación \> Órdenes de fabricación \> Orden lanzada**
 
-Al hacer clic en una orden específica, entras en su hoja de ruta detallada. Esta pantalla está diseñada para darte visibilidad total sobre un único pedido y permitirte editar su flujo de trabajo si surge cualquier imprevisto en la planta.
+Al abrir una orden específica, accedes a su hoja de ruta detallada. Esta pantalla permite revisar una OF y modificar los datos que siguen editables según su estado.
 
-Esto es todo lo que puedes visualizar y gestionar:
+Esto es todo lo que puedes ver y gestionar:
 
 ## Indicadores de cabecera
 
-En la parte superior tienes un resumen instantáneo del estado del pedido sin necesidad de navegar por los menús:
+En la parte superior tienes un resumen del estado de la OF:
 
 - **Progreso general:** un porcentaje (`0 %`) y un contador numérico (`0 de 3`) indican cuántas unidades del producto se han terminado.
 - **Detalle del producto:** identifica la cantidad y el artículo que se está fabricando (por ejemplo, `3 x Mesa 100x80 color blanco para exterior`).
 
 ## Barra de acciones
 
-En la parte inferior encontrarás los botones necesarios para realizar cambios o reorganizar en tiempo real el flujo de trabajo de esta orden:
+En la parte inferior encontrarás las acciones disponibles para la orden:
 
 - **Imprimir:** Genera la hoja de ruta física de la orden para que el operario la tenga en papel en su puesto si es necesario.
-- **Bloquear:** Pausa inmediatamente todo el trabajo de esta orden en planta si detectas un problema grave (rotura de máquina, falta de piezas, etc.).
+- **Bloquear:** impide continuar con la orden hasta que se desbloquee. Úsalo ante una incidencia que deba resolverse antes de seguir.
 - **\+ Operación:** Añade un paso extra que no estaba planificado originalmente (por ejemplo, si una pieza requiere un lijado extra imprevisto).
 - **\+ Restricción:** Añade reglas de dependencia (ej. "No se puede empezar la fase de Pintura si no se ha completado al 100% el Pegado").
 - **Estaciones:** Reasigna las máquinas o bancos de trabajo asignados a estas operaciones si una máquina sufre una avería.
-- **Eliminar / Guardar:** botones para descartar los cambios o guardar la estructura modificada de la orden.
+- **Eliminar:** borra la orden cuando su estado y actividad todavía lo permiten.
+- **Guardar:** conserva los cambios realizados en la cabecera de la orden.
 
 ## Crear peticiones de material
 
-En la pestaña **Materiales**, si un material no está disponible o prevés que vas a necesitar más unidades por rechazos en el taller, puedes utilizar el icono de la herramienta azul en la columna **Acciones**.
+En la pestaña **Materiales**, el icono **Crear petición para este material** aparece cuando el artículo está configurado para aprovisionarse mediante fabricación y aún no tiene una petición vinculada.
 
-Al hacer clic en **"Crear petición para este material"**, puedes solicitar directamente al departamento de compras o de almacén el suministro de ese componente sin necesidad de salir de la orden de fabricación ni rellenar formularios externos.
+Esta acción crea una petición de fabricación vinculada al material de la OF. No genera un pedido de compra ni un movimiento de almacén.
 
 **Cantidad (ud):** indica el número exacto de unidades que necesitas. El sistema introduce de forma automática las unidades que quedan pendientes de consumir según la planificación inicial.
 
@@ -39,4 +40,4 @@ Puedes cambiar este número manualmente. Si necesitas material adicional para cu
 
 **Notas (opcional):** es un campo de texto libre para comunicarte con los encargados de suministrarte el material. Sirve para dar instrucciones específicas o explicar el motivo de la petición si te sales de lo planificado.
 
-**Código:** es el identificador único que el sistema genera para vincular esta petición con su orden de fabricación, por ejemplo `PF-00029-01a`. El campo está bloqueado porque se usa para relacionar costes y materiales con la petición.
+**Código:** Bold lo genera a partir del código de la OF y de los prefijos configurados. Si ya existe una petición con la misma base, añade el primer sufijo libre.

@@ -21,7 +21,7 @@ Ruta: **Smart Factory > Automatizaciones**
 
 <Steps>
   <Step title="Crear automatización">
-    Rellenar los campos solicitados. 
+    Pulsa **Crear nueva automatización** y completa los campos solicitados.
   </Step>
   <Step title="Asignar un nombre">
     Escribe un nombre descriptivo para identificar fácilmente el trabajo (por ejemplo: _"Revisión diaria de paradas de planta"_ o _"Control semanal de stock bajo"_).
@@ -32,9 +32,9 @@ Ruta: **Smart Factory > Automatizaciones**
     **_Ejemplo:_** _"Revisa las órdenes de fabricación de ayer, busca si hubo paradas no planificadas de más de 15 minutos y genera un resumen con el motivo y la estación afectada."_
   </Step>
   <Step title="Seleccionar el nivel de inteligencia">
-    - **Baja:** Para consultas muy sencillas o lecturas directas.
-    - **Media (Recomendado):** Mantiene un equilibrio óptimo entre razonamiento y consumo de créditos para el día a día de la fábrica.
-    - **Alta:** Reservada para cruzar múltiples variables, resolver situaciones ambiguas o tomar decisiones complejas.
+    - **Baja:** para consultas sencillas o lecturas directas.
+    - **Media (recomendado):** para análisis habituales que requieren relacionar varios datos.
+    - **Alta:** para tareas complejas que exigen más razonamiento.
   </Step>
   <Step title="Configurar los parámetros de operación">
     **Modo de trabajo:**
@@ -54,8 +54,8 @@ Ruta: **Smart Factory > Automatizaciones**
   <Step title="Definir disparadores">
     Definir **cuándo o qué provocará que se ejecute** tu automatización. Tienes tres opciones principales según cómo quieras usarla:
 
-    - **Ejecutar por horario fijo:** Haz clic en **Añadir programado** si quieres que se lance automáticamente a una hora y frecuencia determinadas (por ejemplo, todos los días a las 9:00 AM o cada lunes).
-    - **Ejecutar tras una acción específica:** Haz clic en **Añadir por evento** si prefieres que se active sola cuando ocurra algo concreto en el sistema (por ejemplo, al recibir un nuevo correo, crear un ticket o modificar un estado).
+    - **Ejecutar por horario fijo:** Haz clic en **Añadir programado** si quieres que se lance automáticamente a una hora y frecuencia determinadas (por ejemplo, todos los días a las 09:00 o cada lunes).
+    - **Ejecutar tras una acción específica:** Haz clic en **Añadir por evento** si prefieres que se active cuando ocurra uno de los eventos de Bold disponibles en el selector. Puedes añadir condiciones cuando el esquema del evento exponga propiedades compatibles.
     - **Ejecutar manualmente o guardar:**
       - Si solo la vas a lanzar tú cuando quieras a demanda, pulsa en **Guardar cambios**.
       - Si deseas probarla inmediatamente en este momento, haz clic en el botón verde **Ejecutar ahora**.
@@ -73,8 +73,8 @@ Ruta: **Smart Factory > Automatizaciones**
     - **Cuándo marcarlos:** Únicamente si la automatización está diseñada para **realizar acciones** activas, como actualizar costes, subir informes terminados a la sección de _Archivos_ o gestionar otras _Tareas/Automatizaciones_.
     - **Cuándo desmarcarlos:** Si quieres que la automatización trabaje de forma segura en modo **Solo lectura**, asegurando que no altere, borre ni cree datos por error.
   </Step>
-  <Step title="Activar automatización">
-    Para que se ejecute la automatización presiona el botón de "**Ejecutar ahora**".
+  <Step title="Guarda y prueba la automatización">
+    Guarda los cambios para que los disparadores programados o por evento queden configurados. Pulsa **Ejecutar ahora** si quieres probar una ejecución manual; esta acción no sustituye a los disparadores.
   </Step>
 </Steps>
 

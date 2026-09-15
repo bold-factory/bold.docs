@@ -1,6 +1,6 @@
 ---
 title: "Crear etiquetas y códigos"
-description: "Prepara etiquetas imprimibles con códigos para artículos, lotes, ubicaciones, bultos o recursos."
+description: "Prepara etiquetas imprimibles con códigos para los objetos admitidos por Bold."
 ---
 
 Crea etiquetas y códigos cuando el equipo vaya a identificar o escanear elementos físicos. Una buena etiqueta reduce errores en recepción, movimientos, fabricación y envíos.
@@ -11,7 +11,7 @@ Ruta: **Panel de control > Diseños**
 
 <Steps>
   <Step title="Elige el objeto">
-    Decide si la etiqueta representa artículo, lote, ubicación, bulto, contenedor, estación, herramienta u orden.
+    Elige uno de los tipos disponibles: operación de fabricación, grupo de operaciones, operaciones de una OF, lote, artículo, bulto, línea de recepción, empleado o estación.
   </Step>
   <Step title="Define el código">
     Usa una referencia estable y única para escaneo. Evita códigos que cambien con frecuencia.
@@ -19,12 +19,12 @@ Ruta: **Panel de control > Diseños**
   <Step title="Añade plantilla">
     Completa los datos básicos de la etiqueta:
 
-    - **Nombre:** Dale un nombre descriptivo para localizarla rápido (ejemplo: Etiqueta Lote Almacén 100x50 o QR Estaciones de Trabajo).
+    - **Nombre:** Escribe un nombre descriptivo para localizarla con rapidez (por ejemplo, `Etiqueta de lote 100x50` o `QR de estaciones de trabajo`).
     - **Ancho lienzo (mm):** Ancho exacto del papel físico en milímetros.
     - **Alto lienzo (mm):** Alto exacto del papel físico en milímetros.
-    - **Tipo de plantilla:** Elige a qué elemento de Bold corresponderá la etiqueta (_Artículo_, _Lote_, _Bulto_, _Estación, etc._).
+    - **Tipo de plantilla:** elige a qué elemento de Bold corresponderá la etiqueta, por ejemplo **Artículo**, **Lote**, **Bulto** o **Estación**.
   </Step>
-  <Step title="Añades elementos">
+  <Step title="Añade elementos">
     En la pantalla de diseño, verás una zona de trabajo con las medidas exactas que definiste. Puedes arrastrar y posicionar los siguientes elementos:
 
     **Código de barras:** convierte una variable dinámica (como el código de un artículo o un número de lote) en un código de barras de 1D lineal escaneable. Permite a los operarios pasar la pistola o escáner manual en lugar de teclear a mano.
@@ -37,7 +37,7 @@ Ruta: **Panel de control > Diseños**
 
     **Código QR:** genera un código 2D capaz de almacenar más volumen de información en un espacio reducido. Es muy útil si los operarios usan tablets o móviles con cámara en lugar de lectores tradicionales de código de barras.
 
-    Ejemplo de uso: un QR que contiene el enlace directo a la orden de fabricación (OF) o al parte de trabajo de mantenimiento para abrir la tarea directamente en el panel táctil.
+    Ejemplo de uso: un QR con el código de un bulto o una operación para localizarlo mediante el lector compatible de Bold.
 
     **Rectángulo:** es un elemento visual que sirve para agrupar información relevante, separar zonas en la etiqueta o destacar datos críticos para el ojo humano.
 
@@ -62,10 +62,10 @@ Ruta: **Panel de control > Diseños**
 | --- | --- |
 | Artículo | Identificar material en recepción o preparación. |
 | Lote | Mantener trazabilidad en consumo, envío o inventario. |
-| Ubicación | Registrar movimientos con menos errores. |
-| Bulto o contenedor | Mover una unidad física agrupada. |
-| Estación o recurso | Abrir operaciones desde modo de trabajo. |
-| Orden u operación | Localizar trabajo mediante escaneo. |
+| Bulto | Mover una unidad física agrupada. |
+| Línea de recepción | Identificar material durante la entrada. |
+| Empleado o estación | Identificar el recurso mediante escaneo. |
+| Operación o grupo de operaciones | Localizar trabajo mediante escaneo. |
 
 <Tip>
   Prioriza etiquetas que eviten errores repetidos. No etiquetes todo si el equipo no va a escanearlo o leerlo en el proceso.

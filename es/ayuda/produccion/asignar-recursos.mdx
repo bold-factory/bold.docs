@@ -4,11 +4,11 @@ description: "Asigna estaciones compatibles a operaciones pendientes antes de ej
 hidden: true
 ---
 
-En este cuadro de mando, el planificador o responsable de producción decide qué máquina, operario o puesto ejecutará cada tarea. La vista ayuda a equilibrar la carga y a detectar recursos saturados o sin trabajo asignado.
+En esta pantalla, el planificador o responsable de producción asigna la estación de trabajo y, cuando corresponde, la herramienta que ejecutará cada operación. La vista ayuda a revisar la carga y a detectar trabajo sin recursos asignados.
 
 **Ruta:** **Fabricación \> Asignación de recursos**
 
-Esto es lo que puedes visualizar y gestionar en este panel:
+Esto es lo que puedes ver y gestionar en este panel:
 
 ## Operaciones pendientes
 
@@ -19,14 +19,16 @@ Cada tarjeta rectangular representa una operación concreta que necesita ser eje
 
 ## Asignar o cambiar maquinaria
 
-**Estación de trabajo:**  En algunos casos, una operación se puede hacer en más de una estación de trabajo, donde se puede distinguir entre principal o secundaria. El sistema te muestra las máquinas o bancos de trabajo aptos para esa tarea concreta.
+**Estación de trabajo:** una operación puede ser compatible con varias estaciones. El selector solo muestra las estaciones aptas para el proceso. Si cambias una estación cuando la operación ya está planificada, Bold te pedirá que confirmes cómo tratar la planificación existente.
+
+**Herramienta:** aparece cuando la operación requiere una característica concreta. El selector muestra las herramientas compatibles.
 
 ## Filtrar para detectar cuellos de botella
 
 Cuando la fábrica gestiona cientos de operaciones a la vez, los filtros de la parte superior se vuelven indispensables para limpiar la vista:
 
 - **Filtros por área o estación:** puedes filtrar para ver únicamente las tareas del área de _Pintura_ o del puesto _Lijadora de banda_. Esto te permite revisar la cola de trabajo de una sección específica de la fábrica para ver si va retrasada.
-- **Filtros rápidos de estado:** el botón **Ocultar empezadas** quita de la pantalla las tareas que los operarios ya están ejecutando en el taller para que puedas concentrarte en lo que viene a continuación.
+- **Filtros rápidos de estado:** usa **Ocultar planificadas** y **Ocultar empezadas** para concentrarte en el trabajo que aún necesita asignación.
 
 <Note>
   **Ejemplo: gestionar una avería**

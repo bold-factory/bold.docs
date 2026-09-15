@@ -14,29 +14,29 @@ Hay dos tipos de recepción en Bold:
 - **Recepción completa:** ocurre cuando el proveedor entrega **la totalidad** de los artículos solicitados en el pedido. Al recibirse todo lo esperado, el proceso de entrega de ese pedido se da por cerrado.
 - **Recepción parcial:** significa que se ha recibido **una cantidad menor** a la solicitada. En este caso, la línea del pedido quedará registrada como _parcialmente recibida_, manteniendo el resto de los artículos como **pendientes** hasta que el proveedor realice la entrega restante.
 
-## Crear recepción de un pedido completo
+## Crear una recepción desde el pedido
 
-En el modo trabajo:
+En el modo de gestión:
 
-**Ruta:** **Almacén > Recepciones > Añadir nueva**
+**Ruta:** **Planificación > Pedidos de compra > Pedido > Crear recepción**
 
 ### Crear nueva recepción
 
-Para registrar la llegada de la mercancía, completa los siguientes campos: 
+Para registrar la llegada de la mercancía, completa los siguientes campos:
 
-**Origen:** selecciona el proveedor del que proviene la mercancía que estás recibiendo.
+**Código de albarán (opcional):** introduce el código del documento de entrega del proveedor.
 
-**Nº de albarán (opcional):** introduce el código o número de documento de entrega proporcionado por el proveedor o la empresa de transporte.
+**Fecha (opcional):** indica la fecha del albarán.
 
-**Fecha de albarán (opcional):** indica la fecha física en la que se emitió o firmó la nota de entrega del proveedor utilizando el selector de calendario.
+**Ubicación de recepción (opcional):** selecciona dónde se deposita el material.
 
-**Ubicación de recepción (opcional):** selecciona en el menú desplegable la zona, almacén o estantería específica donde vas a depositar o almacenar los productos recibidos.
+Si eliges una ubicación, puedes mantener activada la opción **Recibir inmediatamente** para crear y recibir el documento en una sola acción. Si la desactivas o no indicas una ubicación, la recepción se crea en estado pendiente para revisarla antes de pulsar **Recibir**.
 
-**Confirmación:** haz clic en el botón de **crear** para registrar la entrada de la mercancía en el sistema, o pulsa **cancelar** si deseas descartar el registro.
+Pulsa **Crear** para generar la recepción con las líneas pendientes del pedido.
 
 ## Crear recepción de un pedido parcial
 
-En el modo gestión:
+En el modo de gestión:
 
 **Ruta:** **Almacén \> Recepciones**
 
@@ -46,7 +46,7 @@ En el modo gestión:
 
 **Número de albarán:** es el número de documento impreso en el papel que te entrega el transportista (el albarán del proveedor).
 
-**Fecha de albarán:** es en la que el material entra físicamente por la puerta de la fábrica.
+**Fecha de albarán:** fecha que figura en el documento de entrega.
 
 **Ubicación de recepción:** lugar físico donde se descarga y guarda el pedido. Ejemplo: el almacén, estantería o zona física de tu fábrica.
 
@@ -58,7 +58,7 @@ Desde la columna acciones haz clic en la recepción creada.
 
 Se añaden todos los artículos que hayan llegado a la fábrica.
 
-**Línea de pedido:** muestra la lista de artículos incluidos en la orden. Selecciona el que haya llegado. Si has recibido más de un artículo, añade una línea para cada uno.
+**Línea de pedido:** muestra las líneas pendientes de los pedidos del proveedor. Selecciona la que corresponda. Si has recibido más de un artículo, añade una línea para cada uno.
 
 **Cantidad:** es el número real de unidades que el operario del almacén ha contado al descargar.
 
