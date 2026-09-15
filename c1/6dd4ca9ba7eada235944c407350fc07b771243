@@ -1,0 +1,141 @@
+es/ayuda/produccion/lanzar-ofs.mdx
+  s_957124cbfb7953::t_98fa3d197748a0 18
+  s_957124cbfb7953::t_7ce9c514bf8410 57
+es/ayuda/planificacion/realizar-pedidos-de-compra.mdx
+  s_957124cbfb7953::t_98fa3d197748a0 14-15,23,31,35,38
+es/ayuda/panel-de-control/configurar-webhooks.mdx
+  s_957124cbfb7953::t_b6271b8da0da0c 2-3,6,8,10,12-15,17,19-23
+es/ayuda/planificacion/crear-pedido-de-compra-manualmente.mdx
+  s_957124cbfb7953::t_b6271b8da0da0c 3,6-27
+es/ayuda/almacen/controlar-ordenes-de-carga.mdx
+  s_957124cbfb7953::t_b6271b8da0da0c 3,6,8,10,12,14-18,20
+es/ayuda/smart-factory/informes-powerbi.mdx
+  s_957124cbfb7953::t_ecedbc6dfe5089 40
+es/ayuda/primeros-pasos/introduccion.mdx
+  s_957124cbfb7953::t_837350e2e0da10 65
+es/ayuda/produccion/para-que-son-necesarias-las-condiciones.mdx
+  s_957124cbfb7953::t_7ce9c514bf8410 20
+es/ayuda/almacen/crear-ubicaciones.mdx
+  s_957124cbfb7953::t_b6271b8da0da0c 3,6,8,10-12,14
+es/ayuda/almacen/registrar-equipos-de-almacen.mdx
+  s_957124cbfb7953::t_b6271b8da0da0c 1-19
+es/ayuda/panel-de-control/disenar-roles-por-responsabilidad.mdx
+  s_957124cbfb7953::t_881905d675a6fe 12,23,40,42-43
+  s_957124cbfb7953::t_837350e2e0da10 11
+es/ayuda/almacen/anadir-transportes.mdx
+  s_957124cbfb7953::t_b6271b8da0da0c 3,6,8,10-12
+es/ayuda/almacen/planificar-una-carga.mdx
+  s_957124cbfb7953::t_b6271b8da0da0c 1-23
+es/ayuda/produccion/plan-de-produccion.mdx
+  s_957124cbfb7953::t_f289ca4861d59f 35
+es/ayuda/usuarios-y-permisos/invitar-usuarios.mdx
+  s_957124cbfb7953::t_e133ec78a21f6b 29,35,37,39
+  s_957124cbfb7953::t_837350e2e0da10 25,27
+es/ayuda/panel-de-control/crear-etiquetas-y-codigos.mdx
+  s_957124cbfb7953::t_0be74b0aae0129 3,14,40,65-68
+  s_957124cbfb7953::t_837350e2e0da10 22
+  s_957124cbfb7953::t_970118691d833a 25,27
+es/ayuda/articulos/crear-un-producto.mdx
+  s_957124cbfb7953::t_485837ab4b7fb3 6,20,26
+es/ayuda/ventas/cancelar-pedido.mdx
+  s_957124cbfb7953::t_4c9419c7635b24 12,14,38
+es/ayuda/mantenimiento/crear-parte-de-trabajo.mdx
+  s_957124cbfb7953::t_fe1cc4a296e86f 32
+es/ayuda/almacen/hacer-inventario.mdx
+  s_957124cbfb7953::t_1620af6ddd99f6 2-3,6,8,10,12-14,16,18,20-24,26,28,30,32-34
+es/ayuda/produccion/modificar-ordenes-de-fabricacion.mdx
+  s_957124cbfb7953::t_7ce9c514bf8410 10
+  s_957124cbfb7953::t_3777b0c6327c6b 8,14,21,24,28-29,33,35,43
+es/ayuda/produccion/generar-peticiones-manualmente.mdx
+  s_957124cbfb7953::t_af70549bd24442 18,22,24,28
+es/ayuda/panel-de-control/activar-notificaciones.mdx
+  s_957124cbfb7953::t_b6271b8da0da0c 1-16
+es/ayuda/articulos/introduccion.mdx
+  s_957124cbfb7953::t_987924dddf5caf 23,27-28
+  s_957124cbfb7953::t_af70549bd24442 24
+es/ayuda/personal/empleados.mdx
+  s_957124cbfb7953::t_99224fa5d41587 24
+es/ayuda/articulos/editar-un-articulo.mdx
+  s_957124cbfb7953::t_987924dddf5caf 47
+es/ayuda/produccion/definir-procesos.mdx
+  s_957124cbfb7953::t_64d6d658d0ce90 14
+es/ayuda/ventas/preparar-y-registrar-envio.mdx
+  s_957124cbfb7953::t_98fa3d197748a0 26,30,40,48,56
+  s_957124cbfb7953::t_837350e2e0da10 24
+docs.json
+  s_957124cbfb7953::t_65be7121785e36 67,92,120,138,141,143-145,150,152-154,164,233-234
+es/ayuda/compras/recibir-pedido-de-compra.mdx
+  s_957124cbfb7953::t_837350e2e0da10 39
+  s_957124cbfb7953::t_98fa3d197748a0 17,19,21,25,27,29,31,33,35,49,61
+es/ayuda/planificacion/proveedores.mdx
+  s_957124cbfb7953::t_2229be3715fb80 18,22,24,27
+es/ayuda/panel-de-control/importar-datos.mdx
+  s_957124cbfb7953::t_75979a25f81e04 18,22,55,63
+es/ayuda/panel-de-control/introduccion.mdx
+  s_957124cbfb7953::t_970118691d833a 27
+es/ayuda/personal/programar-turnos.mdx
+  s_957124cbfb7953::t_a5e554aa53f839 20
+es/ayuda/planificacion/asistente-de-compras.mdx
+  s_957124cbfb7953::t_314a6a73562e35 8,10,14-15,17-20,39,41,47
+es/ayuda/almacen/mover-stock.mdx
+  s_957124cbfb7953::t_b6271b8da0da0c 1-26
+es/ayuda/ventas/introduccion.mdx
+  s_957124cbfb7953::t_b61fd59635d3c4 14,16,20,22,24,26,36,40,42
+es/ayuda/articulos/crear-un-articulo.mdx
+  s_957124cbfb7953::t_485837ab4b7fb3 22,51,55
+  s_957124cbfb7953::t_30b37ba8b513c3 33
+  s_957124cbfb7953::t_987924dddf5caf 18,20,24,27
+es/ayuda/produccion/modo-rapido.mdx
+  s_957124cbfb7953::t_f289ca4861d59f 12,18,42-45
+es/ayuda/produccion/asignar-recursos.mdx
+  s_957124cbfb7953::t_af70549bd24442 7,22-24,31
+  s_957124cbfb7953::t_7ce9c514bf8410 11
+es/ayuda/produccion/ver-actividad-de-los-empleados.mdx
+  s_957124cbfb7953::t_7ce9c514bf8410 18
+es/ayuda/almacen/preparar-materiales-para-una-carga.mdx
+  s_957124cbfb7953::t_d1f0ca025baefb 2-3,6,8,10-26,29
+es/ayuda/almacen/ajustar-stock.mdx
+  s_957124cbfb7953::t_d4dba7ee4f3b49 34,36,38,40
+es/ayuda/articulos/unidades-de-medida.mdx
+  s_957124cbfb7953::t_b6271b8da0da0c 1-21
+es/ayuda/almacen/trabajar-con-bultos-y-contenedores.mdx
+  s_957124cbfb7953::t_b6271b8da0da0c 2-3,6,8,10,12-14,16,18,20-23,25
+es/ayuda/panel-de-control/configuracion-de-empresa.mdx
+  s_957124cbfb7953::t_a80a660080498a 72,74,78,83,85,93
+  s_957124cbfb7953::t_072c3286ee9fb5 12,16,53,65-67
+  s_957124cbfb7953::t_837350e2e0da10 51,55
+es/ayuda/produccion/especificar-materiales-pasos-y-controles.mdx
+  s_957124cbfb7953::t_88edf401984004 18,26
+  s_957124cbfb7953::t_7ce9c514bf8410 63
+  s_957124cbfb7953::t_98fa3d197748a0 6-8,37,67
+es/ayuda/produccion/ejecutar-operaciones-en-planta.mdx
+  s_957124cbfb7953::t_dc647cedcd68c1 26,47,54,70
+es/ayuda/smart-factory/consultar-o-delegar-con-ia.mdx
+  s_957124cbfb7953::t_50cb224757fda3 10,13,18,29-33
+es/ayuda/smart-factory/crear-automatizacion-con-agente.mdx
+  s_957124cbfb7953::t_77775fedfaf999 57-58
+  s_957124cbfb7953::t_837350e2e0da10 76-77
+  s_957124cbfb7953::t_ecedbc6dfe5089 24,35-37
+es/ayuda/ventas/cambiar-un-pedido.mdx
+  s_957124cbfb7953::t_f5391c29d6414c 18-24,26,32
+es/ayuda/personal/definir-jornadas.mdx
+  s_957124cbfb7953::t_a5e554aa53f839 16,18,23
+es/ayuda/produccion/ver-oee-por-estacion.mdx
+  s_957124cbfb7953::t_5cb26669bb47d0 56,95
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "c16dd4ca9ba7eada235944c407350fc07b771243",
+  "prompts": {},
+  "sessions": {
+    "s_957124cbfb7953": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0a725-64e2-7e42-a621-d0a12e65c1cb",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
