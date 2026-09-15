@@ -5,11 +5,7 @@ description: "Completa las propiedades y reglas operativas de un artículo para 
 
 Esta configuración sirve para **pasar de un inventario básico a una gestión de fábrica más automatizada**. Si solo rellenas el nombre, el sistema funciona como una agenda; si completas los datos, puede coordinar más operaciones de la planta.
 
-## Configurar unidades alternativas
-
-En **Unidades alternativas**, añade las formas adicionales en las que trabajas con el artículo e indica su precisión y factor de conversión. El factor expresa cuánta unidad base contiene una unidad alternativa; por ejemplo, `1 caja = 12 ud`.
-
-Bold convierte a la unidad base las cantidades introducidas con una alternativa en las operaciones que permiten seleccionar unidad. Para cambiar la unidad base del artículo, elimina antes todas sus unidades alternativas. El cambio de unidad base no recalcula cantidades históricas.
+**Ruta:** **Catálogo \> Artículos \> Artículo a configurar**
 
 ## Asignar valores a las propiedades
 
@@ -22,6 +18,22 @@ Esto sirve para **adaptar un artículo a sus características únicas o excepcio
 <Note>
   **Ejemplo:** imagina que vendes camisetas y la plantilla de esa categoría solo define dos propiedades: _talla_ y _color_. Si recibes una camiseta técnica que además requiere especificar el _tipo de transpirabilidad_, o una de colección que necesita un _número de serie_, puedes añadir esa propiedad extra solo a ese artículo concreto. No necesitas crear una categoría nueva para un solo artículo diferente.
 </Note>
+
+## Configurar unidades alternativas
+
+En **Unidades alternativas**, añade las formas adicionales en las que trabajas con el artículo e indica su precisión y factor de conversión.
+
+**Unidad alternativa:** selecciona la unidad correspondiente que creaste previamente en el catálogo.
+
+**Número de decimales:** establece la precisión requerida. Si la unidad alternativa no se puede fraccionar (como una caja o un bote completo), pon `0`. Si permite fracciones, indica `2` o los decimales necesarios.
+
+**Factor de conversión:** introduce cuántas unidades base del artículo equivalen a **1 unidad** de la unidad alternativa seleccionada.
+
+<Note>
+  **Ejemplo:** si un bote contiene 5 kg de resina, define los kilogramos como unidad base, los botes como unidad alternativa y `5` como factor de conversión. Cuando introduces 10 botes en una operación compatible, Bold los convierte en 50 kg.
+</Note>
+
+Bold convierte a la unidad base las cantidades introducidas con una alternativa en las operaciones que permiten seleccionar unidad. Para cambiar la unidad base del artículo, elimina antes todas sus unidades alternativas. El cambio de unidad base no recalcula cantidades históricas.
 
 ## Configurar la planificación
 

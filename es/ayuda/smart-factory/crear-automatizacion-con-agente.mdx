@@ -3,7 +3,7 @@ title: "Automatizar tareas"
 description: "Programa una tarea recurrente o por evento y controla sus resultados."
 ---
 
-Automatiza una revisión o tarea repetitiva cuando quieras que Bold la ejecute de forma programada o al ocurrir un evento. Para hacerlo, Bold usa un **agente** con instrucciones y permisos concretos. Consulta [Agentes](/es/conceptos/smart-factory/agentes) antes de darle acceso a datos o acciones.
+Automatiza una revisión o tarea repetitiva cuando quieras que Bold la ejecute de forma programada o al ocurrir un evento. Para hacerlo, Bold usa un **agente** con instrucciones y permisos concretos. 
 
 ## Antes de automatizar
 
@@ -17,24 +17,64 @@ Comprueba que la tarea:
 
 ## Configurar la automatización
 
+Ruta: **Smart Factory > Automatizaciones**
+
 <Steps>
-  <Step title="Describe la tarea">
-    Escribe qué debe revisar o hacer el agente y qué resultado esperas.
+  <Step title="Crear automatización">
+    Rellenar los campos solicitados. 
   </Step>
-  <Step title="Define disparador">
-    Elige si se ejecuta por calendario, por evento o de forma manual.
+  <Step title="Asignar un nombre">
+    Escribe un nombre descriptivo para identificar fácilmente el trabajo (por ejemplo: _"Revisión diaria de paradas de planta"_ o _"Control semanal de stock bajo"_).
   </Step>
-  <Step title="Acota el alcance">
-    Indica módulos, filtros, periodo, clientes, artículos, órdenes o condiciones.
+  <Step title="Definir las instrucciones">
+    Describe de forma clara y directa el objetivo, las fuentes de datos que debe consultar y el formato que esperas.
+
+    **_Ejemplo:_** _"Revisa las órdenes de fabricación de ayer, busca si hubo paradas no planificadas de más de 15 minutos y genera un resumen con el motivo y la estación afectada."_
   </Step>
-  <Step title="Configura permisos">
-    Revisa qué datos puede leer y qué acciones puede ejecutar.
+  <Step title="Seleccionar el nivel de inteligencia">
+    - **Baja:** Para consultas muy sencillas o lecturas directas.
+    - **Media (Recomendado):** Mantiene un equilibrio óptimo entre razonamiento y consumo de créditos para el día a día de la fábrica.
+    - **Alta:** Reservada para cruzar múltiples variables, resolver situaciones ambiguas o tomar decisiones complejas.
   </Step>
-  <Step title="Haz una prueba">
-    Ejecuta con un caso controlado antes de activar el flujo recurrente.
+  <Step title="Configurar los parámetros de operación">
+    **Modo de trabajo:**
+
+    - **Solo lectura (Recomendado):** El agente únicamente consulta datos y genera informes sin modificar registros de la planta.
+    - **Permite cambios:** Úsalo solo si necesitas que el agente modifique estados o realice acciones sobre el sistema.
+
+    **Preguntas de aclaración:**
+
+    - **Permitir:** Si al agente le falta algún dato para completar el trabajo, pausará la tarea y te pedirá aclaraciones.
+    - **No permitir:** El agente intentará resolver la tarea de forma autónoma con los datos disponibles.
+
+    **Memoria:**
+
+    - **Permitir / No permitir:** Actívalo si necesitas que el agente recuerde el contexto de ejecuciones anteriores para comparar datos en el tiempo.
   </Step>
-  <Step title="Activa y revisa">
-    Supervisa primeras ejecuciones, resultados, errores y consumo de créditos.
+  <Step title="Definir disparadores">
+    Definir **cuándo o qué provocará que se ejecute** tu automatización. Tienes tres opciones principales según cómo quieras usarla:
+
+    - **Ejecutar por horario fijo:** Haz clic en **Añadir programado** si quieres que se lance automáticamente a una hora y frecuencia determinadas (por ejemplo, todos los días a las 9:00 AM o cada lunes).
+    - **Ejecutar tras una acción específica:** Haz clic en **Añadir por evento** si prefieres que se active sola cuando ocurra algo concreto en el sistema (por ejemplo, al recibir un nuevo correo, crear un ticket o modificar un estado).
+    - **Ejecutar manualmente o guardar:**
+      - Si solo la vas a lanzar tú cuando quieras a demanda, pulsa en **Guardar cambios**.
+      - Si deseas probarla inmediatamente en este momento, haz clic en el botón verde **Ejecutar ahora**.
+  </Step>
+  <Step title="Atribuir permisos">
+    En esta sección defines exactamente **a qué información y acciones tiene acceso Boldy** durante la ejecución de esta automatización. Funciona como un control de seguridad para garantizar que la automatización solo lea o modifique las áreas estrictamente necesarias.
+
+    **Permisos de visualización ("Ver"):**
+
+    - **Cuándo marcarlos:** Siempre que la automatización necesite consultar o analizar información de esa área (por ejemplo, leer costes de _Empleados_ o revisar _Archivos_ existentes para elaborar un resumen).
+    - **Cuándo desmarcarlos:** Si la automatización no requiere datos de ese módulo o contiene información confidencial a la que esta automatización no debe acceder.
+
+    **Permisos de modificación ("Editar" / "Subir" / "Eliminar" / "Gestionar"):**
+
+    - **Cuándo marcarlos:** Únicamente si la automatización está diseñada para **realizar acciones** activas, como actualizar costes, subir informes terminados a la sección de _Archivos_ o gestionar otras _Tareas/Automatizaciones_.
+    - **Cuándo desmarcarlos:** Si quieres que la automatización trabaje de forma segura en modo **Solo lectura**, asegurando que no altere, borre ni cree datos por error.
+  </Step>
+  <Step title="Activar automatización">
+    Para que se ejecute la automatización presiona el botón de "**Ejecutar ahora**".
   </Step>
 </Steps>
 

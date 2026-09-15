@@ -7,6 +7,8 @@ Crea etiquetas y códigos cuando el equipo vaya a identificar o escanear element
 
 ## Decidir qué etiquetar
 
+Ruta: **Panel de control > Diseños**
+
 <Steps>
   <Step title="Elige el objeto">
     Decide si la etiqueta representa artículo, lote, ubicación, bulto, contenedor, estación, herramienta u orden.
@@ -14,14 +16,43 @@ Crea etiquetas y códigos cuando el equipo vaya a identificar o escanear element
   <Step title="Define el código">
     Usa una referencia estable y única para escaneo. Evita códigos que cambien con frecuencia.
   </Step>
-  <Step title="Añade información humana">
-    Incluye nombre corto, descripción, lote, ubicación o fecha solo si ayuda al trabajo físico.
+  <Step title="Añade plantilla">
+    Completa los datos básicos de la etiqueta:
+
+    - **Nombre:** Dale un nombre descriptivo para localizarla rápido (ejemplo: Etiqueta Lote Almacén 100x50 o QR Estaciones de Trabajo).
+    - **Ancho lienzo (mm):** Ancho exacto del papel físico en milímetros.
+    - **Alto lienzo (mm):** Alto exacto del papel físico en milímetros.
+    - **Tipo de plantilla:** Elige a qué elemento de Bold corresponderá la etiqueta (_Artículo_, _Lote_, _Bulto_, _Estación, etc._).
   </Step>
-  <Step title="Diseña el tamaño">
-    Ajusta formato a impresora, superficie y distancia de lectura.
+  <Step title="Añades elementos">
+    En la pantalla de diseño, verás una zona de trabajo con las medidas exactas que definiste. Puedes arrastrar y posicionar los siguientes elementos:
+
+    **Código de barras:** convierte una variable dinámica (como el código de un artículo o un número de lote) en un código de barras de 1D lineal escaneable. Permite a los operarios pasar la pistola o escáner manual en lugar de teclear a mano.
+
+    Ejemplo de uso: Imprimir el código de lote en la etiqueta de una caja de materia prima para que el operario lo escanee al registrar un consumo en planta.
+
+    **Texto fijo:**  muestra un texto estático que nunca cambia de un impreso a otro. Sirve para poner títulos, nombres de campo o avisos fijos que orientan al operario.
+
+    Ejemplo de uso: las palabras Lote:, Fecha de caducidad:, Fabricado por:, o el logo o nombre comercial de la empresa.
+
+    **Código QR:** genera un código 2D capaz de almacenar más volumen de información en un espacio reducido. Es muy útil si los operarios usan tablets o móviles con cámara en lugar de lectores tradicionales de código de barras.
+
+    Ejemplo de uso: un QR que contiene el enlace directo a la orden de fabricación (OF) o al parte de trabajo de mantenimiento para abrir la tarea directamente en el panel táctil.
+
+    **Rectángulo:** es un elemento visual que sirve para agrupar información relevante, separar zonas en la etiqueta o destacar datos críticos para el ojo humano.
+
+    Ejemplo de uso: dibujar una caja alrededor del texto "URGENTE" o encuadrar en un bloque visual todo el grupo de datos de control de calidad.
+
+    **Texto variable:** inserta metadatos y valores dinámicos que Bold extrae en tiempo real de la base de datos según el objeto que se esté etiquetando (artículo, pedido, empleado, etc.).
+
+    Ejemplo de uso: Que el campo muestre automáticamente el valor del Nombre del Artículo (Bobinas de chapa de acero), la Cantidad (20 unidades) o la Fecha Objetivo.
+
+    **Imagen:** permite incluir elementos gráficos estáticos, como el logotipo corporativo de la empresa, pictogramas de seguridad o esquemas del producto.
+
+    Ejemplo de uso: el logo de la fábrica en el encabezado de la etiqueta o un pictograma de peligro/manipulación (como la copa de "Frágil" o flechas de "Este lado arriba").
   </Step>
-  <Step title="Prueba con escáner real">
-    Imprime una muestra y valida lectura en almacén o planta.
+  <Step title="Guarda y prueba escanearla">
+    Una vez diseñada la plantilla, guárdala e imprime una etiqueta de prueba. Es fundamental escanearla físicamente con los lectores de la planta o almacén para confirmar que los códigos de barras y datos se leen de forma rápida y sin errores antes de usarla en producción.
   </Step>
 </Steps>
 

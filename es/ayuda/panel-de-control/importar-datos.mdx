@@ -1,9 +1,9 @@
 ---
 title: "Importar datos"
-description: "Carga datos desde CSV para crear, actualizar, fusionar, cancelar o eliminar registros en bloque."
+description: "Carga datos desde CSV o Excel para crear, actualizar, fusionar, cancelar o eliminar registros en bloque."
 ---
 
-Usa **Importar datos** para ejecutar cargas masivas desde CSV. Cada importación está asociada a una entidad y una acción concreta, como crear productos, actualizar artículos, añadir líneas de pedidos o cancelar órdenes.
+Usa **Importar datos** para ejecutar cargas masivas desde CSV o Excel. Cada importación está asociada a una entidad y una acción concreta, como crear productos, actualizar artículos, añadir líneas de pedidos o cancelar órdenes.
 
 ## Qué puedes importar
 
@@ -14,6 +14,16 @@ Usa **Importar datos** para ejecutar cargas masivas desde CSV. Cada importación
 | Fabricación | Crear recetas, versiones, operaciones, materiales, pasos, controles y cancelar órdenes o peticiones. |
 | Almacén | Crear recepciones y envíos, añadir o eliminar líneas, recibir, enviar, revertir e importar inventarios. |
 | Datos operativos | Actualizar planificación, gestión de lotes y relaciones según la plantilla disponible. |
+
+## Antes de Importar datos
+
+Para garantizar que el proceso se realice de forma correcta y sin errores de validación, debes cumplir las siguientes reglas generales antes de cargar cualquier archivo:
+
+1. **Formatos aceptados**: se permiten archivos con extensión `.xlsx`o`.csv`.
+2. **En Excel:** Bold solo lee la **primera hoja** y toma los nombres de las columnas ubicados en la **primera fila**.
+3. **En CSV:** la primera fila debe contener los nombres de las columnas.
+4. **Campos obligatorios:** en la parte de datos relevantes, hay una lista de datos obligatorios a relacionar con el nombre de las columnas de tu archivo.
+5. **Uso responsable**: Las acciones como cancelar, borrar o fusionar datos afectan directamente al stock, pedidos, trazabilidad e histórico de fabricación. Limita este tipo de importaciones a personal autorizado.
 
 ## Acciones disponibles por entidad
 
@@ -37,26 +47,24 @@ La pantalla organiza las plantillas por entidad y acción. Revisa siempre la pla
   Las importaciones pueden crear, modificar, cancelar, fusionar o eliminar datos. Revisa siempre la plantilla y prueba con pocos registros antes de ejecutar cargas masivas.
 </Warning>
 
-## Preparar un CSV
+## Importar datos desde un CSV o Excel
+
+**Ruta:** **Panel de control > Importar datos**
 
 <Steps>
-  <Step title="Elige entidad y acción">
-    Selecciona qué quieres importar: por ejemplo **Artículo > crear** o **Pedido de compra > añadir líneas**.
+  <Step title="Selecciona el objeto y la acción:">
+    **Objeto a importar:** Define sobre qué información vas a trabajar. Por ejemplo: **artículo** (para gestionar tu catálogo de materias primas, semielaborados o productos terminados).
+
+    **Acción a realizar:** Define qué cambio masivo le vas a aplicar a ese objeto.  Por ejemplo: **editar** (para cambiar datos de elementos que ya existen; nombres, descripciones, plazos de entrega) usando su código como referencia.
   </Step>
-  <Step title="Revisa la plantilla">
-    Descarga o consulta las columnas esperadas para esa acción.
+  <Step title="Sube tu archivo">
+    Haz clic en seleccionar archivo y elige tu Excel/CSV. Bold leerá automáticamente el número de filas y columnas detectadas.
   </Step>
-  <Step title="Usa referencias existentes">
-    Rellena códigos, IDs o referencias de Bold cuando el importador las solicite.
+  <Step title="Relaciona las columnas (Mapeo)">
+    El sistema te mostrará una lista de los campos requeridos por Bold y desplegables para alinearlos con las columnas de tu Excel.
   </Step>
-  <Step title="Valida relaciones">
-    Comprueba unidades, artículos, productos, clientes, proveedores, ubicaciones, lotes y recetas.
-  </Step>
-  <Step title="Ejecuta una prueba">
-    Importa pocas filas y revisa el resultado en el módulo correspondiente.
-  </Step>
-  <Step title="Ejecuta la carga completa">
-    Cuando la prueba sea correcta, importa el fichero completo y revisa errores o filas rechazadas.
+  <Step title="Revisa y confirma">
+    Una vez completados los campos obligatorios, el botón de revisión se activará. Haz clic en él para procesar la carga.
   </Step>
 </Steps>
 
@@ -77,7 +85,7 @@ La pantalla organiza las plantillas por entidad y acción. Revisa siempre la pla
 | La fila se rechaza | Revisa columnas obligatorias, formato de fechas, códigos y referencias. |
 | Se crean duplicados | Normaliza códigos y referencias antes de importar. |
 | El resultado afecta a otros módulos | La importación puede actualizar proyecciones usadas por planificación, almacén o fabricación. |
-| El CSV se ve mal | Revisa separador, codificación y cabeceras de la plantilla. |
+| El Excel/CSV se ve mal | Revisa separador, codificación y cabeceras de la plantilla. |
 
 ## Relacionado
 

@@ -41,47 +41,76 @@ Usa **Configuración de empresa** para definir ajustes transversales de la organ
     Entra en **Panel de control > Configuración**.
   </Step>
   <Step title="Revisa logo y actividad">
-    Sube un logo en formato recomendado y describe la actividad de la empresa.
+    Sube un logo en formato recomendado (PNG o SVG) con fondo transparente y describe la actividad de la empresa.
   </Step>
   <Step title="Ajusta valores generales">
-    Define plazo de entrega por defecto, zona horaria e idioma.
+    Define plazo de entrega por defecto: es el número de días laborables estándar que tarda la fábrica en entregar un pedido cuando no se haya especificado un plazo concreto en la ficha del artículo.
+
+    Ejemplo: si la fábrica suele tardar, por ejemplo, 5 días en procesar y entregar pedidos estándar, introduce 5. Si se suele definir el plazo artículo a artículo, puedes dejarlo en 0.
+
+    Zona horaria: es la franja horaria correspondiente a la ubicación física de la planta o de la sede principal. Garantiza que los fichajes manuales del operario en el modo trabajo, los registros de turnos, la generación de órdenes de fabricación y el historial de eventos se guarden con la hora real local y no haya desfases de tiempo.
+
+    Idioma: define el idioma predeterminado de la interfaz del sistema para los usuarios de la plataforma. Actualmente, Bold permite seleccionar únicamente entre dos idiomas: Español (España) o English (United States). 
+
+    Origen de mis operaciones: este campo determina **el criterio que usa el modo trabajo** para mostrar a un operario las tareas u operaciones que tiene pendientes de realizar cuando se identifica en la tablet de planta.
+
+    Tiene dos opciones en el desplegable:
+
+    - **Habilidades:** Las operaciones se filtran y muestran en la tablet según la destreza o capacitación que tiene asignada el empleado en su ficha (por ejemplo: si el empleado tiene la habilidad de "Soldadura", le aparecerán las operaciones de ese tipo).
+    - **Puestos de trabajo habituales:** Las operaciones se filtran según las estaciones o máquinas (puestos de trabajo) a las que el empleado suele estar asignado habitualmente.
   </Step>
-  <Step title="Revisa automatizaciones">
-    Activa la generación o planificación automática de OF y el aprovisionamiento automático de cargas solo si los datos base ya son fiables.
+  <Step title="Define el comportamiento al cancelar peticiones">
+     
+
+    1. Bloquear siempre las órdenes asociadas: congela temporalmente el trabajo en planta para que no se pueda continuar hasta resolver el problema. Es totalmente reversible. Una vez solucionado el problema, la oficina puede pulsar en desbloquear y la orden vuelve automáticamente a su estado anterior (_planificada_ o _en curso_) sin perder ningún dato.
+    2. Cancelar siempre las órdenes asociadas: significa que la fabricación no se reanuda ni se desbloquea; el trabajo queda cerrado de forma permanente.
+    3. Cancelar si no han empezado; bloquear si ya han empezado: la orden de fabricación cancelada al no haberse  iniciado en planta, Bold la elimina pasando su estado a **cancelada** para no dejar tareas pendientes en la planta. En el caso de haberse empezado pasará a estado **bloqueada** y el sistema lo pausará donde se haya quedado. En cualquier momento se podrá retomar si así se quisiera. 
+  </Step>
+  <Step title="Automatiza la planificación de Órdenes de Fabricación">
+    **Generar órdenes de producción automáticamente**
+
+    Marca la casilla si la fábrica trabaja contra pedido o bajo un flujo directo donde no se requiere que la oficina técnica revise manualmente cada petición antes de convertirla en orden de trabajo. Déjala desmarcada si prefieres acumular demanda o revisar cantidades antes de enviar el trabajo a planta.
+
+    **Ejemplo:** si entra una petición de 100 tableros, Bold crea inmediatamente la orden de fabricación lista para ejecutarse sin esperar a que un responsable la valide a mano.
+
+    **Planificar órdenes de producción automáticamente**
+
+    Marca la casilla si quieres que Bold asigne inmediatamente fechas estimadas de ejecución a la nueva orden.
+
+    **Ejemplo:** al crearse la orden, Bold le asigna automáticamente fecha de inicio para hoy y fecha de entrega estimada para dentro de 3 días según las recetas y tiempos teóricos.
+  </Step>
+  <Step title="Configura el aprovisionamiento automático">
+    **Aprovisionar órdenes de carga automáticamente**
+
+    Marca la casilla si tu almacén tiene el stock bien digitalizado y quieres que Bold reserve los materiales al momento. Si en planta los operarios cogen el material de forma manual o hay desfases frecuentes de inventario, déjalo desmarcado.
+
+    **Ejemplo:** si una orden requiere 20 kg de barniz, el sistema reserva esa cantidad en el almacén de forma implícita para que no se asigne a otra orden.
+
+    **Antelación del aprovisionamiento (días laborables)**
+
+     Introduce el margen de días que necesita tu equipo de almacén para preparar  o mover el material a la zona de trabajo. El valor mínimo es `0`. Con `0`, la carga entra cuando su fecha planificada ya ha llegado. Con `1`, entra un día laborable antes.
+
+    La solicitud reserva el stock disponible en la ubicación de carga y crea [movimientos de preparación](/es/conceptos/almacen/movimientos-de-almacen) para lo que falta.
+
+    **Ejemplo:** poner 1 significa que si la orden se fabrica el martes, Bold marcará que los materiales deben estar aprovisionados y listos en la estación el lunes a primera hora.
   </Step>
   <Step title="Normaliza prefijos">
-    Usa prefijos cortos, claros y estables. La pantalla limita cada prefijo a 4 caracteres.
-  </Step>
-  <Step title="Guarda y comunica">
-    Guarda los cambios y avisa al equipo si afectan a códigos, fechas o procesos automáticos.
+    Los prefijos son códigos cortos de hasta 4 caracteres que se anteponen de forma automática a los identificadores numéricos correlativos que genera Bold. Su objetivo es facilitar la lectura rápida e identificar el tipo de documento o entidad a simple vista en etiquetas, albaranes y pantallas.
+
+    **Recomendaciones de uso:**
+
+    - **Cortos y claros:** Utiliza siglas estándar de 2 a 4 letras que todo el personal de planta y oficina reconozca fácilmente.
+    - **Estables:** No modifiques los prefijos una vez que la fábrica comience a operar en Bold, ya que esto mantendrá la coherencia en la trazabilidad y la búsqueda histórica.
+
+    **Ejemplos:** 
+
+    ```text
+    ART -> Artículos
+    OF  -> Órdenes de fabricación
+    WO  -> Partes de trabajo
+    ```
   </Step>
 </Steps>
-
-## Aprovisionamiento automático de cargas
-
-En **Órdenes de carga**, activa **Aprovisionar órdenes de carga automáticamente** para solicitar material sin abrir cada carga.
-
-Define la **Antelación del aprovisionamiento (días laborables)**. Bold procesa las órdenes que:
-
-- están **Planificadas**;
-- todavía no han solicitado materiales;
-- tienen una fecha planificada dentro del plazo configurado.
-
-El valor mínimo es `0`. Con `0`, la carga entra cuando su fecha planificada ya ha llegado. Con `1`, entra un día laborable antes.
-
-La solicitud reserva el stock disponible en la ubicación de carga y crea [movimientos de preparación](/es/conceptos/almacen/movimientos-de-almacen) para lo que falta.
-
-## Prefijos de código
-
-Los prefijos se aplican a entidades como artículos, productos, empleados, pedidos, órdenes de fabricación, grupos de operaciones, bultos, recepciones, envíos, partes de trabajo, activos y lotes.
-
-Ejemplo:
-
-```text
-ART -> Artículos
-OF  -> Órdenes de fabricación
-WO  -> Partes de trabajo
-```
 
 ## Problemas habituales
 

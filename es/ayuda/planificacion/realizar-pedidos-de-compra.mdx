@@ -5,9 +5,34 @@ description: "Convierte recomendaciones de aprovisionamiento en pedidos de compr
 
 Un **pedido de compra** convierte una necesidad de aprovisionamiento en una transacción de compra.
 
-## Generar el pedido
+## Cómo generar un pedido de compra con el asistente
 
-Al hacer clic, la compra se formaliza de inmediato y el pedido queda registrado en estado **"Pendiente de recibir"**. Esto activa dos fases automáticas:
+El asistente de compras analiza automáticamente las necesidades de inventario de cada proveedor y te sugiere las cantidades exactas a comprar para no quedarte sin stock.
+
+Ruta: **Planificación > Asistente de compras > Línea Proveedor**
+
+1. Establecer la fecha límite en la esquina superior derecha, define la fecha en el campo necesidades hasta. El sistema calculará la propuesta teniendo en cuenta la demanda prevista hasta ese día.
+2. Revisar la propuesta del sistema para cada artículo del proveedor verás la siguiente información:
+
+Stock actual, entrante y saliente: el estado actual de tus almacenes y los compromisos pendientes.
+
+Punto de pedido: el nivel mínimo de inventario configurado.
+
+Propuesta: la cantidad calculada automáticamente que necesitas pedir.
+
+3. Ajustar o validar las cantidades
+
+Modificar manualmente: puedes cambiar el número dentro del recuadro de la columna propuesta si deseas ajustar la cantidad.
+
+Icono recargar (flecha circular): restablece el valor al cálculo inicial sugerido por el sistema.
+
+Icono limpiar: te deja en blanco el recuadro de la propuesta para que puedas ajustar la cantidad.
+
+4. Consultar información detallada: si haces clic sobre el nombre del artículo, en la parte inferior de la pantalla se activarán tres paneles de consulta:
+   - **Pedidos de compra:** historial de pedidos abiertos.
+   - **Previsión de stock:** proyección de cómo evolucionará el inventario en los próximos días.
+   - **Histórico de consumos:** registro de las salidas y ventas pasadas.
+5. Generar la petición de compra: una vez revisadas y confirmadas las cantidades de la lista, haz clic en el botón azul **generar pedido** situado en la esquina inferior derecha. El sistema procesará la solicitud y creará la petición de compra correspondiente para el proveedor. Esto activa dos fases automáticas:
 
 - **Administrativa:** se queda a la espera de que el proveedor confirme y acepte el pedido.
 - **Logística:** se inicia la cuenta atrás para la llegada física de la mercancía al almacén.

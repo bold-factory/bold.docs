@@ -5,6 +5,12 @@ description: "Agrupa permisos por trabajo real antes de invitar usuarios o ampli
 
 Diseña perfiles por responsabilidad para que cada persona vea y haga solo lo necesario. Este flujo ayuda a evitar permisos demasiado amplios o perfiles duplicados por cada usuario.
 
+### **Diferencia clave antes de empezar**
+
+- **Usuario:** es la cuenta que se usa para iniciar sesión en el ordenador o la tablet (ej: `oficina@empresa.com` o `planta-tablet@empresa.com`).
+- **Empleado:** es la persona física que realiza el trabajo y ficha desde la tablet en modo trabajo.
+- **Rol:** es la etiqueta de permisos que le aplicas al **usuario**.
+
 ## Antes de crear perfiles
 
 Haz una lista de responsabilidades reales:
@@ -20,23 +26,21 @@ Haz una lista de responsabilidades reales:
 - informes y análisis;
 - integraciones.
 
-## Crear una matriz simple
+## Crear perfiles
+
+**Ruta: Panel de control > Roles**
 
 <Steps>
-  <Step title="Lista responsabilidades">
-    Agrupa personas por trabajo diario, no por nombre individual.
-  </Step>
-  <Step title="Define acciones necesarias">
-    Separa lectura, creación, edición, aprobación, eliminación y administración.
-  </Step>
   <Step title="Crea perfiles reutilizables">
-    Usa perfiles como Almacén, Compras, Producción o Administración cuando varias personas compartan permisos.
+    **Nombre:** Pon un nombre claro que represente una función real en la fábrica. Usa perfiles como almacén, compras, producción o administración cuando varias personas compartan permisos.
+
+    **Descripción:** Explica brevemente qué abarca este perfil.
   </Step>
-  <Step title="Asigna usuarios">
-    Invita o actualiza usuarios después de validar el perfil.
+  <Step title="Configura los permisos">
+    Selecciona qué acciones puede realizar este rol (Lectura, Creación, Edición, Eliminación) en cada módulo (_Fabricación, Almacén, Planificación, Mantenimiento, Personal, Panel de Control_).
   </Step>
-  <Step title="Revisa excepciones">
-    Documenta permisos especiales y revisa si justifican un perfil nuevo.
+  <Step title="Haz clic en Guardar. ">
+    Estos perfiles nos servirán para asignar ciertos permisos a los usuarios registrados.
   </Step>
 </Steps>
 

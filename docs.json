@@ -63,7 +63,8 @@
                   "es/ayuda/articulos/definir-propiedades",
                   "es/ayuda/articulos/crear-un-producto",
                   "es/ayuda/articulos/crear-un-articulo",
-                  "es/ayuda/articulos/editar-un-articulo"
+                  "es/ayuda/articulos/editar-un-articulo",
+                  "untitled-page-2"
                 ]
               },
               {
@@ -88,8 +89,8 @@
                   "es/ayuda/planificacion/proveedores",
                   "es/ayuda/planificacion/asistente-de-compras",
                   "es/ayuda/planificacion/realizar-pedidos-de-compra",
-                  "es/ayuda/compras/recibir-pedido-de-compra",
-                  "es/ayuda/almacen/recibir-con-albaran"
+                  "untitled-page",
+                  "es/ayuda/compras/recibir-pedido-de-compra"
                 ]
               },
               {
@@ -132,16 +133,36 @@
                 "root": "es/ayuda/almacen/introduccion",
                 "directory": "card",
                 "pages": [
-                  "es/ayuda/almacen/crear-ubicaciones",
-                  "es/ayuda/almacen/planificar-una-carga",
-                  "es/ayuda/almacen/preparar-materiales-para-una-carga",
                   "es/ayuda/almacen/aprovisionar-materias-primas",
-                  "es/ayuda/almacen/cargar-y-cerrar-una-expedicion",
-                  "es/ayuda/almacen/mover-stock",
                   "es/ayuda/almacen/ajustar-stock",
-                  "es/ayuda/almacen/hacer-inventario",
+                  "hacer-inventario",
                   "es/ayuda/almacen/investigar-diferencias-de-stock",
-                  "es/ayuda/almacen/trabajar-con-bultos-y-contenedores"
+                  {
+                    "group": "Tener multiples ubicaciones",
+                    "pages": [
+                      "configurar-ubicaciones",
+                      "untitled-page-1",
+                      "registrar-movimientos-internos"
+                    ]
+                  },
+                  {
+                    "group": "Gestionar cargas",
+                    "pages": [
+                      "anadir-transportes",
+                      "planificar-ordenes-de-cargas",
+                      "untitled-page-4",
+                      "untitled-page-5",
+                      "es/ayuda/almacen/cargar-y-cerrar-una-expedicion"
+                    ]
+                  },
+                  {
+                    "group": "Recepciones",
+                    "pages": [
+                      "untitled-page-2",
+                      "es/ayuda/almacen/recibir-con-albaran"
+                    ]
+                  },
+                  "definir-bultos-y-contenedores"
                 ]
               },
               {
@@ -208,8 +229,13 @@
                   "es/ayuda/panel-de-control/disenar-roles-por-responsabilidad",
                   "es/ayuda/panel-de-control/configuracion-de-empresa",
                   "es/ayuda/panel-de-control/importar-datos",
+                  "untitled-page",
                   "es/ayuda/panel-de-control/gestionar-archivos",
-                  "es/ayuda/panel-de-control/crear-etiquetas-y-codigos"
+                  "es/ayuda/panel-de-control/crear-etiquetas-y-codigos",
+                  "untitled-page-2",
+                  "untitled-page-3",
+                  "untitled-page-4",
+                  "untitled-page-5"
                 ]
               }
             ]
