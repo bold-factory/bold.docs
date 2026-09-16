@@ -1,0 +1,100 @@
+es/conceptos/fabricacion/controles-consumos-y-pausas.mdx
+  s_d29359bfab3e1d::t_d2479134743b57 47
+es/conceptos/planificacion.mdx
+  s_d29359bfab3e1d::t_d2479134743b57 42
+es/conceptos/catalogo/articulos.mdx
+  s_d29359bfab3e1d::t_1614264409d181 14
+  s_d29359bfab3e1d::t_d2479134743b57 43-51
+es/conceptos/fabricacion/secuenciacion.mdx
+  s_d29359bfab3e1d::t_d2479134743b57 36
+  s_d29359bfab3e1d::t_08a1fc2d6b80b0 21
+es/conceptos/fabricacion/procesos.mdx
+  s_d29359bfab3e1d::t_d2479134743b57 24,31
+es/conceptos/planificacion/previsiones-y-asistentes.mdx
+  s_d29359bfab3e1d::t_d2479134743b57 22,34,64,75
+es/conceptos/costes/valoracion-de-inventario.mdx
+  s_d29359bfab3e1d::t_1614264409d181 22
+es/conceptos/planificacion/clientes.mdx
+  s_d29359bfab3e1d::t_1614264409d181 9
+es/conceptos/almacen/envios.mdx
+  s_d29359bfab3e1d::t_d2479134743b57 32
+  s_d29359bfab3e1d::t_c3060c6c41200a 33
+es/conceptos/fabricacion/planes-de-produccion.mdx
+  s_d29359bfab3e1d::t_47ddc9a7df9390 40
+  s_d29359bfab3e1d::t_d2479134743b57 25,34,38,41-42,44-54,56,76
+es/conceptos/almacen/bultos.mdx
+  s_d29359bfab3e1d::t_d2479134743b57 3
+es/conceptos/panel-de-control/auditoria-y-eventos.mdx
+  s_d29359bfab3e1d::t_609148dd940f08 39
+  s_d29359bfab3e1d::t_d2479134743b57 7,13,17-20,22
+es/conceptos/planificacion/pedidos-de-compra.mdx
+  s_d29359bfab3e1d::t_1614264409d181 32
+es/conceptos/almacen/lotes.mdx
+  s_d29359bfab3e1d::t_862f72ee93cffc 32
+  s_d29359bfab3e1d::t_d2479134743b57 3,7,15-16,26-30,66,68,74
+es/conceptos/mantenimiento/partes-de-trabajo.mdx
+  s_d29359bfab3e1d::t_862f72ee93cffc 16,31
+es/conceptos/fabricacion/operaciones-y-restricciones.mdx
+  s_d29359bfab3e1d::t_d2479134743b57 27
+  s_d29359bfab3e1d::t_08a1fc2d6b80b0 37,64
+es/conceptos/fabricacion/peticiones-de-fabricacion.mdx
+  s_d29359bfab3e1d::t_d2479134743b57 32
+  s_d29359bfab3e1d::t_08a1fc2d6b80b0 38
+  s_d29359bfab3e1d::t_0c3fa9e4897adf 33
+es/conceptos/planificacion/politica-de-aprovisionamiento.mdx
+  s_d29359bfab3e1d::t_d2479134743b57 56
+  s_d29359bfab3e1d::t_1614264409d181 26,29
+es/conceptos/panel-de-control/disenos-y-etiquetas.mdx
+  s_d29359bfab3e1d::t_609148dd940f08 14
+es/conceptos/personal/jornadas-calendarios-y-turnos.mdx
+  s_d29359bfab3e1d::t_862f72ee93cffc 20
+es/conceptos/smart-factory/informes.mdx
+  s_d29359bfab3e1d::t_609148dd940f08 17
+es/conceptos/almacen/stock-y-movimientos.mdx
+  s_d29359bfab3e1d::t_c510ec4f01086b 44
+  s_d29359bfab3e1d::t_d2479134743b57 26
+es/conceptos/smart-factory/automatizaciones.mdx
+  s_d29359bfab3e1d::t_609148dd940f08 17
+es/conceptos/smart-factory/tareas.mdx
+  s_d29359bfab3e1d::t_609148dd940f08 35,37
+es/conceptos/fabricacion/herramientas-y-caracteristicas.mdx
+  s_d29359bfab3e1d::t_d2479134743b57 18,35
+es/conceptos/mantenimiento/mantenimiento-preventivo.mdx
+  s_d29359bfab3e1d::t_862f72ee93cffc 19
+es/conceptos/fabricacion/motivos-de-pausa-e-interrupciones.mdx
+  s_d29359bfab3e1d::t_08a1fc2d6b80b0 16,21
+es/conceptos/costes/coste-teorico-vs-real.mdx
+  s_d29359bfab3e1d::t_1614264409d181 89
+  s_d29359bfab3e1d::t_d2479134743b57 64,74-76
+es/conceptos/catalogo/unidades-de-medida.mdx
+  s_d29359bfab3e1d::t_d2479134743b57 62
+es/conceptos/fabricacion/recursos.mdx
+  s_d29359bfab3e1d::t_d2479134743b57 21,27,41-43
+  s_d29359bfab3e1d::t_08a1fc2d6b80b0 49
+es/conceptos/fabricacion.mdx
+  s_d29359bfab3e1d::t_08a1fc2d6b80b0 29
+es/conceptos/almacen.mdx
+  s_d29359bfab3e1d::t_d2479134743b57 31
+es/conceptos/planificacion/asignacion-de-demanda-y-suministro.mdx
+  s_d29359bfab3e1d::t_d2479134743b57 81
+es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones.mdx
+  s_d29359bfab3e1d::t_d2479134743b57 19,22,37-38,62-63
+es/conceptos/almacen/movimientos-de-almacen.mdx
+  s_d29359bfab3e1d::t_d2479134743b57 59,69,72
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "a6e2ba29937bf8475fe2cb7cce8d5fba958cd308",
+  "prompts": {},
+  "sessions": {
+    "s_d29359bfab3e1d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0aad9-ba61-7f21-a2af-47ab957601ca",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
