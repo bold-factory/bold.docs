@@ -1,10 +1,10 @@
 ---
 title: "Cuenta y empresa"
-description: "Entiende la configuración de empresa, cuenta, plan y límites administrativos."
+description: "Entiende la configuración de empresa, la suscripción, la facturación y los créditos de IA."
 icon: "building-2"
 ---
 
-Cuenta y empresa reúnen los datos que identifican tu organización en Bold y las condiciones de uso asociadas al plan.
+Cuenta y empresa reúnen los datos que identifican tu organización en Bold y las condiciones de uso asociadas a la suscripción.
 
 ## Conceptos
 
@@ -13,52 +13,27 @@ Cuenta y empresa reúnen los datos que identifican tu organización en Bold y la
 | Empresa | Organización operativa que usa Bold. |
 | Cuenta | Contexto administrativo asociado a la empresa. |
 | Plan | Suscripción, límites y capacidades disponibles. |
-| Límite | Tope de uso visible para administradores. |
-| Configuración de empresa | Datos generales, preferencias y parámetros de negocio. |
+| Configuración de empresa | Preferencias y parámetros que afectan a la operación. |
 
-## Reglas
+Mantén los datos de empresa actualizados antes de crear documentos, diseños o integraciones. Revisa también la zona horaria, el idioma, los prefijos y las opciones que automatizan procesos.
 
-- Mantén datos de empresa coherentes antes de crear documentos, diseños o integraciones.
-- Revisa límites y uso antes de activar automatizaciones o invitar equipos grandes.
-- Cambios de configuración pueden afectar notificaciones, documentos, permisos o integraciones.
+## Facturación y método de pago
 
-## Facturas de tu cuenta
+El perfil de facturación contiene la razón social, la identificación fiscal, el domicilio y los destinatarios de las facturas. En **Panel de control > Suscripción** puedes consultar las facturas y gestionar el método de pago disponible.
 
-Para completar los datos de facturación, indica la razón social, la identificación fiscal, la dirección, el código postal, la ciudad y un código de país de dos caracteres. Incluye un correo de facturación válido y el nombre de la persona de contacto.
+Las facturas de la cuenta se emiten a través de Holded. Bold muestra la información y las acciones disponibles para cada factura sin exponer la configuración interna del servicio de facturación.
 
-Durante el alta, debes aceptar los términos y el mandato de pago antes de continuar con la configuración del método de pago. Si reintentas este paso, la aceptación también debe estar marcada.
+Los precios se muestran sin IVA y se identifican con **+ IVA**. Si un pago requiere autenticación o falla, usa la acción disponible en la factura para completar el pago o actualizar el método.
 
-El segundo paso del alta muestra el formulario seguro de Stripe integrado en Bold. Puedes registrar el método de pago sin abandonar la experiencia de onboarding.
+## Créditos de IA
 
-Las facturas de tu cuenta se emiten en Holded, que asigna su numeración según la serie asociada a tu contacto de facturación. Bold muestra el número definitivo de la factura aprobada.
+En **Panel de control > Suscripción** puedes consultar los créditos incluidos en el plan y los créditos adquiridos.
 
-El contacto de facturación en Holded utiliza la razón social y el nombre de tu empresa en Bold como nombre comercial. Se registra como empresa, con el NIF también en el campo de identificación VAT y el país indicado por su código y nombre.
+- Los créditos incluidos se renuevan con el periodo mensual del plan y se consumen primero.
+- Los créditos adquiridos proceden de compras puntuales y conservan su saldo entre meses.
+- Los planes con créditos ilimitados no muestran un aviso de saldo bajo.
 
-El código de país debe ser un código ISO de dos letras reconocido, como `ES`. Si no es válido, Bold lo indica antes de guardar el perfil fiscal.
-
-En **Panel de control > Suscripción > Facturas** puedes consultar la razón social, la identificación fiscal, el domicilio y el contacto que se usarán en las próximas facturas. Para cambiar la identidad o el domicilio fiscal, contacta con Bold para revisar el cambio antes de aplicarlo.
-
-Desde esa misma pestaña, los administradores pueden configurar hasta diez destinatarios. El primer email es el principal del contacto de facturación y los demás reciben también cada factura. Bold añade siempre `billing@bold-factory.com` como destinatario interno, aunque no aparezca como un campo editable.
-
-Al aprobar la factura, Bold solicita a Holded que la envíe a todos los destinatarios configurados. El envío usa la plantilla y el remitente configurados en Holded. También puedes descargar el PDF desde **Panel de control > Suscripción > Facturas**.
-
-Si la emisión necesita un reintento, Bold busca primero la factura por su referencia de facturación para recuperar la existente.
-
-Si un pago necesita autenticación o falla, utiliza la acción disponible en **Facturas** para completar el pago o cambiar el método. Si un pago asíncrono falla después de completar la página de pago, puedes iniciar otro intento sobre la misma factura cuando Bold haya registrado el fallo. Mientras el resultado anterior siga pendiente, no se abre otro intento.
-
-## Suscripción y créditos de IA
-
-En **Panel de control > Suscripción** puedes consultar el plan principal, las integraciones contratadas, los créditos de IA y las facturas. Los precios se muestran sin IVA y se identifican con **+ IVA**.
-
-La pestaña **Método de pago** muestra el método actual con su tipo y sus últimos cuatro dígitos. Desde esa misma pestaña puedes añadirlo o cambiarlo mediante el formulario seguro de Stripe integrado en Bold, sin salir de la aplicación.
-
-El plan principal y las integraciones pueden tener un precio mensual acordado de 0 € cuando el servicio es gratuito, aunque tengan un precio de referencia superior. El precio acordado determina el importe que se factura.
-
-Los créditos incluidos en el plan se renuevan cada mes y se consumen antes que los **créditos adquiridos**. Los créditos adquiridos proceden de compras puntuales y mantienen su saldo de un mes a otro. La pantalla muestra el saldo total disponible y separa ambas fuentes para que puedas comprobar cuánto queda de cada una.
-
-Para comprar créditos necesitas ser administrador. Pulsa **Comprar créditos**, selecciona un paquete y pulsa **Continuar**. Revisa los créditos y el precio **+ IVA** antes de pulsar **Confirmar compra**. Puedes pulsar **Volver** para cambiar el paquete; seleccionar uno no ejecuta la compra.
-
-En **Smart Factory > Tareas**, el saldo se consulta en segundo plano cada minuto mientras la vista está activa. Cuando queda un 20 % o menos, aparece un aviso sobre la tabla con el porcentaje utilizado y los créditos restantes. El porcentaje compara el consumo del mes con la suma de ese consumo y el saldo restante, incluidos los créditos adquiridos. Los planes con créditos ilimitados no muestran este aviso. Si puedes consultar tareas, puedes ver el aviso; el botón **Comprar créditos** solo aparece para administradores y abre la selección de paquetes en la misma vista.
+La compra de créditos requiere acceso administrativo. Antes de confirmarla, revisa la cantidad y el precio **+ IVA**.
 
 ## Relacionado
 

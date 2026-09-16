@@ -1,63 +1,50 @@
 ---
 title: "Panel de control"
-description: "Referencia de cuenta, empresa, usuarios, permisos, claves de integración, notificaciones, datos y diseños."
+description: "Mapa de la configuración de empresa, acceso, integraciones, datos y diseños."
 icon: "settings"
 ---
 
-El Panel de control agrupa la administración de Bold. Desde aquí gestionas cuenta, empresa, acceso, integraciones, notificaciones, datos, archivos y diseños.
+El **Panel de control** reúne la configuración administrativa de Bold. Desde aquí gestionas la empresa, el acceso de las personas, las integraciones y los recursos compartidos por varios módulos.
 
 ## Conceptos de este grupo
 
 <Columns cols={2}>
   <Card title="Cuenta y empresa" icon="building-2" href="/es/conceptos/panel-de-control/cuenta-y-empresa">
-    Datos de empresa, cuenta, plan, límites y configuración general.
+    Datos de empresa, suscripción, facturas y créditos de IA.
   </Card>
   <Card title="Usuarios, perfiles y permisos" icon="shield" href="/es/conceptos/panel-de-control/usuarios-roles-y-permisos">
-    Acceso, responsabilidades, permisos e invitaciones.
+    Acceso de las personas y capacidades de cada perfil.
+  </Card>
+  <Card title="Canales e identidades relacionadas" icon="messages-square" href="/es/conceptos/panel-de-control/identidades-relacionadas">
+    Vinculación de una identidad personal con un canal de mensajería.
   </Card>
   <Card title="Claves de integración y avisos externos" icon="key-round" href="/es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos">
-    Credenciales técnicas, eventos e integraciones externas.
+    Credenciales técnicas y entrega de eventos a sistemas externos.
   </Card>
   <Card title="Notificaciones" icon="bell" href="/es/conceptos/panel-de-control/notificaciones">
-    Avisos por canal para eventos que requieren atención.
+    Avisos para personas dentro y fuera de la aplicación.
   </Card>
   <Card title="Auditoría y eventos" icon="history" href="/es/conceptos/panel-de-control/auditoria-y-eventos">
-    Historial de cambios, eventos publicados, avisos externos y trazabilidad.
+    Historial de cambios y hechos que activan otros procesos.
   </Card>
   <Card title="Datos y archivos" icon="database" href="/es/conceptos/panel-de-control/datos-y-archivos">
-    Importaciones, archivos, evidencias y mantenimiento de información.
+    Importaciones, archivos y evidencias compartidas.
   </Card>
   <Card title="Diseños y etiquetas" icon="badge" href="/es/conceptos/panel-de-control/disenos-y-etiquetas">
-    Plantillas, etiquetas y formatos de salida.
+    Plantillas y formatos de identificación o salida.
   </Card>
 </Columns>
 
-## Áreas administrativas
+## Acceso administrativo
 
-| Área | Qué gestiona |
-| --- | --- |
-| Cuenta y plan | Datos de suscripción, límites y uso visible para administradores. |
-| Empresa | Datos generales y configuración de negocio. |
-| Acceso | Usuarios, perfiles, permisos y claves de integración. |
-| Eventos | avisos externos, notificaciones, automatizaciones y auditoría. |
-| Datos | Importaciones, archivos y mantenimiento de información. |
-| Diseños | Plantillas, etiquetas y formatos de salida. |
+Los permisos del usuario protegen las acciones del Panel de control. Una clave de integración funciona de otro modo: actualmente tiene acceso administrativo amplio al tenant y no permite configurar alcances.
 
-## Reglas generales
-
-Bold valida permisos antes de ejecutar acciones protegidas. Si falta un permiso, la interfaz puede ocultar o bloquear acciones.
-
-Configura acceso y claves de integración con el menor alcance suficiente. Cambios administrativos pueden afectar stock, órdenes, costes, integraciones y trazabilidad.
+<Warning>
+  Trata cada clave de integración como una credencial administrativa. Guárdala en un gestor de secretos, usa una clave distinta por sistema y revócala cuando deje de ser necesaria.
+</Warning>
 
 ## Relacionado
 
-- [Cuenta y empresa](/es/conceptos/panel-de-control/cuenta-y-empresa)
-- [Configuración de empresa](/es/ayuda/panel-de-control/configuracion-de-empresa)
-- [Usuarios, perfiles y permisos](/es/conceptos/panel-de-control/usuarios-roles-y-permisos)
+- [Administrar la empresa](/es/ayuda/panel-de-control/introduccion)
 - [Invitar usuarios](/es/ayuda/usuarios-y-permisos/invitar-usuarios)
-- [Claves de integración y avisos externos](/es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos)
-- [Notificaciones](/es/conceptos/panel-de-control/notificaciones)
-- [Auditoría y eventos](/es/conceptos/panel-de-control/auditoria-y-eventos)
-- [Importar datos](/es/ayuda/panel-de-control/importar-datos)
-- [Gestionar archivos](/es/ayuda/panel-de-control/gestionar-archivos)
-- [Diseños y etiquetas](/es/conceptos/panel-de-control/disenos-y-etiquetas)
+- [Configuración de empresa](/es/ayuda/panel-de-control/configuracion-de-empresa)

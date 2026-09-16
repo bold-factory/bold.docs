@@ -1,157 +1,58 @@
 ---
 title: "Almacén"
-description: "Referencia de stock, órdenes de carga, movimientos de almacén, ubicaciones, envíos, inventarios y trazabilidad."
+description: "Mapa de los conceptos de stock, trazabilidad y ejecución de almacén."
 icon: "warehouse"
 ---
 
-El almacén registra dónde está el material, por qué cambió la cantidad y qué documento originó cada movimiento.
+El almacén registra dónde está el material, por qué cambia su cantidad y qué trabajo físico debe realizar el equipo.
 
 ## Conceptos de este grupo
 
 <Columns cols={2}>
   <Card title="Stock y movimientos" icon="boxes" href="/es/conceptos/almacen/stock-y-movimientos">
-    Cantidades, disponibilidad, trazabilidad y auditoría de cambios.
-  </Card>
-  <Card title="Órdenes de carga" icon="list-checks" href="/es/conceptos/almacen/ordenes-de-carga">
-    Planificación, aprovisionamiento, validación y salida de cargas.
+    Cantidades, disponibilidad y auditoría de cada cambio de stock.
   </Card>
   <Card title="Movimientos de almacén" icon="route" href="/es/conceptos/almacen/movimientos-de-almacen">
-    Demandas, planes, reservas y ejecución de traslados internos.
+    Tareas para recoger y entregar material entre ubicaciones.
   </Card>
-  <Card title="Equipos y transportes" icon="forklift" href="/es/conceptos/almacen/equipos-y-transportes">
-    Recursos internos de movimiento y transportes asignados a cargas.
-  </Card>
-  <Card title="Lotes" icon="scan-line" href="/es/conceptos/almacen/lotes">
-    Trazabilidad por compra, fabricación, calidad, origen y coste.
-  </Card>
-  <Card title="Ubicaciones" icon="map-pin" href="/es/conceptos/almacen/ubicaciones">
-    Lugares físicos o lógicos donde se registra stock.
-  </Card>
-  <Card title="Bultos" icon="package" href="/es/conceptos/almacen/bultos">
-    Agrupaciones físicas movibles como cajas, palets o carros.
-  </Card>
-  <Card title="Tipos de contenedores" icon="container" href="/es/conceptos/almacen/tipos-de-contenedores">
-    Formatos reutilizables para clasificar bultos.
+  <Card title="Órdenes de carga" icon="list-checks" href="/es/conceptos/almacen/ordenes-de-carga">
+    Preparación, validación y expedición de mercancía.
   </Card>
   <Card title="Recepciones" icon="package-plus" href="/es/conceptos/almacen/recepciones">
-    Entradas físicas de material desde compras, fabricación o ajustes.
+    Entradas documentadas desde proveedores o clientes.
   </Card>
   <Card title="Envíos" icon="package-minus" href="/es/conceptos/almacen/envios">
-    Salidas físicas de material hacia clientes, consumos o destinos externos.
+    Salidas documentadas hacia clientes o proveedores.
   </Card>
   <Card title="Inventarios y ajustes" icon="clipboard-check" href="/es/conceptos/almacen/inventarios-y-ajustes">
-    Regularizaciones de stock con causa y trazabilidad.
+    Recuentos y correcciones de diferencias de stock.
+  </Card>
+  <Card title="Lotes" icon="scan-line" href="/es/conceptos/almacen/lotes">
+    Trazabilidad por origen, fabricación, calidad y coste.
+  </Card>
+  <Card title="Ubicaciones" icon="map-pin" href="/es/conceptos/almacen/ubicaciones">
+    Lugares donde Bold registra el material.
+  </Card>
+  <Card title="Bultos" icon="package" href="/es/conceptos/almacen/bultos">
+    Agrupaciones físicas de stock que se identifican y mueven juntas.
+  </Card>
+  <Card title="Equipos y transportes" icon="forklift" href="/es/conceptos/almacen/equipos-y-transportes">
+    Recursos internos de movimiento y transportes de las cargas.
   </Card>
 </Columns>
 
-## Modelo de stock
+## Tres registros distintos
 
-Bold controla stock por **artículo**, **ubicación** y **lote** opcional. Esa combinación forma la unidad de stock.
-
-| Concepto | Uso |
+| Concepto | Qué representa |
 | --- | --- |
-| Stock físico | Cantidad registrada actualmente. |
-| Stock disponible | Cantidad libre después de reservas o compromisos. |
-| Stock entrante | Cantidad esperada por compras, recepciones o fabricación. |
-| Stock saliente | Cantidad comprometida por ventas, envíos o consumos. |
-| Movimiento de stock | Auditoría de cada aumento, disminución o ajuste. |
-| Movimiento de almacén | Tarea planificada o libre para recoger y entregar material. |
-| Orden de carga | Agrupación de envíos que se prepara para un transporte y una fecha. |
-| Lote | Conjunto trazable de unidades de un artículo. Conserva origen, calidad, coste o fabricación. |
-| Ubicación | Lugar físico o lógico donde se almacena material. |
-| Bulto | Contenedor operativo que agrupa material para moverlo o identificarlo. |
-| Tipo de contenedor | Plantilla para clasificar bultos, cajas, palets o embalajes. |
+| Movimiento de stock | El cambio auditado de una cantidad. |
+| Movimiento de almacén | El trabajo de recoger y entregar material entre ubicaciones. |
+| Documento logístico | Una recepción de proveedor o cliente, o un envío hacia proveedor o cliente. |
 
-Bold registra cada mutación como un cambio auditado con cantidad firmada, stock resultante, referencia relacionada, detalle y fecha de ocurrencia.
+La producción, los consumos, los inventarios y los ajustes también cambian stock. No se registran como recepciones o envíos: generan su propio movimiento de stock desde el proceso que los origina.
 
-<Info>
-  Una disminución de stock registra cantidad negativa. Bold no impide por sí solo que el saldo quede negativo; los flujos de negocio deben revisar disponibilidad antes de ejecutar.
-</Info>
+## Relacionado
 
-## Recepciones
-
-Una recepción registra entrada física de material. Puede venir de un pedido de compra o crearse manualmente.
-
-| Estado | Significado |
-| --- | --- |
-| **Pendiente** | Puede editarse antes de registrar la entrada. |
-| **Recibida** | Ya aumentó stock y queda protegida. |
-
-Para recibir, la recepción debe estar pendiente, tener ubicación, contener al menos una línea y tener completados los controles obligatorios. Al recibir, pasa a estado **Recibida** y emite eventos que aplican el efecto de stock.
-
-Después de recibir, no puedes editar líneas ni cambiar ubicación. Si necesitas deshacer una recepción, usa la reversión cuando esté disponible y todavía exista ubicación.
-
-## Envíos
-
-Un envío registra salida física de material. Puede venir de un pedido de venta o crearse como salida de almacén.
-
-| Estado | Significado |
-| --- | --- |
-| **Pendiente** | Puede editarse antes de registrar la salida. |
-| **Enviado** | Ya redujo stock y queda protegido. |
-
-Para enviar, debe estar pendiente, tener ubicación y contener al menos una línea. Al enviar, pasa a **Enviado** y emite eventos que reducen stock.
-
-Las líneas requieren cantidad positiva. Después del envío, las líneas y la ubicación quedan protegidas.
-
-## Órdenes de carga y movimientos de almacén
-
-Una orden de carga agrupa líneas pendientes de pedidos de venta. Define transporte, fecha y ubicación de carga. Al solicitar materiales, Bold reserva lo que ya está disponible en esa ubicación y crea movimientos de **Preparación** para trasladar lo que falta.
-
-Las operaciones de fabricación usan el mismo modelo de demanda. Al solicitar sus entradas, Bold crea movimientos de **Aprovisionamiento** hacia la ubicación de consumo de la estación.
-
-Los empleados ejecutan estos movimientos desde el **modo de trabajo** con un equipo de almacén. Cada recogida y entrega genera los movimientos de stock que conservan la trazabilidad.
-
-<Tip>
-  Si una acción de almacén aparece bloqueada, revisa primero el estado del documento y después los permisos del usuario. Las restricciones protegen la trazabilidad después de movimientos reales.
-</Tip>
-
-## Inventarios y ajustes
-
-Un inventario compara stock esperado con conteo físico. Úsalo para regularizar diferencias, no para sustituir recepciones, consumos o envíos que sí tienen un origen operativo.
-
-Cada línea de inventario guarda el stock previo, la cantidad contada y el ajuste previsto. Al finalizar, Bold aplica ese ajuste previsto como movimiento `InventoryCount`. Si el stock cambió mientras el inventario estaba abierto, Bold no sustituye el saldo final por la lectura antigua; aplica la diferencia calculada.
-
-Un ajuste manual usa el mismo mecanismo con una sola línea y finalización inmediata. Úsalo cuando conoces el artículo, la ubicación, el lote y la cantidad final correcta.
-
-| Concepto | Úsalo para |
-| --- | --- |
-| Inventario | Recuento de una o varias ubicaciones, cierres, auditorías o diferencias múltiples. |
-| Ajuste de stock | Correcciones puntuales con causa conocida. |
-| Movimiento de stock | Revisar la trazabilidad de cualquier aumento, disminución o regularización. |
-
-Cuando haya movimientos durante el conteo, revisa la fecha y el alcance del inventario antes de aplicar ajustes. La auditoría debe explicar si la diferencia corresponde al conteo o a una operación posterior.
-
-## Ubicaciones y bultos
-
-Diseña ubicaciones con el nivel de detalle que uses en operación diaria. Una estructura demasiado fina obliga a mover material constantemente. Una estructura demasiado amplia dificulta encontrar diferencias.
-
-Usa bultos cuando el material viaje físicamente agrupado: cajas, palets, carros, contenedores o kits. El tipo de contenedor ayuda a clasificar capacidad, formato o uso.
-
-## Lotes y trazabilidad
-
-Usa lotes cuando necesites separar stock por origen, fabricación, proveedor, caducidad, calidad o coste. El lote acompaña a recepciones, movimientos, consumos, producción y envíos para mantener trazabilidad.
-
-Si un artículo no requiere trazabilidad por lote, puede operar con stock sin lote. Si la requiere, el equipo debe seleccionar el lote físico correcto en cada movimiento.
-
-## Guías relacionadas
-
-- [Crear ubicaciones](/es/ayuda/almacen/crear-ubicaciones)
-- [Lotes](/es/conceptos/almacen/lotes)
-- [Tipos de contenedores](/es/conceptos/almacen/tipos-de-contenedores)
-- [Bultos](/es/conceptos/almacen/bultos)
+- [Trabajar con bultos y contenedores](/es/ayuda/almacen/trabajar-con-bultos-y-contenedores)
 - [Investigar diferencias de stock](/es/ayuda/almacen/investigar-diferencias-de-stock)
-- [Recibir pedido de compra](/es/ayuda/compras/recibir-pedido-de-compra)
-- [Preparar y registrar un envío](/es/ayuda/ventas/preparar-y-registrar-envio)
-- [Escanear albaranes con IA](/es/ayuda/almacen/recibir-con-albaran)
-- [Mover stock](/es/ayuda/almacen/mover-stock)
-- [Ajustar stock](/es/ayuda/almacen/ajustar-stock)
-- [Hacer inventario](/es/ayuda/almacen/hacer-inventario)
-- [Stock y movimientos](/es/conceptos/almacen/stock-y-movimientos)
-- [Órdenes de carga](/es/conceptos/almacen/ordenes-de-carga)
-- [Movimientos de almacén](/es/conceptos/almacen/movimientos-de-almacen)
-- [Equipos de almacén y transportes](/es/conceptos/almacen/equipos-y-transportes)
-- [Planificar una carga](/es/ayuda/almacen/planificar-una-carga)
-- [Planificar y preparar una carga](/es/ayuda/almacen/planificar-una-carga)
-- [Aprovisionar materias primas](/es/ayuda/almacen/aprovisionar-materias-primas)
-- [Cargar y cerrar una expedición](/es/ayuda/almacen/cargar-y-cerrar-una-expedicion)
+- [Investigar la trazabilidad de un lote](/es/ayuda/almacen/investigar-trazabilidad-de-un-lote)

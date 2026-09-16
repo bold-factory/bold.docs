@@ -1,28 +1,28 @@
 ---
 title: "Smart Factory"
-description: "Referencia de informes, Boldy, tareas con agentes y automatizaciones inteligentes."
+description: "Mapa de informes, cuadros de mando, Boldy, tareas y automatizaciones."
 icon: "sparkles"
 ---
 
-Smart Factory agrupa análisis, asistentes y tareas delegadas. Úsalo cuando necesites consultar datos, preparar informes, conversar con Boldy o ejecutar trabajos con agentes.
+Smart Factory reúne las herramientas para analizar datos, consultar a Boldy, delegar tareas y ejecutar trabajos automáticos.
 
 ## Conceptos de este grupo
 
 <Columns cols={2}>
   <Card title="Informes" icon="chart-bar" href="/es/conceptos/smart-factory/informes">
-    Informes Power BI integrados para analizar operación, producción, almacén, costes o mantenimiento.
+    Análisis de tendencias, indicadores y periodos mediante Power BI.
+  </Card>
+  <Card title="Cuadros de mando" icon="chart-no-axes-combined" href="/es/conceptos/fabricacion/cuadros-de-mando">
+    Estado operativo de fabricación y seguimiento de la planta.
   </Card>
   <Card title="Boldy" icon="message-circle" href="/es/conceptos/smart-factory/boldy">
-    Asistente conversacional para consultar información y recibir ayuda contextual.
+    Conversación directa para consultar información y recibir ayuda contextual.
   </Card>
-  <Card title="Agentes" icon="bot" href="/es/conceptos/smart-factory/agentes">
-    Configuración de asistentes con instrucciones, permisos y nivel de inteligencia.
-  </Card>
-  <Card title="Tareas con agentes" icon="list-checks" href="/es/conceptos/smart-factory/tareas">
-    Trabajos delegados, historial, estados, aclaraciones, archivos y créditos consumidos.
+  <Card title="Tareas" icon="list-checks" href="/es/conceptos/smart-factory/tareas">
+    Trabajos puntuales con historial, estados, archivos y resultado.
   </Card>
   <Card title="Automatizaciones" icon="calendar-clock" href="/es/conceptos/smart-factory/automatizaciones">
-    Ejecuciones periódicas o por evento que crean tareas con agentes.
+    Configuraciones reutilizables que crean tareas manualmente, por calendario o por evento.
   </Card>
 </Columns>
 
@@ -30,49 +30,16 @@ Smart Factory agrupa análisis, asistentes y tareas delegadas. Úsalo cuando nec
 
 | Necesidad | Usa |
 | --- | --- |
-| Analizar tendencias o preparar informes periódicos | **Informes**. |
-| Preguntar, explorar o resumir datos en conversación | **Boldy**. |
-| Delegar un trabajo largo, repetible o auditable | **Tareas con agentes**. |
-| Ejecutar agentes sin crear tareas manualmente | **Automatizaciones**. |
+| Analizar tendencias o comparar periodos | **Informes**. |
+| Ver el estado operativo de fabricación | **Cuadros de mando**. |
+| Preguntar o explorar información en conversación | **Boldy**. |
+| Delegar un trabajo puntual y revisar su historial | **Tareas**. |
+| Repetir un trabajo con una configuración estable | **Automatizaciones**. |
 
-Los informes sirven para análisis periódico. No sustituyen a vistas operativas en vivo, como cuadros de mando de fabricación o pantallas de ejecución.
-
-Boldy sirve para interacción directa. Las tareas con agentes sirven para trabajos más largos, trazables o automatizados.
-
-## Automatizaciones
-
-Una **automatización** ejecuta un agente sin que tengas que crear la tarea manualmente. Cada ejecución crea una **tarea con agente** con historial, estado, resultado y créditos propios.
-
-| Tipo | Cuándo se ejecuta | Qué conserva |
-| --- | --- | --- |
-| Periódica | En una frecuencia diaria, semanal, mensual, trimestral, semestral o anual. | Próxima ejecución, última ejecución y número de ejecuciones. |
-| Por evento | Cuando Bold publica un evento compatible y se cumplen sus condiciones. | Evento, versión, condición, responsable y tarea generada. |
-
-Usa automatizaciones para tareas repetibles, revisiones programadas, alertas operativas o comprobaciones que deben quedar auditadas. Revisa las primeras ejecuciones antes de depender de ellas en procesos críticos.
-
-Los agentes de sistema no se automatizan. Usa agentes personalizados con instrucciones, permisos y nivel de inteligencia adecuados para el trabajo. Consulta [Automatizaciones](/es/conceptos/smart-factory/automatizaciones) para ver tipos, condiciones y buenas prácticas.
-
-## Estados y reglas de tareas
-
-| Estado | Qué significa |
-| --- | --- |
-| **Pendiente** | La tarea está creada y espera procesamiento. |
-| **En ejecución** | El agente está trabajando. |
-| **Requiere acción** | El agente necesita una aclaración o decisión. |
-| **Completada** | El resultado está disponible para revisar. |
-| **Fallida** | La tarea terminó con error o no pudo completarse. |
-
-Las tareas con agentes conservan instrucciones, mensajes, archivos adjuntos, herramientas usadas, aclaraciones, resultado y créditos. Caducan tras 28 días de inactividad.
-
-## Relación con Panel de control
-
-Smart Factory cubre informes, Boldy, agentes, tareas y automatizaciones. Panel de control queda para cuenta, empresa, usuarios, permisos, claves de integración, avisos externos, notificaciones, datos y diseños.
+Una automatización no es un asistente independiente. Conserva la configuración reutilizable del trabajo y cada ejecución crea una tarea con su propio historial y resultado.
 
 ## Relacionado
 
+- [Consultar datos y ejecutar tareas con IA](/es/ayuda/smart-factory/consultar-o-delegar-con-ia)
+- [Crear una automatización](/es/ayuda/smart-factory/crear-automatizacion)
 - [Informes Power BI](/es/ayuda/smart-factory/informes-powerbi)
-- [Boldy](/es/conceptos/smart-factory/boldy)
-- [Agentes](/es/conceptos/smart-factory/agentes)
-- [Tareas con agentes](/es/conceptos/smart-factory/tareas)
-- [Automatizaciones](/es/conceptos/smart-factory/automatizaciones)
-- [Cuadros de mando de fabricación](/es/conceptos/fabricacion/cuadros-de-mando)

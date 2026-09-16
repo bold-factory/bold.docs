@@ -24,14 +24,14 @@ Usa auditoría cuando necesites entender por qué cambió un pedido, stock, cost
 
 ## Eventos
 
-Un evento comunica que algo ocurrió. Puede alimentar proyecciones internas, notificaciones, avisos externos o automatizaciones con agentes.
+Un evento comunica que algo ocurrió. Puede alimentar proyecciones internas, notificaciones, avisos externos o automatizaciones.
 
 | Uso | Ejemplo |
 | --- | --- |
 | Sincronización interna | Una recepción actualiza stock y planificación. |
 | Notificación | Un usuario recibe aviso por un cambio relevante. |
 | Aviso externo | Un sistema externo recibe el evento. |
-| Automatización | Un agente se ejecuta cuando el evento cumple una condición. |
+| Automatización | Se crea una tarea cuando el evento cumple una condición. |
 
 No todos los cambios generan el mismo tipo de evento público. Revisa la referencia de desarrolladores para integraciones externas.
 
@@ -39,18 +39,18 @@ No todos los cambios generan el mismo tipo de evento público. Revisa la referen
 
 Las [Notificaciones](/es/conceptos/panel-de-control/notificaciones) usan eventos para avisar dentro de la aplicación o por Correo electrónico.
 
-Los [avisos externos](/es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos) envían eventos a sistemas externos. Conserva datos enviados durante el tiempo necesario para depurar entregas fallidas o discrepancias.
+Los [avisos externos](/es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos) envían eventos a sistemas externos. Conserva los datos necesarios para investigar entregas fallidas o discrepancias.
 
 ## Relación con automatizaciones
 
-Las automatizaciones por evento ejecutan agentes cuando el evento seleccionado y su condición coinciden.
+Las automatizaciones por evento crean tareas cuando el evento seleccionado y su condición coinciden.
 
 Antes de activar una automatización crítica, verifica:
 
 - qué evento la dispara;
 - qué versión del evento usa;
 - qué condición filtra ejecuciones;
-- qué permisos tiene el agente;
+- qué permisos tiene la automatización;
 - quién revisará las tareas generadas.
 
 ## Buenas prácticas

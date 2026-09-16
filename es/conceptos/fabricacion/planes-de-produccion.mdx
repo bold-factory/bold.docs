@@ -4,7 +4,7 @@ description: "Entiende los planes de producción como escenarios para resolver, 
 icon: "calendar-check"
 ---
 
-Un **plan de producción** es un escenario de planificación. Copia operaciones abiertas, recursos, restricciones, turnos, fechas y contexto de stock para calcular una propuesta de secuencia.
+Un **plan de producción** es un escenario de planificación. Copia operaciones abiertas, recursos, restricciones, horario de fabricación, fechas y contexto de stock para calcular una propuesta de secuencia.
 
 El plan no cambia la ejecución real hasta que lo aplicas.
 
@@ -12,7 +12,7 @@ El plan no cambia la ejecución real hasta que lo aplicas.
 
 | Uso | Resultado |
 | --- | --- |
-| Evaluar capacidad | Ver si el trabajo cabe en recursos y turnos disponibles. |
+| Evaluar capacidad | Ver si el trabajo cabe en recursos y franjas del horario disponibles. |
 | Comparar alternativas | Probar fechas, prioridades o alcances antes de decidir. |
 | Detectar bloqueos | Encontrar operaciones sin recurso, material o secuencia viable. |
 | Aplicar una propuesta | Actualizar operaciones reales cuando el plan es ejecutable. |
@@ -27,7 +27,7 @@ El plan no cambia la ejecución real hasta que lo aplicas.
 | Revisar | Muestra retrasos, bloqueos o datos faltantes. |
 | Aplicar | Traslada la propuesta a operaciones reales abiertas. |
 
-Si cambian órdenes, recursos, turnos o materiales después de resolver, actualiza o resuelve el plan de nuevo antes de aplicarlo.
+Si cambian órdenes, recursos, horario o materiales después de resolver, actualiza o resuelve el plan de nuevo antes de aplicarlo.
 
 ## Estados del cálculo
 
@@ -47,13 +47,13 @@ Un plan no debe cambiar operaciones finalizadas ni canceladas. Tampoco sustituye
 
 ## Relación con planificación
 
-Planificación responde qué falta y cuándo falta. El plan de producción responde cómo encajar el trabajo de fabricación en recursos y turnos disponibles.
+Planificación responde qué falta y cuándo falta. El plan de producción responde cómo encajar el trabajo de fabricación en recursos y franjas horarias disponibles.
 
 ## Relacionado
 
 - [Secuenciación](/es/conceptos/fabricacion/secuenciacion)
 - [Estados de fabricación](/es/conceptos/fabricacion/estados-de-fabricacion)
-- [Turnos](/es/conceptos/fabricacion/turnos)
+- [Horario de fabricación](/es/conceptos/fabricacion/turnos)
 - [Recursos](/es/conceptos/fabricacion/recursos)
 - [Saber qué fabricar](/es/ayuda/planificacion/priorizar-necesidades)
 - [Secuenciar órdenes](/es/ayuda/produccion/secuenciar-ordenes)

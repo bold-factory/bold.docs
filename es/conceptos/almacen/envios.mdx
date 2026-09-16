@@ -1,49 +1,52 @@
 ---
 title: "Envíos"
-description: "Entiende cómo los envíos registran salidas físicas de stock."
+description: "Entiende cómo los envíos documentan salidas de material hacia clientes o proveedores."
 icon: "package-minus"
 ---
 
-Un **envío** registra la salida física de material desde almacén. Reduce stock cuando el material sale de la empresa, se entrega a un destino externo o se consume en un flujo operativo.
+Un **envío** documenta una salida física de material hacia un **cliente** o un **proveedor**. Al completarlo, reduce el stock de sus líneas en la ubicación indicada.
 
-## Orígenes
+## Tipos de envío
 
-| Origen | Uso |
+| Tipo | Uso |
 | --- | --- |
-| Pedido de venta | Entregar material a cliente. |
-| Salida manual | Registrar salida no vinculada a pedido. |
-| Consumo | Reducir material usado en fabricación o mantenimiento. |
+| Cliente | Entregar material a un cliente, normalmente relacionado con una venta. |
+| Proveedor | Registrar material que sale hacia un proveedor. |
 
-## Datos obligatorios
+Puedes crear el envío desde un documento relacionado o introducirlo manualmente, pero siempre conserva uno de estos dos tipos.
 
-El envío debe salir de la ubicación y lote correctos. Si el stock está en otra ubicación, registra primero el movimiento interno o corrige la ubicación antes de enviar.
+<Info>
+  Los consumos de fabricación y mantenimiento también reducen stock. Se registran desde la operación o el parte que usa el material y no son envíos.
+</Info>
+
+## Datos necesarios
 
 | Dato | Por qué importa |
 | --- | --- |
-| Artículo | Define qué unidad operativa sale de stock. |
-| Cantidad | Reduce el saldo físico. Debe ser positiva. |
-| Ubicación | Indica de dónde sale el material. |
-| Lote | Conserva trazabilidad cuando el artículo lo exige. |
-| Documento origen | Explica si la salida viene de venta, consumo u otra operación. |
+| Destino | Identifica al cliente o proveedor que recibe el material. |
+| Artículo y cantidad | Definen qué sale y en qué cantidad. |
+| Ubicación | Indica de dónde se descuenta el stock. |
+| Lote | Conserva la trazabilidad cuando corresponde. |
+
+Si el material está en otra ubicación, completa primero el movimiento interno correspondiente.
 
 ## Estados y reglas
 
 | Estado | Significado |
 | --- | --- |
-| **Pendiente** | Puede editarse antes de registrar la salida. |
-| **Enviado** | Ya redujo stock y queda protegido. |
+| **Pendiente** | Puedes editar el documento antes de registrar la salida. |
+| **Enviado** | La salida ya redujo stock y el documento queda protegido. |
 
-Para enviar, el documento debe estar pendiente, tener ubicación y contener al menos una línea. Después de enviado, las líneas y la ubicación quedan protegidas para conservar histórico de entrega y trazabilidad de stock.
+Para enviar, el documento debe estar pendiente, tener ubicación y contener al menos una línea. Después de enviarlo, no puedes editar sus líneas ni cambiar su ubicación.
 
-Una línea de venta entregada queda limitada para conservar lo entregado. Si se cancela con cantidad entregada, Bold conserva la parte entregada como histórico y solo cancela la cantidad pendiente.
+Una línea de venta entregada conserva la cantidad ya enviada como histórico, aunque después cambie o se cancele la parte pendiente.
 
-## Relación con planificación
+## Relación con ventas y cargas
 
-Cuando un envío viene de ventas, reduce la demanda pendiente de la línea entregada. El pedido de venta explica el compromiso con cliente. El envío explica la realidad física.
+El pedido de venta explica el compromiso con el cliente. El envío explica la salida real. Una [orden de carga](/es/conceptos/almacen/ordenes-de-carga) puede agrupar varios envíos para prepararlos y completarlos juntos.
 
 ## Relacionado
 
-- [Stock y movimientos](/es/conceptos/almacen/stock-y-movimientos)
-- [Lotes](/es/conceptos/almacen/lotes)
 - [Preparar y registrar un envío](/es/ayuda/ventas/preparar-y-registrar-envio)
-- [Crear un pedido](/es/ayuda/ventas/introduccion)
+- [Órdenes de carga](/es/conceptos/almacen/ordenes-de-carga)
+- [Stock y movimientos](/es/conceptos/almacen/stock-y-movimientos)

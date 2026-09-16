@@ -1,93 +1,75 @@
 ---
-title: "Tareas con agentes"
-description: "Entiende cómo se crean, revisan y auditan los trabajos delegados a agentes."
+title: "Tareas"
+description: "Entiende cómo crear, compartir y revisar trabajos puntuales ejecutados por Boldy."
 icon: "list-checks"
 ---
 
-Una **tarea con agente** es un trabajo delegado a un agente especializado. Puede iniciarse manualmente, desde una automatización o cuando una integración crea la tarea mediante la API.
+Una **tarea** es un trabajo puntual que delegas a Boldy. Puede iniciarse manualmente, desde una automatización o mediante una integración.
 
 La tarea conserva instrucciones, mensajes, archivos adjuntos, herramientas usadas, aclaraciones, resultado y créditos consumidos.
 
-## Qué muestra una tarea
+## Configuración de una tarea puntual
 
-| Dato | Uso |
+| Opción | Uso |
 | --- | --- |
-| Estado | Indica si la tarea espera procesamiento, está en curso, requiere acción, terminó o falló. |
-| Agente | Define instrucciones, permisos y nivel de inteligencia. |
-| Canal | Indica si la conversación se inició en la web o en Telegram. |
-| Inicio | Fecha y hora de creación. |
-| Última interacción | Último cambio relevante de la tarea. |
-| Créditos | Consumo asociado al trabajo. |
-| Archivos | Contexto adicional que el agente puede usar. |
+| Instrucciones | Describen el resultado que necesitas y el contexto del trabajo. |
+| Nivel de inteligencia | Ajusta la capacidad de razonamiento y el consumo esperado. |
+| Visibilidad | Decide quién puede consultar la tarea. |
+| Modo de trabajo | Decide si Boldy puede realizar cambios o solo consultar datos. |
+| Archivos y audio | Añaden contexto a las instrucciones. |
 
-Las tareas caducan tras 28 días de inactividad. Si necesitas retomar un trabajo caducado, crea una tarea nueva con el contexto necesario.
+### Visibilidad
 
-Una tarea iniciada desde Telegram conserva allí su conversación. Puedes abrirla en la web para consultar la actividad y el resultado, pero debes responder desde la misma conversación de Telegram.
+| Opción | Quién puede verla |
+| --- | --- |
+| **Solo para mí** | El usuario que creó la tarea. |
+| **Compartida** | Otros usuarios con acceso a las tareas de Smart Factory. |
+
+El propietario puede continuar su tarea. Para intervenir en una tarea compartida de otra persona se necesita permiso para administrar todas las tareas.
+
+### Modo de trabajo
+
+| Opción | Comportamiento |
+| --- | --- |
+| **Solo lectura** | Boldy puede consultar y analizar, pero no modificar datos. |
+| **Permitir cambios** | Boldy puede usar las acciones permitidas durante la tarea. |
+
+El modo **Permitir cambios** no evita los controles de acceso. Boldy solo puede ejecutar acciones para las que la tarea tenga permiso.
 
 ## Estados
 
 | Estado | Qué hacer |
 | --- | --- |
-| **Pendiente** | Espera a que el agente empiece a procesar. |
-| **En ejecución** | No respondas todavía. El agente está trabajando. |
-| **Requiere acción** | Responde a la aclaración o decisión que pide el agente. |
-| **Completada** | Revisa el resultado y continúa solo si necesitas ampliar el trabajo. |
-| **Fallida** | Revisa el error, ajusta instrucciones o crea una tarea nueva. |
+| **Pendiente** | Espera a que empiece el procesamiento. |
+| **En ejecución** | Boldy está trabajando. |
+| **Requiere acción** | Responde a la aclaración o decisión pendiente. |
+| **Completada** | Revisa el resultado. |
+| **Fallida** | Revisa el error y decide si debes iniciar otra tarea. |
 
-## Crear una tarea
+Las tareas caducan tras 28 días de inactividad. Si necesitas retomar una tarea caducada, crea otra con el contexto necesario.
 
-<Steps>
-  <Step title="Elige el agente">
-    Selecciona un agente con permisos para los módulos que necesita el trabajo.
-  </Step>
-  <Step title="Añade instrucciones">
-    Describe objetivo, límites, formato esperado y datos de referencia. Las instrucciones adicionales admiten hasta `3000` caracteres.
-  </Step>
-  <Step title="Adjunta archivos si hacen falta">
-    Añade documentos, imágenes o archivos cuando el agente necesite contexto fuera de Bold.
-  </Step>
-  <Step title="Revisa el resultado">
-    Abre la tarea para ver mensajes, herramientas usadas, aclaraciones y resultado final.
-  </Step>
-</Steps>
+## Canal de origen
 
-## Buenas instrucciones
+Una tarea iniciada desde un canal de mensajería conserva ese canal. Puedes consultar la actividad y el resultado en la web, pero debes responder desde la misma conversación externa.
 
-| Caso | Instrucción útil |
+Consulta [Canales e identidades relacionadas](/es/conceptos/panel-de-control/identidades-relacionadas) para entender cómo Bold reconoce al usuario que conversa desde otro canal.
+
+## Cómo escribir las instrucciones
+
+Incluye el objetivo, el periodo, los registros relevantes, los límites y el formato esperado.
+
+| Caso | Ejemplo |
 | --- | --- |
-| Resumen operativo | `Resume órdenes de fabricación en progreso con retrasos, causas probables y próximos pasos.` |
-| Auditoría de mantenimiento | `Revisa partes abiertos del activo ENV-01 y destaca los que requieren acción del responsable.` |
-| Preparación de informe | `Con estos datos adjuntos, identifica inconsistencias antes de importarlos.` |
-
-Da contexto operativo: periodo, artículos, clientes, proveedores, órdenes, restricción real y formato esperado.
-
-## Automatizaciones y eventos
-
-Las automatizaciones ejecutan agentes sin crear la tarea manualmente. Cada ejecución crea una tarea con historial propio, estado, resultado y créditos consumidos.
-
-| Tipo | Cuándo usarla | Qué revisar |
-| --- | --- | --- |
-| Periódica | Revisiones o tareas recurrentes con frecuencia diaria, semanal, mensual, trimestral, semestral o anual. | Próxima ejecución, última ejecución, responsable, zona horaria y número de ejecuciones. |
-| Por evento | Reacciones a cambios relevantes de Bold. | Evento, versión, condición, agente responsable y si está habilitada. |
-
-Usa agentes personalizados para automatizaciones. Los agentes de sistema están pensados para uso directo y no deben programarse.
-
-## Problemas habituales
-
-| Problema | Qué revisar |
-| --- | --- |
-| La tarea requiere acción | Abre la tarea y responde a las preguntas pendientes. |
-| No puedes continuar | Puede estar en ejecución, fallida, esperando aclaración específica, caducada o haberse iniciado desde Telegram. |
-| El agente no encuentra datos | Revisa permisos del agente y si los datos existen en Bold. |
-| Consume demasiados créditos | Baja el nivel de inteligencia o acota mejor las instrucciones. |
-| La tarea caducó | Crea una tarea nueva con el contexto necesario. |
+| Resumen operativo | `Resume las OF en progreso con retrasos y próximos pasos.` |
+| Revisión de mantenimiento | `Revisa los partes abiertos del activo ENV-01 y destaca los que requieren acción.` |
+| Validación de datos | `Comprueba los archivos adjuntos e identifica inconsistencias antes de importarlos.` |
 
 <Warning>
-  Revisa tareas críticas antes de usar su resultado para cambiar datos operativos. La tarea acelera el análisis, pero el equipo conserva la responsabilidad del proceso.
+  Revisa las tareas críticas antes de usar su resultado para tomar decisiones o cambiar datos operativos.
 </Warning>
 
 ## Relacionado
 
-- [Agentes](/es/conceptos/smart-factory/agentes)
 - [Automatizaciones](/es/conceptos/smart-factory/automatizaciones)
+- [Boldy](/es/conceptos/smart-factory/boldy)
 - [Consultar datos y ejecutar tareas con IA](/es/ayuda/smart-factory/consultar-o-delegar-con-ia)

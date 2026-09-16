@@ -12,8 +12,8 @@ La demanda indica necesidades. El suministro indica entradas esperadas. La [asig
 
 | Concepto | Significado |
 | --- | --- |
-| Demanda | Necesidad de stock generada por venta, previsión o consumo previsto. |
-| Suministro | Entrada esperada por compra, fabricación o previsión. |
+| Demanda | Necesidad de stock generada por una venta confirmada o un consumo previsto de fabricación. |
+| Suministro | Entrada esperada por una compra confirmada o por fabricación. |
 | Asignación | Relación calculada entre una necesidad y el stock o suministro que la cubre. |
 | Stock proyectado | Evolución futura al aplicar demanda y suministro. |
 | Contra pedido | Cobertura directa de una necesidad concreta. |
@@ -24,29 +24,31 @@ La demanda indica necesidades. El suministro indica entradas esperadas. La [asig
 
 ## Demanda
 
-La demanda puede venir de pedidos de venta, necesidades internas, previsiones o consumos previstos.
+La demanda puede venir de pedidos de venta confirmados, necesidades internas o consumos previstos de fabricación.
 
 | Origen | Cuándo genera demanda |
 | --- | --- |
 | Pedido de venta | Cuando la línea está confirmada y queda cantidad pendiente de entregar. |
 | Orden o petición de fabricación | Cuando necesita componentes o material para ejecutarse. |
-| Previsión | Cuando representa una necesidad futura que quieres cubrir. |
 | Consumo previsto | Cuando una operación abierta espera consumir material. |
 
 Una línea en borrador no debería tratarse igual que un compromiso confirmado. Confirma los documentos cuando quieras que entren en planificación.
 
 ## Suministro
 
-El suministro puede venir de pedidos de compra, recepciones pendientes, peticiones de fabricación, órdenes planificadas o previsiones.
+El suministro puede venir de pedidos de compra confirmados, recepciones pendientes, peticiones de fabricación u órdenes planificadas.
 
 | Origen | Cuándo genera suministro |
 | --- | --- |
 | Pedido de compra | Cuando la línea está confirmada y queda cantidad pendiente de recibir. |
 | Petición de fabricación | Cuando representa una necesidad de fabricar antes de una fecha. |
 | Orden de fabricación | Cuando la producción pendiente debe aumentar stock. |
-| Previsión | Cuando representa una entrada esperada todavía no convertida en documento real. |
 
 Cuando almacén recibe material o producción completa una orden, el suministro pendiente se transforma en stock físico.
+
+<Info>
+  Una previsión es una recomendación. No es demanda, suministro ni stock entrante, y no cubre ninguna necesidad hasta que la conviertes en un pedido de compra o una petición de fabricación que entre en planificación.
+</Info>
 
 ## Stock proyectado
 

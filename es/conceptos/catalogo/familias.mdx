@@ -1,0 +1,55 @@
+---
+title: "Familias"
+description: "Entiende cómo usar familias para agrupar artículos, variantes y recetas."
+icon: "package-open"
+---
+
+Una **familia** agrupa artículos que pertenecen al mismo concepto comercial o técnico. No representa stock por sí misma. Sirve para ordenar variantes, definir propiedades comunes y compartir recetas entre artículos relacionados.
+
+## Qué representa
+
+| Elemento | Papel |
+| --- | --- |
+| Familia | Agrupación que comparte nombre, propiedades o proceso. |
+| Artículo | Variante operativa con stock, compras, ventas, fabricación y coste. |
+| Propiedad | Atributo que explica las diferencias entre artículos de la familia. |
+| Receta | Proceso que puede vincularse a una familia o directamente a un artículo. |
+
+Una familia puede tener un artículo o varios. La clave es que explique una agrupación útil para negocio, fabricación o análisis.
+
+## Cuándo crear una familia
+
+Crea una familia cuando varias variantes comparten una identidad común.
+
+| Caso | Ejemplo |
+| --- | --- |
+| Variantes comerciales | Mesa Nórdica en varios colores y medidas. |
+| Variantes técnicas | Perfil de aluminio con diferentes longitudes. |
+| Receta común | Misma estructura de fabricación con condiciones por propiedad. |
+| Análisis agrupado | Consultar actividad por familia además de por artículo. |
+| Validación de variantes | Exigir que todos los artículos informen color, medida o acabado. |
+
+## Cuándo no hace falta
+
+No crees una familia solo para rellenar el catálogo. Un artículo aislado puede operar sin familia si no hay variantes, propiedades comunes ni necesidad de agrupación.
+
+Tampoco crees una familia distinta por cada variante. Si cada color o medida es una familia separada, pierdes la agrupación y duplicas reglas que deberían vivir en propiedades.
+
+## Relación con propiedades
+
+Las propiedades asignadas a la familia definen qué información deben completar sus artículos. Si una familia tiene las propiedades **Color** y **Largo**, cada artículo de esa familia debe informar un valor coherente para ambas.
+
+Cuando falta un valor requerido, el estado del artículo es **Falta información**. Cuando están informadas todas las propiedades requeridas, muestra **Todo en orden**.
+
+## Relación con fabricación
+
+Una receta puede vincularse a toda una familia o directamente a un artículo. Una receta vinculada a una familia puede usar propiedades para decidir a qué artículos se aplica y qué operaciones, entradas, pasos o condiciones corresponden.
+
+Ejemplo: la familia **Mesa Nórdica** puede compartir una receta. La propiedad **Largo** decide la cantidad de tablero y la propiedad **Acabado** decide si aparece una operación de pintura. También puedes vincular otra receta a un artículo concreto cuando necesite un proceso propio.
+
+## Guías relacionadas
+
+- [Agrupar variantes](/es/ayuda/articulos/crear-una-familia)
+- [Familia vs artículo](/es/conceptos/catalogo/familia-vs-articulo)
+- [Propiedades](/es/conceptos/catalogo/propiedades)
+- [Recetas y versiones](/es/conceptos/fabricacion/recetas-y-versiones)

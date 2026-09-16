@@ -1,10 +1,10 @@
 ---
 title: "Personal"
-description: "Referencia de empleados, jornadas, calendarios, turnos y capacidad operativa."
+description: "Mapa de empleados, disponibilidad planificada y tareas de ejecución."
 icon: "users"
 ---
 
-Personal agrupa personas operativas y capacidad planificada. El acceso a la aplicación, usuarios, perfiles y permisos se administra desde [Panel de control](/es/conceptos/panel-de-control).
+Personal separa quién realiza el trabajo, cuándo se espera que esté disponible y qué tareas ejecutó.
 
 ## Conceptos de este grupo
 
@@ -13,64 +13,18 @@ Personal agrupa personas operativas y capacidad planificada. El acceso a la apli
     Personas operativas para tiempos, asignaciones y costes.
   </Card>
   <Card title="Habilidades y estaciones habituales" icon="badge-check" href="/es/conceptos/personal/habilidades-y-estaciones-habituales">
-    Capacidades y estaciones habituales que ayudan a mostrar trabajo relevante.
+    Capacidades y puestos habituales que orientan el trabajo relevante.
   </Card>
   <Card title="Jornadas, calendarios y turnos" icon="calendar-clock" href="/es/conceptos/personal/jornadas-calendarios-y-turnos">
-    Horarios, excepciones y ciclos de trabajo.
+    Reglas que calculan la disponibilidad prevista de cada empleado.
   </Card>
-  <Card title="Periodos, tareas y presencia" icon="clipboard-clock" href="/es/conceptos/personal/periodos-tareas-y-presencia">
-    Actividad real, tareas y disponibilidad operativa de empleados.
+  <Card title="Periodos planificados y tareas" icon="clipboard-clock" href="/es/conceptos/personal/periodos-planificados-y-tareas">
+    Disponibilidad prevista y trabajo real derivado de la ejecución.
   </Card>
 </Columns>
-
-## Entidades
-
-| Concepto | Uso |
-| --- | --- |
-| Empleado | Persona operativa que puede registrar tiempos, recibir asignaciones o participar en costes. |
-| Habilidad | Proceso o tipo de operación que un empleado puede ejecutar. |
-| Estación habitual | Estación de trabajo asociada al empleado para priorizar tareas operativas. |
-| Jornada laboral | Plantilla de tramos de trabajo. |
-| Calendario local | Excepciones por festivos, cierres o días especiales. |
-| Turno de personal | Programación que asigna jornadas y calendarios a empleados. |
-| Turno de trabajo | Turno usado en operación de planta o fabricación. |
-| Periodo de trabajo | Tramo real de actividad o presencia registrado para un empleado. |
-| Tarea | Trabajo operativo asignado o calculado para una persona. |
 
 ## Usuario y empleado
 
 Un usuario controla acceso. Un empleado representa trabajo operativo. Pueden estar relacionados, pero no son el mismo concepto.
 
-Usa un usuario para entrar en Bold, recibir permisos y administrar módulos. Usa un empleado para registrar mano de obra, calcular costes, asignar operaciones o medir presencia. Consulta [Usuarios, perfiles y permisos](/es/conceptos/panel-de-control/usuarios-roles-y-permisos) para la parte de acceso.
-
-## Jornadas, calendarios y turnos
-
-Una jornada define el patrón normal de trabajo. Un calendario local define excepciones. Un turno aplica esas reglas a personas o equipos.
-
-| Concepto | Qué decide |
-| --- | --- |
-| Jornada laboral | Qué tramos componen un día tipo. |
-| Calendario local | Qué excepciones alteran el patrón normal. |
-| Turno | Qué ciclo repetitivo se aplica a empleados o equipos. |
-| Relación operativa | Cómo esa capacidad afecta a planificación, ejecución y costes. |
-
-## Impacto en otros módulos
-
-| Módulo | Impacto |
-| --- | --- |
-| Producción | Asignación de empleados, registros de tiempo y análisis de eficiencia. |
-| Mantenimiento | Partes de trabajo, tiempo de intervención y empleado principal. |
-| Costes | Coste horario de empleados y coste real de mano de obra. |
-| Panel de control | Relación entre empleados, usuarios, perfiles, permisos e invitaciones. |
-| Modo de trabajo | Identificación del empleado activo y tareas disponibles en planta. |
-
-Las [habilidades y estaciones habituales](/es/conceptos/personal/habilidades-y-estaciones-habituales) ayudan a que el modo de trabajo muestre operaciones más relevantes para cada empleado.
-
-## Guías relacionadas
-
-- [Empleados](/es/ayuda/personal/empleados)
-- [Habilidades y estaciones habituales](/es/conceptos/personal/habilidades-y-estaciones-habituales)
-- [Configurar horarios y turnos](/es/ayuda/personal/configurar-horarios)
-- [Modo de trabajo](/es/conceptos/modo-de-trabajo)
-- [Usuarios, perfiles y permisos](/es/conceptos/panel-de-control/usuarios-roles-y-permisos)
-- [Invitar usuarios](/es/ayuda/usuarios-y-permisos/invitar-usuarios)
+Usa un usuario para entrar en Bold y recibir permisos. Usa un empleado para registrar mano de obra, calcular costes o relacionar trabajo operativo. Consulta [Usuarios, perfiles y permisos](/es/conceptos/panel-de-control/usuarios-roles-y-permisos) para la parte de acceso.

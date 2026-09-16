@@ -14,9 +14,19 @@ Una **operación** es una etapa ejecutable de una receta u orden de fabricación
 | Estación o recurso | Dónde se puede ejecutar. |
 | Entradas | Materiales consumidos durante la etapa. |
 | Pasos | Instrucciones visibles para el operario. |
-| Controles | Comprobaciones obligatorias o informativas. |
+| Controles | Comprobaciones obligatorias en el momento configurado. |
 | Tiempo previsto | Base para planificación, coste y eficiencia. |
 | Cantidad | Progreso que aporta a la orden. |
+
+## Cuándo queda planificada
+
+Una operación pasa a **Planificada** cuando tiene:
+
+- una estación de trabajo;
+- una fecha objetivo;
+- una herramienta seleccionada, si el proceso exige una característica de herramienta.
+
+La disponibilidad de materiales se muestra por separado. No forma parte de estos requisitos mínimos de planificación.
 
 ## Restricciones
 
@@ -48,6 +58,12 @@ Define bien la operación final cuando hay ramas paralelas, coproductos o contro
 | **Cancelada** | La operación ya no debe ejecutarse. |
 
 Consulta [Estados de fabricación](/es/conceptos/fabricacion/estados-de-fabricacion) para comparar operaciones con órdenes, grupos y planes.
+
+## Deshacer una finalización
+
+Puedes usar **Deshacer finalización** sobre una operación finalizada si su OF no está cancelada. Debes indicar un motivo de pausa.
+
+Bold reabre la operación y crea una interrupción desde la fecha en la que se finalizó. Los consumos ya registrados no se eliminan. Revísalos antes de continuar si la finalización anterior generó registros que ya no corresponden.
 
 ## Granularidad
 

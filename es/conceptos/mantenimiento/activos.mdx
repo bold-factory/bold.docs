@@ -4,20 +4,18 @@ description: "Entiende los activos mantenibles y su relación con intervenciones
 icon: "factory"
 ---
 
-Un **activo** es una máquina, instalación, área, herramienta o equipo sobre el que se puede registrar mantenimiento.
+Un **activo** es un equipo o un espacio físico sobre el que puedes registrar mantenimiento.
 
 El activo da contexto al historial: qué falló, qué se hizo, cuánto costó y cuándo conviene volver a intervenir.
 
 ## Qué representa
 
-| Tipo | Ejemplo |
+| Tipo en Bold | Ejemplos |
 | --- | --- |
-| Máquina | Prensa, sierra, inyectora. |
-| Instalación | Aire comprimido, climatización, electricidad. |
-| Área | Zona de envasado, línea 1. |
-| Herramienta | Útil, molde, equipo auxiliar. |
+| Equipo | Máquina, herramienta, instalación técnica o equipo auxiliar. |
+| Espacio físico | Planta, área, línea, zona o sala. |
 
-El nivel de detalle debe coincidir con cómo analizas averías y costes.
+Una máquina no es un tipo distinto: regístrala como **Equipo**. Una instalación o área tampoco crea otro tipo: usa **Equipo** si mantienes un elemento técnico y **Espacio físico** si quieres representar un lugar.
 
 ## Jerarquía
 
@@ -25,9 +23,9 @@ Puedes modelar activos en jerarquía si necesitas separar un equipo principal de
 
 | Nivel | Ejemplo |
 | --- | --- |
-| Línea | Línea de montaje 1 |
-| Máquina | Atornilladora automática |
-| Componente | Cabezal de apriete |
+| Espacio físico | Línea de montaje 1 |
+| Equipo | Atornilladora automática |
+| Equipo hijo | Cabezal de apriete |
 
 No crees niveles que el equipo no vaya a usar. Una jerarquía demasiado profunda dificulta registrar partes.
 

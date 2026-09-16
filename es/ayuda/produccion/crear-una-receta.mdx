@@ -3,7 +3,7 @@ title: "Diseñar el paso a paso de fabricación"
 description: "Define el proceso de fabricación con operaciones, entradas, pasos, controles y versiones."
 ---
 
-En Bold, una **receta** define el flujo de fabricación de un producto. Combina materiales, operaciones, pasos, controles, coproductos, restricciones y condiciones.
+En Bold, una **receta** define el flujo de fabricación de una familia o de un artículo concreto. Combina materiales, operaciones, pasos, controles, coproductos, restricciones y condiciones.
 
 Una receta no ejecuta trabajo por sí sola. Se usa como plantilla para crear **órdenes de fabricación** con una estructura consistente.
 
@@ -13,9 +13,9 @@ Una receta no ejecuta trabajo por sí sola. Se usa como plantilla para crear **�
 
 ### 1. Añadir una receta
 
-**Producto:** selecciona el producto cuya fabricación quieres definir.
+**Familia:** selecciona la familia cuya fabricación quieres definir.
 
-**Nombre:** al seleccionar un producto, Bold asigna automáticamente el nombre de la receta. Cámbialo si necesitas distinguir varias formas de fabricar el mismo producto.
+**Nombre:** al seleccionar una familia, Bold asigna automáticamente el nombre de la receta. Cámbialo si necesitas distinguir varias formas de fabricar sus artículos.
 
 ### 2. Añadir una versión
 
@@ -27,7 +27,7 @@ Una receta no ejecuta trabajo por sí sola. Se usa como plantilla para crear **�
 
 ### 3. Crear el diagrama de operaciones
 
-Aunque puedes añadir y mover los bloques libremente, organiza el diagrama en el mismo orden en que fabricas el producto. Así podrás revisar el flujo con mayor facilidad.
+Aunque puedes añadir y mover los bloques libremente, organiza el diagrama en el mismo orden en que fabricas el artículo. Así podrás revisar el flujo con mayor facilidad.
 
 Haz clic en **+ Añadir operación** y completa los siguientes campos:
 
@@ -65,7 +65,7 @@ También puedes hacer clic en **+ Añadir restricción**. Se abrirá una ventana
 
 ## Cuándo dividir el recorrido de la receta
 
-En algunos casos, el proceso de fabricación depende de una propiedad del producto. Añade condiciones cuando esa propiedad cambie el proceso y resulte más claro separar los recorridos de la receta.
+En algunos casos, el proceso de fabricación depende de una propiedad de la familia. Añade condiciones cuando esa propiedad cambie el proceso y resulte más claro separar los recorridos de la receta.
 
 <Note>
   **Ejemplo:** fabricas el modelo `Bici Pro` y la propiedad que cambia es el **material del cuadro**: aluminio o fibra de carbono.
@@ -84,8 +84,8 @@ Desde el diagrama entra al bloque de operación donde se tenga que aplicar la co
 
 **Origen:** indica de dónde obtiene Bold el dato que evalúa la condición:
 
-- **Propiedad:** variantes del propio producto, como material, tamaño o voltaje.
-- **Contexto de la OF:** se activa cuando el producto es el mismo, pero cambian los datos administrativos, logísticos o la urgencia de ese pedido.
+- **Propiedad:** variantes de la propia familia, como material, tamaño o voltaje.
+- **Contexto de la OF:** se activa cuando el artículo es el mismo, pero cambian los datos administrativos, logísticos o la urgencia del pedido.
 
 **Campo:** elige el dato que debe evaluar Bold, como las notas, el código o la cantidad de la OF.
 

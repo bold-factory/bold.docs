@@ -1,10 +1,10 @@
 ---
 title: "Recetas y versiones"
-description: "Entiende las recetas como moldes de fabricación versionados para productos y variantes."
+description: "Entiende cómo las recetas definen estructuras versionadas y se aplican a familias y artículos."
 icon: "book-open"
 ---
 
-Una **receta** describe cómo fabricar un producto. Define operaciones, entradas, coproductos, pasos, controles, restricciones y condiciones.
+Una **receta** describe cómo fabricar uno o varios artículos. Define operaciones, entradas, coproductos, pasos, controles, restricciones y condiciones.
 
 La receta no ejecuta trabajo. Sirve como molde para crear órdenes de fabricación con una estructura controlada.
 
@@ -12,15 +12,40 @@ La receta no ejecuta trabajo. Sirve como molde para crear órdenes de fabricaci�
 
 | Elemento | Uso |
 | --- | --- |
-| Producto | Familia que se fabrica. |
+| Aplicación | Familias y artículos a los que puede aplicarse. |
 | Versión | Estructura aprobada o editable de la receta. |
 | Operaciones | Etapas ejecutables del proceso. |
 | Entradas | Materiales o semielaborados que se consumen. |
 | Coproductos | Salidas adicionales generadas. |
 | Pasos | Instrucciones para operarios. |
-| Controles | Comprobaciones de calidad o proceso. |
+| Controles | Comprobaciones obligatorias de calidad o proceso. |
 | Restricciones | Precedencias entre operaciones. |
 | Condiciones | Reglas que aplican según propiedades del artículo. |
+
+## Aplicación a familias y artículos
+
+Puedes vincular una receta de dos formas:
+
+| Vínculo | Comportamiento |
+| --- | --- |
+| Familia | La receta se evalúa para los artículos de esa familia. Puedes añadir una condición basada en sus propiedades. |
+| Artículo directo | La receta se evalúa para ese artículo aunque no llegue a él mediante su familia. Este vínculo no depende de la condición de familia. |
+
+Si un artículo no cumple la condición de familia y no tiene un vínculo directo, la receta no se considera aplicable. Si falta una propiedad necesaria para evaluar la condición, la receta aparece como **Falta información**.
+
+Un artículo puede tener varias recetas aplicables. Bold las ordena por prioridad y usa como receta principal la primera que esté **Lista**. Puedes cambiar ese orden desde las recetas aplicables del artículo.
+
+## Estado para un artículo
+
+El estado se calcula para cada combinación de artículo y receta.
+
+| Estado | Significado |
+| --- | --- |
+| **Lista** | La receta tiene una versión activa y el artículo aporta todas las propiedades necesarias. |
+| **Falta información** | La receta puede aplicarse, pero faltan propiedades necesarias para evaluar condiciones o fórmulas. |
+| **Inactiva** | La receta está vinculada al artículo, pero no tiene una versión activa. |
+
+Bold muestra las propiedades que faltan. Complétalas en el artículo antes de usar esa receta para crear una OF.
 
 ## Versiones
 
@@ -36,18 +61,18 @@ Activa una versión cuando representa el proceso aprobado. Si necesitas cambiar 
 
 ## Condiciones y variantes
 
-Las condiciones permiten que una misma receta se adapte a diferentes artículos de un producto.
+Las condiciones permiten que una misma receta se adapte a diferentes artículos de una familia.
 
 | Condición | Decide |
 | --- | --- |
-| De receta | Si una versión aplica a una variante. |
+| De familia | Si la receta se aplica a un artículo de la familia vinculada. |
 | De operación | Si una etapa debe existir. |
 | De entrada | Si se consume un material. |
 | De paso | Si se muestra una instrucción. |
 
 Ejemplo: una receta de mesa puede añadir una operación de pintura solo cuando la propiedad **Acabado** lo requiere.
 
-Si no aparece una propiedad al crear una condición, revisa que exista en **Catálogo > Propiedades** y que esté asignada al producto de la receta. Las condiciones solo pueden usar propiedades que afectan al artículo fabricado.
+Si no aparece una propiedad al crear una condición, revisa que exista en **Catálogo > Propiedades** y que esté asignada a la familia correspondiente. Las condiciones solo pueden usar propiedades que afectan al artículo fabricado.
 
 ## Fórmulas
 
@@ -72,5 +97,5 @@ Para cambiar una receta en uso, copia la versión o crea una nueva, edítala y a
 - [Herramientas y características](/es/conceptos/fabricacion/herramientas-y-caracteristicas)
 - [Procesos](/es/conceptos/fabricacion/procesos)
 - [Peticiones de fabricación](/es/conceptos/fabricacion/peticiones-de-fabricacion)
-- [Producto vs artículo](/es/conceptos/catalogo/producto-vs-articulo)
+- [Familia vs artículo](/es/conceptos/catalogo/familia-vs-articulo)
 - [Crear una receta](/es/ayuda/produccion/crear-una-receta)

@@ -1,6 +1,6 @@
 ---
 title: "Catálogo"
-description: "Referencia de productos, artículos, propiedades, variantes y reglas de validación."
+description: "Mapa de familias, artículos, propiedades y unidades de medida del catálogo."
 icon: "boxes"
 ---
 
@@ -9,13 +9,13 @@ El catálogo es la base de Bold. Define qué se compra, fabrica, almacena, consu
 ## Conceptos de este grupo
 
 <Columns cols={2}>
-  <Card title="Productos" icon="package-open" href="/es/conceptos/catalogo/productos">
-    Familias que agrupan artículos, propiedades y recetas.
+  <Card title="Familias" icon="package-open" href="/es/conceptos/catalogo/familias">
+    Agrupaciones de artículos que comparten propiedades o procesos.
   </Card>
   <Card title="Artículos" icon="barcode" href="/es/conceptos/catalogo/articulos">
     Unidades operativas para stock, compras, ventas, fabricación y costes.
   </Card>
-  <Card title="Producto vs artículo" icon="git-compare" href="/es/conceptos/catalogo/producto-vs-articulo">
+  <Card title="Familia vs artículo" icon="git-compare" href="/es/conceptos/catalogo/familia-vs-articulo">
     Criterios para separar familias, variantes y referencias físicas.
   </Card>
   <Card title="Propiedades" icon="list-filter" href="/es/conceptos/catalogo/propiedades">
@@ -26,65 +26,36 @@ El catálogo es la base de Bold. Define qué se compra, fabrica, almacena, consu
   </Card>
 </Columns>
 
-## Entidades principales
+## Cómo encajan
 
 | Concepto | Uso |
 | --- | --- |
-| Producto | Familia comercial o técnica que agrupa artículos relacionados. Define las propiedades que deben informar sus artículos. |
+| Familia | Agrupación comercial o técnica que reúne artículos relacionados y define sus propiedades requeridas. |
 | Artículo | Elemento físico único. Bold controla sobre él stock, compras, ventas, fabricación y costes. |
 | Propiedad | Atributo reutilizable que diferencia variantes, como color, medida, material o acabado. |
-| Valor de propiedad | Valor concreto que convierte un artículo en una variante válida de un producto. |
+| Valor de propiedad | Valor concreto que describe una variante dentro de una familia. |
 | Unidad de medida | Forma en la que se cuantifican stock, pedidos, consumos y producción. |
 | Coproducto | Salida adicional generada durante una fabricación. |
 
-## Producto y artículo
+La familia organiza las variantes. El artículo es la referencia operativa con stock, pedidos, fabricación y costes propios. Las propiedades explican las diferencias entre artículos de una misma familia.
 
-Un **producto** agrupa variantes. Un **artículo** identifica la variante operativa.
+Consulta las páginas de este grupo para ver las reglas de información requerida, consolidación, unidades y modelado de variantes.
 
-Por ejemplo, **Mesa Nórdica** puede ser el producto. **Mesa Nórdica - 160 cm - Roble** y **Mesa Nórdica - 200 cm - Nogal** son artículos distintos porque tienen stock, pedidos y fabricación separados.
-
-Bold valida código y nombre al crear productos y artículos. Cuando un producto tiene propiedades asignadas, cada artículo de ese producto debe informar un valor para todas ellas. Si falta un valor, el artículo queda **inválido** hasta completar la información.
-
-## Propiedades
-
-Las propiedades se crean una vez y se reutilizan en productos, recetas y condiciones. Pueden representar texto, número, fecha, sí/no u opciones cerradas.
-
-| Clase | Ejemplo | Regla |
-| --- | --- | --- |
-| Texto | Acabado libre | Acepta texto. |
-| Número | Longitud | Debe ser numérico. |
-| Fecha | Fecha de homologación | Debe tener formato de fecha. |
-| Sí/no | Ignífugo | Debe ser verdadero o falso. |
-| Selección | Color | Debe usar una opción existente. |
-
-<Warning>
-  No uses texto libre para datos que condicionan recetas o planificación. Usa opciones cerradas para evitar variantes duplicadas.
-</Warning>
-
-## Validación y consolidación
-
-Un artículo sin producto se considera válido. Un artículo con producto se valida contra las propiedades del producto.
-
-Bold puede proponer consolidar artículos cuando tienen el mismo producto y los mismos valores de propiedades. Consolidar deja un artículo como referencia válida y retira el duplicado. Úsalo solo si ambos registros representan exactamente el mismo elemento físico.
-
-Bold solo permite fusionar artículos del mismo producto con el mismo conjunto de valores. La fusión conserva la trazabilidad y retira el artículo absorbido.
-
-## Relación con otros módulos
+## Relación con otras áreas
 
 | Módulo | Dependencia del catálogo |
 | --- | --- |
-| Planificación | Las líneas de demanda y suministro necesitan artículos válidos, plazos, punto de pedido y origen de aprovisionamiento. |
+| Planificación | Usa artículos, plazos, punto de pedido y origen de aprovisionamiento. |
 | Almacén | El stock se registra por artículo, ubicación y lote opcional. Los lotes se gestionan desde almacén cuando necesitas trazabilidad. |
-| Fabricación | Las recetas se definen a nivel de producto y producen o consumen artículos. |
+| Fabricación | Las recetas pueden vincularse a familias o artículos y producen o consumen artículos. |
 | Costes | El coste se calcula sobre artículos, lotes, consumos, producción y valor de inventario. |
 | Integraciones | Relacionan el artículo operativo con referencias de otros sistemas. |
 
 ## Guías relacionadas
 
-- [Agrupar variantes](/es/ayuda/articulos/crear-un-producto)
+- [Agrupar variantes](/es/ayuda/articulos/crear-una-familia)
 - [Crear un artículo](/es/ayuda/articulos/crear-un-articulo)
 - [Editar un artículo](/es/ayuda/articulos/editar-un-articulo)
 - [Propiedades](/es/conceptos/catalogo/propiedades)
 - [Unidades de medida](/es/conceptos/catalogo/unidades-de-medida)
-- [Lotes](/es/conceptos/almacen/lotes)
 - [Lotes](/es/conceptos/almacen/lotes)

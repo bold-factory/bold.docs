@@ -4,7 +4,7 @@ description: "Entiende las propiedades como atributos reutilizables para variant
 icon: "list-filter"
 ---
 
-Las **propiedades** son atributos reutilizables para describir productos y artículos. Sirven para diferenciar variantes, validar datos y alimentar reglas de fabricación o planificación.
+Las **propiedades** son atributos reutilizables para describir familias y artículos. Sirven para diferenciar variantes, validar datos y alimentar reglas de fabricación o planificación.
 
 Ejemplos habituales: color, material, largo, acabado, formato, calidad, clase logística o fecha técnica.
 
@@ -31,7 +31,7 @@ No uses propiedades para notas ocasionales. Si el valor no se va a filtrar, vali
 | Fecha/hora | Fechas relevantes para clasificación o control. | Fecha de certificación. |
 | Texto libre | Valores técnicos que no encajan en una lista. | Referencia corta. |
 
-Elige la clase antes de extender la propiedad a muchos productos. Cambiar el tipo después puede invalidar valores existentes.
+Elige la clase antes de asignar la propiedad a muchas familias. El tipo no se puede cambiar después. Si necesitas otro tipo, elimina la propiedad y créala de nuevo; después tendrás que volver a asignarla e informar sus valores.
 
 ## Opciones controladas
 
@@ -43,13 +43,13 @@ Usa **Selección de opción** cuando quieres evitar valores duplicados por escri
 | Acabado | Mate, brillo, satinado |
 | Formato | Caja, bolsa, bidón |
 
-Si cada producto necesita una lista distinta, crea propiedades distintas. No mezcles significados incompatibles en una propiedad global.
+Si cada familia necesita una lista distinta, crea propiedades distintas. No mezcles significados incompatibles en una propiedad global.
 
 ## Validación de artículos
 
-Cuando asignas una propiedad a un producto, sus artículos deben informar un valor válido. Esto permite detectar variantes incompletas antes de usarlas en stock, pedidos o recetas.
+Cuando una familia requiere una propiedad, sus artículos deben informar un valor válido. La interfaz muestra **Falta información** mientras falte algún valor requerido y **Todo en orden** cuando la información esté completa.
 
-Si dos artículos tienen el mismo producto y los mismos valores de propiedades, revisa si son duplicados. Si no son duplicados, falta una propiedad que explique la diferencia.
+Si dos artículos tienen la misma familia y los mismos valores de propiedades, revisa si son duplicados. Si no son duplicados, falta una propiedad que explique la diferencia.
 
 ## Uso en fabricación
 
@@ -73,12 +73,12 @@ Puedes copiar una propiedad de tipo **Selección de opción** para crear una lis
 | --- | --- |
 | Ver propiedades y opciones | Acceso de lectura al catálogo. |
 | Crear, editar, copiar o eliminar propiedades | Acceso de edición al catálogo. |
-| Asignar propiedades a productos | Acceso para editar productos. |
+| Asignar propiedades a familias | Acceso para editar familias. |
 | Editar valores de artículo | Acceso para editar artículos. |
 
 ## Relacionado
 
-- [Productos](/es/conceptos/catalogo/productos)
+- [Familias](/es/conceptos/catalogo/familias)
 - [Artículos](/es/conceptos/catalogo/articulos)
 - [Recetas y versiones](/es/conceptos/fabricacion/recetas-y-versiones)
-- [Agrupar variantes](/es/ayuda/articulos/crear-un-producto)
+- [Agrupar variantes](/es/ayuda/articulos/crear-una-familia)

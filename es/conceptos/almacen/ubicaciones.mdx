@@ -13,10 +13,14 @@ La ubicación no es solo un nombre. Define dónde se espera encontrar el materia
 | Tipo | Ejemplo | Uso |
 | --- | --- | --- |
 | Almacén general | `ALM-01` | Operación simple con poco detalle. |
-| Zona | `RECEPCION`, `PICKING`, `CALIDAD` | Separar estados físicos del material. |
+| Zona | `RECEPCION`, `PICKING`, `RESERVA` | Separar recorridos o áreas físicas. |
 | Posición | `A-03-02` | Encontrar material con precisión. |
 | Planta | `LINEA-1`, `CORTE` | Consumir o producir cerca de la operación. |
-| Temporal | `CUARENTENA`, `NO-CONFORME` | Apartar stock que requiere revisión. |
+| Temporal | `ENTRADA`, `SALIDA` | Registrar material durante una fase física temporal. |
+
+<Info>
+  El nombre de una ubicación no bloquea el stock ni cambia su disponibilidad. Una ubicación separada ayuda a saber dónde está el material, pero cualquier restricción de uso debe controlarse mediante el proceso operativo correspondiente.
+</Info>
 
 ## Cuándo usar una sola ubicación
 
@@ -37,11 +41,9 @@ Crea varias ubicaciones cuando el lugar físico cambia decisiones operativas.
 | Necesidad | Ubicaciones útiles |
 | --- | --- |
 | Recepción separada de stock disponible | `RECEPCION` y `ALMACEN` |
-| Control de calidad antes de usar material | `CALIDAD` o `CUARENTENA` |
 | picking diferenciado de reserva | `PICKING` y `RESERVA` |
 | Producción consume desde planta | Ubicaciones por línea, estación o célula. |
 | Inventarios por zona | Ubicaciones que coinciden con zonas de conteo. |
-| Material no conforme | Zona bloqueada o de revisión. |
 
 ## Nivel de detalle
 
@@ -64,7 +66,6 @@ Diseña ubicaciones al nivel en el que el equipo trabaja:
 | Material listo para picking | Mueve a una ubicación disponible o de preparación. |
 | Producción | Usa ubicaciones de planta si necesitas saber qué material está junto a cada recurso. |
 | Inventario | Cuenta ubicaciones que coincidan con el recorrido físico. |
-| Stock bloqueado | Usa una ubicación separada para evitar uso accidental. |
 
 ## Relacionado
 

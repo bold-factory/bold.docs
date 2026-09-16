@@ -8,6 +8,10 @@ La **valoración de inventario** calcula el valor económico del stock registrad
 
 Bold valora líneas de stock usando cantidad disponible y coste asociado, normalmente por lote u origen.
 
+<Info>
+  La valoración usa una única moneda: euros (EUR). Bold no admite actualmente valoraciones multimoneda.
+</Info>
+
 ## Qué se valora
 
 | Dato | Uso |
@@ -23,7 +27,7 @@ Bold valora líneas de stock usando cantidad disponible y coste asociado, normal
 
 ```text
 Valor de línea = stock disponible x coste unitario
-Valor total = suma de líneas valoradas
+Valor total en EUR = suma de líneas valoradas en EUR
 ```
 
 ## Diferencias habituales

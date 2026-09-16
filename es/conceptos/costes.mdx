@@ -1,10 +1,14 @@
 ---
 title: "Costes"
-description: "Referencia de coste teórico, coste real y valoración de inventario."
+description: "Mapa de coste teórico, coste real y valoración de inventario."
 icon: "circle-dollar-sign"
 ---
 
 Los costes explican cuánto cuesta comprar, fabricar, mantener y almacenar. Bold separa coste teórico, coste real y valoración de inventario.
+
+<Info>
+  Bold opera actualmente todos los costes en una única moneda: euros (EUR). La moneda no se puede cambiar ni se admiten cálculos multimoneda.
+</Info>
 
 ## Conceptos de este grupo
 
@@ -17,94 +21,16 @@ Los costes explican cuánto cuesta comprar, fabricar, mantener y almacenar. Bold
   </Card>
 </Columns>
 
-## Tipos de coste
+## Cómo encajan
 
-| Concepto | Uso |
-| --- | --- |
-| Coste de artículo | Coste base o actualizado de materiales, semielaborados y producto terminado. |
-| Coste de empleado | Coste horario usado para mano de obra. |
-| Coste de fabricación | Comparación entre materiales y tiempo previstos y reales por orden. |
-| Coste de mantenimiento | Coste de mano de obra y materiales consumidos en partes. |
-| Valoración de inventario | Valor económico del stock registrado por artículo, lote o ubicación. |
+El coste teórico estima pedidos, recetas y trabajo antes de ejecutarlos. El coste real usa consumos, lotes, tiempos y empleados registrados. Su diferencia permite analizar desviaciones.
 
-## Coste de artículo
-
-El coste previsto por unidad se usa para estimar pedidos, recetas, órdenes de fabricación y comparativas frente al coste real.
-
-| Tipo de artículo | Origen habitual del cálculo |
-| --- | --- |
-| Compra | Precios de proveedor, pedidos de compra y cambios de coste de líneas de compra. |
-| Fabricación | Receta, versión activa, materiales, tiempos, recursos y costes base relacionados. |
-| Manual | Valor definido por el equipo cuando no quieres que se recalcule automáticamente. |
-
-### Desglose del coste previsto
-
-Cuando el coste se actualiza automáticamente, Bold guarda el total y su desglose por unidad en materiales, mano de obra y máquina:
-
-- En un artículo de compra, todo el coste se considera material; mano de obra y máquina son cero.
-- En un artículo de fabricación, el material directo procede de los componentes comprados que consume su propia receta. El material heredado procede de materiales consumidos previamente dentro de los componentes fabricados o semielaborados de esa receta.
-- La mano de obra directa se calcula con el tiempo-persona previsto de las operaciones del propio artículo y la media de los costes horarios positivos de los empleados activos. La mano de obra heredada ya se consumió en sus semielaborados.
-- La máquina directa se calcula con la duración prevista de las operaciones del propio artículo y el coste horario del puesto de trabajo principal. El coste de máquina heredado ya se consumió en sus semielaborados.
-
-El cálculo estima lo necesario para obtener una unidad del artículo de catálogo. Dentro de esa unidad, una operación puede tener una cantidad relativa distinta de uno: los tiempos con frecuencia «por unidad» se escalan con esa cantidad relativa, mientras que los demás tiempos se aplican una sola vez. Si no existe una receta principal activa y utilizable, el desglose automático queda a cero. Un artículo de fabricación con coste manual, o un artículo ignorado, conserva el total pero no muestra desglose.
-
-El coste previsto no es lo mismo que el coste real del lote. El coste real se calcula con compras, fabricación, consumos, lotes y ajustes de stock.
-
-En los artículos fabricados, Bold conserva la categoría de los costes que aportan los semielaborados. Su material se suma como material heredado, su mano de obra como mano de obra heredada y su uso de máquina como máquina heredada. La ficha del artículo separa el coste directo y el heredado de semielaborados en las tres categorías.
-
-Los costes previstos de artículo se redondean a un máximo de cuatro decimales. Si un componente tiene un coste manual sin desglose, Bold imputa ese importe a material directo cuando se compra y a material heredado cuando se fabrica.
-
-## Coste de empleado
-
-El coste de empleado es el coste por hora que Bold aplica a registros de mano de obra. Afecta a órdenes de fabricación, operaciones y partes de mantenimiento.
-
-Para estimarlo, usa el coste total para la empresa y divídelo entre las horas efectivas anuales.
-
-```text
-coste/hora = coste anual / horas anuales efectivas
-```
-
-En una jornada de 40 horas semanales, una referencia habitual son `1.826` horas anuales efectivas. Ajusta esa base a tu convenio, calendario y criterio interno.
-
-## Actualización de costes
-
-Los costes pueden actualizarse de forma automática o manual según el tipo de artículo y el flujo operativo.
-
-| Caso | Actualización habitual |
-| --- | --- |
-| Artículo de compra | Puede actualizarse con precios de compra o recepciones. |
-| Artículo de fabricación | Puede actualizarse con estructura de receta, materiales y mano de obra. |
-| Ajuste manual | Permite corregir o fijar un coste cuando el dato externo no está disponible. |
-
-<Info>
-  La política exacta depende de la configuración operativa y de los datos disponibles. Revisa siempre fecha de coste, origen y alcance antes de usarlo para decisiones financieras.
-</Info>
-
-## Fabricación
-
-El coste de una orden combina materiales consumidos, coproductos, tiempos de operación y costes de empleados. Las desviaciones aparecen cuando el consumo real, la cantidad rechazada, la duración o la mano de obra difieren de lo planificado.
-
-## Mantenimiento
-
-El coste de mantenimiento combina acciones, tiempos y materiales. Un parte completado conserva el histórico para analizar recurrencia, coste por activo y eficiencia.
-
-## Inventario
-
-La valoración de inventario usa el stock registrado y el coste asociado. Si operas con lotes, revisa la valoración por lote cuando el origen o precio de compra cambie entre entradas.
-
-## Problemas habituales
-
-| Problema | Qué revisar |
-| --- | --- |
-| El coste de artículo aparece a cero | Falta precio de compra, receta activa o coste manual. |
-| El coste cambia al modificar una receta | El artículo tiene actualización automática activa. |
-| Mano de obra real a cero | El empleado no tiene coste/hora o el tiempo no se registró sobre un empleado. |
-| Costes muy altos o bajos | Revisa si dividiste por horas anuales efectivas. |
-| El coste previsto no coincide con el real | El previsto usa datos planificados; el real usa consumos, lotes, tiempos y empleados registrados. |
+La valoración de inventario aplica el coste asociado a las existencias de cada artículo y lote. Consulta las páginas de este grupo para ver los orígenes, cálculos y datos necesarios.
 
 ## Guías relacionadas
 
 - [Coste teórico vs coste real](/es/conceptos/costes/coste-teorico-vs-real)
+- [Valoración de inventario](/es/conceptos/costes/valoracion-de-inventario)
 - [Preparar datos de coste](/es/ayuda/costes/preparar-datos-de-coste)
 - [Analizar costes de artículos](/es/ayuda/costes/analizar-costes-de-articulos)
 - [Configurar costes del personal](/es/ayuda/costes/configurar-costes-del-personal)

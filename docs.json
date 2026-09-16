@@ -71,6 +71,34 @@
     {
       "source": "/es/ayuda/produccion/ver-estado-de-las-estaciones",
       "destination": "/es/ayuda/produccion/ver-progreso-en-la-produccion"
+    },
+    {
+      "source": "/es/ayuda/articulos/crear-un-producto",
+      "destination": "/es/ayuda/articulos/crear-una-familia"
+    },
+    {
+      "source": "/es/ayuda/smart-factory/crear-automatizacion-con-agente",
+      "destination": "/es/ayuda/smart-factory/crear-automatizacion"
+    },
+    {
+      "source": "/es/conceptos/catalogo/productos",
+      "destination": "/es/conceptos/catalogo/familias"
+    },
+    {
+      "source": "/es/conceptos/catalogo/producto-vs-articulo",
+      "destination": "/es/conceptos/catalogo/familia-vs-articulo"
+    },
+    {
+      "source": "/es/conceptos/personal/periodos-tareas-y-presencia",
+      "destination": "/es/conceptos/personal/periodos-planificados-y-tareas"
+    },
+    {
+      "source": "/es/conceptos/smart-factory/agentes",
+      "destination": "/es/conceptos/smart-factory/automatizaciones"
+    },
+    {
+      "source": "/es/conceptos/almacen/tipos-de-contenedores",
+      "destination": "/es/conceptos/almacen/bultos"
     }
   ],
   "navigation": {
@@ -100,7 +128,7 @@
                 "root": "es/ayuda/articulos/introduccion",
                 "pages": [
                   "es/ayuda/articulos/definir-propiedades",
-                  "es/ayuda/articulos/crear-un-producto",
+                  "es/ayuda/articulos/crear-una-familia",
                   "es/ayuda/articulos/crear-un-articulo",
                   "es/ayuda/articulos/editar-un-articulo",
                   "es/ayuda/articulos/unidades-de-medida"
@@ -242,7 +270,7 @@
                 "pages": [
                   "es/ayuda/smart-factory/informes-powerbi",
                   "es/ayuda/smart-factory/consultar-o-delegar-con-ia",
-                  "es/ayuda/smart-factory/crear-automatizacion-con-agente"
+                  "es/ayuda/smart-factory/crear-automatizacion"
                 ]
               },
               {
@@ -288,9 +316,9 @@
                 "root": "es/conceptos/catalogo",
                 "expanded": false,
                 "pages": [
-                  "es/conceptos/catalogo/productos",
+                  "es/conceptos/catalogo/familias",
                   "es/conceptos/catalogo/articulos",
-                  "es/conceptos/catalogo/producto-vs-articulo",
+                  "es/conceptos/catalogo/familia-vs-articulo",
                   "es/conceptos/catalogo/propiedades",
                   "es/conceptos/catalogo/unidades-de-medida"
                 ]
@@ -348,7 +376,6 @@
                   "es/conceptos/almacen/lotes",
                   "es/conceptos/almacen/ubicaciones",
                   "es/conceptos/almacen/bultos",
-                  "es/conceptos/almacen/tipos-de-contenedores",
                   "es/conceptos/almacen/recepciones",
                   "es/conceptos/almacen/envios",
                   "es/conceptos/almacen/inventarios-y-ajustes"
@@ -375,7 +402,7 @@
                   "es/conceptos/personal/empleados",
                   "es/conceptos/personal/habilidades-y-estaciones-habituales",
                   "es/conceptos/personal/jornadas-calendarios-y-turnos",
-                  "es/conceptos/personal/periodos-tareas-y-presencia"
+                  "es/conceptos/personal/periodos-planificados-y-tareas"
                 ]
               },
               {
@@ -396,7 +423,6 @@
                 "pages": [
                   "es/conceptos/smart-factory/informes",
                   "es/conceptos/smart-factory/boldy",
-                  "es/conceptos/smart-factory/agentes",
                   "es/conceptos/smart-factory/tareas",
                   "es/conceptos/smart-factory/automatizaciones"
                 ]
@@ -408,6 +434,7 @@
                 "expanded": false,
                 "pages": [
                   "es/conceptos/panel-de-control/cuenta-y-empresa",
+                  "es/conceptos/panel-de-control/identidades-relacionadas",
                   "es/conceptos/panel-de-control/usuarios-roles-y-permisos",
                   "es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos",
                   "es/conceptos/panel-de-control/notificaciones",

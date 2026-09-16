@@ -10,7 +10,7 @@ Un **artículo** identifica un elemento físico concreto. Es la unidad que Bold 
 
 | Área | Uso del artículo |
 | --- | --- |
-| Catálogo | Nombre, código, unidad, imagen, producto y valores de propiedades. |
+| Catálogo | Nombre, código, unidad, imagen, familia y valores de propiedades. |
 | Almacén | stock por ubicación y lote opcional. |
 | Compras | Líneas de pedido, proveedor preferente y plazos. |
 | Ventas | Líneas de pedido y compromisos de entrega. |
@@ -24,31 +24,33 @@ El código debe ser estable. Cambiarlo cuando ya existe actividad complica búsq
 
 La unidad define cómo se expresan cantidades. Debe ser la unidad con la que el equipo compra, almacena, consume o fabrica ese artículo de forma consistente.
 
-## Artículos con producto
+## Artículos con familia
 
-Un artículo puede pertenecer a un producto. En ese caso representa una variante de la familia.
+Un artículo puede pertenecer a una familia. En ese caso representa una de sus variantes.
 
-| Producto | Artículo |
+| Familia | Artículo |
 | --- | --- |
 | Mesa Nórdica | Mesa Nórdica - 160 cm - Roble |
 | Mesa Nórdica | Mesa Nórdica - 200 cm - Nogal |
 | Envase 500 ml | Envase 500 ml - Transparente |
 
-Si el producto tiene propiedades, el artículo debe completar los valores. Dos artículos activos con el mismo producto y los mismos valores suelen indicar un duplicado o una propiedad que falta.
+Si la familia tiene propiedades requeridas, el artículo debe completar sus valores. Mientras falte alguno, la interfaz muestra **Falta información**. Cuando están todos informados, muestra **Todo en orden**.
+
+Dos artículos activos con la misma familia y los mismos valores suelen indicar un duplicado o una propiedad que falta.
 
 ## Consolidación de artículos
 
-Bold puede proponer consolidar artículos cuando tienen el mismo producto y los mismos valores de propiedades. Consolidar deja un artículo como referencia válida y retira el duplicado, moviendo sus relaciones operativas al artículo que permanece.
+Bold puede proponer consolidar artículos cuando tienen la misma familia y los mismos valores de propiedades. Consolidar deja un artículo como referencia válida y retira el duplicado, moviendo sus relaciones operativas al artículo que permanece.
 
 Úsalo solo cuando ambos registros representen exactamente el mismo elemento físico. Si dos artículos parecen duplicados pero no lo son, falta una propiedad para explicar la diferencia.
 
 Si consolidaste dos artículos que no eran iguales, crea un nuevo artículo con las propiedades correctas y reasigna manualmente pedidos, recetas o datos operativos según el caso.
 
-## Artículos sin producto
+## Artículos sin familia
 
-Un artículo puede existir sin producto cuando no necesita agruparse con variantes.
+Un artículo puede existir sin familia cuando no necesita agruparse con variantes. En ese caso, su información se considera completa porque no tiene propiedades requeridas por una familia.
 
-Usa esta opción para repuestos, consumibles o referencias únicas que no comparten receta ni propiedades comunes con otros artículos.
+Usa esta opción para repuestos, consumibles o referencias únicas que no comparten propiedades con otros artículos. Una receta puede vincularse directamente al artículo aunque no pertenezca a una familia.
 
 ## Datos que afectan a planificación
 
@@ -69,6 +71,7 @@ Consulta [Política de aprovisionamiento](/es/conceptos/planificacion/politica-d
 
 - [Crear un artículo](/es/ayuda/articulos/crear-un-articulo)
 - [Editar un artículo](/es/ayuda/articulos/editar-un-articulo)
+- [Familia vs artículo](/es/conceptos/catalogo/familia-vs-articulo)
 - [Planificación](/es/conceptos/planificacion)
 - [Política de aprovisionamiento](/es/conceptos/planificacion/politica-de-aprovisionamiento)
 - [Stock y movimientos](/es/conceptos/almacen/stock-y-movimientos)

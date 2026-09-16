@@ -1,38 +1,39 @@
 ---
-title: "Turnos"
-description: "Entiende los turnos de fabricación como ventanas de disponibilidad productiva para recursos y operaciones."
+title: "Horario de fabricación"
+description: "Entiende el horario semanal global que usa fabricación para planificar operaciones."
 icon: "calendar-clock"
 ---
 
-Los **turnos de fabricación** definen cuándo existe capacidad productiva para planificar operaciones.
+El **horario de fabricación** define las franjas semanales en las que la fábrica puede ejecutar operaciones.
 
-Un turno puede representar disponibilidad de planta, área, línea o recurso. No tiene por qué coincidir exactamente con los turnos de personal.
+Actualmente existe un único horario global para fabricación. No puedes definir un horario distinto por área, línea, estación o recurso.
 
 ## Turnos de fabricación frente a turnos de personal
 
 | Concepto | Uso |
 | --- | --- |
-| Turno de fabricación | Define capacidad productiva para operaciones y secuenciación. |
+| Horario de fabricación | Define las franjas productivas globales que usan planificación y secuenciación. |
 | Turno de personal | Define jornadas, ciclos y disponibilidad de empleados. |
 
-Pueden estar alineados, pero resuelven preguntas distintas. Fabricación necesita saber cuándo una estación puede trabajar. Personal necesita saber cuándo una persona está asignada.
+Pueden estar alineados, pero resuelven preguntas distintas. Fabricación necesita un calendario productivo global. Personal necesita saber cuándo se espera que trabaje cada empleado.
 
-## Qué condicionan
+## Cómo se define
 
-| Elemento | Efecto |
+| Dato | Uso |
 | --- | --- |
-| Días y horas | Limitan cuándo se puede planificar trabajo. |
-| Recurso o área | Define a qué capacidad afecta el turno. |
-| Cierres y excepciones | Evitan planificar en ventanas no disponibles. |
-| Capacidad finita | Hace que el turno limite la secuencia real. |
+| Día de la semana | Indica cuándo se repite la franja. |
+| Hora de inicio | Marca el comienzo del tiempo productivo. |
+| Hora de fin | Marca el final del tiempo productivo. Puede caer en el día siguiente. |
 
-Si una estación tiene capacidad infinita, el turno puede tener menos impacto en la propuesta. Si tiene capacidad finita, el turno marca ventanas reales de planificación.
+Puedes configurar varias franjas para un mismo día. El tiempo que queda fuera de ellas se considera no laborable para la planificación de fabricación.
+
+El horario no admite cierres ni excepciones por fecha. Usa los turnos y calendarios de Personal para planificar la disponibilidad de empleados, no para cambiar este horario global.
 
 ## Uso en secuenciación
 
-La secuenciación usa turnos para proponer operaciones dentro de horarios viables. Si los turnos no reflejan la realidad, una orden puede parecer viable en fecha aunque planta no tenga capacidad.
+La secuenciación usa el horario para proponer operaciones dentro de franjas productivas. Si no refleja la realidad de la fábrica, una orden puede parecer viable en fecha aunque la planta esté cerrada.
 
-Revisa turnos cuando veas operaciones fuera de horario, retrasos inesperados o capacidad disponible que no coincide con planta.
+Revisa el horario cuando veas operaciones fuera de jornada o capacidad disponible que no coincide con la fábrica.
 
 ## Relacionado
 

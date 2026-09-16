@@ -1,0 +1,59 @@
+---
+title: "Familia vs artículo"
+description: "Diferencia familias, artículos y variantes para modelar el catálogo sin duplicados."
+icon: "git-compare"
+---
+
+La diferencia entre **familia** y **artículo** decide cómo se organizan variantes, stock, recetas y análisis.
+
+Una **familia** agrupa variantes. Un **artículo** representa la referencia física concreta que compras, fabricas, almacenas, consumes o vendes.
+
+## Comparación rápida
+
+| Concepto | Qué representa | Ejemplo |
+| --- | --- | --- |
+| Familia | Agrupación comercial o técnica | Mesa Nórdica |
+| Propiedad | Atributo que diferencia variantes | Color, largo, acabado |
+| Artículo | Variante física concreta | Mesa Nórdica blanca 120 cm |
+| Lote | Conjunto trazable de unidades de un artículo | Lote fabricado el 2026-06-15 |
+
+## Decisión de modelado
+
+| Pregunta | Si la respuesta es sí |
+| --- | --- |
+| ¿Debe tener stock separado? | Crea artículos distintos. |
+| ¿Se compra, vende o fabrica por separado? | Crea artículos distintos. |
+| ¿Solo cambia una característica de una misma familia? | Usa una familia con propiedades. |
+| ¿La diferencia no afecta operación ni análisis? | No crees una variante nueva. |
+| ¿Necesitas una receta común con pequeñas diferencias? | Vincula la receta a la familia y usa propiedades y condiciones. |
+
+## Familia con varios artículos
+
+Usa una familia con varios artículos cuando las variantes comparten identidad, pero deben operar por separado.
+
+Ejemplo: **Mesa Nórdica** es la familia. **Mesa Nórdica - 160 cm - Roble** y **Mesa Nórdica - 200 cm - Nogal** son artículos porque tienen stock, pedidos, coste y fabricación separados.
+
+## Familia con un solo artículo
+
+Una familia puede tener un único artículo si quieres mantener la agrupación preparada para crecer o compartir propiedades desde el principio.
+
+No es obligatorio. Si no hay necesidad de agrupación, un artículo sin familia es suficiente. También puedes vincular una receta directamente a ese artículo.
+
+## Errores habituales
+
+| Error | Efecto |
+| --- | --- |
+| Crear una familia por variante | Pierdes agrupación y duplicas propiedades o recetas. |
+| Crear un solo artículo para variantes reales | Mezcla el stock, el coste y la trazabilidad. |
+| Usar texto libre para variantes | Genera valores inconsistentes y filtros poco fiables. |
+| Duplicar artículos con las mismas propiedades | Oculta duplicados y dificulta consolidación. |
+
+## Regla práctica
+
+Empieza por el modelo más simple que conserve stock, trazabilidad y fabricación correctos. Añade propiedades cuando una diferencia tenga impacto operativo.
+
+## Relacionado
+
+- [Familias](/es/conceptos/catalogo/familias)
+- [Artículos](/es/conceptos/catalogo/articulos)
+- [Propiedades](/es/conceptos/catalogo/propiedades)

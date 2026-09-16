@@ -1,0 +1,61 @@
+---
+title: "Periodos planificados y tareas"
+description: "Diferencia la disponibilidad prevista de un empleado y las tareas derivadas de su ejecución real."
+icon: "clipboard-clock"
+---
+
+Bold distingue entre disponibilidad planificada y trabajo ejecutado. Los **periodos planificados** indican cuándo se espera que trabaje un empleado. Las **tareas** recogen intervalos procedentes de la ejecución real.
+
+## Conceptos
+
+| Concepto | Qué representa |
+| --- | --- |
+| Periodo planificado | Tramo fechado en el que se espera que trabaje un empleado. |
+| Tarea | Intervalo de ejecución relacionado con producción, mantenimiento o almacén. |
+| Tiempo efectivo | Parte de una tarea imputada al empleado después de repartir posibles solapes. |
+
+Un periodo planificado no confirma asistencia ni actividad real. Describe disponibilidad prevista.
+
+## Cómo se calculan los periodos
+
+Bold convierte jornadas, calendarios y turnos en periodos fechados dentro de la zona horaria del empleado.
+
+Para cada fecha, resuelve la jornada en este orden:
+
+1. asignación manual del empleado para esa fecha;
+2. calendario local;
+3. patrón repetitivo del turno.
+
+Si ninguna regla aporta una jornada, no se crea un periodo para ese día.
+
+## De dónde salen las tareas
+
+Las tareas se generan a partir de registros de ejecución:
+
+- asignaciones y tiempos de operaciones de fabricación;
+- tiempos de partes de mantenimiento;
+- ejecuciones de órdenes de carga;
+- movimientos de almacén.
+
+Una tarea conserva empleado, tipo, elemento relacionado, inicio y fin. No representa una asignación futura ni sustituye la planificación del empleado.
+
+## Tareas simultáneas
+
+Si varias tareas se solapan, Bold reparte el porcentaje de dedicación entre ellas durante el intervalo compartido. Así evita contar el mismo tiempo completo varias veces al calcular el tiempo efectivo.
+
+## Cómo interpretar los datos
+
+| Pregunta | Fuente |
+| --- | --- |
+| ¿Cuándo estaba previsto que trabajara el empleado? | Periodos planificados. |
+| ¿Qué trabajo se registró y cuándo? | Tareas. |
+| ¿Cuánto tiempo efectivo se imputa? | Detalles calculados de las tareas. |
+
+No uses los periodos planificados para acreditar asistencia ni trabajo realizado. Para investigar una diferencia, revisa primero la jornada, el calendario y el turno; después compáralos con los registros de ejecución.
+
+## Relacionado
+
+- [Empleados](/es/conceptos/personal/empleados)
+- [Jornadas, calendarios y turnos](/es/conceptos/personal/jornadas-calendarios-y-turnos)
+- [Asignaciones y grupos de operaciones](/es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones)
+- [Partes de trabajo](/es/conceptos/mantenimiento/partes-de-trabajo)

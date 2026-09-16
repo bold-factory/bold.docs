@@ -12,9 +12,9 @@ No crea compras, fabricaciones ni movimientos de almacén. Lee demanda, suminist
 
 | Elemento | Papel en la asignación |
 | --- | --- |
-| Demanda | Cantidad que necesitas cubrir por venta, fabricación, previsión o consumo previsto. |
+| Demanda | Cantidad que necesitas cubrir por venta, fabricación o consumo previsto. |
 | Stock físico | Cantidad que ya existe en almacén para el artículo. |
-| Suministro | Cantidad que llegará por compra, fabricación o previsión. |
+| Suministro | Cantidad que llegará por compra o fabricación. |
 | Stock saliente | Cantidad comprometida por necesidades activas. |
 | Stock entrante | Cantidad esperada por documentos o necesidades de entrada. |
 
@@ -54,9 +54,12 @@ La fecha esperada indica cuándo debería estar cubierta la cantidad asignada.
 | Stock actual | Alta, porque ya existe. |
 | Pedido de compra confirmado | Alta si la línea tiene fecha de recepción fiable. |
 | Petición u orden de fabricación | Alta si tiene fecha objetivo y planificación suficiente. |
-| Previsión o recomendación | Más baja hasta convertirla en compra o fabricación real. |
 
 Si falta fecha esperada, la necesidad puede estar planificada en cantidad pero seguir siendo incierta para priorizar entregas.
+
+<Info>
+  Las previsiones no participan en la asignación. Una recomendación no cubre demanda hasta convertirse en un pedido de compra o una petición de fabricación que entre en planificación.
+</Info>
 
 ## Qué cambia la asignación
 

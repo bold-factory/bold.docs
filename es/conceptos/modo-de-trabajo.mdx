@@ -22,7 +22,7 @@ El usuario controla el acceso. El empleado identifica quién realiza el trabajo 
 | Área | Uso principal |
 | --- | --- |
 | Producción | Ver operaciones propias, iniciar, pausar, reanudar, registrar progreso, consumir materiales y completar controles. |
-| Almacén | Consultar stock, trabajar con inventarios, recepciones y bultos cuando el flujo lo requiere. |
+| Almacén | Ejecutar movimientos, inventarios, recepciones y órdenes de carga, y consultar stock o bultos. |
 | Mantenimiento | Ejecutar partes de trabajo y registrar tiempos, acciones o materiales. |
 
 El modo de trabajo no sustituye la configuración. Para crear recetas, ubicaciones, activos, turnos o permisos usa la aplicación normal.
@@ -43,23 +43,34 @@ Evita compartir empleados entre personas si necesitas saber quién hizo cada acc
 
 ## Qué trabajo ve cada empleado
 
-En producción, el modo de trabajo puede organizar las tareas según el empleado activo y su contexto operativo.
+En producción, **Mis operaciones** organiza las tareas del empleado activo. La empresa configura uno de estos dos orígenes: **Habilidades** o **Puestos de trabajo habituales**. No combina ambos criterios a la vez.
 
 | Criterio | Cómo afecta a la lista de trabajo |
 | --- | --- |
-| Habilidades | Muestra procesos o tipos de operación que el empleado puede ejecutar. |
-| Estaciones habituales | Prioriza operaciones de sus estaciones normales. |
-| Operaciones asignadas | Enseña trabajo preparado para esa persona. |
-| Grupos de operaciones | Permite continuar bloques de trabajo compartidos. |
-| Operaciones activas o recientes | Facilita reanudar trabajo iniciado o pausado. |
+| Habilidades | Muestra las operaciones cuyo proceso coincide con una habilidad del empleado. |
+| Puestos de trabajo habituales | Muestra las operaciones planificadas en los puestos habituales del empleado. |
 
-Las [habilidades y estaciones habituales](/es/conceptos/personal/habilidades-y-estaciones-habituales) no sustituyen una asignación real. Ayudan a reducir ruido y a presentar primero el trabajo más probable.
+Las pestañas **Por estación**, **Por área**, **Por proceso** y **Buscar** son vías alternativas para localizar trabajo fuera de **Mis operaciones**. Las [habilidades y estaciones habituales](/es/conceptos/personal/habilidades-y-estaciones-habituales) ayudan a filtrar la lista, pero no sustituyen una asignación real.
 
 ## Trabajo de producción
 
 Desde producción, el operario puede iniciar, pausar, reanudar o completar operaciones y grupos. También puede registrar progreso, consumos, producción, controles e interrupciones según la configuración de la orden.
 
 Si el trabajo se detiene, registra un [motivo de pausa](/es/conceptos/fabricacion/motivos-de-pausa-e-interrupciones). La pausa conserva duración, contexto y empleado para que los cuadros de mando no mezclen ejecución con tiempo detenido.
+
+## Trabajo de almacén
+
+El área de almacén separa cinco entradas operativas:
+
+| Entrada | Uso |
+| --- | --- |
+| **Movimientos** | Recoger y entregar material entre ubicaciones con un equipo de almacén. |
+| **Inventarios** | Contar existencias por ubicación y registrar lecturas. |
+| **Recepciones** | Revisar y completar entradas de proveedor o cliente. |
+| **Órdenes de carga** | Preparar, validar y completar cargas planificadas. |
+| **Stock** | Consultar artículos, lotes, ubicaciones y bultos. |
+
+Un [movimiento de almacén](/es/conceptos/almacen/movimientos-de-almacen) dirige el traslado físico. Una [orden de carga](/es/conceptos/almacen/ordenes-de-carga) coordina la mercancía que debe prepararse y expedirse.
 
 ## Escaneo y selección rápida
 
@@ -76,7 +87,6 @@ Usa etiquetas y códigos cuando el flujo dependa de identificar objetos físicos
 | Habilidades y estaciones habituales | Ayudan a mostrar tareas relevantes para el empleado activo. |
 | Inspecciones y controles | Pueden bloquear inicio, progreso o cierre hasta registrar el resultado. |
 | Motivos de pausa | Explican interrupciones durante operaciones o grupos. |
-| Periodos de trabajo | Registran tiempo real de empleados y presencia operativa. |
 | Partes de trabajo | Se ejecutan desde mantenimiento y alimentan historial y costes. |
 
 ## Relacionado
@@ -86,4 +96,5 @@ Usa etiquetas y códigos cuando el flujo dependa de identificar objetos físicos
 - [Asignaciones y grupos de operaciones](/es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones)
 - [Inspecciones y controles](/es/conceptos/fabricacion/inspecciones-y-controles)
 - [Motivos de pausa e interrupciones](/es/conceptos/fabricacion/motivos-de-pausa-e-interrupciones)
-- [Periodos, tareas y presencia](/es/conceptos/personal/periodos-tareas-y-presencia)
+- [Movimientos de almacén](/es/conceptos/almacen/movimientos-de-almacen)
+- [Órdenes de carga](/es/conceptos/almacen/ordenes-de-carga)

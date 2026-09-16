@@ -6,7 +6,7 @@ icon: "construction"
 
 Una **orden de fabricación** es trabajo real que puede planificarse, ejecutarse, pausarse, completarse o cancelarse.
 
-La orden nace desde una petición o necesidad. Copia la estructura de una versión de receta para convertirla en ejecución trazable.
+La orden nace desde una petición de fabricación. Puede copiar la estructura de una receta o crearse sin receta.
 
 ## Petición frente a orden
 
@@ -19,7 +19,16 @@ La orden nace desde una petición o necesidad. Copia la estructura de una versi�
 
 La petición responde a "qué hace falta". La orden responde a "cómo y cuándo se ejecuta". Consulta [Peticiones de fabricación](/es/conceptos/fabricacion/peticiones-de-fabricacion) para ver estados, origen y reglas de asignación.
 
-## Qué copia una orden
+## Con receta o sin receta
+
+| Forma de lanzamiento | Resultado |
+| --- | --- |
+| Con receta | La orden copia las operaciones, entradas, coproductos, pasos, controles, restricciones y condiciones aplicables de la versión activa. |
+| Sin receta | La orden se crea sin operaciones. Debes añadir y configurar manualmente la estructura que vas a ejecutar. |
+
+Lanzar sin receta es útil para trabajo excepcional o todavía no estandarizado. La OF no queda preparada para ejecución hasta que añadas operaciones y completes su planificación.
+
+## Qué copia una orden con receta
 
 | Desde la receta | En la orden |
 | --- | --- |
@@ -27,7 +36,7 @@ La petición responde a "qué hace falta". La orden responde a "cómo y cuándo 
 | Entradas | Materiales previstos. |
 | Coproductos | Salidas adicionales esperadas. |
 | Pasos | Instrucciones de trabajo. |
-| Controles | Inspecciones obligatorias o informativas. |
+| Controles | Inspecciones obligatorias en el momento configurado. |
 | Restricciones | Precedencia entre operaciones. |
 | Condiciones | Elementos aplicables a la variante fabricada. |
 

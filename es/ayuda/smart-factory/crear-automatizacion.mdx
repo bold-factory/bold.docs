@@ -3,7 +3,7 @@ title: "Automatizar tareas"
 description: "Programa una tarea recurrente o por evento y controla sus resultados."
 ---
 
-Automatiza una revisión o tarea repetitiva para que Bold la ejecute según un horario o cuando ocurra un evento. Cada automatización usa un **agente** con instrucciones y permisos concretos.
+Automatiza una revisión o tarea repetitiva para que Bold la ejecute según un horario o cuando ocurra un evento. Cada automatización conserva sus propias instrucciones, permisos y opciones de ejecución.
 
 ## Antes de automatizar
 
@@ -37,9 +37,9 @@ Comprueba que la tarea:
     - **Alta:** para tareas complejas que exijan más razonamiento.
   </Step>
   <Step title="Configura la ejecución">
-    - En **Modo de trabajo**, usa **Solo lectura** para consultar datos sin modificarlos. Selecciona **Permite cambios** solo si el agente debe actuar en el sistema.
-    - En **Preguntas de aclaración**, elige **Permitir** para que el agente pause la tarea cuando necesite información. Con **No permitir**, trabajará con los datos disponibles.
-    - Activa **Memoria** si el agente necesita conservar contexto entre ejecuciones, por ejemplo para comparar periodos.
+    - En **Modo de trabajo**, usa **Solo lectura** para consultar datos sin modificarlos. Selecciona **Permite cambios** solo si la automatización debe actuar en el sistema.
+    - En **Preguntas de aclaración**, elige **Permitir** para que la automatización pause la tarea cuando necesite información. Con **No permitir**, trabajará con los datos disponibles.
+    - Activa **Memoria** si la automatización necesita conservar contexto entre ejecuciones, por ejemplo para comparar periodos.
   </Step>
   <Step title="Define los disparadores">
     Elige cuándo debe ejecutarse:
@@ -77,6 +77,6 @@ Comprueba que la tarea:
 ## Relacionado
 
 - [Automatizaciones](/es/conceptos/smart-factory/automatizaciones)
-- [Tareas con agentes](/es/conceptos/smart-factory/tareas)
+- [Tareas](/es/conceptos/smart-factory/tareas)
 - [Consultar datos y ejecutar tareas con IA](/es/ayuda/smart-factory/consultar-o-delegar-con-ia)
 - [Auditoría y eventos](/es/conceptos/panel-de-control/auditoria-y-eventos)

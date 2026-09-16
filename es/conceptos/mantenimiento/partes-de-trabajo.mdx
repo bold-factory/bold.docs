@@ -12,7 +12,7 @@ Explica qué ocurrió, por qué ocurrió, quién intervino, cuánto tiempo se de
 
 | Dato | Uso |
 | --- | --- |
-| Activo | Equipo o instalación intervenida. |
+| Activo | Equipo o espacio físico intervenido. |
 | Tipo | Correctivo, preventivo u otro criterio operativo. |
 | Causa | Motivo principal y posibles causas auxiliares. |
 | Acciones | Tareas o comprobaciones realizadas. |
@@ -27,7 +27,7 @@ Explica qué ocurrió, por qué ocurrió, quién intervino, cuánto tiempo se de
 | Pendiente | El parte existe, pero no tiene tiempo activo. |
 | En progreso | Hay un registro de tiempo activo. |
 | Pausado | Hubo trabajo, pero no hay tiempo activo. |
-| Completado | La intervención queda cerrada y protegida. |
+| Completado | La intervención termina y queda protegida mientras mantenga este estado. |
 | Cancelado | El parte queda cerrado sin ejecución válida. |
 
 ## Materiales y trazabilidad
@@ -39,6 +39,14 @@ El coste del parte depende de materiales, lotes, cantidades, tiempo y coste hora
 ## Partes preventivos
 
 Una programación preventiva puede generar partes automáticamente. El parte generado sigue siendo la ejecución real; la programación solo define cuándo debe aparecer.
+
+## Deshacer una finalización
+
+Puedes usar **Deshacer finalización** sobre un parte completado. El parte vuelve a estar abierto y permite añadir tiempos, materiales y acciones.
+
+Si el parte ya tenía tiempos terminados, vuelve a **Pausado**. Si no tenía tiempos, vuelve a **Pendiente**. Un parte cancelado no se puede reabrir de esta forma.
+
+Las acciones son opcionales: puedes completar el parte aunque alguna quede pendiente. Si completas una acción, debes registrar un resultado válido para su tipo.
 
 ## Relacionado
 

@@ -1,6 +1,6 @@
 ---
 title: "Secuenciación"
-description: "Entiende cómo la secuenciación ordena operaciones según recursos, turnos, restricciones, fechas y materiales."
+description: "Entiende cómo la secuenciación ordena operaciones según recursos, horario, restricciones, fechas y materiales."
 icon: "list-ordered"
 ---
 
@@ -15,7 +15,7 @@ Puedes secuenciar una orden directamente o resolver un plan de producción para 
 | Operaciones abiertas | Son el trabajo pendiente que se puede colocar en calendario. |
 | Procesos | Permiten buscar estaciones compatibles. |
 | Recursos | Definen capacidad, ubicación y restricciones físicas. |
-| Turnos | Marcan ventanas disponibles de trabajo. |
+| Horario de fabricación | Marca las franjas globales disponibles de trabajo. |
 | Restricciones | Mantienen precedencias entre operaciones. |
 | Fechas objetivo | Ordenan urgencia y retrasos. |
 | Materiales | Pueden bloquear o retrasar operaciones si falta stock. |
@@ -27,7 +27,7 @@ Una secuencia propone fechas, orden y recursos para las operaciones. Puede indic
 | Síntoma | Qué revisar |
 | --- | --- |
 | Operación sin recurso | Proceso, estación compatible y herramientas requeridas. |
-| Operación fuera de fecha | Fecha objetivo, duración, turnos y capacidad. |
+| Operación fuera de fecha | Fecha objetivo, duración, horario y capacidad. |
 | Secuencia imposible | Restricciones duplicadas, ciclos o precedencias incompatibles. |
 | Falta material | stock proyectado, consumos y fecha de disponibilidad. |
 

@@ -1,65 +1,60 @@
 ---
 title: "Automatizaciones"
-description: "Entiende automatizaciones periódicas y por evento para ejecutar agentes sin crear tareas manualmente."
+description: "Entiende la configuración reutilizable y los disparadores que crean tareas de Boldy."
 icon: "calendar-clock"
 ---
 
-Una **automatización** ejecuta un agente sin que tengas que crear la tarea manualmente. Cada ejecución crea una tarea con agente, historial, estado, resultado y consumo de créditos propios.
+Una **automatización** conserva la configuración de un trabajo reutilizable. Puedes ejecutarla manualmente o añadir disparadores para que Bold cree tareas sin intervención manual.
 
-Úsalas para trabajos repetibles, revisiones programadas, alertas operativas o comprobaciones que deben quedar auditadas.
+Cada ejecución crea una [tarea](/es/conceptos/smart-factory/tareas) con estado, historial, resultado y consumo de créditos propios.
 
-## Tipos
+## Qué configura una automatización
 
-| Tipo | Cuándo se ejecuta |
+| Opción | Uso |
 | --- | --- |
-| Periódica | En una frecuencia diaria, semanal, mensual, trimestral, semestral o anual. |
-| Por evento | Cuando Bold publica un evento compatible y se cumple la condición configurada. |
+| Nombre e instrucciones | Identifican el trabajo y describen el resultado esperado. |
+| Nivel de inteligencia | Ajusta la capacidad de razonamiento y el consumo esperado. |
+| Modo | Define **Solo lectura** o **Permitir cambios**. |
+| Preguntas de aclaración | Permiten que la tarea solicite información cuando le falta contexto. |
+| Memoria | Conserva contexto reutilizable entre ejecuciones cuando está habilitada. |
+| Permisos delegados | Limitan los datos y acciones que Boldy puede usar. |
+| Responsable | Identifica al usuario propietario de la automatización y de sus ejecuciones. |
 
-Las automatizaciones periódicas dependen de frecuencia, zona horaria, próxima ejecución y responsable. Las automatizaciones por evento dependen de evento, versión y condición.
+El responsable solo puede delegar permisos que tiene concedidos. Usa **Solo lectura** cuando el trabajo deba limitarse a consultar o analizar información.
 
-## Qué conserva cada ejecución
+## Disparadores
 
-| Dato | Uso |
-| --- | --- |
-| Agente | Define instrucciones, herramientas y permisos disponibles. |
-| Responsable | Persona vinculada a la automatización. |
-| Origen | Indica si la tarea nació por calendario o por evento. |
-| Mensajes | Conservan la conversación y aclaraciones. |
-| Herramientas usadas | Permiten revisar qué acciones consultó o ejecutó el agente. |
-| Resultado | Respuesta final o estado de fallo. |
-| Créditos | Consumo asociado a la ejecución. |
+Una automatización puede tener **varios disparadores**. Cada uno se habilita, deshabilita y revisa por separado.
 
-Consulta [Tareas con agentes](/es/conceptos/smart-factory/tareas) para entender estados, caducidad, archivos y revisión de resultados.
+| Tipo | Cuándo crea una tarea | Configuración principal |
+| --- | --- | --- |
+| Programado | Según una frecuencia y hora. | Frecuencia, intervalo, zona horaria y próxima ejecución. |
+| Por evento | Cuando ocurre un evento compatible. | Evento, versión y condición opcional. |
 
-## Agentes válidos
+Puedes combinar varios disparadores programados y por evento en la misma automatización. También puedes ejecutarla manualmente aunque no tenga disparadores activos.
 
-Usa agentes personalizados para automatizaciones. Los agentes de sistema están pensados para uso directo y no deben programarse ni suscribirse a eventos.
+Cada disparador conserva su última ejecución, próxima ejecución cuando corresponde y número de ejecuciones. Una condición en un disparador de evento evita crear tareas cuando el cambio no cumple el criterio configurado.
 
-Concede al agente sólo los permisos necesarios. Una automatización puede ejecutarse sin supervisión inmediata, así que los permisos amplios aumentan el impacto de instrucciones mal definidas.
+## Preguntas y memoria
 
-## Condiciones por evento
+Si permites preguntas de aclaración, una ejecución puede quedar en **Requiere acción** hasta que el responsable responda. Valora este comportamiento en trabajos que deban continuar sin supervisión inmediata.
 
-Las automatizaciones por evento pueden filtrar cuándo se dispara la tarea. La condición evita ejecuciones irrelevantes y reduce ruido.
+Si habilitas memoria, la automatización puede reutilizar contexto entre ejecuciones. Puedes revisar y editar esa memoria. Deshabilitarla elimina el contenido guardado para la automatización.
 
-Ejemplos de uso:
+## Visibilidad de las ejecuciones
 
-- avisar si una orden cambia a un estado crítico;
-- revisar pedidos creados por una integración;
-- generar una tarea cuando una previsión supera un umbral;
-- analizar incidencias de calidad después de una recepción.
+Las tareas creadas por una automatización son compartidas. Los usuarios con acceso a tareas pueden consultarlas. La propiedad y los permisos de administración determinan quién puede continuar o gestionar una ejecución.
 
 ## Buenas prácticas
 
-- Prueba la automatización con casos controlados antes de depender de ella.
-- Revisa las primeras ejecuciones y ajusta instrucciones.
-- Usa nombres claros para saber qué dispara cada tarea.
-- Desactiva automatizaciones que generen ruido.
-- Documenta permisos y propósito cuando afecten a datos críticos.
+- empieza con **Solo lectura** y amplía el modo solo si el trabajo necesita cambios;
+- delega únicamente los permisos necesarios;
+- prueba la automatización manualmente antes de activar sus disparadores;
+- revisa las primeras ejecuciones y ajusta las instrucciones;
+- deshabilita los disparadores que generen tareas innecesarias.
 
 ## Relacionado
 
-- [Agentes](/es/conceptos/smart-factory/agentes)
-- [Boldy](/es/conceptos/smart-factory/boldy)
-- [Tareas con agentes](/es/conceptos/smart-factory/tareas)
-- [Claves de integración y avisos externos](/es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos)
+- [Tareas](/es/conceptos/smart-factory/tareas)
 - [Auditoría y eventos](/es/conceptos/panel-de-control/auditoria-y-eventos)
+- [Crear una automatización](/es/ayuda/smart-factory/crear-automatizacion)

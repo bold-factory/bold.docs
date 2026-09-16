@@ -3,7 +3,7 @@ title: "Adaptar la fabricación según variantes"
 description: "Adapta operaciones, materiales, instrucciones y controles a cada variante fabricada."
 ---
 
-Diseña una única ruta de fabricación para varias variantes de un mismo producto. En Bold, las **condiciones** muestran u ocultan operaciones, materiales, instrucciones o controles según las propiedades del artículo fabricado. Consulta [Recetas y versiones](/es/conceptos/fabricacion/recetas-y-versiones) para entender cómo se aplican las condiciones dentro de una receta.
+Diseña una única ruta de fabricación para varios artículos de una misma familia. En Bold, las **condiciones** muestran u ocultan operaciones, materiales, instrucciones o controles según las propiedades del artículo fabricado. Consulta [Recetas y versiones](/es/conceptos/fabricacion/recetas-y-versiones) para entender cómo se aplican las condiciones dentro de una receta.
 
 Puedes aplicar condiciones en cuatro partes de la receta:
 
@@ -12,12 +12,12 @@ Puedes aplicar condiciones en cuatro partes de la receta:
 Úsalas cuando una fase completa solo corresponda a determinadas variantes del artículo.
 
 <Note>
-  **Ejemplo:** la operación de _Pintura_ solo debe activarse si la propiedad _Acabado_ del producto requiere pintura. Si el cliente pide un cuadro de bicicleta con acabado en aluminio pulido, el sistema omite esta etapa.
+  **Ejemplo:** la operación de _Pintura_ solo debe activarse si la propiedad _Acabado_ de la familia requiere pintura. Si el cliente pide un cuadro de bicicleta con acabado en aluminio pulido, el sistema omite esta etapa.
 </Note>
 
 ## Condicionar entradas
 
-Úsalas cuando un material solo se consuma en algunas variantes del producto.
+Úsalas cuando un material solo se consuma en algunos artículos de la familia.
 
 <Note>
   **Ejemplo:** configuras dos entradas de material en la misma operación: una para _Pintura roja_ y otra para _Pintura azul_. Al condicionar cada entrada a la propiedad _Color_, la OF solo cargará, mostrará y descontará del inventario el color que requiere esa bicicleta.

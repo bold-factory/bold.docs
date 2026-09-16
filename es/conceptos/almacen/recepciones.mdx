@@ -1,53 +1,56 @@
 ---
 title: "Recepciones"
-description: "Entiende cómo las recepciones registran entradas físicas de stock."
+description: "Entiende cómo las recepciones documentan entradas de material desde proveedores o clientes."
 icon: "package-plus"
 ---
 
-Una **recepción** registra la entrada física de material en almacén. Aumenta stock cuando el material entra realmente en la empresa o queda disponible para operar.
+Una **recepción** documenta una entrada física de material desde un **proveedor** o un **cliente**. Al completarla, aumenta el stock de sus líneas en la ubicación indicada.
 
-## Orígenes
+## Tipos de recepción
 
-| Origen | Uso |
+| Tipo | Uso |
 | --- | --- |
-| Pedido de compra | Recibir material solicitado a proveedor. |
-| Recepción manual | Registrar entrada sin documento previo. |
-| Producción | Entrada de artículo fabricado o coproducto. |
-| Regularización | Entrada asociada a ajuste o inventario. |
+| Proveedor | Recibir material suministrado por un proveedor, normalmente relacionado con una compra. |
+| Cliente | Registrar material que entra desde un cliente. |
 
-## Datos obligatorios
+Puedes crear la recepción desde un documento relacionado o introducirla manualmente, pero siempre conserva uno de estos dos tipos.
 
-Una recepción debe indicar artículo, cantidad, ubicación y lote cuando el artículo lo requiere. También debe tener completados los controles obligatorios antes de recibirse.
+<Info>
+  La producción terminada, los coproductos, los inventarios y los ajustes también pueden aumentar stock. Esos cambios pertenecen a sus respectivos procesos y no son recepciones.
+</Info>
+
+## Datos y controles
+
+Una recepción debe indicar artículo, cantidad, ubicación y lote cuando el artículo lo requiere.
 
 | Dato | Por qué importa |
 | --- | --- |
-| Artículo | Define qué unidad operativa entra en stock. |
-| Cantidad | Aumenta el saldo físico. Debe ser positiva. |
-| Ubicación | Indica dónde queda disponible el material. |
-| Lote | Conserva trazabilidad cuando el artículo lo exige. |
-| Controles | Validan recepción, calidad o documentación antes de afectar stock. |
+| Origen | Identifica al proveedor o cliente del que procede el material. |
+| Artículo y cantidad | Definen qué entra y en qué cantidad. |
+| Ubicación | Indica dónde se registra la entrada. |
+| Lote | Conserva la trazabilidad cuando corresponde. |
+| Controles | Registran las comprobaciones configuradas antes de completar la recepción. |
+
+Los controles obligatorios deben estar completados antes de recibir. Los controles configurados como opcionales no bloquean la recepción.
 
 ## Estados y reglas
 
 | Estado | Significado |
 | --- | --- |
-| **Pendiente** | Puede editarse antes de registrar la entrada. |
-| **Recibida** | Ya aumentó stock y queda protegida. |
+| **Pendiente** | Puedes editar el documento antes de registrar la entrada. |
+| **Recibida** | La entrada ya aumentó stock y el documento queda protegido. |
 
-Para recibir, la recepción debe estar pendiente, tener ubicación, contener al menos una línea y tener los controles obligatorios completados. Después de recibida, las líneas y la ubicación quedan protegidas para conservar trazabilidad.
+Para recibir, el documento debe estar pendiente, tener ubicación y contener al menos una línea. Después de recibir, no puedes editar sus líneas ni cambiar su ubicación.
 
-Si necesitas corregir una recepción ya recibida, usa una reversión, ajuste o movimiento correctivo cuando el flujo lo permita. No edites el documento como si la entrada no hubiera ocurrido.
+Si necesitas corregir una recepción completada, usa la reversión cuando esté disponible. La reversión conserva la trazabilidad de la entrada original.
 
-## Relación con planificación
+## Relación con compras
 
-Cuando una recepción viene de compras, reduce el suministro pendiente de la línea recibida. La línea de compra no puede recibirse mientras esté en borrador y no puede reducirse por debajo de la cantidad ya recibida.
-
-El pedido de compra explica el compromiso con proveedor. La recepción explica la realidad física.
+Una recepción de proveedor confirma la parte de una compra que ha entrado físicamente. El pedido de compra explica el compromiso con el proveedor; la recepción explica la entrada real.
 
 ## Relacionado
 
-- [Stock y movimientos](/es/conceptos/almacen/stock-y-movimientos)
-- [Lotes](/es/conceptos/almacen/lotes)
 - [Recibir pedido de compra](/es/ayuda/compras/recibir-pedido-de-compra)
-- [Escanear albaranes con IA](/es/ayuda/almacen/recibir-con-albaran)
+- [Recibir con albarán](/es/ayuda/almacen/recibir-con-albaran)
 - [Configurar y completar controles de recepción](/es/ayuda/almacen/configurar-y-completar-controles-de-recepcion)
+- [Stock y movimientos](/es/conceptos/almacen/stock-y-movimientos)
