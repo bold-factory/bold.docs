@@ -11,7 +11,7 @@ Un **artículo** identifica un elemento físico concreto. Es la unidad que Bold 
 | Área | Uso del artículo |
 | --- | --- |
 | Catálogo | Nombre, código, unidad, imagen, familia y valores de propiedades. |
-| Almacén | stock por ubicación y lote opcional. |
+| Almacén | Stock por ubicación y lote opcional. |
 | Compras | Líneas de pedido, proveedor preferente y plazos. |
 | Ventas | Líneas de pedido y compromisos de entrega. |
 | Fabricación | Artículo fabricado, entradas consumidas y coproductos. |
@@ -40,7 +40,15 @@ Dos artículos activos con la misma familia y los mismos valores suelen indicar 
 
 ## Consolidación de artículos
 
-Bold puede proponer consolidar artículos cuando tienen la misma familia y los mismos valores de propiedades. Consolidar deja un artículo como referencia válida y retira el duplicado, moviendo sus relaciones operativas al artículo que permanece.
+Bold puede proponer consolidar artículos cuando tienen la misma familia y los mismos valores de propiedades. Consolidar deja un artículo como referencia válida y retira el duplicado, pero no traslada todas sus relaciones de la misma forma.
+
+- Las peticiones de fabricación sin cantidad asignada se trasladan al artículo que permanece.
+- Las órdenes de fabricación activas del artículo retirado se cancelan.
+- Las referencias al artículo en versiones editables de recetas se eliminan.
+
+<Warning>
+  Antes de consolidar, revisa pedidos, peticiones, órdenes y recetas relacionadas. La consolidación no equivale a una reasignación universal de todos los datos operativos.
+</Warning>
 
 Úsalo solo cuando ambos registros representen exactamente el mismo elemento físico. Si dos artículos parecen duplicados pero no lo son, falta una propiedad para explicar la diferencia.
 

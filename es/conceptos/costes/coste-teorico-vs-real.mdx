@@ -61,7 +61,7 @@ Los costes pueden actualizarse de forma automática o manual según el tipo de a
 
 | Caso | Actualización habitual |
 | --- | --- |
-| Artículo de compra | Puede actualizarse con precios de compra o recepciones. |
+| Artículo de compra | Se actualiza al registrar una línea de pedido de compra o cambiar su precio unitario. La recepción usa ese coste para valorar el lote, pero no recalcula el coste previsto del artículo. |
 | Artículo de fabricación | Puede actualizarse con estructura de receta, materiales y mano de obra. |
 | Ajuste manual | Permite corregir o fijar un coste cuando el dato externo no está disponible. |
 
@@ -71,7 +71,9 @@ Los costes pueden actualizarse de forma automática o manual según el tipo de a
 
 ## Fabricación
 
-En fabricación, el coste real depende de materiales consumidos, coproductos, lotes, cantidades rechazadas, tiempos y mano de obra.
+En fabricación, el coste real suma materiales consumidos, mano de obra registrada y coste de máquina. El coste de los materiales procede de los lotes consumidos.
+
+Los coproductos se registran sin repartirles un componente del coste de producción. Las cantidades rechazadas tampoco modifican el total usado por este cálculo; el coste real por unidad divide el coste total entre la cantidad completada.
 
 Una orden con consumos sin lote, tiempos incompletos o costes horarios vacíos puede mostrar un coste real incompleto.
 
@@ -84,7 +86,7 @@ Una orden con consumos sin lote, tiempos incompletos o costes horarios vacíos p
 
 ## Mantenimiento
 
-En mantenimiento, el coste real combina materiales, tiempo de empleados y acciones realizadas.
+En mantenimiento, el coste real combina materiales y tiempo de empleados.
 
 El histórico permite comparar activos, causas, acciones e intervenciones recurrentes.
 

@@ -16,11 +16,10 @@ Una operación queda preparada cuando tiene los datos mínimos para ejecutarse e
 | --- | --- |
 | Estación de trabajo | Lugar donde se ejecuta la operación. |
 | Fecha objetivo | Referencia para planificar y priorizar. |
-| Herramientas requeridas | Recursos auxiliares necesarios cuando el proceso los exige. |
-| Empleado asignado | Persona responsable o participante cuando aplica. |
+| Herramientas requeridas | Recursos auxiliares necesarios cuando la operación exige una característica. |
 | Estado de stock | Indica si los materiales previstos están disponibles. |
 
-La asignación puede venir de una acción manual, de la secuenciación o de un plan de producción aplicado.
+La estación, fecha y herramienta pueden venir de una acción manual, de la secuenciación o de un plan de producción aplicado. El plan no asigna empleados: la asignación operativa del empleado se registra al iniciar el trabajo o al asignarlo a un grupo.
 
 ## Grupos de operaciones
 
@@ -34,6 +33,8 @@ Un grupo de operaciones permite trabajar varias operaciones juntas. Es útil cua
 | La planta trabaja por células o colas de trabajo. | Refleja mejor cómo se ejecuta el trabajo real. |
 
 Un grupo no elimina las operaciones individuales. Cada operación conserva su trazabilidad, progreso, consumos y controles.
+
+Para crear un grupo necesitas al menos dos operaciones. Todas deben estar **Planificadas** o **Pausadas**, tener cantidad pendiente, pertenecer a la misma estación y no formar parte de otro grupo.
 
 ## Estados habituales
 
@@ -58,8 +59,8 @@ Si el trabajo se detiene, registra un [motivo de pausa](/es/conceptos/fabricacio
 
 ## Reglas de diseño
 
-- Asigna estación antes de ejecutar si la operación necesita capacidad finita.
-- Selecciona herramientas cuando el proceso exige características concretas.
+- Asigna una estación antes de ejecutar la operación.
+- Selecciona herramientas cuando la operación exige características concretas.
 - Agrupa sólo operaciones que el equipo ejecuta realmente juntas.
 - Revisa controles y stock antes de iniciar trabajo crítico.
 - No uses grupos para ocultar operaciones que deberían medirse por separado.

@@ -22,7 +22,7 @@ flowchart LR
 | Concepto | Qué representa | Efecto sobre la ejecución real |
 | --- | --- | --- |
 | Secuenciación | Cálculo que ordena operaciones. | Ninguno por sí solo. |
-| Plan de producción | Escenario que contiene un alcance y su contexto. | Ninguno mientras la propuesta permanezca en el plan. |
+| Plan de producción | Escenario que copia el trabajo abierto y su contexto. | Ninguno mientras la propuesta permanezca en el plan. |
 | Propuesta | Resultado calculado dentro del plan. | Ninguno hasta que se aplica. |
 | Aplicación | Traslado de la propuesta a operaciones abiertas. | Actualiza la planificación de esas operaciones. |
 
@@ -31,21 +31,29 @@ flowchart LR
 | Uso | Resultado |
 | --- | --- |
 | Evaluar capacidad | Ver si el trabajo cabe en recursos y franjas del horario disponibles. |
-| Comparar alternativas | Probar fechas, prioridades o alcances antes de decidir. |
+| Comparar alternativas | Probar fechas y selecciones de recursos antes de decidir. |
 | Detectar bloqueos | Encontrar operaciones sin recurso, material o secuencia viable. |
 | Aplicar una propuesta | Actualizar operaciones reales cuando el plan es ejecutable. |
 
-## Partes del escenario
+## Creación y actualización
 
-| Parte | Qué representa |
+Al crear un plan, Bold carga todas las operaciones y órdenes activas, las estaciones, las herramientas y el horario de fabricación. El horizonte comienza en el momento actual o en el inicio planificado más antiguo si es anterior, y abarca un año. No eliges un subconjunto de órdenes, fechas o recursos durante la creación.
+
+| Opción | Efecto |
 | --- | --- |
-| Alcance | Fechas, órdenes y recursos incluidos. |
-| Copia de contexto | Situación de operaciones, recursos, horario y materiales que conoce el plan. |
-| Resolución | Cálculo de una propuesta de secuencia. |
-| Resultado | Fechas, recursos, retrasos, bloqueos o datos faltantes detectados. |
-| Aplicación | Relación que traslada la propuesta a operaciones reales abiertas. |
+| Restringir según materias primas | Incluye la disponibilidad de materiales como restricción del cálculo. |
+| Considerar empleados como factor limitante | Añade empleados como recursos del solver. No los asigna a las operaciones reales. |
+| Solo crear | Crea y actualiza el escenario sin resolverlo. |
+| Crear y resolver | Crea el escenario e inicia el cálculo. |
+| Crear, resolver y aplicar | Crea, resuelve y aplica automáticamente la solución encontrada. |
 
-Los cambios posteriores en órdenes, recursos, horario o materiales no forman parte de una propuesta ya calculada. El plan y la ejecución real pueden representar momentos distintos.
+Actualizar el plan vuelve a copiar la realidad operativa actual. Los cambios posteriores en órdenes, recursos, horario o materiales no aparecen hasta que lo actualizas de nuevo.
+
+## Resolver y aplicar
+
+Resolver calcula una propuesta. También puedes pedir que se aplique automáticamente si el cálculo encuentra una solución.
+
+Al aplicar, Bold actualiza la fecha objetivo de las operaciones abiertas incluidas. En operaciones **Pendientes** o **Planificadas**, también actualiza la estación y la herramienta seleccionadas. No crea asignaciones de empleado ni modifica operaciones finalizadas o canceladas.
 
 ## Estados del cálculo
 
@@ -65,7 +73,7 @@ Consulta [Estados de fabricación](/es/conceptos/fabricacion/estados-de-fabricac
 
 ## Qué no modifica
 
-Un plan no debe cambiar operaciones finalizadas ni canceladas. Tampoco sustituye los registros reales de ejecución. Su alcance es el trabajo abierto y la propuesta calculada para ese trabajo.
+Un plan no cambia operaciones finalizadas ni canceladas y tampoco sustituye los registros reales de ejecución. Trabaja sobre la copia del trabajo abierto disponible cuando se creó o actualizó.
 
 ## Relación con planificación
 

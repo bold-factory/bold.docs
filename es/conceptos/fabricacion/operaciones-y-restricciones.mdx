@@ -24,7 +24,7 @@ Una operación pasa a **Planificada** cuando tiene:
 
 - una estación de trabajo;
 - una fecha objetivo;
-- una herramienta seleccionada, si el proceso exige una característica de herramienta.
+- una herramienta seleccionada, si la operación exige una característica de herramienta.
 
 La disponibilidad de materiales se muestra por separado. No forma parte de estos requisitos mínimos de planificación.
 
@@ -34,7 +34,7 @@ Las restricciones definen el orden entre operaciones. Evitan secuencias imposibl
 
 | Tipo | Efecto operativo |
 | --- | --- |
-| Total | La operación siguiente espera a que termine la anterior. |
+| Completa | La operación siguiente espera a que termine la anterior. |
 | Parcial | La operación siguiente puede empezar con progreso suficiente. |
 | No bloqueante | Conserva una precedencia recomendada sin bloquear. |
 
@@ -61,7 +61,7 @@ Consulta [Estados de fabricación](/es/conceptos/fabricacion/estados-de-fabricac
 
 ## Deshacer una finalización
 
-Puedes usar **Deshacer finalización** sobre una operación finalizada si su OF no está cancelada. Debes indicar un motivo de pausa.
+Puedes usar **Deshacer finalización** sobre una operación finalizada. Debes indicar un motivo de pausa.
 
 Bold reabre la operación y crea una interrupción desde la fecha en la que se finalizó. Los consumos ya registrados no se eliminan. Revísalos antes de continuar si la finalización anterior generó registros que ya no corresponden.
 

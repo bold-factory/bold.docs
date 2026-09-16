@@ -19,7 +19,7 @@ Los asistentes muestran esas sugerencias para que las revises antes de convertir
 | Previsión de compra | Puede convertirse en un [pedido de compra](/es/conceptos/planificacion/pedidos-de-compra). |
 | Previsión de fabricación | Puede convertirse en una [petición de fabricación](/es/conceptos/fabricacion/peticiones-de-fabricacion). |
 
-La previsión no cambia el stock, no cuenta como stock entrante y no cubre demanda. Empieza a afectar a planificación cuando la conviertes en un pedido de compra o una petición de fabricación que entre en planificación.
+La previsión no cambia el stock y no cuenta como suministro del artículo previsto. En una previsión de fabricación, Bold calcula las entradas de la receta y puede generar desde ese momento demanda de componentes. Al convertir la previsión en una petición u orden, el producto fabricado pasa a formar parte del suministro esperado.
 
 ## Modelo de relación
 
@@ -31,6 +31,7 @@ flowchart LR
   R --> F["Asistente de fabricación"]
   C -. "si se convierte y confirma" .-> PC["Pedido de compra confirmado"]
   F -. "si se convierte y entra en planificación" .-> PF["Petición de fabricación"]
+  F --> D["Demanda de componentes"]
   PC --> S["Suministro esperado"]
   PF --> S
 ```
@@ -60,7 +61,7 @@ Consulta [Demanda y suministro](/es/conceptos/planificacion/demanda-y-suministro
 | Organización principal | Necesidades agrupadas por proveedor. | Necesidades agrupadas por periodo. |
 | Contexto que muestra | Cantidades que conviene comprar y proveedor propuesto. | Demanda urgente o futura que conviene fabricar. |
 | Documento resultante | [Pedido de compra](/es/conceptos/planificacion/pedidos-de-compra). | [Petición de fabricación](/es/conceptos/fabricacion/peticiones-de-fabricacion). |
-| Efecto antes de convertir | No genera suministro. | No genera suministro. |
+| Efecto antes de convertir | No genera suministro. | No genera suministro del producto; puede generar demanda de componentes. |
 
 Una línea confirmada de pedido de compra genera suministro esperado. En fabricación, la previsión puede convertirse en una petición y después dar lugar a una o varias órdenes de fabricación.
 
@@ -71,7 +72,7 @@ Dos artículos tienen una necesidad sin cobertura de 20 unidades. El primero se 
 | Artículo | Origen configurado | Previsión | Efecto inmediato en el suministro |
 | --- | --- | --- | --- |
 | Materia prima A | Compra | Previsión de compra de 20 unidades. | Ninguno. |
-| Producto B | Fabricación | Previsión de fabricación de 20 unidades. | Ninguno. |
+| Producto B | Fabricación | Previsión de fabricación de 20 unidades. | No genera suministro del producto; sus entradas pueden generar demanda. |
 
 La misma cantidad descubierta produce sugerencias distintas según el origen de aprovisionamiento. En ambos casos, la previsión sigue siendo una recomendación y no cubre la demanda por sí sola.
 

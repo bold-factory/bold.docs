@@ -44,7 +44,7 @@ Registrar producción aumenta stock del artículo fabricado. Los coproductos reg
 
 Los coproductos también pueden tener momento de registro y lote si necesitan trazabilidad.
 
-La cantidad de un coproducto se define por unidad fabricada. Si una operación produce `10` unidades y el coproducto genera `0,5` por unidad, el registro previsto total será `5`.
+Si el coproducto está configurado **Por unidad**, Bold multiplica su cantidad por la cantidad de la operación y aplica la frecuencia indicada. Por ejemplo, `0,5` unidades por cada unidad fabricada generan `5` unidades en una operación de `10`. En los demás momentos de registro, la cantidad configurada se aplica una sola vez.
 
 No registres producción para compensar consumos mal registrados. Corrige primero el origen del consumo, ubicación o lote.
 

@@ -1,21 +1,19 @@
 ---
 title: "Lotes"
-description: "Entiende cuándo usar lotes para trazabilidad, coste, calidad y origen."
+description: "Entiende cuándo usar lotes para trazabilidad, coste y origen."
 icon: "scan-line"
 ---
 
-Un **lote** identifica un conjunto trazable de unidades de un mismo artículo. Aunque dos unidades pertenezcan al mismo artículo, pueden diferir por proveedor, fecha, fabricación, coste, calidad u origen.
+Un **lote** identifica un conjunto trazable de unidades de un mismo artículo. Permite separar stock por código, origen y coste.
 
 ## Cuándo usar lotes
 
 Usa lotes si necesitas:
 
 - trazabilidad de compra o fabricación;
-- control de calidad por origen;
-- separación por caducidad, fecha o proveedor;
 - valoración por coste unitario real;
-- investigación de incidencias;
-- relación entre componentes consumidos y artículo fabricado.
+- conservación del código de origen de una compra o fabricación;
+- relación entre lotes fusionados y sus lotes de origen.
 
 Si tu operación no necesita separar unidades por origen, puedes mantener stock sin lote para ese artículo.
 
@@ -25,12 +23,13 @@ Si tu operación no necesita separar unidades por origen, puedes mantener stock 
 | --- | --- |
 | Código | Identifica el lote en operaciones y consultas. |
 | Artículo | Define qué unidad física contiene. |
-| Origen | Compra, fabricación, ajuste, fusión u otro movimiento. |
-| Stock actual | Cantidad restante por ubicación. |
-| Coste y valor | Permiten valorar inventario y analizar diferencias. |
-| Relaciones | Documentos, recepciones, consumos, órdenes o controles asociados. |
+| Tipo | Indica si es de origen, fusionado o provisional. |
+| Origen | En lotes de origen, indica compra, fabricación o desconocido, junto con su código e identificador cuando existen. |
+| Stock actual | Cantidad restante del lote. |
+| Coste unitario | Coste aplicado al stock del lote. |
+| Auditoría | Fechas y autores de creación y última modificación. |
 
-Un lote está activo mientras conserva stock o historial relevante.
+Un lote está activo mientras su stock no sea cero. Cuando llega a cero, pasa a inactivo, pero su historial se conserva.
 
 ## Tipos de lote
 
@@ -64,15 +63,15 @@ La trazabilidad pierde valor si el equipo usa un lote genérico para registrar s
 
 ## Relación con costes
 
-El lote puede conservar coste unitario y origen económico. Esto permite valorar inventario por compra, fabricación o regularización.
+El lote conserva un coste unitario. Esto permite valorar el inventario trazable procedente de compras o fabricación.
 
-Dos lotes del mismo artículo pueden tener costes distintos. Esa diferencia es normal si proceden de compras, fabricaciones o ajustes distintos.
+Dos lotes del mismo artículo pueden tener costes distintos. Esa diferencia es normal si proceden de compras o fabricaciones distintas.
 
 ## Fusionar lotes
 
 Fusiona lotes solo cuando ya no necesitas mantener separado su origen. La fusión simplifica operación futura, pero reduce la granularidad de análisis.
 
-No fusiones lotes si necesitas investigar calidad, proveedor, fecha de fabricación, caducidad o coste por origen.
+No fusiones lotes si necesitas mantener separados sus códigos de origen o sus costes.
 
 Cuando fusionas lotes, el lote resultante conserva relación con los lotes de origen y sus cantidades. A partir de ese momento, la operación diaria trabaja con el lote fusionado.
 

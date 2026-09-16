@@ -56,7 +56,7 @@ Si solo hay stock para una parte de la demanda, Bold prepara un movimiento para 
 | **Preparado** | Tiene plan y reservas, o es un movimiento libre listo para empezar. |
 | **En curso** | Un empleado lo está ejecutando con un equipo de almacén. |
 | **Completado** | Todo el material recogido se ha dejado y la tarea se cerró. |
-| **Cancelado** | Se anuló antes de empezar y se liberaron sus reservas. |
+| **Cancelado** | Se anuló con un motivo y se liberaron sus reservas. Si estaba en curso, también se cierra su ejecución. |
 
 ```mermaid
 stateDiagram-v2
@@ -66,9 +66,10 @@ stateDiagram-v2
   En_curso --> Completado: sin material en el equipo
   Pendiente --> Cancelado: cancelar con motivo
   Preparado --> Cancelado: cancelar con motivo
+  En_curso --> Cancelado: sin material en el equipo
 ```
 
-Un movimiento no puede completarse mientras el equipo todavía transporte stock o bultos. Tampoco se puede cancelar después de iniciar la ejecución.
+Un movimiento no puede completarse ni cancelarse mientras el equipo todavía transporte stock o bultos. Puedes cancelar un movimiento pendiente, preparado o en curso cuando no queda material transportado; la interfaz solicita un motivo de cancelación.
 
 ## Incidencias de planificación
 

@@ -15,7 +15,7 @@ Las **herramientas** son recursos auxiliares que pueden requerirse para ejecutar
 | Herramienta | Recurso auxiliar seleccionable en planificación o ejecución. |
 | Característica | Requisito técnico reutilizable, como diámetro, compatibilidad o función. |
 | Herramienta compatible | Herramienta que cumple una característica requerida. |
-| Proceso | Tipo de trabajo que puede exigir características o herramientas. |
+| Operación | Etapa de la receta que puede exigir una característica de herramienta. |
 
 Una herramienta puede tener varias características. Una característica puede aplicarse a varias herramientas.
 
@@ -26,14 +26,13 @@ Una herramienta puede tener varias características. Una característica puede a
 | El recurso se selecciona para ejecutar trabajo. | Herramienta. |
 | El recurso limita qué operaciones pueden hacerse. | Herramienta con características. |
 | El dato sólo informa al operario. | Paso o instrucción. |
-| La diferencia cambia la duración de una estación. | Eficiencia de estación o proceso. |
 | El recurso es el lugar principal de trabajo. | Estación de trabajo. |
 
 No conviertas cada accesorio menor en herramienta si no afecta planificación, ejecución o trazabilidad.
 
 ## Relación con asignaciones
 
-Cuando un proceso exige una característica, la asignación debe seleccionar una herramienta compatible.
+Cuando una operación exige una característica, la asignación debe seleccionar una herramienta compatible. El proceso determina las estaciones compatibles; la operación define el requisito de herramienta.
 
 Esto ayuda a:
 

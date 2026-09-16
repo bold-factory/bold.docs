@@ -4,23 +4,22 @@ description: "Entiende historial de cambios, eventos publicados, notificaciones 
 icon: "history"
 ---
 
-La **auditoría** explica quién cambió qué dato y cuándo. Los **eventos** explican qué ocurrió en Bold para sincronizar módulos, notificaciones, avisos externos y automatizaciones.
+La **auditoría** muestra los eventos registrados para una entidad. Los **eventos** explican qué ocurrió en Bold para sincronizar módulos, notificaciones, avisos externos y automatizaciones.
 
 Ambos ayudan a depurar incidencias, revisar integraciones y proteger la trazabilidad.
 
 ## Auditoría
 
-La auditoría permite revisar cambios sobre entidades de negocio.
+La auditoría permite revisar el historial de eventos de una entidad de negocio.
 
 | Dato | Para qué sirve |
 | --- | --- |
-| Entidad | Identifica el registro afectado. |
-| Acción | Indica creación, cambio, eliminación u otra operación. |
-| Usuario o actor | Explica quién inició el cambio cuando está disponible. |
-| Fecha | Sitúa el cambio en el tiempo. |
-| Valores | Ayudan a comparar antes y después. |
+| Evento | Identifica el hecho registrado. |
+| Autor | Indica quién originó el evento cuando está disponible. |
+| Contenido | Muestra el contenido serializado del evento. |
+| Fecha | Sitúa el evento en el tiempo. |
 
-Usa auditoría cuando necesites entender por qué cambió un pedido, stock, coste, perfil, receta, parte o configuración.
+La vista no calcula una diferencia entre valores anteriores y posteriores. Usa la secuencia y el contenido de los eventos para reconstruir qué ocurrió sobre la entidad consultada.
 
 ## Eventos
 
@@ -37,7 +36,7 @@ No todos los cambios generan el mismo tipo de evento público. Revisa la referen
 
 ## Relación con notificaciones y avisos externos
 
-Las [Notificaciones](/es/conceptos/panel-de-control/notificaciones) usan eventos para avisar dentro de la aplicación o por Correo electrónico.
+Las [Notificaciones](/es/conceptos/panel-de-control/notificaciones) usan eventos para avisar dentro de la aplicación o por correo electrónico.
 
 Los [avisos externos](/es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos) envían eventos a sistemas externos. Conserva los datos necesarios para investigar entregas fallidas o discrepancias.
 

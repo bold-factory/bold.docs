@@ -29,11 +29,13 @@ Una petición puede nacer desde una recomendación de planificación o de forma 
 | Demanda concreta | Un pedido o necesidad interna exige fabricar un artículo. |
 | Decisión manual | El equipo decide crear una necesidad sin esperar recomendación. |
 
+Si está activada la generación automática de órdenes, Bold crea la OF al registrar la petición cuando el artículo está activo, tiene una receta principal válida y todas las entradas requeridas de la receta están resueltas. Si alguna condición no se cumple, la petición queda pendiente para revisión manual.
+
 ## Estados
 
 | Estado | Significado |
 | --- | --- |
-| Sin asignar | Toda la cantidad sigue pendiente de convertir en órdenes. |
+| Pendiente de asignar | Toda la cantidad sigue pendiente de convertir en órdenes. |
 | Parcialmente asignada | Algunas órdenes cubren parte de la cantidad. |
 | Asignada | La cantidad queda cubierta por órdenes de fabricación. |
 | Cancelada | La necesidad deja de estar activa. |
