@@ -8,6 +8,29 @@ Una **receta** describe cómo fabricar uno o varios artículos. Define operacion
 
 La receta no ejecuta trabajo. Sirve como molde para crear órdenes de fabricación con una estructura controlada.
 
+## Mapa de relaciones
+
+```mermaid
+flowchart LR
+  receta["Receta"]
+  receta --> versiones["Versiones"]
+  versiones --> activa["Versión activa"]
+  receta --> familia["Familia"]
+  receta --> articulo["Artículo directo"]
+  familia --> aplicable["Artículo al que aplica"]
+  articulo --> aplicable
+  activa --> estructura["Estructura aplicable"]
+  aplicable --> estructura
+  estructura --> orden["Orden de fabricación"]
+```
+
+| Concepto | Qué representa | Relación con la ejecución |
+| --- | --- | --- |
+| Receta | Definición de cómo fabricar uno o varios artículos. | No ejecuta trabajo. |
+| Versión | Estructura de la receta en un momento concreto. | La versión activa sirve de base para nuevas órdenes. |
+| Aplicación | Relación entre la receta y una familia o artículo. | Determina para qué artículos puede evaluarse la receta. |
+| Orden de fabricación | Trabajo ejecutable. | Copia los elementos aplicables de la versión activa. |
+
 ## Qué contiene una receta
 
 | Elemento | Uso |
@@ -33,7 +56,7 @@ Puedes vincular una receta de dos formas:
 
 Si un artículo no cumple la condición de familia y no tiene un vínculo directo, la receta no se considera aplicable. Si falta una propiedad necesaria para evaluar la condición, la receta aparece como **Falta información**.
 
-Un artículo puede tener varias recetas aplicables. Bold las ordena por prioridad y usa como receta principal la primera que esté **Lista**. Puedes cambiar ese orden desde las recetas aplicables del artículo.
+Un artículo puede tener varias recetas aplicables. Bold las ordena por prioridad y usa como receta principal la primera que esté **Lista**. La prioridad permite distinguir la receta preferente de las alternativas.
 
 ## Estado para un artículo
 
@@ -45,7 +68,7 @@ El estado se calcula para cada combinación de artículo y receta.
 | **Falta información** | La receta puede aplicarse, pero faltan propiedades necesarias para evaluar condiciones o fórmulas. |
 | **Inactiva** | La receta está vinculada al artículo, pero no tiene una versión activa. |
 
-Bold muestra las propiedades que faltan. Complétalas en el artículo antes de usar esa receta para crear una OF.
+Bold identifica las propiedades que faltan. Mientras falten, la receta no está **Lista** para ese artículo.
 
 ## Versiones
 
@@ -57,7 +80,7 @@ Una versión conserva una estructura de fabricación en un momento concreto. Sol
 | Activa | Se usa para nuevas órdenes y protege la trazabilidad. |
 | Inactiva | Se conserva como histórico o referencia. |
 
-Activa una versión cuando representa el proceso aprobado. Si necesitas cambiar una receta en uso, crea o copia una nueva versión.
+La versión **Activa** representa la estructura aprobada para nuevas órdenes. Las versiones **Inactivas** conservan estructuras anteriores como histórico o referencia.
 
 ## Condiciones y variantes
 
@@ -72,7 +95,11 @@ Las condiciones permiten que una misma receta se adapte a diferentes artículos 
 
 Ejemplo: una receta de mesa puede añadir una operación de pintura solo cuando la propiedad **Acabado** lo requiere.
 
-Si no aparece una propiedad al crear una condición, revisa que exista en **Catálogo > Propiedades** y que esté asignada a la familia correspondiente. Las condiciones solo pueden usar propiedades que afectan al artículo fabricado.
+Las condiciones solo pueden usar propiedades que afectan al artículo fabricado y están asignadas a la familia correspondiente.
+
+<Tip>
+  Una condición decide **si** un elemento forma parte de la estructura. Una fórmula calcula **qué valor** tendrá una cantidad, medida o instrucción.
+</Tip>
 
 ## Fórmulas
 
@@ -86,9 +113,7 @@ Si el artículo fabricado tiene `Largo = 100`, la orden mostrará `Cortar materi
 
 ## Edición y trazabilidad
 
-Una versión activa queda protegida para conservar trazabilidad. Si el botón de guardar está deshabilitado, revisa si estás intentando modificar una versión activa.
-
-Para cambiar una receta en uso, copia la versión o crea una nueva, edítala y actívala cuando esté revisada.
+Una versión activa queda protegida para conservar trazabilidad. Los cambios estructurales pertenecen a una versión editable distinta; la versión activa continúa representando la estructura aprobada con la que se crearon nuevas órdenes.
 
 ## Relacionado
 

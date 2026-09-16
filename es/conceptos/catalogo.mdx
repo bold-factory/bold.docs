@@ -37,6 +37,17 @@ El catálogo es la base de Bold. Define qué se compra, fabrica, almacena, consu
 | Unidad de medida | Forma en la que se cuantifican stock, pedidos, consumos y producción. |
 | Coproducto | Salida adicional generada durante una fabricación. |
 
+```mermaid
+flowchart LR
+  P["Propiedad"] -->|se exige en| F["Familia"]
+  F -->|agrupa| A["Artículo"]
+  P -->|toma un valor en| A
+  U["Unidad de medida"] -->|cuantifica| A
+  A --> S["Stock y movimientos"]
+  A --> V["Compras y ventas"]
+  A --> R["Fabricación y costes"]
+```
+
 La familia organiza las variantes. El artículo es la referencia operativa con stock, pedidos, fabricación y costes propios. Las propiedades explican las diferencias entre artículos de una misma familia.
 
 Consulta las páginas de este grupo para ver las reglas de información requerida, consolidación, unidades y modelado de variantes.

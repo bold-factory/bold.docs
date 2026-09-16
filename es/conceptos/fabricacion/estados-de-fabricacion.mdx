@@ -8,6 +8,30 @@ Los estados de fabricación indican si el trabajo está pendiente, preparado, en
 
 Lee el estado junto con el objeto. Una orden, una operación, un grupo y un plan no cambian por las mismas acciones.
 
+## Dos tipos de estado
+
+```mermaid
+flowchart LR
+  estados["Estados de fabricación"]
+  estados --> ejecucion["Ejecución real"]
+  estados --> escenario["Escenario de planificación"]
+  ejecucion --> orden["Orden de fabricación<br/>Resume sus operaciones"]
+  ejecucion --> operacion["Operación<br/>Describe una etapa ejecutable"]
+  ejecucion --> grupo["Grupo<br/>Coordina varias operaciones"]
+  escenario --> plan["Plan de producción<br/>Describe el cálculo de una propuesta"]
+```
+
+| Objeto | Qué expresa su estado | Qué no implica |
+| --- | --- | --- |
+| Orden de fabricación | Situación global del trabajo ejecutable. | Que todas sus operaciones tengan el mismo estado. |
+| Operación | Situación de una etapa concreta. | Que toda la orden haya alcanzado ese estado. |
+| Grupo de operaciones | Situación del bloque operativo. | Que desaparezca el historial individual de sus operaciones. |
+| Plan de producción | Situación del cálculo de una propuesta. | Que las operaciones reales hayan cambiado. |
+
+<Tip>
+  Un mismo término no siempre describe la misma realidad. **Planificada** en una orden u operación pertenece a la ejecución; **Solución encontrada** en un plan pertenece al escenario de planificación.
+</Tip>
+
 ## Órdenes de fabricación
 
 Una orden resume el avance del trabajo ejecutable.
@@ -23,6 +47,8 @@ Una orden resume el avance del trabajo ejecutable.
 | **Cancelada** | La orden ya no debe ejecutarse. |
 
 El estado de la orden se deriva de sus operaciones y de las reglas que protegen la ejecución real.
+
+Por ejemplo, una orden puede estar **En curso** mientras una operación ya está **Finalizada**, otra sigue **En curso** y las restantes continúan **Planificadas**.
 
 ## Operaciones
 
@@ -64,7 +90,7 @@ Un plan de producción es un escenario. Su estado habla del cálculo de la propu
 | **Fallido** | El cálculo no terminó correctamente. |
 | **Sin solución factible** | No se encontró una secuencia válida con los datos y restricciones actuales. |
 
-Si aplicas un plan con solución, Bold traslada la propuesta a operaciones reales abiertas. Si no lo aplicas, la ejecución no cambia.
+Una solución pertenece al plan hasta que se aplica. Por tanto, un plan con **Solución encontrada** puede coexistir con operaciones reales que aún conservan sus fechas y recursos anteriores.
 
 ## Relacionado
 

@@ -8,6 +8,24 @@ Un **plan de producción** es un escenario de planificación. Copia operaciones 
 
 El plan no cambia la ejecución real hasta que lo aplicas.
 
+## Modelo conceptual
+
+```mermaid
+flowchart LR
+  realidad["Operaciones abiertas<br/>y contexto operativo"]
+  realidad -->|se copian| plan["Plan de producción<br/>Escenario independiente"]
+  plan --> calculo["Cálculo de secuenciación"]
+  calculo --> propuesta["Propuesta de fechas,<br/>orden y recursos"]
+  propuesta -.->|solo al aplicar| realidad
+```
+
+| Concepto | Qué representa | Efecto sobre la ejecución real |
+| --- | --- | --- |
+| Secuenciación | Cálculo que ordena operaciones. | Ninguno por sí solo. |
+| Plan de producción | Escenario que contiene un alcance y su contexto. | Ninguno mientras la propuesta permanezca en el plan. |
+| Propuesta | Resultado calculado dentro del plan. | Ninguno hasta que se aplica. |
+| Aplicación | Traslado de la propuesta a operaciones abiertas. | Actualiza la planificación de esas operaciones. |
+
 ## Para qué sirven
 
 | Uso | Resultado |
@@ -17,17 +35,17 @@ El plan no cambia la ejecución real hasta que lo aplicas.
 | Detectar bloqueos | Encontrar operaciones sin recurso, material o secuencia viable. |
 | Aplicar una propuesta | Actualizar operaciones reales cuando el plan es ejecutable. |
 
-## Ciclo del plan
+## Partes del escenario
 
-| Acción | Qué hace |
+| Parte | Qué representa |
 | --- | --- |
-| Crear | Define alcance, fechas, órdenes o recursos incluidos. |
-| Actualizar | Carga la realidad operativa actual. |
-| Resolver | Calcula una propuesta de secuencia. |
-| Revisar | Muestra retrasos, bloqueos o datos faltantes. |
-| Aplicar | Traslada la propuesta a operaciones reales abiertas. |
+| Alcance | Fechas, órdenes y recursos incluidos. |
+| Copia de contexto | Situación de operaciones, recursos, horario y materiales que conoce el plan. |
+| Resolución | Cálculo de una propuesta de secuencia. |
+| Resultado | Fechas, recursos, retrasos, bloqueos o datos faltantes detectados. |
+| Aplicación | Relación que traslada la propuesta a operaciones reales abiertas. |
 
-Si cambian órdenes, recursos, horario o materiales después de resolver, actualiza o resuelve el plan de nuevo antes de aplicarlo.
+Los cambios posteriores en órdenes, recursos, horario o materiales no forman parte de una propuesta ya calculada. El plan y la ejecución real pueden representar momentos distintos.
 
 ## Estados del cálculo
 
@@ -41,9 +59,13 @@ Si cambian órdenes, recursos, horario o materiales después de resolver, actual
 
 Consulta [Estados de fabricación](/es/conceptos/fabricacion/estados-de-fabricacion) para distinguir estados de planes y estados de ejecución real.
 
+<Tip>
+  **Solución encontrada** describe el resultado del cálculo. No significa que las operaciones reales estén **Planificadas** con esas fechas y recursos.
+</Tip>
+
 ## Qué no modifica
 
-Un plan no debe cambiar operaciones finalizadas ni canceladas. Tampoco sustituye los registros reales de ejecución. Sirve para planificar trabajo abierto y trasladar una propuesta aprobada.
+Un plan no debe cambiar operaciones finalizadas ni canceladas. Tampoco sustituye los registros reales de ejecución. Su alcance es el trabajo abierto y la propuesta calculada para ese trabajo.
 
 ## Relación con planificación
 

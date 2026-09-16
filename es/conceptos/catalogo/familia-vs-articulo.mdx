@@ -17,6 +17,10 @@ Una **familia** agrupa variantes. Un **artículo** representa la referencia fís
 | Artículo | Variante física concreta | Mesa Nórdica blanca 120 cm |
 | Lote | Conjunto trazable de unidades de un artículo | Lote fabricado el 2026-06-15 |
 
+<Info>
+  Una variante describe una configuración del catálogo. Un lote distingue unidades trazables de un mismo artículo. Dos lotes pueden contener exactamente la misma variante.
+</Info>
+
 ## Decisión de modelado
 
 | Pregunta | Si la respuesta es sí |
@@ -50,7 +54,9 @@ No es obligatorio. Si no hay necesidad de agrupación, un artículo sin familia 
 
 ## Regla práctica
 
-Empieza por el modelo más simple que conserve stock, trazabilidad y fabricación correctos. Añade propiedades cuando una diferencia tenga impacto operativo.
+<Tip>
+  El modelo más simple es el que conserva stock, trazabilidad y fabricación correctos. Una diferencia merece una propiedad cuando afecta a la identificación o a una regla. Merece un artículo distinto cuando necesita operación, stock o coste propios.
+</Tip>
 
 ## Relacionado
 

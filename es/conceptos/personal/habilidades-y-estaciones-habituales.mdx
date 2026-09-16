@@ -4,60 +4,77 @@ description: "Entiende cómo las habilidades y estaciones habituales ayudan a mo
 icon: "badge-check"
 ---
 
-Las **habilidades** y las **estaciones habituales** describen qué trabajo suele poder hacer un empleado y dónde trabaja normalmente.
+Las **habilidades** y las **estaciones habituales** describen qué trabajo suele poder hacer un empleado y dónde trabaja normalmente. Ayudan a determinar qué trabajo es relevante para esa persona, pero no lo asignan ni confirman su disponibilidad.
 
-No sustituyen los permisos de usuario. Los permisos controlan el acceso a Bold. Las habilidades y estaciones habituales ayudan a organizar la ejecución operativa.
+```mermaid
+flowchart LR
+  E[Empleado] --> H["Habilidades<br/>Qué sabe hacer"]
+  E --> S["Estaciones habituales<br/>Dónde trabaja normalmente"]
+  H --> R[Trabajo relevante]
+  S --> R
+  A[Asignación] --> C[Trabajo concreto]
+  P[Permisos de usuario] --> X[Acceso a Bold]
+```
 
 ## Diferencias clave
 
-| Concepto | Qué representa |
-| --- | --- |
-| Habilidad | Un proceso o tipo de operación que el empleado puede ejecutar. |
-| Estación habitual | Una estación de trabajo en la que el empleado trabaja normalmente. |
-| Asignación | Una operación o grupo concreto preparado para una persona, estación o momento. |
-| Permiso de usuario | Capacidad de entrar en módulos y acciones de la aplicación. |
+| Concepto | Pregunta que responde | Alcance |
+| --- | --- | --- |
+| Habilidad | ¿Qué tipo de trabajo puede realizar? | Un proceso o tipo de operación. |
+| Estación habitual | ¿Dónde trabaja normalmente? | Una estación de trabajo. |
+| Asignación | ¿Qué trabajo concreto tiene preparado? | Una operación o grupo determinado. |
+| Disponibilidad | ¿Cuándo se espera que trabaje? | Periodos calculados a partir de horarios. |
+| Permiso de usuario | ¿A qué datos y acciones puede acceder? | Módulos y acciones de la aplicación. |
 
-Un empleado puede tener habilidades sin tener usuario. También puede tener usuario sin estar configurado para trabajo operativo.
+<Info>
+  Las habilidades y estaciones habituales orientan la relevancia del trabajo. No sustituyen una asignación, un horario ni los permisos de acceso.
+</Info>
+
+Un empleado puede tener habilidades sin disponer de un usuario. También puede tener usuario sin estar configurado para trabajo operativo.
 
 ## Habilidades
 
 Una habilidad se basa en un [proceso](/es/conceptos/fabricacion/procesos). Por ejemplo, un empleado puede estar habilitado para **Corte**, **Montaje** o **Inspección final**.
 
-Usa habilidades cuando quieras:
+Las habilidades permiten relacionar empleados con operaciones compatibles con su capacidad. También ayudan a analizar qué personas cubren cada tipo de trabajo.
 
-- mostrar trabajo compatible con la capacidad del empleado;
-- evitar que una persona tenga que buscar entre procesos que no realiza;
-- analizar mejor qué perfiles cubren cada tipo de trabajo;
-- preparar asignaciones más coherentes.
-
-La habilidad indica capacidad operativa. No garantiza que el empleado esté disponible en ese momento.
+Una habilidad expresa capacidad operativa. No garantiza que el empleado esté disponible ni que tenga una operación asignada.
 
 ## Estaciones habituales
 
-Una estación habitual indica dónde trabaja normalmente una persona. Sirve para priorizar operaciones cercanas a su puesto o célula de trabajo.
+Una estación habitual indica dónde trabaja normalmente una persona. Permite dar relevancia al trabajo de su puesto o célula, aunque no limita su actividad a esa ubicación.
 
-Usa estaciones habituales cuando:
+La estación habitual y la estación de ejecución tampoco son equivalentes: la primera expresa una preferencia estable; la segunda pertenece a la operación concreta.
 
-- un empleado trabaja casi siempre en una misma estación;
-- una célula de trabajo tiene operarios recurrentes;
-- quieres reducir listas largas en el modo de trabajo;
-- necesitas orientar tareas por zona antes que por empleado asignado.
+## Ejemplo ilustrativo
 
-La estación habitual no bloquea trabajar en otra estación. La asignación real de la operación sigue marcando dónde se ejecuta.
+Ana tiene la habilidad **Soldadura** y la estación habitual **Célula 2**.
 
-## Impacto en modo de trabajo
-
-En [Modo de trabajo](/es/conceptos/modo-de-trabajo), el empleado activo puede ver tareas según:
-
-| Criterio | Cómo ayuda |
+| Dato | Qué permite interpretar |
 | --- | --- |
-| Habilidades | Muestra procesos que el empleado sabe ejecutar. |
-| Estaciones habituales | Prioriza trabajo de sus estaciones normales. |
-| Operaciones asignadas | Enseña trabajo preparado para ese empleado. |
-| Grupos de operaciones | Permite continuar bloques de trabajo compartidos. |
-| Operaciones activas o recientes | Facilita reanudar trabajo iniciado. |
+| Habilidad Soldadura | Las operaciones del proceso Soldadura son compatibles con su capacidad. |
+| Estación habitual Célula 2 | El trabajo de esa célula es especialmente relevante para Ana. |
+| Operación asignada en Célula 4 | Existe un trabajo concreto para Ana fuera de su estación habitual. |
+| Turno de tarde | Indica cuándo se espera que esté disponible. |
+| Permisos de producción | Determinan qué puede consultar o modificar en Bold. |
 
-Configura habilidades y estaciones habituales con el mismo nivel de detalle que uses en planta. Si defines demasiadas, la selección pierde valor. Si defines muy pocas, el empleado verá trabajo poco relevante.
+Estos datos se complementan. Ninguno permite deducir por sí solo los demás.
+
+## Relación con el modo de trabajo
+
+El [modo de trabajo](/es/conceptos/modo-de-trabajo) puede combinar varias señales para presentar trabajo relevante:
+
+| Señal | Aportación |
+| --- | --- |
+| Habilidades | Compatibilidad con el proceso. |
+| Estaciones habituales | Afinidad con el puesto o la zona. |
+| Operaciones asignadas | Relación directa con un trabajo concreto. |
+| Grupos de operaciones | Pertenencia a un bloque de trabajo compartido. |
+| Operaciones activas o recientes | Continuidad del trabajo iniciado. |
+
+<Tip>
+  Un nivel de detalle coherente con la organización real de la planta hace que habilidades y estaciones habituales distingan mejor el trabajo relevante.
+</Tip>
 
 ## Relacionado
 

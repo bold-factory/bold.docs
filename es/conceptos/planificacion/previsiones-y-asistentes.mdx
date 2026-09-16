@@ -8,6 +8,10 @@ Las **previsiones** son necesidades sugeridas por Bold antes de crear documentos
 
 Los asistentes muestran esas sugerencias para que las revises antes de convertirlas en pedidos de compra o peticiones de fabricación.
 
+<Note>
+  No confundas una previsión con un compromiso. La previsión propone una cobertura; un documento confirmado representa suministro esperado.
+</Note>
+
 ## Tipos de previsión
 
 | Tipo | Resultado esperado |
@@ -16,6 +20,20 @@ Los asistentes muestran esas sugerencias para que las revises antes de convertir
 | Previsión de fabricación | Puede convertirse en una [petición de fabricación](/es/conceptos/fabricacion/peticiones-de-fabricacion). |
 
 La previsión no cambia el stock, no cuenta como stock entrante y no cubre demanda. Empieza a afectar a planificación cuando la conviertes en un pedido de compra o una petición de fabricación que entre en planificación.
+
+## Modelo de relación
+
+```mermaid
+flowchart LR
+  P["Stock proyectado"] --> R["Previsión"]
+  A["Política de aprovisionamiento"] --> R
+  R --> C["Asistente de compras"]
+  R --> F["Asistente de fabricación"]
+  C -. "si se convierte y confirma" .-> PC["Pedido de compra confirmado"]
+  F -. "si se convierte y entra en planificación" .-> PF["Petición de fabricación"]
+  PC --> S["Suministro esperado"]
+  PF --> S
+```
 
 ## Qué datos usa Bold
 
@@ -34,31 +52,28 @@ Bold compara stock, demanda, suministro y la política de aprovisionamiento del 
 
 Consulta [Demanda y suministro](/es/conceptos/planificacion/demanda-y-suministro) para entender cómo se calcula el stock proyectado.
 
-## Asistente de compras
+## Comparación de asistentes
 
-El **asistente de compras** agrupa necesidades de artículos configurados para aprovisionarse por compra.
+| Aspecto | Asistente de compras | Asistente de fabricación |
+| --- | --- | --- |
+| Artículos incluidos | Configurados para aprovisionarse por compra. | Configurados para aprovisionarse por fabricación. |
+| Organización principal | Necesidades agrupadas por proveedor. | Necesidades agrupadas por periodo. |
+| Contexto que muestra | Cantidades que conviene comprar y proveedor propuesto. | Demanda urgente o futura que conviene fabricar. |
+| Documento resultante | [Pedido de compra](/es/conceptos/planificacion/pedidos-de-compra). | [Petición de fabricación](/es/conceptos/fabricacion/peticiones-de-fabricacion). |
+| Efecto antes de convertir | No genera suministro. | No genera suministro. |
 
-Úsalo para:
+Una línea confirmada de pedido de compra genera suministro esperado. En fabricación, la previsión puede convertirse en una petición y después dar lugar a una o varias órdenes de fabricación.
 
-- revisar necesidades por proveedor;
-- ajustar cantidades antes de comprar;
-- agrupar líneas en un pedido;
-- convertir sugerencias en pedidos de compra.
+## Ejemplo conceptual
 
-La sugerencia no es un compromiso firme hasta que creas el pedido. Después, una línea confirmada de pedido de compra genera suministro esperado.
+Dos artículos tienen una necesidad sin cobertura de 20 unidades. El primero se aprovisiona por compra y el segundo por fabricación. En este ejemplo, ningún pedido mínimo ni tamaño de lote modifica la cantidad sugerida.
 
-## Asistente de fabricación
+| Artículo | Origen configurado | Previsión | Efecto inmediato en el suministro |
+| --- | --- | --- | --- |
+| Materia prima A | Compra | Previsión de compra de 20 unidades. | Ninguno. |
+| Producto B | Fabricación | Previsión de fabricación de 20 unidades. | Ninguno. |
 
-El **asistente de fabricación** agrupa necesidades de artículos configurados para aprovisionarse por fabricación.
-
-Úsalo para:
-
-- revisar necesidades por periodo;
-- consultar demanda urgente y futura;
-- crear peticiones de fabricación;
-- preparar trabajo antes de lanzar órdenes.
-
-La fabricación toma forma operativa cuando creas una petición y después una o varias órdenes de fabricación.
+La misma cantidad descubierta produce sugerencias distintas según el origen de aprovisionamiento. En ambos casos, la previsión sigue siendo una recomendación y no cubre la demanda por sí sola.
 
 ## Relación con la política de aprovisionamiento
 
@@ -71,8 +86,6 @@ Consulta [Política de aprovisionamiento](/es/conceptos/planificacion/politica-d
 | Punto de pedido | Cuándo aparece una recomendación contra stock. |
 | Pedido mínimo | Cantidad mínima sugerida. |
 | Tamaño de lote | Redondeo de la cantidad sugerida. |
-
-Si una sugerencia no aparece, revisa primero origen, modo, punto de pedido, stock proyectado, proveedor preferente y plazos.
 
 ## Relacionado
 

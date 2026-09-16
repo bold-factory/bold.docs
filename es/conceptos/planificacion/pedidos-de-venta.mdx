@@ -46,17 +46,31 @@ Una línea es la unidad que planificación puede cubrir. No basta con que exista
 
 El estado del pedido se deriva de los estados de sus líneas.
 
-## Acciones principales
+```mermaid
+stateDiagram-v2
+  [*] --> Borrador
+  Borrador --> Pendiente: confirmación
+  Pendiente --> Parcialmente_entregado: envío parcial
+  Pendiente --> Entregado: envío completo
+  Parcialmente_entregado --> Entregado: último envío
+  Pendiente --> Cancelada: cancelación
+  Parcialmente_entregado --> Cancelada: cancelación de la cantidad pendiente
+  Cancelada --> Borrador: reversión permitida
+```
 
-| Acción | Resultado |
+El diagrama resume las transiciones principales. Las entregas parciales y las cancelaciones conservan las cantidades ya enviadas como histórico.
+
+## Hechos que cambian una línea
+
+| Hecho | Efecto en el modelo |
 | --- | --- |
-| Confirmar línea | Pasa de borrador a pendiente y empieza a generar demanda. |
-| Actualizar fechas | Recalcula la fecha objetivo y mantiene planificación alineada. |
-| Registrar envío | Aumenta la cantidad enviada y reduce la demanda pendiente. |
-| Cancelar línea pendiente | Retira la cantidad abierta. |
-| Deshacer cancelación | Devuelve una línea cancelada a borrador cuando las reglas lo permiten. |
+| Confirmación | La línea pasa de borrador a pendiente y empieza a generar demanda. |
+| Cambio de fechas | La fecha objetivo se recalcula y actualiza la referencia temporal de planificación. |
+| Envío | Aumenta la cantidad enviada y reduce la demanda pendiente. |
+| Cancelación de cantidad pendiente | Retira la cantidad abierta del compromiso. |
+| Reversión de una cancelación | Devuelve la línea a borrador cuando las reglas lo permiten. |
 
-## Reglas operativas
+## Reglas del modelo
 
 - Confirmar una línea exige un artículo activo y solo puede hacerse desde borrador.
 - Artículo, cantidad y modo de cumplimiento se editan solo mientras la línea está en borrador.
@@ -74,6 +88,22 @@ El estado del pedido se deriva de los estados de sus líneas.
 Una línea confirmada aumenta el stock saliente por su cantidad pendiente. Cuando almacén registra un envío, Bold reduce esa demanda pendiente y actualiza el estado de la línea.
 
 La disponibilidad de la línea se calcula aparte del estado de entrega. Una línea puede estar pendiente y, aun así, tener suministro planificado.
+
+<Note>
+  No confundas el estado de entrega con la disponibilidad. El primero indica qué parte ya se envió; la segunda indica si stock o suministro futuro cubren lo que queda pendiente.
+</Note>
+
+### Ejemplo de las dos lecturas
+
+Una línea solicita 50 unidades y ya se han enviado 20. Las 30 restantes están cubiertas por una compra confirmada que llegará a tiempo.
+
+| Lectura | Resultado | Motivo |
+| --- | --- | --- |
+| Estado de entrega | **Parcialmente entregado** | Ya se enviaron 20 de 50 unidades. |
+| Demanda pendiente | **30 unidades** | Es la parte que todavía no se ha enviado ni cancelado. |
+| Disponibilidad | **Planificada** | Un suministro futuro cubre las 30 unidades pendientes. |
+
+El suministro planificado no cambia el estado de entrega. La línea seguirá parcialmente entregada hasta que un envío reduzca la cantidad pendiente.
 
 ## Permisos
 

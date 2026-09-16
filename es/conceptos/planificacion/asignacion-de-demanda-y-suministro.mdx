@@ -8,6 +8,10 @@ La **asignación de demanda y suministro** explica qué necesidad queda cubierta
 
 No crea compras, fabricaciones ni movimientos de almacén. Lee demanda, suministro y stock para calcular cuánto está disponible, cuánto llegará y cuánto sigue pendiente.
 
+<Note>
+  No confundas una asignación con un movimiento de almacén. La asignación relaciona cantidades para planificar; el movimiento registra un cambio físico de stock.
+</Note>
+
 ## Qué asigna Bold
 
 | Elemento | Papel en la asignación |
@@ -45,15 +49,31 @@ Consulta [Política de aprovisionamiento](/es/conceptos/planificacion/politica-d
 
 Una misma necesidad puede tener parte cubierta por stock actual, parte por suministro futuro y parte pendiente. Por eso el estado resumido debe leerse junto con cantidades y fechas.
 
+## Ejemplo de reparto
+
+Una venta confirmada genera una demanda de 35 unidades. Hay 20 unidades en stock y una compra confirmada de 30 unidades que llegará antes de la fecha de entrega.
+
+| Parte de la demanda | Origen de cobertura | Cantidad |
+| --- | --- | ---: |
+| Disponible ahora | Stock actual | 20 |
+| Planificada | Compra confirmada | 15 |
+| Pendiente | Sin cobertura | 0 |
+
+La necesidad queda cubierta por dos orígenes: 20 unidades disponibles y 15 planificadas. De las 30 unidades de suministro quedan 15 sin asignar a esta necesidad.
+
+<Info>
+  El estado resume la cobertura, pero no sustituye al detalle. En este ejemplo, la demanda está cubierta aunque no todas las unidades estén disponibles hoy.
+</Info>
+
 ## Fechas esperadas
 
 La fecha esperada indica cuándo debería estar cubierta la cantidad asignada.
 
-| Origen | Confianza habitual |
+| Origen | Referencia temporal |
 | --- | --- |
-| Stock actual | Alta, porque ya existe. |
-| Pedido de compra confirmado | Alta si la línea tiene fecha de recepción fiable. |
-| Petición u orden de fabricación | Alta si tiene fecha objetivo y planificación suficiente. |
+| Stock actual | Cobertura disponible ahora. |
+| Pedido de compra confirmado | Fecha esperada de la línea de compra. |
+| Petición u orden de fabricación | Fecha objetivo y planificación de la fabricación. |
 
 Si falta fecha esperada, la necesidad puede estar planificada en cantidad pero seguir siendo incierta para priorizar entregas.
 
@@ -61,19 +81,19 @@ Si falta fecha esperada, la necesidad puede estar planificada en cantidad pero s
   Las previsiones no participan en la asignación. Una recomendación no cubre demanda hasta convertirse en un pedido de compra o una petición de fabricación que entre en planificación.
 </Info>
 
-## Qué cambia la asignación
+## Hechos que cambian el cálculo
 
 La asignación se recalcula cuando cambia la realidad operativa.
 
-| Cambio | Efecto habitual |
+| Hecho | Efecto en el modelo |
 | --- | --- |
-| Confirmas una venta | Genera demanda. |
-| Confirmas una compra | Genera suministro. |
-| Recibes material | Convierte suministro en stock físico. |
-| Envías material | Reduce stock y cierra demanda entregada. |
-| Creas o actualizas una petición de fabricación | Genera o ajusta suministro esperado. |
-| Completas una fabricación | Convierte producción pendiente en stock físico. |
-| Cambias la política de aprovisionamiento | Puede cambiar si la necesidad se cubre contra pedido o contra stock. |
+| Venta confirmada | Genera demanda. |
+| Compra confirmada | Genera suministro. |
+| Recepción de material | Convierte suministro en stock físico. |
+| Envío de material | Reduce stock y cierra demanda entregada. |
+| Petición de fabricación nueva o actualizada | Genera o ajusta suministro esperado. |
+| Fabricación completada | Convierte producción pendiente en stock físico. |
+| Política de aprovisionamiento modificada | Puede cambiar si la necesidad se cubre contra pedido o contra stock. |
 
 ## Relacionado
 

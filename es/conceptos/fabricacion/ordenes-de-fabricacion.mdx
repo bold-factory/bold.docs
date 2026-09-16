@@ -8,6 +8,22 @@ Una **orden de fabricación** es trabajo real que puede planificarse, ejecutarse
 
 La orden nace desde una petición de fabricación. Puede copiar la estructura de una receta o crearse sin receta.
 
+## Mapa de relaciones
+
+```mermaid
+flowchart LR
+  peticion["Petición<br/>Qué hace falta"]
+  version["Versión activa de receta<br/>Estructura reutilizable"]
+  peticion --> orden["Orden de fabricación<br/>Trabajo ejecutable"]
+  version --> orden
+  orden --> operaciones["Operaciones"]
+  orden --> entradas["Entradas y coproductos"]
+  orden --> instrucciones["Pasos y controles"]
+  operaciones --> registros["Progreso, tiempos y pausas"]
+  entradas --> stock["Movimientos de stock"]
+  registros --> costes["Coste real y eficiencia"]
+```
+
 ## Petición frente a orden
 
 | Concepto | Papel |
@@ -19,14 +35,18 @@ La orden nace desde una petición de fabricación. Puede copiar la estructura de
 
 La petición responde a "qué hace falta". La orden responde a "cómo y cuándo se ejecuta". Consulta [Peticiones de fabricación](/es/conceptos/fabricacion/peticiones-de-fabricacion) para ver estados, origen y reglas de asignación.
 
+<Tip>
+  No confundas la orden con la receta. La receta es una definición reutilizable; la orden contiene el trabajo concreto y conserva sus propios registros de ejecución.
+</Tip>
+
 ## Con receta o sin receta
 
 | Forma de lanzamiento | Resultado |
 | --- | --- |
 | Con receta | La orden copia las operaciones, entradas, coproductos, pasos, controles, restricciones y condiciones aplicables de la versión activa. |
-| Sin receta | La orden se crea sin operaciones. Debes añadir y configurar manualmente la estructura que vas a ejecutar. |
+| Sin receta | La orden nace sin operaciones ni una estructura copiada de receta. |
 
-Lanzar sin receta es útil para trabajo excepcional o todavía no estandarizado. La OF no queda preparada para ejecución hasta que añadas operaciones y completes su planificación.
+Una orden sin receta puede representar trabajo excepcional o todavía no estandarizado. No queda preparada para ejecución mientras no tenga operaciones y planificación suficiente.
 
 ## Qué copia una orden con receta
 
@@ -58,11 +78,19 @@ La cantidad planificada solo debería cambiar antes de empezar. Después, el his
 
 Consulta [Estados de fabricación](/es/conceptos/fabricacion/estados-de-fabricacion) para comparar estados de órdenes, operaciones, grupos y planes.
 
+### Ejemplo de lectura
+
+Una petición de 100 unidades puede estar cubierta por dos órdenes de 60 y 40 unidades. Cada orden conserva su propia estructura, estado y progreso, mientras la petición expresa la necesidad total que ambas cubren.
+
 ## Relación con almacén y costes
 
-Los consumos reducen stock. La producción aumenta stock del artículo fabricado o de coproductos.
+| Registro de la orden | Efecto relacionado |
+| --- | --- |
+| Consumo de entradas | Reduce el stock de los materiales consumidos. |
+| Producción | Aumenta el stock del artículo fabricado o de los coproductos. |
+| Tiempos, consumos y cantidades reales | Alimentan el cálculo de costes y eficiencia. |
 
-Los tiempos, consumos y cantidades reales alimentan costes y eficiencia. Si faltan registros, el coste real será incompleto.
+Si faltan registros de ejecución, el coste real será incompleto.
 
 ## Relacionado
 

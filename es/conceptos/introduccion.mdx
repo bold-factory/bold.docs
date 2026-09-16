@@ -43,6 +43,23 @@ Para ejecutar un proceso paso a paso, ve a **Guías**.
   </Card>
 </Columns>
 
+## Cómo se relacionan las áreas
+
+Las áreas comparten entidades y registros. El catálogo aporta las referencias comunes. Planificación interpreta necesidades y entradas esperadas. Fabricación y almacén registran la realidad operativa que después alimenta costes y análisis.
+
+```mermaid
+flowchart LR
+  C["Catálogo"] -->|artículos y unidades| P["Planificación"]
+  C -->|artículos y propiedades| F["Fabricación"]
+  P -->|necesidades de fabricación| F
+  P -->|demanda y suministro| A["Almacén"]
+  F -->|consumos y producción| A
+  F -->|tiempos y consumos| K["Costes"]
+  A -->|stock, lotes y movimientos| K
+```
+
+**Personal**, **Mantenimiento**, **Smart Factory**, **Modo de trabajo** y **Panel de control** son áreas transversales. Aportan personas, activos, ejecución, análisis y configuración a los conceptos del mapa.
+
 ## Cómo está organizada
 
 | Tipo de página | Úsala para |

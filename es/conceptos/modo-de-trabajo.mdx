@@ -17,6 +17,13 @@ El **modo de trabajo** es la interfaz diaria para ejecutar tareas en planta. Est
 
 El usuario controla el acceso. El empleado identifica quién realiza el trabajo operativo. Consulta [Empleados](/es/conceptos/personal/empleados) para ver la diferencia entre usuario y empleado.
 
+```mermaid
+flowchart LR
+  U["Usuario"] -->|aporta acceso y permisos| M["Modo de trabajo"]
+  E["Empleado activo"] -->|aporta autoría operativa| M
+  M --> R["Tiempos, consumos, controles y movimientos"]
+```
+
 ## Áreas disponibles
 
 | Área | Uso principal |
@@ -29,7 +36,7 @@ El modo de trabajo no sustituye la configuración. Para crear recetas, ubicacion
 
 ## Empleado activo
 
-Antes de trabajar, el operario debe identificarse como empleado. Desde ese momento, Bold puede asociar acciones, tiempos, tareas y registros a esa persona.
+El **empleado activo** es la identidad operativa a la que Bold asocia acciones, tiempos, tareas y registros.
 
 Esto afecta a:
 
@@ -39,7 +46,9 @@ Esto afecta a:
 - costes reales;
 - auditoría operativa.
 
-Evita compartir empleados entre personas si necesitas saber quién hizo cada acción.
+<Tip>
+  Una identidad de empleado por persona conserva la autoría de cada acción y evita mezclar tiempos o costes.
+</Tip>
 
 ## Qué trabajo ve cada empleado
 
@@ -52,13 +61,13 @@ En producción, **Mis operaciones** organiza las tareas del empleado activo. La 
 
 Las pestañas **Por estación**, **Por área**, **Por proceso** y **Buscar** son vías alternativas para localizar trabajo fuera de **Mis operaciones**. Las [habilidades y estaciones habituales](/es/conceptos/personal/habilidades-y-estaciones-habituales) ayudan a filtrar la lista, pero no sustituyen una asignación real.
 
-## Trabajo de producción
+## Registros de producción
 
-Desde producción, el operario puede iniciar, pausar, reanudar o completar operaciones y grupos. También puede registrar progreso, consumos, producción, controles e interrupciones según la configuración de la orden.
+Producción presenta operaciones y grupos como unidades de trabajo. Sus registros describen progreso, consumos, producción, controles, tiempos e interrupciones según la configuración de la orden.
 
-Si el trabajo se detiene, registra un [motivo de pausa](/es/conceptos/fabricacion/motivos-de-pausa-e-interrupciones). La pausa conserva duración, contexto y empleado para que los cuadros de mando no mezclen ejecución con tiempo detenido.
+Un [motivo de pausa](/es/conceptos/fabricacion/motivos-de-pausa-e-interrupciones) clasifica cada interrupción. La pausa conserva duración y contexto para que los cuadros de mando distingan ejecución y tiempo detenido.
 
-## Trabajo de almacén
+## Entidades de almacén
 
 El área de almacén separa cinco entradas operativas:
 

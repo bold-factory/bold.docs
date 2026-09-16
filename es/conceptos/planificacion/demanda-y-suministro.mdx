@@ -8,6 +8,21 @@ La planificación compara **demanda**, **suministro** y **stock** para decidir q
 
 La demanda indica necesidades. El suministro indica entradas esperadas. La [asignación de demanda y suministro](/es/conceptos/planificacion/asignacion-de-demanda-y-suministro) explica qué parte de cada necesidad queda cubierta por stock actual o por entradas futuras.
 
+## Cómo se relacionan
+
+```mermaid
+flowchart LR
+  D["Demanda<br/>Necesidades"] --> A["Asignación y proyección"]
+  F["Stock físico<br/>Existencias actuales"] --> A
+  S["Suministro<br/>Entradas esperadas"] --> A
+  A --> C["Cobertura<br/>Disponible, planificada o pendiente"]
+  A --> P["Stock proyectado<br/>Evolución futura"]
+```
+
+<Note>
+  No confundas el suministro con el stock físico. El suministro representa una entrada esperada; solo se convierte en stock cuando se recibe el material o se completa la fabricación.
+</Note>
+
 ## Conceptos
 
 | Concepto | Significado |
@@ -32,7 +47,7 @@ La demanda puede venir de pedidos de venta confirmados, necesidades internas o c
 | Orden o petición de fabricación | Cuando necesita componentes o material para ejecutarse. |
 | Consumo previsto | Cuando una operación abierta espera consumir material. |
 
-Una línea en borrador no debería tratarse igual que un compromiso confirmado. Confirma los documentos cuando quieras que entren en planificación.
+Una línea de venta en borrador no genera demanda. Solo las líneas confirmadas representan compromisos que entran en planificación.
 
 ## Suministro
 
@@ -59,6 +74,10 @@ Stock disponible proyectado = stock disponible actual + stock entrante
 
 El proyectado permite detectar faltas antes de que el stock físico sea negativo.
 
+<Info>
+  El stock físico describe lo que existe ahora. El stock proyectado incorpora compromisos futuros y puede anticipar una falta aunque todavía haya unidades en almacén.
+</Info>
+
 Las [previsiones y asistentes](/es/conceptos/planificacion/previsiones-y-asistentes) usan este cálculo para sugerir compras o fabricaciones antes de crear documentos.
 
 ## Estados de cobertura
@@ -77,13 +96,13 @@ Consulta [Asignación de demanda y suministro](/es/conceptos/planificacion/asign
 
 Tienes 20 unidades de un artículo. Hay una venta confirmada de 35 unidades y una compra confirmada de 30 unidades que llega antes de la fecha de entrega.
 
-| Momento | Efecto | Proyectado |
-| --- | --- | --- |
-| Hoy | Stock físico inicial | 20 |
-| Compra | Entra suministro de 30 | 50 |
-| Venta | Sale demanda de 35 | 15 |
+| Momento | Elemento | Variación | Stock proyectado |
+| --- | --- | ---: | ---: |
+| Hoy | Stock físico inicial | 20 | 20 |
+| Antes de la entrega | Suministro de la compra | +30 | 50 |
+| En la fecha de entrega | Demanda de la venta | -35 | 15 |
 
-Aunque el stock físico actual sea 20, planificación puede ver que la venta queda cubierta si la compra llega a tiempo.
+Aunque el stock físico actual sea 20, la venta queda cubierta si la compra llega a tiempo. Después de cubrir las 35 unidades quedan 15 unidades proyectadas.
 
 ## Relacionado
 

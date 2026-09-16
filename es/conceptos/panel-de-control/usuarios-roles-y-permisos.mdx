@@ -4,24 +4,44 @@ description: "Diferencia acceso, permisos y perfiles de trabajo en Bold."
 icon: "shield"
 ---
 
-Un **usuario** accede a Bold. Un **perfil** agrupa permisos. Un **permiso** habilita una acción concreta.
+Un **usuario** accede a Bold. Un **perfil** agrupa permisos. Un **permiso** habilita una capacidad concreta. Juntos forman el modelo de acceso de las personas a la aplicación.
 
-Estos conceptos controlan qué puede ver y cambiar cada persona desde el Panel de control.
+```mermaid
+flowchart LR
+  U[Usuario] --> P[Perfil]
+  P --> R[Permisos]
+  R --> A["Datos y acciones<br/>disponibles"]
+  U -. "puede estar vinculado" .-> E[Empleado]
+```
 
 ## Entidades
 
-| Concepto | Uso |
+| Concepto | Qué representa | Qué no representa |
+| --- | --- | --- |
+| Usuario | Identidad con credenciales de acceso. | La actividad laboral de una persona. |
+| Perfil | Conjunto reutilizable de permisos. | Un puesto de trabajo o una identidad individual. |
+| Permiso | Capacidad concreta para consultar, editar o ejecutar una acción. | Una garantía de que la acción sea válida en cualquier estado. |
+| Empleado | Persona operativa que registra trabajo, aunque no siempre tenga usuario. | Una cuenta con acceso a Bold. |
+
+<Info>
+  Usuario y empleado pueden estar vinculados, pero no son el mismo concepto. El usuario responde a «quién entra y qué puede hacer». El empleado responde a «quién trabaja, registra tiempo o participa en costes».
+</Info>
+
+## Tipos de capacidad
+
+Los permisos distinguen capacidades con efectos diferentes:
+
+| Capacidad | Qué permite |
 | --- | --- |
-| Usuario | Identidad con credenciales de acceso. |
-| Perfil | Conjunto reutilizable de permisos. |
-| Permiso | Capacidad concreta para leer, editar o ejecutar una acción. |
-| Empleado | Persona operativa que registra trabajo, aunque no siempre tenga usuario. |
+| Consulta | Ver datos. |
+| Edición | Crear o modificar registros y, según el módulo, completarlos o cancelarlos. |
+| Ejecución | Realizar acciones operativas específicas, como trabajar en planta, secuenciar órdenes o activar versiones. |
 
-Usuario y empleado pueden estar vinculados, pero no son lo mismo. El usuario responde a "quién entra y qué puede hacer". El empleado responde a "quién trabaja, registra tiempo o participa en costes".
+Un permiso define acceso, pero no elimina las reglas del dato. Por ejemplo, el estado de un documento puede impedir una acción aunque el usuario disponga del permiso correspondiente.
 
-## Diseño de perfiles
+## Perfiles por responsabilidad
 
-Crea perfiles por responsabilidad real, no por persona individual.
+Los perfiles representan responsabilidades reutilizables. No necesitan reproducir a cada persona de la empresa.
 
 | Perfil típico | Alcance habitual |
 | --- | --- |
@@ -31,21 +51,13 @@ Crea perfiles por responsabilidad real, no por persona individual.
 | Mantenimiento | Activos, preventivos y partes. |
 | Consulta | Lectura sin cambios operativos. |
 
-Evita perfiles demasiado amplios para perfiles temporales o externos. Un permiso de escritura puede cambiar stock, costes o trazabilidad.
-
-## Cómo se organizan los permisos
-
-Los permisos suelen separar consulta, edición y ejecución. La consulta permite ver datos. La edición permite crear, modificar, completar o cancelar registros. La ejecución habilita acciones operativas específicas, como trabajar en planta, secuenciar órdenes o activar versiones.
-
-Asigna permisos según la responsabilidad real de cada equipo. No todos los perfiles necesitan modificar datos, y algunas acciones críticas conviene reservarlas a responsables concretos.
+<Warning>
+  Los permisos de escritura pueden cambiar stock, costes o trazabilidad. Los perfiles temporales o externos no deberían incluir capacidades ajenas a su responsabilidad.
+</Warning>
 
 ## Permisos por módulo
 
-Los permisos suelen separar lectura y escritura. La lectura permite consultar; la escritura permite crear, editar, completar o cancelar según el módulo.
-
-Algunos flujos requieren permisos adicionales. Por ejemplo, subir evidencias puede requerir permisos de archivos además del permiso funcional.
-
-| Módulo | Accesos habituales |
+| Módulo | Datos y acciones habituales |
 | --- | --- |
 | Acceso común | Entrada a Bold, modo administrativo y modo de trabajo. |
 | Catálogo | Familias, propiedades y artículos. |
@@ -57,17 +69,32 @@ Algunos flujos requieren permisos adicionales. Por ejemplo, subir evidencias pue
 | Archivos y etiquetas | Archivos adjuntos, evidencias, diseños y plantillas. |
 | Smart Factory | Informes, Boldy, tareas y automatizaciones. |
 
-Administrar usuarios, perfiles y permisos requiere un perfil de administración de la aplicación. No lo gestiones como un permiso operativo de personal.
+Algunas capacidades combinan más de un módulo. Por ejemplo, subir una evidencia puede requerir acceso a archivos además del permiso sobre el elemento funcional.
 
-<Tip>
-  Si una acción no aparece o falla, revisa dos cosas: el estado del documento y los permisos del usuario.
-</Tip>
+Administrar usuarios, perfiles y permisos requiere un perfil de administración de la aplicación. No es un permiso operativo de personal.
 
-## Claves de integración y automatizaciones
+## Ejemplo ilustrativo
 
-Las claves de integración no usan los perfiles de usuario ni permiten configurar alcances. Actualmente tienen acceso administrativo amplio al tenant. Consulta [Claves de integración y avisos externos](/es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos) para protegerlas y rotarlas.
+Marta puede ser a la vez usuaria y empleada:
 
-Las automatizaciones sí tienen permisos delegados. Concede a cada automatización solo los permisos que necesita para completar su trabajo.
+| Dimensión | Ejemplo |
+| --- | --- |
+| Usuario | Entra en Bold con sus credenciales. |
+| Perfil | Tiene el perfil **Responsable de producción**. |
+| Permisos | Puede consultar y actualizar órdenes de fabricación. |
+| Empleado | Registra tiempo en operaciones y participa en el cálculo de costes. |
+
+Si solo necesitara registrar trabajo desde una identidad operativa, podría existir como empleada sin disponer de un usuario con acceso administrativo.
+
+## Acceso de integraciones y automatizaciones
+
+| Identidad | Modelo de acceso |
+| --- | --- |
+| Usuario | Recibe permisos mediante un perfil. |
+| Clave de integración | No usa perfiles ni permite configurar alcances. Actualmente tiene acceso administrativo amplio al tenant. |
+| Automatización | Actúa con permisos delegados para completar su trabajo. |
+
+Estas identidades no son intercambiables. Consulta [Claves de integración y avisos externos](/es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos) para conocer el alcance de las credenciales técnicas.
 
 ## Relacionado
 
