@@ -4,10 +4,56 @@ description: "Consulta los cambios recientes de la aplicación."
 rss: true
 ---
 
-<Update label="2026-09-09" tags={["Correcciones"]}>
+<Update
+  label="2026-09-14"
+  tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
+>
+  ## Asistentes de planificación
+
+  - Los asistentes de compras y producción permiten trabajar solo con artículos de aprovisionamiento contra stock o incluir todos los artículos.
+
+  ## Más capacidades para Boldy
+
+  - Boldy puede consultar la documentación oficial y utilizar más herramientas de costes, catálogo, mantenimiento, producción y almacén cuando el usuario y el agente tienen los permisos necesarios.
+
+  ## Mejoras
+
+  - La configuración de unidades alternativas explica con más claridad el factor de conversión y la creación de artículos conserva la unidad seleccionada.
+
+  ## Correcciones
+
+  - Las automatizaciones se ejecutan con los permisos guardados en su configuración, aunque hayan cambiado los permisos de la persona que inicia la ejecución.
+  - Los mensajes de voz enviados desde Telegram admiten más variantes del formato de audio.
+  - Al eliminar una acción de mantenimiento, también se retira de las causas donde estaba planificada.
+</Update>
+
+<Update
+  label="2026-09-07"
+  tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
+>
+  ## Unidades de medida alternativas
+
+  - El catálogo incorpora la gestión de unidades de medida. Puedes definir para cada artículo una unidad principal, unidades alternativas y su factor de conversión.
+  - Los pedidos de venta y compra permiten introducir cantidades en una unidad alternativa. Bold conserva la unidad elegida y muestra las cantidades con su unidad en planificación, producción, almacén y modo de trabajo.
+
+  ## Costes teóricos de fabricación
+
+  - El coste planificado de los artículos fabricados se calcula a partir de materiales, mano de obra y máquinas. La ficha del artículo separa los costes directos de los heredados de semielaborados.
+
+  ## Boldy por voz y Telegram
+
+  - Puedes vincular tu cuenta desde el perfil para conversar con Boldy en Telegram. Las conversaciones admiten imágenes, archivos y mensajes de voz.
+  - Las tareas de Smart Factory permiten grabar o adjuntar audio. Bold transcribe la grabación y muestra la transcripción junto al mensaje.
+
+  ## Mejoras
+
+  - Las respuestas de Boldy en Telegram conservan el formato Markdown y muestran el estado de escritura mientras se prepara la respuesta.
+  - Las conexiones MCP pueden consultar documentación de conceptos de Bold como recursos de contexto.
+
   ## Correcciones
 
   - Al lanzar una OF, las entradas basadas en propiedades seleccionan el único artículo disponible de la familia aunque la receta conserve valores de propiedades que ya no existen.
+  - El desglose de costes incluye correctamente materiales con aprovisionamiento **Ignorar** y mantiene separados los costes directos y los heredados.
 </Update>
 
 <Update

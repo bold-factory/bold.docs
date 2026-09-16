@@ -1,0 +1,7 @@
+interface:
+  display_name: "Update changelog"
+  short_description: "Resume cambios semanales de producción"
+  default_prompt: "Usa $update-changelog para revisar los cambios recientes de producción y actualizar el changelog de Bold Docs."
+
+policy:
+  allow_implicit_invocation: false
