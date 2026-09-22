@@ -1,0 +1,19 @@
+es/ayuda/almacen/mover-stock.mdx
+  s_896ea316e93752::t_02c6cd04642a8e 23,26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "e8041468fca3e90879ae3bc2fbaf69d44df3078d",
+  "prompts": {},
+  "sessions": {
+    "s_896ea316e93752": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0cb35-017c-7d83-a4af-d7cab699cbca",
+        "model": "gpt-6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
