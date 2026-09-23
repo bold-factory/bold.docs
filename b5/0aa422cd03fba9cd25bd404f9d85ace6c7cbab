@@ -1,0 +1,23 @@
+es/ayuda/mantenimiento/crear-parte-de-trabajo.mdx
+  s_9ebb7149919f61::t_fb17afc100f8f6 79
+es/ayuda/mantenimiento/como-configurar-el-mantenimiento.mdx
+  s_9ebb7149919f61::t_fb17afc100f8f6 32-35
+es/conceptos/fabricacion/inspecciones-y-controles.mdx
+  s_9ebb7149919f61::t_fb17afc100f8f6 55-56
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "b50aa422cd03fba9cd25bd404f9d85ace6c7cbab",
+  "prompts": {},
+  "sessions": {
+    "s_9ebb7149919f61": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0cf2e-833e-74e2-a165-36e8541ba46a",
+        "model": "gpt-6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
