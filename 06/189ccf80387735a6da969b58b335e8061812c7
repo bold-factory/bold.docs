@@ -1,0 +1,21 @@
+es/ayuda/mantenimiento/crear-parte-de-trabajo.mdx
+  s_da6342d961b518::t_e50e1c32d34ffc 79
+es/conceptos/mantenimiento/causas-y-acciones.mdx
+  s_da6342d961b518::t_dd9aec51438411 40-41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "06189ccf80387735a6da969b58b335e8061812c7",
+  "prompts": {},
+  "sessions": {
+    "s_da6342d961b518": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4789ec66-685c-4936-ab22-820d229306ab",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
