@@ -1,0 +1,22 @@
+es/conceptos/fabricacion/planes-de-produccion.mdx
+  s_17bd9df8f81d7a::t_f879c349cf3a71 50-51,58-63
+  s_17bd9df8f81d7a::t_a54a65975f220b 64
+es/ayuda/produccion/plan-de-produccion.mdx
+  s_17bd9df8f81d7a::t_f879c349cf3a71 35-41,60
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "5f62f3a9fad02695507b705d07eec55420c1ee0c",
+  "prompts": {},
+  "sessions": {
+    "s_17bd9df8f81d7a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0cf98-c3ae-7211-9d0e-d6374500ffa0",
+        "model": "gpt-6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
