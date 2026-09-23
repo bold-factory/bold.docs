@@ -1,0 +1,21 @@
+es/conceptos/fabricacion/inspecciones-y-controles.mdx
+  s_9ebb7149919f61::t_2f79db12741315 32-33
+es/conceptos/mantenimiento/causas-y-acciones.mdx
+  s_9ebb7149919f61::t_2f79db12741315 33-34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "1d2343075ce62461036b54d19eef8baba98d2e28",
+  "prompts": {},
+  "sessions": {
+    "s_9ebb7149919f61": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0cf2e-833e-74e2-a165-36e8541ba46a",
+        "model": "gpt-6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
