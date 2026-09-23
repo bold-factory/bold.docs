@@ -57,10 +57,10 @@ Resolver calcula una propuesta. También puedes pedir que se aplique automática
 
 | Modo | Cómo calcula la propuesta |
 | --- | --- |
-| **Básico** | Busca rápidamente una secuencia factible con una heurística. Si no logra completar la secuencia, el cálculo falla. |
+| **Básico** | Busca rápidamente una secuencia factible con una heurística. Si no logra completar la secuencia, el plan queda en **Fallido**. |
 | **Avanzado** | Usa la secuencia heurística como punto de partida y la refina con optimización matemática para mejorar el resultado. Puede tardar varios minutos. |
 
-El diálogo **Resolver** selecciona **Básico** inicialmente. Si integras mediante la API y omites `mode` al crear y resolver un plan o al llamar a **Resolver**, el servidor utiliza **Avanzado**.
+El diálogo **Resolver** selecciona **Básico** inicialmente. Si integras mediante la API y omites `mode` al crear y resolver un plan o al llamar a la operación de resolución, el servidor utiliza **Avanzado**.
 
 Al aplicar, Bold actualiza la fecha objetivo de las operaciones abiertas incluidas. En operaciones **Pendientes** o **Planificadas**, también actualiza la estación y la herramienta seleccionadas. No crea asignaciones de empleado ni modifica operaciones finalizadas o canceladas.
 
@@ -71,7 +71,7 @@ Al aplicar, Bold actualiza la fecha objetivo de las operaciones abiertas incluid
 | **Pendiente** | El plan está creado o actualizado, pero todavía no se está resolviendo. |
 | **Procesando** | Bold está calculando una propuesta de secuencia. |
 | **Solución encontrada** | Existe una propuesta revisable y aplicable. |
-| **Fallido** | El cálculo no terminó correctamente. |
+| **Fallido** | El cálculo no terminó correctamente. En modo básico, también indica que la heurística no pudo completar la secuencia. |
 | **Sin solución factible** | No se encontró una secuencia válida con los datos y restricciones actuales. |
 
 Consulta [Estados de fabricación](/es/conceptos/fabricacion/estados-de-fabricacion) para distinguir estados de planes y estados de ejecución real.
