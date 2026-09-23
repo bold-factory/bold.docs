@@ -47,11 +47,20 @@ Al crear un plan, Bold carga todas las operaciones y órdenes activas, las estac
 | Crear y resolver | Crea el escenario e inicia el cálculo. |
 | Crear, resolver y aplicar | Crea, resuelve y aplica automáticamente la solución encontrada. |
 
+Las dos opciones que resuelven permiten elegir el **modo de resolución** al crear el plan. En la aplicación se selecciona **Básico** inicialmente.
+
 Actualizar el plan vuelve a copiar la realidad operativa actual. Los cambios posteriores en órdenes, recursos, horario o materiales no aparecen hasta que lo actualizas de nuevo.
 
 ## Resolver y aplicar
 
 Resolver calcula una propuesta. También puedes pedir que se aplique automáticamente si el cálculo encuentra una solución.
+
+| Modo | Cómo calcula la propuesta |
+| --- | --- |
+| **Básico** | Busca rápidamente una secuencia factible con una heurística. Si no logra completar la secuencia, el cálculo falla. |
+| **Avanzado** | Usa la secuencia heurística como punto de partida y la refina con optimización matemática para mejorar el resultado. Puede tardar varios minutos. |
+
+El diálogo **Resolver** selecciona **Básico** inicialmente. Si integras mediante la API y omites `mode` al crear y resolver un plan o al llamar a **Resolver**, el servidor utiliza **Avanzado**.
 
 Al aplicar, Bold actualiza la fecha objetivo de las operaciones abiertas incluidas. En operaciones **Pendientes** o **Planificadas**, también actualiza la estación y la herramienta seleccionadas. No crea asignaciones de empleado ni modifica operaciones finalizadas o canceladas.
 
