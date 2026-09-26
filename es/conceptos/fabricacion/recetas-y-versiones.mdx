@@ -121,7 +121,7 @@ Una fórmula puede combinar:
 
 El múltiplo es opcional, vale `1` por defecto y debe ser mayor que cero. Puede ser un número, una propiedad o una fórmula.
 
-En el editor, escribe `@` o usa los botones **Propiedad** y **Dato de la orden** para insertar valores, y **Redondear** para añadir una función. Pulsa `Ctrl+Z` para deshacer cualquier cambio.
+En el editor, escribe `@` o usa los botones **Propiedad** y **Dato de la orden** para insertar valores, y **Redondear** para añadir una función. Pulsa `Ctrl+Z` para deshacer cualquier cambio. Los ejemplos de esta página muestran las fórmulas como se ven en el editor, con el nombre de cada propiedad o dato insertado.
 
 En las instrucciones, cada bloque de fórmula se sustituye por su resultado:
 
@@ -132,7 +132,7 @@ Cortar material a [Largo]+7 mm
 Si el artículo fabricado tiene `Largo = 100`, la orden mostrará `Cortar material a 107 mm`.
 
 <Note>
-  Si falta el valor de una propiedad o el múltiplo no es mayor que cero, Bold no puede calcular la fórmula. El cálculo de la receta falla y las instrucciones muestran la fórmula sin evaluar.
+  Bold no deja guardar una fórmula con un múltiplo fijo que no sea mayor que cero. Si falta el valor de una propiedad, o un múltiplo que depende de una propiedad no es mayor que cero, Bold no puede calcular la fórmula al crear la OF: el cálculo de la receta falla y las instrucciones muestran la fórmula sin evaluar.
 </Note>
 
 ## Edición y trazabilidad
