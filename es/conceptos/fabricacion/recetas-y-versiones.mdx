@@ -103,13 +103,37 @@ Las condiciones solo pueden usar propiedades que afectan al artículo fabricado 
 
 ## Fórmulas
 
-Las fórmulas usan propiedades numéricas o datos de contexto para calcular cantidades, medidas o instrucciones.
+Las fórmulas calculan la cantidad de las entradas y los coproductos, la duración de los pasos y los valores que se muestran en sus instrucciones.
+
+Una fórmula puede combinar:
+
+- números, con punto como separador decimal, como `0.15`;
+- propiedades numéricas del artículo fabricado, como **Largo**;
+- la **Cantidad de la OF**;
+- sumas, restas, multiplicaciones, divisiones y paréntesis;
+- las funciones de redondeo `round`, `ceil` y `floor`.
+
+| Función | Resultado | Ejemplo |
+| --- | --- | --- |
+| `round(valor, múltiplo)` | Redondea al múltiplo más cercano. Los valores intermedios se redondean alejándose de cero. | `round(Largo * 0.35, 0.01)` deja dos decimales. |
+| `ceil(valor, múltiplo)` | Redondea hacia arriba al siguiente múltiplo. | `ceil(Cantidad de la OF * 1.05, 12)` calcula cajas completas de 12. |
+| `floor(valor, múltiplo)` | Redondea hacia abajo al múltiplo anterior. | `floor(Largo / 250)` cuenta las piezas enteras de 250 mm. |
+
+El múltiplo es opcional, vale `1` por defecto y debe ser mayor que cero. Puede ser un número, una propiedad o una fórmula.
+
+En el editor, escribe `@` o usa los botones **Propiedad** y **Dato de la orden** para insertar valores, y **Redondear** para añadir una función. Pulsa `Ctrl+Z` para deshacer cualquier cambio.
+
+En las instrucciones, cada bloque de fórmula se sustituye por su resultado:
 
 ```text
 Cortar material a [Largo]+7 mm
 ```
 
 Si el artículo fabricado tiene `Largo = 100`, la orden mostrará `Cortar material a 107 mm`.
+
+<Note>
+  Si falta el valor de una propiedad o el múltiplo no es mayor que cero, Bold no puede calcular la fórmula. El cálculo de la receta falla y las instrucciones muestran la fórmula sin evaluar.
+</Note>
 
 ## Edición y trazabilidad
 
