@@ -1,0 +1,21 @@
+es/ayuda/produccion/especificar-materiales-pasos-y-controles.mdx
+  s_ef8421c00842f9::t_351ec61405f4e8 26,37,63-66,68
+es/conceptos/fabricacion/recetas-y-versiones.mdx
+  s_ef8421c00842f9::t_12e4a8e0b80878 106-126,134-137
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "fa18372fe86dd00ffbe708850fdd37360110b1ce",
+  "prompts": {},
+  "sessions": {
+    "s_ef8421c00842f9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e5205e5a-6a74-448c-b829-d0ff7d7d7ca6",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
