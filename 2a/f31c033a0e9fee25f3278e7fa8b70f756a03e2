@@ -1,0 +1,31 @@
+scripts/index-search.mjs
+  s_9ff74061df4914::t_abc60412dba461 1-86,98-133,135-179,181-186,203-365
+  s_9ff74061df4914::t_a4a3fc4790b3f8 187-202
+  s_9ff74061df4914::t_74f617b82722f8 88-96
+  s_9ff74061df4914::t_f49b1245730328 87
+  s_9ff74061df4914::t_3b35e55673b6be 97
+  s_9ff74061df4914::t_9f4634f86382e2 134
+  s_9ff74061df4914::t_3c7d397c98b729 180
+README.md
+  s_9ff74061df4914::t_7844b87514b1e2 32-52
+.github/workflows/search-index.yml
+  s_9ff74061df4914::t_3796e4067d301d 1-36
+package.json
+  s_9ff74061df4914::t_43d50973190579 7-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "2af31c033a0e9fee25f3278e7fa8b70f756a03e2",
+  "prompts": {},
+  "sessions": {
+    "s_9ff74061df4914": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b0edd3f9-3aeb-402e-b283-8f933e48016b",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
