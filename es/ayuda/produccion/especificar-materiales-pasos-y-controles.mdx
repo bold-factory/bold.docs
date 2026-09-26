@@ -23,7 +23,7 @@ Clasifica los materiales según el papel que desempeñan en la operación:
 
 **Artículo:** selecciona la materia prima, el semielaborado o el coproducto que quieres incorporar a la receta.
 
-**Cantidad/unidad fabricada:** define el consumo por cada unidad fabricada. El botón **+** permite crear fórmulas con sumas, restas, multiplicaciones, divisiones, paréntesis y propiedades numéricas. Bold sustituye cada propiedad por el valor del artículo al generar la OF.
+**Cantidad/unidad fabricada:** define el consumo por cada unidad fabricada. Escribe un número, con punto como separador decimal, o una fórmula. Usa **Propiedad** y **Dato de la orden**, o escribe `@`, para insertar propiedades numéricas del artículo o la cantidad de la OF. Usa **Redondear** para añadir `round`, `ceil` o `floor`. Debajo del campo verás si la fórmula es válida. Bold sustituye cada valor al generar la OF. Consulta las [fórmulas de receta](/es/conceptos/fabricacion/recetas-y-versiones).
 
 **Momento de consumo:** elige cuándo se registra el consumo:
 
@@ -34,7 +34,7 @@ Clasifica los materiales según el papel que desempeñan en la operación:
   **Ejemplo: consumo de queso por unidad**
 
   - **Artículo:** seleccionas _Queso mozzarella rallado_ en el menú desplegable.
-  - **Cantidad/unidad fabricada:** introduces `0,15` para indicar que cada pizza requiere 0,15 kg o 150 g de queso.
+  - **Cantidad/unidad fabricada:** introduces `0.15` para indicar que cada pizza requiere 0,15 kg o 150 g de queso.
   - **Momento de consumo:** eliges **Cada unidad**. El sistema descontará 150 g de mozzarella cada vez que la línea termine una pizza.
 </Note>
 
@@ -60,11 +60,12 @@ Una orden de fabricación puede producir una unidad o muchas. El momento de ejec
 **Instrucciones:** combina los elementos que necesite el operario para ejecutar el paso:
 
 - **Texto técnico y de seguridad:** describe el procedimiento, los parámetros de la máquina o las advertencias necesarias. Por ejemplo: `Ajustar la presión a 4 bar`.
-- **Archivos:** usa **Subir archivo** para adjuntar planos en PDF, fichas técnicas o fotografías de referencia.
-- **Recogida de datos:** usa **+ Nuevo atributo** para pedir un valor numérico, texto o una confirmación antes de avanzar. Por ejemplo, la temperatura de la máquina o el lote del proveedor.
-- **Fórmulas:** usa **Σ Fórmula** para calcular un resultado a partir de los atributos registrados, como el peso neto después de restar la tara.
+- **Formato:** usa negrita, cursiva, **Título** y **Subtítulo** para estructurar el texto, y **Enlace** para añadir un enlace con su texto.
+- **Archivos:** usa el clip para adjuntar planos en PDF, fichas técnicas o fotografías de referencia.
+- **Datos del artículo y de la orden:** usa **Propiedad** o **Dato de la orden**, o escribe `@`, para mostrar valores como el largo del artículo, el solicitante o la cantidad de la OF.
+- **Fórmulas:** usa **Fórmula** para crear un bloque que se sustituye por un resultado calculado, como `Preparar ceil(Cantidad de la OF / 12) cajas`. Usa **Redondear** para añadir `round`, `ceil` o `floor`.
 
-**Duración:** indica el tiempo estimado estándar en minutos. Si es un paso por unidad y tarda 30 segundos, introduce `0,5`.
+**Duración:** indica el tiempo estimado estándar en minutos. Si es un paso por unidad y tarda 30 segundos, introduce `0.5`. También admite fórmulas.
 
 ## Asignar controles
 
