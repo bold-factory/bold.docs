@@ -29,6 +29,27 @@ pnpm broken-links
 
 The project link checker resolves localized `/es/` routes against their MDX files. You can also run `pnpm broken-links:mintlify` to compare the result with the Mintlify CLI.
 
+## In-app search index
+
+The search dialog of the Bold app (`Ctrl+K`) also searches this documentation. `scripts/index-search.mjs` splits every page listed in `docs.json` into sections, one per `##` or `###` heading, and indexes them in Typesense with a multilingual embedding for semantic search. Sections that only link to other pages are skipped.
+
+Each run builds a new `docs_<timestamp>` collection and then points the `docs` alias to it, so removed pages disappear and searches never see a partial index. The `Update search index` workflow runs it on every push to `main` that changes content.
+
+The workflow needs these settings in the `production` environment:
+
+| Setting | Type | Purpose |
+| --- | --- | --- |
+| `TYPESENSE_URL` | Variable | Typesense server, for example `https://search.bold-factory.com`. |
+| `TYPESENSE_ADMIN_API_KEY` | Secret | Key that can manage collections, aliases and keys. |
+| `TYPESENSE_DOCS_SEARCH_KEY` | Variable | Value of the search-only key the app uses. The script creates the key if it is missing. Use the same value as `NEXT_PUBLIC_DOCUMENTATION_SEARCH_KEY` in `bold.client`. |
+
+To inspect the sections without indexing, or to fill a local Typesense:
+
+```bash
+pnpm search:index --dry-run
+TYPESENSE_URL=http://localhost:8108 TYPESENSE_ADMIN_API_KEY=local-typesense-api-key pnpm search:index
+```
+
 ## Project structure
 
 | Path | Purpose |
