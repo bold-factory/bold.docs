@@ -11,6 +11,9 @@ on:
       - ".github/workflows/search-index.yml"
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 # Each run replaces the index, so a newer run must not overlap an older one.
 concurrency:
   group: search-index
@@ -20,6 +23,7 @@ jobs:
   index:
     runs-on: ubuntu-latest
     environment: production
+    timeout-minutes: 15
 
     steps:
       - uses: actions/checkout@v4

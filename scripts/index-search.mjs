@@ -321,6 +321,9 @@ async function main() {
   const documents = buildDocuments();
   const pageCount = new Set(documents.map((document) => document.page_path)).size;
   console.log(`Prepared ${documents.length} sections from ${pageCount} pages`);
+  if (documents.length === 0) {
+    throw new Error("No documentation sections were produced; refusing to replace the search index");
+  }
 
   if (process.argv.includes("--dry-run")) {
     console.log(JSON.stringify(documents.slice(0, 3), null, 2));
