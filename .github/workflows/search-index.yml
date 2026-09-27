@@ -1,0 +1,40 @@
+name: Update search index
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "es/**"
+      - "docs.json"
+      - "scripts/index-search.mjs"
+      - ".github/workflows/search-index.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Each run replaces the index, so a newer run must not overlap an older one.
+concurrency:
+  group: search-index
+  cancel-in-progress: false
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    environment: production
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Index documentation in Typesense
+        run: node scripts/index-search.mjs
+        env:
+          TYPESENSE_URL: ${{ vars.TYPESENSE_URL }}
+          TYPESENSE_ADMIN_API_KEY: ${{ secrets.TYPESENSE_ADMIN_API_KEY }}
+          TYPESENSE_DOCS_SEARCH_KEY: ${{ vars.TYPESENSE_DOCS_SEARCH_KEY }}
