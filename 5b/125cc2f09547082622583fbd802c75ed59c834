@@ -1,0 +1,21 @@
+.github/workflows/search-index.yml
+  s_f615fe56b9eb5a::t_7180900b91cecc 14-16,26
+scripts/index-search.mjs
+  s_f615fe56b9eb5a::t_7180900b91cecc 324-326
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "5b125cc2f09547082622583fbd802c75ed59c834",
+  "prompts": {},
+  "sessions": {
+    "s_f615fe56b9eb5a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0e366-d8b9-7351-8386-a667319e0bce",
+        "model": "gpt-6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
