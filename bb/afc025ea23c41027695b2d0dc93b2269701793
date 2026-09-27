@@ -1,0 +1,21 @@
+es/conceptos/panel-de-control/datos-y-archivos.mdx
+  s_33fd7cd6cbdd7d::t_e090d5b9dcdeeb 28
+es/conceptos/panel-de-control/cuenta-y-empresa.mdx
+  s_33fd7cd6cbdd7d::t_e090d5b9dcdeeb 24-25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "bbafc025ea23c41027695b2d0dc93b2269701793",
+  "prompts": {},
+  "sessions": {
+    "s_33fd7cd6cbdd7d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0e50b-cec0-7c20-96cf-d7577edcb7ec",
+        "model": "gpt-6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
