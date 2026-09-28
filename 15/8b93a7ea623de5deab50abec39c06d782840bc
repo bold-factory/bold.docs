@@ -1,0 +1,21 @@
+es/conceptos/fabricacion/inspecciones-y-controles.mdx
+  s_4b2211302b0c53::t_d50c7e7b45ea4c 51
+es/ayuda/almacen/configurar-y-completar-controles-de-recepcion.mdx
+  s_4b2211302b0c53::t_d50c7e7b45ea4c 12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "158b93a7ea623de5deab50abec39c06d782840bc",
+  "prompts": {},
+  "sessions": {
+    "s_4b2211302b0c53": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0e88e-79cd-76a2-9afa-e817c429745f",
+        "model": "gpt-6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
