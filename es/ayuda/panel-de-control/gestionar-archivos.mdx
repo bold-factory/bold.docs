@@ -9,12 +9,20 @@ Usa **Gestión de archivos** para consultar los documentos y adjuntos almacenado
 
 | Campo | Uso |
 | --- | --- |
-| Nombre | Nombre original del archivo. |
-| Tipo de contenido | Formato detectado y validado. |
-| Etiquetas | Contexto que relaciona el archivo con registros o procesos. |
+| Nombre | Nombre con el que se guardó el archivo. |
+| Tipo y tamaño | Formato detectado y espacio que ocupa, si está disponible. |
+| Contexto | Etiquetas registradas para el archivo. Las etiquetas de algunos registros permiten abrirlos desde el listado. «Sin contexto registrado» no confirma que el archivo no aparezca en unas notas. |
 | URI de lectura | Enlace seguro para abrir o descargar el archivo. |
-| Gestionado por el sistema | Indica si Bold controla el archivo para un proceso interno. |
+| Gestión | Indica si Bold gestiona el archivo. Los archivos gestionados por Bold no se pueden eliminar desde el listado general. |
 | Auditoría | Fecha de creación y usuario que creó el archivo. |
+
+## Archivos enlazados en notas e instrucciones
+
+Cuando guardas un enlace a un archivo de Bold en un campo que admite Markdown, Bold añade automáticamente una etiqueta con el registro que lo usa. Esto se aplica a las notas de pedidos y líneas de compra y venta, partes de trabajo, planes preventivos, órdenes y peticiones de fabricación, así como a las instrucciones de operaciones y pasos de receta. Desde el contexto del listado puedes abrir ese registro.
+
+La asociación se actualiza en segundo plano después de guardar el registro. Si retiras el enlace o eliminas el registro, su etiqueta de uso desaparece tras el procesamiento. Un archivo puede tener varias etiquetas si se utiliza en varios lugares. Los enlaces que ya estaban guardados antes de esta función se asociarán al modificar y guardar el campo que los contiene.
+
+La etiqueta indica dónde se usa el archivo. No convierte por sí sola el archivo en **gestionado por Bold** ni impide eliminarlo desde el listado.
 
 ## Formatos admitidos
 
@@ -43,7 +51,7 @@ Bold valida la extensión y el contenido real del archivo. Entre los formatos ad
     Filtra por nombre, fecha o usuario cuando aplique.
   </Step>
   <Step title="Revisa metadatos">
-    Comprueba el tipo de contenido, las etiquetas y si el sistema gestiona el archivo.
+    Comprueba el tipo, tamaño, contexto y si Bold gestiona el archivo.
   </Step>
   <Step title="Abre o descarga">
     Usa el enlace de lectura para revisar el contenido.
