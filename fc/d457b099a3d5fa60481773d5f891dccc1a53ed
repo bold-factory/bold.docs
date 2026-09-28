@@ -1,0 +1,19 @@
+es/ayuda/panel-de-control/gestionar-archivos.mdx
+  s_2088e04df3df15::t_ac4ed90502553e 14,76
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "fcd457b099a3d5fa60481773d5f891dccc1a53ed",
+  "prompts": {},
+  "sessions": {
+    "s_2088e04df3df15": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0e56e-7f17-7933-bafb-035984d9270c",
+        "model": "gpt-6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
