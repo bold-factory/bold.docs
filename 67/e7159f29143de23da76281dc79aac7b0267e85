@@ -1,0 +1,36 @@
+es/conceptos/fabricacion/herramientas-y-caracteristicas.mdx
+  s_4b2211302b0c53::t_3f3f57baae758e 22-23
+es/conceptos/fabricacion/turnos.mdx
+  s_4b2211302b0c53::t_3f3f57baae758e 32-33
+es/conceptos/catalogo/unidades-de-medida.mdx
+  s_4b2211302b0c53::t_e2a99c66311a65 39
+  s_287b60a39cc935::t_32880396306c84 40
+es/conceptos/fabricacion/inspecciones-y-controles.mdx
+  s_4b2211302b0c53::t_3f3f57baae758e 51-52
+es/conceptos/smart-factory/informes.mdx
+  s_4b2211302b0c53::t_3f3f57baae758e 30-31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "67e7159f29143de23da76281dc79aac7b0267e85",
+  "prompts": {},
+  "sessions": {
+    "s_287b60a39cc935": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0e8a6-7676-7991-a9fd-606829269d89",
+        "model": "gpt-6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_4b2211302b0c53": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0e88e-79cd-76a2-9afa-e817c429745f",
+        "model": "gpt-6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
