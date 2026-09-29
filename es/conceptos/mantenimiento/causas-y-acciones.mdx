@@ -35,15 +35,32 @@ Una acción es una tarea reutilizable o comprobación que puede completarse en u
 
 Define acciones cuando quieres estandarizar trabajo, medir cumplimiento o comparar intervenciones.
 
-Completar un parte no exige completar todas sus acciones. Las acciones pendientes permanecen como parte del historial. Si completas una acción, debes indicar un resultado compatible con su tipo.
+Si completas una acción, debes indicar un resultado compatible con su tipo.
 
-Si te equivocas al completar una acción, usa **Deshacer** sobre ella. La acción vuelve a estar planificada; se borran el resultado y la referencia al empleado que la completó, pero se conservan sus notas. Después puedes completarla de nuevo con el resultado correcto. No puedes deshacer acciones de un parte completado o cancelado.
+### Instrucciones y notas de ejecución
+
+Cada acción de un parte tiene dos textos distintos:
+
+| Texto | Quién lo escribe | Uso |
+| --- | --- | --- |
+| Instrucciones | Se definen en la acción planificada de la causa, o al añadir la acción al parte. | Explican cómo hacer la acción. No cambian al completarla. |
+| Notas de ejecución | El técnico, al completar la acción. | Observaciones opcionales sobre lo que se hizo. |
+
+### Acciones obligatorias
+
+Una acción puede ser **obligatoria**. No puedes finalizar un parte mientras tenga acciones obligatorias sin completar. Las acciones no obligatorias pueden quedar pendientes y permanecen como parte del historial.
+
+La obligatoriedad se configura en la acción planificada de la causa y se copia al parte al crearlo. También puedes marcar una acción como obligatoria al añadirla directamente al parte. Desde **Mantenimiento > Partes** puedes cambiarla o quitar la acción del parte. En el modo de trabajo no se puede cambiar.
+
+Si te equivocas al completar una acción, usa **Deshacer** sobre ella. La acción vuelve a estar planificada; se borran el resultado y la referencia al empleado que la completó, pero se conservan sus notas de ejecución. Después puedes completarla de nuevo con el resultado correcto. No puedes deshacer acciones de un parte completado o cancelado.
 
 ## Relación entre causa y acción
 
-Una causa puede sugerir acciones habituales. Esto ayuda a que los partes incluyan comprobaciones coherentes para un tipo de incidencia.
+Una causa puede planificar acciones habituales, cada una con sus instrucciones y su obligatoriedad. Al crear un parte, Bold copia esas acciones al parte. Esto ayuda a que los partes incluyan comprobaciones coherentes para un tipo de incidencia.
 
-Ejemplo: la causa **Fuga hidráulica** puede sugerir acciones como **Revisar latiguillo**, **Comprobar presión** y **Limpiar zona**.
+Ejemplo: la causa **Fuga hidráulica** puede planificar acciones como **Revisar latiguillo**, **Comprobar presión** (obligatoria) y **Limpiar zona**.
+
+En el detalle de una acción puedes ver qué causas activas la planifican.
 
 ## Relacionado
 
