@@ -1,0 +1,19 @@
+es/conceptos/mantenimiento/causas-y-acciones.mdx
+  s_e09c319732c054::t_a97cabe9b9865b 53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "432c984574b0d8420b3222c83fef5198a6ec0e86",
+  "prompts": {},
+  "sessions": {
+    "s_e09c319732c054": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0ed88-18b4-7923-a7f8-f0c43123ffdd",
+        "model": "gpt-6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
