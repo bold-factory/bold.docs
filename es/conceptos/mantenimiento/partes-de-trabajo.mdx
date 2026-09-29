@@ -18,6 +18,7 @@ Explica qué ocurrió, por qué ocurrió, quién intervino, cuánto tiempo se de
 | Acciones | Tareas o comprobaciones realizadas. |
 | Tiempos | Mano de obra por empleado. |
 | Materiales | Repuestos o consumibles usados. |
+| Comentarios | Observaciones con fecha y autor añadidas durante el trabajo. |
 | Estado | Situación del parte. |
 
 ## Estados habituales
@@ -38,7 +39,17 @@ El coste del parte depende de materiales, lotes, cantidades, tiempo y coste hora
 
 ## Partes preventivos
 
-Una programación preventiva puede generar partes automáticamente. El parte generado sigue siendo la ejecución real; la programación solo define cuándo debe aparecer.
+Una programación preventiva puede generar partes automáticamente o lanzarse manualmente. El parte generado sigue siendo la ejecución real; la programación solo define cuándo debe aparecer. Desde el parte puedes abrir la programación que lo generó, aunque se haya eliminado.
+
+## Comentarios
+
+Los comentarios dejan constancia de lo ocurrido durante la intervención. Cada comentario guarda la fecha, el usuario y, desde el modo de trabajo, el empleado activo. Admiten formato y archivos adjuntos.
+
+- Puedes añadirlos desde **Mantenimiento > Partes** y desde el modo de trabajo, también en partes completados.
+- No se pueden editar. Solo se pueden eliminar desde **Mantenimiento > Partes**.
+- No se pueden añadir ni eliminar en partes cancelados.
+
+Los comentarios son distintos de las notas del parte, que describen el trabajo previsto.
 
 ## Deshacer una finalización
 
@@ -46,7 +57,7 @@ Puedes usar **Deshacer finalización** sobre un parte completado. El parte vuelv
 
 Si el parte ya tenía tiempos terminados, vuelve a **Pausado**. Si no tenía tiempos, vuelve a **Pendiente**. Un parte cancelado no se puede reabrir de esta forma.
 
-Las acciones son opcionales: puedes completar el parte aunque alguna quede pendiente. Si completas una acción, debes registrar un resultado válido para su tipo.
+Puedes completar el parte aunque queden acciones pendientes, salvo que alguna sea obligatoria. Si completas una acción, debes registrar un resultado válido para su tipo.
 
 ## Relacionado
 

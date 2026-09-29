@@ -13,7 +13,7 @@ La programación no es el parte. La programación indica cuándo debe crearse un
 | Dato | Uso |
 | --- | --- |
 | Activo | Equipo al que aplica. |
-| Frecuencia | Cada cuánto debe generarse. |
+| Frecuencia | Cada cuánto debe generarse: diaria, entre semana (de lunes a viernes), semanal, mensual, trimestral, semestral o anual. |
 | Próxima fecha | Momento previsto de la siguiente ocurrencia. |
 | Política | Qué hacer si hay partes abiertos. |
 | Plantilla | Causa principal, causas auxiliares y notas iniciales. |
@@ -32,7 +32,18 @@ Usa la política según el riesgo de duplicar partes. Para revisiones críticas 
 
 Cuando se genera un parte, ese parte contiene la ejecución real. Debe completarse con tiempos, acciones, materiales y observaciones como cualquier intervención.
 
-La programación conserva frecuencia e histórico de generación. El parte conserva qué se hizo.
+La programación conserva frecuencia e histórico de generación. El parte conserva qué se hizo. En el detalle de la programación se muestran sus partes relacionados, excepto los cancelados.
+
+## Lanzar manualmente
+
+Puedes crear un parte en el momento con **Lanzar ahora**, por ejemplo para adelantar una revisión.
+
+- Cuenta como una generación: aumenta el contador de generados y actualiza la última generación.
+- No cambia la próxima generación prevista.
+- No tiene en cuenta la política de generación.
+- Funciona aunque la programación esté deshabilitada, pero no si está eliminada.
+
+Si la política es **Omitir si hay parte abierto**, un parte lanzado manualmente que siga abierto también hará que se omita la siguiente ocurrencia.
 
 ## Si no genera un parte
 
