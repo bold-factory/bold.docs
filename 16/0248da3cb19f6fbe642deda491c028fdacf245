@@ -1,0 +1,33 @@
+es/conceptos/almacen/stock-y-movimientos.mdx
+  s_1ef1fcd3dc097a::t_e03e11e035ef37 74-93
+es/ayuda/almacen/investigar-diferencias-de-stock.mdx
+  s_1ef1fcd3dc097a::t_e03e11e035ef37 63-64
+  s_fbb20e3b5e7e5d::t_542fad073a4102 67
+  s_1ef1fcd3dc097a::t_de49363ea2b932 56-59,62,65-66,68-69
+es/ayuda/panel-de-control/exportar-datos.mdx
+  s_1ef1fcd3dc097a::t_5eb95e4a12e753 30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "160248da3cb19f6fbe642deda491c028fdacf245",
+  "prompts": {},
+  "sessions": {
+    "s_1ef1fcd3dc097a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6e11d02a-8698-4253-bfa5-d4c59d2a262a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_fbb20e3b5e7e5d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0f34b-3ddd-7070-9ef6-e2d99f06d9ad",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
