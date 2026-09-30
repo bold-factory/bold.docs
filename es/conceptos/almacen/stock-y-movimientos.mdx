@@ -71,6 +71,26 @@ Cada movimiento debe poder responder:
 
 Usa movimientos para investigar diferencias antes de crear ajustes manuales. Si ajustas sin revisar el origen, puedes corregir el saldo pero perder la causa.
 
+## Historial de stock
+
+**Ruta:** **Almacén > Control del stock > Historial de stock**
+
+El historial de stock reúne los cambios de stock de todos los artículos, ubicaciones y lotes en un periodo. Úsalo cuando no sabes qué artículo o ubicación causó una diferencia, o cuando quieres revisar toda la actividad de una zona.
+
+| Filtro | Comportamiento |
+| --- | --- |
+| Desde y hasta | Obligatorio. Por defecto muestra los últimos 7 días. El periodo puede abarcar como máximo un año. |
+| Artículo | Filtra por código o nombre desde las columnas **Cód. Art.** y **Artículo**. |
+| Ubicación | Filtra por nombre desde la columna **Ubicación**. |
+| Lote y tipo | Filtra por código de lote o por tipo de cambio desde sus columnas. |
+| Incluir reclasificaciones de lote | Muestra las reasignaciones y fusiones de lote. Están ocultas por defecto y nunca aparecen en artículos que no trabajan con lotes. |
+
+La columna **Causa** muestra el código o nombre del documento que originó el cambio, como un envío, una recepción, un inventario, un movimiento de almacén, una OF o un parte de trabajo. Haz clic en él para abrirlo. Si no tienes permiso para ver ese documento, Bold muestra su identificador.
+
+En la ficha de un artículo, la pestaña de stock muestra los **Últimos cambios de stock** del último año. Haz clic en **Ver más** para abrir el historial de stock con la columna **Cód. Art.** filtrada por ese artículo. Puedes quitar el filtro desde la propia columna.
+
+Para descargar todo el historial de stock, usa la colección **Historial de stock** en [Exportar datos](/es/ayuda/panel-de-control/exportar-datos). La exportación no aplica los filtros de esta pantalla.
+
 ## Stock negativo
 
 Un stock negativo indica que Bold registró una salida antes de tener una entrada que la cubra en la misma combinación de artículo, ubicación y lote.
