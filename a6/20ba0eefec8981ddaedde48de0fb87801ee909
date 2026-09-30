@@ -1,0 +1,21 @@
+es/conceptos/almacen/stock-y-movimientos.mdx
+  s_fbb20e3b5e7e5d::t_e52754230a390d 85
+es/ayuda/almacen/investigar-diferencias-de-stock.mdx
+  s_fbb20e3b5e7e5d::t_e52754230a390d 67-68
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "a620ba0eefec8981ddaedde48de0fb87801ee909",
+  "prompts": {},
+  "sessions": {
+    "s_fbb20e3b5e7e5d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0f34b-3ddd-7070-9ef6-e2d99f06d9ad",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
