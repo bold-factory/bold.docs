@@ -1,0 +1,23 @@
+es/ayuda/produccion/generar-peticiones-manualmente.mdx
+  s_954acafbd2abe3::t_010b675e74686b 22-24
+es/conceptos/planificacion/pedidos-de-venta.mdx
+  s_954acafbd2abe3::t_7d260df1c89fb0 49-58
+es/conceptos/fabricacion/peticiones-de-fabricacion.mdx
+  s_954acafbd2abe3::t_010b675e74686b 34-47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "fd0d62ef560f1138c86aea572133cb103ebf1ad2",
+  "prompts": {},
+  "sessions": {
+    "s_954acafbd2abe3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fdfc81fb-d24e-4952-bd8e-26bfd81bf605",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
