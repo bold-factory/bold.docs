@@ -1,0 +1,27 @@
+es/conceptos/mantenimiento/causas-y-acciones.mdx
+  s_bb60909450bc28::t_e114b5f03afd89 53,63-67
+es/conceptos/mantenimiento/partes-de-trabajo.mdx
+  s_bb60909450bc28::t_e114b5f03afd89 42
+es/conceptos/mantenimiento/mantenimiento-preventivo.mdx
+  s_bb60909450bc28::t_e114b5f03afd89 37,39,46
+es/ayuda/mantenimiento/mantenimiento-preventivo.mdx
+  s_bb60909450bc28::t_e114b5f03afd89 55,57,59,61
+es/ayuda/mantenimiento/crear-parte-de-trabajo.mdx
+  s_bb60909450bc28::t_e114b5f03afd89 42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "927e10c4852be11e83cce30fedc92e0f3f8870cd",
+  "prompts": {},
+  "sessions": {
+    "s_bb60909450bc28": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "997be307-facb-4af9-b666-de70e2c0ee02",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
