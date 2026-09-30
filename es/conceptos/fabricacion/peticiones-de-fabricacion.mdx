@@ -31,6 +31,21 @@ Una petición puede nacer desde una recomendación de planificación o de forma 
 
 Si está activada la generación automática de órdenes, Bold crea la OF al registrar la petición cuando el artículo está activo, tiene una receta principal válida y todas las entradas requeridas de la receta están resueltas. Si alguna condición no se cumple, la petición queda pendiente para revisión manual.
 
+## Cliente y solicitante
+
+Una petición puede estar vinculada a un cliente. En ese caso, el solicitante muestra el nombre que tenía el cliente al vincularlo y solo cambia si cambias el cliente.
+
+Si no hay cliente, el solicitante es un texto libre opcional. Las peticiones creadas desde el asistente de fabricación o sin solicitante lo dejan vacío.
+
+| Origen | Cliente y solicitante |
+| --- | --- |
+| Asistente de fabricación | Sin cliente ni solicitante. |
+| Demanda concreta: línea de pedido de venta contra pedido | Cliente del pedido. No se puede editar desde la petición. |
+| Demanda concreta: material de una OF | Cliente y solicitante de la OF de origen. No se pueden editar desde la petición. |
+| Decisión manual | Cliente opcional o texto libre opcional. |
+
+Cada OF copia el cliente y el solicitante de su petición al crearse. Si después cambias la petición, las OF existentes conservan los valores originales.
+
 ## Estados
 
 | Estado | Significado |

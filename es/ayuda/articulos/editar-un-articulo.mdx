@@ -21,19 +21,29 @@ Añade una propiedad adicional cuando un artículo tenga una característica pro
 
 ## Configurar unidades alternativas
 
-En **Unidades alternativas**, añade las formas adicionales en las que trabajas con el artículo e indica su precisión y factor de conversión.
+En **Unidades alternativas**, añade las formas adicionales en las que trabajas con el artículo e indica su precisión y su equivalencia con la unidad base.
 
 **Unidad alternativa:** selecciona la unidad correspondiente que creaste previamente en el catálogo.
 
 **Número de decimales:** establece la precisión requerida. Si la unidad alternativa no se puede fraccionar (como una caja o un bote completo), pon `0`. Si permite fracciones, indica `2` o los decimales necesarios.
 
-**Factor de conversión:** introduce cuántas unidades base del artículo equivalen a **1 unidad** de la unidad alternativa seleccionada.
+**Equivalencia:** introduce dos cantidades, `[cantidad] [unidad alternativa] = [cantidad] [unidad base]`, tal como expresarías la relación. Ambas deben ser mayores que cero.
 
 <Note>
-  **Ejemplo:** si un bote contiene 5 kg de resina, define los kilogramos como unidad base, los botes como unidad alternativa y `5` como factor de conversión. Cuando introduces 10 botes en una operación compatible, Bold los convierte en 50 kg.
+  **Ejemplo:** si un bote contiene 5 kg de resina, define los kilogramos como unidad base, los botes como unidad alternativa y la equivalencia `1 bote = 5 kg`. Cuando introduces 10 botes en una operación compatible, Bold los convierte en 50 kg. Si 3 cajas forman 1 palé, escribe `3 cajas = 1 palé` en lugar de un factor decimal.
 </Note>
 
+Para cambiar la equivalencia o la precisión de una unidad alternativa, pulsa el icono de edición en su fila. La unidad seleccionada no se puede cambiar: elimina la alternativa y añade otra.
+
 Bold convierte a la unidad base las cantidades introducidas con una alternativa en las operaciones que permiten seleccionar unidad. Para cambiar la unidad base del artículo, elimina antes todas sus unidades alternativas. El cambio de unidad base no recalcula cantidades históricas.
+
+### Elegir la unidad de fabricación y de almacén
+
+En la tabla de unidades alternativas, marca la casilla **Fabricación** de una alternativa para que el modo de trabajo de fabricación muestre el artículo en esa unidad. La casilla **Almacén** permite guardar la unidad preferida de almacén. Solo puede haber una unidad marcada en cada columna. Si desmarcas la casilla, la preferencia vuelve a la unidad base.
+
+El **modo de trabajo** de fabricación usa la unidad de fabricación del artículo fabricado y de cada material o coproducto. Muestra las cantidades convertidas con los decimales de esa unidad, y las cantidades que registras se introducen en ella. El resto de la aplicación sigue mostrando la unidad base.
+
+Si eliminas una alternativa marcada como unidad de fabricación o de almacén, su preferencia vuelve a la unidad base.
 
 ## Configurar la planificación
 
