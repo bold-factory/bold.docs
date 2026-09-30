@@ -32,13 +32,15 @@ Cada artículo tiene una **unidad base**. Bold almacena y devuelve sus cantidade
 
 ## Unidades alternativas y conversión
 
-Puedes añadir unidades alternativas a un artículo e indicar cuánta unidad base contiene cada una. Por ejemplo, si la unidad base es `ud` y una caja contiene 12 unidades, configura el factor así:
+Puedes añadir unidades alternativas a un artículo e indicar su equivalencia con la unidad base mediante dos cantidades. Por ejemplo, si la unidad base es `ud` y una caja contiene 12 unidades, configura la equivalencia así:
 
 `1 caja = 12 ud`
 
-Esta función requiere **unidades de medida alternativas** en el plan. Si se desactiva, no se pueden añadir ni modificar factores de conversión, ni introducir cantidades con unidades alternativas en pedidos u otros registros nuevos. La unidad base continúa disponible y los datos históricos conservan la unidad con la que se registraron.
+Si la relación no da un número exacto en un sentido, exprésala en el otro. Por ejemplo, si 3 cajas forman 1 palé y la unidad base es el palé, configura `3 cajas = 1 palé`. Bold conserva la relación tal como la escribes, de modo que 3 cajas se convierten exactamente en 1 palé.
 
-Cuando una operación admite indicar la unidad de la cantidad, Bold aplica ese factor y guarda el resultado en la unidad base. Cada alternativa también tiene su propia precisión de visualización.
+Esta función requiere **unidades de medida alternativas** en el plan. Si se desactiva, no se pueden añadir ni modificar equivalencias, ni introducir cantidades con unidades alternativas en pedidos u otros registros nuevos. La unidad base continúa disponible y los datos históricos conservan la unidad con la que se registraron.
+
+Cuando una operación admite indicar la unidad de la cantidad, Bold aplica esa equivalencia y guarda el resultado en la unidad base, redondeado a 10 decimales. Cada alternativa también tiene su propia precisión de visualización, que no afecta a la cantidad guardada.
 
 Bold conserva además la cantidad y la unidad alternativas introducidas en:
 
@@ -47,17 +49,28 @@ Bold conserva además la cantidad y la unidad alternativas introducidas en:
 - inventarios y ajustes de stock;
 - cantidades fabricadas y rechazadas, consumos y coproductos registrados durante la fabricación.
 
-Los registros devueltos incluyen ese dato original cuando está disponible. En las tablas de la aplicación puedes consultarlo en el detalle emergente de la cantidad. La cifra principal siempre se muestra en la unidad base vigente del artículo.
+Los registros devueltos incluyen ese dato original cuando está disponible. En las tablas de la aplicación puedes consultarlo en el detalle emergente de la cantidad. Fuera de las vistas con unidad preferida, la cifra principal se muestra en la unidad base vigente del artículo.
 
-La misma unidad no puede ser a la vez base y alternativa del artículo, ni repetirse entre sus alternativas. El factor de conversión debe ser mayor que cero.
+### Unidades preferidas por vista
+
+Cada artículo puede tener una **unidad de fabricación** y una **unidad de almacén**, elegidas entre sus unidades alternativas. Si no eliges ninguna, la vista usa la unidad base.
+
+- El **modo de trabajo** de fabricación muestra las cantidades de la operación, sus materiales y coproductos en la unidad de fabricación de cada artículo, con sus decimales, y registra las cantidades introducidas en esa unidad.
+- La unidad de almacén queda configurada para las vistas de almacén.
+
+Las cantidades se siguen guardando y devolviendo por la API en la unidad base. Si cambias una equivalencia, las cantidades anteriores se muestran con la nueva equivalencia. Si eliminas una alternativa marcada como preferida, la vista vuelve a la unidad base.
+
+{/* TODO: document which warehouse screens use the warehouse unit once the client applies it. */}
+
+La misma unidad no puede ser a la vez base y alternativa del artículo, ni repetirse entre sus alternativas. Las dos cantidades de la equivalencia deben ser mayores que cero.
 
 <Warning>
   Para cambiar la unidad base, elimina antes las unidades alternativas del artículo. El cambio no convierte ni modifica las cifras ya registradas. Si una existencia era `10 ud` y corriges la unidad base a `m³`, pasa a interpretarse como `10 m³`.
 </Warning>
 
-Usa el cambio de unidad base para corregir una unidad que se configuró mal. No lo uses para transformar cantidades entre unidades: si necesitas esa transformación, configura una unidad alternativa con su factor de conversión.
+Usa el cambio de unidad base para corregir una unidad que se configuró mal. No lo uses para transformar cantidades entre unidades: si necesitas esa transformación, configura una unidad alternativa con su equivalencia.
 
-Evita crear equivalencias ambiguas o mezclar factores con sentidos distintos. Define siempre el factor como **cantidad de unidad base contenida en una unidad alternativa**.
+Evita crear equivalencias ambiguas. Escribe siempre la equivalencia como **cantidad de la unidad alternativa = cantidad de la unidad base**.
 
 ## Impacto en planificación
 
