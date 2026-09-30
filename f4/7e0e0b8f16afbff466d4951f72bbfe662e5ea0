@@ -1,0 +1,19 @@
+es/conceptos/planificacion/pedidos-de-venta.mdx
+  s_7a2a53991c30f3::t_d77c00df9a1580 51,86
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "f47e0e0b8f16afbff466d4951f72bbfe662e5ea0",
+  "prompts": {},
+  "sessions": {
+    "s_7a2a53991c30f3": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0f45e-8f5d-7b62-b947-ed390dd9c610",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
