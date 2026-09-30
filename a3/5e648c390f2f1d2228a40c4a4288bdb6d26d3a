@@ -1,0 +1,30 @@
+es/conceptos/fabricacion/peticiones-de-fabricacion.mdx
+  s_7a2a53991c30f3::t_deb67db076fd5d 42-45
+es/conceptos/planificacion/pedidos-de-venta.mdx
+  s_7a2a53991c30f3::t_deb67db076fd5d 51,57,86
+es/ayuda/mantenimiento/mantenimiento-preventivo.mdx
+  s_7a2a53991c30f3::t_deb67db076fd5d 61
+es/conceptos/mantenimiento/causas-y-acciones.mdx
+  s_7a2a53991c30f3::t_deb67db076fd5d 65
+es/ayuda/articulos/crear-un-articulo.mdx
+  s_7a2a53991c30f3::t_deb67db076fd5d 22
+es/conceptos/catalogo/unidades-de-medida.mdx
+  s_7a2a53991c30f3::t_deb67db076fd5d 64-73
+  s_7a2a53991c30f3::t_4e10870a7d97a6 74
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "a35e648c390f2f1d2228a40c4a4288bdb6d26d3a",
+  "prompts": {},
+  "sessions": {
+    "s_7a2a53991c30f3": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0f45e-8f5d-7b62-b947-ed390dd9c610",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
