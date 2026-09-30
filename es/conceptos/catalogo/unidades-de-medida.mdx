@@ -51,17 +51,6 @@ Bold conserva además la cantidad y la unidad alternativas introducidas en:
 
 Los registros devueltos incluyen ese dato original cuando está disponible. En las tablas de la aplicación puedes consultarlo en el detalle emergente de la cantidad. Fuera de las vistas con unidad preferida, la cifra principal se muestra en la unidad base vigente del artículo.
 
-### Unidades preferidas por vista
-
-Cada artículo puede tener una **unidad de fabricación** y una **unidad de almacén**, elegidas entre sus unidades alternativas. Si no eliges ninguna, la vista usa la unidad base.
-
-- El **modo de trabajo** de fabricación muestra las cantidades de la operación, sus materiales y coproductos en la unidad de fabricación de cada artículo, con sus decimales, y registra las cantidades introducidas en esa unidad.
-- La unidad de almacén queda configurada para las vistas de almacén.
-
-Las cantidades se siguen guardando y devolviendo por la API en la unidad base. Si cambias una equivalencia, las cantidades anteriores se muestran con la nueva equivalencia. Si eliminas una alternativa marcada como preferida, la vista vuelve a la unidad base.
-
-{/* TODO: document which warehouse screens use the warehouse unit once the client applies it. */}
-
 La misma unidad no puede ser a la vez base y alternativa del artículo, ni repetirse entre sus alternativas. Las dos cantidades de la equivalencia deben ser mayores que cero.
 
 <Warning>
@@ -71,6 +60,17 @@ La misma unidad no puede ser a la vez base y alternativa del artículo, ni repet
 Usa el cambio de unidad base para corregir una unidad que se configuró mal. No lo uses para transformar cantidades entre unidades: si necesitas esa transformación, configura una unidad alternativa con su equivalencia.
 
 Evita crear equivalencias ambiguas. Escribe siempre la equivalencia como **cantidad de la unidad alternativa = cantidad de la unidad base**.
+
+### Unidades preferidas por vista
+
+Cada artículo puede tener una **unidad de fabricación** y una **unidad de almacén**, elegidas entre sus unidades alternativas. Si no eliges ninguna, la preferencia usa la unidad base.
+
+- El **modo de trabajo** de fabricación muestra las cantidades de la operación, sus materiales y coproductos en la unidad de fabricación de cada artículo, con sus decimales, y registra las cantidades introducidas en esa unidad.
+- La unidad de almacén se guarda como preferencia del artículo. Las vistas de almacén siguen mostrando la unidad base.
+
+Las cantidades se siguen guardando y devolviendo por la API en la unidad base. Si cambias una equivalencia, el modo de trabajo de fabricación muestra las cantidades anteriores con la nueva equivalencia. Si eliminas una alternativa marcada como preferida, su preferencia vuelve a la unidad base.
+
+{/* TODO: document which warehouse screens use the warehouse unit once the client applies it. */}
 
 ## Impacto en planificación
 
