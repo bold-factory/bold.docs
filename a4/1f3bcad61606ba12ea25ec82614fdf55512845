@@ -1,0 +1,40 @@
+es/ayuda/articulos/editar-un-articulo.mdx
+  s_7a2a53991c30f3::t_9d4cb7a06f5191 24,30,33,36-37,40-46
+  s_e77f93ec41b055::t_6c643b5ec0702b 47
+es/ayuda/articulos/unidades-de-medida.mdx
+  s_00c2ff1705239f::t_528fb93d709c26 27
+es/conceptos/catalogo/unidades-de-medida.mdx
+  s_00c2ff1705239f::t_b5b46bd87805dd 35,39,41-43,52-63,65,71,73
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "a41f3bcad61606ba12ea25ec82614fdf55512845",
+  "prompts": {},
+  "sessions": {
+    "s_00c2ff1705239f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ca2e3e59-16ad-498b-81dc-b2adf830f331",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_7a2a53991c30f3": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0f45e-8f5d-7b62-b947-ed390dd9c610",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_e77f93ec41b055": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0a170-769f-7be2-9ac2-a2b11dc20075",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
