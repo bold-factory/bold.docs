@@ -48,7 +48,7 @@ El estado del pedido se deriva de los estados de sus líneas.
 
 ## Fabricar una línea contra pedido
 
-En una línea **Pendiente** o **Parcialmente entregado**, usa **Fabricar contra pedido** para cubrirla con fabricación propia aunque el artículo esté configurado contra stock o hayas cancelado su petición. Esta acción permite pasar a **Contra pedido** después de confirmar la línea, como excepción a la edición del modo en borrador:
+En una línea en estado **Pendiente** o **Parcialmente entregado**, usa **Fabricar contra pedido** para cubrirla con fabricación propia aunque el artículo esté configurado contra stock o hayas cancelado su petición. Esta acción permite pasar a **Contra pedido** después de confirmar la línea, como excepción a la edición del modo en borrador:
 
 - La línea pasa a **Contra pedido** y su demanda deja de cubrirse con stock y suministros compartidos.
 - Si el artículo se fabrica, Bold crea una petición de fabricación por la cantidad pendiente, vinculada al pedido y a su cliente.
@@ -83,7 +83,7 @@ El diagrama resume las transiciones principales. Las entregas parciales y las ca
 ## Reglas del modelo
 
 - Confirmar una línea exige un artículo activo y solo puede hacerse desde borrador.
-- Artículo, cantidad y modo de cumplimiento se editan solo mientras la línea está en borrador. La acción **Fabricar contra pedido** permite pasar a **Contra pedido** en una línea **Pendiente** o **Parcialmente entregado**.
+- Artículo, cantidad y modo de cumplimiento se editan solo mientras la línea está en borrador. La acción **Fabricar contra pedido** permite pasar a **Contra pedido** en una línea en estado **Pendiente** o **Parcialmente entregado**.
 - Fechas y notas pueden cambiar después de confirmar para mantener la planificación actualizada.
 - No puedes eliminar ni cancelar como si no existiera una línea ya entregada o parcialmente entregada.
 - Si cancelas cantidad pendiente después de una entrega parcial, Bold conserva la parte enviada como histórico.
