@@ -68,6 +68,47 @@ rss: true
 </Update>
 
 <Update
+  label="2026-09-21"
+  tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
+>
+  ## Finalizar grupos de operaciones
+
+  - En el modo de trabajo, los grupos de operaciones ofrecen **Confirmar sin finalizar** y **Confirmar y finalizar**. Si completas toda la cantidad pendiente, Bold la reparte entre las operaciones según lo planificado.
+  - Para finalizar un grupo antes de completar la cantidad planificada, indica la cantidad final de cada operación. Puedes usar cero o superar lo planificado, pero el desglose debe sumar el total final del grupo.
+
+  ## Modos de resolución de planes
+
+  - Al resolver un plan de producción, o al crearlo con resolución, eliges el **Modo de resolución**. **Básico (rápido)** busca una secuencia factible con una heurística. **Avanzado (optimizado)** refina esa secuencia para mejorar el resultado y puede tardar varios minutos.
+  - La aplicación selecciona **Básico** inicialmente. Si integras mediante la API y no indicas el modo, el servidor utiliza **Avanzado**.
+
+  ## Acciones de mantenimiento
+
+  - Las acciones de mantenimiento admiten dos nuevos tipos de resultado: **Selección**, con opciones configuradas en la acción, y **Firma**, que se dibuja en pantalla.
+  - Puedes **Deshacer** una acción completada desde **Mantenimiento > Partes** o desde el modo de trabajo. La acción vuelve a estar planificada, se borran su resultado y el empleado que la completó, y se conservan sus notas. No puedes deshacer acciones de partes completados o cancelados.
+
+  ## Compras de una orden de fabricación
+
+  - El asistente de compras de una OF muestra en una sola tabla todos los materiales de compra que faltan. La columna **Proveedor** propone el proveedor principal de cada artículo y permite elegir otro de sus proveedores.
+  - Bold crea a la vez un pedido de compra por proveedor, con la OF de origen indicada en sus notas. Después puedes consultar los pedidos creados en un diálogo. Los artículos sin proveedor aparecen atenuados y no se incluyen.
+
+  ## Mejoras
+
+  - **Fabricación > Recetas** incorpora el filtro rápido **Ocultar inactivas**.
+  - Los costes del artículo y de sus componentes se muestran con dos decimales y el detalle emergente conserva cuatro. Los enlaces a un componente abren directamente su pestaña **Costes**.
+  - Las entradas de receta indican con un icono si el material es un **Artículo concreto** o se basa en propiedades.
+  - Los niveles de inteligencia **Baja**, **Media** y **Alta** utilizan nuevos modelos de IA.
+
+  ## Correcciones
+
+  - Si sales de un movimiento de almacén parcial y vuelves a entrar, puedes continuar desde la carga y la ubicación registradas, aunque hayas omitido recogidas.
+  - Durante un movimiento, puedes entregar el material recogido aunque la necesidad vinculada haya cambiado o desaparecido. Bold reserva solo la cantidad que sigue haciendo falta.
+  - Las acciones planificadas de un movimiento se aceptan aunque vuelvas a visitar la misma ubicación.
+  - Al preparar una orden de carga con líneas de varios pedidos, cada línea seleccionada se añade una sola vez.
+  - El coste planificado de un artículo fabricado conserva su último valor mientras alguna entrada de la receta no se pueda resolver.
+  - Las tareas con Boldy ya no se dan por completadas cuando una respuesta deja pendiente el resultado de una herramienta.
+</Update>
+
+<Update
   label="2026-09-14"
   tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
 >
@@ -79,15 +120,24 @@ rss: true
 
   - Boldy puede consultar la documentación oficial y utilizar más herramientas de costes, catálogo, mantenimiento, producción y almacén cuando el usuario y el agente tienen los permisos necesarios.
 
+  ## Ejecución automática de planes de producción
+
+  - Al crear un plan de producción puedes elegir **Solo crear**, **Crear y resolver** o **Crear, resolver y aplicar**.
+  - El diálogo de resolución incluye la opción **Aplicar el plan automáticamente si se encuentra una solución**.
+
   ## Mejoras
 
   - La configuración de unidades alternativas explica con más claridad el factor de conversión y la creación de artículos conserva la unidad seleccionada.
+  - Las líneas de plan de las facturas de la suscripción muestran el nombre contratado, por ejemplo **Plan Lite**. Los recibos de pago de Stripe incluyen el número de la factura para relacionar ambos documentos.
 
   ## Correcciones
 
   - Las automatizaciones se ejecutan con los permisos guardados en su configuración, aunque hayan cambiado los permisos de la persona que inicia la ejecución.
   - Los mensajes de voz enviados desde Telegram admiten más variantes del formato de audio.
   - Al eliminar una acción de mantenimiento, también se retira de las causas donde estaba planificada.
+  - Las facturas aprobadas de la suscripción se envían por correo a los destinatarios de facturación con el PDF adjunto.
+  - Las OF ya no heredan las referencias externas de los elementos de la receta, de modo que puedes crear varias OF a partir de la misma receta.
+  - Al registrar coproductos en el modo de trabajo, las cantidades se redondean con los decimales de su unidad. La unidad se muestra dentro del campo de cantidad.
 </Update>
 
 <Update
