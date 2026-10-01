@@ -5,6 +5,69 @@ rss: true
 ---
 
 <Update
+  label="2026-10-01"
+  tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
+>
+  ## Búsqueda global
+
+  - La búsqueda global (**Ctrl+K**) reúne registros, secciones de la aplicación y documentación en un mismo cuadro. Solo aparecen las secciones a las que tienes acceso y los resultados de documentación se abren en otra pestaña.
+  - Los resultados incluyen movimientos, contenedores, órdenes de carga y recuentos de almacén. También puedes encontrar un registro con su identificador completo.
+
+  ## Historial de stock
+
+  - **Almacén > Control del stock > Historial de stock** muestra los cambios de stock de todos los artículos, con filtros por artículo, ubicación, lote y causa. Consulta periodos de hasta 365 días; por defecto se muestran los últimos 7 días. También puedes incluir las reclasificaciones de lote.
+  - La pestaña de stock del artículo muestra sus cambios recientes. **Ver más** abre el historial filtrado por ese artículo.
+  - **Exportar datos** incorpora el **Historial de stock** en formato CSV o Excel.
+
+  ## Mantenimiento preventivo y partes de trabajo
+
+  - Las programaciones preventivas admiten la frecuencia **Entre semana**, de lunes a viernes, y se pueden filtrar por activo, causa y frecuencia. **Generar ahora** crea un parte en el momento y la pestaña **Partes generados** muestra los partes de cada programación.
+  - Las acciones de un parte pueden ser obligatorias. No puedes finalizar el parte mientras queden acciones obligatorias pendientes.
+  - Cada acción separa las instrucciones, que explican cómo hacerla, de las notas de ejecución que añade el técnico al completarla.
+  - Los partes incorporan **Comentarios** con formato y adjuntos. Puedes añadirlos desde **Mantenimiento > Partes** y desde el modo de trabajo.
+  - La pestaña **Usos** de una acción muestra qué causas la planifican y qué partes la incluyen. Al eliminar una acción, se retira de los partes abiertos donde sigue pendiente y se conserva en el historial de los partes donde ya se completó.
+
+  ## Fabricación contra pedido y clientes en peticiones
+
+  - Las líneas de venta en estado **Pendiente** o **Parcialmente entregado** ofrecen **Fabricar contra pedido**. La línea pasa a **Contra pedido** y, si el artículo se fabrica, Bold crea una petición de fabricación vinculada al pedido y a su cliente. El botón se desactiva si la línea ya tiene una petición activa.
+  - Las peticiones de fabricación pueden vincularse a un cliente, cuyo nombre se usa como solicitante. Sin cliente, el solicitante es un texto libre opcional. Cada OF copia el cliente y el solicitante de su petición.
+  - Las peticiones y OF existentes vinculadas a pedidos de venta toman el cliente del pedido. Los solicitantes genéricos **Manual**, **MRP** y **Stock** se eliminan, así que revisa las condiciones de receta que comparen el solicitante con esos valores.
+
+  ## Unidades preferidas de fabricación
+
+  - Cada artículo puede tener una unidad de fabricación y una unidad de almacén, elegidas entre sus unidades alternativas. El modo de trabajo de fabricación muestra y registra las cantidades en la unidad de fabricación. Las vistas de almacén siguen mostrando la unidad base.
+  - Las equivalencias de unidades alternativas se expresan con dos cantidades, por ejemplo `3 cajas = 1 palé`, y se pueden editar. Así se conservan relaciones que no dan un número exacto en un sentido. En la API, las equivalencias también se envían con las dos cantidades.
+
+  ## Editor de fórmulas y notas
+
+  - Las fórmulas de receta admiten las funciones de redondeo `round`, `ceil` y `floor` desde la acción **Redondear**. El editor permite deshacer y rehacer con `Ctrl+Z` y `Ctrl+Y`, y las sugerencias de operandos se abren al escribir `@`.
+  - Las notas de partes de trabajo, programaciones preventivas, pedidos de compra y venta, sus líneas y peticiones de fabricación admiten formato, títulos, enlaces y archivos adjuntos. En registros existentes, la nota se muestra con formato y puedes pasar a edición con **Editar** o con doble clic.
+
+  ## Funcionalidades según el plan
+
+  - **Panel de control > Suscripción** muestra el almacenamiento utilizado y su límite junto a empleados, referencias y ubicaciones. Si una subida de archivos supera el límite del plan, Bold la rechaza.
+  - La sección **Funcionalidades** indica si el plan incluye planificación avanzada, controles de calidad en recepción, unidades de medida alternativas, gestión de múltiples lotes, webhooks, logística avanzada e informes analíticos.
+  - Si el plan no incluye una funcionalidad, la aplicación oculta o desactiva sus acciones. Por ejemplo, **Informes** indica que los informes analíticos no están incluidos. Las unidades alternativas y los controles de recepción ya configurados siguen visibles.
+
+  ## Mejoras
+
+  - **Importar datos** incorpora **Actualizar coste** para artículos. Desde un archivo CSV o Excel puedes actualizar en bloque el coste previsto por unidad y si el coste se actualiza automáticamente.
+  - **Panel de control > Archivos** indica en qué registro se usa cada archivo, con un enlace a él, y si lo gestiona Bold.
+  - Los mensajes de las tareas con Boldy y el mensaje adicional de **Ejecutar ahora** en automatizaciones admiten hasta 30.000 caracteres.
+  - Los niveles de inteligencia **Media** y **Alta** utilizan un modelo de IA más reciente.
+  - La referencia de la API incluye un resumen en cada operación y agrupa las exportaciones analíticas por concepto de negocio.
+
+  ## Correcciones
+
+  - El coste teórico de fabricación reparte el tiempo fijo de los pasos de receta entre la cantidad de reposición del artículo, según su pedido mínimo o tamaño de lote, en lugar de imputarlo completo a cada unidad.
+  - El recálculo automático del coste planificado gestiona mejor los cambios simultáneos en varios componentes del mismo artículo, y ya no registra cambios cuando la estimación no varía.
+  - Las conversiones de unidades redondean el resultado a la precisión guardada en lugar de rechazar cantidades con demasiados decimales.
+  - Las importaciones rechazan los valores no reconocidos en columnas de sí/no, en lugar de interpretarlos como «no».
+  - Las tareas con Boldy permiten reintentar también cuando el proveedor de IA está sobrecargado.
+  - Los bloques de código largos en las respuestas de Boldy se ajustan al ancho disponible en lugar de desbordar la conversación.
+</Update>
+
+<Update
   label="2026-09-14"
   tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
 >
