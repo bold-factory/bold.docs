@@ -1,0 +1,19 @@
+es/conceptos/fabricacion/procesos.mdx
+  s_10ccdf7ccf89b7::t_b2f27665656b70 33-40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a740f5d8e96f6c851f074416a0ac70cc8f00ae54",
+  "prompts": {},
+  "sessions": {
+    "s_10ccdf7ccf89b7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1081b-e239-7ca1-8b18-1e683eca62f8",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
