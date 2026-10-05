@@ -5,6 +5,42 @@ rss: true
 ---
 
 <Update
+  label="2026-10-05"
+  tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
+>
+  ## Operaciones atendidas, desatendidas y esperas
+
+  - Cada proceso tiene un **Tipo de actividad**: **Proceso**, para el trabajo productivo, o **Espera**, para tiempos como un reposo o un secado.
+  - En cada estación compatible con un proceso eliges la **Atención de personal**. **Atendida** requiere presencia de personal y **Desatendida** permite que la máquina trabaje sola. Puedes cambiarla desde el proceso, desde las capacidades de la estación o al importar datos.
+  - Cada operación toma su modo de ejecución del tipo de actividad y de la estación seleccionada. Al cambiar la configuración, Bold actualiza las operaciones que aún no han empezado. Las operaciones iniciadas o canceladas conservan su modo.
+  - En el modo de trabajo, una operación atendida necesita un empleado para iniciarse o reanudarse. Una operación desatendida no lo necesita y puedes detenerla con **Parar** aunque nadie esté trabajando en ella. Un proceso sin estación seleccionada no se puede iniciar.
+  - Las esperas empiezan solas cuando terminan las operaciones que las preceden, transcurren de forma continua durante la duración prevista y finalizan automáticamente. No se pueden iniciar manualmente ni pausar.
+  - Las operaciones desatendidas y las esperas no reservan personal en los planes de producción.
+  - Las estaciones ya no tienen la opción **Completar operaciones automáticamente**. Los procesos que se completaban así pasan a ser de tipo **Espera**.
+
+  ## Comentarios en operaciones
+
+  - Las operaciones admiten comentarios con formato y archivos adjuntos. En la gestión de la OF se consultan en **Info**, debajo de las notas de la orden. En el modo de trabajo tienen su propio apartado **Comentarios** y se atribuyen al empleado activo.
+  - Los comentarios más recientes aparecen primero. Puedes comentar operaciones finalizadas. Las canceladas muestran sus comentarios, pero no permiten añadir ni eliminar.
+  - El registro de progreso del modo de trabajo ya no incluye un campo de comentarios. Usa **Comentarios** para dejar observaciones sobre la operación.
+  - La API permite consultar, añadir y eliminar los comentarios de una operación.
+
+  ## Mejoras
+
+  - **Panel de control > Notificaciones** muestra tus suscripciones activas en tarjetas, con la entidad, el evento, el canal y los filtros aplicados. **Crear una suscripción** te guía para elegir canal, entidad, evento y filtros. Desde cada tarjeta puedes **Editar filtros** o **Quitar** la suscripción.
+  - Al editar los filtros de una suscripción, Bold indica si falta una condición, un operador **Y** u **O** o un paréntesis, y no permite guardar el filtro hasta que esté completo.
+  - Las notificaciones y los webhooks incluyen dos eventos nuevos de pedidos de compra: se ha añadido una línea y se ha deshecho la cancelación de una línea.
+  - Las tarjetas de operación del modo de trabajo muestran los empleados que están trabajando en ella. Pulsa o pasa el cursor sobre sus iniciales para ver el nombre completo.
+  - En el modo de trabajo, **Materiales** muestra junto a cada material si hay stock suficiente, si está en camino, con la fecha prevista cuando se conoce, o si falta.
+  - Los partes de trabajo incorporan los permisos **Trabajar** y **Finalizar**. **Trabajar** permite completar acciones, registrar tiempos y materiales y comentar sin editar el parte. Para finalizar un parte se necesita **Finalizar**, así que revisa qué perfiles deben tenerlo.
+
+  ## Correcciones
+
+  - Las recepciones ya no admiten líneas de pedido de compra en borrador. Bold impide añadirlas y recibir una recepción que las incluya.
+  - Al eliminar un envío, sus líneas liberan sus referencias externas. Así, una integración puede volver a enviar esas líneas en otro envío.
+</Update>
+
+<Update
   label="2026-10-01"
   tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
 >
