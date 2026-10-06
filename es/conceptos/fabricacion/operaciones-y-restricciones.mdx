@@ -59,7 +59,9 @@ Por ejemplo, si una operación tiene previstas 10 planchas y la siguiente 40 pie
 | Solo deliberadamente | Confirma el diálogo para continuar. | Confirma el diálogo para continuar. |
 | El operario no puede | La acción queda deshabilitada. | Puedes confirmar el diálogo si tienes permiso de escritura de órdenes de fabricación. |
 
-Bold registra qué restricciones te has saltado y su exigencia en el momento de la acción. El backend también aplica los bloqueos a las llamadas de API.
+**Avisar** muestra un indicador informativo y mantiene la operación visible al activar **Ocultar restringidas**. **Solo deliberadamente** muestra una advertencia y permite ocultarla con ese filtro mientras no haya empezado. Ambos requieren la misma confirmación para continuar; no hay un paso adicional ni se exige una causa.
+
+Bold registra qué restricciones te has saltado y su exigencia en el momento de la acción. El backend también aplica los bloqueos a las llamadas de API que inician o registran unidades en una operación individual. Las [acciones de un grupo](/es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones) están exentas de estas restricciones, tanto en gestión como en modo de trabajo.
 
 El indicador muestra si puedes continuar, si faltan unidades o si hay condiciones pendientes. En **Información** puedes revisar cada condición y abrir la operación anterior para comprobar si falta registrar progreso.
 
