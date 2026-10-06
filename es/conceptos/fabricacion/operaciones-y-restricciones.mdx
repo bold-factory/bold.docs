@@ -30,13 +30,48 @@ La disponibilidad de materiales se muestra por separado. No forma parte de estos
 
 ## Restricciones
 
-Las restricciones definen el orden entre operaciones. Evitan secuencias imposibles y ayudan a derivar qué operación puede empezar.
+Las restricciones relacionan una operación anterior con una siguiente. Configura por separado cuándo puede empezar la siguiente y cuántas unidades puede registrar.
 
-| Tipo | Efecto operativo |
+| Condición de inicio | Se cumple cuando la anterior… |
 | --- | --- |
-| Completa | La operación siguiente espera a que termine la anterior. |
-| Parcial | La operación siguiente puede empezar con progreso suficiente. |
-| No bloqueante | Conserva una precedencia recomendada sin bloquear. |
+| En cualquier momento | No impone una condición de inicio. |
+| Haya empezado | Ya ha iniciado el trabajo. |
+| Tenga unidades buenas o haya finalizado | Tiene alguna unidad buena, o ha finalizado aunque no tenga unidades. |
+| Haya finalizado | Ha terminado. |
+
+La condición de inicio deja de aplicarse cuando la operación siguiente empieza. Una operación anterior finalizada o cancelada deja de imponer restricciones.
+
+| Límite de unidades | Mientras la anterior sigue abierta… |
+| --- | --- |
+| Sin límite | Puedes registrar cualquier cantidad. |
+| Según se completan | Las unidades buenas de la anterior liberan unidades en proporción a las cantidades planificadas. |
+| Todo el lote al finalizar | No hay unidades disponibles hasta que la anterior finaliza. |
+
+El límite cuenta las unidades buenas y rechazadas que registras en la siguiente. Las rechazadas de la anterior no liberan unidades. Con varias operaciones anteriores, se aplica el límite más bajo.
+
+Por ejemplo, si una operación tiene previstas 10 planchas y la siguiente 40 piezas, una plancha buena libera 4 piezas. Cuando la anterior finaliza, deja de limitar aunque haya completado menos cantidad de la prevista.
+
+### Qué ocurre si no se cumple
+
+| Exigencia | Modo de trabajo | Gestión |
+| --- | --- | --- |
+| Avisar | Confirma el diálogo de advertencia para continuar. | Confirma el diálogo de advertencia para continuar. |
+| Solo deliberadamente | Confirma el diálogo para continuar. | Confirma el diálogo para continuar. |
+| El operario no puede | La acción queda deshabilitada. | Puedes confirmar el diálogo si tienes permiso de escritura de órdenes de fabricación. |
+
+Bold registra qué restricciones te has saltado y su exigencia en el momento de la acción. El backend también aplica los bloqueos a las llamadas de API.
+
+El indicador muestra si puedes continuar, si faltan unidades o si hay condiciones pendientes. En **Información** puedes revisar cada condición y abrir la operación anterior para comprobar si falta registrar progreso.
+
+El filtro **Ocultar restringidas** oculta solo operaciones sin iniciar con condiciones pendientes de tipo **Solo deliberadamente** o **El operario no puede**. Las operaciones que ya empezaron siguen visibles.
+
+### Preparación anticipada y esperas
+
+Para preparar una operación mientras la anterior produce, elige el inicio cuando la anterior haya empezado. Decide si recibes las unidades según se completan o todo el lote al finalizar.
+
+Una espera temporizada no ofrece **En cualquier momento**. El inicio automático respeta todas sus condiciones de inicio, incluso las configuradas como **Avisar**. Si empieza antes de que terminen sus operaciones anteriores, no se completa automáticamente hasta que haya transcurrido su duración y hayan cerrado todas las anteriores.
+
+La secuenciación sigue las condiciones, con independencia de su exigencia. Una precedencia configurada como **Avisar** también puede ordenar el plan.
 
 No deben duplicarse ni crear ciclos. Un ciclo impediría saber qué operación desbloquea a otra y puede bloquear la [secuenciación](/es/conceptos/fabricacion/secuenciacion).
 
