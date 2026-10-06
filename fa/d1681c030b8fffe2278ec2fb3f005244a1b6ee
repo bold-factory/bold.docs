@@ -1,0 +1,24 @@
+es/conceptos/fabricacion/operaciones-y-restricciones.mdx
+  s_f1379c3057d59e::t_d3830c68eef7f0 33,35,37-74
+es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones.mdx
+  s_f1379c3057d59e::t_d3830c68eef7f0 37
+  s_f1379c3057d59e::t_f4b29e10fcb4b7 38
+es/ayuda/produccion/crear-una-receta.mdx
+  s_f1379c3057d59e::t_d3830c68eef7f0 44,46,48,50,52,54,56-58,60
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "fad1681c030b8fffe2278ec2fb3f005244a1b6ee",
+  "prompts": {},
+  "sessions": {
+    "s_f1379c3057d59e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a110ed-e8a8-7332-abcf-f2e1698875aa",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
