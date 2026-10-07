@@ -51,11 +51,21 @@ Bold te permite cambiar la vista según tu estrategia de compra mediante dos pes
 
 ## Compras de una orden de fabricación
 
-**Ruta:** **Fabricación > Órdenes de fabricación > OF > Materiales > Resolver con el asistente de compras**
+**Ruta:** **Fabricación > Órdenes de fabricación > OF > Materiales > Abrir el asistente de compras**
 
-Desde una orden de fabricación, el asistente muestra en una sola tabla los materiales que faltan para fabricarla y que se aprovisionan mediante **Compra**.
+El acceso está disponible siempre que la OF tenga materiales pendientes por consumir, aunque ya estén cubiertos. Si faltan materiales, el enlace se muestra como **Resolver con el asistente de compras**.
+
+Desde una orden de fabricación, el asistente muestra en una sola tabla todos los materiales pendientes de la OF que se aprovisionan mediante **Compra**, tanto los que faltan como los que ya están cubiertos.
 
 - **Proveedor:** Bold propone el proveedor principal de cada artículo. Puedes cambiarlo por cualquiera de los proveedores secundarios configurados en el artículo.
-- **Propuesta:** cantidad pendiente de cubrir. Puedes modificarla, restablecerla o limpiarla para excluir el artículo.
+- **Propuesta:** cantidad pendiente de cubrir. Los materiales cubiertos aparecen con propuesta 0 y atenuados. Puedes modificar la cantidad de cualquier artículo para comprarlo igualmente.
 
-Pulsa **Generar pedidos** para crear un pedido de compra por proveedor con todas sus líneas a la vez. Los artículos sin proveedor aparecen atenuados y no se incluyen; configura antes un proveedor en el artículo si quieres comprarlos desde aquí. Cada pedido indica en sus notas la orden de fabricación que lo originó.
+Junto a **Propuesta** tienes tres acciones que cambian todas las cantidades a la vez:
+
+- **Proponer lo que necesita la OF:** propone la cantidad que la OF todavía tiene pendiente de consumir de cada artículo, sin descontar el stock disponible ni el previsto.
+- **Reiniciar todas las cantidades:** vuelve a la propuesta calculada.
+- **Limpiar todas las cantidades:** las pone a 0.
+
+Cada fila permite reiniciar o limpiar la cantidad de un solo artículo.
+
+Pulsa **Generar pedidos** para crear un pedido de compra por proveedor con todas sus líneas a la vez. Solo se incluyen los artículos con propuesta mayor que 0. Los artículos sin proveedor aparecen atenuados y no se incluyen; configura antes un proveedor en el artículo si quieres comprarlos desde aquí. Cada pedido indica en sus notas la orden de fabricación que lo originó.
