@@ -41,7 +41,7 @@ Haz clic en **+ Añadir operación** y completa los siguientes campos:
 
 Después, conecta los bloques de operaciones.
 
-Para relacionar dos operaciones, arrastra el punto inferior del primer bloque hasta el punto superior del siguiente. Después configura el inicio y las unidades disponibles.
+Para relacionar dos operaciones, acerca el puntero al borde inferior del primer bloque. Arrastra el punto que aparece y suéltalo sobre el bloque siguiente. También puedes empezar desde el borde superior del bloque siguiente y soltarlo sobre el anterior. Después configura el inicio y las unidades disponibles.
 
 También puedes hacer clic en **+ Añadir restricción**. Indica estos datos:
 
@@ -58,11 +58,17 @@ También puedes hacer clic en **+ Añadir restricción**. Indica estos datos:
 
 En una espera temporizada no puedes elegir en cualquier momento.
 
-**¿Utiliza las unidades que produce la operación anterior?** Elige sin límite, según se completan o todo el lote al finalizar.
+**¿Utiliza las unidades que produce la operación anterior?** Elige **No**, **Sí, según se van completando** o **Sí, esperar a tener todas**.
 
-**Si no se cumple:** para cada condición elige **Avisar**, **Solo deliberadamente** o **El operario no puede**. Saltarse una condición siempre requiere confirmar un diálogo, también desde gestión. Los bloqueos solo pueden saltarse desde gestión con permiso de escritura de órdenes de fabricación.
+**Si no se cumple esta condición…** Para el inicio elige **Avisar pero permitir**, **Ocultar por defecto, pero permitir con aviso** u **Ocultar y prohibir**.
 
-Revisa la frase resumen antes de crear la restricción. Puedes cambiar ambas condiciones desde la acción **Editar restricción** de su listado.
+**Si se supera la cantidad disponible…** Elige **Avisar pero permitir** o **Prohibir**.
+
+Saltarse una condición siempre requiere confirmar un diálogo, también desde gestión. Los bloqueos solo pueden saltarse desde gestión con permiso de escritura de órdenes de fabricación.
+
+Revisa las condiciones antes de crear la restricción. Puedes cambiar ambas desde la acción **Editar restricción** de su listado o con el botón derecho sobre su línea en el diagrama.
+
+Usa **Recalcular posiciones** y confirma el diálogo para ordenar los bloques según sus restricciones. Cada operación queda debajo de sus anteriores. Necesitas permiso de escritura de recetas y una versión editable.
 
 Para preparar la siguiente operación mientras la anterior produce, configura el inicio cuando haya empezado y la recepción de unidades según se completan. Consulta [Operaciones y restricciones](/es/conceptos/fabricacion/operaciones-y-restricciones) para ver cómo se calcula la cantidad disponible.
 

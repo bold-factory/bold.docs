@@ -32,6 +32,8 @@ La disponibilidad de materiales se muestra por separado. No forma parte de estos
 
 Las restricciones relacionan una operación anterior con una siguiente. Configura por separado cuándo puede empezar la siguiente y cuántas unidades puede registrar.
 
+En el diagrama de una receta u OF, **Recalcular posiciones** ordena los bloques según sus restricciones. Confirma el diálogo para guardar la nueva disposición. Necesitas permiso de escritura de recetas u órdenes de fabricación, respectivamente; las versiones de receta deben ser editables.
+
 | Condición de inicio | Se cumple cuando la anterior… |
 | --- | --- |
 | En cualquier momento | No impone una condición de inicio. |
@@ -43,9 +45,9 @@ La condición de inicio deja de aplicarse cuando la operación siguiente empieza
 
 | Límite de unidades | Mientras la anterior sigue abierta… |
 | --- | --- |
-| Sin límite | Puedes registrar cualquier cantidad. |
-| Según se completan | Las unidades buenas de la anterior liberan unidades en proporción a las cantidades planificadas. |
-| Todo el lote al finalizar | No hay unidades disponibles hasta que la anterior finaliza. |
+| No | Puedes registrar cualquier cantidad. |
+| Sí, según se van completando | Las unidades buenas de la anterior liberan unidades en proporción a las cantidades planificadas. |
+| Sí, esperar a tener todas | No hay unidades disponibles hasta que la anterior finaliza. |
 
 El límite cuenta las unidades buenas y rechazadas que registras en la siguiente. Las rechazadas de la anterior no liberan unidades. Con varias operaciones anteriores, se aplica el límite más bajo.
 
@@ -53,27 +55,38 @@ Por ejemplo, si una operación tiene previstas 10 planchas y la siguiente 40 pie
 
 ### Qué ocurre si no se cumple
 
-| Exigencia | Modo de trabajo | Gestión |
-| --- | --- | --- |
-| Avisar | Confirma el diálogo de advertencia para continuar. | Confirma el diálogo de advertencia para continuar. |
-| Solo deliberadamente | Confirma el diálogo para continuar. | Confirma el diálogo para continuar. |
-| El operario no puede | La acción queda deshabilitada. | Puedes confirmar el diálogo si tienes permiso de escritura de órdenes de fabricación. |
+Para la condición de inicio, elige entre tres opciones:
 
-**Avisar** muestra un indicador informativo y mantiene la operación visible al activar **Ocultar restringidas**. **Solo deliberadamente** muestra una advertencia y permite ocultarla con ese filtro mientras no haya empezado. Ambos requieren la misma confirmación para continuar; no hay un paso adicional ni se exige una causa.
+| Exigencia de inicio | Modo de trabajo | Gestión |
+| --- | --- | --- |
+| Avisar pero permitir | Confirma el diálogo de advertencia para continuar. | Confirma el diálogo de advertencia para continuar. |
+| Ocultar por defecto, pero permitir con aviso | Confirma el diálogo para continuar. | Confirma el diálogo para continuar. |
+| Ocultar y prohibir | La acción queda deshabilitada. | Puedes confirmar el diálogo si tienes permiso de escritura de órdenes de fabricación. |
+
+**Avisar pero permitir** muestra un indicador informativo y mantiene la operación visible al activar **Ocultar restringidas**. **Ocultar por defecto, pero permitir con aviso** muestra una advertencia y permite ocultarla con ese filtro mientras no haya empezado. Ambos requieren la misma confirmación para continuar; no hay un paso adicional ni se exige una causa.
+
+Para superar la cantidad disponible, elige entre dos opciones:
+
+| Exigencia de cantidad | Modo de trabajo | Gestión |
+| --- | --- | --- |
+| Avisar pero permitir | Confirma el diálogo de advertencia para registrar más unidades de las disponibles. | Confirma el diálogo de advertencia para continuar. |
+| Prohibir | No puedes superar la cantidad disponible. | Puedes confirmar el diálogo si tienes permiso de escritura de órdenes de fabricación. |
+
+Los límites de cantidad guardados con la antigua opción de confirmación usan **Avisar pero permitir**.
 
 Bold registra qué restricciones te has saltado y su exigencia en el momento de la acción. El backend también aplica los bloqueos a las llamadas de API que inician o registran unidades en una operación individual. Las [acciones de un grupo](/es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones) están exentas de estas restricciones, tanto en gestión como en modo de trabajo.
 
 El indicador muestra si puedes continuar, si faltan unidades o si hay condiciones pendientes. En **Información** puedes revisar cada condición y abrir la operación anterior para comprobar si falta registrar progreso.
 
-El filtro **Ocultar restringidas** oculta solo operaciones sin iniciar con condiciones pendientes de tipo **Solo deliberadamente** o **El operario no puede**. Las operaciones que ya empezaron siguen visibles.
+El filtro **Ocultar restringidas** oculta solo operaciones sin iniciar con condiciones de inicio pendientes de tipo **Ocultar por defecto, pero permitir con aviso** o **Ocultar y prohibir**. También oculta las que superan un límite de cantidad configurado como **Prohibir**. Las operaciones que ya empezaron siguen visibles.
 
 ### Preparación anticipada y esperas
 
 Para preparar una operación mientras la anterior produce, elige el inicio cuando la anterior haya empezado. Decide si recibes las unidades según se completan o todo el lote al finalizar.
 
-Una espera temporizada no ofrece **En cualquier momento**. El inicio automático respeta todas sus condiciones de inicio, incluso las configuradas como **Avisar**. Si empieza antes de que terminen sus operaciones anteriores, no se completa automáticamente hasta que haya transcurrido su duración y hayan cerrado todas las anteriores.
+Una espera temporizada no ofrece **En cualquier momento**. El inicio automático respeta todas sus condiciones de inicio, incluso las configuradas como **Avisar pero permitir**. Si empieza antes de que terminen sus operaciones anteriores, no se completa automáticamente hasta que haya transcurrido su duración y hayan cerrado todas las anteriores.
 
-La secuenciación sigue las condiciones, con independencia de su exigencia. Una precedencia configurada como **Avisar** también puede ordenar el plan.
+La secuenciación sigue las condiciones, con independencia de su exigencia. Una precedencia configurada como **Avisar pero permitir** también puede ordenar el plan.
 
 No deben duplicarse ni crear ciclos. Un ciclo impediría saber qué operación desbloquea a otra y puede bloquear la [secuenciación](/es/conceptos/fabricacion/secuenciacion).
 
