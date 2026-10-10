@@ -686,7 +686,7 @@
     {
       "source": "es/conceptos/panel-de-control/cuenta-y-empresa.mdx",
       "target": "en/concepts/control-panel/account-and-company.mdx",
-      "sourceHash": "d6558c1fcf6c73f43cdaa4fc7f1a6fbb81d987d494a94cb2dd190eb6b2e5dc6d"
+      "sourceHash": "501debdb9c95b8a8dfe01319f06477bb03de0570437149a94419503c38baeca3"
     },
     {
       "source": "es/conceptos/panel-de-control/datos-y-archivos.mdx",
