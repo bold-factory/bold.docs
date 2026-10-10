@@ -1,0 +1,63 @@
+---
+es_link: "/es/conceptos/fabricacion/procesos"
+title: "Processes"
+description: "Understand processes as reusable types of production work in recipes, operations and resources."
+icon: "workflow"
+---
+
+A **process** describes a type of production work, such as cutting, assembly, welding, painting, inspection or packaging.
+
+Use processes to connect operations to stations capable of executing them. The process is not the actual work. Actual work appears as an operation in a recipe or order.
+
+## Key differences
+
+| Concept | What it represents |
+| --- | --- |
+| Process | Reusable type of work. |
+| Operation | Specific stage of a recipe or order. |
+| Station | Place or resource where the process can be executed. |
+| Tool | Auxiliary resource an operation can require. |
+
+Example: **Cutting** can be a process. The **Cut board** operation uses that process within a recipe and can run on **Saw 1** or **Saw 2**.
+
+## Station compatibility
+
+Each process can relate to one or more stations. That relationship lets you plan operations on compatible resources.
+
+| Setting | Effect |
+| --- | --- |
+| Primary station | Preferred resource for the process. |
+| Auxiliary station | Compatible alternative resource. |
+
+There should be only one primary station per process. If several stations do the same work, configure the others as auxiliary.
+
+### Personnel attendance
+
+Configure **Staff attendance** for each process-station combination. An **attended** operation requires personnel presence; an **unattended** operation lets the machine work on its own.
+
+When you change this setting, Bold automatically updates the execution mode and planned labor of operations that use that process and station and have not yet started. It also updates operations in groups that have not started. Started or canceled operations retain their execution mode.
+
+Waiting processes use **timed wait** mode; personnel attendance does not determine their execution mode.
+
+## Relationship with skills
+
+[Employee skills](/en/concepts/people/skills-and-usual-workstations) are also based on processes. If an employee has the **Cutting** skill, work mode can use it to show cutting operations relevant to that person.
+
+The skill does not replace station compatibility. An operation still needs consistent stations, resources and restrictions for execution.
+
+## Granularity
+
+Define processes at the level your team uses to plan, measure and analyze.
+
+| Process too broad | Process too specific |
+| --- | --- |
+| Mixes different bottlenecks. | Fragments planning and dashboards. |
+| Hides duration or capacity differences. | Requires maintaining data the shop floor does not use. |
+| Makes choosing compatible stations harder. | Duplicates processes with irrelevant differences. |
+
+## Related
+
+- [Operations and restrictions](/en/concepts/manufacturing/operations-and-restrictions)
+- [Resources](/en/concepts/manufacturing/resources)
+- [Skills and usual stations](/en/concepts/people/skills-and-usual-workstations)
+- [Sequencing](/en/concepts/manufacturing/sequencing)

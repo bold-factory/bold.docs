@@ -1,0 +1,83 @@
+---
+es_link: "/es/ayuda/smart-factory/crear-automatizacion"
+title: "Automate tasks"
+description: "Schedule a recurring or event-triggered task and monitor its results."
+---
+
+Automate a review or repetitive task so Bold runs it on a schedule or when an event occurs. Each automation retains its own instructions, permissions and execution options.
+
+## Before automating
+
+Check that the task:
+
+- has a clear goal;
+- uses data available in Bold;
+- can be reviewed through a traceable result;
+- does not depend on ambiguous decisions without defined criteria;
+- has a human owner.
+
+## Configure the automation
+
+**Path:** **Smart Factory > Automations**
+
+<Steps>
+  <Step title="Create the automation">
+    Click **New automation**.
+  </Step>
+  <Step title="Assign a name">
+    Enter a name that identifies the work, such as `Daily review of shop floor stops` or `Weekly low-stock check`.
+  </Step>
+  <Step title="Define the instructions">
+    Specify the goal, the data sources to query and the result format.
+
+    **Example:** “Review yesterday's MOs, identify unplanned stops longer than 15 minutes and produce a summary with the reason and affected station.”
+  </Step>
+  <Step title="Select the intelligence level">
+    - **Low:** for simple queries or direct reads.
+    - **Medium:** for regular analysis that needs to relate several data points.
+    - **High:** for complex tasks that need more reasoning.
+  </Step>
+  <Step title="Configure execution">
+    - In **Work mode**, use **Read only** to query data without changing it. Select **Allow changes** only if the automation should act in the system.
+    - In **Clarification questions**, choose **Allow** so the automation pauses the task when it needs information. With **Don't allow**, it works with the available data.
+    - Enable **Memory** if the automation needs to retain context between runs, such as to compare periods.
+  </Step>
+  <Step title="Define the triggers">
+    Choose when it should run:
+
+    - Click **Add scheduled** to specify a time and frequency, such as every day at 09:00.
+    - Click **Add by event** to trigger it when one of the available events occurs. Add conditions if the event supports compatible properties.
+    - Do not add a trigger if you will only start it manually with **Run now**.
+  </Step>
+  <Step title="Assign permissions">
+    Grant only the access needed for the task:
+
+    - Enable **View** in the areas it must query, such as **Employees** or **Files**.
+    - Enable **Edit**, **Upload**, **Delete** or **Manage** only if it must perform those actions.
+    - If you chose **Read only**, do not grant modification permissions.
+  </Step>
+  <Step title="Save and test the automation">
+    Click **Save changes**. Then use **Run now** to test it manually. The test does not replace the configured triggers.
+  </Step>
+</Steps>
+
+## Useful examples
+
+| Automation | Expected result |
+| --- | --- |
+| Review orders at risk of delay | Prioritized list with likely causes. |
+| Detect negative stock daily | Issues by item, lot and location. |
+| Summarize the week's stops | Main reasons and affected operations. |
+| Review pending receipts | Overdue orders by supplier. |
+| Prepare a cost report | Significant variances by manufacturing order or work order. |
+
+<Tip>
+  Start with read and analysis automations. Add actions that change data only once the criteria have been tested.
+</Tip>
+
+## Related
+
+- [Automations](/en/concepts/smart-factory/automations)
+- [Tasks](/en/concepts/smart-factory/tasks)
+- [Query data and perform tasks with AI](/en/guides/smart-factory/query-data-and-perform-tasks-with-ai)
+- [Audit and events](/en/concepts/control-panel/audit-and-events)

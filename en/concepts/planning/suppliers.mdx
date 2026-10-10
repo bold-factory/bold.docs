@@ -1,0 +1,84 @@
+---
+es_link: "/es/conceptos/planificacion/proveedores"
+title: "Suppliers"
+description: "Understand how suppliers connect purchasing, items, lead times and expected supply."
+icon: "building-2"
+---
+
+A **supplier** is a planning master record. It identifies who you purchase materials, spare parts, external services or finished products from.
+
+The supplier record identifies the company. The supplier-item relationship indicates how you purchase a specific item: supplier code, price, lead time and priority.
+
+## What it is for
+
+| Use | What it provides |
+| --- | --- |
+| Purchase orders | Indicates who you purchase from and lets you track commitments. |
+| Supply | Groups expected receipts by supplier. |
+| Recommendations | Helps the purchasing assistant propose a source, date and quantity. |
+| Costs | Provides purchase prices for estimates and analysis. |
+| Integrations | Links Bold suppliers to a business management system, purchasing or imports. |
+
+## Main data
+
+| Data | Use | Recommendation |
+| --- | --- | --- |
+| Name | Identifies the supplier in orders, filters and lists. | Use the operational name recognized by purchasing. |
+| External reference | Connects the supplier to another system. | Keep a unique, stable reference. |
+| Tax identification | Helps distinguish suppliers with similar names. | Fill it in if purchasing or integrations need it. |
+| Audit trail | Shows creation and last modification. | Use it to review master data changes. |
+
+## Relationship with items
+
+Creating a supplier is not enough for a useful purchasing recommendation. A supplier-item relationship must exist with the relevant supply data.
+
+| Data | Use |
+| --- | --- |
+| Type | Marks the supplier as **Primary** or **Secondary** for that item. |
+| Supplier code | Stores the reference the supplier uses for the item. |
+| Price per unit | Provides financial context for purchasing and planned costs. |
+| Average lead time | Calculates when supply can be available. |
+| Lead time deviation | Represents actual delivery variability. |
+
+Maintain one primary supplier per item when you want the purchasing assistant to propose a default source. Use secondary suppliers for real alternatives.
+
+## Relationship with purchase orders
+
+Each purchase order belongs to a supplier. The order header stores the commercial context, and its lines explain which items you purchase, in what quantity and with which expected date.
+
+Confirmed lines generate pending supply. Draft lines do not generate incoming stock.
+
+<Info>
+  The supplier identifies the supply source. The purchase order explains the commitment. The receipt records the physical inflow.
+</Info>
+
+## Lifecycle
+
+| Status | Meaning |
+| --- | --- |
+| **Active** | You can use the supplier in purchasing, item relationships and integrations. |
+| **Inactive** | The supplier is retained for traceability, but you should not use it as a new source. |
+
+When you delete a supplier, Bold marks it inactive through soft deletion. Previous orders, receipts and events retain the reference to preserve history.
+
+## Operational rules
+
+- The external reference should remain stable if the supplier comes from an integration.
+- If a primary supplier's lead time changes, review related purchasing recommendations and forecasts.
+- Do not mark a supplier you only use for urgent purchases as primary.
+- If a supplier becomes inactive, review items that had it as their primary supplier.
+
+## Permissions
+
+| Action | Required permission |
+| --- | --- |
+| View suppliers | Read access to planning. |
+| Create, edit or delete suppliers | Edit access to suppliers. |
+| View item-supplier relationships | Read access to planning items. |
+| Edit item-supplier relationships | Edit access to planning items. |
+
+## Related
+
+- [Purchase orders](/en/concepts/planning/purchase-orders)
+- [Demand and supply](/en/concepts/planning/demand-and-supply)
+- [Know what to purchase](/en/guides/planning/decide-what-to-purchase)

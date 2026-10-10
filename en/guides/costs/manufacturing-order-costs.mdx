@@ -1,0 +1,82 @@
+---
+es_link: "/es/ayuda/costes/ordenes-de-fabricacion"
+title: "Manufacturing order costs"
+description: "Analyze planned cost, actual cost and variances by order and operation."
+---
+
+Use **Production costs** to compare planned cost with the cost recorded on the shop floor. Bold breaks down each order into materials, labor, machine, total and cost per unit.
+
+## Data you can review
+
+| Section | What it includes |
+| --- | --- |
+| Planned quantity | Planned order quantity. |
+| Planned cost | Labor, materials, machine, total and cost per unit calculated from the recipe and planning. |
+| Completed quantity | Quantity recorded as produced. |
+| Actual cost | Labor, materials, machine, total and cost per unit calculated from actual consumption and time records. |
+| Operations | Details by operation to locate the variance. |
+
+## Before analyzing an order
+
+- The order must have a recipe, operations and planned materials.
+- Actual material consumption must be associated with a lot.
+- Completed production must be recorded.
+- Labor time must be assigned to employees with an hourly cost.
+- Resources or machines must have an hourly cost when you want to allocate machine cost.
+
+## Analyze variances
+
+<Steps>
+  <Step title="Open the list">
+    Go to **Costs** and open **Production orders**.
+  </Step>
+  <Step title="Filter the order">
+    Search by MO code or manufactured item. Sort by actual cost per unit to identify variances.
+  </Step>
+  <Step title="Compare planned and actual costs">
+    Review planned quantity, completed quantity, planned total cost and actual total cost.
+  </Step>
+  <Step title="Open the order">
+    Open the order's **Costs** tab to see the breakdown by operation.
+  </Step>
+  <Step title="Review the operation, materials and labor">
+    If a variance is concentrated in one operation, open it and review consumed materials, employee hours and machine cost.
+  </Step>
+</Steps>
+
+## How it is calculated
+
+| Cost | Planned source | Actual source |
+| --- | --- | --- |
+| Materials | Recipe materials and planned item cost. | Consumed materials and the cost of the consumed lot. |
+| Labor | Planned time and planned or average hourly cost. | Recorded time per employee and their hourly cost. |
+| Machine | Planned duration and resource hourly cost. | Actual machine time and resource hourly cost. |
+| Cost per unit | Planned total cost / planned quantity. | Actual total cost / completed quantity. |
+
+## Example
+
+An MO plans to manufacture `100 units` with `€300` in materials, `€120` in labor and `€80` in machine costs. Planned total cost is `€500`, or `€5.00/unit`.
+
+During execution, more materials are consumed and `95 units` are completed. Actual cost reaches `€570`, or `€6.00/unit`. In this case, review:
+
+- Materials with an actual quantity greater than planned.
+- Lots with a unit cost different from the planned cost.
+- Operations with more recorded hours.
+- Machines with an actual duration greater than planned.
+
+## Common problems
+
+| Problem | What to review |
+| --- | --- |
+| Actual cost is zero | Consumption, time records or completed production are missing. |
+| Unexpected material cost | Review the consumed lot and its cost per unit. |
+| Planned labor differs from actual labor | Planned cost uses planning; actual cost uses employees and recorded time. |
+| Very high cost per unit | Check whether the completed quantity is lower than planned. |
+| You cannot see production costs | Review production cost permissions. |
+
+## Related
+
+- [Manufacturing](/en/concepts/manufacturing)
+- [Manufacturing orders](/en/concepts/manufacturing/manufacturing-orders)
+- [Perform shop floor operations](/en/guides/manufacturing/execute-shop-floor-operations)
+- [Prepare cost data](/en/guides/costs/prepare-cost-data)

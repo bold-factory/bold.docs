@@ -1,0 +1,117 @@
+---
+es_link: "/es/conceptos/planificacion/asignacion-de-demanda-y-suministro"
+title: "Demand and supply allocation"
+description: "Understand how Bold connects requirements, stock and future receipts to determine what is covered."
+icon: "link"
+---
+
+**Demand and supply allocation** explains which requirement is covered by current stock or a future receipt.
+
+It does not create purchases, manufacturing or warehouse movements. It reads demand, supply and stock to calculate how much is available, how much will arrive and how much remains pending.
+
+<Note>
+  Do not confuse allocation with a warehouse movement. Allocation relates quantities for planning; a movement records a physical stock change.
+</Note>
+
+## What Bold allocates
+
+| Element | Role in allocation |
+| --- | --- |
+| Demand | Quantity you need to cover for sales, manufacturing or expected consumption. |
+| Physical stock | Quantity of the item already in the warehouse. |
+| Supply | Quantity that will arrive through purchasing or manufacturing. |
+| Outgoing stock | Quantity committed to active requirements. |
+| Incoming stock | Quantity expected from receipt documents or requirements. |
+
+Allocation is calculated by item. If the item uses lots or locations during execution, the warehouse preserves that traceability in actual movements.
+
+## To order and to stock
+
+The procurement policy determines whether a requirement is covered directly or as part of a group.
+
+| Mode | Behavior |
+| --- | --- |
+| **Make to order** | The requirement links to specific supply. Use it when each sale or request needs its own coverage. |
+| **Make to stock** | Several requirements share available stock and future supply. Use it when you replenish common inventory. |
+
+Bold resolves linked supply first: each requirement first takes what is linked to it or its source document. It then distributes shared stock and supply, starting with requirements to order and continuing with requirements to stock by type and date.
+
+## Linked supply
+
+Supply can link to a specific requirement or to the document that creates it, such as an MO. Supply linked to an MO covers that MO's requirements for the same item and does not cover other requirements for that item while the MO needs it.
+
+- Purchase orders generated from an MO's purchasing assistant link to that MO.
+- Manufacturing requests created for an MO's material link to that requirement.
+- A requirement uses its linked supply before free stock, even if the stock is available earlier.
+- If linked supply exceeds its MO's requirement, the excess is distributed among the other requirements.
+- When you receive the material, the received quantity becomes general stock and is no longer linked.
+
+Read [Procurement policy](/en/concepts/planning/procurement-policy) to configure when an item is purchased, manufactured or covered to stock.
+
+## Result for a requirement
+
+| Status | Meaning |
+| --- | --- |
+| **Already available** | There is enough stock now. |
+| **Planned** | Future supply covers the requirement. |
+| **Partially planned** | Only part is covered. |
+| **Not planned** | You still need to create or confirm enough supply. |
+| **No stock required** | The requirement does not need procurement. |
+
+A single requirement can be partly covered by current stock, partly by future supply and partly pending. Read the summary status alongside quantities and dates.
+
+## Allocation example
+
+A confirmed sale generates demand for 35 units. There are 20 units in stock and a confirmed purchase of 30 units that will arrive before the delivery date.
+
+| Part of the demand | Coverage source | Quantity |
+| --- | --- | ---: |
+| Available now | Current stock | 20 |
+| Planned | Confirmed purchase | 15 |
+| Pending | No coverage | 0 |
+
+Two sources cover the requirement: 20 available units and 15 planned units. Of the 30 supply units, 15 remain unallocated to this requirement.
+
+<Info>
+  The status summarizes coverage but does not replace the details. In this example, demand is covered even though not all units are available today.
+</Info>
+
+## Expected dates
+
+The expected date indicates when the allocated quantity should be covered.
+
+| Source | Time reference |
+| --- | --- |
+| Current stock | Coverage available now. |
+| Confirmed purchase order | Expected date of the purchase line. |
+| Manufacturing request or order | Target date and manufacturing schedule. |
+
+If the expected date is missing, the requirement can be planned in quantity while remaining uncertain for delivery prioritization.
+
+<Info>
+  A forecast's product does not count as supply or cover demand. However, a manufacturing forecast can generate component demand, and that demand does enter planning.
+</Info>
+
+## Events that change the calculation
+
+Allocation is recalculated when operational reality changes.
+
+| Event | Effect on the model |
+| --- | --- |
+| Confirmed sale | Generates demand. |
+| Confirmed purchase | Generates supply. |
+| Material receipt | Converts supply into physical stock. |
+| Material shipment | Reduces stock and closes delivered demand. |
+| New or updated manufacturing request | Generates or adjusts expected supply. |
+| Completed manufacturing | Converts pending production into physical stock. |
+| Changed procurement policy | Can change whether the requirement is covered to order or to stock. |
+| Completed MO or removed material | Supply linked to that requirement is distributed among the others. |
+
+## Related
+
+- [Demand and supply](/en/concepts/planning/demand-and-supply)
+- [Procurement policy](/en/concepts/planning/procurement-policy)
+- [Forecasts and assistants](/en/concepts/planning/forecasts-and-assistants)
+- [Stock and movements](/en/concepts/warehouse/stock-and-movements)
+- [Sales orders](/en/concepts/planning/sales-orders)
+- [Purchase orders](/en/concepts/planning/purchase-orders)

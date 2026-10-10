@@ -1,0 +1,114 @@
+---
+es_link: "/es/conceptos/costes/coste-teorico-vs-real"
+title: "Planned versus actual cost"
+description: "Distinguish expected costs, recorded costs, and variances in Bold."
+icon: "scale"
+---
+
+**Planned cost** estimates how much an operation, item, or intervention should cost. **Actual cost** uses what is recorded during execution.
+
+<Info>
+  Planned and actual costs are both expressed in euros (EUR). Bold does not let you change the currency or combine costs in several currencies.
+</Info>
+
+## Comparison
+
+| Concept | Source |
+| --- | --- |
+| Planned cost | Recipes, expected time, base costs, and planned quantities. |
+| Actual cost | Consumption, lots, time, employees, and actual quantities. |
+| Variance | Difference between what was expected and what was recorded. |
+
+## Planned item cost
+
+Planned cost per unit is used to estimate orders, recipes, manufacturing orders, and comparisons with actual cost.
+
+| Item type | Common calculation source |
+| --- | --- |
+| Purchased | Supplier prices, purchase orders, and purchase line cost changes. |
+| Manufactured | Recipe, active version, materials, time, resources, and related base costs. |
+| Manual | Value defined by the team when you do not want automatic recalculation. |
+
+When the cost updates automatically, Bold stores the total and its per-unit breakdown into materials, labor, and machine:
+
+- For a purchased item, all cost is treated as material; labor and machine are zero.
+- For a manufactured item, direct material comes from purchased components consumed by its own recipe. Inherited material comes from materials previously consumed within the manufactured components or semi-finished items in that recipe.
+- Direct labor is calculated from the expected person-time of the item's own operations and the average positive hourly cost of active employees. Inherited labor was already consumed in its semi-finished items.
+- Direct machine cost is calculated from the expected duration of the item's own operations and the main workstation's hourly cost. Inherited machine cost was already consumed in its semi-finished items.
+
+The calculation estimates what is needed to produce one unit of the catalog item. Within that unit, an operation can have a relative quantity other than one. Times with a "per unit" frequency scale with that relative quantity; other times apply once.
+
+If there is no usable active main recipe, the automatic breakdown is zero. A manufactured item with manual cost, or an ignored item, keeps its total but does not show a breakdown.
+
+For manufactured items, Bold preserves the cost categories contributed by semi-finished items. Their material is added as inherited material, their labor as inherited labor, and their machine usage as inherited machine cost. The item details separate direct and inherited semi-finished costs in all three categories.
+
+Planned item costs are rounded to a maximum of four decimal places. If a component has a manual cost without a breakdown, Bold allocates that amount to direct material when it is purchased and inherited material when it is manufactured.
+
+## Employee cost
+
+Employee cost is the hourly cost Bold applies to labor records. It affects manufacturing orders, operations, and maintenance work orders.
+
+To estimate it, use the total cost to the company and divide it by effective annual hours.
+
+```text
+hourly cost = annual cost / effective annual hours
+```
+
+For a 40-hour working week, a common reference is `1,826` effective annual hours. Adjust this basis to your collective agreement, calendar, and internal criteria.
+
+## Cost updates
+
+Costs can update automatically or manually depending on the item type and operational workflow.
+
+| Case | Common update |
+| --- | --- |
+| Purchased item | Updates when a purchase order line is recorded or its unit price changes. The receipt uses that cost to value the lot, but does not recalculate the item's planned cost. |
+| Manufactured item | Can update from recipe structure, materials, and labor. |
+| Manual adjustment | Lets you correct or set a cost when external data is unavailable. |
+
+<Info>
+  The specific policy depends on operational settings and available data. Always review the cost date, source, and scope before using it for financial decisions.
+</Info>
+
+## Manufacturing
+
+In manufacturing, actual cost adds consumed materials, recorded labor, and machine cost. Material cost comes from the lots consumed.
+
+Co-products are recorded without allocating a share of production cost to them. Rejected quantities also do not change the total used in this calculation; actual cost per unit divides total cost by completed quantity.
+
+An order with consumption not linked to a lot, incomplete time records, or missing hourly costs can show an incomplete actual cost.
+
+| Cost | Planned source | Actual source |
+| --- | --- | --- |
+| Materials | Recipe materials and planned item cost. | Consumed materials and the consumed lot's cost. |
+| Labor | Planned time and expected or average hourly cost. | Recorded time per employee and their hourly cost. |
+| Machine | Planned duration and resource hourly cost. | Actual machine time and resource hourly cost. |
+| Cost per unit | Planned total cost divided by planned quantity. | Actual total cost divided by completed quantity. |
+
+## Maintenance
+
+In maintenance, actual cost combines materials and employee time.
+
+The history lets you compare assets, causes, actions, and recurring interventions.
+
+| Cost | Common calculation |
+| --- | --- |
+| Material per line | Consumed quantity multiplied by the lot's cost per unit. |
+| Labor per line | Recorded hours multiplied by the employee's hourly cost. |
+| Total work order cost | Material cost plus labor cost. |
+
+## Common problems
+
+| Problem | What to check |
+| --- | --- |
+| Item cost is zero | Purchase price, active recipe, or manual cost is missing. |
+| Cost changes when a recipe is modified | Automatic cost updates are enabled for the item. |
+| Actual labor cost is zero | The employee has no hourly cost, or time was not recorded against an employee. |
+| Costs are very high or low | Check whether you divided by effective annual hours. |
+| Planned cost differs from actual cost | Planned cost uses planned data; actual cost uses recorded consumption, lots, time, and employees. |
+
+## Related
+
+- [Costs](/en/concepts/costs)
+- [Inventory valuation](/en/concepts/costs/inventory-valuation)
+- [Manufacturing order costs](/en/guides/costs/manufacturing-order-costs)

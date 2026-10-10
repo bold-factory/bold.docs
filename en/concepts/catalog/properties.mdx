@@ -1,0 +1,85 @@
+---
+es_link: "/es/conceptos/catalogo/propiedades"
+title: "Properties"
+description: "Understand properties as reusable attributes for variants, validation and conditions."
+icon: "list-filter"
+---
+
+**Properties** are reusable attributes that describe families and items. You use them to distinguish variants, validate data and feed manufacturing or planning rules.
+
+Common examples: color, material, length, finish, format, quality, logistics class or technical date.
+
+## What they are for
+
+| Use | Example |
+| --- | --- |
+| Distinguish variants | The color and length of a table. |
+| Validate items | Require each item to have complete values. |
+| Filter the catalog | Search materials by finish or format. |
+| Apply recipe conditions | Use an operation only for certain values. |
+| Integrate data | Link options to external references. |
+
+Do not use properties for occasional notes. If you will not filter, validate or use the value in rules, a description or notes are usually enough.
+
+## Property kinds
+
+| Kind | Use it for | Example |
+| --- | --- | --- |
+| Option selection | Controlled, closed lists. | Color, finish, logistics family. |
+| Yes/no | Binary characteristics. | Requires refrigeration, flammable. |
+| Whole number | Quantities without decimals. | Number of layers. |
+| Decimal number | Precise measurements or parameters. | Thickness, density, length. |
+| Date/time | Dates relevant to classification or checks. | Certification date. |
+| Free text | Technical values that do not fit a list. | Short reference. |
+
+Choose the kind before assigning the property to many families. You cannot change the type afterward. If you need another type, delete the property and create it again; you will then need to reassign it and enter its values again.
+
+## Controlled options
+
+Use **Option selection** when you want to prevent duplicate values caused by free typing.
+
+| Property | Options |
+| --- | --- |
+| Color | Red, blue, black |
+| Finish | Matte, gloss, satin |
+| Format | Box, bag, drum |
+
+If each family needs a different list, create different properties. Do not mix incompatible meanings in one global property.
+
+## Item validation
+
+When a family requires a property, its items must provide a valid value. The interface shows **Missing information** while any required value is missing and **All good** when the information is complete.
+
+If two items have the same family and property values, check whether they are duplicates. If they are different, you need a property to explain the difference.
+
+## Use in manufacturing
+
+Recipes can use properties to calculate quantities, show instructions or apply conditions to operations.
+
+Example: the **Length** property can feed a cutting formula. The **Finish** property can determine whether a painting operation appears.
+
+## Imports and integrations
+
+Use stable external references for properties and options when values come from a business management system, PIM, online store or import file. This prevents duplicates when the same value arrives with a different display name.
+
+## Copy properties
+
+You can copy an **Option selection** property to create a new list with the same initial options.
+
+Use this when you want to start from an existing list but keep it independent from then on. For example, you can copy **Commercial color** to create **Technical color** and then adjust options without mixing commercial and manufacturing uses.
+
+## Permissions
+
+| Action | Required permission |
+| --- | --- |
+| View properties and options | Read access to the catalog. |
+| Create, edit, copy or delete properties | Edit access to the catalog. |
+| Assign properties to families | Access to edit families. |
+| Edit item values | Access to edit items. |
+
+## Related
+
+- [Families](/en/concepts/catalog/families)
+- [Items](/en/concepts/catalog/items)
+- [Recipes and versions](/en/concepts/manufacturing/recipes-and-versions)
+- [Group variants](/en/guides/catalog/group-items-into-families)

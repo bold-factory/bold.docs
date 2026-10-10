@@ -1,0 +1,42 @@
+name: Check documentation translations
+
+on:
+  pull_request:
+    paths:
+      - 'es/**'
+      - 'en/**'
+      - 'docs.json'
+      - 'sources/translations/**'
+      - 'scripts/check-translations.mjs'
+      - 'scripts/check-translations.test.mjs'
+      - 'scripts/check-links.mjs'
+      - '.github/workflows/check-translations.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'es/**'
+      - 'en/**'
+      - 'docs.json'
+      - 'sources/translations/**'
+      - 'scripts/check-translations.mjs'
+      - 'scripts/check-translations.test.mjs'
+      - 'scripts/check-links.mjs'
+      - '.github/workflows/check-translations.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  translations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check translation parity and freshness
+        run: node scripts/check-translations.mjs
+      - name: Test translation checks
+        run: node --test scripts/check-translations.test.mjs
+      - name: Check localized links
+        run: node scripts/check-links.mjs

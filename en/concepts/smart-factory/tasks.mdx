@@ -1,0 +1,76 @@
+---
+es_link: "/es/conceptos/smart-factory/tareas"
+title: "Tasks"
+description: "Understand how to create, share and review one-off work executed by Boldy."
+icon: "list-checks"
+---
+
+A **task** is one-off work you delegate to Boldy. You can start it manually, from an automation or through an integration.
+
+The task retains instructions, messages, attachments, tools used, clarifications, results and credits consumed.
+
+## One-off task configuration
+
+| Option | Use |
+| --- | --- |
+| Instructions | Describe the result you need and the work context. |
+| Intelligence level | Adjusts reasoning capability and expected consumption. |
+| Visibility | Determines who can view the task. |
+| Work mode | Determines whether Boldy can make changes or only look up data. |
+| Files and audio | Add context to instructions. |
+
+### Visibility
+
+| Option | Who can see it |
+| --- | --- |
+| **Only me** | The user who created the task. |
+| **Shared** | Other users with access to Smart Factory tasks. |
+
+The owner can continue their task. Intervening in someone else's shared task requires permission to manage all tasks.
+
+### Work mode
+
+| Option | Behavior |
+| --- | --- |
+| **Read only** | Boldy can look up and analyze data but cannot modify it. |
+| **Allow changes** | Boldy can use permitted actions during the task. |
+
+**Allow changes** mode does not bypass access controls. Boldy can execute only actions the task has permission for.
+
+## Statuses
+
+| Status | What to do |
+| --- | --- |
+| **Pending** | Wait for processing to start. |
+| **Running** | Boldy is working. |
+| **Action required** | Respond to the pending clarification or decision. |
+| **Completed** | Review the result. |
+| **Failed** | Review the error and decide whether to start another task. |
+
+Tasks expire after 28 days of inactivity. If you need to resume an expired task, create another with the necessary context.
+
+## Source channel
+
+A task started from a messaging channel retains that channel. You can view activity and results on the web, but must respond from the same external conversation.
+
+Read [Channels and related identities](/en/concepts/control-panel/channels-and-related-identities) to understand how Bold recognizes a user conversing through another channel.
+
+## How to write instructions
+
+Include the goal, period, relevant records, limits and expected format.
+
+| Case | Example |
+| --- | --- |
+| Operational summary | `Summarize MOs in progress with delays and next steps.` |
+| Maintenance review | `Review open work orders for asset ENV-01 and highlight those requiring action.` |
+| Data validation | `Check attachments and identify inconsistencies before importing them.` |
+
+<Warning>
+  Review critical tasks before using their results to make decisions or change operational data.
+</Warning>
+
+## Related
+
+- [Automations](/en/concepts/smart-factory/automations)
+- [Boldy](/en/concepts/smart-factory/boldy)
+- [Look up data and run tasks with AI](/en/guides/smart-factory/query-data-and-perform-tasks-with-ai)

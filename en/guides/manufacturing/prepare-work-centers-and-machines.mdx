@@ -1,0 +1,73 @@
+---
+es_link: "/es/ayuda/produccion/crear-recursos"
+title: "Prepare work centers and machines"
+description: "Organize work centers, machines, and tools to plan and execute manufacturing."
+---
+
+Prepare the machines, lines, tables, and areas where work will take place. In Bold, these elements are configured as **resources** so each operation can run at a compatible workstation with the necessary tools. See [Resources](/en/concepts/manufacturing/resources) for the complete model.
+
+Resources can be fixed or automated machinery, production lines, manual work centers, inspection areas, or services.
+
+**Path:** **Production > Resources**
+
+This view manages:
+
+- **Workstations:** machines, lines, tables, or areas where operations run.
+- **Areas:** hierarchy organizing workstations by plant, section, or line.
+- **Tools:** auxiliary elements that may be required to run an operation.
+- **Diagram:** visual view of areas and workstations.
+
+## Steps to follow
+
+### 1. Add an area
+
+**Name:** enter the technical or usual name of the main area, section, plant, or line. For example: `Plastic injection`, `Machining`, `Assembly line`, or `Plant 1 - Logistics`.
+
+**Description (optional):** explain what happens in the area, which products are processed, or any layout detail the team should know. For example: `High-density plastic parts molding area. Includes hydraulic presses 1 through 5.`
+
+### 2. Add a workstation
+
+**Name:** use a clear, specific identifier operators can recognize on their screens. For example: `Automatic labeling line`, `Visual inspection workstation 2`, or `Haas CNC lathe 01`.
+
+**Description (optional):** add technical context, restrictions, or notes about the work performed at the workstation. For example: `Press for molding metal parts up to 5 mm thick.`
+
+**Capacity:** indicate whether the workstation can process several jobs at once.
+
+- **If you leave the checkbox unchecked**, the system treats the workstation as having a strict limit. For example, a CNC machine, welding robot, or manual work center can process one piece or order at a time.
+- **If you select the checkbox**, you indicate that the workstation can process simultaneous work. For example, it could be an industrial oven, conveyor belt, or drying area.
+
+**Area:** select the area the workstation belongs to. For example, assign `Assembly table B` to `Final assembly`.
+
+<Note>
+  All workstations must belong to an area.
+</Note>
+
+**Consumption location:** select the location where raw materials should be before executing an operation. Bold uses this location as the destination when you request materials.
+
+**Generation location:** select where material produced by the workstation is recorded.
+
+<Info>
+  Configure **Consumption location** to create provisioning movements to the workstation. See [Provision raw materials](/en/guides/warehouse/provision-raw-materials).
+</Info>
+
+### 3. Add a tool
+
+A **tool** is an auxiliary element, mold, die, fixture, or critical consumable installed and removed at a workstation to manufacture a particular product.
+
+**Name:** enter the technical name, inventory code, or identifier production and maintenance teams use to recognize the tooling. For example: `AC-40 front housing mold`.
+
+<Tip>
+  Register the element as a tool if replacing it requires stopping the machine and changing its setup.
+</Tip>
+
+**Path:** **Production > Resources > Tool**
+
+**Assign characteristics:** add properties to filter tools and determine their compatibility with each job.
+
+<Note>
+  **Example:** assign these characteristics to the tool `Front housing mold X`:
+
+  - **Compatible material:** `Polypropylene (PP)`.
+  - **Number of cavities:** `4`.
+  - **Shade/color:** `Black plastic`.
+</Note>

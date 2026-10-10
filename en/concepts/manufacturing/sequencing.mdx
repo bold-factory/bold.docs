@@ -1,0 +1,48 @@
+---
+es_link: "/es/conceptos/fabricacion/secuenciacion"
+title: "Sequencing"
+description: "Understand how sequencing orders operations by resources, working hours, restrictions, dates and materials."
+icon: "list-ordered"
+---
+
+**Sequencing** determines the order, resource and time window in which manufacturing operations should run.
+
+You can sequence an order directly or solve a production plan to evaluate a set of operations before applying it.
+
+## What sequencing uses
+
+| Input | Why it matters |
+| --- | --- |
+| Open operations | Pending work that can be placed on the calendar. |
+| Processes | Let you find compatible stations. |
+| Resources | Define capacity, location and physical restrictions. |
+| Manufacturing working hours | Define global available work time slots. |
+| Restrictions | Maintain precedence between operations. |
+| Target dates | Order urgency and delays. |
+| Materials | Can block or delay operations if you enable raw material restrictions. |
+
+## Result
+
+A sequence proposes dates, order and resources for operations. It can flag unplanned, delayed or incompatible operations so you can review master data before applying changes.
+
+| Symptom | What to review |
+| --- | --- |
+| Operation without a resource | Process, compatible station and required tools. |
+| Operation outside its date | Target date, duration, working hours and capacity. |
+| Impossible sequence | Duplicate restrictions, cycles or incompatible precedence. |
+| Missing material | Projected stock, consumption and availability date. |
+
+## Sequencing vs production plan
+
+Sequencing is the calculation that orders operations. The production plan is the scenario where you can solve, compare and apply that calculation to the open work Bold loads when you create or update the plan.
+
+Use a plan to evaluate a broad set of orders without modifying actual execution until you approve the proposal.
+
+## Related
+
+- [Production plans](/en/concepts/manufacturing/production-plans)
+- [Operations and restrictions](/en/concepts/manufacturing/operations-and-restrictions)
+- [Assignments and operation groups](/en/concepts/manufacturing/assignments-and-operation-groups)
+- [Processes](/en/concepts/manufacturing/processes)
+- [Resources](/en/concepts/manufacturing/resources)
+- [Sequence orders](/en/guides/manufacturing/sequence-orders)

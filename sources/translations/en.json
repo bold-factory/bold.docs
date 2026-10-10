@@ -1,0 +1,872 @@
+{
+  "version": 2,
+  "sourceLanguage": "es",
+  "targetLanguage": "en",
+  "pages": [
+    {
+      "source": "es/ayuda/almacen/ajustar-stock.mdx",
+      "target": "en/guides/warehouse/adjust-stock.mdx",
+      "sourceHash": "efedecda64b03c65c0a0497cbcabf564ccd5574306cfe01fe4270006f2f524e7"
+    },
+    {
+      "source": "es/ayuda/almacen/aprovisionar-materias-primas.mdx",
+      "target": "en/guides/warehouse/provision-raw-materials.mdx",
+      "sourceHash": "6a4f65deb03c41f81b76dfb90457434caee5fe702221072a6ef67e455bafd688"
+    },
+    {
+      "source": "es/ayuda/almacen/cargar-y-cerrar-una-expedicion.mdx",
+      "target": "en/guides/warehouse/execute-and-close-a-load-order.mdx",
+      "sourceHash": "467ae6b535d11dc6e55d0017fb703a0a1a2b3a92772009c9d4fde12ae3b98df7"
+    },
+    {
+      "source": "es/ayuda/almacen/configurar-y-completar-controles-de-recepcion.mdx",
+      "target": "en/guides/warehouse/configure-and-complete-receipt-inspections.mdx",
+      "sourceHash": "b2ddea82449875940fd7dc3f61d763a17856badde77d1b344d1c57a2dfaa917d"
+    },
+    {
+      "source": "es/ayuda/almacen/crear-ubicaciones.mdx",
+      "target": "en/guides/warehouse/create-locations.mdx",
+      "sourceHash": "7b46e66886557b439bfd6355cf81884140e5e5c26d060b950d9da7531258afc8"
+    },
+    {
+      "source": "es/ayuda/almacen/hacer-inventario.mdx",
+      "target": "en/guides/warehouse/take-a-stock-count.mdx",
+      "sourceHash": "c8d13b0ccd4d65864432a7b805ab0873f62236b06bb2f91b3225eadb29901a0b"
+    },
+    {
+      "source": "es/ayuda/almacen/introduccion.mdx",
+      "target": "en/guides/warehouse/introduction.mdx",
+      "sourceHash": "ec187c974b66b812c8d498ef7458eca7ed833cd4b1236379c23d77a2dfede48a"
+    },
+    {
+      "source": "es/ayuda/almacen/investigar-diferencias-de-stock.mdx",
+      "target": "en/guides/warehouse/investigate-stock-discrepancies.mdx",
+      "sourceHash": "342dd03cb7fe6095e656d96d22082d03066352db74b5651c7b13b6f1eb9d2c67"
+    },
+    {
+      "source": "es/ayuda/almacen/investigar-trazabilidad-de-un-lote.mdx",
+      "target": "en/guides/warehouse/investigate-lot-traceability.mdx",
+      "sourceHash": "caa9d6957a6a912ad06423518726ca3bef4618b50ea3f28db73517e0311cf19d"
+    },
+    {
+      "source": "es/ayuda/almacen/mover-stock.mdx",
+      "target": "en/guides/warehouse/move-stock-between-locations.mdx",
+      "sourceHash": "eecc4e09a64f7e4c95a5cbeb63ae221b1c63924550093cef07ca5a245bc568e1"
+    },
+    {
+      "source": "es/ayuda/almacen/planificar-una-carga.mdx",
+      "target": "en/guides/warehouse/plan-and-prepare-a-load.mdx",
+      "sourceHash": "ccbbe2ea12a552b5e62148dd6a2f5aefc5279b7589e1a64ed5dbd464b315d1c9"
+    },
+    {
+      "source": "es/ayuda/almacen/recibir-con-albaran.mdx",
+      "target": "en/guides/warehouse/scan-delivery-notes-with-ai.mdx",
+      "sourceHash": "288e09d00ad220313f89f1091c5ecfdfa221a1b6d9fb8940e98f4786ecea3f39"
+    },
+    {
+      "source": "es/ayuda/almacen/registrar-equipos-de-almacen.mdx",
+      "target": "en/guides/warehouse/register-warehouse-equipment.mdx",
+      "sourceHash": "72ce48fc14e309b11ee01d1c01a0587496193be94aef45c02236a9ae5f4f40a0"
+    },
+    {
+      "source": "es/ayuda/almacen/trabajar-con-bultos-y-contenedores.mdx",
+      "target": "en/guides/warehouse/work-with-packages-and-containers.mdx",
+      "sourceHash": "91d8da25a7625b00fdf04c6800d652e92d68b088e2e385c0671b939a355f0300"
+    },
+    {
+      "source": "es/ayuda/analisis/introduccion.mdx",
+      "target": "en/guides/analytics/introduction.mdx",
+      "sourceHash": "2daf54ce1d3ed4deabed29e6da599e4cbd831155f8c4b300e9967860b182073c"
+    },
+    {
+      "source": "es/ayuda/articulos/crear-un-articulo.mdx",
+      "target": "en/guides/catalog/create-an-item.mdx",
+      "sourceHash": "4f7aa7953b28d99fc25a7e42c80d4226447914c165350d6fe8bd2422a1cc0637"
+    },
+    {
+      "source": "es/ayuda/articulos/crear-una-familia.mdx",
+      "target": "en/guides/catalog/group-items-into-families.mdx",
+      "sourceHash": "89c032bb9ca6e8eb8bbd2a7dcf7afc47fb95711a7aff87dd75ff3f9ecc6d2801"
+    },
+    {
+      "source": "es/ayuda/articulos/definir-propiedades.mdx",
+      "target": "en/guides/catalog/define-family-properties.mdx",
+      "sourceHash": "5a8d410e1c50b60d7c4630c73ee2c23d831e956fee1a5cfc4e5782d1509e50a6"
+    },
+    {
+      "source": "es/ayuda/articulos/editar-un-articulo.mdx",
+      "target": "en/guides/catalog/configure-an-item.mdx",
+      "sourceHash": "ca56c12162a10431928a3bf2922b74ee728420c639d6f10db6af68a3b7df9160"
+    },
+    {
+      "source": "es/ayuda/articulos/introduccion.mdx",
+      "target": "en/guides/catalog/introduction.mdx",
+      "sourceHash": "1eae102294b1f1aaf1fdccc0b488da6f0f02e1fce2e54f5ad5c588208d40db74"
+    },
+    {
+      "source": "es/ayuda/articulos/unidades-de-medida.mdx",
+      "target": "en/guides/catalog/configure-units-of-measure.mdx",
+      "sourceHash": "dd12e411d3b9b57bc3ed5dbdd06c430045b318bb5cb7f455c8123e052699dfdb"
+    },
+    {
+      "source": "es/ayuda/compras/recibir-pedido-de-compra.mdx",
+      "target": "en/guides/purchasing/receive-a-purchase-order.mdx",
+      "sourceHash": "848854a6213149b5db819d1c2f0b3e167d904b0d66311b14f0f01a34005da6fb"
+    },
+    {
+      "source": "es/ayuda/costes/analizar-costes-de-articulos.mdx",
+      "target": "en/guides/costs/analyze-item-costs.mdx",
+      "sourceHash": "1c5ae1b4d5fe48a9652a339dccc5c1ead5106e209046b46f2f892e839776624a"
+    },
+    {
+      "source": "es/ayuda/costes/configurar-costes-del-personal.mdx",
+      "target": "en/guides/costs/configure-employee-costs.mdx",
+      "sourceHash": "347b2e945098f167c920d023f95f180e5167cfba1cfdf3f05223b127b457fc96"
+    },
+    {
+      "source": "es/ayuda/costes/introduccion.mdx",
+      "target": "en/guides/costs/introduction.mdx",
+      "sourceHash": "06f62232e5a286e65e238d6f88ff33db2d13e43e2c8c6000bb443c982307a8a0"
+    },
+    {
+      "source": "es/ayuda/costes/ordenes-de-fabricacion.mdx",
+      "target": "en/guides/costs/manufacturing-order-costs.mdx",
+      "sourceHash": "6c17948347061c2079b794000f848b152386ad6b34c544c2a70dfb5112cb82c3"
+    },
+    {
+      "source": "es/ayuda/costes/partes-de-trabajo.mdx",
+      "target": "en/guides/costs/work-order-costs.mdx",
+      "sourceHash": "cd3aac78afe37ff033f255f5fe0fe916b865e1b46238e3d0019a61a51fad0217"
+    },
+    {
+      "source": "es/ayuda/costes/preparar-datos-de-coste.mdx",
+      "target": "en/guides/costs/prepare-cost-data.mdx",
+      "sourceHash": "ebb31f60fea7c9002e8b980009d4addca9d0a3f955a7aed0ae0145aa59bea42e"
+    },
+    {
+      "source": "es/ayuda/costes/valoracion-inventario.mdx",
+      "target": "en/guides/costs/value-inventory.mdx",
+      "sourceHash": "d6696920de99ec2e2fad46a1441653ac9faa7cb007e3f2bd51e7aa707a2d8cbe"
+    },
+    {
+      "source": "es/ayuda/mantenimiento/como-configurar-el-mantenimiento.mdx",
+      "target": "en/guides/maintenance/configure-maintenance.mdx",
+      "sourceHash": "e3060ee86bd48aa0a5867e9fc0e7cdf14179e37d1b9a244bc171064efa1e6125"
+    },
+    {
+      "source": "es/ayuda/mantenimiento/crear-parte-de-trabajo.mdx",
+      "target": "en/guides/maintenance/record-maintenance-work.mdx",
+      "sourceHash": "f955062f0e0f5b97d967840c361f820dc4f8d954d1fedc9e2f67a21354672408"
+    },
+    {
+      "source": "es/ayuda/mantenimiento/introduccion.mdx",
+      "target": "en/guides/maintenance/introduction.mdx",
+      "sourceHash": "a2d7b09f1c93c4d5c9b26f095e4c9ab362e1a1347759ef6e9f038435ce7289de"
+    },
+    {
+      "source": "es/ayuda/mantenimiento/mantenimiento-preventivo.mdx",
+      "target": "en/guides/maintenance/schedule-preventive-maintenance.mdx",
+      "sourceHash": "6f33182d35ec6db57ee439f79bd75c85d63fc22b57811c4a514869072ce4cc0a"
+    },
+    {
+      "source": "es/ayuda/panel-de-control/activar-notificaciones.mdx",
+      "target": "en/guides/control-panel/enable-notifications.mdx",
+      "sourceHash": "1931d272316dc34e4ccbaee0e40b99fc38d8538dffbc165e895dffd2c111f0db"
+    },
+    {
+      "source": "es/ayuda/panel-de-control/configuracion-de-empresa.mdx",
+      "target": "en/guides/control-panel/configure-the-company.mdx",
+      "sourceHash": "53a5bb96195e83ce4a9f513bdc767e57335659dc20a516e235bf9274601a293d"
+    },
+    {
+      "source": "es/ayuda/panel-de-control/configurar-webhooks.mdx",
+      "target": "en/guides/control-panel/configure-webhooks.mdx",
+      "sourceHash": "6c70a6b8f57e441c23a54087d2a087b3f0c85ac7d234b4f5597ff3de7b4828d3"
+    },
+    {
+      "source": "es/ayuda/panel-de-control/crear-etiquetas-y-codigos.mdx",
+      "target": "en/guides/control-panel/create-labels-and-codes.mdx",
+      "sourceHash": "fac2ca0230ac8fe96e698d8033bf2f9b8051fa51824e6ec8fa1c430dcc61a89f"
+    },
+    {
+      "source": "es/ayuda/panel-de-control/disenar-roles-por-responsabilidad.mdx",
+      "target": "en/guides/control-panel/design-permission-profiles-by-responsibility.mdx",
+      "sourceHash": "e74c0fc33a10997769886d79299211810aa2dceff97a4b6deeec268121fe4d46"
+    },
+    {
+      "source": "es/ayuda/panel-de-control/exportar-datos.mdx",
+      "target": "en/guides/control-panel/export-data.mdx",
+      "sourceHash": "bd870677ace9f07fd6e61fde791fb941a42f44cb70382b63ac454539035f4bc8"
+    },
+    {
+      "source": "es/ayuda/panel-de-control/gestionar-archivos.mdx",
+      "target": "en/guides/control-panel/manage-files.mdx",
+      "sourceHash": "2b639d6e1b1bba9da9f40fee5f92fd73e7493c0a1dfc68b60b9167c65c9f8112"
+    },
+    {
+      "source": "es/ayuda/panel-de-control/importar-datos.mdx",
+      "target": "en/guides/control-panel/import-data.mdx",
+      "sourceHash": "67bc68b091c9a816375138f01de2ab3de8eecba76cd81a766fab1846d9801cdd"
+    },
+    {
+      "source": "es/ayuda/panel-de-control/introduccion.mdx",
+      "target": "en/guides/control-panel/introduction.mdx",
+      "sourceHash": "215ca4fba7658d88a347d6ea37a0ac617c38ef464394c99f957c0254538d2b92"
+    },
+    {
+      "source": "es/ayuda/panel-de-control/vincular-telegram.mdx",
+      "target": "en/guides/control-panel/link-telegram-to-your-account.mdx",
+      "sourceHash": "16cc6b6bda3fb8930c32b8d6312e7beb242a5d539692a5e88d94c40ffbf0953b"
+    },
+    {
+      "source": "es/ayuda/personal/configurar-horarios.mdx",
+      "target": "en/guides/people/configure-employee-schedules.mdx",
+      "sourceHash": "7013569404890505bc748cb04d09ffa8660e602832223ae84c4cae0ba590c19b"
+    },
+    {
+      "source": "es/ayuda/personal/configurar-turnos-y-calendarios.mdx",
+      "target": "en/guides/people/configure-shifts-and-calendars.mdx",
+      "sourceHash": "2c413b68a031d2db6478d35f758189c83f9e251ddface6eb8602064e66bbde28"
+    },
+    {
+      "source": "es/ayuda/personal/empleados.mdx",
+      "target": "en/guides/people/register-an-employee.mdx",
+      "sourceHash": "687d3d064efa98251dcc7b9895cf4f3876f1c7e82427c46b8e8c5dbd7ffaf345"
+    },
+    {
+      "source": "es/ayuda/personal/introduccion.mdx",
+      "target": "en/guides/people/introduction.mdx",
+      "sourceHash": "656e4e83fb478ce0d5507fc8e35d6db7e6ec285cbb3d4b256b7043ae69478e5f"
+    },
+    {
+      "source": "es/ayuda/planificacion/asistente-de-compras.mdx",
+      "target": "en/guides/planning/decide-what-to-purchase.mdx",
+      "sourceHash": "fea88adc6eab480d5a7a4286258b30829baa969aa725dabb671191d897968697"
+    },
+    {
+      "source": "es/ayuda/planificacion/configuracion.mdx",
+      "target": "en/guides/planning/purchasing.mdx",
+      "sourceHash": "ec7386d6b1cb01ce77c03c9bfd0faa3f5a809ec8df94eb8f8798e6a0c14a3cce"
+    },
+    {
+      "source": "es/ayuda/planificacion/priorizar-necesidades.mdx",
+      "target": "en/guides/planning/decide-what-to-manufacture.mdx",
+      "sourceHash": "642a8317bfb68b0fc3c4208a7002394596717f65c9957a9a8e3d9913acb76684"
+    },
+    {
+      "source": "es/ayuda/planificacion/proveedores.mdx",
+      "target": "en/guides/planning/register-a-supplier.mdx",
+      "sourceHash": "959771cc30a1b11242281e3ddae783010fd8356c8f19cf1b106adfd292948fa9"
+    },
+    {
+      "source": "es/ayuda/planificacion/realizar-pedidos-de-compra.mdx",
+      "target": "en/guides/planning/create-a-purchase-order.mdx",
+      "sourceHash": "e6b97d37bfc552e4cdd35a1cc6d8c7ad3ec74a1e9e37db752cad5b7bacc97d7d"
+    },
+    {
+      "source": "es/ayuda/primeros-pasos/configurar-receta-minima.mdx",
+      "target": "en/guides/getting-started/define-a-manufacturing-process.mdx",
+      "sourceHash": "7c6eeecc31507dae9291e1d9e77b407a15ce4e18be47927ef4025ce02d5f6d31"
+    },
+    {
+      "source": "es/ayuda/primeros-pasos/crear-pedido-y-lanzar-of.mdx",
+      "target": "en/guides/getting-started/create-an-order-and-launch-an-mo.mdx",
+      "sourceHash": "2af62f6e449d04444d4963dfcc8e9f57de84b4128d76d31c05eeffbeda70352f"
+    },
+    {
+      "source": "es/ayuda/primeros-pasos/ejecutar-primera-of.mdx",
+      "target": "en/guides/getting-started/execute-your-first-mo.mdx",
+      "sourceHash": "9e26b3cfa71e9e494d5d6a97688016d48b670d17f418ce4d1b16cbbe4f7d4b76"
+    },
+    {
+      "source": "es/ayuda/primeros-pasos/introduccion.mdx",
+      "target": "en/guides/getting-started/introduction.mdx",
+      "sourceHash": "d2cefb50e8f705d847af778718f8d071f812f199bb9e50a2d7e954d3a7ebd5e2"
+    },
+    {
+      "source": "es/ayuda/primeros-pasos/preparar-datos-base.mdx",
+      "target": "en/guides/getting-started/prepare-master-data.mdx",
+      "sourceHash": "82b125826d57d50a49d5a1ac0d9840eec855bd8898cf9c7fb02ba7a5ac63fd1a"
+    },
+    {
+      "source": "es/ayuda/produccion/asignar-recursos.mdx",
+      "target": "en/guides/manufacturing/assign-workstations.mdx",
+      "sourceHash": "12fb7898dce794251bb2157aecb9df650f9c04a866cdf99012c570edf2e91694"
+    },
+    {
+      "source": "es/ayuda/produccion/crear-motivos-de-pausa.mdx",
+      "target": "en/guides/manufacturing/create-pause-reasons.mdx",
+      "sourceHash": "704b0e591ff533e9ef788e0c8f04e6a7e7d3595ab26c830f01e595bed8576879"
+    },
+    {
+      "source": "es/ayuda/produccion/crear-recursos.mdx",
+      "target": "en/guides/manufacturing/prepare-work-centers-and-machines.mdx",
+      "sourceHash": "a8c9fa05ae6f8aa53fb4ad2e827d23ef6c6cf006ab9f742a0024149ff756804c"
+    },
+    {
+      "source": "es/ayuda/produccion/crear-turnos.mdx",
+      "target": "en/guides/manufacturing/define-production-shifts.mdx",
+      "sourceHash": "136c5981d54eef9d6b12b24b6c3a8270c368a1c51ec67af6dc6ad8cea43158c2"
+    },
+    {
+      "source": "es/ayuda/produccion/crear-una-receta.mdx",
+      "target": "en/guides/manufacturing/design-the-manufacturing-steps.mdx",
+      "sourceHash": "fa7994ca39331613f3fd741303cac19d93ff8582121c18940ade04422bc4715c"
+    },
+    {
+      "source": "es/ayuda/produccion/definir-procesos.mdx",
+      "target": "en/guides/manufacturing/define-processes.mdx",
+      "sourceHash": "58921ccf2e47ce4d2161a4d88e58f5108ce3f37b326b419617b2fa81f9959bd1"
+    },
+    {
+      "source": "es/ayuda/produccion/ejecutar-operaciones-en-planta.mdx",
+      "target": "en/guides/manufacturing/execute-shop-floor-operations.mdx",
+      "sourceHash": "de4a3c597a7c71cd4d193ffa56b46a4ede3b8cb14fd394d62259e1c140254d2a"
+    },
+    {
+      "source": "es/ayuda/produccion/especificar-materiales-pasos-y-controles.mdx",
+      "target": "en/guides/manufacturing/specify-materials-steps-and-inspections.mdx",
+      "sourceHash": "5e67bf469d46646485c20c07122b4f071e63f900380aa166b4461c0f97571392"
+    },
+    {
+      "source": "es/ayuda/produccion/generar-peticiones-manualmente.mdx",
+      "target": "en/guides/manufacturing/create-an-mo-without-a-sales-order.mdx",
+      "sourceHash": "f3ebe7eb819a483dd5b4c3e8713a0b53a0c75e3f564d3e907488ce9e4cc0361e"
+    },
+    {
+      "source": "es/ayuda/produccion/introduccion.mdx",
+      "target": "en/guides/manufacturing/introduction.mdx",
+      "sourceHash": "7e5b3bf902d18e5dd487670c9f1bf75d1b2599ff2c8cfd2124c64292c597a88e"
+    },
+    {
+      "source": "es/ayuda/produccion/lanzar-ofs.mdx",
+      "target": "en/guides/manufacturing/manage-manufacturing-orders.mdx",
+      "sourceHash": "7328724695dec7331e531c08e9747c79a8c7f3109d92da0f6b828c925f5089f5"
+    },
+    {
+      "source": "es/ayuda/produccion/modificar-ordenes-de-fabricacion.mdx",
+      "target": "en/guides/manufacturing/modify-manufacturing-orders.mdx",
+      "sourceHash": "789c24cc570625c3f6ee03f3fa4b2a9c1937caa7917aee18fb70ce7841f600f5"
+    },
+    {
+      "source": "es/ayuda/produccion/modo-rapido.mdx",
+      "target": "en/guides/manufacturing/sequence-manually.mdx",
+      "sourceHash": "f02dbdbb89a059daed8e871a77ce1238938364516713bf2682a9169d5356a2ed"
+    },
+    {
+      "source": "es/ayuda/produccion/para-que-son-necesarias-las-condiciones.mdx",
+      "target": "en/guides/manufacturing/adapt-manufacturing-to-variants.mdx",
+      "sourceHash": "7aeda95cca39322c9885f1774db852c10f303ae9dd57839ec4d2d14f02d85d28"
+    },
+    {
+      "source": "es/ayuda/produccion/plan-de-produccion.mdx",
+      "target": "en/guides/manufacturing/create-a-production-plan.mdx",
+      "sourceHash": "a8a2e64647b141af409143b9ef562b91a92bc119935228d520bc0f053f4f22d7"
+    },
+    {
+      "source": "es/ayuda/produccion/revisar-oee-y-paradas.mdx",
+      "target": "en/guides/manufacturing/analyze-stops-and-production-losses.mdx",
+      "sourceHash": "6f0a5d2f52173c8b0450c5ba2f1daf6d3e22b458b18034d8ccf124f26cda8871"
+    },
+    {
+      "source": "es/ayuda/produccion/secuenciar-ordenes.mdx",
+      "target": "en/guides/manufacturing/sequence-orders.mdx",
+      "sourceHash": "5adb7e568bbd9a1358d230e29b1755065aacaaa909fe564c369d6bef78625a4a"
+    },
+    {
+      "source": "es/ayuda/produccion/ver-eficacia-por-empleado.mdx",
+      "target": "en/guides/manufacturing/view-effectiveness-by-employee.mdx",
+      "sourceHash": "934477f837de8056573b200c5fabf9441076e86f7faa97e8fefc43d6bf44f259"
+    },
+    {
+      "source": "es/ayuda/produccion/ver-evolucion-del-oee.mdx",
+      "target": "en/guides/manufacturing/view-oee-evolution.mdx",
+      "sourceHash": "f2bc5545ad2832440583ca4c6ec7b6cd89152b632cc1afedeb8924046096028f"
+    },
+    {
+      "source": "es/ayuda/produccion/ver-oee-por-estacion.mdx",
+      "target": "en/guides/manufacturing/view-oee-by-workstation.mdx",
+      "sourceHash": "2ec4c30c343fbf077fbb01e9d32bd0ab638a17d081600a6c45bbc1bb177066c8"
+    },
+    {
+      "source": "es/ayuda/produccion/ver-progreso-en-la-produccion.mdx",
+      "target": "en/guides/manufacturing/monitor-production-in-real-time.mdx",
+      "sourceHash": "6f4ea17eb1212d8f713136e94d19b592723e8678a22105f5bcbe531b4603b509"
+    },
+    {
+      "source": "es/ayuda/smart-factory/consultar-o-delegar-con-ia.mdx",
+      "target": "en/guides/smart-factory/query-data-and-perform-tasks-with-ai.mdx",
+      "sourceHash": "f1ab1fea81f1b3ac10c12a6bc788ad56cc16c269e95c76067f6e3182984992d1"
+    },
+    {
+      "source": "es/ayuda/smart-factory/crear-automatizacion.mdx",
+      "target": "en/guides/smart-factory/automate-tasks.mdx",
+      "sourceHash": "713cc03dd5032cfde0cd5f40cb3729447e89a6fc65f9746e097d013b9b52598c"
+    },
+    {
+      "source": "es/ayuda/smart-factory/informes-powerbi.mdx",
+      "target": "en/guides/smart-factory/view-power-bi-reports.mdx",
+      "sourceHash": "b6639fc7d2d5eaf0bdfc35f889158e484d8dd65ce8e410b50556d060a2959b86"
+    },
+    {
+      "source": "es/ayuda/smart-factory/introduccion.mdx",
+      "target": "en/guides/smart-factory/introduction.mdx",
+      "sourceHash": "cde680eb8be37498c17e9f096a0ed03dee8583701f923b2065fd64f0067d2586"
+    },
+    {
+      "source": "es/ayuda/usuarios-y-permisos/invitar-usuarios.mdx",
+      "target": "en/guides/users-and-permissions/invite-users.mdx",
+      "sourceHash": "81565e34a9c31ad1bba25e89fbac4757e322ec2fee962b5e52ae87fecaae3fce"
+    },
+    {
+      "source": "es/ayuda/ventas/cambiar-un-pedido.mdx",
+      "target": "en/guides/sales/change-an-order.mdx",
+      "sourceHash": "ac54866a611c9119a38a0f9b6bda8d187d193ca00de88cdceb441e2f3aa10e0f"
+    },
+    {
+      "source": "es/ayuda/ventas/cancelar-pedido.mdx",
+      "target": "en/guides/sales/cancel-an-order.mdx",
+      "sourceHash": "97babc0981ed159116550ec44639db9d0696f4f3ce2f128cae30d6fa17d59725"
+    },
+    {
+      "source": "es/ayuda/ventas/clientes.mdx",
+      "target": "en/guides/sales/register-a-customer.mdx",
+      "sourceHash": "f87627d001308dfee89d1ef590cef4fcea4e1e15d5bf5ff93bc12ee6e404d59f"
+    },
+    {
+      "source": "es/ayuda/ventas/introduccion.mdx",
+      "target": "en/guides/sales/introduction.mdx",
+      "sourceHash": "ce06f8c28abe089323f12e27b6fc3537a1eee465ee0c391070cd145dab61cfc7"
+    },
+    {
+      "source": "es/ayuda/ventas/preparar-y-registrar-envio.mdx",
+      "target": "en/guides/sales/prepare-and-record-a-shipment.mdx",
+      "sourceHash": "df717941679ef7744d15cf1db67f5d7374005e35570ca0009b3f794f0c5ba996"
+    },
+    {
+      "source": "es/ayuda/ventas/vender.mdx",
+      "target": "en/guides/sales/sell.mdx",
+      "sourceHash": "9468e26d9c80082ed78799664999b839739a8e0aa7864a93c1a6822a6cc79498"
+    },
+    {
+      "source": "es/conceptos/almacen.mdx",
+      "target": "en/concepts/warehouse.mdx",
+      "sourceHash": "71a6043bce185e15bd435e24d5ab1cfa0586ccb807b219bdcb78050135fadd68"
+    },
+    {
+      "source": "es/conceptos/almacen/bultos.mdx",
+      "target": "en/concepts/warehouse/packages.mdx",
+      "sourceHash": "c59805e109fce864c4e91487aa87f7690086994bc19a5d50fe3d07704b3dcc9c"
+    },
+    {
+      "source": "es/conceptos/almacen/envios.mdx",
+      "target": "en/concepts/warehouse/shipments.mdx",
+      "sourceHash": "f5735a0dc16d14bdaf05a842ca982a14e60027905883e13fa62bbdae7e6f3346"
+    },
+    {
+      "source": "es/conceptos/almacen/equipos-y-transportes.mdx",
+      "target": "en/concepts/warehouse/warehouse-equipment-and-transports.mdx",
+      "sourceHash": "b7c20e00df1035ddc9abbbcef30d93c84d549bc88e722ced85d7881a161b50b5"
+    },
+    {
+      "source": "es/conceptos/almacen/inventarios-y-ajustes.mdx",
+      "target": "en/concepts/warehouse/stock-counts-and-adjustments.mdx",
+      "sourceHash": "1862f361c93d567092deebc65d42294e72f8f72a92708efd13da3fb5a1c9a75c"
+    },
+    {
+      "source": "es/conceptos/almacen/lotes.mdx",
+      "target": "en/concepts/warehouse/lots.mdx",
+      "sourceHash": "a484c24019b782f7a4f82909884d99beb6256cca877eee089da1500fd4e9d5cc"
+    },
+    {
+      "source": "es/conceptos/almacen/movimientos-de-almacen.mdx",
+      "target": "en/concepts/warehouse/warehouse-movements.mdx",
+      "sourceHash": "42ab53e6496767c78c3b42d33c807de50be68630de08cb8f01627c2709033020"
+    },
+    {
+      "source": "es/conceptos/almacen/ordenes-de-carga.mdx",
+      "target": "en/concepts/warehouse/load-orders-and-provisioning.mdx",
+      "sourceHash": "59c8802f50e6d1f2a1e0f850cd06711190cee998c3e166883d2424b6b0c272bd"
+    },
+    {
+      "source": "es/conceptos/almacen/recepciones.mdx",
+      "target": "en/concepts/warehouse/receipts.mdx",
+      "sourceHash": "4c2ea1abbbbb14473eb9f348701cc2f9c014aa296059aa7b0fd374b036061aa2"
+    },
+    {
+      "source": "es/conceptos/almacen/stock-y-movimientos.mdx",
+      "target": "en/concepts/warehouse/stock-and-movements.mdx",
+      "sourceHash": "20a6281c5547940ea7307904e80bbb293420b8a5a3dd56442d2393a0c8d696fc"
+    },
+    {
+      "source": "es/conceptos/almacen/ubicaciones.mdx",
+      "target": "en/concepts/warehouse/locations.mdx",
+      "sourceHash": "ed1fc1033ef589b9645f91de304110b61d81d1f8eef14343348b7f3186d3ef7a"
+    },
+    {
+      "source": "es/conceptos/catalogo.mdx",
+      "target": "en/concepts/catalog.mdx",
+      "sourceHash": "d640d9c45b22d9b51e1495df1827ae9b1d7f04ed0509c35f619e613bb90af170"
+    },
+    {
+      "source": "es/conceptos/catalogo/articulos.mdx",
+      "target": "en/concepts/catalog/items.mdx",
+      "sourceHash": "bda7119a481c70cb9197e0e0522e140d5e56a3083083e8e6af0c34a7cc1ceb2c"
+    },
+    {
+      "source": "es/conceptos/catalogo/familia-vs-articulo.mdx",
+      "target": "en/concepts/catalog/family-vs-item.mdx",
+      "sourceHash": "0798d86cdaac998ab8743ef9660d193deffdebb06f300e3888ad0e7153db8d8a"
+    },
+    {
+      "source": "es/conceptos/catalogo/familias.mdx",
+      "target": "en/concepts/catalog/families.mdx",
+      "sourceHash": "ef757d90c7c0bbe87d88521d45c7f1ab365437879d7adb0f534625f64fe86e43"
+    },
+    {
+      "source": "es/conceptos/catalogo/propiedades.mdx",
+      "target": "en/concepts/catalog/properties.mdx",
+      "sourceHash": "0a3f06fd972dbcf5a95ff111a7ce0861411b6ec35b5aa312cc85e1235f25102e"
+    },
+    {
+      "source": "es/conceptos/catalogo/unidades-de-medida.mdx",
+      "target": "en/concepts/catalog/units-of-measure.mdx",
+      "sourceHash": "ea8ceb5836e752925e758d9c8d99cca86918734553d3a19c7a292f758404862d"
+    },
+    {
+      "source": "es/conceptos/costes.mdx",
+      "target": "en/concepts/costs.mdx",
+      "sourceHash": "ae237103a4e1b2bfc5e5e55e4b3ba3d1c3674feafca13718be20b78b9efdc0a6"
+    },
+    {
+      "source": "es/conceptos/costes/coste-teorico-vs-real.mdx",
+      "target": "en/concepts/costs/planned-versus-actual-cost.mdx",
+      "sourceHash": "cb3d36d46ef4196a114d54ff669d8858a52ed81c9df580cd04f7eaf1bd1a5887"
+    },
+    {
+      "source": "es/conceptos/costes/valoracion-de-inventario.mdx",
+      "target": "en/concepts/costs/inventory-valuation.mdx",
+      "sourceHash": "0df353a9bb5d1bbe4b5b8a3a6f70fb996f47662f8c11d7a2016f76c36eea04ea"
+    },
+    {
+      "source": "es/conceptos/fabricacion.mdx",
+      "target": "en/concepts/manufacturing.mdx",
+      "sourceHash": "a2da419877506b9251ec84f3c0e46ac20209b02fa088d746c3c01500d5a6af67"
+    },
+    {
+      "source": "es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones.mdx",
+      "target": "en/concepts/manufacturing/assignments-and-operation-groups.mdx",
+      "sourceHash": "c5065a7dba40052749bf39befd50f8a44ed7adc8bfde851af3f767c8dbcf68e6"
+    },
+    {
+      "source": "es/conceptos/fabricacion/controles-consumos-y-pausas.mdx",
+      "target": "en/concepts/manufacturing/checks-consumption-and-pauses.mdx",
+      "sourceHash": "906f365ada425a42d90cb6b05432866e2a446a3fe62d6782f1b3ddeac99f1905"
+    },
+    {
+      "source": "es/conceptos/fabricacion/cuadros-de-mando.mdx",
+      "target": "en/concepts/manufacturing/dashboards.mdx",
+      "sourceHash": "43e5ed5f4d6b9a73e1a44ca689b024e0fe38166a6810921814282e18b08d739f"
+    },
+    {
+      "source": "es/conceptos/fabricacion/estados-de-fabricacion.mdx",
+      "target": "en/concepts/manufacturing/manufacturing-statuses.mdx",
+      "sourceHash": "54e27d36f58e21938da43b041264b92fb216209342c8995128625e387a529ccd"
+    },
+    {
+      "source": "es/conceptos/fabricacion/herramientas-y-caracteristicas.mdx",
+      "target": "en/concepts/manufacturing/tools-and-characteristics.mdx",
+      "sourceHash": "2831c9e576e942268af53f24bd6af7e4b06eafa244191c2294a77f7540f65a81"
+    },
+    {
+      "source": "es/conceptos/fabricacion/inspecciones-y-controles.mdx",
+      "target": "en/concepts/manufacturing/inspections-and-checks.mdx",
+      "sourceHash": "6b24b8670fe85825335223fec22df023c9bf61350d9b488680a16860e53cdac9"
+    },
+    {
+      "source": "es/conceptos/fabricacion/motivos-de-pausa-e-interrupciones.mdx",
+      "target": "en/concepts/manufacturing/pause-reasons-and-interruptions.mdx",
+      "sourceHash": "56c511765475e36b4484b94355e8ec37f0118f8dd4b4d98271e0a9240bd90148"
+    },
+    {
+      "source": "es/conceptos/fabricacion/operaciones-y-restricciones.mdx",
+      "target": "en/concepts/manufacturing/operations-and-restrictions.mdx",
+      "sourceHash": "9076659bced639f14c0ecb2446440ce5cef72526a2391bb0ad6bee91a2490586"
+    },
+    {
+      "source": "es/conceptos/fabricacion/ordenes-de-fabricacion.mdx",
+      "target": "en/concepts/manufacturing/manufacturing-orders.mdx",
+      "sourceHash": "cbbd1491d4ecddd145be0137d85c9b31514320f5c377450520290f2fa32182d4"
+    },
+    {
+      "source": "es/conceptos/fabricacion/peticiones-de-fabricacion.mdx",
+      "target": "en/concepts/manufacturing/manufacturing-requests.mdx",
+      "sourceHash": "e02adcd8eb173aa610309985b8c3b86e098076210527958f1257f27eb2788174"
+    },
+    {
+      "source": "es/conceptos/fabricacion/planes-de-produccion.mdx",
+      "target": "en/concepts/manufacturing/production-plans.mdx",
+      "sourceHash": "6df175a4a094521b1aa7363cce24622b15a8a2c86e63f64176c7a468c60f69e3"
+    },
+    {
+      "source": "es/conceptos/fabricacion/procesos.mdx",
+      "target": "en/concepts/manufacturing/processes.mdx",
+      "sourceHash": "578da01e6c3989e29826689b8f49c982f6c70dec0914e89d7da7363c1162c427"
+    },
+    {
+      "source": "es/conceptos/fabricacion/recetas-y-versiones.mdx",
+      "target": "en/concepts/manufacturing/recipes-and-versions.mdx",
+      "sourceHash": "bf521419cf67f5f1141266376e8f1bd1217d5f77a35638960fca62587af2876f"
+    },
+    {
+      "source": "es/conceptos/fabricacion/recursos.mdx",
+      "target": "en/concepts/manufacturing/resources.mdx",
+      "sourceHash": "db98901feffe214e795cc5a8a6e37169f94cc7fe6727863829a70578b461ea37"
+    },
+    {
+      "source": "es/conceptos/fabricacion/secuenciacion.mdx",
+      "target": "en/concepts/manufacturing/sequencing.mdx",
+      "sourceHash": "ba03131abc2271164997d6434434e923cc11633955bcaa3bb438ab6bd2a9ed16"
+    },
+    {
+      "source": "es/conceptos/fabricacion/turnos.mdx",
+      "target": "en/concepts/manufacturing/manufacturing-working-hours.mdx",
+      "sourceHash": "105bc2ca31247e5a7ad51702b11ab9c811be9702e3c4b42e7cda6755ecdd5f04"
+    },
+    {
+      "source": "es/conceptos/introduccion.mdx",
+      "target": "en/concepts/overview.mdx",
+      "sourceHash": "422615187a6883db10d2e97b92a566a168283c40114c8ee736fced971c44d40f"
+    },
+    {
+      "source": "es/conceptos/mantenimiento.mdx",
+      "target": "en/concepts/maintenance.mdx",
+      "sourceHash": "29d814cdaf912039ccf2292e121b4e064bd722b2b8455bc6311e4f5765ee7ec0"
+    },
+    {
+      "source": "es/conceptos/mantenimiento/activos.mdx",
+      "target": "en/concepts/maintenance/assets.mdx",
+      "sourceHash": "03af4ec6e24abfc6e976d32d48a07728eded1a0e2b1cfbd639038835a82481b6"
+    },
+    {
+      "source": "es/conceptos/mantenimiento/causas-y-acciones.mdx",
+      "target": "en/concepts/maintenance/causes-and-actions.mdx",
+      "sourceHash": "476a8eb0decfe8c04d59ad5592b6479571e95ae3e4c84e9559b0dffafbd36122"
+    },
+    {
+      "source": "es/conceptos/mantenimiento/mantenimiento-preventivo.mdx",
+      "target": "en/concepts/maintenance/preventive-maintenance.mdx",
+      "sourceHash": "e324f43ccd380cddf682550ea105a730764d9736393e758115d3cba4d9c658e6"
+    },
+    {
+      "source": "es/conceptos/mantenimiento/partes-de-trabajo.mdx",
+      "target": "en/concepts/maintenance/work-orders.mdx",
+      "sourceHash": "87c91b5e04a1ccc18af50e077abe4138854482a830920d8ef7f1da5776fe6291"
+    },
+    {
+      "source": "es/conceptos/modo-de-trabajo.mdx",
+      "target": "en/concepts/work-mode.mdx",
+      "sourceHash": "c9c7af688187bedbdeae1be405d2e8eafda70fee279b260709332126a9176fa3"
+    },
+    {
+      "source": "es/conceptos/panel-de-control.mdx",
+      "target": "en/concepts/control-panel.mdx",
+      "sourceHash": "c9d5e3a291d1907bc7c45cc4e0d275c8c831e8ff6b70a5c79f7b80ea57662f96"
+    },
+    {
+      "source": "es/conceptos/panel-de-control/auditoria-y-eventos.mdx",
+      "target": "en/concepts/control-panel/audit-and-events.mdx",
+      "sourceHash": "985debc5f1639648973bd6bb1f0cfc96f5323f6ecb2232816f02efa18dff0562"
+    },
+    {
+      "source": "es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos.mdx",
+      "target": "en/concepts/control-panel/integration-keys-and-external-notifications.mdx",
+      "sourceHash": "2212d42c166f249e0ce2babde5f75bcc27934aa25aa3e8e680c61c998f092969"
+    },
+    {
+      "source": "es/conceptos/panel-de-control/cuenta-y-empresa.mdx",
+      "target": "en/concepts/control-panel/account-and-company.mdx",
+      "sourceHash": "d6558c1fcf6c73f43cdaa4fc7f1a6fbb81d987d494a94cb2dd190eb6b2e5dc6d"
+    },
+    {
+      "source": "es/conceptos/panel-de-control/datos-y-archivos.mdx",
+      "target": "en/concepts/control-panel/data-and-files.mdx",
+      "sourceHash": "fe6cb5f8dda5af60938a705dc8774e79e7c92544abc831b0d024399c33f19054"
+    },
+    {
+      "source": "es/conceptos/panel-de-control/disenos-y-etiquetas.mdx",
+      "target": "en/concepts/control-panel/designs-and-labels.mdx",
+      "sourceHash": "61d7dd80af6a4575dd0e4abb85b8302bec029980a775b3972d7e752c775c556e"
+    },
+    {
+      "source": "es/conceptos/panel-de-control/identidades-relacionadas.mdx",
+      "target": "en/concepts/control-panel/channels-and-related-identities.mdx",
+      "sourceHash": "909d7a670679603449a15be1108e9c55f08fda76e1d4749058a543efd4db60a3"
+    },
+    {
+      "source": "es/conceptos/panel-de-control/notificaciones.mdx",
+      "target": "en/concepts/control-panel/notifications.mdx",
+      "sourceHash": "359db1d87817c6e0f01eafad3dc50f91587fd9aa7b0c23f283ac80ebfc3611dc"
+    },
+    {
+      "source": "es/conceptos/panel-de-control/usuarios-roles-y-permisos.mdx",
+      "target": "en/concepts/control-panel/users-permission-profiles-and-permissions.mdx",
+      "sourceHash": "e7e4f3fccb2ca435e2746754ec846129c4e016e0f886e66be424ae7b53119489"
+    },
+    {
+      "source": "es/conceptos/personal.mdx",
+      "target": "en/concepts/people.mdx",
+      "sourceHash": "28581111533281b169fcc7ccedfdd0a4ff02de6c9fb194f941d2eb610e9edd80"
+    },
+    {
+      "source": "es/conceptos/personal/empleados.mdx",
+      "target": "en/concepts/people/employees.mdx",
+      "sourceHash": "f351155e5c9f92851b544b33feb5711140d46ffe42631c449ed8264a9054637f"
+    },
+    {
+      "source": "es/conceptos/personal/habilidades-y-estaciones-habituales.mdx",
+      "target": "en/concepts/people/skills-and-usual-workstations.mdx",
+      "sourceHash": "f65cdde05db0506cf40e942e26676477c5b664001478f013c11ff2d434e25b3e"
+    },
+    {
+      "source": "es/conceptos/personal/jornadas-calendarios-y-turnos.mdx",
+      "target": "en/concepts/people/work-days-calendars-and-shifts.mdx",
+      "sourceHash": "a741c4f9cc5546e64b0a32b4b1eb2867110890178eaf28b62063914a4d6b9e9a"
+    },
+    {
+      "source": "es/conceptos/personal/periodos-planificados-y-tareas.mdx",
+      "target": "en/concepts/people/planned-periods-and-tasks.mdx",
+      "sourceHash": "4ce2d05598857865a7eaf31afc4247b44e5a0d935772af4c8bcc2214f3dcc55a"
+    },
+    {
+      "source": "es/conceptos/planificacion.mdx",
+      "target": "en/concepts/planning.mdx",
+      "sourceHash": "9cf0586b1e957c867aafa592610d168876130b217662e0509541e12be0bdc3b9"
+    },
+    {
+      "source": "es/conceptos/planificacion/asignacion-de-demanda-y-suministro.mdx",
+      "target": "en/concepts/planning/demand-and-supply-allocation.mdx",
+      "sourceHash": "6b56c266ed9405c7dcbd9adf4d38ec4b9537c69a7fb263ba3a95d6d120d97882"
+    },
+    {
+      "source": "es/conceptos/planificacion/clientes.mdx",
+      "target": "en/concepts/planning/customers.mdx",
+      "sourceHash": "33303a2393173cfb008be19747766995d2c495cb6e2be25b69c1d1086f5a69af"
+    },
+    {
+      "source": "es/conceptos/planificacion/demanda-y-suministro.mdx",
+      "target": "en/concepts/planning/demand-and-supply.mdx",
+      "sourceHash": "6cc1ebc13fe1048485c208be0a904a2d4b79feecb03fd80d8475dc8a9e09b397"
+    },
+    {
+      "source": "es/conceptos/planificacion/pedidos-de-compra.mdx",
+      "target": "en/concepts/planning/purchase-orders.mdx",
+      "sourceHash": "02d4d1be54c4681405336abf35da89fa1be21f7fc94fe1fbf82efed0cb428946"
+    },
+    {
+      "source": "es/conceptos/planificacion/pedidos-de-venta.mdx",
+      "target": "en/concepts/planning/sales-orders.mdx",
+      "sourceHash": "b2b21bb545f1db56c069354af4e7fe5dbb2b65d6476fd636b5998a2556bfb72d"
+    },
+    {
+      "source": "es/conceptos/planificacion/politica-de-aprovisionamiento.mdx",
+      "target": "en/concepts/planning/procurement-policy.mdx",
+      "sourceHash": "7f070d3783a9bd947c96734964ded055bed27e4fc4e8cc515baa255d750fcb56"
+    },
+    {
+      "source": "es/conceptos/planificacion/previsiones-y-asistentes.mdx",
+      "target": "en/concepts/planning/forecasts-and-assistants.mdx",
+      "sourceHash": "b87c31048fabbeb5972376c24a732d75072c6058de20f7a7484ca08a6f0c7789"
+    },
+    {
+      "source": "es/conceptos/planificacion/proveedores.mdx",
+      "target": "en/concepts/planning/suppliers.mdx",
+      "sourceHash": "318d4a0f51698ff21a9a96e2d320475ef55f0b2050dd299d380c00823c6fff9e"
+    },
+    {
+      "source": "es/conceptos/smart-factory.mdx",
+      "target": "en/concepts/smart-factory.mdx",
+      "sourceHash": "3dbca462057b569a222bb77d7bc80ce6654c8c84cfd1dc8615bfd3a146434646"
+    },
+    {
+      "source": "es/conceptos/smart-factory/automatizaciones.mdx",
+      "target": "en/concepts/smart-factory/automations.mdx",
+      "sourceHash": "1ad32112c47c06f5522fe7cf35b9c228f206243fc8d7ca3f59342102304cf155"
+    },
+    {
+      "source": "es/conceptos/smart-factory/boldy.mdx",
+      "target": "en/concepts/smart-factory/boldy.mdx",
+      "sourceHash": "0701f0b042ab011f2341c8bfa63e566a713d796e4275c64fe3a695133e4bfc54"
+    },
+    {
+      "source": "es/conceptos/smart-factory/informes.mdx",
+      "target": "en/concepts/smart-factory/reports.mdx",
+      "sourceHash": "36f34f88eed4ea5075d47c0c25a20c740b3a61d0b8a97b92471641dd0711cb7a"
+    },
+    {
+      "source": "es/conceptos/smart-factory/tareas.mdx",
+      "target": "en/concepts/smart-factory/tasks.mdx",
+      "sourceHash": "750abeca256a1865d30d0bea5a5db1f072b863a0494470cba771f0177e44bcbc"
+    },
+    {
+      "source": "es/desarrolladores/empezar/autenticacion.mdx",
+      "target": "en/developers/getting-started/authentication.mdx",
+      "sourceHash": "6e2660a0b15841fabf31bced964db92f936781af242a6de6aca91b5bdaf17292"
+    },
+    {
+      "source": "es/desarrolladores/empezar/errores.mdx",
+      "target": "en/developers/getting-started/api-errors.mdx",
+      "sourceHash": "0847fe1de6edf31a7c33b24502ce7afecd15a30d887b6980b0ee04bca4f73113"
+    },
+    {
+      "source": "es/desarrolladores/empezar/expandir-datos-relacionados.mdx",
+      "target": "en/developers/getting-started/expand-related-data-in-lists.mdx",
+      "sourceHash": "b04a12d9aa6c0851f350a7825a256a0fbcc96ff89831e2320b62596809fea51d"
+    },
+    {
+      "source": "es/desarrolladores/empezar/introduccion.mdx",
+      "target": "en/developers/getting-started/introduction.mdx",
+      "sourceHash": "57a75591022f328fb59715b5f2084a6d68c9ed2ec1649df4be48dc51df48f2a0"
+    },
+    {
+      "source": "es/desarrolladores/empezar/paginacion.mdx",
+      "target": "en/developers/getting-started/pagination-filters-and-sorting.mdx",
+      "sourceHash": "e545babfc2bcda3289d05b427f9049894dc9ab3958c09d27849005900a83fd46"
+    },
+    {
+      "source": "es/desarrolladores/mcp.mdx",
+      "target": "en/developers/mcp.mdx",
+      "sourceHash": "c2ec798271c4414225274a51b5d537bdb1630bf2652d49d2d702d061aca9791e"
+    },
+    {
+      "source": "es/desarrolladores/referencia-api/introduccion.mdx",
+      "target": "en/developers/api-reference/introduction.mdx",
+      "sourceHash": "7b8566539fb3c5105c9d937485de0f7028476b0859aa0862d95943c240cc82ab"
+    },
+    {
+      "source": "es/desarrolladores/webhooks/eventos-disponibles.mdx",
+      "target": "en/developers/webhooks/available-webhook-events.mdx",
+      "sourceHash": "1f4de877f73914a9c46bab4c5c00867604fc833346fe4bfb72622c933702bf31"
+    },
+    {
+      "source": "es/desarrolladores/webhooks/introduccion.mdx",
+      "target": "en/developers/webhooks/introduction.mdx",
+      "sourceHash": "b8a1e45915c67adf0402f07fb4ea6463bbd450f11c36a9671fa820e3b4a287d5"
+    },
+    {
+      "source": "es/desarrolladores/webhooks/payloads.mdx",
+      "target": "en/developers/webhooks/webhook-payloads.mdx",
+      "sourceHash": "38e699914ddceb078c73e0b1cbbd63f56716d93ab1bf5f326d45b32f062d5d04"
+    },
+    {
+      "source": "es/desarrolladores/webhooks/reintentos-y-errores.mdx",
+      "target": "en/developers/webhooks/webhook-retries-and-errors.mdx",
+      "sourceHash": "23205824ecd39e53de14edb89cf4de3fe7f707a3d47432f8e22d8e59a5fe36e6"
+    },
+    {
+      "source": "es/novedades/changelog.mdx",
+      "target": "en/updates/changelog.mdx",
+      "sourceHash": "c114c1c077dbfd9bdb3c8d31ed5602d012275e9675fc321b728ef64b7b104169"
+    }
+  ]
+}

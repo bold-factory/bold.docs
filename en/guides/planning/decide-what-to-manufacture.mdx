@@ -1,0 +1,56 @@
+---
+es_link: "/es/ayuda/planificacion/priorizar-necesidades"
+title: "Decide what to manufacture"
+description: "Distinguish real urgencies from suggestions that can wait, be grouped, or be discarded."
+---
+
+The **Production assistant** groups needs that can become manufacturing requests. Use it to review quantities and dates before generating shop floor work.
+
+Configure the analysis period first. Then compare the proposal with delivery dates, expected stock, and the item's history.
+
+**Path:** **Planning > Production assistant**
+
+## Review needs
+
+<Steps>
+  <Step title="Configure filters">
+    Define how Bold should group needs:
+
+    - **Production frequency:** choose daily, weekly, or monthly according to how you organize launches. This selection adjusts the summary to the chosen period.
+    - **Include needs up to:** enter the last date to include in the analysis.
+
+    <Tip>
+      Extend the horizon to review future needs and assess whether to group identical items in one lot.
+    </Tip>
+  </Step>
+  <Step title="Identify urgent needs">
+    Review the summary blocks before generating requests:
+
+    - **Urgent:** gathers needs that already require attention. Review them first.
+    - **This period:** shows needs for the current period.
+    - **Next period:** helps you anticipate work for the following period.
+    - **Future:** shows later needs included in the horizon.
+  </Step>
+  <Step title="Review the most urgent date">
+    The **Most urgent** column shows the earliest deadline in the group of needs. Compare it with the total **Quantity** to decide whether to manufacture the entire group or launch a smaller lot first.
+
+    For example, if the group totals 10 units but some are overdue, you can prioritize that quantity before manufacturing the rest.
+  </Step>
+  <Step title="Review the stock proposal">
+    **Proposal** indicates the quantity calculated to cover the projected balance. Compare available and incoming stock with expected issues before accepting it.
+
+    <Tip>
+      The **Proposal** field is editable. Adjust the quantity to match your usual lot size or prepare additional stock.
+    </Tip>
+  </Step>
+  <Step title="Check history and forecast">
+    Use the information at the bottom to validate the decision:
+
+    - **Previous production orders:** compare the proposal with previously manufactured quantities.
+    - **Stock forecast:** review how inventory will change with expected receipts and issues.
+    - **Consumption history:** compare the proposal with recorded issues for the item.
+  </Step>
+  <Step title="Generate the request">
+    When quantities and dates are feasible, click **Generate request** to send the final quantity to manufacturing.
+  </Step>
+</Steps>

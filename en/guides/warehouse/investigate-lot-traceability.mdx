@@ -1,0 +1,83 @@
+---
+es_link: "/es/ayuda/almacen/investigar-trazabilidad-de-un-lote"
+title: "Investigate lot traceability"
+description: "Follow a lot's origin, components, movements, and cost to investigate an incident."
+---
+
+Use **Lots** to reconstruct the material's origin, stock changes, and the documents explaining them.
+
+## Before you start
+
+- You need access to **Warehouse > Lots**.
+- Prepare the lot code, item, or a related reference.
+- If you are investigating a financial discrepancy, also check the period and expected cost.
+
+## Find the lot
+
+**Path:** **Warehouse > Stock control > Lots**
+
+<Steps>
+  <Step title="Find the record">
+    Filter by lot code, item code, or item name.
+  </Step>
+  <Step title="Check that it is the correct lot">
+    Review status, item, type, origin, current stock, and creation date.
+  </Step>
+  <Step title="Open the lot">
+    In **Actions**, open its details.
+  </Step>
+</Steps>
+
+## Follow origin and composition
+
+In **Information**, first review **Lot type**, **Item**, and **Current stock**.
+
+| Type | How to follow it |
+| --- | --- |
+| Origin | Open the purchase or MO shown in **Origin**. If the origin is unknown, no operational document is linked. |
+| Merged | Review the two initial lots and the **Components** table. The table shows each source lot, its reference, and its proportion. |
+
+Open each component and repeat the review until reaching its source lots.
+
+## Reconstruct movements
+
+The **Movement history** table shows:
+
+- affected location;
+- movement type;
+- cause or related document;
+- change quantity;
+- stock after the change;
+- date and time.
+
+<Steps>
+  <Step title="Start with the first movement">
+    Check whether the receipt matches the expected purchase, manufacturing, or reconciliation.
+  </Step>
+  <Step title="Follow causes">
+    Open links in the **Cause** column to review the document originating each receipt or issue.
+  </Step>
+  <Step title="Check the balance">
+    Follow **Change** and **Stock after** to locate the movement where the discrepancy begins.
+  </Step>
+  <Step title="Compare the location">
+    Open the location when you need to compare the lot with stock stored there.
+  </Step>
+</Steps>
+
+## Review cost
+
+Open the **Costs** tab. Bold shows the **Unit cost** and the components that make it up.
+
+Each component shows its type, related document or lot, proportion, and unit cost. Use these links to check whether the discrepancy originates in a purchase, MO, or component lot.
+
+<Warning>
+  Do not replace one lot with another to reconcile an incident. Preserve the actual physical reference and correct the movement or document explaining the difference.
+</Warning>
+
+## Related
+
+- [Lots](/en/concepts/warehouse/lots)
+- [Stock and movements](/en/concepts/warehouse/stock-and-movements)
+- [Investigate stock discrepancies](/en/guides/warehouse/investigate-stock-discrepancies)
+- [Inventory valuation](/en/guides/costs/value-inventory)

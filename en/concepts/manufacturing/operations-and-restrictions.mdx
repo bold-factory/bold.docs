@@ -1,0 +1,136 @@
+---
+es_link: "/es/conceptos/fabricacion/operaciones-y-restricciones"
+title: "Operations and restrictions"
+description: "Understand manufacturing operations, their order, statuses and precedence."
+icon: "route"
+---
+
+An **operation** is an executable stage of a recipe or manufacturing order. It can have inputs, steps, checks, resources, times and restrictions.
+
+## What defines an operation
+
+| Data | Use |
+| --- | --- |
+| Process | Type of work executed. Read [Processes](/en/concepts/manufacturing/processes). |
+| Station or resource | Where it can be executed. |
+| Inputs | Materials consumed during the stage. |
+| Steps | Instructions visible to the operator. |
+| Checks | Mandatory checks at the configured moment. |
+| Expected time | Basis for planning, costs and efficiency. |
+| Quantity | Progress it contributes to the order. |
+
+## When it becomes planned
+
+An operation becomes **Planned** when it has:
+
+- a workstation;
+- a target date;
+- a selected tool, if the operation requires a tool characteristic.
+
+Material availability is shown separately. It is not part of these minimum planning requirements.
+
+## Restrictions
+
+Restrictions link a preceding operation to a following one. Configure separately when the following operation can start and how many units it can record.
+
+In a recipe or MO diagram, **Recalculate positions** orders blocks according to their restrictions. Confirm the dialog to save the new arrangement. You need write permission for recipes or manufacturing orders, respectively; recipe versions must be editable.
+
+| Start condition | Met when the preceding operation... |
+| --- | --- |
+| At any time | Imposes no start condition. |
+| Has started | Has already started work. |
+| Has good units or has finished | Has some good units, or has finished even without units. |
+| Has finished | Has ended. |
+
+The start condition stops applying when the following operation starts. A finished or canceled preceding operation stops imposing restrictions.
+
+| Unit limit | While the preceding operation remains open... |
+| --- | --- |
+| No | You can record any quantity. |
+| Yes, as they are completed | Good units from the preceding operation release units in proportion to planned quantities. |
+| Yes, wait for all | No units are available until the preceding operation finishes. |
+
+The limit counts good and rejected units recorded in the following operation. Rejected units from the preceding operation do not release units. With several preceding operations, the lowest limit applies.
+
+For example, if an operation has 10 sheets planned and the following one has 40 pieces, one good sheet releases 4 pieces. When the preceding operation finishes, it stops limiting quantities even if it completed less than planned.
+
+### What happens if it is not met
+
+For the start condition, choose between three options:
+
+| Start enforcement | Work mode | Management |
+| --- | --- | --- |
+| Warn but allow | Confirm the warning dialog to continue. | Confirm the warning dialog to continue. |
+| Hide by default, but allow with a warning | Confirm the dialog to continue. | Confirm the dialog to continue. |
+| Hide and forbid | The action is disabled. | You can confirm the dialog if you have manufacturing order write permission. |
+
+**Warn but allow** shows an information indicator and keeps the operation visible when you enable **Hide restricted**. **Hide by default, but allow with a warning** shows a warning and lets that filter hide the operation while it has not started. Both require the same confirmation to continue; there is no additional step or required reason.
+
+To exceed the available quantity, choose between two options:
+
+| Quantity enforcement | Work mode | Management |
+| --- | --- | --- |
+| Warn but allow | Confirm the warning dialog to record more units than available. | Confirm the warning dialog to continue. |
+| Forbid | You cannot exceed the available quantity. | You can confirm the dialog if you have manufacturing order write permission. |
+
+Quantity limits saved with the old confirmation option use **Warn but allow**.
+
+Bold records which restrictions you bypassed and their enforcement at the time of the action. The backend also applies blocks to API calls that start or record units in an individual operation. [Group actions](/en/concepts/manufacturing/assignments-and-operation-groups) are exempt from these restrictions in both management and work mode.
+
+The indicator shows whether you can continue, units are missing or conditions remain pending. In **Information**, you can review each condition and open the preceding operation to check whether progress still needs recording.
+
+The **Hide restricted** filter hides only operations that have not started and have pending start conditions of type **Hide by default, but allow with a warning** or **Hide and forbid**. It also hides operations that exceed a quantity limit configured as **Forbid**. Operations that have already started remain visible.
+
+### Early preparation and waits
+
+To prepare an operation while the preceding one produces, choose to start when the preceding operation has started. Decide whether to receive units as they are completed or the entire lot at the end.
+
+A timed wait does not offer **At any time**. Automatic start respects all its start conditions, including those configured as **Warn but allow**. If it starts before its preceding operations end, it does not complete automatically until its duration has elapsed and all preceding operations have closed.
+
+Sequencing follows conditions regardless of enforcement. Precedence configured as **Warn but allow** can also order the plan.
+
+Restrictions should not be duplicated or create cycles. A cycle would prevent determining which operation unlocks another and can block [sequencing](/en/concepts/manufacturing/sequencing).
+
+## Final operation
+
+The final operation is usually the one without outgoing restrictions. Bold can use it to derive the order's completed, rejected and pending quantities.
+
+Define the final operation carefully when there are parallel branches, co-products or final checks.
+
+## Operation statuses
+
+| Status | Meaning |
+| --- | --- |
+| **Pending planning** | Required planning or assignment is missing. |
+| **Planned** | It can be prepared for execution. |
+| **In progress** | Work has started. |
+| **Paused** | The operation is stopped by an interruption. |
+| **Finished** | The operation has ended. |
+| **Cancelled** | The operation should no longer be executed. |
+
+Read [Manufacturing statuses](/en/concepts/manufacturing/manufacturing-statuses) to compare operations with orders, groups and plans.
+
+## Undo completion
+
+You can use **Undo finish** on a finished operation. You must specify a pause reason.
+
+Bold reopens the operation and creates an interruption from its completion date. Consumption already recorded is not removed. Review it before continuing if the earlier completion generated records that no longer apply.
+
+## Granularity
+
+| Operations too large | Operations too small |
+| --- | --- |
+| Hide bottlenecks. | Require constant change recording. |
+| Make actual progress harder to measure. | Burden the operator with excessive interaction. |
+| Mix different consumption and checks. | Complicate planning without adding traceability. |
+
+Choose the level at which you need to measure progress, consumption, quality or responsibility.
+
+## Related
+
+- [Recipes and versions](/en/concepts/manufacturing/recipes-and-versions)
+- [Processes](/en/concepts/manufacturing/processes)
+- [Manufacturing statuses](/en/concepts/manufacturing/manufacturing-statuses)
+- [Resources](/en/concepts/manufacturing/resources)
+- [Sequencing](/en/concepts/manufacturing/sequencing)
+- [Sequence orders](/en/guides/manufacturing/sequence-orders)

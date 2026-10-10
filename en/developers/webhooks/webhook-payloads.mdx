@@ -1,0 +1,79 @@
+---
+es_link: "/es/desarrolladores/webhooks/payloads"
+title: "Webhook payloads"
+description: "Understand the structure of data sent by webhooks."
+---
+
+Each webhook sends a JSON body with a common envelope and an event-specific `payload` field. The specific contract depends on `eventName`, `majorVersion`, and `minorVersion`.
+
+## Fields to expect
+
+| Field | Usage |
+| --- | --- |
+| `attemptId` | Identifies the delivery attempt. |
+| `workspace` | Identifies the workspace that emitted the event. |
+| `eventId` | Lets you deduplicate the business event across retries. |
+| `eventName` | Indicates what happened. |
+| `entity` | Main entity affected by the event. |
+| `entityId` | Identifier of the main entity. |
+| `occurredOn` | Date and time when the event occurred. |
+| `majorVersion` | Major version of the contract. |
+| `minorVersion` | Minor version of the contract. |
+| `payload` | Event-specific data. |
+| `attemptNumber` | Delivery attempt number. |
+| `isLastAttempt` | Indicates whether Bold considers this the final automatic attempt. |
+
+<Info>
+  Not all events include a full copy of the entity. Design your consumer to call the API when it needs the current state.
+</Info>
+
+## Illustrative example
+
+```json
+{
+  "attemptId": "whnta_01J1D4Y7KTX8N8Y3H7A0",
+  "workspace": "acme-industrial",
+  "eventId": "7db3a285-87f0-4b78-a312-493a2e280f2d",
+  "eventName": "Planning.SalesOrder.LineConfirmed",
+  "entity": "Planning.SalesOrder",
+  "entityId": "sales-order-123",
+  "occurredOn": "2026-06-25T10:30:00Z",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "payload": {
+    "orderId": "sales-order-123",
+    "lineId": "sales-order-line-456",
+    "skuId": "sku-789",
+    "quantity": 24,
+    "pendingQuantity": 24
+  },
+  "attemptNumber": 1,
+  "isLastAttempt": false
+}
+```
+
+## Good practices
+
+<Accordion title="Version by majorVersion">
+  Keep separate validators if you consume more than one major version of the same event. Do not assume that two versions have the same fields.
+</Accordion>
+
+<Accordion title="Use identifiers, not names">
+  Display names can change. Use `id` or `reference` to reconcile data between systems.
+</Accordion>
+
+<Accordion title="Save the original data">
+  Keep the received JSON for as long as you need it for auditing. It helps diagnose failures in an external system.
+</Accordion>
+
+<Warning>
+  Treat the data received as sensitive information. It can contain operational references, customers, suppliers, or production quantities.
+</Warning>
+
+## Deduplication
+
+Use `eventId` to prevent processing the same business event twice. Use `attemptId` only to audit a specific delivery. A retry keeps the same `eventId` but generates a new `attemptId`.
+
+<Tip>
+  If you receive the same `eventId` with a different `attemptNumber`, return `2xx` after confirming that you already processed it.
+</Tip>

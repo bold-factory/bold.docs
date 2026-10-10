@@ -1,0 +1,72 @@
+---
+es_link: "/es/ayuda/planificacion/realizar-pedidos-de-compra"
+title: "Create a purchase order"
+description: "Create a purchase order from the assistant or directly record what you agreed with a supplier."
+---
+
+A purchase order turns a procurement need into a commitment with a supplier. You can generate it from a **Purchase assistant** recommendation or create it manually when you already know what to order.
+
+## Choose your starting point
+
+| Option | When to use it |
+| --- | --- |
+| Purchase assistant | When you want to calculate and group needs based on stock, demand, and lead times. |
+| Manual creation | When you have already agreed on items and quantities with the supplier. |
+
+## Create the order from the assistant
+
+**Path:** **Planning > Purchase assistant > Supplier**
+
+<Steps>
+  <Step title="Define the horizon">
+    In **Needs up to**, enter the cutoff date for the calculation. The assistant reviews expected demand through that day.
+  </Step>
+  <Step title="Review the proposal">
+    Check current, incoming, and outgoing stock, the reorder point, and the proposed quantity for each item.
+  </Step>
+  <Step title="Adjust quantities">
+    Change the proposal where necessary. Use the reload icon to restore the initial calculation or clear the field to exclude the item from the current order.
+  </Step>
+  <Step title="Check details">
+    Select an item to review **Purchase orders**, **Stock forecast**, and **Consumption history**.
+  </Step>
+  <Step title="Generate the order">
+    Click **Generate order**. Bold creates a draft for the supplier. Open it with **View order** and review its lines.
+  </Step>
+  <Step title="Confirm the lines">
+    Confirm each line when the commitment is firm. The confirmed quantity becomes part of expected supply.
+  </Step>
+</Steps>
+
+<Tip>
+  The assistant groups needs by supplier. Review each line's expected date and quantity before confirming it.
+</Tip>
+
+## Create the order manually
+
+**Path:** **Planning > Purchase orders**
+
+<Steps>
+  <Step title="Create the order">
+    Click **Create new order**, select the supplier, and complete **Order no.**, **Supplier order no.**, **Short description**, and **Notes**, where applicable. Click **Create** to save the draft.
+  </Step>
+  <Step title="Add lines">
+    Click **Add line**. Select the item and enter **Quantity**, **Delivery date**, **Total price**, and **Notes**, where applicable.
+  </Step>
+  <Step title="Confirm each line">
+    Open the line, review the details, and click **Confirm**. The confirmed quantity becomes part of expected supply.
+  </Step>
+  <Step title="Record arrival">
+    When the material arrives, click **Create receipt** from the order or create the receipt from **Warehouse > Receipts**.
+  </Step>
+</Steps>
+
+<Warning>
+  Cancelling a confirmed line removes that incoming stock and can affect planning for other items.
+</Warning>
+
+## Next step
+
+<Card title="Receive a purchase order" icon="calendar-check" href="/en/guides/purchasing/receive-a-purchase-order">
+  Record the material's arrival and update received quantities.
+</Card>

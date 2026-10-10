@@ -1,0 +1,56 @@
+---
+es_link: "/es/conceptos/almacen/equipos-y-transportes"
+title: "Warehouse equipment and transports"
+description: "Distinguish resources that move material within the warehouse from transports assigned to loads."
+icon: "forklift"
+---
+
+Bold distinguishes **warehouse equipment** that moves material within the factory from **transports** assigned to load orders.
+
+## Differences
+
+| Concept | Use | Examples |
+| --- | --- | --- |
+| Warehouse equipment | Executes movements between internal locations. | Forklift, pallet truck, trolley or manual transfer. |
+| Transport | Identifies the logistics resource associated with a load order. | Your own truck, route, carrier or vehicle. |
+
+A transport does not execute internal movements. Warehouse equipment does not replace the transport specified in a load.
+
+## Warehouse equipment
+
+Each piece of equipment has:
+
+| Data | Use |
+| --- | --- |
+| Name | Identification the employee sees in work mode. |
+| Type | **Machine** or **Manual**. |
+| Related location | Internal location where Bold records material while the equipment carries it. |
+
+When you create equipment, Bold also creates its related location. Pickups move material to that location. Drop-offs move it from there to the destination.
+
+A piece of equipment can have only one movement in progress. You cannot deactivate it while it executes a movement or retains stock in its related location.
+
+<Warning>
+  Before deactivating equipment, complete its movement and check that **Current load** is empty.
+</Warning>
+
+## Transports
+
+A transport is a named record you can reuse in several loads. The load order retains the assigned transport for planning and traceability.
+
+Transport is required when creating a load order. Bold does not record capacity, license plate or weight restrictions in this concept. If you need to distinguish vehicles, routes or suppliers, use names your team recognizes.
+
+When you delete a transport, it is no longer available for new selections. Existing orders retain their historical reference.
+
+## When to configure each one
+
+Configure **warehouse equipment** when a person needs to select how they will pick up and drop off material in work mode.
+
+Configure a **transport** when the planner needs to group shipments and assign them to a specific load.
+
+## Related
+
+- [Warehouse movements](/en/concepts/warehouse/warehouse-movements)
+- [Load orders](/en/concepts/warehouse/load-orders-and-provisioning)
+- [Plan a load](/en/guides/warehouse/plan-and-prepare-a-load)
+- [Provision raw materials](/en/guides/warehouse/provision-raw-materials)

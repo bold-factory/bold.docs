@@ -1,0 +1,74 @@
+---
+es_link: "/es/conceptos/mantenimiento/causas-y-acciones"
+title: "Causes and actions"
+description: "Distinguish intervention reasons and reusable tasks in maintenance."
+icon: "list-checks"
+---
+
+**Causes** explain why an intervention takes place. **Actions** explain what work or check needs to be done.
+
+## Causes
+
+A cause classifies a work order's main or auxiliary reason.
+
+| Use | Example |
+| --- | --- |
+| Breakdown | Breakage, leak, jam. |
+| Preventive | Periodic inspection, lubrication. |
+| Improvement | Adjustment, modification, format change. |
+| Safety | Inspection, mandatory correction. |
+
+A work order can have a main cause and auxiliary causes. Auxiliary causes should not duplicate the main one.
+
+## Actions
+
+An action is a reusable task or check you can complete in a work order.
+
+| Type | Expected result |
+| --- | --- |
+| Simple | No additional data required. |
+| Yes/no | Boolean value. |
+| Number | Decimal measurement. |
+| Text | Observation. |
+| Image or file | Attached evidence. |
+| Selection | One of the answers configured when creating the action. |
+| Signature | Signature drawn on screen and saved as an image. |
+
+Define actions when you want to standardize work, measure compliance or compare interventions.
+
+If you complete an action, you must provide a result compatible with its type.
+
+### Instructions and execution notes
+
+Each work order action has two different texts:
+
+| Text | Who writes it | Use |
+| --- | --- | --- |
+| Instructions | Defined in the cause's planned action or when adding the action to the work order. | Explain how to perform the action. Do not change when it is completed. |
+| Execution notes | The technician, when completing the action. | Optional observations about what was done. |
+
+### Mandatory actions
+
+An action can be **mandatory**. You cannot finish a work order while it has incomplete mandatory actions. Non-mandatory actions can remain pending and stay in history.
+
+You configure whether an action is mandatory in the cause's planned action, and this is copied to the work order when created. You can also mark an action as mandatory when adding it directly to the work order. In **Maintenance > Work orders**, you can change it with the padlock button in the **Actions** column or remove the action from the work order. You cannot change it in work mode.
+
+If you make a mistake when completing an action, use **Undo** on it. The action becomes planned again; its result and the reference to the employee who completed it are cleared, but execution notes are preserved. You can then complete it again with the correct result. You cannot undo actions in a completed or canceled work order.
+
+## Relationship between cause and action
+
+A cause can plan common actions, each with instructions and a mandatory setting. When you create a work order, Bold copies those actions to it. This helps work orders include consistent checks for a type of incident.
+
+Example: the **Hydraulic leak** cause can plan actions such as **Inspect hose**, **Check pressure** (mandatory) and **Clean area**.
+
+In the **Usages** tab of an action's details, you can see which active causes plan it and which work orders include it.
+
+## Delete an action
+
+When you delete an action, Bold removes it from all causes' planned actions and from open work orders where it has not been completed yet. It is retained in work orders where it was already completed and in completed or canceled work orders to preserve history.
+
+## Related
+
+- [Work orders](/en/concepts/maintenance/work-orders)
+- [Preventive maintenance](/en/concepts/maintenance/preventive-maintenance)
+- [Create a work order](/en/guides/maintenance/record-maintenance-work)

@@ -1,0 +1,110 @@
+---
+es_link: "/es/desarrolladores/empezar/expandir-datos-relacionados"
+title: "Expand related data in lists"
+sidebarTitle: "Expand related data"
+description: "Use Expand to include related objects and collections in Bold API results."
+---
+
+List endpoints return compact responses by default. When a result has related data, the response keeps its identifiers and leaves the related object or collection as `null`.
+
+Use the `Expand` parameter to include that data in the same request. Expansion applies to each item in `results`.
+
+<Info>
+  Each endpoint defines its expansions through its own enum. In OpenAPI, `Expand` is an array whose items belong to that enum. Each endpoint's documentation therefore shows all supported values directly.
+</Info>
+
+Check the `Expand` parameter in the [API reference](/en/developers/api-reference/introduction). Not all endpoints support expansion or share the same values.
+
+## Expand a relationship
+
+For example, the sales order list returns `customerId` but does not load the `customer` object unless you request it.
+
+```http
+GET /v1/planning/salesOrders?pageSize=25
+```
+
+The relevant part of each result is:
+
+```json
+{
+  "id": "<sales-order-id>",
+  "customerId": "<customer-id>",
+  "customer": null,
+  "code": "PV-2026-0042",
+  "name": "Pedido semanal"
+}
+```
+
+Add `Expand=Customer` to include the customer in each order on the page:
+
+```bash
+curl --get "https://api.bold-factory.com/v1/planning/salesOrders" \
+  -H "X-Api-Key: $BOLD_API_KEY" \
+  -H "Accept: application/json" \
+  --data-urlencode "Expand=Customer" \
+  --data-urlencode "pageSize=25"
+```
+
+The response keeps `customerId` and populates `customer`:
+
+```json
+{
+  "id": "<sales-order-id>",
+  "customerId": "<customer-id>",
+  "customer": {
+    "id": "<customer-id>",
+    "externalReference": "CLI-0042",
+    "name": "Industrias Norte"
+  },
+  "code": "PV-2026-0042",
+  "name": "Pedido semanal"
+}
+```
+
+If an item does not have the requested relationship, the related property remains `null`.
+
+## Expand several relationships
+
+Repeat `Expand` to request more than one relationship. This example includes the cause, asset, and main employee for each maintenance work order:
+
+```http
+GET /v1/maintenance/workOrders?Expand=Cause&Expand=Asset&Expand=MainEmployee
+```
+
+Do not separate values with commas. Send one instance of the parameter for each value.
+
+## Expand a nested relationship
+
+Use dot notation to reach a relationship within another relationship. For example, you can include the lines of the load order linked to each shipment:
+
+```http
+GET /v1/warehouse/shipments?Expand=LoadOrder.Lines&pageSize=10
+```
+
+When you request `LoadOrder.Lines`, Bold also includes `LoadOrder`. You do not need to send both values.
+
+The maximum depth is two levels: `Parent` or `Parent.Child`. Each endpoint's reference lists the supported combinations.
+
+## Combine expansions with a query
+
+You can use `Expand` with pagination, filters, search, and sorting when the endpoint supports those parameters.
+
+```http
+GET /v1/planning/salesOrders?filterBy=Status[Equals]Pending&sortBy=-OrderedAt&Expand=Customer&pageNumber=1&pageSize=50
+```
+
+Expansion changes the related data included in the response. It does not change which items match the filter or the pagination structure.
+
+## Handle unsupported values
+
+The API responds with `400 Bad Request` if you send a value that is not defined for the endpoint.
+
+```http
+GET /v1/planning/salesOrders?Expand=Supplier
+```
+
+Check the `Expand` parameter's enum in the endpoint documentation. Available values can differ between endpoints even when their responses contain similar relationships.
+
+<Tip>
+  Request only the data you need. Expansions increase query work and response size. Limit nested collections in particular, and combine them with a `pageSize` appropriate for your integration.
+</Tip>

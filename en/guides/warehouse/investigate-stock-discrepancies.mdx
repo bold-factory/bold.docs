@@ -1,0 +1,109 @@
+---
+es_link: "/es/ayuda/almacen/investigar-diferencias-de-stock"
+title: "Investigate stock discrepancies"
+description: "Check stock, movements, and counts to correct discrepancies while preserving traceability."
+---
+
+Investigate stock discrepancies when the system does not match the physical warehouse, negative stock appears, or a location shows unexpected quantities.
+
+Do not correct the balance before investigating. First identify which movement is missing or was recorded incorrectly.
+
+## Interpret stock
+
+A stock query answers three questions: how much is physically present, how much remains free to commit, and what will remain after expected receipts and issues.
+
+| Metric | Question answered | Includes |
+| --- | --- | --- |
+| Physical stock | What is here now? | Actual movements already recorded. |
+| Available stock | What remains free? | Physical stock minus confirmed demand. |
+| Projected stock | What will remain? | Future demand, purchases, manufacturing, and forecasts. |
+
+Use physical stock for counts and warehouse tasks. Check available stock before committing quantities to a customer. Use projected stock to anticipate purchases or manufacturing.
+
+## Diagnosis
+
+<Steps>
+  <Step title="Narrow down the problem">
+    Identify the affected item, location, lot, package, and unit of measure.
+  </Step>
+  <Step title="Check current stock">
+    Check the balance by location and lot. Look for stock elsewhere.
+  </Step>
+  <Step title="Review movements">
+    Sort recent movements and locate receipts, issues, adjustments, counts, consumption, or shipments.
+  </Step>
+  <Step title="Find pending documents">
+    Check for receipts, shipments, production, stock counts, or internal movements pending recording.
+  </Step>
+  <Step title="Compare with the warehouse">
+    Physically validate location, lot, package, and quantity before correcting.
+  </Step>
+</Steps>
+
+## Query by item, location, or lot
+
+| View | When to use it |
+| --- | --- |
+| Item | To understand everything affecting an item: aggregate stock, locations, lots, movements, and planning. |
+| Location | To validate where materials are or review a picking, receiving, or dispatch area. |
+| Lot | To choose the correct source for consumption, shipments, or quality investigations. |
+
+If physical stock exists but availability is low or negative, review confirmed orders, expected consumption, and reservations before moving materials.
+
+## Review movements
+
+Stock movements explain why a quantity changed. Each receipt, shipment, consumption, manufacturing run, adjustment, or stock count leaves records you can review.
+
+**Path:** **Warehouse > Stock control > Stock history**
+
+[Stock history](/en/concepts/warehouse/stock-and-movements#stock-history) shows changes for all items and locations over a period of up to one year.
+
+| Filter | Use |
+| --- | --- |
+| From and to | Narrow down the investigation period. |
+| Item | See everything that affected an item from the **Item code** or **Item** columns. |
+| Location | Review receipts and issues for an area from the **Location** column. |
+| Lot | Follow traceability by origin from the **Lot** column. |
+| Type | Separate receipts, shipments, adjustments, or consumption. |
+
+The **Cause** column lets you open the receipt, shipment, stock count, or order that originated the change if you have permission to view it. Without that permission, Bold shows only its identifier.
+
+If the item uses lots, enable **Include lot reclassifications** to also see lot reassignments and merges.
+
+Start from the last point when stock was correct. To find it, query the item's [stock at date](/en/concepts/warehouse/stock-and-movements#stock-at-date) on several dates. From there, follow movements by date and open related documents before adjusting.
+
+## Correct
+
+| Cause | Recommended action |
+| --- | --- |
+| An actual receipt is missing | Record the receipt from a purchase order or delivery note. |
+| Production is missing | Record the pending operation or manufactured output. |
+| Materials are at another location | Create an internal movement. |
+| Wrong lot | Correct it through the available operational workflow or adjust with an explanation. |
+| Physical count differs | Take a stock count or make an adjustment depending on scope. |
+| Error without a traceable origin | Use an adjustment with a clear comment. |
+
+<Warning>
+  Avoid compensating discrepancies with adjustments when an actual receipt or issue remains unrecorded. An adjustment balances stock but does not explain the process that happened.
+</Warning>
+
+## Negative stock
+
+Negative stock usually indicates that an issue was recorded before the receipt covering it. First review:
+
+- pending purchase receipts;
+- unrecorded production;
+- consumption from an incorrect lot;
+- shipments from an incorrect location;
+- unclosed stock counts;
+- omitted internal movements.
+
+Do not treat it as a normal balance. If an actual receipt is missing, record it through the correct workflow. If the problem was an incorrect shipment, consumption, or lot, use reversal where available. Adjust only when you cannot confidently reconstruct the actual movement.
+
+## Related
+
+- [Create locations](/en/guides/warehouse/create-locations)
+- [Move stock](/en/guides/warehouse/move-stock-between-locations)
+- [Adjust stock](/en/guides/warehouse/adjust-stock)
+- [Take a stock count](/en/guides/warehouse/take-a-stock-count)
+- [Stock and movements](/en/concepts/warehouse/stock-and-movements)

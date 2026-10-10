@@ -1,0 +1,142 @@
+---
+es_link: "/es/conceptos/almacen/stock-y-movimientos"
+title: "Stock and movements"
+description: "Understand how Bold records physical stock, availability, inflows, outflows and movements."
+icon: "boxes"
+---
+
+**Stock** indicates what quantity of an item exists or is expected. Movements explain why that quantity changed.
+
+Bold stores physical stock as stock units. Each unit identifies an item, a location, a lot when applicable and a quantity.
+
+<Info>
+  This page describes records that audit stock changes. For tasks that tell an employee what to pick up and where to drop it off, read [Warehouse movements](/en/concepts/warehouse/warehouse-movements).
+</Info>
+
+## Stock unit
+
+Bold tracks stock by the combination of:
+
+| Dimension | Meaning |
+| --- | --- |
+| Item | What the material is. |
+| Location | Where it is. |
+| Lot | Its source or traceable grouping, if applicable. |
+| Quantity | How many units exist in that combination. |
+
+This combination lets you separate the same item by location, manufacturing or purchasing source, and cost.
+
+If an item uses lots, the stock unit must specify the correct lot. If it does not use lots, you can track stock by item and location alone.
+
+## Stock types
+
+| Concept | Meaning |
+| --- | --- |
+| Physical stock | Quantity currently recorded. |
+| Available stock | Free quantity after reservations or commitments. |
+| Incoming stock | Quantity expected from purchases or manufacturing orders. |
+| Outgoing stock | Quantity committed to sales, shipments or consumption. |
+| Projected stock | Expected evolution after applying future inflows and outflows. |
+
+Physical stock answers "what is here now". Projected stock answers "what will be here if commitments are fulfilled".
+
+## Stock movements
+
+A stock movement is the audit record of a change. It stores the quantity, sign, source, date, reference and resulting balance.
+
+| Movement | Usual effect |
+| --- | --- |
+| Receipt | Increases physical stock. |
+| Shipment | Reduces physical stock. |
+| Order progress | Increases stock when manufacturing produces units. |
+| Input consumption | Reduces stock for materials consumed in manufacturing. |
+| Maintenance consumption | Reduces stock for materials used in a work order. |
+| Produced co-product | Increases stock of an operation's additional outputs. |
+| Lot reallocation | Changes stock traceability between lots. |
+| Lot merge | Moves traceable stock to a merged lot. |
+| Item merge | Transfers stock when items are consolidated. |
+| Stock count or adjustment | Corrects detected discrepancies or physical counts. |
+
+When an action is reversed, Bold records an opposite movement. Reversal preserves the audit trail instead of deleting the original movement.
+
+## Change traceability
+
+Each movement should answer:
+
+- which item changed;
+- in which location it occurred;
+- which lot was involved, if applicable;
+- which document or action caused it;
+- what quantity came in or went out;
+- when it occurred.
+
+Use movements to investigate discrepancies before creating manual adjustments. If you adjust without reviewing the source, you can correct the balance but lose the cause.
+
+## Stock history
+
+**Path:** **Warehouse > Stock control > Stock history**
+
+Stock history gathers changes for all items, locations and lots over a period. Use it when you do not know which item or location caused a discrepancy, or when you want to review all activity in an area.
+
+| Filter | Behavior |
+| --- | --- |
+| From and to | Required. Shows the last 7 days by default. The period can span at most one year. |
+| Item | Filters by code or name from the **Item code** and **Item** columns. |
+| Location | Filters by name from the **Location** column. |
+| Lot and type | Filters by lot code or movement type from their columns. |
+| Include lot reclassifications | Shows lot reallocations and merges. Hidden by default and never shown for items that do not use lots. |
+
+The **Cause** column shows the code or name of the document that caused the change, such as a shipment, receipt, stock count, warehouse movement, MO or work order. Click it to open the document. If you do not have permission to view that document, Bold shows its identifier.
+
+In an item's record, the stock tab shows **Latest stock changes** from the last year. Click **View more** to open stock history with the **Item code** column filtered by that item. You can remove the filter in the column itself.
+
+To download the full stock history, use the **Stock history** collection in [Export data](/en/guides/control-panel/export-data). The export does not apply this screen's filters.
+
+## Stock at date
+
+**Path:** **Warehouse > Stock control > Stock history > Stock at date**
+
+Stock at date shows how much stock each stock unit had at a specific time in the past. Use it to value inventory at a closing date or find the last time a balance was correct.
+
+Bold calculates it from stock history. For each item, location and lot combination, it takes the balance left by the last change recorded up to that moment, including lot reclassifications.
+
+| Filter | Behavior |
+| --- | --- |
+| Date and time | Required. Cannot be in the future. Shortcuts fill in the end of yesterday or the previous month, quarter or year. |
+| Item | Optional. Shows only that item's stock units. |
+| Location | Optional. Shows only stock units in that exact location. |
+
+Click **Look up** to apply the date, item and location. The URL saves the query so you can share it or return to it.
+
+The result follows these rules:
+
+- Only combinations that already had a recorded change or existed at that moment appear.
+- Quantities are those at that moment. Item, location and lot codes and names are current.
+- The **Lot** column is filled in only for items that use lots. Other items show one row per location, with the stock from all their stock units there.
+- Negative stock always appears and is highlighted in red.
+
+You can change how result rows are grouped. These options do not filter stock units:
+
+| Option | Behavior |
+| --- | --- |
+| Sum lots | Shows one row per item and location with stock from all its lots. Only changes items that use lots. |
+| Sum locations | Shows one row per item and lot with stock from all its locations. |
+| Both options | Shows one row per item with its total stock. |
+| Include records without stock | Also shows rows with a zero balance. Hidden by default, including rows that become zero after summing. |
+
+Click **Export** to download the result in Excel (.xlsx) or CSV. The file applies the date, filters and grouping options, and sorts rows by item code, location and lot. It does not apply table column filters. Exporting requires the same permission as viewing item stock.
+
+## Negative stock
+
+Negative stock indicates that Bold recorded an outflow before an inflow covered it in the same item, location and lot combination.
+
+It can occur due to early consumption, pending receipts, incorrect locations or unrecorded movements. Review the source before adjusting, because a manual adjustment can hide the real cause.
+
+## Related
+
+- [Warehouse](/en/concepts/warehouse)
+- [Lots](/en/concepts/warehouse/lots)
+- [Investigate stock discrepancies](/en/guides/warehouse/investigate-stock-discrepancies)
+- [Move stock](/en/guides/warehouse/move-stock-between-locations)
+- [Adjust stock](/en/guides/warehouse/adjust-stock)
+- [Warehouse movements](/en/concepts/warehouse/warehouse-movements)

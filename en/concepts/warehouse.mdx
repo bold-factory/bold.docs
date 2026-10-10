@@ -1,0 +1,59 @@
+---
+es_link: "/es/conceptos/almacen"
+title: "Warehouse"
+description: "Map of stock, traceability and warehouse execution concepts."
+icon: "warehouse"
+---
+
+The warehouse records where material is, why its quantity changes and what physical work your team needs to perform.
+
+## Concepts in this group
+
+<Columns cols={2}>
+  <Card title="Stock and movements" icon="boxes" href="/en/concepts/warehouse/stock-and-movements">
+    Quantities, availability and an audit trail for every stock change.
+  </Card>
+  <Card title="Warehouse movements" icon="route" href="/en/concepts/warehouse/warehouse-movements">
+    Tasks to pick up and drop off material between locations.
+  </Card>
+  <Card title="Load orders" icon="list-checks" href="/en/concepts/warehouse/load-orders-and-provisioning">
+    Preparation, validation and dispatch of goods.
+  </Card>
+  <Card title="Receipts" icon="package-plus" href="/en/concepts/warehouse/receipts">
+    Documented inflows from suppliers or customers.
+  </Card>
+  <Card title="Shipments" icon="package-minus" href="/en/concepts/warehouse/shipments">
+    Documented outflows to customers or suppliers.
+  </Card>
+  <Card title="Stock counts and adjustments" icon="clipboard-check" href="/en/concepts/warehouse/stock-counts-and-adjustments">
+    Counts and corrections of stock discrepancies.
+  </Card>
+  <Card title="Lots" icon="scan-line" href="/en/concepts/warehouse/lots">
+    Traceability by source, manufacturing and cost.
+  </Card>
+  <Card title="Locations" icon="map-pin" href="/en/concepts/warehouse/locations">
+    Places where Bold records material.
+  </Card>
+  <Card title="Packages" icon="package" href="/en/concepts/warehouse/packages">
+    Physical groups of stock that are identified and moved together.
+  </Card>
+  <Card title="Equipment and transports" icon="forklift" href="/en/concepts/warehouse/warehouse-equipment-and-transports">
+    Internal movement resources and transport for loads.
+  </Card>
+</Columns>
+
+## Three different records
+
+| Concept | What it represents |
+| --- | --- |
+| Stock movement | The audited change in a quantity. |
+| Warehouse movement | The work of picking up and dropping off material between locations. |
+| Logistics document | A receipt from a supplier or customer, or a shipment to a supplier or customer. |
+
+Production, consumption, stock counts and adjustments also change stock. They are not recorded as receipts or shipments: they generate their own stock movement from the process that creates them.
+
+## Related
+
+- [Work with packages and containers](/en/guides/warehouse/work-with-packages-and-containers)
+- [Investigate stock discrepancies](/en/guides/warehouse/investigate-stock-discrepancies)
+- [Investigate lot traceability](/en/guides/warehouse/investigate-lot-traceability)

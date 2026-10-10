@@ -1,0 +1,129 @@
+---
+es_link: "/es/ayuda/produccion/ver-oee-por-estacion"
+title: "View OEE by workstation"
+description: "View a workstation's availability, performance, and quality over a period."
+---
+
+Use **OEE by workstation** to analyze a workstation during a specific period. The view separates results into occupancy, availability, performance, and quality.
+
+## Review OEE
+
+**Path:** **Smart Factory > Dashboards > OEE by workstation**
+
+### 1. Choose the workstation and period
+
+Filter by workstation and the interval you want to analyze.
+
+### 2. Interpret results
+
+Compare components to identify where losses are concentrated.
+
+#### Occupancy
+
+Measures the share of the selected period planned for production, after deducting planned downtime.
+
+**How is it calculated?**
+
+Occupancy (%) = (Planned production time / Total period time) \* 100
+
+- **Planned production time:** the workstation's scheduled time minus planned downtime that stopped it. The summary shows it as **Productive**.
+- **Total period time:** the entire selected interval, including hours outside the shift. The summary shows it as **Total**.
+
+**What does low occupancy mean?**
+
+Lower occupancy means a smaller share of the period was planned for production. Review:
+
+- **Hours outside the shift:** the period may include nights, weekends, or other windows without scheduled activity.
+- **Planned downtime:** planned breaks or maintenance reduce the time planned for production.
+- **Shift configuration:** check that the workstation's schedule reflects the windows when it should work.
+
+To see how much of that time was actually used, check **Availability**.
+
+#### Availability
+
+Measures the share of planned production time with operations running within the shift.
+
+**How is it calculated?**
+
+Availability (%) = (Actual operating time / Planned production time) \* 100
+
+- **Actual operating time:** time with operations running within the shift. The summary shows it as **Running**.
+
+- **Planned production time:** the workstation's scheduled time minus planned downtime that stopped it. The summary shows it as **Productive**.
+
+Unplanned stops and time without running operations reduce availability. Work outside the shift appears separately as **Running (unscheduled)**.
+
+**What does low availability mean?**
+
+A low value indicates that the workstation spends too much time stopped and is not producing when it should. Main causes commonly include:
+
+- Breakdowns, technical failures, or setup recorded as unplanned stops.
+- Waiting for materials, tools, or a previous operation.
+- Time without running operations due to insufficient workload or staff.
+- Incomplete records: if operators forget to pause or resume operations, downtime may be recorded as productive time or the reverse.
+
+#### Performance
+
+Measures actual manufacturing speed compared with the standard theoretical speed or time defined in the recipe or process.
+
+**How is it calculated?**
+
+Performance (%) = (Theoretical time / Actual production time) \* 100
+
+- **Theoretical time:** obtained by multiplying produced quantity by the standard time defined in the recipe or process, adjusted for the workstation's assigned efficiency.
+
+- **Actual production time:** sum of recorded durations while the order was running.
+
+**What does low performance mean?**
+
+A low value indicates that the machine or operator works below expected capacity. Main causes commonly include:
+
+- Reduced speeds due to machine or equipment wear.
+- Recurring small stops that are not formally recorded.
+- Overly demanding theoretical time or standard speed.
+
+#### Quality
+
+Measures good pieces as a percentage of all pieces produced (good + rejected).
+
+**How is it calculated?**
+
+Quality (%) = (Good unit quantity / Total produced quantity) \* 100
+
+- **Good unit quantity:** conforming pieces moving to the next operation or stock.
+- **Total produced quantity:** sum of good and rejected units recorded at the workstation.
+
+**What does low quality mean?**
+
+A low value indicates a high proportion of rejected units. Review these possible causes:
+
+- **Defective raw materials or semi-finished inputs:** pieces or materials arriving with faults from suppliers or previous operations.
+- **Setup errors at lot start:** incorrect calibrations generating rejects until the machine stabilizes.
+- **Tool or machine wear:** worn tooling causing deviations outside tolerance.
+- **Handling errors:** mistakes positioning, handling, or processing a piece.
+
+#### OEE (Overall Equipment Effectiveness)
+
+This is the workstation's overall productive efficiency indicator.
+
+**How is it calculated?**
+
+OEE (%) = (Availability / 100) \* (Performance / 100) \* (Quality / 100) \* 100
+
+**What does low OEE mean?**
+
+A low OEE indicates that the workstation operates below its theoretical potential. Depending on the calculation's components, main causes commonly include:
+
+- **Availability losses:** frequent breakdowns, long setups, missing materials, or unplanned stops.
+- **Performance losses:** lower speed from wear, small stops, or unrealistic theoretical times.
+- **Quality losses:** waste, setup deviations at lot start, or raw material problems.
+
+<Info>
+  Low OEE does not always indicate the same problem. First review which component falls, then open operational details.
+</Info>
+
+## Related
+
+- [Dashboards](/en/concepts/manufacturing/dashboards)
+- [Analyze stops and production losses](/en/guides/manufacturing/analyze-stops-and-production-losses)
+- [Execute shop floor operations](/en/guides/manufacturing/execute-shop-floor-operations)

@@ -1,0 +1,92 @@
+---
+es_link: "/es/ayuda/personal/configurar-turnos-y-calendarios"
+title: "Configure shifts and calendars"
+description: "Create work days, build shift cycles and add exceptions for public holidays or closures."
+---
+
+Prepare employee scheduling at three levels. First, define the work days for a single day. Then combine them into shifts. If needed, create local calendars for exceptional dates.
+
+A **work day** contains the working periods of a typical day. A **shift** repeats those work days in a cycle. A **local calendar** overrides the pattern on dates such as public holidays, closures or special work days.
+
+## Before you start
+
+You need permission to manage employee scheduling. Also decide:
+
+- which daily schedules repeat in your factory;
+- which fixed or rotating cycles each team uses;
+- which sites or areas share the same public holidays and closures.
+
+## Create work days
+
+**Path:** **People > Work days**
+
+<Steps>
+  <Step title="Create a work day">
+    Click **Create new work day** and enter a recognizable name, such as `Morning`, `Night` or `Split day`.
+  </Step>
+  <Step title="Add working periods">
+    Click **Add period** and specify the **Start time** and **End time**. Add several periods to represent a split day without counting breaks between them as working time.
+  </Step>
+  <Step title="Configure overnight periods">
+    Select **Ends the next day** when a period crosses midnight, such as 22:00 to 06:00.
+  </Step>
+  <Step title="Represent days off">
+    Create a work day without working periods and give it a name such as `Non-working day`. You can use it in shifts, public holidays and closures.
+  </Step>
+</Steps>
+
+## Build a shift
+
+**Path:** **People > Shifts**
+
+<Steps>
+  <Step title="Create the shift">
+    Click **Create shift**. Enter a name and add a description if it helps identify the cycle.
+  </Step>
+  <Step title="Add the first segment">
+    Select a work day and specify how many consecutive days it should apply.
+  </Step>
+  <Step title="Complete the cycle">
+    Click **Add segment** to add the following work days in order. Include segments with the `Non-working day` work day when the cycle includes days off.
+  </Step>
+  <Step title="Review the sequence">
+    Check that the order and duration of the segments represent the whole cycle before creating the shift.
+  </Step>
+</Steps>
+
+<Note>
+  For a rotation of five mornings and two days off, add a segment with the `Morning` work day for 5 days and another with `Non-working day` for 2 days.
+</Note>
+
+## Add a local calendar
+
+**Path:** **People > Local calendars**
+
+Use a local calendar when you need to apply special dates to a site, town or group of employees. If two plants have different public holidays, create a calendar for each.
+
+<Steps>
+  <Step title="Create the calendar">
+    Click **Create new calendar**. Add a name that identifies the site or area and a description if you need to explain its scope.
+  </Step>
+  <Step title="Open the calendar">
+    Open the created calendar and navigate to the month you want to configure.
+  </Step>
+  <Step title="Choose the assignment mode">
+    Use **Ask or unassign** to choose a work day after clicking each date. If you will apply the same work day to several dates, select **Set work day type**.
+  </Step>
+  <Step title="Assign special dates">
+    Apply the appropriate work day to each public holiday, closure or day with special hours. Use the work day without periods for non-working days.
+  </Step>
+</Steps>
+
+## Next step
+
+Once work days, shifts and calendars are ready, assign them to each employee.
+
+<Card title="Assign employee schedules" icon="calendar-clock" href="/en/guides/people/configure-employee-schedules">
+  Assign a shift, local calendar, time zone and individual exceptions.
+</Card>
+
+## Related
+
+- [Work days, calendars and shifts](/en/concepts/people/work-days-calendars-and-shifts)

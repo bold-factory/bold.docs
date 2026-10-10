@@ -1,0 +1,126 @@
+---
+es_link: "/es/desarrolladores/empezar/introduccion"
+title: "Get started with the API"
+sidebarTitle: "Introduction"
+description: "Connect external systems to Bold with the API, API keys, and webhooks."
+---
+
+The Bold API lets you read and update operational data from external systems. Use it to synchronize catalog, stock, orders, production, purchases, sales, and events with management systems, analytics tools, internal automations, or your own tools.
+
+To query data from ChatGPT Desktop or Claude Code, follow the [MCP server](/en/developers/mcp) guide.
+
+<Info>
+  The full reference is generated from OpenAPI. You can browse it in the [API reference](/en/developers/api-reference/introduction) section or open `https://api.bold-factory.com/docs`.
+</Info>
+
+## What you can integrate
+
+<Columns cols={2}>
+  <Card title="Master data" icon="boxes">
+    Products, items, properties, variants, and units.
+  </Card>
+
+  <Card title="Warehouse" icon="warehouse">
+    Locations, lots, receipts, shipments, inventories, and stock.
+  </Card>
+
+  <Card title="Planning" icon="calendar-range">
+    Demand, supply, projected stock, customers, and suppliers.
+  </Card>
+
+  <Card title="Production" icon="factory">
+    Recipes, versions, orders, operations, resources, and execution.
+  </Card>
+
+  <Card title="People and permissions" icon="users">
+    Users, permission profiles, employees, working hours, calendars, shifts, and tasks.
+  </Card>
+
+  <Card title="Maintenance" icon="wrench">
+    Assets, actions, causes, maintenance work orders, time, materials, and preventive schedules.
+  </Card>
+
+  <Card title="Purchases and sales" icon="shopping-cart">
+    Purchase orders, sales orders, receipts, shipments, and lines.
+  </Card>
+
+  <Card title="Notifications" icon="bell">
+    Events, personal subscriptions, the app inbox, and notification read status.
+  </Card>
+
+  <Card title="Analytics" icon="chart-no-axes-combined">
+    Embedded Power BI reports, access credentials, report duplication, and report creation.
+  </Card>
+
+  <Card title="Labels" icon="tag">
+    Templates, design elements, and PDF document generation.
+  </Card>
+</Columns>
+
+## Detailed reference
+
+The **API reference** section uses `https://api.bold-factory.com/openapi/v1.json` to generate endpoints, parameters, request and response schemas, models, and interactive tests.
+
+<Card title="Open the external reference" icon="external-link" href="https://api.bold-factory.com/docs">
+  Use Bold's published reference to view it outside this documentation.
+</Card>
+
+## Basic pattern
+
+Public endpoints include the version in their URL:
+
+```http
+GET /v1/items/products
+GET /v1/warehouse/locations
+GET /v1/planning/salesOrders
+GET /v1/production/orders
+```
+
+Responses and errors use JSON. Paginated lists return a common structure with `results`, `pageNumber`, `pageSize`, `totalPages`, and `totalCount`.
+
+## Consistency between modules
+
+Some actions update more than one module. For example, a receipt increases physical stock and can also change data used in planning.
+
+These related changes can take a few seconds to appear in all views and queries. If your integration chains operations, read the resource again before making critical decisions. Use short retries when you depend on calculated data.
+
+For critical integrations, combine webhooks with paginated reconciliation. The webhook provides a prompt notification, and reconciliation confirms the final state.
+
+## Recommended workflow
+
+<Steps>
+  <Step title="Create an API key">
+    Create a key in **Control panel \> Access \> API keys**. Use a different key for each integration so you can revoke it without affecting other systems.
+  </Step>
+  <Step title="Test reads before writes">
+    Start with `GET` endpoints to validate authentication, tenant, permissions, and pagination.
+  </Step>
+  <Step title="Test reads before writes">
+    Start with `GET` endpoints to validate authentication, organization, permissions, and pagination.
+  </Step>
+  <Step title="Synchronize identifiers">
+    Save the Bold references returned by the endpoints. Avoid relying only on display names, because names can change.
+  </Step>
+  <Step title="Synchronize identifiers">
+    Save the Bold references returned by the endpoints. Avoid relying only on display names, because names can change.
+  </Step>
+  <Step title="Enable webhooks">
+    Use webhooks to receive change notifications without repeatedly polling the API.
+  </Step>
+</Steps>
+
+## Conventions
+
+| Convention | Usage |
+| --- | --- |
+| `v1` | Current public API version. |
+| `reference` | Functional identifier visible in several entities. |
+| `id` | Technical identifier of an entity. |
+| `pageNumber` | Page number, starting at `1`. |
+| `pageSize` | Page size. The maximum validated by Bold is `1000`. |
+| `filterBy` | Expression for filtering results when supported by the endpoint. |
+| `sortBy` | Sort field when supported by the endpoint. |
+
+<Tip>
+  For critical integrations, combine webhooks with periodic paginated reconciliation. The webhook provides a prompt notification, and reconciliation detects any missed event.
+</Tip>

@@ -1,0 +1,87 @@
+---
+es_link: "/es/desarrolladores/empezar/autenticacion"
+title: "Authentication"
+description: "Authenticate requests to the Bold API with API keys or session credentials."
+---
+
+Bold accepts two API authentication methods: API keys for server-to-server integrations and session credentials for users.
+
+<Info>
+  If the request includes the `X-Api-Key` header, Bold uses API key authentication. Otherwise, it validates the request as a user session.
+</Info>
+
+## Get an API key
+
+You must be an administrator to create or disable API keys. In the app, you manage them in **Control panel \> Access \> API keys**.
+
+<Steps>
+  <Step title="Open API keys">
+    Go to **Control panel** and open **API keys** in the **Access** group.
+  </Step>
+  <Step title="Create a key">
+    Click **Create new API key**. Enter a value in **Key name**, such as `Production management` or `Inventory analysis`.
+  </Step>
+  <Step title="Save the secret">
+    Click **Create key** and copy the value shown in **API key created**. The full key is only displayed at this point.
+  </Step>
+  <Step title="Confirm you have copied it">
+    Save the key in your integration's secret manager and confirm with **I have copied and saved it**.
+  </Step>
+</Steps>
+
+## Use API keys
+
+Use API keys for technical integrations. The key identifies the organization and is a secret credential. Send it in the `X-Api-Key` header.
+
+```http
+GET /v1/items/products?pageNumber=1&pageSize=25
+X-Api-Key: bf_live_xxxxxxxxxxxxx
+```
+
+Good practices:
+
+- Create a key for each external system.
+- Use descriptive names such as `Production management` or `Inventory analysis`.
+- Rotate the key if you suspect it was shared outside the authorized system.
+- Revoke keys that are no longer used.
+
+<Warning>
+  Do not store API keys in repositories, shared documents, or local scripts without a secret manager.
+</Warning>
+
+## Session credentials
+
+Use session credentials when a request represents an interactive user session.
+
+```http
+GET /v1/warehouse/locations
+Authorization: Bearer eyJhbGciOi...
+```
+
+The credential must include the organization context and the required permissions. If it expires or belongs to a different organization, the API returns an authentication or authorization error.
+
+## Permissions
+
+Authentication answers "who is calling". Permissions answer "what they can do".
+
+| Error | Common cause | What to check |
+| --- | --- | --- |
+| `401 Unauthorized` | The credential is missing, expired, or invalid. | Header, session credential, API key, and environment. |
+| `403 Forbidden` | The credential is valid but lacks permissions. | Permission profile, user permissions, or permissions associated with the integration. |
+| `404 Not Found` | The entity does not exist or is not visible to the organization. | Organization, reference, identifier, and read permissions. |
+
+## Example
+
+```bash
+curl "https://api.bold-factory.com/v1/items/skus?pageNumber=1&pageSize=25" \
+  -H "X-Api-Key: $BOLD_API_KEY" \
+  -H "Accept: application/json"
+```
+
+<Tip>
+  Start with a read endpoint and a small page size. Add write operations after you confirm that the key belongs to the correct organization.
+</Tip>
+
+## Manage keys
+
+Create, view, and disable keys in **Control panel \> Access \> API keys**. See [Integration keys and external notifications](/en/concepts/control-panel/integration-keys-and-external-notifications) to understand how keys and external notifications are managed.

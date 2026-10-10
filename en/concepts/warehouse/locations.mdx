@@ -1,0 +1,76 @@
+---
+es_link: "/es/conceptos/almacen/ubicaciones"
+title: "Locations"
+description: "Understand what warehouse locations represent and how to choose their level of detail."
+icon: "map-pin"
+---
+
+A **location** represents a physical or logical place where Bold records stock. It can be an entire warehouse, an area, an aisle, a rack, a bin, a production station or a temporary receiving area.
+
+A location is more than a name. It defines where you expect to find material and where inflows, outflows, movements, stock counts and consumption are recorded.
+
+## What it represents
+
+| Type | Example | Use |
+| --- | --- | --- |
+| General warehouse | `ALM-01` | Simple operations with little detail. |
+| Area | `RECEPCION`, `PICKING`, `RESERVA` | Separate routes or physical areas. |
+| Position | `A-03-02` | Find material precisely. |
+| Shop floor | `LINEA-1`, `CORTE` | Consume or produce near the operation. |
+| Temporary | `ENTRADA`, `SALIDA` | Record material during a temporary physical stage. |
+
+<Info>
+  A location's name does not block stock or change its availability. A separate location helps you know where material is, but any usage restriction must be controlled through the corresponding operational process.
+</Info>
+
+## When to use one location
+
+A single location can be sufficient if:
+
+- your team finds material without recording internal positions;
+- you do not need stock counts by area;
+- internal movements do not add traceability;
+- the warehouse is small or has low volume;
+- your priority is to start with a simple model.
+
+This model reduces maintenance but provides less precision for searches and discrepancies.
+
+## When to create several locations
+
+Create several locations when the physical place changes operational decisions.
+
+| Requirement | Useful locations |
+| --- | --- |
+| Receiving separated from available stock | `RECEPCION` and `ALMACEN` |
+| Picking separated from reserve | `PICKING` and `RESERVA` |
+| Production consumes from the shop floor | Locations by line, station or cell. |
+| Stock counts by area | Locations matching counting areas. |
+
+## Level of detail
+
+A structure that is too detailed requires constant movement recording. A structure that is too broad makes discrepancies harder to find.
+
+Design locations at the level your team works:
+
+| If your team makes decisions by... | Model it as... |
+| --- | --- |
+| Entire warehouse | One location per warehouse. |
+| Operational area | One location per area. |
+| Exact bin | One location per position. |
+| Consumption station | One location per station or line. |
+
+## Use cases
+
+| Case | Recommendation |
+| --- | --- |
+| Supplier receipt | First record it in a receiving location if it requires prior review. |
+| Material ready for picking | Move it to an available or preparation location. |
+| Production | Use shop floor locations if you need to know what material is next to each resource. |
+| Stock count | Count locations that match the physical route. |
+
+## Related
+
+- [Stock and movements](/en/concepts/warehouse/stock-and-movements)
+- [Packages](/en/concepts/warehouse/packages)
+- [Create locations](/en/guides/warehouse/create-locations)
+- [Move stock](/en/guides/warehouse/move-stock-between-locations)

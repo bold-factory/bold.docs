@@ -1,0 +1,38 @@
+---
+es_link: "/es/ayuda/produccion/asignar-recursos"
+title: "Assign workstations"
+description: "Assign compatible workstations to pending operations before executing or sequencing them."
+hidden: true
+---
+
+On this screen, you can assign the workstation and, where applicable, the tool used in each operation. The view also lets you review workload and identify operations without assigned resources.
+
+**Path:** **Production > Resource assignment**
+
+## Pending operations
+
+Each card represents a pending operation. You can view its main details without opening the MO:
+
+- **Identification:** MO code, such as `OF-00029-01`, and operation name, such as cutting, gluing, or sanding.
+- **Priority:** deadline, requester, and completed quantity compared with the required quantity, such as `0/12 pieces`.
+
+## Assign or change machinery
+
+**Workstation:** an operation can be compatible with several workstations. The selector shows only workstations suitable for the process. If you change a workstation after the operation is planned, Bold asks you to confirm how to handle the existing schedule.
+
+**Tool:** appears when the operation requires a specific characteristic. The selector shows compatible tools.
+
+## Filter operations
+
+Use the filters at the top to narrow the list:
+
+- **Area or workstation:** shows only tasks in an area, such as _Painting_, or at a workstation, such as _Belt sander_. This lets you review the queue for a specific section.
+- **Quick status filters:** use **Hide planned** and **Hide started** to focus on work that still needs assignment.
+
+### Example: reassign work after a breakdown
+
+If **Hydraulic press 1** will be stopped for two days:
+
+1. Select **Hydraulic press 1** in the **Workstation** filter.
+2. Review operations assigned to that machine.
+3. Open each card and reassign it to **Hydraulic press 2** or an alternative workbench.

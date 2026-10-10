@@ -99,6 +99,766 @@
     {
       "source": "/es/conceptos/almacen/tipos-de-contenedores",
       "destination": "/es/conceptos/almacen/bultos"
+    },
+    {
+      "source": "/en/ayuda/primeros-pasos/flujo-basico-de-trabajo",
+      "destination": "/en/guides/getting-started/introduction"
+    },
+    {
+      "source": "/en/ayuda/planificacion/crear-pedido-de-compra-manualmente",
+      "destination": "/en/guides/planning/create-a-purchase-order"
+    },
+    {
+      "source": "/en/ayuda/personal/definir-jornadas",
+      "destination": "/en/guides/people/configure-shifts-and-calendars"
+    },
+    {
+      "source": "/en/ayuda/personal/programar-turnos",
+      "destination": "/en/guides/people/configure-shifts-and-calendars"
+    },
+    {
+      "source": "/en/ayuda/personal/anadir-calendarios-locales",
+      "destination": "/en/guides/people/configure-shifts-and-calendars"
+    },
+    {
+      "source": "/en/ayuda/almacen/anadir-transportes",
+      "destination": "/en/guides/warehouse/plan-and-prepare-a-load"
+    },
+    {
+      "source": "/en/ayuda/almacen/controlar-ordenes-de-carga",
+      "destination": "/en/guides/warehouse/plan-and-prepare-a-load"
+    },
+    {
+      "source": "/en/ayuda/almacen/preparar-materiales-para-una-carga",
+      "destination": "/en/guides/warehouse/plan-and-prepare-a-load"
+    },
+    {
+      "source": "/en/ayuda/produccion/ver-actividad-de-los-empleados",
+      "destination": "/en/guides/manufacturing/monitor-production-in-real-time"
+    },
+    {
+      "source": "/en/ayuda/produccion/ver-estado-de-las-estaciones",
+      "destination": "/en/guides/manufacturing/monitor-production-in-real-time"
+    },
+    {
+      "source": "/en/ayuda/articulos/crear-un-producto",
+      "destination": "/en/guides/catalog/group-items-into-families"
+    },
+    {
+      "source": "/en/ayuda/smart-factory/crear-automatizacion-con-agente",
+      "destination": "/en/guides/smart-factory/automate-tasks"
+    },
+    {
+      "source": "/en/conceptos/catalogo/productos",
+      "destination": "/en/concepts/catalog/families"
+    },
+    {
+      "source": "/en/conceptos/catalogo/producto-vs-articulo",
+      "destination": "/en/concepts/catalog/family-vs-item"
+    },
+    {
+      "source": "/en/conceptos/personal/periodos-tareas-y-presencia",
+      "destination": "/en/concepts/people/planned-periods-and-tasks"
+    },
+    {
+      "source": "/en/conceptos/smart-factory/agentes",
+      "destination": "/en/concepts/smart-factory/automations"
+    },
+    {
+      "source": "/en/conceptos/almacen/tipos-de-contenedores",
+      "destination": "/en/concepts/warehouse/packages"
+    },
+    {
+      "source": "/en/ayuda/almacen/ajustar-stock",
+      "destination": "/en/guides/warehouse/adjust-stock"
+    },
+    {
+      "source": "/en/ayuda/almacen/aprovisionar-materias-primas",
+      "destination": "/en/guides/warehouse/provision-raw-materials"
+    },
+    {
+      "source": "/en/ayuda/almacen/cargar-y-cerrar-una-expedicion",
+      "destination": "/en/guides/warehouse/execute-and-close-a-load-order"
+    },
+    {
+      "source": "/en/ayuda/almacen/configurar-y-completar-controles-de-recepcion",
+      "destination": "/en/guides/warehouse/configure-and-complete-receipt-inspections"
+    },
+    {
+      "source": "/en/ayuda/almacen/crear-ubicaciones",
+      "destination": "/en/guides/warehouse/create-locations"
+    },
+    {
+      "source": "/en/ayuda/almacen/hacer-inventario",
+      "destination": "/en/guides/warehouse/take-a-stock-count"
+    },
+    {
+      "source": "/en/ayuda/almacen/introduccion",
+      "destination": "/en/guides/warehouse/introduction"
+    },
+    {
+      "source": "/en/ayuda/almacen/investigar-diferencias-de-stock",
+      "destination": "/en/guides/warehouse/investigate-stock-discrepancies"
+    },
+    {
+      "source": "/en/ayuda/almacen/investigar-trazabilidad-de-un-lote",
+      "destination": "/en/guides/warehouse/investigate-lot-traceability"
+    },
+    {
+      "source": "/en/ayuda/almacen/mover-stock",
+      "destination": "/en/guides/warehouse/move-stock-between-locations"
+    },
+    {
+      "source": "/en/ayuda/almacen/planificar-una-carga",
+      "destination": "/en/guides/warehouse/plan-and-prepare-a-load"
+    },
+    {
+      "source": "/en/ayuda/almacen/recibir-con-albaran",
+      "destination": "/en/guides/warehouse/scan-delivery-notes-with-ai"
+    },
+    {
+      "source": "/en/ayuda/almacen/registrar-equipos-de-almacen",
+      "destination": "/en/guides/warehouse/register-warehouse-equipment"
+    },
+    {
+      "source": "/en/ayuda/almacen/trabajar-con-bultos-y-contenedores",
+      "destination": "/en/guides/warehouse/work-with-packages-and-containers"
+    },
+    {
+      "source": "/en/ayuda/analisis/introduccion",
+      "destination": "/en/guides/analytics/introduction"
+    },
+    {
+      "source": "/en/ayuda/articulos/crear-un-articulo",
+      "destination": "/en/guides/catalog/create-an-item"
+    },
+    {
+      "source": "/en/ayuda/articulos/crear-una-familia",
+      "destination": "/en/guides/catalog/group-items-into-families"
+    },
+    {
+      "source": "/en/ayuda/articulos/definir-propiedades",
+      "destination": "/en/guides/catalog/define-family-properties"
+    },
+    {
+      "source": "/en/ayuda/articulos/editar-un-articulo",
+      "destination": "/en/guides/catalog/configure-an-item"
+    },
+    {
+      "source": "/en/ayuda/articulos/introduccion",
+      "destination": "/en/guides/catalog/introduction"
+    },
+    {
+      "source": "/en/ayuda/articulos/unidades-de-medida",
+      "destination": "/en/guides/catalog/configure-units-of-measure"
+    },
+    {
+      "source": "/en/ayuda/compras/recibir-pedido-de-compra",
+      "destination": "/en/guides/purchasing/receive-a-purchase-order"
+    },
+    {
+      "source": "/en/ayuda/costes/analizar-costes-de-articulos",
+      "destination": "/en/guides/costs/analyze-item-costs"
+    },
+    {
+      "source": "/en/ayuda/costes/configurar-costes-del-personal",
+      "destination": "/en/guides/costs/configure-employee-costs"
+    },
+    {
+      "source": "/en/ayuda/costes/introduccion",
+      "destination": "/en/guides/costs/introduction"
+    },
+    {
+      "source": "/en/ayuda/costes/ordenes-de-fabricacion",
+      "destination": "/en/guides/costs/manufacturing-order-costs"
+    },
+    {
+      "source": "/en/ayuda/costes/partes-de-trabajo",
+      "destination": "/en/guides/costs/work-order-costs"
+    },
+    {
+      "source": "/en/ayuda/costes/preparar-datos-de-coste",
+      "destination": "/en/guides/costs/prepare-cost-data"
+    },
+    {
+      "source": "/en/ayuda/costes/valoracion-inventario",
+      "destination": "/en/guides/costs/value-inventory"
+    },
+    {
+      "source": "/en/ayuda/mantenimiento/como-configurar-el-mantenimiento",
+      "destination": "/en/guides/maintenance/configure-maintenance"
+    },
+    {
+      "source": "/en/ayuda/mantenimiento/crear-parte-de-trabajo",
+      "destination": "/en/guides/maintenance/record-maintenance-work"
+    },
+    {
+      "source": "/en/ayuda/mantenimiento/introduccion",
+      "destination": "/en/guides/maintenance/introduction"
+    },
+    {
+      "source": "/en/ayuda/mantenimiento/mantenimiento-preventivo",
+      "destination": "/en/guides/maintenance/schedule-preventive-maintenance"
+    },
+    {
+      "source": "/en/ayuda/panel-de-control/activar-notificaciones",
+      "destination": "/en/guides/control-panel/enable-notifications"
+    },
+    {
+      "source": "/en/ayuda/panel-de-control/configuracion-de-empresa",
+      "destination": "/en/guides/control-panel/configure-the-company"
+    },
+    {
+      "source": "/en/ayuda/panel-de-control/configurar-webhooks",
+      "destination": "/en/guides/control-panel/configure-webhooks"
+    },
+    {
+      "source": "/en/ayuda/panel-de-control/crear-etiquetas-y-codigos",
+      "destination": "/en/guides/control-panel/create-labels-and-codes"
+    },
+    {
+      "source": "/en/ayuda/panel-de-control/disenar-roles-por-responsabilidad",
+      "destination": "/en/guides/control-panel/design-permission-profiles-by-responsibility"
+    },
+    {
+      "source": "/en/ayuda/panel-de-control/exportar-datos",
+      "destination": "/en/guides/control-panel/export-data"
+    },
+    {
+      "source": "/en/ayuda/panel-de-control/gestionar-archivos",
+      "destination": "/en/guides/control-panel/manage-files"
+    },
+    {
+      "source": "/en/ayuda/panel-de-control/importar-datos",
+      "destination": "/en/guides/control-panel/import-data"
+    },
+    {
+      "source": "/en/ayuda/panel-de-control/introduccion",
+      "destination": "/en/guides/control-panel/introduction"
+    },
+    {
+      "source": "/en/ayuda/panel-de-control/vincular-telegram",
+      "destination": "/en/guides/control-panel/link-telegram-to-your-account"
+    },
+    {
+      "source": "/en/ayuda/personal/configurar-horarios",
+      "destination": "/en/guides/people/configure-employee-schedules"
+    },
+    {
+      "source": "/en/ayuda/personal/configurar-turnos-y-calendarios",
+      "destination": "/en/guides/people/configure-shifts-and-calendars"
+    },
+    {
+      "source": "/en/ayuda/personal/empleados",
+      "destination": "/en/guides/people/register-an-employee"
+    },
+    {
+      "source": "/en/ayuda/personal/introduccion",
+      "destination": "/en/guides/people/introduction"
+    },
+    {
+      "source": "/en/ayuda/planificacion/asistente-de-compras",
+      "destination": "/en/guides/planning/decide-what-to-purchase"
+    },
+    {
+      "source": "/en/ayuda/planificacion/configuracion",
+      "destination": "/en/guides/planning/purchasing"
+    },
+    {
+      "source": "/en/ayuda/planificacion/priorizar-necesidades",
+      "destination": "/en/guides/planning/decide-what-to-manufacture"
+    },
+    {
+      "source": "/en/ayuda/planificacion/proveedores",
+      "destination": "/en/guides/planning/register-a-supplier"
+    },
+    {
+      "source": "/en/ayuda/planificacion/realizar-pedidos-de-compra",
+      "destination": "/en/guides/planning/create-a-purchase-order"
+    },
+    {
+      "source": "/en/ayuda/primeros-pasos/configurar-receta-minima",
+      "destination": "/en/guides/getting-started/define-a-manufacturing-process"
+    },
+    {
+      "source": "/en/ayuda/primeros-pasos/crear-pedido-y-lanzar-of",
+      "destination": "/en/guides/getting-started/create-an-order-and-launch-an-mo"
+    },
+    {
+      "source": "/en/ayuda/primeros-pasos/ejecutar-primera-of",
+      "destination": "/en/guides/getting-started/execute-your-first-mo"
+    },
+    {
+      "source": "/en/ayuda/primeros-pasos/introduccion",
+      "destination": "/en/guides/getting-started/introduction"
+    },
+    {
+      "source": "/en/ayuda/primeros-pasos/preparar-datos-base",
+      "destination": "/en/guides/getting-started/prepare-master-data"
+    },
+    {
+      "source": "/en/ayuda/produccion/asignar-recursos",
+      "destination": "/en/guides/manufacturing/assign-workstations"
+    },
+    {
+      "source": "/en/ayuda/produccion/crear-motivos-de-pausa",
+      "destination": "/en/guides/manufacturing/create-pause-reasons"
+    },
+    {
+      "source": "/en/ayuda/produccion/crear-recursos",
+      "destination": "/en/guides/manufacturing/prepare-work-centers-and-machines"
+    },
+    {
+      "source": "/en/ayuda/produccion/crear-turnos",
+      "destination": "/en/guides/manufacturing/define-production-shifts"
+    },
+    {
+      "source": "/en/ayuda/produccion/crear-una-receta",
+      "destination": "/en/guides/manufacturing/design-the-manufacturing-steps"
+    },
+    {
+      "source": "/en/ayuda/produccion/definir-procesos",
+      "destination": "/en/guides/manufacturing/define-processes"
+    },
+    {
+      "source": "/en/ayuda/produccion/ejecutar-operaciones-en-planta",
+      "destination": "/en/guides/manufacturing/execute-shop-floor-operations"
+    },
+    {
+      "source": "/en/ayuda/produccion/especificar-materiales-pasos-y-controles",
+      "destination": "/en/guides/manufacturing/specify-materials-steps-and-inspections"
+    },
+    {
+      "source": "/en/ayuda/produccion/generar-peticiones-manualmente",
+      "destination": "/en/guides/manufacturing/create-an-mo-without-a-sales-order"
+    },
+    {
+      "source": "/en/ayuda/produccion/introduccion",
+      "destination": "/en/guides/manufacturing/introduction"
+    },
+    {
+      "source": "/en/ayuda/produccion/lanzar-ofs",
+      "destination": "/en/guides/manufacturing/manage-manufacturing-orders"
+    },
+    {
+      "source": "/en/ayuda/produccion/modificar-ordenes-de-fabricacion",
+      "destination": "/en/guides/manufacturing/modify-manufacturing-orders"
+    },
+    {
+      "source": "/en/ayuda/produccion/modo-rapido",
+      "destination": "/en/guides/manufacturing/sequence-manually"
+    },
+    {
+      "source": "/en/ayuda/produccion/para-que-son-necesarias-las-condiciones",
+      "destination": "/en/guides/manufacturing/adapt-manufacturing-to-variants"
+    },
+    {
+      "source": "/en/ayuda/produccion/plan-de-produccion",
+      "destination": "/en/guides/manufacturing/create-a-production-plan"
+    },
+    {
+      "source": "/en/ayuda/produccion/revisar-oee-y-paradas",
+      "destination": "/en/guides/manufacturing/analyze-stops-and-production-losses"
+    },
+    {
+      "source": "/en/ayuda/produccion/secuenciar-ordenes",
+      "destination": "/en/guides/manufacturing/sequence-orders"
+    },
+    {
+      "source": "/en/ayuda/produccion/ver-eficacia-por-empleado",
+      "destination": "/en/guides/manufacturing/view-effectiveness-by-employee"
+    },
+    {
+      "source": "/en/ayuda/produccion/ver-evolucion-del-oee",
+      "destination": "/en/guides/manufacturing/view-oee-evolution"
+    },
+    {
+      "source": "/en/ayuda/produccion/ver-oee-por-estacion",
+      "destination": "/en/guides/manufacturing/view-oee-by-workstation"
+    },
+    {
+      "source": "/en/ayuda/produccion/ver-progreso-en-la-produccion",
+      "destination": "/en/guides/manufacturing/monitor-production-in-real-time"
+    },
+    {
+      "source": "/en/ayuda/smart-factory/consultar-o-delegar-con-ia",
+      "destination": "/en/guides/smart-factory/query-data-and-perform-tasks-with-ai"
+    },
+    {
+      "source": "/en/ayuda/smart-factory/crear-automatizacion",
+      "destination": "/en/guides/smart-factory/automate-tasks"
+    },
+    {
+      "source": "/en/ayuda/smart-factory/informes-powerbi",
+      "destination": "/en/guides/smart-factory/view-power-bi-reports"
+    },
+    {
+      "source": "/en/ayuda/smart-factory/introduccion",
+      "destination": "/en/guides/smart-factory/introduction"
+    },
+    {
+      "source": "/en/ayuda/usuarios-y-permisos/invitar-usuarios",
+      "destination": "/en/guides/users-and-permissions/invite-users"
+    },
+    {
+      "source": "/en/ayuda/ventas/cambiar-un-pedido",
+      "destination": "/en/guides/sales/change-an-order"
+    },
+    {
+      "source": "/en/ayuda/ventas/cancelar-pedido",
+      "destination": "/en/guides/sales/cancel-an-order"
+    },
+    {
+      "source": "/en/ayuda/ventas/clientes",
+      "destination": "/en/guides/sales/register-a-customer"
+    },
+    {
+      "source": "/en/ayuda/ventas/introduccion",
+      "destination": "/en/guides/sales/introduction"
+    },
+    {
+      "source": "/en/ayuda/ventas/preparar-y-registrar-envio",
+      "destination": "/en/guides/sales/prepare-and-record-a-shipment"
+    },
+    {
+      "source": "/en/ayuda/ventas/vender",
+      "destination": "/en/guides/sales/sell"
+    },
+    {
+      "source": "/en/conceptos/almacen",
+      "destination": "/en/concepts/warehouse"
+    },
+    {
+      "source": "/en/conceptos/almacen/bultos",
+      "destination": "/en/concepts/warehouse/packages"
+    },
+    {
+      "source": "/en/conceptos/almacen/envios",
+      "destination": "/en/concepts/warehouse/shipments"
+    },
+    {
+      "source": "/en/conceptos/almacen/equipos-y-transportes",
+      "destination": "/en/concepts/warehouse/warehouse-equipment-and-transports"
+    },
+    {
+      "source": "/en/conceptos/almacen/inventarios-y-ajustes",
+      "destination": "/en/concepts/warehouse/stock-counts-and-adjustments"
+    },
+    {
+      "source": "/en/conceptos/almacen/lotes",
+      "destination": "/en/concepts/warehouse/lots"
+    },
+    {
+      "source": "/en/conceptos/almacen/movimientos-de-almacen",
+      "destination": "/en/concepts/warehouse/warehouse-movements"
+    },
+    {
+      "source": "/en/conceptos/almacen/ordenes-de-carga",
+      "destination": "/en/concepts/warehouse/load-orders-and-provisioning"
+    },
+    {
+      "source": "/en/conceptos/almacen/recepciones",
+      "destination": "/en/concepts/warehouse/receipts"
+    },
+    {
+      "source": "/en/conceptos/almacen/stock-y-movimientos",
+      "destination": "/en/concepts/warehouse/stock-and-movements"
+    },
+    {
+      "source": "/en/conceptos/almacen/ubicaciones",
+      "destination": "/en/concepts/warehouse/locations"
+    },
+    {
+      "source": "/en/conceptos/catalogo",
+      "destination": "/en/concepts/catalog"
+    },
+    {
+      "source": "/en/conceptos/catalogo/articulos",
+      "destination": "/en/concepts/catalog/items"
+    },
+    {
+      "source": "/en/conceptos/catalogo/familia-vs-articulo",
+      "destination": "/en/concepts/catalog/family-vs-item"
+    },
+    {
+      "source": "/en/conceptos/catalogo/familias",
+      "destination": "/en/concepts/catalog/families"
+    },
+    {
+      "source": "/en/conceptos/catalogo/propiedades",
+      "destination": "/en/concepts/catalog/properties"
+    },
+    {
+      "source": "/en/conceptos/catalogo/unidades-de-medida",
+      "destination": "/en/concepts/catalog/units-of-measure"
+    },
+    {
+      "source": "/en/conceptos/costes",
+      "destination": "/en/concepts/costs"
+    },
+    {
+      "source": "/en/conceptos/costes/coste-teorico-vs-real",
+      "destination": "/en/concepts/costs/planned-versus-actual-cost"
+    },
+    {
+      "source": "/en/conceptos/costes/valoracion-de-inventario",
+      "destination": "/en/concepts/costs/inventory-valuation"
+    },
+    {
+      "source": "/en/conceptos/fabricacion",
+      "destination": "/en/concepts/manufacturing"
+    },
+    {
+      "source": "/en/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones",
+      "destination": "/en/concepts/manufacturing/assignments-and-operation-groups"
+    },
+    {
+      "source": "/en/conceptos/fabricacion/controles-consumos-y-pausas",
+      "destination": "/en/concepts/manufacturing/checks-consumption-and-pauses"
+    },
+    {
+      "source": "/en/conceptos/fabricacion/cuadros-de-mando",
+      "destination": "/en/concepts/manufacturing/dashboards"
+    },
+    {
+      "source": "/en/conceptos/fabricacion/estados-de-fabricacion",
+      "destination": "/en/concepts/manufacturing/manufacturing-statuses"
+    },
+    {
+      "source": "/en/conceptos/fabricacion/herramientas-y-caracteristicas",
+      "destination": "/en/concepts/manufacturing/tools-and-characteristics"
+    },
+    {
+      "source": "/en/conceptos/fabricacion/inspecciones-y-controles",
+      "destination": "/en/concepts/manufacturing/inspections-and-checks"
+    },
+    {
+      "source": "/en/conceptos/fabricacion/motivos-de-pausa-e-interrupciones",
+      "destination": "/en/concepts/manufacturing/pause-reasons-and-interruptions"
+    },
+    {
+      "source": "/en/conceptos/fabricacion/operaciones-y-restricciones",
+      "destination": "/en/concepts/manufacturing/operations-and-restrictions"
+    },
+    {
+      "source": "/en/conceptos/fabricacion/ordenes-de-fabricacion",
+      "destination": "/en/concepts/manufacturing/manufacturing-orders"
+    },
+    {
+      "source": "/en/conceptos/fabricacion/peticiones-de-fabricacion",
+      "destination": "/en/concepts/manufacturing/manufacturing-requests"
+    },
+    {
+      "source": "/en/conceptos/fabricacion/planes-de-produccion",
+      "destination": "/en/concepts/manufacturing/production-plans"
+    },
+    {
+      "source": "/en/conceptos/fabricacion/procesos",
+      "destination": "/en/concepts/manufacturing/processes"
+    },
+    {
+      "source": "/en/conceptos/fabricacion/recetas-y-versiones",
+      "destination": "/en/concepts/manufacturing/recipes-and-versions"
+    },
+    {
+      "source": "/en/conceptos/fabricacion/recursos",
+      "destination": "/en/concepts/manufacturing/resources"
+    },
+    {
+      "source": "/en/conceptos/fabricacion/secuenciacion",
+      "destination": "/en/concepts/manufacturing/sequencing"
+    },
+    {
+      "source": "/en/conceptos/fabricacion/turnos",
+      "destination": "/en/concepts/manufacturing/manufacturing-working-hours"
+    },
+    {
+      "source": "/en/conceptos/introduccion",
+      "destination": "/en/concepts/overview"
+    },
+    {
+      "source": "/en/conceptos/mantenimiento",
+      "destination": "/en/concepts/maintenance"
+    },
+    {
+      "source": "/en/conceptos/mantenimiento/activos",
+      "destination": "/en/concepts/maintenance/assets"
+    },
+    {
+      "source": "/en/conceptos/mantenimiento/causas-y-acciones",
+      "destination": "/en/concepts/maintenance/causes-and-actions"
+    },
+    {
+      "source": "/en/conceptos/mantenimiento/mantenimiento-preventivo",
+      "destination": "/en/concepts/maintenance/preventive-maintenance"
+    },
+    {
+      "source": "/en/conceptos/mantenimiento/partes-de-trabajo",
+      "destination": "/en/concepts/maintenance/work-orders"
+    },
+    {
+      "source": "/en/conceptos/modo-de-trabajo",
+      "destination": "/en/concepts/work-mode"
+    },
+    {
+      "source": "/en/conceptos/panel-de-control",
+      "destination": "/en/concepts/control-panel"
+    },
+    {
+      "source": "/en/conceptos/panel-de-control/auditoria-y-eventos",
+      "destination": "/en/concepts/control-panel/audit-and-events"
+    },
+    {
+      "source": "/en/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos",
+      "destination": "/en/concepts/control-panel/integration-keys-and-external-notifications"
+    },
+    {
+      "source": "/en/conceptos/panel-de-control/cuenta-y-empresa",
+      "destination": "/en/concepts/control-panel/account-and-company"
+    },
+    {
+      "source": "/en/conceptos/panel-de-control/datos-y-archivos",
+      "destination": "/en/concepts/control-panel/data-and-files"
+    },
+    {
+      "source": "/en/conceptos/panel-de-control/disenos-y-etiquetas",
+      "destination": "/en/concepts/control-panel/designs-and-labels"
+    },
+    {
+      "source": "/en/conceptos/panel-de-control/identidades-relacionadas",
+      "destination": "/en/concepts/control-panel/channels-and-related-identities"
+    },
+    {
+      "source": "/en/conceptos/panel-de-control/notificaciones",
+      "destination": "/en/concepts/control-panel/notifications"
+    },
+    {
+      "source": "/en/conceptos/panel-de-control/usuarios-roles-y-permisos",
+      "destination": "/en/concepts/control-panel/users-permission-profiles-and-permissions"
+    },
+    {
+      "source": "/en/conceptos/personal",
+      "destination": "/en/concepts/people"
+    },
+    {
+      "source": "/en/conceptos/personal/empleados",
+      "destination": "/en/concepts/people/employees"
+    },
+    {
+      "source": "/en/conceptos/personal/habilidades-y-estaciones-habituales",
+      "destination": "/en/concepts/people/skills-and-usual-workstations"
+    },
+    {
+      "source": "/en/conceptos/personal/jornadas-calendarios-y-turnos",
+      "destination": "/en/concepts/people/work-days-calendars-and-shifts"
+    },
+    {
+      "source": "/en/conceptos/personal/periodos-planificados-y-tareas",
+      "destination": "/en/concepts/people/planned-periods-and-tasks"
+    },
+    {
+      "source": "/en/conceptos/planificacion",
+      "destination": "/en/concepts/planning"
+    },
+    {
+      "source": "/en/conceptos/planificacion/asignacion-de-demanda-y-suministro",
+      "destination": "/en/concepts/planning/demand-and-supply-allocation"
+    },
+    {
+      "source": "/en/conceptos/planificacion/clientes",
+      "destination": "/en/concepts/planning/customers"
+    },
+    {
+      "source": "/en/conceptos/planificacion/demanda-y-suministro",
+      "destination": "/en/concepts/planning/demand-and-supply"
+    },
+    {
+      "source": "/en/conceptos/planificacion/pedidos-de-compra",
+      "destination": "/en/concepts/planning/purchase-orders"
+    },
+    {
+      "source": "/en/conceptos/planificacion/pedidos-de-venta",
+      "destination": "/en/concepts/planning/sales-orders"
+    },
+    {
+      "source": "/en/conceptos/planificacion/politica-de-aprovisionamiento",
+      "destination": "/en/concepts/planning/procurement-policy"
+    },
+    {
+      "source": "/en/conceptos/planificacion/previsiones-y-asistentes",
+      "destination": "/en/concepts/planning/forecasts-and-assistants"
+    },
+    {
+      "source": "/en/conceptos/planificacion/proveedores",
+      "destination": "/en/concepts/planning/suppliers"
+    },
+    {
+      "source": "/en/conceptos/smart-factory",
+      "destination": "/en/concepts/smart-factory"
+    },
+    {
+      "source": "/en/conceptos/smart-factory/automatizaciones",
+      "destination": "/en/concepts/smart-factory/automations"
+    },
+    {
+      "source": "/en/conceptos/smart-factory/boldy",
+      "destination": "/en/concepts/smart-factory/boldy"
+    },
+    {
+      "source": "/en/conceptos/smart-factory/informes",
+      "destination": "/en/concepts/smart-factory/reports"
+    },
+    {
+      "source": "/en/conceptos/smart-factory/tareas",
+      "destination": "/en/concepts/smart-factory/tasks"
+    },
+    {
+      "source": "/en/desarrolladores/empezar/autenticacion",
+      "destination": "/en/developers/getting-started/authentication"
+    },
+    {
+      "source": "/en/desarrolladores/empezar/errores",
+      "destination": "/en/developers/getting-started/api-errors"
+    },
+    {
+      "source": "/en/desarrolladores/empezar/expandir-datos-relacionados",
+      "destination": "/en/developers/getting-started/expand-related-data-in-lists"
+    },
+    {
+      "source": "/en/desarrolladores/empezar/introduccion",
+      "destination": "/en/developers/getting-started/introduction"
+    },
+    {
+      "source": "/en/desarrolladores/empezar/paginacion",
+      "destination": "/en/developers/getting-started/pagination-filters-and-sorting"
+    },
+    {
+      "source": "/en/desarrolladores/mcp",
+      "destination": "/en/developers/mcp"
+    },
+    {
+      "source": "/en/desarrolladores/referencia-api/introduccion",
+      "destination": "/en/developers/api-reference/introduction"
+    },
+    {
+      "source": "/en/desarrolladores/webhooks/eventos-disponibles",
+      "destination": "/en/developers/webhooks/available-webhook-events"
+    },
+    {
+      "source": "/en/desarrolladores/webhooks/introduccion",
+      "destination": "/en/developers/webhooks/introduction"
+    },
+    {
+      "source": "/en/desarrolladores/webhooks/payloads",
+      "destination": "/en/developers/webhooks/webhook-payloads"
+    },
+    {
+      "source": "/en/desarrolladores/webhooks/reintentos-y-errores",
+      "destination": "/en/developers/webhooks/webhook-retries-and-errors"
+    },
+    {
+      "source": "/en/novedades/changelog",
+      "destination": "/en/updates/changelog"
     }
   ],
   "navigation": {
@@ -252,6 +1012,7 @@
                 "pages": [
                   "es/ayuda/produccion/ver-oee-por-estacion",
                   "es/ayuda/produccion/ver-evolucion-del-oee",
+                  "es/ayuda/produccion/ver-eficacia-por-empleado",
                   "es/ayuda/produccion/ver-progreso-en-la-produccion",
                   "es/ayuda/produccion/revisar-oee-y-paradas",
                   "es/ayuda/costes/introduccion",
@@ -498,6 +1259,415 @@
             ]
           }
         ]
+      },
+      {
+        "language": "en",
+        "tabs": [
+          {
+            "tab": "Guides",
+            "icon": "book-open",
+            "groups": [
+              {
+                "group": "Getting started",
+                "icon": "sparkles",
+                "root": "en/guides/getting-started/introduction",
+                "pages": [
+                  "en/guides/getting-started/prepare-master-data",
+                  "en/guides/getting-started/define-a-manufacturing-process",
+                  "en/guides/getting-started/create-an-order-and-launch-an-mo",
+                  "en/guides/getting-started/execute-your-first-mo"
+                ]
+              },
+              {
+                "group": "Prepare the catalog",
+                "icon": "boxes",
+                "root": "en/guides/catalog/introduction",
+                "pages": [
+                  "en/guides/catalog/define-family-properties",
+                  "en/guides/catalog/group-items-into-families",
+                  "en/guides/catalog/create-an-item",
+                  "en/guides/catalog/configure-an-item",
+                  "en/guides/catalog/configure-units-of-measure"
+                ]
+              },
+              {
+                "group": "Sell",
+                "icon": "badge-dollar-sign",
+                "root": "en/guides/sales/sell",
+                "pages": [
+                  "en/guides/sales/register-a-customer",
+                  "en/guides/sales/introduction",
+                  "en/guides/sales/prepare-and-record-a-shipment",
+                  "en/guides/sales/change-an-order",
+                  "en/guides/sales/cancel-an-order"
+                ]
+              },
+              {
+                "group": "Buy",
+                "icon": "shopping-cart",
+                "root": "en/guides/planning/purchasing",
+                "pages": [
+                  "en/guides/planning/register-a-supplier",
+                  "en/guides/planning/decide-what-to-purchase",
+                  "en/guides/planning/create-a-purchase-order",
+                  "en/guides/purchasing/receive-a-purchase-order"
+                ]
+              },
+              {
+                "group": "Manufacture",
+                "icon": "factory",
+                "root": "en/guides/manufacturing/introduction",
+                "pages": [
+                  "en/guides/manufacturing/prepare-work-centers-and-machines",
+                  {
+                    "group": "Define the manufacturing process",
+                    "pages": [
+                      "en/guides/manufacturing/define-processes",
+                      "en/guides/manufacturing/design-the-manufacturing-steps",
+                      "en/guides/manufacturing/specify-materials-steps-and-inspections",
+                      "en/guides/manufacturing/adapt-manufacturing-to-variants"
+                    ]
+                  },
+                  "en/guides/manufacturing/define-production-shifts",
+                  "en/guides/manufacturing/create-pause-reasons",
+                  "en/guides/planning/decide-what-to-manufacture",
+                  "en/guides/manufacturing/create-an-mo-without-a-sales-order",
+                  "en/guides/manufacturing/manage-manufacturing-orders",
+                  "en/guides/manufacturing/modify-manufacturing-orders",
+                  {
+                    "group": "Sequence orders",
+                    "root": "en/guides/manufacturing/sequence-orders",
+                    "pages": [
+                      "en/guides/manufacturing/sequence-manually",
+                      "en/guides/manufacturing/create-a-production-plan"
+                    ]
+                  },
+                  "en/guides/manufacturing/execute-shop-floor-operations",
+                  "en/guides/manufacturing/assign-workstations"
+                ]
+              },
+              {
+                "group": "Manage the warehouse",
+                "icon": "warehouse",
+                "root": "en/guides/warehouse/introduction",
+                "pages": [
+                  "en/guides/warehouse/provision-raw-materials",
+                  "en/guides/warehouse/adjust-stock",
+                  "en/guides/warehouse/take-a-stock-count",
+                  "en/guides/warehouse/investigate-stock-discrepancies",
+                  "en/guides/warehouse/investigate-lot-traceability",
+                  {
+                    "group": "Use multiple locations",
+                    "pages": [
+                      "en/guides/warehouse/create-locations",
+                      "en/guides/warehouse/register-warehouse-equipment",
+                      "en/guides/warehouse/move-stock-between-locations"
+                    ]
+                  },
+                  {
+                    "group": "Manage loads",
+                    "root": "en/guides/warehouse/plan-and-prepare-a-load",
+                    "pages": [
+                      "en/guides/warehouse/execute-and-close-a-load-order"
+                    ]
+                  },
+                  {
+                    "group": "Receipts",
+                    "pages": [
+                      "en/guides/warehouse/scan-delivery-notes-with-ai",
+                      "en/guides/warehouse/configure-and-complete-receipt-inspections"
+                    ]
+                  },
+                  "en/guides/warehouse/work-with-packages-and-containers"
+                ]
+              },
+              {
+                "group": "Maintenance",
+                "icon": "wrench",
+                "root": "en/guides/maintenance/introduction",
+                "pages": [
+                  "en/guides/maintenance/configure-maintenance",
+                  "en/guides/maintenance/record-maintenance-work",
+                  "en/guides/maintenance/schedule-preventive-maintenance"
+                ]
+              },
+              {
+                "group": "Manage people",
+                "icon": "users",
+                "root": "en/guides/people/introduction",
+                "pages": [
+                  "en/guides/people/register-an-employee",
+                  "en/guides/people/configure-shifts-and-calendars",
+                  "en/guides/people/configure-employee-schedules"
+                ]
+              },
+              {
+                "group": "Analyze data",
+                "icon": "chart-line",
+                "root": "en/guides/analytics/introduction",
+                "pages": [
+                  "en/guides/manufacturing/view-oee-by-workstation",
+                  "en/guides/manufacturing/view-oee-evolution",
+                  "en/guides/manufacturing/view-effectiveness-by-employee",
+                  "en/guides/manufacturing/monitor-production-in-real-time",
+                  "en/guides/manufacturing/analyze-stops-and-production-losses",
+                  "en/guides/costs/introduction",
+                  "en/guides/costs/prepare-cost-data",
+                  "en/guides/costs/analyze-item-costs",
+                  "en/guides/costs/configure-employee-costs",
+                  "en/guides/costs/manufacturing-order-costs",
+                  "en/guides/costs/work-order-costs",
+                  "en/guides/costs/value-inventory"
+                ]
+              },
+              {
+                "group": "AI, reports, and automations",
+                "icon": "sparkles",
+                "root": "en/guides/smart-factory/introduction",
+                "pages": [
+                  "en/guides/smart-factory/view-power-bi-reports",
+                  "en/guides/smart-factory/query-data-and-perform-tasks-with-ai",
+                  "en/guides/smart-factory/automate-tasks"
+                ]
+              },
+              {
+                "group": "Administer the company",
+                "icon": "settings",
+                "root": "en/guides/control-panel/introduction",
+                "pages": [
+                  "en/guides/users-and-permissions/invite-users",
+                  "en/guides/control-panel/link-telegram-to-your-account",
+                  "en/guides/control-panel/design-permission-profiles-by-responsibility",
+                  "en/guides/control-panel/configure-the-company",
+                  "en/guides/control-panel/import-data",
+                  "en/guides/control-panel/export-data",
+                  "en/guides/control-panel/manage-files",
+                  "en/guides/control-panel/create-labels-and-codes",
+                  "en/guides/control-panel/configure-webhooks",
+                  "en/guides/control-panel/enable-notifications"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Concepts",
+            "icon": "network",
+            "groups": [
+              {
+                "group": "Concept map",
+                "icon": "network",
+                "pages": [
+                  "en/concepts/overview"
+                ]
+              },
+              {
+                "group": "Work mode",
+                "icon": "tablet-smartphone",
+                "pages": [
+                  "en/concepts/work-mode"
+                ]
+              },
+              {
+                "group": "Catalog",
+                "icon": "boxes",
+                "root": "en/concepts/catalog",
+                "expanded": false,
+                "pages": [
+                  "en/concepts/catalog/families",
+                  "en/concepts/catalog/items",
+                  "en/concepts/catalog/family-vs-item",
+                  "en/concepts/catalog/properties",
+                  "en/concepts/catalog/units-of-measure"
+                ]
+              },
+              {
+                "group": "Manufacturing",
+                "icon": "factory",
+                "root": "en/concepts/manufacturing",
+                "expanded": false,
+                "pages": [
+                  "en/concepts/manufacturing/recipes-and-versions",
+                  "en/concepts/manufacturing/manufacturing-requests",
+                  "en/concepts/manufacturing/manufacturing-orders",
+                  "en/concepts/manufacturing/manufacturing-statuses",
+                  "en/concepts/manufacturing/processes",
+                  "en/concepts/manufacturing/operations-and-restrictions",
+                  "en/concepts/manufacturing/resources",
+                  "en/concepts/manufacturing/tools-and-characteristics",
+                  "en/concepts/manufacturing/assignments-and-operation-groups",
+                  "en/concepts/manufacturing/manufacturing-working-hours",
+                  "en/concepts/manufacturing/sequencing",
+                  "en/concepts/manufacturing/production-plans",
+                  "en/concepts/manufacturing/inspections-and-checks",
+                  "en/concepts/manufacturing/pause-reasons-and-interruptions",
+                  "en/concepts/manufacturing/checks-consumption-and-pauses",
+                  "en/concepts/manufacturing/dashboards"
+                ]
+              },
+              {
+                "group": "Planning",
+                "icon": "calendar-range",
+                "root": "en/concepts/planning",
+                "expanded": false,
+                "pages": [
+                  "en/concepts/planning/demand-and-supply",
+                  "en/concepts/planning/demand-and-supply-allocation",
+                  "en/concepts/planning/procurement-policy",
+                  "en/concepts/planning/forecasts-and-assistants",
+                  "en/concepts/planning/customers",
+                  "en/concepts/planning/suppliers",
+                  "en/concepts/planning/sales-orders",
+                  "en/concepts/planning/purchase-orders"
+                ]
+              },
+              {
+                "group": "Warehouse",
+                "icon": "warehouse",
+                "root": "en/concepts/warehouse",
+                "expanded": false,
+                "pages": [
+                  "en/concepts/warehouse/stock-and-movements",
+                  "en/concepts/warehouse/load-orders-and-provisioning",
+                  "en/concepts/warehouse/warehouse-movements",
+                  "en/concepts/warehouse/warehouse-equipment-and-transports",
+                  "en/concepts/warehouse/lots",
+                  "en/concepts/warehouse/locations",
+                  "en/concepts/warehouse/packages",
+                  "en/concepts/warehouse/receipts",
+                  "en/concepts/warehouse/shipments",
+                  "en/concepts/warehouse/stock-counts-and-adjustments"
+                ]
+              },
+              {
+                "group": "Maintenance",
+                "icon": "wrench",
+                "root": "en/concepts/maintenance",
+                "expanded": false,
+                "pages": [
+                  "en/concepts/maintenance/assets",
+                  "en/concepts/maintenance/causes-and-actions",
+                  "en/concepts/maintenance/work-orders",
+                  "en/concepts/maintenance/preventive-maintenance"
+                ]
+              },
+              {
+                "group": "People",
+                "icon": "users",
+                "root": "en/concepts/people",
+                "expanded": false,
+                "pages": [
+                  "en/concepts/people/employees",
+                  "en/concepts/people/skills-and-usual-workstations",
+                  "en/concepts/people/work-days-calendars-and-shifts",
+                  "en/concepts/people/planned-periods-and-tasks"
+                ]
+              },
+              {
+                "group": "Costs",
+                "icon": "circle-dollar-sign",
+                "root": "en/concepts/costs",
+                "expanded": false,
+                "pages": [
+                  "en/concepts/costs/planned-versus-actual-cost",
+                  "en/concepts/costs/inventory-valuation"
+                ]
+              },
+              {
+                "group": "Smart Factory",
+                "icon": "sparkles",
+                "root": "en/concepts/smart-factory",
+                "expanded": false,
+                "pages": [
+                  "en/concepts/smart-factory/reports",
+                  "en/concepts/smart-factory/boldy",
+                  "en/concepts/smart-factory/tasks",
+                  "en/concepts/smart-factory/automations"
+                ]
+              },
+              {
+                "group": "Control panel",
+                "icon": "settings",
+                "root": "en/concepts/control-panel",
+                "expanded": false,
+                "pages": [
+                  "en/concepts/control-panel/account-and-company",
+                  "en/concepts/control-panel/channels-and-related-identities",
+                  "en/concepts/control-panel/users-permission-profiles-and-permissions",
+                  "en/concepts/control-panel/integration-keys-and-external-notifications",
+                  "en/concepts/control-panel/notifications",
+                  "en/concepts/control-panel/audit-and-events",
+                  "en/concepts/control-panel/data-and-files",
+                  "en/concepts/control-panel/designs-and-labels"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Developers",
+            "icon": "square-terminal",
+            "groups": [
+              {
+                "group": "Getting started",
+                "icon": "rocket",
+                "pages": [
+                  "en/developers/getting-started/introduction",
+                  "en/developers/getting-started/authentication",
+                  "en/developers/mcp",
+                  "en/developers/getting-started/api-errors",
+                  "en/developers/getting-started/pagination-filters-and-sorting",
+                  "en/developers/getting-started/expand-related-data-in-lists"
+                ]
+              },
+              {
+                "group": "Webhooks",
+                "icon": "webhook",
+                "pages": [
+                  "en/developers/webhooks/introduction",
+                  "en/developers/webhooks/available-webhook-events",
+                  "en/developers/webhooks/webhook-retries-and-errors",
+                  "en/developers/webhooks/webhook-payloads"
+                ]
+              },
+              {
+                "group": "API reference",
+                "icon": "square-terminal",
+                "pages": [
+                  "en/developers/api-reference/introduction"
+                ],
+                "openapi": {
+                  "source": "https://api.bold-factory.com/openapi/v1.json",
+                  "directory": "en/developers/api-reference"
+                }
+              }
+            ]
+          },
+          {
+            "tab": "Updates",
+            "icon": "megaphone",
+            "pages": [
+              {
+                "group": "Changelog",
+                "icon": "history",
+                "pages": [
+                  "en/updates/changelog"
+                ]
+              }
+            ]
+          }
+        ],
+        "navbar": {
+          "primary": {
+            "type": "button",
+            "label": "Website",
+            "href": "https://bold-factory.com"
+          },
+          "links": [
+            {
+              "label": "Contact us",
+              "href": "https://bold-factory.com/contact"
+            }
+          ]
+        }
       }
     ]
   },
@@ -513,8 +1683,7 @@
     "schema": false
   },
   "description": "Bold Factory es una plataforma de gestión industrial para fabricantes.",
-  "background": {
-  },
+  "background": {},
   "fonts": {
     "family": "Nunito"
   },

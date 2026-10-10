@@ -1,0 +1,46 @@
+---
+es_link: "/es/conceptos/fabricacion/turnos"
+title: "Manufacturing working hours"
+description: "Understand the global weekly working hours manufacturing uses to plan operations."
+icon: "calendar-clock"
+---
+
+**Manufacturing working hours** define the weekly time slots in which the factory can execute operations.
+
+Currently, there is a single global schedule for manufacturing. You cannot define different working hours per area, line, station or resource.
+
+## Manufacturing shifts vs personnel shifts
+
+| Concept | Use |
+| --- | --- |
+| Manufacturing working hours | Defines global production time slots used by planning and sequencing. |
+| Personnel shift | Defines working days, cycles and employee availability. |
+
+They can be aligned, but answer different questions. Manufacturing needs a global production calendar. Personnel needs to know when each employee is expected to work.
+
+## How you define it
+
+| Data | Use |
+| --- | --- |
+| Day of the week | Indicates when the time slot repeats. |
+| Start time | Marks the start of production time. |
+| End time | Marks the end of production time. Can fall on the following day. |
+
+You can configure several time slots for the same day. Time outside them is considered non-working time for manufacturing planning.
+
+The schedule does not support closures or exceptions by date. Use Personnel shifts and calendars to plan employee availability, not to change these global working hours.
+
+Editing manufacturing working hours requires **advanced planning** in your plan. This condition does not affect Personnel shifts and calendars.
+
+## Use in sequencing
+
+Sequencing uses the schedule to propose operations within production time slots. If it does not reflect the factory's reality, an order can appear feasible by its date even while the shop floor is closed.
+
+Review working hours when you see operations outside working time or available capacity that does not match the factory.
+
+## Related
+
+- [Resources](/en/concepts/manufacturing/resources)
+- [Sequencing](/en/concepts/manufacturing/sequencing)
+- [Production plans](/en/concepts/manufacturing/production-plans)
+- [Working days, calendars and shifts](/en/concepts/people/work-days-calendars-and-shifts)

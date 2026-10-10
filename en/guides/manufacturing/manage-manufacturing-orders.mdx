@@ -1,0 +1,83 @@
+---
+es_link: "/es/ayuda/produccion/lanzar-ofs"
+title: "Manage manufacturing orders"
+description: "View, filter, launch, block, or cancel manufacturing orders according to their status."
+---
+
+**Path:** **Production > Production orders**
+
+A **manufacturing order**, or **MO**, represents the actual transformation of materials into a finished item, semi-finished item, or co-product.
+
+It is usually created from a **manufacturing request**. The request defines the need. The MO defines execution.
+
+## Choose your working perspective
+
+At the top, you can choose three ways to group information:
+
+### Orders
+
+This is the default view. It shows each MO as a unit and lets you review its requester, item, quantity, and dates.
+
+#### Sort and prioritize tasks
+
+Use the table tools to review and prioritize orders:
+
+- **Sort by date:** the **Created**, **Required** (date requested by the customer), and **Target** (internal delivery date) columns can be sorted from their headers. This lets you put urgent launches or critical deliveries first.
+- **Status filters:** use **Hide cancelled** and **Hide finished** to focus on active orders and those pending manufacturing.
+- **Column searches:** each column has a search field underneath. To see only orders for a particular customer, enter their name in **Contains** under **Requester**. To find a specific component, use **Item code** or **Item**.
+
+### Operations
+
+This tab breaks manufacturing orders down into operations that employees and machines must execute.
+
+Each row represents a specific operation.
+
+#### Understand the order breakdown
+
+The view shows each product's routing:
+
+- Operations appear in the order needed to complete work, from preparation to packaging.
+- Each operation's status indicates the MO's point in the process.
+
+#### Review workstations
+
+The **Workstation** column indicates the physical place or machinery where the task runs (for example: Paint booth, Hydraulic press 1, or Packaging table 1).
+
+- Filter this column by a machine, such as `Circular saw 1`, to gather active operations assigned to it. This helps prepare jobs sharing the same setup.
+
+#### Review quantities
+
+Review these three columns to compare the target with progress and rejects:
+
+- **Planned Q (planned quantity):** number of pieces that should enter this process stage.
+- **Completed Q (completed quantity):** units the operator has finished and that are ready for the next operation.
+- **Rejected Q (rejected quantity):** units rejected during that operation.
+
+### Operation groups
+
+Shows tasks grouped by lots or work families to review workload across areas.
+
+## Launch an order
+
+The request records what you need to manufacture. The order defines how that work will run.
+
+1. Open **Production > Production requests**.
+2. Find a request that is neither assigned nor cancelled.
+3. Click **Launch production order**.
+4. Review the recipe, quantity, dates, and operations before confirming.
+
+If a request is already assigned, open the related MO instead of creating another.
+
+## Block or unblock an order
+
+Open an MO and click **Block** to temporarily remove it from pending work while reviewing materials, dates, or instructions. Click **Unblock** once it is ready to execute again.
+
+<Warning>
+  Blocking does not cancel the MO or delete its history. Use **Cancel** when the work should no longer run.
+</Warning>
+
+## Delete or cancel orders
+
+**Delete:** deletes the order directly if it has no recorded activity. The order is removed from the database as if it never existed. Its number, history, and associated information are lost.
+
+**Cancel:** if the order already has inventory movements, time records, or associated material purchases, the system only allows cancellation. Deleting it would create accounting discrepancies and inventory inconsistencies.

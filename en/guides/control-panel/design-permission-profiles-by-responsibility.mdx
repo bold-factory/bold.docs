@@ -1,0 +1,66 @@
+---
+es_link: "/es/ayuda/panel-de-control/disenar-roles-por-responsabilidad"
+title: "Design permission profiles by responsibility"
+description: "Group permissions by actual work before inviting users or expanding access."
+---
+
+Design permission profiles by responsibility so each person can access only the areas and actions they need. Reusing profiles avoids duplicating configuration for each user.
+
+## Differences between user, employee and profile
+
+- **User:** account that signs in on a computer or tablet, such as `office@company.com`.
+- **Employee:** person whose work is planned or recorded in work mode.
+- **Permission profile:** set of permissions you assign to a user. In the interface, profiles are configured under **Roles**.
+
+## Before creating profiles
+
+List actual responsibilities:
+
+- company administration;
+- purchasing;
+- sales;
+- warehouse;
+- planning;
+- manufacturing;
+- maintenance;
+- costs;
+- reports and analysis;
+- integrations.
+
+## Create profiles
+
+**Path:** **Control panel > Roles**
+
+<Steps>
+  <Step title="Create reusable profiles">
+    In **Name**, enter an actual factory function. Use profiles such as `Warehouse`, `Purchasing`, `Manufacturing` or `Administration` when several people share permissions.
+
+    In **Description**, briefly explain the profile's scope.
+  </Step>
+  <Step title="Configure permissions">
+    Select the permissions the profile needs in each module. Actions appear with their actual names, such as **View**, **Edit**, **Activate**, **Work** or **Sequence**, depending on the area.
+  </Step>
+  <Step title="Save the profile">
+    Click **Save**. You can then assign the profile to registered users from **Control panel > Users**.
+  </Step>
+</Steps>
+
+## Periodic review
+
+| Review | When to do it |
+| --- | --- |
+| Inactive users | At each month-end or when staff leave. |
+| Administrative permissions | Whenever the responsible person changes. |
+| New modules | Before enabling the module for more users. |
+| Integrations | Before creating integration keys or external notifications. |
+| Audit | When investigating sensitive changes. |
+
+<Warning>
+  Avoid using an administrator profile for everyday work. Reserve broad permissions for configuration and support tasks.
+</Warning>
+
+## Related
+
+- [Invite users](/en/guides/users-and-permissions/invite-users)
+- [Permission profiles and permissions](/en/concepts/control-panel/users-permission-profiles-and-permissions)
+- [Audit and events](/en/concepts/control-panel/audit-and-events)

@@ -1,0 +1,73 @@
+---
+es_link: "/es/ayuda/mantenimiento/mantenimiento-preventivo"
+title: "Schedule preventive maintenance"
+description: "Schedule preventive work orders generated at a defined frequency."
+---
+
+**Preventive maintenance** defines rules for creating recurring work orders. A schedule is not a work order: it specifies when one should be generated and what initial information it should contain.
+
+**Path:** **Maintenance > Preventive maintenance > Create schedule**
+
+<Steps>
+  <Step title="Identify the schedule">
+    Add a name that identifies the scheduled maintenance.
+  </Step>
+  <Step title="Select the asset">
+    Specify the asset on which it should be performed.
+  </Step>
+  <Step title="Define the cause">
+    Select the reason for the maintenance.
+  </Step>
+  <Step title="Configure frequency">
+    Specify how often it should be performed. Use **Weekdays** to generate it Monday through Friday.
+  </Step>
+  <Step title="Configure the time">
+    Enter the planned time or times for performing it.
+  </Step>
+  <Step title="Select the generation policy">
+    Choose how Bold should act if an open work order already exists.
+  </Step>
+</Steps>
+
+## Generation policies
+
+| Policy | Behavior |
+| --- | --- |
+| Always generate | Creates a work order whenever due, even if another from the same schedule is open. |
+| Skip if there is an open work order | Does not create a new work order if one from that schedule is open. Increments the skipped counter. |
+
+<Info>
+  An open work order is pending, in progress, or paused.
+</Info>
+
+<Note>
+  **Example:** you want to inspect packaging machine ENV-01 every Monday at 06:00. Create a **Weekly inspection** cause, add actions such as **Check pressure**, **Clean filter**, and **Attach photo if there is wear**, and use **Skip if there is an open work order**. If the previous week's work order is still open, Bold does not create another.
+</Note>
+
+## Enable, disable, and delete
+
+You can change these options from the **Actions** column in the main preventive maintenance view or from the schedule details.
+
+- If a schedule is enabled (green), Bold generates work orders when the next occurrence arrives.
+- Disabling it (red) preserves its configuration but stops generating work orders and clears the next pending generation.
+- Enabling it again makes Bold recalculate the next generation from the rule.
+- Deleting it disables it and you cannot recover it. Work orders it generated still link to it, and it appears in read-only mode with the **Deleted** label.
+
+In the main view, you can enable **Hide disabled** and filter or sort by status, asset, cause, and frequency from the table header.
+
+## Generate a work order manually
+
+Click **Generate now** from the schedule details, or the rocket icon in the **Actions** column of the main view, and confirm. Bold creates the work order using the current configuration. From the details, it takes you to the work order; from the main view, you stay in the list and the alert links to the created work order. This counts as a generation but does not change the next generation or consider the policy.
+
+In the details, the **Generated work orders** tab shows work orders from the schedule, excluding cancelled ones.
+
+## Common problems
+
+| Problem | What to check |
+| --- | --- |
+| The work order is not generated | Check whether the schedule is enabled, the next generation, and the time zone. |
+| Occurrences are skipped | The policy may be **Skip if there is an open work order**, with an earlier work order still open. |
+| More work orders are generated than expected | Check whether the policy allows generation on every occurrence. |
+| An expected duplicate does not appear | Bold does not duplicate work orders for the same schedule and occurrence if a non-cancelled one already exists. |
+| The additional cause is not saved | It may be duplicated or match the main cause. |
+| The next generation does not appear | The schedule may be disabled or deleted. |

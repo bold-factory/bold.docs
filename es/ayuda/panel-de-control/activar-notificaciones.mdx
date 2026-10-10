@@ -1,23 +1,52 @@
 ---
+en_link: "/en/guides/control-panel/enable-notifications"
 title: "Activar notificaciones"
-description: "Elige qué eventos quieres recibir en la aplicación o por correo electrónico."
+description: "Crea suscripciones a eventos y ajusta sus canales y filtros para recibir avisos en Bold o por correo."
 ---
 
 **Ruta:** **Panel de control > Notificaciones**
 
-La página agrupa los eventos disponibles por entidad. Para cada evento puedes activar de forma independiente los canales **App** y **Email**.
+Crea una suscripción para recibir un evento en **App** o **Email**. Las suscripciones pertenecen a tu usuario. La página muestra las que tienes activas en **Tus suscripciones**.
+
+## Crear una suscripción
 
 <Steps>
-  <Step title="Busca el evento">
-    Usa el buscador o abre el grupo de la entidad correspondiente.
+  <Step title="Abre el asistente">
+    Pulsa **Crear una suscripción**.
   </Step>
-  <Step title="Elige los canales">
-    Activa **App**, **Email** o ambos canales.
+  <Step title="Elige el canal">
+    Selecciona **App** para recibir avisos en el centro de notificaciones de Bold o **Email** para recibirlos por correo electrónico. Pulsa **Continuar**.
   </Step>
-  <Step title="Configura las condiciones">
-    Si el evento admite condiciones, úsalas para limitar cuándo se envía el aviso.
+  <Step title="Selecciona la entidad">
+    En **Entidad**, elige el tipo de registro que quieres seguir y pulsa **Continuar**.
+  </Step>
+  <Step title="Selecciona el evento">
+    En **Evento**, elige el cambio que quieres recibir y pulsa **Continuar**. Solo aparecen los eventos a los que todavía no estás suscrito en el canal elegido.
+  </Step>
+  <Step title="Revisa los filtros y crea la suscripción">
+    Los filtros son opcionales. Para limitar los avisos, pulsa **Añadir filtro** y define una condición con la propiedad, el operador y el valor que correspondan.
+
+    Si quieres recibir el evento cada vez que ocurra, deja los filtros vacíos. Si el evento no tiene atributos disponibles, no puedes añadir filtros.
+
+    Pulsa **Crear suscripción**. La nueva suscripción aparecerá en **Tus suscripciones**.
   </Step>
 </Steps>
+
+<Note>
+  Para recibir el mismo evento en **App** y **Email**, crea una suscripción para cada canal. Puedes usar filtros distintos en cada una.
+</Note>
+
+## Ajustar o quitar una suscripción
+
+Cada tarjeta muestra el canal, la entidad y el evento. El indicador **Filtrada** permite consultar la condición guardada; **Sin filtros** indica que recibes el evento cada vez que ocurre.
+
+- **Cambiar los filtros:** pulsa **Editar filtros** en la tarjeta, ajusta las condiciones y pulsa **Guardar**. Esta acción solo aparece si el evento admite filtros. Para volver a recibir todos los avisos del evento, elimina las condiciones y guarda.
+- **Dejar de recibir el evento:** pulsa **Quitar** en su tarjeta. Si también tienes una suscripción al mismo evento en el otro canal, esa suscripción se conserva.
+- **Volver a recibirlo o añadir otro canal:** pulsa **Crear una suscripción** y completa de nuevo el asistente.
+
+## Si no encuentras un evento
+
+Comprueba el canal elegido y las tarjetas de **Tus suscripciones**. Un evento al que ya estás suscrito no aparece para volver a añadirlo en ese canal. Usa su tarjeta para editar los filtros o vuelve atrás en el asistente para elegir el otro canal.
 
 <Note>
   Usa [webhooks](/es/ayuda/panel-de-control/configurar-webhooks) cuando el destinatario sea otro sistema. Las notificaciones están pensadas para avisar a usuarios de Bold.

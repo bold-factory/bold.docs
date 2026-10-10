@@ -1,0 +1,76 @@
+---
+es_link: "/es/conceptos/fabricacion/peticiones-de-fabricacion"
+title: "Manufacturing requests"
+description: "Understand how requests turn a manufacturing requirement into work awaiting assignment."
+icon: "clipboard-list"
+---
+
+A **manufacturing request** indicates that you need to manufacture an item, a quantity and a target date. It does not yet define how the work will be executed on the shop floor.
+
+The request bridges planning and manufacturing orders.
+
+## Request vs order
+
+| Concept | Role |
+| --- | --- |
+| Manufacturing request | Defines what needs manufacturing and by when. |
+| Manufacturing order | Turns that requirement into executable operations. |
+| Assigned quantity | Part of the request covered by orders. |
+| Pending quantity | Part that still needs an order or decision. |
+
+The request answers "what is missing". The order answers "how it will be manufactured".
+
+## Source
+
+A request can originate from a planning recommendation or be created manually.
+
+| Source | When it appears |
+| --- | --- |
+| Manufacturing assistant | Projected stock falls below the requirement or reorder point. |
+| Specific demand | An order or internal requirement needs an item manufactured. |
+| Manual decision | Your team decides to create a requirement without waiting for a recommendation. |
+
+If automatic order generation is enabled, Bold creates the MO when recording the request if the item is active, has a valid primary recipe and all required recipe inputs are resolved. If any condition is not met, the request remains pending for manual review.
+
+## Customer and requester
+
+A request can link to a customer. In that case, the requester shows the customer's name at the time of linking and changes only if you change the customer.
+
+If there is no customer, the requester is optional free text. Requests created from the manufacturing assistant or without a requester leave it empty.
+
+| Source | Customer and requester |
+| --- | --- |
+| Manufacturing assistant | No customer or requester. |
+| Specific demand: sales order line to order | The order's customer. You cannot edit it from the request. |
+| Specific demand: material for an MO | Customer and requester from the source MO. You cannot edit them from the request. |
+| Manual decision | Optional customer or optional free text. |
+
+Each MO copies the customer and requester from its request when created. If you later change the request, existing MOs retain the original values.
+
+## Statuses
+
+| Status | Meaning |
+| --- | --- |
+| Pending assignment | The entire quantity still awaits conversion into orders. |
+| Partially assigned | Some orders cover part of the quantity. |
+| Assigned | Manufacturing orders cover the quantity. |
+| Cancelled | The requirement is no longer active. |
+
+If the request already has an assigned quantity, do not reduce the requested quantity below it. The request must continue to explain why the related orders exist.
+
+## What to review before creating orders
+
+| Data | Why it matters |
+| --- | --- |
+| Item | Must exist and represent the manufacturable variant. |
+| Quantity | Defines the requirement's scope. |
+| Required date | Guides planning, sequencing and priority. |
+| Valid recipe | Allows conversion of the request into executable work. |
+| Critical materials | Can constrain when to release or sequence orders. |
+
+## Related
+
+- [Manufacturing orders](/en/concepts/manufacturing/manufacturing-orders)
+- [Demand and supply](/en/concepts/planning/demand-and-supply)
+- [Know what to manufacture](/en/guides/planning/decide-what-to-manufacture)
+- [Create an MO without a sales order](/en/guides/manufacturing/create-an-mo-without-a-sales-order)

@@ -1,0 +1,60 @@
+---
+es_link: "/es/ayuda/articulos/crear-un-articulo"
+title: "Create an item"
+description: "Create an operational item to buy, manufacture, store, consume or sell."
+---
+
+An **item** identifies a specific physical element. It is the unit Bold uses to track stock, orders, manufacturing, consumption, lots and costs.
+
+You can add the item from a family to link them, or directly from the item list.
+
+## Create the item from the list
+
+**Path:** **Catalog > Items > Create new**
+
+When you create an item from the list, the form does not inherit data from any family. You must specify how to measure the item and, where applicable, which family it belongs to.
+
+### Required data
+
+**Name:** enter a complete, recognizable name for the item, such as _White lacquered aluminum profile, 2 m_.
+
+**Family (optional):** select a family to link the item as one of its variants. If you leave it empty, the item remains independent, which can be useful for consumables or PPE.
+
+**Unit:** select the base unit used to count the item. If the only unit has the code `ud`, Bold selects it automatically. You can choose meters, kilograms, liters or another configured unit. After creating the item, you can add alternative units and their equivalence to the base unit.
+
+**Decimal places:** specify the number of decimal places the system accepts for this item.
+
+- If you count whole pieces, such as boxes, motors or windows, use `0`.
+- If you measure by weight or length, such as `1.5 m` of cable or `2.75 kg` of resin, specify the decimal places you need.
+
+**Procurement source:** define whether you purchase the item externally (**Buy**), process it in the workshop (**Make**) or exclude it from planning (**Ignore**).
+
+**Procurement mode:** choose **Make to stock** to maintain stock, or **Make to order** to trigger purchasing or manufacturing when a customer order arrives.
+
+**Allow multiple lots:** if you select **Yes**, Bold keeps lots separate according to their origin. Stock counts, consumption and shipments may require a specific lot. If you select **No**, Bold can merge them to simplify management, with less traceability detail.
+
+**Code (optional):** enter a unique alphanumeric code, such as a reference or SKU.
+
+<Info>
+  Treat the item code as a stable identifier. Changing it can affect searches, integrations and operational references.
+</Info>
+
+**Description (optional):** add technical information that helps identify the material.
+
+<Info>
+  If the item is missing a required property of its family, Bold marks it in red as invalid. Complete the missing properties to correct this.
+
+  **Example:** the `Window` family requires **Height** and **Frame material**. To make the `Window-120-PVC` item valid, enter `120 cm` as the height and `PVC` as the frame material.
+</Info>
+
+## Create the item from a family
+
+When you create an item within a family's details, Bold links it to that family automatically and suggests the family name as its initial name.
+
+**Path:** **Catalog > Families > Created family**
+
+Complete **Name**, **Procurement source**, **Procurement mode**, **Allow multiple lots**, **Code** and **Description**. After creating the item, open its details and review the main unit, decimal precision, properties and alternative units.
+
+<Note>
+  **Examples:** `Sliding aluminum window 120x120` or `Rustic wooden window`.
+</Note>

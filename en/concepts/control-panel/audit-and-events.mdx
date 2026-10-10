@@ -1,0 +1,69 @@
+---
+es_link: "/es/conceptos/panel-de-control/auditoria-y-eventos"
+title: "Audit and events"
+description: "Understand change history, published events, notifications and administrative traceability."
+icon: "history"
+---
+
+The **audit** shows the events recorded for an entity. **Events** explain what happened in Bold to synchronize modules, notifications, external notifications and automations.
+
+Both help you investigate issues, review integrations and protect traceability.
+
+## Audit
+
+The audit lets you review a business entity's event history.
+
+| Data | What it is for |
+| --- | --- |
+| Event | Identifies the recorded occurrence. |
+| Author | Indicates who originated the event when available. |
+| Content | Shows the event's serialized content. |
+| Date | Places the event in time. |
+
+The view does not calculate a difference between previous and subsequent values. Use the sequence and content of events to reconstruct what happened to the entity you are viewing.
+
+## Events
+
+An event communicates that something happened. It can feed internal projections, notifications, external notifications or automations.
+
+| Use | Example |
+| --- | --- |
+| Internal synchronization | A receipt updates stock and planning. |
+| Notification | A user receives an alert about a relevant change. |
+| External notification | An external system receives the event. |
+| Automation | A task is created when the event meets a condition. |
+
+Not all changes generate the same type of public event. Review the developer reference for external integrations.
+
+## Relationship with notifications and external notifications
+
+[Notifications](/en/concepts/control-panel/notifications) use events to alert you inside the application or by email.
+
+[External notifications](/en/concepts/control-panel/integration-keys-and-external-notifications) send events to external systems. Retain the data needed to investigate failed deliveries or discrepancies.
+
+## Relationship with automations
+
+Event-triggered automations create tasks when the selected event and its condition match.
+
+Before enabling a critical automation, verify:
+
+- which event triggers it;
+- which event version it uses;
+- which condition filters runs;
+- which permissions the automation has;
+- who will review the generated tasks.
+
+## Good practices
+
+- Use individual user accounts to maintain traceability.
+- Avoid sharing integration keys across different integrations.
+- Review the audit before correcting stock or orders manually.
+- Document event-triggered automations that affect critical processes.
+- Maintain external notifications with destinations you can monitor and controlled retries.
+
+## Related
+
+- [Users, permission profiles and permissions](/en/concepts/control-panel/users-permission-profiles-and-permissions)
+- [Integration keys and external notifications](/en/concepts/control-panel/integration-keys-and-external-notifications)
+- [Notifications](/en/concepts/control-panel/notifications)
+- [Automations](/en/concepts/smart-factory/automations)

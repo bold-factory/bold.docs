@@ -1,0 +1,77 @@
+---
+es_link: "/es/ayuda/produccion/ver-progreso-en-la-produccion"
+title: "Monitor production in real time"
+description: "View employee activity, active workstations, and production records from dashboards."
+---
+
+Use dashboards to see who is working, where each operation runs, and which quantities the team has recorded. These views depend on assignments and records created from [work mode](/en/concepts/work-mode).
+
+**Path:** **Smart Factory > Dashboards**
+
+## View employee activity
+
+Open **Employee activity** to distinguish who has an active operation and who does not.
+
+<Steps>
+  <Step title="Filter by status">
+    Click **No operation** or **Active** in the legend. Click the same status again to show all employees.
+  </Step>
+  <Step title="Identify the operation">
+    Each active employee shows the MO code and names of the operations they are executing.
+  </Step>
+  <Step title="Open details">
+    Click the employee to view their details or an operation to review its execution.
+  </Step>
+</Steps>
+
+<Info>
+  If an employee is working but appears as **No operation**, check that they started or resumed the correct operation in work mode.
+</Info>
+
+## View active workstations
+
+Open **Workstation status** to see workstations with activity in progress. The view groups active assignments by workstation and operation.
+
+For each operation, you can review:
+
+- MO code and operation name.
+- Completed quantity compared with planned quantity.
+- Item and order requester.
+- Assigned employees and time elapsed since they started.
+
+Click the operation to open its details. If the page shows **There is no activity in progress right now**, there are no active assignments associated with a workstation.
+
+## Review production records
+
+Open **Production progress** to view quantities the team recorded during operations.
+
+<Steps>
+  <Step title="Narrow the period">
+    Select **Start date** and **End date**. By default, the view shows the current day.
+  </Step>
+  <Step title="Filter the context">
+    Limit results by area, workstation, or employee. You can also filter and sort table columns.
+  </Step>
+  <Step title="Review each record">
+    Compare **Completed** and **Rejected**. Also check date, employee, MO, operation, requester, item, workstation, and comments.
+  </Step>
+  <Step title="Open the source">
+    Use table links to open employee, MO, operation, item, or workstation details.
+  </Step>
+</Steps>
+
+## What to review for a discrepancy
+
+| Signal | Check |
+| --- | --- |
+| An employee appears without an operation | Confirm they started the operation and did not pause or finish it by mistake. |
+| A workstation does not appear | Check for an active assignment linked to that workstation. |
+| There are rejected quantities | Open the operation and review inspections, comments, and materials used. |
+| An expected record is missing | Check the period, filters, and employee who recorded production. |
+
+## Related
+
+- [Execute shop floor operations](/en/guides/manufacturing/execute-shop-floor-operations)
+- [View OEE by workstation](/en/guides/manufacturing/view-oee-by-workstation)
+- [Analyze stops and production losses](/en/guides/manufacturing/analyze-stops-and-production-losses)
+- [Dashboards](/en/concepts/manufacturing/dashboards)

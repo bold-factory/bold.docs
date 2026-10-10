@@ -1,0 +1,86 @@
+---
+es_link: "/es/conceptos/catalogo/articulos"
+title: "Items"
+description: "Understand the item as the operational unit for stock, purchasing, sales, manufacturing and costs."
+icon: "barcode"
+---
+
+An **item** identifies a specific physical element. It is the unit Bold uses to track stock, purchasing, sales, manufacturing, consumption, lots and costs.
+
+## What it tracks
+
+| Area | Use of the item |
+| --- | --- |
+| Catalog | Name, code, unit, image, family and property values. |
+| Warehouse | Stock by location and optional lot. |
+| Purchasing | Order lines, preferred supplier and lead times. |
+| Sales | Order lines and delivery commitments. |
+| Manufacturing | Manufactured item, consumed inputs and co-products. |
+| Planning | Procurement source and mode, reorder point and recommended quantities. |
+| Costs | Base cost, actual cost, lot and inventory valuation. |
+
+## Item identity
+
+The code should remain stable. Changing it after activity exists makes searches, integrations and traceability more difficult.
+
+The unit defines how quantities are expressed. Use the unit your team consistently uses to purchase, store, consume or manufacture that item.
+
+## Items with a family
+
+An item can belong to a family. In that case, it represents one of its variants.
+
+| Family | Item |
+| --- | --- |
+| Nordic Table | Nordic Table - 160 cm - Oak |
+| Nordic Table | Nordic Table - 200 cm - Walnut |
+| 500 ml container | 500 ml container - Transparent |
+
+If the family has required properties, the item must provide their values. While any value is missing, the interface shows **Missing information**. When all values are provided, it shows **All good**.
+
+Two active items with the same family and values usually indicate a duplicate or a missing property.
+
+## Item consolidation
+
+Bold can suggest consolidating items when they have the same family and property values. Consolidation leaves one item as the valid reference and removes the duplicate, but it does not transfer all its relationships in the same way.
+
+- Manufacturing requests with no allocated quantity move to the remaining item.
+- Active manufacturing orders for the removed item are canceled.
+- References to the item in editable recipe versions are removed.
+
+<Warning>
+  Before consolidating, review related orders, requests and recipes. Consolidation does not reassign every piece of operational data.
+</Warning>
+
+Use it only when both records represent exactly the same physical element. If two items appear to be duplicates but are not, you need a property to explain the difference.
+
+If you consolidated two items that were different, create a new item with the correct properties and manually reassign orders, recipes or operational data as appropriate.
+
+## Items without a family
+
+An item can exist without a family when you do not need to group it with variants. In that case, its information is considered complete because it has no properties required by a family.
+
+Use this option for spare parts, consumables or unique references that do not share properties with other items. You can link a recipe directly to the item even if it does not belong to a family.
+
+## Data that affects planning
+
+| Field | What it determines |
+| --- | --- |
+| Procurement source | Whether the item is purchased, manufactured or ignored in recommendations. |
+| Procurement mode | Whether demand is fulfilled to order or to stock. |
+| Reorder point | Level that triggers replenishment to stock. |
+| Minimum order | Minimum suggested quantity. |
+| Lot size | Multiple used to round recommendations. |
+| Procurement lead time | Advance time needed for purchasing or manufacturing. |
+
+These fields do not describe the item physically. They describe how it should be replenished.
+
+Read [Procurement policy](/en/concepts/planning/procurement-policy) to see how these fields affect purchasing, manufacturing and recommendations.
+
+## Related guides
+
+- [Create an item](/en/guides/catalog/create-an-item)
+- [Edit an item](/en/guides/catalog/configure-an-item)
+- [Family vs item](/en/concepts/catalog/family-vs-item)
+- [Planning](/en/concepts/planning)
+- [Procurement policy](/en/concepts/planning/procurement-policy)
+- [Stock and movements](/en/concepts/warehouse/stock-and-movements)

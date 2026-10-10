@@ -5,6 +5,8 @@
     "validate": "node scripts/mint.mjs validate",
     "broken-links": "node scripts/check-links.mjs",
     "broken-links:mintlify": "node scripts/mint.mjs broken-links",
+    "translations:check": "node scripts/check-translations.mjs",
+    "translations:test": "node --test scripts/check-translations.test.mjs",
     "search:index": "node scripts/index-search.mjs"
   },
   "devDependencies": {

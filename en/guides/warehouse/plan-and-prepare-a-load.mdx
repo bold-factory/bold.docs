@@ -1,0 +1,91 @@
+---
+es_link: "/es/ayuda/almacen/planificar-una-carga"
+title: "Plan and prepare a load"
+description: "Group pending goods, schedule the load order, and request transfer to the loading location."
+---
+
+A [load order](/en/concepts/warehouse/load-orders-and-provisioning) groups sales order quantities that will leave together. Before executing it, define the transport, date, and location where the goods should be prepared.
+
+## Register transports
+
+**Transports** represent the vehicle, carrier, route, or means assigned to a load order.
+
+**Path:** **Warehouse > Loads and shipments > Transports**
+
+<Steps>
+  <Step title="Create the transport">
+    Click **Create new transport**.
+  </Step>
+  <Step title="Identify it">
+    Enter a recognizable **Name**, such as `SEUR`, `Own van`, or `Customer collection`.
+  </Step>
+  <Step title="Save the transport">
+    Click **Create**.
+  </Step>
+</Steps>
+
+Register the transport before planning the first load. In the order form, only the transport and selected lines are required.
+
+## Group pending goods
+
+**Path:** **Warehouse > Loads and shipments > Load planner**
+
+The table view offers two ways to select goods:
+
+- **Full orders** includes all order lines that still have quantities available to load.
+- **Lines** lets you select specific quantities from one or more lines.
+
+<Steps>
+  <Step title="Select orders or lines">
+    Select whole orders or open the **Lines** tab. When working by line, enter **Quantity to load** without exceeding the available quantity.
+  </Step>
+  <Step title="Choose where to add the selection">
+    Click **Create load order** to start a new order. To extend an order that has not started, select **Add to an existing one**.
+  </Step>
+  <Step title="Complete planning">
+    For a new order, select the **Transport**. Also configure **Name**, **Planned date and time**, **Loading location**, and **Requires validation before completing**, according to the process.
+  </Step>
+</Steps>
+
+<Info>
+  An order remains **Pending planning** while it lacks a date, loading location, or lines. It becomes **Planned** when it has all three.
+</Info>
+
+## Schedule loads on the calendar
+
+Switch to **Calendar view** to organize orders by week or month.
+
+- Drag an order from **Unscheduled** to the day you want to load it.
+- Drag an order to another day to reschedule it.
+- Return it to **Unscheduled** to remove its date.
+- Double-click an order to open its details.
+
+If you assign a date from the calendar to an order that had none, Bold retains the other data and sets the time to 08:00. If the order already had a time, it keeps it when changing the day.
+
+## Review the order and request materials
+
+**Path:** **Warehouse > Loads and shipments > Load orders**
+
+The list shows status, name, transport, planned date, loading location, and the number of lines and shipments. Use **Hide cancelled** and **Hide completed** to focus on pending loads.
+
+Open an order to review its **Lines**, **Shipments**, **Validation**, and **Time entries** tabs. Before starting, you can also change planning data and add or remove lines.
+
+Request materials when you need to transfer goods to the loading location:
+
+<Steps>
+  <Step title="Check preparation">
+    Review provisioning status and each line's **Ready** and **Incoming** quantities.
+  </Step>
+  <Step title="Request materials">
+    Click **Request materials**. This action is available for **Planned**, **Loading**, or **Paused** orders with lines and no previous request.
+  </Step>
+  <Step title="Execute movements">
+    The warehouse team can complete generated movements from **Work mode > Warehouse > Movements**.
+  </Step>
+</Steps>
+
+Bold indicates whether it requested materials or none remain pending. Once the order is marked as requested, the button no longer appears.
+
+## Next step
+
+Once the goods are prepared, [execute and close the load order](/en/guides/warehouse/execute-and-close-a-load-order) from work mode.

@@ -1,0 +1,63 @@
+---
+es_link: "/es/conceptos/fabricacion/recursos"
+title: "Resources"
+description: "Understand areas, stations, tools, characteristics and manufacturing capacity."
+icon: "wrench"
+---
+
+**Resources** represent the physical or technical capacity needed to execute operations.
+
+They can be areas, stations, machines, tools, equipment or characteristics required by an operation.
+
+For how to model tooling and reusable technical requirements, read [Tools and characteristics](/en/concepts/manufacturing/tools-and-characteristics).
+
+## Entities
+
+| Concept | Use |
+| --- | --- |
+| Area | Groups stations or production areas. |
+| Workstation | Place where an operation is executed. |
+| Tool | Selectable resource for an operation. |
+| Characteristic | Requirement that lets you choose compatible tools. |
+| Station capacity type | Defines whether a station limits planning. |
+
+## Stations and processes
+
+A station indicates where work can be executed. A process describes the type of work and has its own concept page in [Processes](/en/concepts/manufacturing/processes).
+
+Example: the **Cutting** process can run at the **Saw 1** and **Saw 2** stations.
+
+## Tools and characteristics
+
+Use characteristics when an operation requires a technical condition. Tools meeting that characteristic can be selected during planning or execution.
+
+| Requirement | Model |
+| --- | --- |
+| Any operator can use a station | Station with no required tool. |
+| The operation needs specific tooling | Tool with a characteristic. |
+| The difference is only a note | Step or instruction, not a resource. |
+
+## Capacity
+
+Finite or infinite capacity is configured on stations. A finite station can handle only one operation at a time; an infinite station does not block other operations in the same time slot.
+
+Tools are treated as finite resources. Employees enter as limiting resources only when you enable that option in the production plan.
+
+Capacity is interpreted alongside manufacturing working hours, compatible processes and expected duration. If any of those data are missing, sequencing can propose incomplete dates or incorrect resources.
+
+## Relationship with locations
+
+A station can relate to shop floor locations if you need to consume or produce material near the resource.
+
+This is useful when stock physically moves to a line, cell or work area before execution.
+
+## Related
+
+- [Operations and restrictions](/en/concepts/manufacturing/operations-and-restrictions)
+- [Processes](/en/concepts/manufacturing/processes)
+- [Tools and characteristics](/en/concepts/manufacturing/tools-and-characteristics)
+- [Assignments and operation groups](/en/concepts/manufacturing/assignments-and-operation-groups)
+- [Manufacturing working hours](/en/concepts/manufacturing/manufacturing-working-hours)
+- [Sequencing](/en/concepts/manufacturing/sequencing)
+- [Locations](/en/concepts/warehouse/locations)
+- [Prepare workstations and machines](/en/guides/manufacturing/prepare-work-centers-and-machines)

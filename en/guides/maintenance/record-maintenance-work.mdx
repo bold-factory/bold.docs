@@ -1,0 +1,113 @@
+---
+es_link: "/es/ayuda/mantenimiento/crear-parte-de-trabajo"
+title: "Record maintenance work"
+description: "Record a maintenance intervention with its asset, cause, actions, time, and materials."
+---
+
+In Bold, **work orders** record interventions on assets. They can be corrective, responding to a failure or incident, or preventive, resulting from a planned inspection.
+
+You can create and prepare the work order from **Maintenance**. If the technician works from a tablet or shared work center, they can also create it from **work mode**.
+
+## Before you start
+
+- Create the asset and causes you will use.
+- Define reusable actions if you want the technician to follow standardized checks or tasks.
+- To work in **work mode**, select an active employee.
+- Check that the technician has access to maintenance and the items they can record as consumed materials.
+
+## Create the work order from management mode
+
+**Path:** **Maintenance > Work orders > Add new**
+
+<Steps>
+  <Step title="Create the work order">
+    Select the work order type, asset, and main cause. You can also enter the owner, code, and notes they should read.
+  </Step>
+  <Step title="Add planned work">
+    Add the actions the technician must complete. You can add a predefined action, write its instructions for this intervention, and mark it as required.
+  </Step>
+  <Step title="Record execution">
+    Add consumed materials and time for the employees involved.
+  </Step>
+  <Step title="Review and complete">
+    Check causes, actions, time, and materials before closing the work order.
+  </Step>
+</Steps>
+
+From the **Actions** column, open a record to view its details or change it.
+
+The work order contains these tabs:
+
+- **Information:** shows basic work order data and lets you add additional causes. For example, for an electrical failure on a forklift, you can record the electrical fault as the main cause and a broken plug as an additional cause.
+- **Consumed materials:** lets you add items and quantities of spare parts or consumables.
+- **Actions:** gathers the tasks needed for maintenance. It shows status, whether the action is required, type, owner, theoretical time, dates, result, instructions, and execution notes. The **Req.** column indicates whether it is required (**Yes**/**No**); to change it, use the padlock button in the **Actions** column.
+- **Time entries:** records time spent on maintenance.
+- **Comments:** lets you add and delete formatted comments with attachments.
+- **Costs:** shows spare part and labor costs.
+
+## Work from work mode
+
+**Path:** **Work mode > Maintenance**
+
+Work mode organizes work orders into **My work orders**, **All work orders**, and **New work order**. **My work orders** shows work orders whose main owner is the active employee. In **All work orders**, you can find other work and assign yourself to it.
+
+### Create a work order on the shop floor
+
+<Steps>
+  <Step title="Select New work order">
+    Open the **New work order** tab.
+  </Step>
+  <Step title="Describe the intervention">
+    Select the work order type, asset, and cause. Code and notes are optional.
+  </Step>
+  <Step title="Create the work order">
+    Click **Create**. The active employee becomes the main owner and the work order opens in **My work orders**.
+  </Step>
+</Steps>
+
+### Execute the work
+
+<Steps>
+  <Step title="Open the work order">
+    Find it in **My work orders** or **All work orders**. You can hide work orders that have not started or are finished, and search by code, asset, or cause.
+  </Step>
+  <Step title="Start recording time">
+    Click **Start**, **Resume**, or **Assign me**, depending on the work order status. Bold opens a time record for the active employee.
+  </Step>
+  <Step title="Read instructions">
+    Open **Information** to read the work order notes.
+  </Step>
+  <Step title="Record actions">
+    In **Actions**, read the instructions and complete planned tasks or add an action. Depending on its type, record a confirmation, a yes/no result, a number, text, a selection, an image, a file, or a signature drawn on screen. You can add optional execution notes. Actions marked **Required** must be completed before finishing the work order. If you make a mistake, click **Undo** on the completed action and complete it again.
+  </Step>
+  <Step title="Record materials">
+    In **Materials**, select the consumed item, enter the quantity, and click **Add material**.
+  </Step>
+  <Step title="Stop time when you interrupt work">
+    Click **Stop** to close your time record. You can resume the work order later.
+  </Step>
+  <Step title="Leave comments">
+    In **Comments**, add observations about the intervention. They are recorded with the date and active employee.
+  </Step>
+  <Step title="Finish the work order">
+    When the intervention is complete, click **Finish** and confirm closing. If required actions remain incomplete, Bold identifies them and takes you to **Actions**.
+  </Step>
+</Steps>
+
+<Warning>
+  Work mode does not let you undo completion. While the work order is completed, you cannot add time records, materials, or actions. To reopen it, go to **Maintenance > Work orders**, open the completed work order, and use **Undo finish**.
+</Warning>
+
+## Recommendations
+
+- Use stable causes to analyze recurrence.
+- Add actions before starting if you want the technician to follow a checklist.
+- Use **Stop** when interrupting work so recorded time reflects the actual intervention.
+- Review materials and results before finishing.
+
+## Related
+
+- [Work orders](/en/concepts/maintenance/work-orders)
+- [Configure maintenance](/en/guides/maintenance/configure-maintenance)
+- [Work mode](/en/concepts/work-mode)
+- [Work order costs](/en/guides/costs/work-order-costs)

@@ -1,0 +1,75 @@
+---
+es_link: "/es/conceptos/fabricacion/inspecciones-y-controles"
+title: "Inspections and checks"
+description: "Understand production checks, item inspections and receipt checks."
+icon: "badge-check"
+---
+
+**Inspections and checks** capture evidence, validations and quality results. Their rules differ by area.
+
+Use them when a check must link to an actual operation, item, receipt or movement.
+
+## Where they appear
+
+| Area | What it validates |
+| --- | --- |
+| Production | Mandatory operation checks at the start, during progress or at the end. |
+| Catalog | Inspections associated with the item to define what to review. |
+| Warehouse | Mandatory or optional receipt inspections. |
+| Maintenance | Mandatory or optional actions with results within a work order. |
+
+Not all checks are strictly about quality. Some record operational confirmations, photos, measurements or files explaining how work was done.
+
+## Result types
+
+| Type | When to use it |
+| --- | --- |
+| Confirmation | The operator must confirm that an action was done. |
+| Yes/no | You need an accepted or rejected result. |
+| Number | You want to record a measurement. |
+| Text | You need a free-form observation. |
+| Image | Visual evidence must be retained. |
+| File | A document or external test must be attached. |
+| Selection (maintenance) | The technician chooses one of the configured answers. |
+| Signature (maintenance) | The technician draws their signature on screen; it is retained as an image. |
+
+Configure the type according to the data you need to retain.
+
+## Execution moment
+
+| Moment | Effect |
+| --- | --- |
+| At the start | Blocks starting until validation is complete. |
+| Per unit or progress | Requires records corresponding to progress. |
+| At the end | Blocks closing until the check is complete. |
+
+In manufacturing, all configured checks are mandatory. If the operator cannot start or finish, review which check is missing and whether it requires a file, photo, value or confirmation.
+
+## Receipt inspections
+
+A receipt can include mandatory or optional inspections. Only mandatory inspections block receiving while pending.
+
+Configuring and creating receipt inspections requires **receipt quality checks** in your plan. When this option is disabled, new lines do not generate automatic inspections. Existing inspections remain in history and can be completed or deleted depending on the receipt's status.
+
+After receiving, the receipt and its inspections are protected to preserve history.
+
+## Maintenance actions
+
+Actions in a maintenance work order can be mandatory or optional. Complete all mandatory actions before finishing the work order. Optional actions can remain pending. If you complete an action, its result must match the configured type.
+
+You can also configure a **Selection** action with fixed answers or a **Signature** action for the technician to draw their signature. The signature is stored as an image and retains the **Signature** result type in the work order.
+
+## Relationship with costs and traceability
+
+Checks do not calculate costs on their own, but explain deviations, rejects, rework or blocks.
+
+When an inspection generates a rejection, pause or adjustment, connect the result to [Checks, consumption and pauses](/en/concepts/manufacturing/checks-consumption-and-pauses), [Stock and movements](/en/concepts/warehouse/stock-and-movements) or [Theoretical cost vs actual cost](/en/concepts/costs/planned-versus-actual-cost).
+
+## Related
+
+- [Checks, consumption and pauses](/en/concepts/manufacturing/checks-consumption-and-pauses)
+- [Manufacturing orders](/en/concepts/manufacturing/manufacturing-orders)
+- [Receipts](/en/concepts/warehouse/receipts)
+- [Items](/en/concepts/catalog/items)
+- [Execute operations on the shop floor](/en/guides/manufacturing/execute-shop-floor-operations)
+- [Receive a purchase order](/en/guides/purchasing/receive-a-purchase-order)

@@ -1,0 +1,101 @@
+---
+es_link: "/es/ayuda/almacen/cargar-y-cerrar-una-expedicion"
+title: "Execute and close a load order"
+description: "Record loading work, validate goods, and complete the shipments associated with the order."
+---
+
+Load and close a dispatch when the goods are prepared and the team is ready to put them into the transport.
+
+This workflow records who worked, which quantities were checked, and when shipments left.
+
+## Before you start
+
+Check that the order:
+
+- is planned;
+- has a transport, date, loading location, and lines;
+- shows **Stock ready**, or you have reviewed which materials remain pending;
+- has the validation required by the process defined.
+
+## Open the load
+
+**Path:** **Work mode > Warehouse > Load orders**
+
+The list shows **Planned**, **Loading**, or **Paused** loads with a planned date. You can search by name, transport, or location, and limit the date with **Planned until**.
+
+<Steps>
+  <Step title="Identify the employee">
+    Select the employee who will work on the load.
+  </Step>
+  <Step title="Open the order">
+    Review the transport, location, date, lines, and provisioning status.
+  </Step>
+  <Step title="Start work">
+    Click **Start**. If another person is already working on the load, use **Assign me**. To continue a paused load, use **Resume**.
+  </Step>
+</Steps>
+
+Each employee has their own time record. The order remains **Loading** while at least one is active. It becomes **Paused** when everyone clicks **Stop**.
+
+## Review shipments
+
+The load groups lines by shipment. Open each shipment to see its destination and included items.
+
+An order can contain several shipments. Completing the load dispatches them together, but each shipment retains its destination, number, and lines.
+
+## Validate items and lots
+
+If the load requires validation, you must be assigned and the order must be **Loading**.
+
+<Steps>
+  <Step title="Open a shipment">
+    Select the block for the shipment you are loading.
+  </Step>
+  <Step title="Enter the quantity">
+    Use **1**, the **+** and **-** buttons, enter the quantity, or select **All**.
+  </Step>
+  <Step title="Split into lots">
+    If the item manages lots, click **Split into lots** and allocate the quantity. The breakdown must add up to the quantity you will validate.
+  </Step>
+  <Step title="Validate the line">
+    Click **Validate**. Repeat until the line shows **Line validated**.
+  </Step>
+</Steps>
+
+Bold does not let you exceed the pending quantity. When several lines in the same shipment use the same item, it distributes validation in their order.
+
+## Complete the load
+
+You can complete it from **Loading** or **Paused**.
+
+<Steps>
+  <Step title="Review all lines">
+    Check quantities and lots before closing.
+  </Step>
+  <Step title="Click Complete">
+    If validation is complete or was not required, Bold completes the load order and its shipments.
+  </Step>
+  <Step title="Resolve unvalidated quantities">
+    If validation was required, cancel to continue validating or choose **Complete and exclude pending**.
+  </Step>
+</Steps>
+
+When excluding pending quantities, Bold reduces or removes them from both the order and shipments. You cannot complete the order if exclusion leaves the load without lines.
+
+<Warning>
+  **Complete** records the physical issue of stock from the loading location. Do not use it while goods remain in the warehouse.
+</Warning>
+
+## Correct a completion
+
+In management mode, open **Warehouse > Loads and shipments > Load orders** and enter the completed order.
+
+Click **Undo completion** to reverse shipments and return the order to **Paused**. This action is available only if the shipments can still be reversed and retain the same lines as the load.
+
+If the load should not be executed, use **Cancel** while it is **Loading** or **Paused**. If it has not started, delete the order that is pending planning or planned.
+
+## Related
+
+- [Load orders](/en/concepts/warehouse/load-orders-and-provisioning)
+- [Plan and prepare a load](/en/guides/warehouse/plan-and-prepare-a-load)
+- [Shipments](/en/concepts/warehouse/shipments)

@@ -1,0 +1,93 @@
+---
+es_link: "/es/ayuda/produccion/ver-eficacia-por-empleado"
+title: "View effectiveness by employee"
+description: "Compare an employee's work with their schedule and their production with theoretical time."
+---
+
+Use **Effectiveness by employee** to analyze a person over a period: how much of their schedule they worked, how long they had no tasks, how much they worked outside their schedule, and their efficiency against operations' theoretical time.
+
+This is the equivalent of OEE for people, known as **OLE** (_Overall Labor Effectiveness_).
+
+## Review effectiveness
+
+**Path:** **Smart Factory > Dashboards > Effectiveness by employee**
+
+### 1. Choose the employee and period
+
+Select the employee and start and end dates. Bold uses the employee's schedule (personal schedule, local calendar, and shift) to determine when they should have worked.
+
+### 2. Read the timeline
+
+| Status | Meaning |
+| --- | --- |
+| Working | Within their schedule and with a recorded task. |
+| Working outside schedule | With tasks outside their schedule, including non-working days. |
+| Idle time | Within their schedule and without any recorded task. |
+| Idle due to interruption | Idle time immediately after their operation paused, while the pause remains open. Shows the pause reason. |
+| Outside schedule | Working day, outside their work periods. |
+| Non-working day | The schedule assigns that day a workday without periods, such as vacation or sick leave. Does not count as idle time. |
+| No schedule defined | No schedule rule covers that day. Idle time cannot be calculated. |
+
+Manufacturing operations, maintenance work orders, and warehouse loads and movements count as tasks. If the employee has several simultaneous tasks, their time is split equally among them.
+
+<Tip>
+  Record sick leave and vacations in the employee's personal schedule using a workday without periods. They then do not appear as idle time.
+</Tip>
+
+### 3. Interpret indicators
+
+#### Utilization
+
+Utilization (%) = (Time worked within schedule / Scheduled time) \* 100
+
+A low value indicates scheduled time without recorded tasks: insufficient workload, waiting, stops, or unrecorded work.
+
+#### Efficiency
+
+Efficiency (%) = (Earned standard time / Evaluated actual time) \* 100
+
+- **Earned standard time:** theoretical time for produced units (good and rejected) according to operation steps, multiplied by the people required.
+- **Evaluated actual time:** employee time on operations with theoretical time whose production has already been recorded.
+
+Each production record closes a segment of the operation. The theoretical time for recorded units is distributed among everyone who worked in that segment, proportionally to their time. If several people work together on an operation, they all have the same efficiency for it.
+
+Time after the last record on an open operation remains **pending valuation** and does not penalize efficiency until more production is recorded. In long processes, frequently recording partial production updates efficiency sooner.
+
+Time in operations without theoretical time, unattended operations, or cancelled operations is not evaluated.
+
+<Warning>
+  If an operation records production in much less time than the theoretical time (more than 5 times faster), Bold marks it as **unreliable** and excludes it from efficiency. This commonly occurs when work is recorded afterward without assigning actual time.
+</Warning>
+
+#### Quality
+
+Quality (%) = (Good units / Produced units) \* 100, according to the employee's share in each segment.
+
+#### Productivity over schedule
+
+Productivity (%) = (Earned standard time / Scheduled time) \* 100
+
+Combines utilization and efficiency in one number.
+
+#### OLE
+
+OLE (%) = Utilization × Efficiency × Quality
+
+### 4. Review details
+
+- **By day:** schedule, work within and outside schedule, idle time, utilization, and efficiency for each day.
+- **By operation:** employee and team time, coworkers, evaluated and pending time, earned standard time, efficiency, and attributed units.
+- **Idle time:** each interval without tasks within the schedule, with the pause reason when known.
+
+## Limitations
+
+- Bold does not record clock-ins: idle time is scheduled time minus recorded work.
+- Past days' schedules are calculated using the current schedule configuration.
+- Efficiency for earlier days can change when recording production for operations that remained open.
+
+## Related
+
+- [Dashboards](/en/concepts/manufacturing/dashboards)
+- [View OEE by workstation](/en/guides/manufacturing/view-oee-by-workstation)
+- [Configure schedules](/en/guides/people/configure-employee-schedules)
+- [Assignments and operation groups](/en/concepts/manufacturing/assignments-and-operation-groups)

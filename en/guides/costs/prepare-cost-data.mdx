@@ -1,0 +1,70 @@
+---
+es_link: "/es/ayuda/costes/preparar-datos-de-coste"
+title: "Prepare cost data"
+description: "Complete prices, costs, time records and operational records before analyzing variances or inventory valuation."
+---
+
+Prepare cost data before interpreting variances. Cost analysis depends on complete master data and consistent operational records.
+
+## Base data
+
+<Steps>
+  <Step title="Review items">
+    In **Catalog > Items**, open each item and complete **Planned total cost per unit** on the **Costs** tab.
+
+    In the planning view, also define the procurement source and stock rules.
+  </Step>
+  <Step title="Review suppliers and purchases">
+    Keep prices, orders and receipts up to date for purchased materials.
+  </Step>
+  <Step title="Review employees">
+    In **People > Employees**, open each employee and complete **Hourly cost** in **Information** if you will include their time in the calculation.
+  </Step>
+  <Step title="Review resources">
+    In **Manufacturing > Resources**, open each workstation and configure its costs on the **Costs** tab if they should contribute to actual cost.
+  </Step>
+  <Step title="Review recipes">
+    Ensure inputs, quantities, time and outputs are consistent before manufacturing.
+  </Step>
+</Steps>
+
+## Records that contribute to actual cost
+
+| Record | Impact |
+| --- | --- |
+| Purchase receipts | Contribute the cost of purchased materials. |
+| Manufacturing consumption | Determines the materials actually used. |
+| Completed production | Distributes cost over manufactured output. |
+| Operation time records | Contribute labor or resource cost. |
+| Rejects and scrap | Explain quality or performance variances. |
+| Stock counts and adjustments | Correct stock, but need clear justification. |
+
+<Warning>
+  If consumption, time records, prices or lots are missing, actual cost may give an incomplete picture. Review traceability before making decisions.
+</Warning>
+
+## Before comparing planned and actual costs
+
+<Steps>
+  <Step title="Select the period">
+    Analyze a range with closed operations and recorded receipts.
+  </Step>
+  <Step title="Exclude incomplete data">
+    Review open orders, partial receipts or pending stock counts.
+  </Step>
+  <Step title="Check large variances">
+    Check whether they come from price, quantity, time, rejects or stock adjustments.
+  </Step>
+  <Step title="Document the cause">
+    Add operational comments when a variance has a real explanation.
+  </Step>
+</Steps>
+
+## Related
+
+- [Theoretical cost vs actual cost](/en/concepts/costs/planned-versus-actual-cost)
+- [Analyze item costs](/en/guides/costs/analyze-item-costs)
+- [Configure employee costs](/en/guides/costs/configure-employee-costs)
+- [Manufacturing orders](/en/guides/costs/manufacturing-order-costs)
+- [Work orders](/en/guides/costs/work-order-costs)
+- [Inventory valuation](/en/guides/costs/value-inventory)

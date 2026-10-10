@@ -1,0 +1,63 @@
+---
+es_link: "/es/conceptos/fabricacion/motivos-de-pausa-e-interrupciones"
+title: "Pause reasons and interruptions"
+description: "Understand how to classify manufacturing stoppages and their effects on execution, analysis and OEE."
+icon: "circle-pause"
+---
+
+An **interruption** is an actual stoppage during execution. The **pause reason** classifies why work stopped.
+
+Use pause reasons to understand time losses, separate planned stoppages from incidents and analyze patterns by station, process or shift.
+
+## Concepts
+
+| Concept | What it represents |
+| --- | --- |
+| Pause reason | Configurable category explaining a stoppage. |
+| Interruption | Actual record of start, end, duration and context. |
+| Paused operation | Operation temporarily stopped until resumed. |
+| Paused group | Operation group stopped as an operational block. |
+| Comment | Free-form detail that helps interpret the stoppage. |
+
+The reason answers "why it stopped". The interruption answers "when it happened and how long it lasted".
+
+## Where they are used
+
+| Place | Use |
+| --- | --- |
+| Operations | Pause and resume a specific manufacturing stage. |
+| Operation groups | Pause a block of operations executed together. |
+| Workstations | Analyze recurring stoppages by resource. |
+| Dashboards | Review duration, frequency and effect on OEE. |
+
+You can configure reasons so operators select options relevant to their environment. Avoid long lists with causes the station never uses.
+
+## Cause types
+
+Define reasons with a granularity that supports action.
+
+| Cause type | Examples |
+| --- | --- |
+| Operational wait | Missing material, missing instructions, waiting for quality. |
+| Resource | Breakdown, tool change, cleaning, setup. |
+| People | Break, shift change, unavailable support. |
+| Quality | Review, rework, rejection awaiting a decision. |
+| External | Supply outage, logistics block, supplier incident. |
+
+Do not turn every comment into a reason. Use comments for specific details and reasons for repeatable analysis.
+
+## Relationship with statuses
+
+When you pause an operation or group, its status becomes **Paused**. On resuming, the interruption closes and work returns to **In progress**.
+
+An open interruption must be closed before interpreting actual times. If pauses remain open, dashboards can show incomplete durations.
+
+Read [Manufacturing statuses](/en/concepts/manufacturing/manufacturing-statuses) for the relationships between pauses, orders, operations and groups.
+
+## Related
+
+- [Checks, consumption and pauses](/en/concepts/manufacturing/checks-consumption-and-pauses)
+- [Assignments and operation groups](/en/concepts/manufacturing/assignments-and-operation-groups)
+- [Dashboards](/en/concepts/manufacturing/dashboards)
+- [Work mode](/en/concepts/work-mode)
+- [Execute operations on the shop floor](/en/guides/manufacturing/execute-shop-floor-operations)

@@ -1,0 +1,104 @@
+---
+es_link: "/es/ayuda/almacen/configurar-y-completar-controles-de-recepcion"
+title: "Configure and complete receipt inspections"
+description: "Define inspections per item, add one-off checks, and record their results before receiving materials."
+---
+
+Receipt inspections record quality, quantity, or documentation checks before materials enter stock.
+
+You can define reusable inspections on an item or add a one-off inspection to a specific receipt.
+
+## Before you start
+
+- To define inspections per item or add one-off inspections, the plan must include **receipt quality inspections**. If disabled, you can view and complete inspections on existing receipts.
+- The item must exist in the catalog.
+- You need to identify the employee completing the inspection.
+- The receipt must be pending.
+- If you use **work mode**, select the active employee first.
+
+## Inspection types
+
+| Type | Recorded result |
+| --- | --- |
+| Simple (check) | Confirmation that the check was performed. |
+| Yes/no | Affirmative or negative result. |
+| Number | Numeric value. |
+| Text | Written observation. |
+| Photo | Image taken or selected as evidence. |
+
+## Define reusable inspections per item
+
+**Path:** **Catalog > Items > Item > Inspections**
+
+<Steps>
+  <Step title="Add the inspection">
+    Click **Add inspection**.
+  </Step>
+  <Step title="Describe the check">
+    Enter a name the team recognizes and choose the result type.
+  </Step>
+  <Step title="Decide whether it should block receipt">
+    Mark **Required** if the material cannot be received without completing the inspection.
+  </Step>
+  <Step title="Save the definition">
+    Click **Add**. You can open the inspection later to change or delete it.
+  </Step>
+</Steps>
+
+When you add a line for that item to a receipt, Bold creates a copy of its inspections for the line. If the same item appears on several lines, each retains its own inspections.
+
+## Add a one-off inspection to a receipt
+
+**Path:** **Warehouse > Receipts > Receipt > Inspections**
+
+<Steps>
+  <Step title="Open the pending receipt">
+    Enter the receipt and open the **Inspections** tab.
+  </Step>
+  <Step title="Create the inspection">
+    Click **Add inspection** and complete the name, type, and **Required** setting.
+  </Step>
+  <Step title="Check the scope">
+    An inspection added from this tab belongs to the receipt. Inspections copied from an item are associated with its line.
+  </Step>
+</Steps>
+
+## Complete inspections
+
+You can record results from management mode or work mode.
+
+### From management mode
+
+**Path:** **Warehouse > Receipts > Receipt > Inspections**
+
+<Steps>
+  <Step title="Select the pending inspection">
+    Click **Complete inspection** from the list or open its details.
+  </Step>
+  <Step title="Identify the employee">
+    Select who performed the check.
+  </Step>
+  <Step title="Record the result">
+    Complete the requested value. For a photo inspection, take or select the image.
+  </Step>
+  <Step title="Confirm">
+    Click **Complete**. The list shows the result, date, and whether the inspection was required.
+  </Step>
+</Steps>
+
+### From work mode
+
+**Path:** **Work mode > Warehouse > Receipts > Receipt**
+
+General inspections appear at the beginning of the receipt. Item inspections appear within the corresponding line. Enter the result and use the confirmation button. The active employee is recorded as responsible.
+
+<Warning>
+  **Receive** is blocked while any required inspection remains pending. Pending optional inspections do not prevent receipt.
+</Warning>
+
+## Related
+
+- [Receipts](/en/concepts/warehouse/receipts)
+- [Scan delivery notes with AI](/en/guides/warehouse/scan-delivery-notes-with-ai)
+- [Receive a purchase order](/en/guides/purchasing/receive-a-purchase-order)
+- [Work mode](/en/concepts/work-mode)

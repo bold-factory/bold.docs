@@ -1,0 +1,65 @@
+---
+es_link: "/es/conceptos/fabricacion/herramientas-y-caracteristicas"
+title: "Tools and characteristics"
+description: "Understand tools, characteristics and technical compatibility in manufacturing."
+icon: "wrench"
+---
+
+**Tools** are auxiliary resources that operations can require. **Characteristics** describe reusable requirements those tools meet.
+
+Use them when the operation depends on a fixture, mold, accessory, gauge, equipment or specific technical capability as well as a station.
+
+## Concepts
+
+| Concept | What it represents |
+| --- | --- |
+| Tool | Auxiliary resource selectable in planning or execution. |
+| Characteristic | Reusable technical requirement, such as diameter, compatibility or function. |
+| Compatible tool | Tool meeting a required characteristic. |
+| Operation | Recipe stage that can require a tool characteristic. |
+
+A tool can have several characteristics. A characteristic can apply to several tools.
+
+Tools, their characteristics and assignment to operations are available when your plan includes **advanced planning**. If disabled, you cannot create or modify these requirements; existing data is preserved.
+
+## When to model a tool
+
+| Requirement | Recommended model |
+| --- | --- |
+| The resource is selected to execute work. | Tool. |
+| The resource limits which operations can be done. | Tool with characteristics. |
+| The data only informs the operator. | Step or instruction. |
+| The resource is the main place of work. | Workstation. |
+
+Do not turn every minor accessory into a tool if it does not affect planning, execution or traceability.
+
+## Relationship with assignments
+
+When an operation requires a characteristic, the assignment must select a compatible tool. The process determines compatible stations; the operation defines the tool requirement.
+
+This helps you:
+
+- avoid executing operations with incorrect tooling;
+- propose valid resources;
+- detect incompletely planned operations;
+- analyze auxiliary resource availability.
+
+Read [Assignments and operation groups](/en/concepts/manufacturing/assignments-and-operation-groups) for their use during execution.
+
+## Relationship with resources
+
+Tools belong to the resource model but differ from stations.
+
+| Resource | Role |
+| --- | --- |
+| Area | Groups stations or areas. |
+| Workstation | Main execution location. |
+| Tool | Auxiliary resource needed for an operation. |
+| Characteristic | Requirement that lets you choose compatible tools. |
+
+## Related
+
+- [Resources](/en/concepts/manufacturing/resources)
+- [Processes](/en/concepts/manufacturing/processes)
+- [Operations and restrictions](/en/concepts/manufacturing/operations-and-restrictions)
+- [Prepare workstations and machines](/en/guides/manufacturing/prepare-work-centers-and-machines)

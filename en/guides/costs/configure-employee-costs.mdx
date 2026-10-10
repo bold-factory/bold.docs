@@ -1,0 +1,62 @@
+---
+es_link: "/es/ayuda/costes/configurar-costes-del-personal"
+title: "Configure employee costs"
+description: "Review and update each employee's hourly cost to calculate planned and actual labor costs."
+---
+
+Configure each employee's hourly cost to include their recorded time in manufacturing and maintenance costs.
+
+## Before you start
+
+- You need access to **Costs > Employees** to view the amounts.
+- You need permission to edit employees if you will change their hourly cost.
+- The employee must exist in **People > Employees**.
+- Calculate an hourly cost consistent with your company's costing approach.
+
+One way to estimate it is to divide the annual labor cost you want to allocate by the annual effective working hours:
+
+```text
+Hourly cost = annual labor cost / annual effective working hours
+```
+
+## Review hourly costs
+
+**Path:** **Costs > Cost objects > Employees**
+
+<Steps>
+  <Step title="Find the employee">
+    Search by code or name in **Costs by employee**.
+  </Step>
+  <Step title="Review the amount">
+    View the **Cost/hour** column and compare it with your company's chosen approach.
+  </Step>
+  <Step title="Open the employee">
+    In **Actions**, open their details to update the amount.
+  </Step>
+  <Step title="Update the cost">
+    Enter the new value in **Hourly cost (€)** and click **Save**.
+  </Step>
+</Steps>
+
+## Which calculations use this data
+
+| Use | How hourly cost contributes |
+| --- | --- |
+| Manufacturing | Employee time records contribute actual labor cost. |
+| Maintenance | Time recorded in a work order contributes labor cost to the work order. |
+| Planning | If the person who will perform an operation is not yet known, Bold can display planned costs based on averages. |
+
+<Warning>
+  Use the same approach for all employees. Mixing gross salary, employer costs and internal rates produces unreliable comparisons.
+</Warning>
+
+## Check the result
+
+After updating the cost, return to **Costs > Employees** and confirm the amount. To review its operational effect, view a manufacturing order or work order with time recorded by that employee.
+
+## Related
+
+- [Employees](/en/concepts/people/employees)
+- [Theoretical cost vs actual cost](/en/concepts/costs/planned-versus-actual-cost)
+- [Manufacturing order costs](/en/guides/costs/manufacturing-order-costs)
+- [Work order costs](/en/guides/costs/work-order-costs)

@@ -1,0 +1,57 @@
+---
+es_link: "/es/conceptos/almacen/recepciones"
+title: "Receipts"
+description: "Understand how receipts document material inflows from suppliers or customers."
+icon: "package-plus"
+---
+
+A **receipt** documents a physical material inflow from a **supplier** or **customer**. Completing it increases stock for its lines in the specified location.
+
+## Receipt types
+
+| Type | Use |
+| --- | --- |
+| Supplier | Receive material supplied by a supplier, usually related to a purchase. |
+| Customer | Record material arriving from a customer. |
+
+You can create the receipt from a related document or enter it manually, but it always retains one of these two types.
+
+<Info>
+  Finished production, co-products, stock counts and adjustments can also increase stock. Those changes belong to their respective processes and are not receipts.
+</Info>
+
+## Data and checks
+
+A receipt must specify an item, quantity, location and lot when the item requires one.
+
+| Data | Why it matters |
+| --- | --- |
+| Source | Identifies the supplier or customer the material comes from. |
+| Item and quantity | Define what comes in and in what quantity. |
+| Location | Indicates where the inflow is recorded. |
+| Lot | Preserves traceability when applicable. |
+| Checks | Record configured inspections before completing the receipt. |
+
+Mandatory checks must be completed before receiving. Checks configured as optional do not block the receipt.
+
+## Statuses and rules
+
+| Status | Meaning |
+| --- | --- |
+| **Pending** | You can edit the document before recording the inflow. |
+| **Received** | The inflow has increased stock, and the document is protected. |
+
+To receive, the document must be pending, have a location and contain at least one line. After receiving, you cannot edit its lines or change its location.
+
+If you need to correct a completed receipt, use reversal when available. Reversal preserves the traceability of the original inflow.
+
+## Relationship with purchasing
+
+A supplier receipt confirms the part of a purchase that has physically arrived. The purchase order explains the supplier commitment; the receipt explains the actual inflow.
+
+## Related
+
+- [Receive a purchase order](/en/guides/purchasing/receive-a-purchase-order)
+- [Receive with a delivery note](/en/guides/warehouse/scan-delivery-notes-with-ai)
+- [Configure and complete receipt checks](/en/guides/warehouse/configure-and-complete-receipt-inspections)
+- [Stock and movements](/en/concepts/warehouse/stock-and-movements)

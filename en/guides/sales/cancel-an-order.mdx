@@ -1,0 +1,43 @@
+---
+es_link: "/es/ayuda/ventas/cancelar-pedido"
+title: "Cancel an order"
+description: "Cancel a sales order and review how it affects demand and related documents."
+---
+
+You can cancel a whole order or just one of its lines.
+
+## Cancel the whole order
+
+**Path:** **Planning > Sales orders > Order you want to cancel**
+
+The action at the bottom of the details depends on its status: **Delete** for a draft, or **Cancel** for a confirmed order that still allows cancellation.
+
+Deleting a draft removes the order. Cancelling a confirmed order cancels its pending lines and applies the configured policy to associated manufacturing requests.
+
+## Cancel an order line
+
+**Path:** **Planning > Sales orders > Order > Line you want to cancel**
+
+Click **Cancel** at the bottom right.
+
+If the order has other active lines, it remains in the **Sales orders** table with the corresponding status.
+
+## Undo a cancellation
+
+To restore a line, open it and click **Undo cancellation**. The line returns to draft status so you can edit it and confirm it again. If you cancelled several lines, restore them one by one.
+
+## Cancellation limits
+
+If delivery of a line has already started, editing and deletion are limited to preserve traceability. You can cancel the remaining units.
+
+## Consequences of cancellation
+
+Configure how Bold should act when you cancel an order that has already generated manufacturing work.
+
+**Path:** **Control panel > Settings**
+
+In the **Production requests** section, you can choose how to manage them:
+
+- **Always block the linked orders:** the system hides those orders from the work view so someone can review them, whether manufacturing has already started or is still queued.
+- **Always cancel the linked orders:** the system cancels associated manufacturing orders, even if work has already started. Use this option when you want to stop them permanently.
+- **Cancel if not started; block if already started:** applies either action depending on the manufacturing status.

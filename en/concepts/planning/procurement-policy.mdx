@@ -1,0 +1,68 @@
+---
+es_link: "/es/conceptos/planificacion/politica-de-aprovisionamiento"
+title: "Procurement policy"
+description: "Understand how Bold determines whether an item is purchased, manufactured or ignored in recommendations."
+icon: "route"
+---
+
+The **procurement policy** defines how an item's requirement should be covered. It affects purchasing and manufacturing recommendations, suggested dates and proposed quantities.
+
+Configure this policy on items that can generate replenishment requirements.
+
+## Main decisions
+
+| Field | What it determines |
+| --- | --- |
+| Procurement source | Whether Bold recommends **Buy**, **Make** or **Ignore** for the item. |
+| Procurement mode | Whether Bold covers requirements **Make to stock** or **Make to order**. |
+| Primary supplier | Which supplier the purchasing assistant proposes when the item is purchased. |
+| Procurement lead time | How far in advance to purchase or manufacture. |
+
+Use **Ignore** for items you do not want in recommendations, even if they exist in stock, orders or manufacturing.
+
+## To stock and to order
+
+| Mode | When to use it |
+| --- | --- |
+| Make to stock | You want to replenish based on inventory levels and group requirements. |
+| Make to order | You want to cover specific demand, usually linked to an order or a specific requirement. |
+
+To stock is useful for raw materials, consumables or references you want to keep available. To order fits better when you purchase or manufacture only after specific demand arises.
+
+## Recommended quantities
+
+Bold uses these values to calculate how much to propose:
+
+| Parameter | Effect |
+| --- | --- |
+| Reorder point | Defines when replenishment suggestions begin. |
+| Minimum order | Prevents recommendations that are too small. |
+| Lot size | Rounds the quantity to operational multiples. |
+
+If projected stock falls below the reorder point, Bold can propose a purchase or manufacturing. The final quantity can increase due to the minimum order, lot size or grouped future demand.
+
+## Recommended dates
+
+The procurement lead time helps calculate when you should release the purchase or manufacturing to arrive on time.
+
+For purchased items, also review the primary supplier's data. For manufactured items, check that a valid recipe exists and manufacturing can be scheduled.
+
+## When a recommendation does not appear
+
+Check these points:
+
+- the item's source is **Buy** or **Make**;
+- the procurement mode matches the expected workflow;
+- projected stock falls below the reorder point;
+- reorder point, minimum order and lot size have consistent values;
+- a primary supplier exists if you expect a purchase recommendation;
+- a valid recipe exists if you expect a manufacturing recommendation;
+- relevant sales or purchase lines are confirmed.
+
+## Related
+
+- [Items](/en/concepts/catalog/items)
+- [Forecasts and assistants](/en/concepts/planning/forecasts-and-assistants)
+- [Demand and supply](/en/concepts/planning/demand-and-supply)
+- [Know what to purchase](/en/guides/planning/decide-what-to-purchase)
+- [Know what to manufacture](/en/guides/planning/decide-what-to-manufacture)

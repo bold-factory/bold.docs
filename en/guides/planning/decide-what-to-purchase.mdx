@@ -1,0 +1,74 @@
+---
+es_link: "/es/ayuda/planificacion/asistente-de-compras"
+title: "Decide what to purchase"
+description: "Review needs, stock, and lead times to decide which materials to purchase and when to order them."
+---
+
+**Path:** **Planning > Purchase assistant**
+
+The **Purchase assistant** groups needs for items configured with **Buy** and **Make to stock** procurement. Bold proposes purchasing when projected stock falls below the reorder point.
+
+The proposal accounts for current stock, expected receipts and issues, reorder point, minimum order, lot size, supplier, and configured lead times.
+
+Before reviewing the data in this view, adjust:
+
+- **Purchase frequency (daily, weekly, or monthly):** defines the periods used to group needs.
+- **Include needs up to:** limits the horizon of needs queried.
+
+Then use the summary blocks to narrow your review:
+
+- **Urgent:** needs whose date already requires attention.
+- **This period:** needs included in the current period.
+- **Next period:** needs in the following period.
+- **Future:** later needs within the chosen horizon.
+
+## Organize by supplier or item
+
+Select one of the four blocks to see purchasing needs for that period, sorted by urgency.
+
+Bold lets you change the view to suit your purchasing strategy using two tabs:
+
+- **By supplier (recommended for daily work):** groups needs by the company selling them (for example, _Patas Paco_ or _Madera, S. A._).
+- **By item:** shows each material (for example, 5 mm screws or pine boards). This is useful when investigating a specific shortage.
+
+## Purchasing analysis
+
+**Path:** **Planning > Purchase assistant > Supplier**
+
+<Steps>
+  <Step title="Interpret stock">
+    Review the stock data in each column before purchasing. The system combines the available variables and proposes a quantity. Compare the proposal with lead times, minimum quantities, and the stock forecast.
+
+    **Reorder point:** projected stock level at which Bold proposes starting procurement.
+
+    **Proposal:** quantity calculated by Bold. You can change it, reset the calculation, or clear the field to exclude the item from the current order.
+  </Step>
+  <Step title="Open the item">
+    Select an item to expand its analysis charts and tables.
+
+    Use **Purchase orders** to compare the proposal with open or previous orders, **Stock forecast** to review the estimated effect of the purchase, and **Consumption history** to compare it with recorded issues.
+  </Step>
+</Steps>
+
+## Purchases for a manufacturing order
+
+**Path:** **Production > Production orders > MO > Materials > Open purchase assistant**
+
+This access is available whenever the MO has materials pending consumption, even if they are already covered. If materials are missing, the link appears as **Resolve with purchase assistant**.
+
+From a manufacturing order, the assistant shows all pending MO materials procured through **Buy** in one table, including both missing and covered materials.
+
+- **Supplier:** Bold proposes the primary supplier for each item. You can change it to any secondary supplier configured on the item.
+- **Proposal:** quantity still to be covered. Covered materials appear dimmed with a proposal of 0. You can change any item's quantity to purchase it anyway.
+
+Next to **Proposal**, three actions change all quantities at once:
+
+- **Propose what the production order needs for all:** proposes the quantity the MO still needs to consume for each item, without deducting available or expected stock.
+- **Reset all quantities:** restores the calculated proposal.
+- **Clear all quantities:** sets them to 0.
+
+Each row has the same three actions for a single item. Hover over **Propose what the production order needs** to see the pending quantity for that item.
+
+Click **Generate orders** to create one purchase order per supplier with all its lines at once. Only items with a proposal greater than 0 are included. Items without a supplier appear dimmed and are excluded; configure a supplier on the item first if you want to purchase it here. Each order's notes identify the manufacturing order that originated it.
+
+Orders generated from the MO remain linked to it. Their quantity pending receipt first covers that MO's needs for the same item, rather than those of other MOs while the first still needs it. Other MOs can be covered by stock or other supply. If you purchase more than the MO needs, the excess is available for other needs. Received material enters general stock. See [Demand and supply allocation](/en/concepts/planning/demand-and-supply-allocation#linked-supply).

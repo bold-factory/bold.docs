@@ -1,0 +1,84 @@
+---
+es_link: "/es/ayuda/smart-factory/informes-powerbi"
+title: "View Power BI reports"
+description: "View and adapt Power BI reports using Bold data."
+---
+
+**Reports** use embedded Power BI to analyze Bold data through visualizations, filters and prepared fields. Use them for periodic analysis and indicator monitoring.
+
+<Info>
+  Power BI reports are not a real-time view. They refresh according to the environment's schedule, typically at intervals during working hours.
+</Info>
+
+## What you can do
+
+| Action | Use |
+| --- | --- |
+| Open a report | View existing visualizations and filters. |
+| Create a report | Start from Bold's predefined data model. |
+| Duplicate a report | Create a copy to modify without changing the original. |
+| Edit and save | Adjust fields, visualizations and filters when you have permission. |
+| Export data | Extract data according to the capabilities enabled in the report. |
+| Delete | Remove editable reports. This action cannot be undone. |
+
+## When to use reports and when to use dashboards
+
+| Need | Use |
+| --- | --- |
+| Analyze trends, compare periods or prepare reports | **Power BI reports**. |
+| View live shop floor status, ongoing operations or operational OEE | [Manufacturing dashboards](/en/concepts/manufacturing/dashboards). |
+| Investigate a specific record | The corresponding operational module, such as orders, stock or work orders. |
+
+## Create or adapt a report
+
+**Path:** **Smart Factory > Reports**
+
+<Steps>
+  <Step title="Choose a starting point">
+    Open an existing report, create a new one or duplicate one you can adapt.
+  </Step>
+  <Step title="Edit visualizations">
+    If the report is editable, click **Edit** next to the title. In edit mode, you can:
+
+    - choose the visualization type from the side panel;
+    - select or drag fields from the **Data** pane onto the canvas;
+    - apply filters from the **Filters** pane;
+    - configure views and their interactions.
+  </Step>
+  <Step title="Save changes">
+    Save when the report represents the view your team needs.
+  </Step>
+  <Step title="Validate with real data">
+    Compare the report with Bold records to confirm that filters, dates and units are correct.
+  </Step>
+</Steps>
+
+## Permissions and integrations
+
+| Action | Required permission |
+| --- | --- |
+| Open reports | Read access to reports. |
+| Create, duplicate or delete reports | Edit access to reports. |
+
+## Good practices
+
+- Duplicate reports before making significant changes.
+- Use names that describe their purpose, such as `Cost by asset` or `Weekly production`.
+- Include visible filters for dates, area, item, asset or status when several teams use the report.
+- Do not use Power BI reports for decisions that require live shop floor status.
+
+## Common problems
+
+| Problem | What to review |
+| --- | --- |
+| Data seems outdated | Review the model's latest refresh and use dashboards if you need real-time data. |
+| A report does not appear | No reports may be available, or Analytics permissions may be missing. |
+| You cannot delete it | Only editable reports can be deleted. |
+| A filter changes the result too much | Review dates, record status, units and the fields used in the visualization. |
+
+## Related
+
+- [Reports](/en/concepts/smart-factory/reports)
+- [Manufacturing dashboards](/en/concepts/manufacturing/dashboards)
+- [Costs](/en/concepts/costs)
+- [Maintenance](/en/concepts/maintenance)

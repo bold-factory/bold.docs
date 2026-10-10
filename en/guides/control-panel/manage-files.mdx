@@ -1,0 +1,86 @@
+---
+es_link: "/es/ayuda/panel-de-control/gestionar-archivos"
+title: "Manage files"
+description: "View and manage attached documents used in Bold."
+---
+
+Use **Files** to view documents and attachments stored in Bold. They may be linked to operations, inspections, work orders, automations, imports or other records.
+
+## What Bold stores for each file
+
+| Field | Use |
+| --- | --- |
+| Name | Name under which the file was saved. |
+| Type and size | Detected format and space occupied, if available. |
+| Context | Tags recorded for the file. Some records' tags let you open them from the list. “No context recorded” does not guarantee that the file is not referenced in a note; tagging may still be awaiting processing. |
+| Read URI | Secure link to open or download the file. |
+| Management | Indicates whether Bold manages the file. Files managed by Bold cannot be deleted from the general list. |
+| Audit | Creation date and user who created the file. |
+
+## Files linked in notes and instructions
+
+When you save a link to a Bold file in a field that supports Markdown, Bold automatically adds a tag with the record that uses it. This applies to notes in purchase and sales orders and their lines, work orders, preventive plans, manufacturing orders and requests, as well as instructions for operations and recipe steps. You can open that record from the list's context.
+
+The association updates in the background after you save the record. If you remove the link or delete the record, its usage tag disappears after processing. A file can have several tags if it is used in several places. Links saved before this feature are associated when you edit and save the field containing them.
+
+The tag indicates where the file is used. By itself, it does not make the file **managed by Bold** or prevent deletion from the list.
+
+## Supported formats
+
+Bold validates the file extension and actual content. Supported formats include:
+
+| Type | Extensions |
+| --- | --- |
+| PDF | `.pdf` |
+| Images | `.jpg`, `.jpeg`, `.png`, `.webp` |
+| Text and data | `.txt`, `.md`, `.markdown`, `.csv` |
+| Word | `.doc`, `.docx`, `.docm` |
+| Excel | `.xls`, `.xlsx`, `.xlsm`, `.xlsb` |
+| Compressed files | `.zip` |
+
+<Warning>
+  If you change a file extension without changing its actual content, Bold may reject it because the types do not match.
+</Warning>
+
+## Review files
+
+<Steps>
+  <Step title="Open Files">
+    Go to **Control panel > Files**.
+  </Step>
+  <Step title="Find the file">
+    Filter by name, date or user where applicable.
+  </Step>
+  <Step title="Review metadata">
+    Check the type, size, context and whether Bold manages the file.
+  </Step>
+  <Step title="Open or download">
+    Use the read link to review the content.
+  </Step>
+  <Step title="Delete only when appropriate">
+    Delete files only when you are certain they are not needed for audits, evidence or active processes.
+  </Step>
+</Steps>
+
+## Good practices
+
+- Use descriptive names before uploading files.
+- Do not delete files used as evidence for quality, maintenance or automations without reviewing the process.
+- Use Excel/CSV for imports and structured attachments.
+- Use PDF or images for evidence that should not change.
+
+## Common problems
+
+| Problem | What to review |
+| --- | --- |
+| The file is not accepted | Check the extension, actual file type and whether it is damaged. |
+| You cannot delete it | You may lack permission, or Bold may manage the file. |
+| You cannot find the file | Search by tags or by the record that generated it. |
+| The link does not open | Review permissions and whether the read URI is still valid. |
+
+## Related
+
+- [Import data](/en/guides/control-panel/import-data)
+- [Quality inspections](/en/concepts/manufacturing/checks-consumption-and-pauses)
+- [Work orders](/en/concepts/maintenance/work-orders)
+- [Automate tasks](/en/guides/smart-factory/automate-tasks)

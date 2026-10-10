@@ -1,0 +1,87 @@
+---
+es_link: "/es/conceptos/fabricacion/controles-consumos-y-pausas"
+title: "Checks, consumption and pauses"
+description: "Understand the records that explain quality, material, progress and time in manufacturing."
+icon: "badge-check"
+---
+
+Manufacturing execution does more than change statuses. It also records quality, material consumption, production, pauses and times.
+
+Read [Inspections and checks](/en/concepts/manufacturing/inspections-and-checks) for result types, evidence and receipt or item checks.
+
+## Checks
+
+A **check** is a mandatory inspection associated with an operation. You must complete it at the configured moment.
+
+| Type | Use |
+| --- | --- |
+| Confirmation | Verify that an action was done. |
+| Yes/no | Record simple acceptance or rejection. |
+| Number | Measure a value. |
+| Text | Write an observation. |
+| Image or file | Attach evidence. |
+
+Start checks block starting while pending. An operation cannot finish if any check remains pending.
+
+## Consumption
+
+Consumption deducts material from the warehouse. You can record it at the start, per unit or at the end of the operation.
+
+| Moment | When to use it |
+| --- | --- |
+| At the start | The quantity is known before execution. |
+| Per unit | You want precision linked to progress. |
+| At the end | The quantity depends on actual waste or adjustments. |
+
+An input's quantity is defined per manufactured unit. If an operation produces `10` units and an input consumes `2` units for each one, total expected consumption is `20`.
+
+Use consumption by progress when you need to measure materials precisely during the operation. Use consumption at the end if the actual quantity is known at closing.
+
+### Theoretical and manual quantities
+
+When recording progress in [work mode](/en/concepts/work-mode), each material and co-product shows its **theoretical quantity**, calculated according to its configuration and applicable progress, alongside the quantity to record and the difference between them. Lines configured by progress use units from that record; lines configured at the end use the operation's accumulated total.
+
+- While you do not change a line, it follows the theoretical quantity and recalculates with applicable progress when completed or rejected units change.
+- If you enter a quantity or assign lots, the line becomes **manual** and retains your value even when units change.
+- If the theoretical quantity changes after you edit a manual line, the difference from the new theoretical value appears on the line and you can return to the theoretical value. On confirmation, Bold warns you about edited lines whose theoretical quantity changed but does not block recording.
+
+What you see on each line is what is recorded when you confirm.
+
+### Lots
+
+If the item uses lots, you choose them in the material line itself:
+
+- With no assigned lots, the warehouse assigns lots by FIFO (first in, first out) at the workstation's input location. If there is not enough stock there, it uses lots from other locations.
+- When you assign lots, the line quantity is the sum of its lots. Lot quantities use the same unit as the line.
+- **Distribute FIFO** distributes the theoretical quantity among lots with stock at the station's input location. If there is not enough, the line shows the difference from the theoretical quantity. You can then adjust each lot's quantity.
+- Lot details are collapsed by default, and the line indicates **FIFO**. Expanding shows lots with stock, starting with those at the station's input location. Each lot is identified by its source code or, if none, its internal code. To choose a lot, enter the quantity you consume from it or scan its code.
+- If you leave all lots at zero, the line returns to the theoretical quantity and automatic allocation.
+
+Consuming a lot deducts stock at the station's input location, even if the lot is stored elsewhere. The list therefore indicates lots in other locations and shows **Input stock**, with the total across all locations on hover. Bold warns when a lot quantity exceeds its input stock but does not block recording. The scanner recognizes both source and internal codes.
+
+## Production and co-products
+
+Recording production increases stock of the manufactured item. Co-products record additional outputs generated during the operation.
+
+Co-products can also have a recording moment and lot if they need traceability.
+
+If a co-product is configured **Per unit**, Bold multiplies its quantity by the operation quantity and applies the specified frequency. For example, `0,5` units per manufactured unit generate `5` units in an operation of `10`. At other recording moments, the configured quantity applies once.
+
+Do not record production to compensate for incorrectly recorded consumption. First correct the consumption source, location or lot.
+
+## Pauses
+
+A pause explains work interruptions. The pause reason lets you analyze recurring losses, separating breaks, breakdowns, missing material or waits.
+
+Not all stoppages deserve a specific category. Create reasons when the information helps you decide improvements.
+
+Read [Pause reasons and interruptions](/en/concepts/manufacturing/pause-reasons-and-interruptions) for how to classify stoppages and their effects on operations, groups and dashboards.
+
+## Related
+
+- [Manufacturing orders](/en/concepts/manufacturing/manufacturing-orders)
+- [Inspections and checks](/en/concepts/manufacturing/inspections-and-checks)
+- [Pause reasons and interruptions](/en/concepts/manufacturing/pause-reasons-and-interruptions)
+- [Dashboards](/en/concepts/manufacturing/dashboards)
+- [Lots](/en/concepts/warehouse/lots)
+- [Execute operations on the shop floor](/en/guides/manufacturing/execute-shop-floor-operations)

@@ -1,0 +1,89 @@
+---
+es_link: "/es/ayuda/costes/valoracion-inventario"
+title: "Value inventory"
+description: "View the current value of stock by item, lot and location."
+---
+
+Use **Inventory valuation** to view the financial value of available stock. Bold calculates it from positive stock quantities and their lots' cost per unit.
+
+## Data you can review
+
+| Field | What it means |
+| --- | --- |
+| Total inventory value | Sum of the value of all positive stock quantities. |
+| Item | Item being valued. |
+| Location | Place where the stock is located. |
+| Lot | Lot that provides the cost per unit. |
+| Stock | Available quantity in the item's unit. |
+| Cost/unit | Lot cost per unit. |
+| Total value | Stock multiplied by cost per unit. |
+
+## How it is calculated
+
+```text
+Line value = available stock × lot cost per unit
+Total inventory value = sum of lines with positive stock
+```
+
+The lot's origin determines the cost used:
+
+| Lot origin | Typical cost |
+| --- | --- |
+| Purchase | Purchase cost recorded at receipt. |
+| Manufacturing | Actual manufacturing cost transferred to the produced lot. |
+| Mixing or transformation | Cost derived from the lot's components. |
+| Unknown origin | May remain unvalued until traceability is completed. |
+
+## Review valuation
+
+<Steps>
+  <Step title="Open Costs">
+    Go to **Costs > Warehouse > Inventory valuation**.
+  </Step>
+  <Step title="Review the total value">
+    Use the total as a quick view of valued inventory.
+  </Step>
+  <Step title="Filter by item, location or lot">
+    Locate the lines that explain the value you want to review.
+  </Step>
+  <Step title="Check the lot cost">
+    Open the lot to review unit cost and components if the value does not match expectations.
+  </Step>
+  <Step title="Complete missing data">
+    If a lot has no cost, review its origin: purchase, manufacturing, adjustment or temporary consumption.
+  </Step>
+</Steps>
+
+## Example
+
+You have `80 units` of item `ENV-500` at location `A-01`. The lot has a cost of `€0.42/unit`.
+
+```text
+80 x 0.42 = €33.60
+```
+
+If the same item has another lot at another location with a cost of `€0.47/unit`, Bold values each line using its own lot cost. This lets you see differences from purchasing, manufacturing or traceability corrections.
+
+## Temporary lots and traceability
+
+When materials are consumed without available stock, Bold may need to create temporary traceability. Those lots may remain unvalued or have a pending cost until stock is recorded that completes their origin.
+
+<Warning>
+  Do not treat the valuation as a finalized financial figure if there are lots without a clear origin, consumption awaiting traceability corrections or receipts without a cost.
+</Warning>
+
+## Common problems
+
+| Problem | What to review |
+| --- | --- |
+| Total value seems low | Look for lots with zero cost or stock without a valued origin. |
+| Two lines for the same item have different costs | Each lot retains its own cost. Review its origin, purchase or manufacturing. |
+| Stock appears in valuation when you did not expect it | The table includes stock quantities greater than zero. Review the location and lot. |
+| You cannot see inventory valuation | Review warehouse cost permissions. |
+
+## Related
+
+- [Warehouse](/en/concepts/warehouse)
+- [Investigate stock differences](/en/guides/warehouse/investigate-stock-discrepancies)
+- [Stock and movements](/en/concepts/warehouse/stock-and-movements)
+- [Theoretical cost vs actual cost](/en/concepts/costs/planned-versus-actual-cost)

@@ -1,0 +1,65 @@
+---
+es_link: "/es/conceptos/mantenimiento/mantenimiento-preventivo"
+title: "Preventive maintenance"
+description: "Understand preventive schedules and how they generate recurring work orders."
+icon: "calendar-clock"
+---
+
+**Preventive maintenance** defines rules to generate recurring work orders.
+
+The schedule is not the work order. The schedule indicates when a work order should be created, on which asset and with which initial information.
+
+## What a schedule defines
+
+| Data | Use |
+| --- | --- |
+| Asset | Equipment it applies to. |
+| Frequency | How often it should generate: daily, weekdays (Monday to Friday), weekly, monthly, quarterly, semiannually or annually. |
+| Next date | Expected time of the next occurrence. |
+| Policy | What to do if there are open work orders. |
+| Template | Main cause, auxiliary causes and initial notes. |
+| Status | Enabled or disabled. |
+
+## Generation policies
+
+| Policy | Behavior |
+| --- | --- |
+| Generate on every occurrence | Creates a work order for each due occurrence. |
+| Skip if there is an open work order | Avoids duplicate work if an intervention is already pending. |
+
+Use the policy according to the risk of duplicate work orders. Every occurrence can be useful for critical inspections. For repeatable low-urgency tasks, skipping while work is open may be better.
+
+## Relationship with work orders
+
+When generated, the work order contains actual execution. Complete it with times, actions, materials and observations like any intervention.
+
+The schedule retains frequency and generation history. The work order retains what was done. Schedule details show related work orders, except canceled ones.
+
+## Generate manually
+
+You can create a work order immediately with **Generate now**, for example to bring an inspection forward.
+
+- It counts as a generation: increases the generated counter and updates the last generation.
+- It does not change the next planned generation.
+- It does not consider the generation policy.
+- It works even if the schedule is disabled, but not if deleted.
+
+If the policy is **Skip if there is an open work order**, a manually generated work order that remains open also causes the next occurrence to be skipped.
+
+## If it does not generate a work order
+
+Check these points when a preventive schedule does not create the expected work order:
+
+- the schedule is enabled;
+- there is a next generation date;
+- the asset and cause remain available;
+- the policy is not skipping the occurrence because a work order is already open;
+- the frequency and time zone match the actual working calendar.
+
+If you use **Skip if there is an open work order**, close or cancel the previous work order before expecting another generation.
+
+## Related
+
+- [Work orders](/en/concepts/maintenance/work-orders)
+- [Assets](/en/concepts/maintenance/assets)
+- [Schedule preventive maintenance](/en/guides/maintenance/schedule-preventive-maintenance)

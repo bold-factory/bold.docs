@@ -1,0 +1,97 @@
+---
+es_link: "/es/ayuda/produccion/especificar-materiales-pasos-y-controles"
+title: "Specify materials, steps, and inspections"
+description: "Define materials, instructions, and inspections to execute and validate each recipe operation."
+---
+
+**Path:** **Production > Recipes > Recipe > Editable version > Operation**
+
+Only **Editable** versions allow structural changes. If the version is active, create an editable version before changing materials, steps, or inspections.
+
+Define each operation to indicate **what enters and leaves**, **how it runs**, and **how it is validated**. You can combine raw materials, semi-finished items, co-products, steps, times, conditions, and quality inspections.
+
+With this data, Bold records consumption, retains work instructions, and provides information to calculate manufactured item costs.
+
+## Define materials
+
+Classify materials according to their role in the operation:
+
+- **Raw materials (external inputs):** materials entering the plant unprocessed, such as raw milk. Record them as inputs to the operation consuming them.
+- **Semi-finished items (work in progress):** intermediate products that have completed a stage but still need further operations, such as table legs. Record them as inputs to the next operation.
+- **Co-products (simultaneous outputs):** items obtained simultaneously in a process, such as cream and skimmed milk during centrifugation. Record them as outputs of the operation generating them.
+
+### 1. Add the material
+
+**Item:** select the raw material, semi-finished item, or co-product to incorporate into the recipe.
+
+**Quantity/manufactured unit:** define consumption per manufactured unit. Enter a number with a decimal point or a formula. Use **Property** and **Order data**, or type `@`, to insert numeric item properties or the MO quantity. Use **Round** to add `round`, `ceil`, or `floor`. Below the field, you can see whether the formula is valid. Bold substitutes each value when generating the MO. See [recipe formulas](/en/concepts/manufacturing/recipes-and-versions).
+
+**Consumption moment:** choose when consumption is recorded:
+
+- **At the end:** the ingredient is fully consumed when the operation finishes.
+- **Every unit:** consumption is calculated proportionally for each manufactured unit. This option is selected by default.
+
+<Note>
+  **Example: cheese consumption per unit**
+
+  - **Item:** select _Grated mozzarella cheese_ from the dropdown.
+  - **Quantity/manufactured unit:** enter `0.15` to indicate each pizza requires 0.15 kg or 150 g of cheese.
+  - **Consumption moment:** choose **Every unit**. The system deducts 150 g of mozzarella each time the line finishes a pizza.
+</Note>
+
+## How an operation runs
+
+### 1. Add steps
+
+Steps describe what the operator should do within an operation.
+
+A step can be a one-off instruction, such as preparing a machine, or a repetitive action, such as checking each unit.
+
+Steps belong to an operation and can run at the start, at the end, or according to the quantity produced, depending on their configuration.
+
+**Name:** write a short instruction starting with an action verb, such as `Clean the die`, `Pour the additive`, or `Die-cut the sheet`.
+
+**How many times must this step be performed?**
+
+A manufacturing order can produce one unit or many. The execution moment indicates whether the step runs once or repeats according to quantity.
+
+- **At the start:** for machine preparation, initial loading, or a preliminary check. For example: `Preheat the oven to 180 °C`.
+- **Every unit:** for actions repeated with each unit produced. For example: `Check the unit weight`.
+
+**Instructions:** combine what the operator needs to perform the step:
+
+- **Technical and safety text:** describe the procedure, machine parameters, or necessary warnings. For example: `Set the pressure to 4 bar`.
+- **Formatting:** use bold, italic, **Heading**, and **Subheading** to structure text, and **Link** to add a link with its text.
+- **Files:** use the paperclip to attach PDF drawings, technical data sheets, or reference photos.
+- **Item and order data:** use **Property** or **Order data**, or type `@`, to display values such as item length, requester, or MO quantity.
+- **Formulas:** use **Formula** to create a block replaced by a calculated result, such as `Prepare ceil(MO quantity / 12) boxes`. Use **Round** to add `round`, `ceil`, or `floor`.
+
+**Duration:** enter the estimated standard time in minutes. If a per-unit step takes 30 seconds, enter `0.5`. Formulas are also supported.
+
+## Assign inspections
+
+**Inspections** require the operator to record a check when starting or completing an operation, according to configuration.
+
+Use them to capture evidence, quality parameters, or validations that must be linked to the operation.
+
+### 1. Add an inspection
+
+**Name:** enter a short descriptive title, such as `Temperature measurement`, `Visual seal inspection`, or `Safety signature`.
+
+**Instructions:** explain how to perform the inspection. You can add text, use formulas, or attach drawings, reference photos, or PDF manuals.
+
+**What type of inspection is required?**
+
+Choose the result format: **Simple** to confirm it was performed, **Yes/no**, **Number**, **Text**, **Photo**, or **File**.
+
+**When must the inspection be performed?**
+
+Choose when it should be performed:
+
+**At the start:** machine preparation, initial loading, or preliminary check.
+
+**Every unit:** repetitive actions depending on the produced quantity.
+
+**At the end:** cleaning, document closing, or final check.
+
+**Duration (minutes):** enter the estimated time to complete the inspection.
