@@ -1,0 +1,22 @@
+es/ayuda/produccion/ejecutar-operaciones-en-planta.mdx
+  s_03b9c74e372e17::t_a9ae9bd8bed912 70,74
+es/conceptos/fabricacion/controles-consumos-y-pausas.mdx
+  s_03b9c74e372e17::t_1ccb2d006f4b63 55,59
+  s_03b9c74e372e17::t_62ec4b753549f9 41,43
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "79232402c33ac0ce8ee4bb402782c99468f5d5ee",
+  "prompts": {},
+  "sessions": {
+    "s_03b9c74e372e17": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12505-df33-7a51-8f36-ebea08b881cb",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
