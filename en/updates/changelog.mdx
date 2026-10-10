@@ -6,6 +6,110 @@ rss: true
 ---
 
 <Update
+  label="2026-10-01"
+  tags={["New features", "Improvements", "Fixes"]}
+>
+  ## Global search
+
+  - Global search (**Ctrl+K**) brings records, application sections and documentation into one dialog. Only sections you can access appear, and documentation results open in another tab.
+  - Results include movements, containers, load orders and warehouse counts. You can also find a record by its full identifier.
+
+  ## Stock history
+
+  - **Warehouse > Stock control > Stock history** shows stock changes for all items, with filters for item, location, lot and cause. Query periods of up to 365 days; the default shows the last 7 days. You can also include lot reclassifications.
+  - The item's stock tab shows its recent changes. **View more** opens the history filtered by that item.
+  - **Export data** adds **Stock history** in CSV or Excel format.
+
+  ## Preventive maintenance and work orders
+
+  - Preventive schedules support the **Weekdays** frequency, Monday to Friday, and filters for asset, cause and frequency. **Generate now** creates a work order immediately, and the **Generated orders** tab shows each schedule's work orders.
+  - Work order actions can be required. You cannot complete the work order while required actions remain pending.
+  - Each action separates instructions explaining how to perform it from the execution notes the technician adds when completing it.
+  - Work orders include formatted **Comments** and attachments. You can add them from **Maintenance > Work orders** and from work mode.
+  - An action's **Uses** tab shows which causes plan it and which work orders include it. Deleting an action removes it from open work orders where it is still pending and preserves it in the history of work orders where it was completed.
+
+  ## Make to order and customers on manufacturing requests
+
+  - Sales lines with **Pending** or **Partially delivered** status offer **Make to order**. The line changes to **Make to order** and, if the item is manufactured, Bold creates a manufacturing request linked to the order and its customer. The button is disabled when the line already has an active request.
+  - Manufacturing requests can link to a customer, whose name is used as the requester. Without a customer, the requester is optional free text. Each MO copies the customer and requester from its request.
+  - Existing requests and MOs linked to sales orders take the customer from the order. Generic **Manual**, **MRP** and **Stock** requester values are removed, so review recipe conditions that compare the requester against those values.
+
+  ## Preferred manufacturing units
+
+  - Each item can have a manufacturing unit and a warehouse unit, selected from its alternative units. Manufacturing work mode displays and records quantities in the manufacturing unit. Warehouse views continue to display the base unit.
+  - Alternative unit equivalences use two quantities, such as `3 cajas = 1 palé`, and can be edited. This preserves relationships that cannot be expressed exactly in one direction. The API also accepts equivalences with both quantities.
+
+  ## Formula and notes editor
+
+  - Recipe formulas support the `round`, `ceil` and `floor` rounding functions from the **Round** action. The editor supports undo and redo with `Ctrl+Z` and `Ctrl+Y`, and operand suggestions open when you type `@`.
+  - Notes on work orders, preventive schedules, purchase and sales orders, their lines and manufacturing requests support formatting, headings, links and attachments. Existing records display formatted notes; switch to editing with **Edit** or a double click.
+
+  ## Features by plan
+
+  - **Control panel > Subscription** shows storage usage and its limit alongside employees, SKUs and locations. Bold rejects file uploads that exceed the plan limit.
+  - The **Features** section shows whether the plan includes advanced planning, receipt quality checks, alternative units of measure, multiple lot management, webhooks, advanced logistics and analytics reports.
+  - When the plan excludes a feature, the application hides or disables its actions. For example, **Reports** indicates that analytics reports are not included. Previously configured alternative units and receipt checks remain visible.
+
+  ## Improvements
+
+  - **Import data** adds **Update cost** for items. Use a CSV or Excel file to update planned unit cost and whether cost updates automatically in bulk.
+  - **Control panel > Files** identifies the record using each file, links to it and indicates whether Bold manages it.
+  - Messages in tasks with Boldy and the additional **Run now** message in automations support up to 30,000 characters.
+  - The **Medium** and **High** intelligence levels use a newer AI model.
+  - The API reference includes a summary for every operation and groups analytics exports by business concept.
+
+  ## Fixes
+
+  - Theoretical manufacturing cost distributes the fixed time of recipe steps across the item's replenishment quantity, based on its minimum order or lot size, instead of charging all of it to each unit.
+  - Automatic planned cost recalculation handles concurrent changes in several components of the same item better and no longer records changes when the estimate remains the same.
+  - Unit conversions round results to the saved precision instead of rejecting quantities with too many decimal places.
+  - Imports reject unrecognized values in yes/no columns instead of interpreting them as “no”.
+  - Tasks with Boldy also allow retries when the AI provider is overloaded.
+  - Long code blocks in Boldy's responses fit the available width instead of overflowing the conversation.
+</Update>
+
+<Update
+  label="2026-09-21"
+  tags={["New features", "Improvements", "Fixes"]}
+>
+  ## Complete operation groups
+
+  - In work mode, operation groups offer **Confirm without completing** and **Confirm and complete**. When you complete the full pending quantity, Bold distributes it across operations according to the plan.
+  - To complete a group before reaching its planned quantity, enter the final quantity for each operation. You can use zero or exceed the plan, but the breakdown must add up to the group's final total.
+
+  ## Plan solving modes
+
+  - When solving a production plan, or creating one with solving enabled, choose the **Solving mode**. **Basic (fast)** finds a feasible sequence using a heuristic. **Advanced (optimized)** refines that sequence to improve the result and can take several minutes.
+  - The application initially selects **Basic**. If you integrate through the API and omit the mode, the server uses **Advanced**.
+
+  ## Maintenance actions
+
+  - Maintenance actions support two new result types: **Selection**, with options configured on the action, and **Signature**, drawn on screen.
+  - You can **Undo** a completed action from **Maintenance > Work orders** or work mode. The action returns to planned status, its result and completing employee are cleared, and its notes remain. You cannot undo actions on completed or canceled work orders.
+
+  ## Manufacturing order purchases
+
+  - An MO's purchasing assistant shows all missing purchased materials in one table. The **Supplier** column suggests each item's main supplier and lets you select another of its suppliers.
+  - Bold creates one purchase order per supplier at the same time, with the originating MO identified in its notes. You can then view the created orders in a dialog. Items without a supplier appear dimmed and are excluded.
+
+  ## Improvements
+
+  - **Manufacturing > Recipes** adds the **Hide inactive** quick filter.
+  - Item and component costs display two decimal places; the tooltip retains four. Component links open their **Costs** tab directly.
+  - Recipe inputs use an icon to indicate whether the material is a **Specific item** or based on properties.
+  - The **Low**, **Medium** and **High** intelligence levels use new AI models.
+
+  ## Fixes
+
+  - When you leave a partial warehouse movement and return, you can continue from the recorded load and location, even if you skipped pickups.
+  - During a movement, you can deliver picked material even if the linked need changed or disappeared. Bold reserves only the quantity still needed.
+  - Planned movement actions are accepted even when you revisit the same location.
+  - When preparing a load order with lines from multiple orders, each selected line is added only once.
+  - A manufactured item's planned cost retains its last value while any recipe input cannot be resolved.
+  - Tasks with Boldy are no longer marked complete when a response leaves a tool result pending.
+</Update>
+
+<Update
   label="2026-09-14"
   tags={["New features", "Improvements", "Fixes"]}
 >
@@ -17,15 +121,24 @@ rss: true
 
   - Boldy can query the official documentation and use more cost, catalog, maintenance, production and warehouse tools when the user and agent have the necessary permissions.
 
+  ## Automatic execution of production plans
+
+  - When creating a production plan, choose **Create only**, **Create and solve** or **Create, solve and apply**.
+  - The solving dialog includes **Apply the plan automatically if a solution is found**.
+
   ## Improvements
 
   - Alternative unit configuration explains the conversion factor more clearly, and item creation retains the selected unit.
+  - Subscription invoice plan lines display the contracted name, such as **Plan Lite**. Stripe payment receipts include the invoice number so you can relate both documents.
 
   ## Fixes
 
   - Automations run with the permissions saved in their configuration, even if the permissions of the person starting the run have changed.
   - Voice messages sent from Telegram support more audio format variants.
   - Deleting a maintenance action also removes it from the causes where it was planned.
+  - Approved subscription invoices are emailed to billing recipients with the PDF attached.
+  - MOs no longer inherit external references from recipe elements, so you can create several MOs from the same recipe.
+  - When recording coproducts in work mode, quantities round to the decimal precision of their unit. The unit appears inside the quantity field.
 </Update>
 
 <Update
