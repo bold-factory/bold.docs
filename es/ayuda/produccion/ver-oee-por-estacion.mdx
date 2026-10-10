@@ -1,4 +1,5 @@
 ---
+en_link: "/en/guides/manufacturing/view-oee-by-workstation"
 title: "Ver el OEE por estación"
 description: "Consulta disponibilidad, rendimiento y calidad de una estación de trabajo en un periodo."
 ---
@@ -19,42 +20,46 @@ Compara los componentes para localizar dónde se concentra la pérdida.
 
 #### Ocupación
 
-Mide el aprovechamiento global del recurso respecto al _tiempo total que la fábrica o el turno estuvo abierto_.
+Mide qué parte del periodo seleccionado estaba prevista para producir, después de descontar las paradas planificadas.
 
 **¿Cómo se calcula?**
 
-Ocupación (%) = (Tiempo real en producción / Tiempo total disponible en calendario) \* 100
+Ocupación (%) = (Tiempo planificado de producción / Tiempo total del periodo) \* 100
 
-- **Tiempo real en producción:** suma de las duraciones registradas mientras la estación tuvo operaciones activas.
-- **Tiempo total disponible en calendario:** horas en las que la planta o el turno estuvo operativo según la configuración de calendarios, turnos y jornadas laborales.
+- **Tiempo planificado de producción:** tiempo programado para la estación, menos las paradas planificadas que la detuvieron. En el resumen aparece como **Productivo**.
+- **Tiempo total del periodo:** todo el intervalo seleccionado, incluidas las horas fuera de turno. En el resumen aparece como **Total**.
 
 **¿Qué significa un porcentaje bajo de ocupación?**
 
-Un porcentaje bajo indica que la estación estuvo parada o sin carga de trabajo durante parte del tiempo disponible. Revisa estas posibles causas:
+A menor ocupación, menor parte del periodo estaba prevista para producir. Revisa:
 
-- **Falta de carga de trabajo:** la estación no tenía órdenes asignadas ni peticiones de fabricación programadas durante el turno.
-- **Paradas prolongadas o cuellos de botella:** la estación esperaba material, herramientas o la finalización de una operación anterior.
-- **Falta de personal:** la estación estaba disponible, pero no había empleados asignados para utilizarla.
+- **Horas fuera de turno:** el periodo puede incluir noches, fines de semana u otras franjas sin actividad programada.
+- **Paradas planificadas:** los descansos o mantenimientos planificados reducen el tiempo previsto para producir.
+- **Configuración de turnos:** comprueba que el horario de la estación refleja las franjas en las que debe trabajar.
+
+Para saber cuánto de ese tiempo se aprovechó realmente, consulta **Disponibilidad**.
 
 #### Disponibilidad
 
-Mide la proporción de tiempo que la estación estuvo realmente produciendo frente al tiempo en que estaba planificado que trabajara.
+Mide qué parte del tiempo planificado de producción tuvo operaciones en marcha dentro del turno.
 
 **¿Cómo se calcula?**
 
 Disponibilidad (%) = (Tiempo real de funcionamiento / Tiempo planificado de producción) \* 100
 
-- **Tiempo real de funcionamiento:** tiempo efectivo durante el que las operaciones estuvieron en marcha. Bold lo calcula restando del tiempo planificado las pausas no planificadas registradas.
+- **Tiempo real de funcionamiento:** tiempo con operaciones en marcha dentro del turno. En el resumen aparece como **En marcha**.
 
-- **Tiempo planificado de producción:** tiempo durante el que la estación debía trabajar según el turno o la jornada configurada.
+- **Tiempo planificado de producción:** tiempo programado para la estación, menos las paradas planificadas que la detuvieron. En el resumen aparece como **Productivo**.
+
+Las paradas no planificadas y el tiempo sin operaciones en marcha reducen la disponibilidad. El trabajo fuera de turno se muestra por separado como **En marcha (no programado)**.
 
 **¿Qué significa un porcentaje bajo de disponibilidad?**
 
 Un valor bajo indica que la estación pasa demasiado tiempo parada y no está produciendo cuando debería. Las causas principales suelen ser:
 
-- Averías imprevistas o fallos técnicos.
-- Falta de materia prima o materiales en la estación de trabajo.
-- Tiempos excesivos en cambios de lote, ajuste de herramientas o preparación.
+- Averías, fallos técnicos o preparaciones registrados como paradas no planificadas.
+- Esperas por materiales, herramientas o una operación anterior.
+- Tiempo sin operaciones en marcha por falta de carga de trabajo o de personal.
 - Registros incompletos: si los operarios olvidan pausar o reanudar las operaciones, el tiempo de parada puede quedar registrado como productivo o al contrario.
 
 #### Rendimiento

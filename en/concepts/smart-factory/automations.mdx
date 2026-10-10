@@ -1,0 +1,61 @@
+---
+es_link: "/es/conceptos/smart-factory/automatizaciones"
+title: "Automations"
+description: "Understand reusable configuration and triggers that create Boldy tasks."
+icon: "calendar-clock"
+---
+
+An **automation** retains the configuration of reusable work. You can run it manually or add triggers so Bold creates tasks without manual intervention.
+
+Each run creates a [task](/en/concepts/smart-factory/tasks) with its own status, history, result and credit consumption.
+
+## What an automation configures
+
+| Option | Use |
+| --- | --- |
+| Name and instructions | Identify the work and describe the expected result. |
+| Intelligence level | Adjusts reasoning capability and expected consumption. |
+| Mode | Defines **Read only** or **Allow changes**. |
+| Clarification questions | Allow the task to request information when context is missing. |
+| Memory | Preserves reusable context between runs when enabled. |
+| Delegated permissions | Limit the data and actions Boldy can use. |
+| Owner | Identifies the user who owns the automation and its runs. |
+
+The owner can delegate only permissions they have been granted. Use **Read only** when work should be limited to looking up or analyzing information.
+
+## Triggers
+
+An automation can have **several triggers**. You enable, disable and review each one separately.
+
+| Type | When it creates a task | Main configuration |
+| --- | --- | --- |
+| Scheduled | At a frequency and time. | Frequency, interval, time zone and next run. |
+| By event | When a supported event occurs. | Event, version and optional condition. |
+
+You can combine several scheduled and event triggers in the same automation. You can also run it manually even without active triggers.
+
+Each trigger retains its last run, next run when applicable and run count. A condition in an event trigger prevents task creation when the change does not meet the configured criterion.
+
+## Questions and memory
+
+If you allow clarification questions, a run can remain **Action required** until the owner responds. Consider this behavior for work that should continue without immediate supervision.
+
+If you enable memory, the automation can reuse context between runs. You can review and edit that memory. Disabling it deletes the content saved for the automation.
+
+## Run visibility
+
+Tasks created by an automation are shared. Users with access to tasks can view them. Ownership and administration permissions determine who can continue or manage a run.
+
+## Good practices
+
+- start with **Read only** and expand the mode only if work needs changes;
+- delegate only necessary permissions;
+- test the automation manually before enabling triggers;
+- review initial runs and adjust instructions;
+- disable triggers that generate unnecessary tasks.
+
+## Related
+
+- [Tasks](/en/concepts/smart-factory/tasks)
+- [Audit trail and events](/en/concepts/control-panel/audit-and-events)
+- [Create an automation](/en/guides/smart-factory/automate-tasks)

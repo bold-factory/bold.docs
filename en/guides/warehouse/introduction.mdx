@@ -1,0 +1,56 @@
+---
+es_link: "/es/ayuda/almacen/introduccion"
+title: "Manage the warehouse"
+description: "Configure locations and manage stock, movements, receipts, loads, and stock counts."
+---
+
+Warehouse management lets you know where materials are, how they arrive, how they leave, and which movements explain each change. This data connects physical stock with purchasing, sales, planning, manufacturing, and costs.
+
+## Work areas
+
+<Columns cols={2}>
+  <Card title="Locations" icon="map-pin" href="/en/guides/warehouse/create-locations">
+    Places where you receive, store, consume, prepare, or ship materials.
+  </Card>
+  <Card title="Plan and prepare a load" icon="calendar-clock" href="/en/guides/warehouse/plan-and-prepare-a-load">
+    Group goods, schedule the load, and request transfer to the dispatch location.
+  </Card>
+  <Card title="Provision manufacturing" icon="forklift" href="/en/guides/warehouse/provision-raw-materials">
+    Move raw materials to a workstation's consumption location.
+  </Card>
+  <Card title="Execute and close a load order" icon="package-check" href="/en/guides/warehouse/execute-and-close-a-load-order">
+    Record work, validate the load, and complete its shipments.
+  </Card>
+  <Card title="Stock discrepancies" icon="search" href="/en/guides/warehouse/investigate-stock-discrepancies">
+    Check stock and movements to correct discrepancies while preserving traceability.
+  </Card>
+  <Card title="Lot traceability" icon="scan-search" href="/en/guides/warehouse/investigate-lot-traceability">
+    Follow a lot's origin, movements, stock, and cost.
+  </Card>
+  <Card title="Receipt inspections" icon="clipboard-check" href="/en/guides/warehouse/configure-and-complete-receipt-inspections">
+    Define checks per item and record their results when receiving materials.
+  </Card>
+  <Card title="Stock counts" icon="clipboard-check" href="/en/guides/warehouse/take-a-stock-count">
+    Compare the physical count with recorded stock and apply discrepancies.
+  </Card>
+  <Card title="Packages and containers" icon="package" href="/en/guides/warehouse/work-with-packages-and-containers">
+    Group physical stock to move, prepare, or ship it as a unit.
+  </Card>
+</Columns>
+
+## What changes stock
+
+| Action | Effect |
+| --- | --- |
+| Receive a purchase order | Increases physical stock. |
+| Ship materials | Reduces physical stock. |
+| Move stock | Changes location or package while preserving the lot and total quantity. |
+| Adjust stock | Corrects an individual discrepancy. |
+| Take a stock count | Reconciles according to the physical count. |
+| Consume or produce | Updates stock from manufacturing. |
+| Execute a warehouse movement | Transfers materials through audited pick-ups and deliveries. |
+| Complete a load order | Dispatches its shipments and reduces stock at the loading location. |
+
+## Before you start
+
+Define locations and decide which items require lots. If you work with supplier documents, prepare their item references to help associate data when scanning delivery notes.

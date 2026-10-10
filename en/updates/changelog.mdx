@@ -1,0 +1,658 @@
+---
+es_link: "/es/novedades/changelog"
+title: "Product updates"
+description: "View recent application changes."
+rss: true
+---
+
+<Update
+  label="2026-10-01"
+  tags={["New features", "Improvements", "Fixes"]}
+>
+  ## Global search
+
+  - Global search (**Ctrl+K**) brings records, application sections and documentation into one dialog. Only sections you can access appear, and documentation results open in another tab.
+  - Results include movements, containers, load orders and warehouse counts. You can also find a record by its full identifier.
+
+  ## Stock history
+
+  - **Warehouse > Stock control > Stock history** shows stock changes for all items, with filters for item, location, lot and cause. Query periods of up to 365 days; the default shows the last 7 days. You can also include lot reclassifications.
+  - The item's stock tab shows its recent changes. **View more** opens the history filtered by that item.
+  - **Export data** adds **Stock history** in CSV or Excel format.
+
+  ## Preventive maintenance and work orders
+
+  - Preventive schedules support the **Weekdays** frequency, Monday to Friday, and filters for asset, cause and frequency. **Generate now** creates a work order immediately, and the **Generated orders** tab shows each schedule's work orders.
+  - Work order actions can be required. You cannot complete the work order while required actions remain pending.
+  - Each action separates instructions explaining how to perform it from the execution notes the technician adds when completing it.
+  - Work orders include formatted **Comments** and attachments. You can add them from **Maintenance > Work orders** and from work mode.
+  - An action's **Uses** tab shows which causes plan it and which work orders include it. Deleting an action removes it from open work orders where it is still pending and preserves it in the history of work orders where it was completed.
+
+  ## Make to order and customers on manufacturing requests
+
+  - Sales lines with **Pending** or **Partially delivered** status offer **Make to order**. The line changes to **Make to order** and, if the item is manufactured, Bold creates a manufacturing request linked to the order and its customer. The button is disabled when the line already has an active request.
+  - Manufacturing requests can link to a customer, whose name is used as the requester. Without a customer, the requester is optional free text. Each MO copies the customer and requester from its request.
+  - Existing requests and MOs linked to sales orders take the customer from the order. Generic **Manual**, **MRP** and **Stock** requester values are removed, so review recipe conditions that compare the requester against those values.
+
+  ## Preferred manufacturing units
+
+  - Each item can have a manufacturing unit and a warehouse unit, selected from its alternative units. Manufacturing work mode displays and records quantities in the manufacturing unit. Warehouse views continue to display the base unit.
+  - Alternative unit equivalences use two quantities, such as `3 cajas = 1 palé`, and can be edited. This preserves relationships that cannot be expressed exactly in one direction. The API also accepts equivalences with both quantities.
+
+  ## Formula and notes editor
+
+  - Recipe formulas support the `round`, `ceil` and `floor` rounding functions from the **Round** action. The editor supports undo and redo with `Ctrl+Z` and `Ctrl+Y`, and operand suggestions open when you type `@`.
+  - Notes on work orders, preventive schedules, purchase and sales orders, their lines and manufacturing requests support formatting, headings, links and attachments. Existing records display formatted notes; switch to editing with **Edit** or a double click.
+
+  ## Features by plan
+
+  - **Control panel > Subscription** shows storage usage and its limit alongside employees, SKUs and locations. Bold rejects file uploads that exceed the plan limit.
+  - The **Features** section shows whether the plan includes advanced planning, receipt quality checks, alternative units of measure, multiple lot management, webhooks, advanced logistics and analytics reports.
+  - When the plan excludes a feature, the application hides or disables its actions. For example, **Reports** indicates that analytics reports are not included. Previously configured alternative units and receipt checks remain visible.
+
+  ## Improvements
+
+  - **Import data** adds **Update cost** for items. Use a CSV or Excel file to update planned unit cost and whether cost updates automatically in bulk.
+  - **Control panel > Files** identifies the record using each file, links to it and indicates whether Bold manages it.
+  - Messages in tasks with Boldy and the additional **Run now** message in automations support up to 30,000 characters.
+  - The **Medium** and **High** intelligence levels use a newer AI model.
+  - The API reference includes a summary for every operation and groups analytics exports by business concept.
+
+  ## Fixes
+
+  - Theoretical manufacturing cost distributes the fixed time of recipe steps across the item's replenishment quantity, based on its minimum order or lot size, instead of charging all of it to each unit.
+  - Automatic planned cost recalculation handles concurrent changes in several components of the same item better and no longer records changes when the estimate remains the same.
+  - Unit conversions round results to the saved precision instead of rejecting quantities with too many decimal places.
+  - Imports reject unrecognized values in yes/no columns instead of interpreting them as “no”.
+  - Tasks with Boldy also allow retries when the AI provider is overloaded.
+  - Long code blocks in Boldy's responses fit the available width instead of overflowing the conversation.
+</Update>
+
+<Update
+  label="2026-09-21"
+  tags={["New features", "Improvements", "Fixes"]}
+>
+  ## Complete operation groups
+
+  - In work mode, operation groups offer **Confirm without completing** and **Confirm and complete**. When you complete the full pending quantity, Bold distributes it across operations according to the plan.
+  - To complete a group before reaching its planned quantity, enter the final quantity for each operation. You can use zero or exceed the plan, but the breakdown must add up to the group's final total.
+
+  ## Plan solving modes
+
+  - When solving a production plan, or creating one with solving enabled, choose the **Solving mode**. **Basic (fast)** finds a feasible sequence using a heuristic. **Advanced (optimized)** refines that sequence to improve the result and can take several minutes.
+  - The application initially selects **Basic**. If you integrate through the API and omit the mode, the server uses **Advanced**.
+
+  ## Maintenance actions
+
+  - Maintenance actions support two new result types: **Selection**, with options configured on the action, and **Signature**, drawn on screen.
+  - You can **Undo** a completed action from **Maintenance > Work orders** or work mode. The action returns to planned status, its result and completing employee are cleared, and its notes remain. You cannot undo actions on completed or canceled work orders.
+
+  ## Manufacturing order purchases
+
+  - An MO's purchasing assistant shows all missing purchased materials in one table. The **Supplier** column suggests each item's main supplier and lets you select another of its suppliers.
+  - Bold creates one purchase order per supplier at the same time, with the originating MO identified in its notes. You can then view the created orders in a dialog. Items without a supplier appear dimmed and are excluded.
+
+  ## Improvements
+
+  - **Manufacturing > Recipes** adds the **Hide inactive** quick filter.
+  - Item and component costs display two decimal places; the tooltip retains four. Component links open their **Costs** tab directly.
+  - Recipe inputs use an icon to indicate whether the material is a **Specific item** or based on properties.
+  - The **Low**, **Medium** and **High** intelligence levels use new AI models.
+
+  ## Fixes
+
+  - When you leave a partial warehouse movement and return, you can continue from the recorded load and location, even if you skipped pickups.
+  - During a movement, you can deliver picked material even if the linked need changed or disappeared. Bold reserves only the quantity still needed.
+  - Planned movement actions are accepted even when you revisit the same location.
+  - When preparing a load order with lines from multiple orders, each selected line is added only once.
+  - A manufactured item's planned cost retains its last value while any recipe input cannot be resolved.
+  - Tasks with Boldy are no longer marked complete when a response leaves a tool result pending.
+</Update>
+
+<Update
+  label="2026-09-14"
+  tags={["New features", "Improvements", "Fixes"]}
+>
+  ## Planning assistants
+
+  - The purchasing and production assistants let you work only with items procured to stock or include all items.
+
+  ## More capabilities for Boldy
+
+  - Boldy can query the official documentation and use more cost, catalog, maintenance, production and warehouse tools when the user and agent have the necessary permissions.
+
+  ## Automatic execution of production plans
+
+  - When creating a production plan, choose **Create only**, **Create and solve** or **Create, solve and apply**.
+  - The solving dialog includes **Apply the plan automatically if a solution is found**.
+
+  ## Improvements
+
+  - Alternative unit configuration explains the conversion factor more clearly, and item creation retains the selected unit.
+  - Subscription invoice plan lines display the contracted name, such as **Plan Lite**. Stripe payment receipts include the invoice number so you can relate both documents.
+
+  ## Fixes
+
+  - Automations run with the permissions saved in their configuration, even if the permissions of the person starting the run have changed.
+  - Voice messages sent from Telegram support more audio format variants.
+  - Deleting a maintenance action also removes it from the causes where it was planned.
+  - Approved subscription invoices are emailed to billing recipients with the PDF attached.
+  - MOs no longer inherit external references from recipe elements, so you can create several MOs from the same recipe.
+  - When recording coproducts in work mode, quantities round to the decimal precision of their unit. The unit appears inside the quantity field.
+</Update>
+
+<Update
+  label="2026-09-07"
+  tags={["New features", "Improvements", "Fixes"]}
+>
+  ## Alternative units of measure
+
+  - The catalog adds unit of measure management. You can define a main unit, alternative units and their conversion factor for each item.
+  - Sales and purchase orders let you enter quantities in an alternative unit. Bold retains the chosen unit and shows quantities with their unit in planning, production, warehouse and work mode.
+
+  ## Theoretical manufacturing costs
+
+  - The planned cost of manufactured items is calculated from materials, labor and machines. Item details separate direct costs from costs inherited from semi-finished items.
+
+  ## Boldy by voice and Telegram
+
+  - You can link your account from your profile to chat with Boldy in Telegram. Conversations support images, files and voice messages.
+  - Smart Factory tasks let you record or attach audio. Bold transcribes the recording and displays the transcript next to the message.
+
+  ## Improvements
+
+  - Boldy's responses in Telegram retain Markdown formatting and display typing status while the response is prepared.
+  - MCP connections can query Bold concept documentation as context resources.
+
+  ## Fixes
+
+  - When releasing an MO, property-based inputs select the family's only available item even if the recipe retains property values that no longer exist.
+  - The cost breakdown correctly includes materials with **Ignore** procurement and keeps direct and inherited costs separate.
+</Update>
+
+<Update
+  label="2026-08-31"
+  tags={["New features", "Improvements", "Fixes"]}
+>
+  ## Subscription and AI credits
+
+  - **Control panel > Subscription** brings together the main plan, purchased integrations, AI credits and invoices. The **Payment method** tab shows the current method and lets you change it through the secure Stripe form embedded in Bold. Administrators can also download invoices and complete payments that need intervention.
+  - The payment method step in administrator registration uses the embedded Stripe form, keeping the user within the onboarding experience.
+  - Credits included in the plan and purchased credits are shown separately. You can view monthly usage and purchase packs; the purchased balance carries over from one month to the next.
+  - **Smart Factory > Tasks** warns when 20% or less of the available credits remain. Administrators can start a purchase from the warning itself.
+
+  ## Assistants and integrations
+
+  - You can connect ChatGPT Desktop or Claude Code to Bold through MCP and an API key to query operational information using natural language.
+  - API lists standardize pagination, search, filters and sorting. The `Expand` parameter lets you explicitly request related data, including relationships up to two levels deep when the route supports them.
+
+  ## Improvements
+
+  - Recipe conditions correctly distinguish **Production order quantity** from **Requested quantity**, display labels in Spanish and validate the formula when you save it.
+
+  ## Fixes
+
+  - Receipts correctly display the order and item for pending purchase lines.
+  - Old recipe version links lead to their current address, and warehouse movements retain their navigation path.
+</Update>
+
+<Update
+  label="2026-08-24"
+  tags={["New features", "Improvements", "Fixes"]}
+>
+  ## Tasks and automations
+
+  - Tasks with Boldy allow retries when the AI provider temporarily has no capacity and explain when credits have run out. Conversations identify each message's author and display explanations of clarification options.
+  - **Read only** automations can update their own memory without obtaining permission to modify business data.
+
+  ## Production and indicators
+
+  - **Employee activity** lets you filter between active employees and employees without an operation.
+  - Starting or resuming an operation records the responsible employee. Bold uses the employee linked to the user or lets you select one when that link does not exist.
+  - The production progress log adds pagination so you can view, sort and filter all results.
+
+  ## Fixes
+
+  - You can release an MO for an item that does not belong to a family.
+  - To remove an operation's last active assignment, you must pause it first, preventing ongoing work from being left without an employee.
+  - Tasks adapt better to mobile screens, and the load order calendar avoids scrollbars when you drag an order.
+</Update>
+
+<Update
+  label="2026-08-17"
+  tags={["New features", "Improvements", "Fixes"]}
+>
+  ## Tasks and automations
+
+  - Smart Factory separates **Tasks** and **Automations**. You can start a one-off task, choose visibility and intelligence level, and view the history of work with Boldy.
+  - Automations can run on demand with **Run now** and an optional additional message. You can also configure **Clarification questions** and **Memory**.
+  - **Dashboards** moves to Smart Factory, alongside reports and agents.
+
+  ## Recipe applicability
+
+  - Recipes are linked to families or specific items, with applicability conditions and priority.
+  - Items show whether each recipe is **Ready**, **Missing information** or **Inactive**, and which properties are missing to use it.
+
+  ## New features
+
+  - In work mode, receipt inspections are grouped by line as **Pending inspections for this line**.
+  - Shipments show the associated **Load order**.
+
+  ## Improvements
+
+  - Task conversations show tool status more clearly and explain when the context is too long to continue.
+
+  ## Fixes
+
+  - Work mode inspections respect completion order and blocking at receipt.
+  - Deleting a supplier cleans up its item links and associated purchase forecasts.
+</Update>
+
+<Update
+  label="2026-08-10"
+  tags={["New features", "Improvements"]}
+>
+  ## Families
+
+  - The catalog uses **Families** for what previously appeared as products. A family groups items, properties and recipes under the same concept.
+
+  ## Improvements
+
+  - Items indicate whether property information is missing, using **Missing information** or **All good**.
+</Update>
+
+<Update
+  label="2026-07-27"
+  tags={["New features", "Improvements", "Fixes"]}
+>
+  ## New features
+
+  - When entering work mode, you can search for an employee if they do not appear in the list. When resuming, you choose **We all resume** or **Only me**.
+  - **Change workstation** lets you apply the change only to this operation, to the immediately following operations or to all pending operations in the order.
+  - You can **Cancel movement** when it is not yet transporting stock, specifying the reason.
+  - Recipes allow you to **Copy operation to another recipe**, including inputs, steps and conditions.
+  - From a manufacturing order, you can **Resolve with the purchase assistant**, view **Related orders** and adjust the **Target date**.
+  - **Import data** accepts CSV or Excel and adds employees, locations, areas, workstations, operation types, maintenance assets, properties and item suppliers.
+  - **Export data** adds item, manufacturing order and operation costs.
+  - When preparing a load order, you can specify a partial **Quantity to load** and filter pending lines.
+  - Work orders support **Undo finish**. Operations groups can include paused operations.
+
+  ## Improvements
+
+  - Sequencing brings together **Orders**, **Operations** and **Plans** views, with filters by area, workstation and tool, and the **Hide planned** option.
+  - Resource assignment adds filters by order code, operation, requester, process, area and workstation.
+  - When setting a property value for an item, only its applicable properties appear.
+  - **What is this?** help links to the documentation through **More information**.
+
+  ## Fixes
+
+  - Pausing in work mode does not close assignments. You can change workstation even while the operation is running.
+  - A manufacturing order's purchasing assistant discards previous proposals when the requirement changes.
+  - If not all related orders can be loaded, the table indicates this instead of hiding the rest.
+</Update>
+
+<Update
+  label="2026-07-20"
+  tags={["New features", "Improvements", "Fixes"]}
+>
+  ## New features
+
+  - Warehouse lets you plan load orders from pending sales orders or lines ready to ship, schedule them on a calendar and complete the work from work mode.
+  - Teams can view internal stock movements, manage material handling equipment such as forklifts, and guide the operator through stock pickup, transfer and delivery.
+  - You can create and maintain transports. Locations show their current stock, and workstations can use different input and output locations.
+  - Notification subscriptions support independent conditions for the application and email channels.
+  - A manufacturing order's time records can be edited or deleted, including their assignments, employees, pauses, timestamps and comments.
+  - Event-triggered automations add an audit view to inspect their history and changes.
+  - Data export expands its catalog for items, people, planning, warehouse, production and maintenance, in CSV or Excel format.
+  - Administrators can choose whether **My operations** uses employees' usual workstations or skills, and configure automatic load order provisioning.
+
+  ## Improvements
+
+  - Sales planning shows delivery instructions and expected shipment dates.
+  - Employee indicator cards list each active operation and link to its details.
+  - Agent sessions use the **Allow changes** and **Read only** controls to clarify whether the agent can perform actions.
+  - Navigation groups warehouse tools by workflow, names the configuration area **Control panel**, and provides access to documentation from the header.
+  - Options for stopping work are clearer, and the production filter uses the correct term for restricted operations.
+
+  ## Fixes
+
+  - When stopping work on a shared operation, you can choose to pause the whole team or let others continue. The system shows the appropriate pause reasons for shared workstations.
+  - In-app and email notification toggles maintain independent saving states.
+  - The Purchasing assistant creates the order and its lines in a single operation and discards the previous success state when the proposal changes.
+  - Agent automations without a start date can be edited without errors.
+</Update>
+
+<Update
+  label="2026-07-13"
+  tags={["New features", "Improvements", "Fixes"]}
+>
+  ## Plan mode in agent sessions
+
+  - Smart Factory agent sessions add Plan mode. You can enable it when starting a session or sending a message, distinguish planning responses and modify or execute the latest plan using quick actions.
+
+  ## Improvements
+
+  - The manufacturing order diagram makes better use of the available height and keeps action controls visible.
+  - The work mode progress action is now called **Complete** instead of **Record**.
+
+  ## Fixes
+
+  - When unassigning a single operation, its workstation's pause reasons appear. For multiple operations or workstations, a broader list appears.
+  - Individual operation details in work mode no longer show an out-of-context pause action.
+</Update>
+
+<Update
+  label="2026-07-06"
+  tags={["New features", "Improvements", "Fixes"]}
+>
+  ## New features
+
+  - Authorized users can export products, sales orders, sales lines and purchase orders from the Control panel in CSV or Excel format.
+  - Production work mode adds an active operation search with text, QR code scanning, and status and date filters.
+  - Sequencing includes a broader set of open orders, operations and groups. Related lists update after grouping or moving work.
+
+  ## Improvements
+
+  - Maintenance cost and time record tables use clearer labels for employees and item codes.
+
+  ## Fixes
+
+  - Maintenance actions can be completed from work mode with the correct work order context. The **Complete** button no longer opens or closes the row unintentionally.
+  - If a screen fails to render, the application displays a recovery message with options to retry or return to the home page.
+  - Fixed API connection issues and missing application error reports in production.
+</Update>
+
+<Update
+  label="2026-06-29"
+  tags={["New features", "Improvements", "Fixes"]}
+>
+  ## New features
+
+  - Event-triggered automations join scheduled automations. You can choose an agent and business event, add conditions on event data, and enable, disable, edit or delete the automation.
+  - Sales orders and lines can be cancelled from planning screens. The cancellation date remains visible in the history.
+  - Production lets you create a material manufacturing request from the row where a shortage of a component manufactured to order is detected.
+  - Smart Factory agents, automations and sessions show who created or modified each record and when.
+  - Operation type details show the employees who can perform the process.
+  - Company customization lets you select Spanish or English as the language.
+
+  ## Improvements
+
+  - Application notifications and links open more related records, such as materials, assignments, co-products and sales lines.
+  - Smart Factory notifications distinguish agent responses and clarification requests more clearly.
+  - A manufacturing order's materials, inspections and progress tabs show the related operation. Final progress is separated from progress recorded in other operations.
+  - Recipe and production screens add help for co-products and semi-finished inputs, including explanatory text and fixed-value indicators.
+  - Scheduled automations are grouped in the **Automations** area. The **Agents** page focuses on managing agents and running tasks.
+
+  ## Fixes
+
+  - Smart Factory session chat once again displays agent messages and clarification requests in real time.
+  - The event automation form retains changes when opened or saved. If it does not recognize an event, it shows a safe fallback name.
+  - The Production assistant only links a new request to an order input when the forecast comes from that demand.
+  - If a material already has a linked manufacturing request, the row links to it and does not offer to create another.
+  - Notification links identify records more accurately and direct material and co-product alerts to the correct order inputs tab.
+  - Language selection is saved with the expected value.
+  - New maintenance actions start with a valid duration of zero minutes.
+</Update>
+
+<Update
+  label="2026-06-22"
+  tags={["Improvements", "Fixes", "Documentation"]}
+>
+  ## Improvements
+
+  - Materials, inspections and progress tabs show the related operation to make each quantity, consumption record or inspection easier to understand.
+  - Progress separates the order's final production from progress recorded in other operations.
+  - Consumption uses the actual consumption operation when available.
+  - Recipe diagrams adapt their size better.
+
+  ## Fixes
+
+  - The production assistant avoids linking reorder point or forecast suggestions to incorrect inputs.
+
+  ## Documentation
+
+  - Embedded help expands in planning, manufacturing, stock, maintenance, people and settings.
+</Update>
+
+<Update
+  label="2026-06-15"
+  tags={["New features", "Improvements"]}
+>
+  ## Multilevel bill of materials
+
+  - Item details add a multilevel bill of materials with recipes, units, purchasing, manufacturing, search and expansion by level.
+
+  ## New features
+
+  - Sales orders add free-text search, order date, expanded import, rich notes and commitment filters.
+  - Preventive calendars and agent automations support quarterly, semiannual and annual recurrence.
+  - Production lets you select visible operations and start those that are ready in bulk.
+
+  ## Improvements
+
+  - Recipes let you copy and paste conditions between elements to reuse rules without repeating configuration.
+  - Agent settings can suggest permissions based on their instructions.
+</Update>
+
+<Update
+  label="2026-06-08"
+  tags={["New features", "Improvements"]}
+>
+  ## Preventive maintenance
+
+  - Preventive maintenance lets you create, edit, enable, disable and delete recurring calendars.
+  - Maintenance actions can capture results using yes/no, numbers, text, images and files.
+
+  ## New features
+
+  - Sales lines show linked supply and a reset option when the planning workflow allows it.
+  - Manufacturing orders bring together materials, co-products, inspections, progress, labor and interruptions in a more complete view.
+  - Agents add memory controls and editable notes.
+
+  ## Improvements
+
+  - Sales distinguish requested, committed, target and expected stock dates to make delivery risk easier to assess.
+</Update>
+
+<Update
+  label="2026-06-01"
+  tags={["New features", "Improvements"]}
+>
+  ## Agent clarification questions
+
+  - Agents can ask clarification questions with options or free text, and each agent can allow or block these questions.
+
+  ## New features
+
+  - Operators can record rejected quantities separately from good production.
+  - Workstations can be configured with infinite capacity when overlapping does not create a conflict.
+  - Resource assignment can include required tools as well as workstations.
+
+  ## Improvements
+
+  - The planning diagram adds tooltips, a context menu, dependency arrows, better use of space and clearer delay metrics.
+  - Order creation reduces steps, validates the recipe when saved and asks for confirmation when the order has no recipe.
+</Update>
+
+<Update
+  label="2026-05-25"
+  tags={["New features", "Improvements"]}
+>
+  ## Attachments in agent tasks
+
+  - Agent tasks accept attachments when creating or replying, including dragging files, selecting files and pasting images.
+
+  ## New features
+
+  - Boldy's conversation history lets you revisit previous sessions.
+  - Recipe and manufacturing operations can define required employees.
+  - Recipe quality inspections support file inspections.
+  - Sequencing lets you adjust operation target dates from the planning view.
+
+  ## Improvements
+
+  - Configuration imports let you add or remove item property values in bulk.
+  - Automations gain status and deletion controls in the editing workflow.
+</Update>
+
+<Update
+  label="2026-05-18"
+  tags={["New features", "Improvements"]}
+>
+  ## Agent management
+
+  - Administrators can create, edit, delete and configure agents with an intelligence level and permissions.
+  - Users can start agent tasks, follow the conversation, view status, review credits and continue a conversation when needed.
+
+  ## New features
+
+  - Agent automations let you schedule daily, weekly or monthly runs.
+
+  ## Improvements
+
+  - Smart Factory groups Power BI reports, Boldy and agent tasks with clearer labels.
+  - Rich responses display tables, code blocks and wide content better.
+  - The plan shows monthly AI credit usage with navigation by month.
+</Update>
+
+<Update
+  label="2026-05-11"
+  tags={["New features", "Improvements"]}
+>
+  ## Tools and skills
+
+  - Production lets you manage tools and characteristics, associate them with processes and use them when defining work.
+  - Employee profiles include skills to support planning and assignment.
+
+  ## New features
+
+  - Quality inspections can request files as evidence, rather than only photos or values.
+
+  ## Improvements
+
+  - The shop floor lets you search for work by workstation, area or process.
+  - Planning displays availability, resource grouping, scale and solver progress more clearly.
+  - Exiting with active work asks whether to close the work or only sign out of the device.
+</Update>
+
+<Update
+  label="2026-05-04"
+  tags={["Improvements"]}
+>
+  ## Improvements
+
+  - Consumption tables show quantity, lot and consumption time directly in each row.
+  - Work mode shows the employee's recent operations as well as those still active.
+  - Lot codes are displayed more consistently in inventory, stock, counts, containers, costs and lot tables.
+  - Employee activity and indicator views focus on operations rather than presence assignments.
+  - Work mode task lists update after assigning, unassigning, starting, pausing, resuming or recording progress.
+</Update>
+
+<Update
+  label="2026-04-27"
+  tags={["Improvements", "Fixes"]}
+>
+  ## Improvements
+
+  - Material views separate pending and actual consumption, with an overall availability summary.
+  - Consumed lot traceability shows codes, quantities and consumption times from material views.
+  - Lot codes are displayed more consistently in warehouse, inventory and counts.
+  - OEE trend charts hide future periods and show clearer percentage labels.
+  - Order and operation links are more consistent from indicators, sequencing, warehouse and shop floor views.
+
+  ## Fixes
+
+  - Required item property values are protected against accidental deletion.
+</Update>
+
+<Update
+  label="2026-04-20"
+  tags={["New features", "Improvements"]}
+>
+  ## New features
+
+  - Purchase and sales orders support attachments with upload, viewing, download and deletion.
+  - Administrators can configure code prefixes for automatically generated records.
+  - Company settings let you select a time zone.
+  - Recipe inputs support fixed values for semi-finished items.
+  - Items can use the "Ignore" procurement option when they should not participate in planning.
+
+  ## Improvements
+
+  - Order screens separate information and files into clearer tabs.
+</Update>
+
+<Update
+  label="2026-04-13"
+  tags={["New features", "Improvements", "Fixes"]}
+>
+  ## New features
+
+  - The OEE trends report lets you review monthly or annual trends for OEE, availability, performance and quality.
+  - Sales order lines let you choose how demand will be covered and view stock and projected availability context.
+
+  ## Improvements
+
+  - OEE details display interruption comments with contextual help.
+  - Planning terminology uses clearer coverage and procurement language.
+
+  ## Fixes
+
+  - Shipment and receipt creation avoids duplicate actions in already completed or non-actionable states.
+</Update>
+
+<Update
+  label="2026-03-30"
+  tags={["New features", "Improvements", "Fixes"]}
+>
+  ## New features
+
+  - Item property values can be edited from the table, including text, numbers, dates, yes/no and options.
+  - Recipe steps support formulas for duration and workload and show them in lists.
+
+  ## Improvements
+
+  - Units are displayed more consistently in orders, requests and costs.
+  - Item properties are sorted alphabetically to make long tables easier to review.
+  - Input quantities start at 0, block negative values and show validation when the minimum is invalid.
+
+  ## Fixes
+
+  - Grouped operation filters correctly search by group name.
+  - The option to add property values from item editing has been restored.
+</Update>
+
+<Update
+  label="2026-02"
+  tags={["New features", "Improvements"]}
+>
+  ## Co-products and units
+
+  - Recipes and orders begin supporting co-products, units and decimal precision per item.
+
+  ## New features
+
+  - Labels support downloads from operations groups, custom metadata in QR codes or barcodes, product names and order notes.
+  - Stock counts and lots add count import, lot origin and lot type in tables and assignment.
+  - Receipts and shipments can be completed automatically when creating the document, when the workflow requires it.
+
+  ## Improvements
+
+  - Properties can be duplicated, and recipes show status, active version and actions to activate a version or make it editable again.
+</Update>
+
+<Update
+  label="2026-01"
+  tags={["New features", "Improvements"]}
+>
+  ## New features
+
+  - Quality adds receipt inspections, including photos, completion and the responsible person.
+  - Company onboarding automates more setup steps for access, search, Power BI reports and authentication.
+
+  ## Improvements
+
+  - Production improves operations groups, bulk actions and operation grouping from the list.
+  - Administration strengthens the relationship between users and employees, localized messages, plan usage and company limits.
+  - Sales and purchasing adjust defaults, minimum quantities, order lines, prices, lots and optional fields.
+</Update>

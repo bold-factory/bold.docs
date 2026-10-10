@@ -1,0 +1,54 @@
+---
+es_link: "/es/ayuda/produccion/para-que-son-necesarias-las-condiciones"
+title: "Adapt manufacturing to variants"
+description: "Adapt operations, materials, instructions, and inspections to each manufactured variant."
+---
+
+Design a single manufacturing routing for several items in the same family. In Bold, **conditions** show or hide operations, materials, instructions, or inspections according to the manufactured item's properties. See [Recipes and versions](/en/concepts/manufacturing/recipes-and-versions) to understand how conditions apply within a recipe.
+
+You can apply conditions in four parts of the recipe:
+
+## Apply conditions to operations
+
+Use them when an entire stage applies only to certain item variants.
+
+<Note>
+  **Example:** the _Painting_ operation should activate only if the family's _Finish_ property requires painting. If the customer orders a bicycle frame with a polished aluminum finish, the system skips this stage.
+</Note>
+
+## Apply conditions to inputs
+
+Use them when a material is consumed only for some items in the family.
+
+<Note>
+  **Example:** configure two material inputs in the same operation: one for _Red paint_ and another for _Blue paint_. By conditioning each input on _Color_, the MO only loads, shows, and deducts from inventory the color that bicycle requires.
+</Note>
+
+## Apply conditions to steps
+
+Use them when a work instruction should appear only for certain variants.
+
+<Note>
+  **Example:** during assembly, you decide only bicycles with **premium finish** require an additional _Apply protective wax_ step. For standard models, this step does not appear on the operator's screen.
+</Note>
+
+## Apply conditions to inspections
+
+Use them to adapt inspection to the manufactured variant.
+
+<Note>
+  **Example:** a water pump pressure test at 15 bar activates only if **Model** equals `Professional / Hospitality`. The operator performs this test only for a machine intended for cafés.
+</Note>
+
+## Add a condition
+
+**Source (Property / Production order context):** indicates where Bold should find the data for evaluating the rule.
+
+- **Property:** item characteristic, such as material, color, or size.
+- **Production order context:** data from a specific order, such as requester, quantity, or notes.
+
+**Property/Field:** select the family property or manufacturing-order context field to compare.
+
+**Operator:** defines how the source is compared with the expected value, such as **Equal to**, **Not equal to**, **Contains**, **Starts with**, or **Ends with**.
+
+**Value/Option:** enter the value the condition must meet. For example: property `Material`, operator `Equal to`, and value `Carbon`.

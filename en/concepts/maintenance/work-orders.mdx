@@ -1,0 +1,68 @@
+---
+es_link: "/es/conceptos/mantenimiento/partes-de-trabajo"
+title: "Work orders"
+description: "Understand the maintenance work order as a record of interventions, times, actions and materials."
+icon: "clipboard-list"
+---
+
+A **work order** records a maintenance intervention on an asset.
+
+It explains what happened, why it happened, who intervened, how much time was spent, which actions were completed and which materials were consumed.
+
+## What it contains
+
+| Data | Use |
+| --- | --- |
+| Asset | Equipment or physical space serviced. |
+| Type | Corrective or preventive. |
+| Cause | Main reason and possible auxiliary causes. |
+| Actions | Tasks or checks performed. |
+| Times | Labor per employee. |
+| Materials | Spare parts or consumables used. |
+| Comments | Dated observations with an author, added during work. |
+| Status | Work order's situation. |
+
+## Common statuses
+
+| Status | Meaning |
+| --- | --- |
+| Pending | The work order exists but has no active time. |
+| In progress | There is an active time record. |
+| Paused | Work took place, but there is no active time. |
+| Completed | The intervention ends and remains protected while it keeps this status. |
+| Cancelled | The work order closes without completion and retains recorded times. |
+
+## Materials and traceability
+
+Consumed materials connect maintenance to the warehouse and costs. If the item uses lots, record the actual lot used.
+
+The work order's cost depends on materials, lots, quantities, time and employee hourly costs.
+
+## Preventive work orders
+
+A preventive schedule can generate work orders automatically or manually. The generated work order remains actual execution; the schedule only defines when it should appear. You can open the schedule that generated it from the work order, even if deleted.
+
+## Comments
+
+Comments record what happened during the intervention. Each comment stores the date, user and, in work mode, active employee. They support formatting and attachments.
+
+- You can add them from **Maintenance > Work orders** and work mode, including on completed work orders.
+- You cannot edit them. You can delete them only from **Maintenance > Work orders**.
+- You cannot add or delete them on canceled work orders.
+
+Comments differ from work order notes, which describe planned work.
+
+## Undo completion
+
+You can use **Undo completion** on a completed work order. It reopens and allows adding times, materials and actions.
+
+If it already had finished time records, it returns to **Paused**. If it had no times, it returns to **Pending**. You cannot reopen a canceled work order this way.
+
+You can complete the work order even if actions remain pending, unless any is mandatory. If you complete an action, you must record a valid result for its type.
+
+## Related
+
+- [Assets](/en/concepts/maintenance/assets)
+- [Causes and actions](/en/concepts/maintenance/causes-and-actions)
+- [Preventive maintenance](/en/concepts/maintenance/preventive-maintenance)
+- [Create a work order](/en/guides/maintenance/record-maintenance-work)

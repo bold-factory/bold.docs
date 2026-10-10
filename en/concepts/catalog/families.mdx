@@ -1,0 +1,56 @@
+---
+es_link: "/es/conceptos/catalogo/familias"
+title: "Families"
+description: "Understand how to use families to group items, variants and recipes."
+icon: "package-open"
+---
+
+A **family** groups items that belong to the same commercial or technical concept. It does not represent stock itself. You use it to organize variants, define common properties and share recipes between related items.
+
+## What it represents
+
+| Element | Role |
+| --- | --- |
+| Family | Grouping that shares a name, properties or process. |
+| Item | Operational variant with stock, purchasing, sales, manufacturing and cost. |
+| Property | Attribute that explains differences between items in the family. |
+| Recipe | Process that can link to a family or directly to an item. |
+
+A family can contain one item or several. What matters is that it represents a useful grouping for business, manufacturing or analysis.
+
+## When to create a family
+
+Create a family when several variants share a common identity.
+
+| Case | Example |
+| --- | --- |
+| Commercial variants | Nordic Table in several colors and sizes. |
+| Technical variants | Aluminum profile in different lengths. |
+| Common recipe | The same manufacturing structure with conditions based on properties. |
+| Grouped analysis | View activity by family as well as by item. |
+| Variant validation | Require all items to specify a color, size or finish. |
+
+## When you do not need one
+
+Do not create a family just to fill the catalog. A standalone item can operate without a family if there are no variants, common properties or grouping needs.
+
+Do not create a separate family for each variant either. If every color or size is a separate family, you lose the grouping and duplicate rules that should belong in properties.
+
+## Relationship with properties
+
+The properties assigned to a family define what information its items must provide. If a family has **Color** and **Length** properties, each item in that family must provide a value for each property.
+
+When a required value is missing, the item's status is **Missing information**. When all required properties have values, it shows **All good**.
+
+## Relationship with manufacturing
+
+A recipe can link to an entire family or directly to an item. A recipe linked to a family can use properties to decide which items it applies to and which operations, inputs, steps or conditions apply.
+
+Example: the **Nordic Table** family can share a recipe. The **Length** property determines the amount of board, and the **Finish** property determines whether a painting operation appears. You can also link another recipe to a specific item when it needs its own process.
+
+## Related guides
+
+- [Group variants](/en/guides/catalog/group-items-into-families)
+- [Family vs item](/en/concepts/catalog/family-vs-item)
+- [Properties](/en/concepts/catalog/properties)
+- [Recipes and versions](/en/concepts/manufacturing/recipes-and-versions)

@@ -1,0 +1,57 @@
+---
+es_link: "/es/ayuda/personal/configurar-horarios"
+title: "Configure employee schedules"
+description: "Assign calendars, shifts, time zones and exceptions to each employee."
+---
+
+Assign a schedule to each employee so Bold can determine which work day applies on a particular date. This configuration is used in capacity, assignments, shop floor monitoring and productivity analysis.
+
+## Before you start
+
+You need:
+
+- a registered employee;
+- the work days and shift you want to assign;
+- a local calendar if the person should follow site-specific public holidays or closures;
+- permission to manage employee scheduling.
+
+If you have not created these elements yet, see [Configure shifts and calendars](/en/guides/people/configure-shifts-and-calendars).
+
+## Assign the regular schedule
+
+**Path:** **People > Employees > Employee > Schedules**
+
+<Steps>
+  <Step title="Assign the local calendar">
+    Select the calendar containing the public holidays, closures and special work days that apply to the employee. Leave it unassigned if they do not need these shared exceptions.
+  </Step>
+  <Step title="Assign the shift">
+    Select the appropriate fixed or rotating pattern. In **Start date**, specify when the shift cycle begins.
+  </Step>
+  <Step title="Select the time zone">
+    Choose the zone of the place where they work, such as **Europe/Madrid**.
+  </Step>
+  <Step title="Save the changes">
+    Click **Save changes** to apply the calendar, shift and time zone.
+  </Step>
+</Steps>
+
+## Add individual exceptions
+
+Use **Date assignments** for leave, one-off shift changes or other exceptions that affect only the employee.
+
+<Steps>
+  <Step title="Find the date">
+    Navigate through the calendar to the relevant month and click the date you want to change.
+  </Step>
+  <Step title="Select the work day">
+    Choose the **Work day type** that should apply that day and click **Assign**.
+  </Step>
+  <Step title="Remove an exception">
+    Click a date that already has an assignment to remove it. Bold determines that day's work day again from the employee's local calendar and shift.
+  </Step>
+</Steps>
+
+<Note>
+  An assignment for a particular date takes priority over the local calendar and repeating shift pattern. See [Work days, calendars and shifts](/en/concepts/people/work-days-calendars-and-shifts) to understand the full order.
+</Note>

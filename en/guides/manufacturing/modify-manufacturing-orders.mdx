@@ -1,0 +1,42 @@
+---
+es_link: "/es/ayuda/produccion/modificar-ordenes-de-fabricacion"
+title: "Modify manufacturing orders"
+description: "Update an order's operations, materials, and quantities when shop floor work changes."
+---
+
+**Path:** **Production > Production orders > Launched order**
+
+Open an MO to view its routing and change data that remains editable according to the order's status.
+
+## Header indicators
+
+The header summarizes the MO status:
+
+- **Overall progress:** a percentage (`0 %`) and a numeric counter (`0 of 3`) indicate how many product units have been completed.
+- **Product details:** identifies the quantity and item being manufactured (for example, `3 x White outdoor table 100x80`).
+
+## Action bar
+
+The bottom bar shows available actions according to the order's status:
+
+- **Print:** generates a paper copy of the routing.
+- **Block:** prevents continuing with the order until it is unblocked. Use it for an issue that must be resolved before proceeding.
+- **\+ Operation:** adds an unplanned operation, such as additional sanding.
+- **\+ Restriction:** adds a dependency between operations.
+- **Workstations:** reassigns operations' machines or work centers.
+- **Delete:** deletes the order when its status and activity still allow it.
+- **Save:** retains changes to the order header.
+
+## Create material requests
+
+In **Materials**, the **Create request for this material** icon appears when the item is configured for manufacturing procurement and has no linked request yet.
+
+This action creates a manufacturing request linked to the MO material. It does not generate a purchase order or warehouse movement.
+
+**Quantity (units):** enter how many units you need. The system proposes the quantity still pending consumption based on the initial plan.
+
+You can change this number manually. If you need additional material to cover defective pieces or waste, replace it with the quantity needed.
+
+**Notes (optional):** add instructions for whoever supplies the material or explain why the quantity differs from the plan.
+
+**Code:** Bold generates it from the MO code and configured prefixes. If a request with the same base already exists, it adds the first available suffix.

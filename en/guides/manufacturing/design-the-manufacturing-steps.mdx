@@ -1,0 +1,120 @@
+---
+es_link: "/es/ayuda/produccion/crear-una-receta"
+title: "Design the manufacturing steps"
+description: "Define the manufacturing process with operations, inputs, steps, inspections, and versions."
+---
+
+In Bold, a **recipe** defines the manufacturing workflow for a family or a specific item. It combines materials, operations, steps, inspections, co-products, restrictions, and conditions.
+
+A recipe does not execute work itself. It serves as a template for creating **manufacturing orders** with a consistent structure.
+
+## Steps to follow
+
+**Path:** **Production > Recipes**
+
+### 1. Add a recipe
+
+**Family:** select the family whose manufacturing you want to define.
+
+**Name:** when you select a family, Bold automatically assigns the recipe name. Change it if you need to distinguish different ways of manufacturing its items.
+
+### 2. Add a version
+
+**Name:** Bold automatically uses the creation date, but you can enter a different name.
+
+<Note>
+  **Examples:** `Initial version`, `July 16, 2026`, or `Updated version`.
+</Note>
+
+### 3. Create the operation diagram
+
+Although you can add and move blocks freely, organize the diagram in the same order you manufacture the item. This makes the workflow easier to review.
+
+Click **+ Add operation** and complete these fields:
+
+**Main process:** select one of the processes defined earlier.
+
+**Operation name:** enter a specific name for this operation. You can copy the process name from the right side of the field.
+
+**People required:** enter how many operators must work simultaneously at the workstation to run the operation.
+
+**Auxiliary tool (optional):** select the mold, die, fixture, or drill bit the operation requires.
+
+Then connect the operation blocks.
+
+To relate two operations, move the pointer to the lower edge of the first block. Drag the point that appears onto the next block. You can also start from the upper edge of the next block and drop it onto the previous one. Then configure the start and available units.
+
+You can also click **+ Add restriction**. Specify:
+
+**Source operation (the restricting one):** select the task that comes first.
+
+**Target operation (the restricted one):** select the task that follows.
+
+**When can the next operation start?** Choose one option:
+
+- **At any time.**
+- **When the previous one has started.**
+- **When the previous one has good units or has finished**, even without units.
+- **When the previous one has finished.**
+
+For a timed wait, you cannot choose at any time.
+
+**Does it use the units produced by the previous operation?** Choose **No**, **Yes, as they are completed**, or **Yes, wait for all**.
+
+**If this condition is not met…** For starting, choose **Warn but allow**, **Hide by default, but allow with warning**, or **Hide and forbid**.
+
+**If the available quantity is exceeded…** Choose **Warn but allow** or **Forbid**.
+
+Bypassing a condition always requires confirming a dialog, including from management mode. Blocks can only be bypassed from management mode with manufacturing order write permission.
+
+Review the conditions before creating the restriction. You can change both from **Edit restriction** in its list or by right-clicking its line in the diagram.
+
+Use **Recalculate positions** and confirm the dialog to arrange blocks according to their restrictions. Each operation appears below its predecessors. You need recipe write permission and an editable version.
+
+To prepare the next operation while the previous one produces, configure starting when it has started and receiving units as they are completed. See [Operations and restrictions](/en/concepts/manufacturing/operations-and-restrictions) for how available quantity is calculated.
+
+<Tip>
+  To delete a restriction, right-click its line in the diagram and confirm deletion.
+</Tip>
+
+**Activate version:** when you finish the recipe, activate the version to prevent changes to its details. This prevents accidental changes to a routing already in use. If you need a change, create a new version and keep the previous one intact.
+
+## When to split the recipe routing
+
+Sometimes the manufacturing process depends on a family property. Add conditions when that property changes the process and separating recipe routes makes it clearer.
+
+<Note>
+  **Example:** you manufacture the `Bici Pro` model and the changing property is **frame material**: aluminum or carbon fiber.
+
+  - **Aluminum:** uses metal tubes passing through sawing, welding, and a heat treatment oven.
+  - **Carbon fiber:** uses fabric rolls passing through laser cutting, manual layup, an autoclave oven, and ultrasonic quality inspection.
+</Note>
+
+### Configure conditions
+
+**Path:** **Production > Recipes > Created recipe**
+
+From the diagram, open the operation block where the condition should apply.
+
+### Add a condition
+
+**Source:** indicates where Bold obtains the data evaluated by the condition:
+
+- **Property:** variants within the family, such as material, size, or voltage.
+- **Production order context:** applies when the item is the same but administrative data, logistics, or order urgency changes.
+
+**Field:** choose the data Bold should evaluate, such as MO notes, code, or quantity.
+
+**Operator:** choose how the field is compared with the condition value.
+
+- **Equals:** the field matches the specified value exactly.
+- **Not equal to:** the field has any value except the one specified.
+- **Contains:** the text includes the value anywhere. For example, if you search for `Fragile` and the MO notes contain that word, Bold activates the conditional operation.
+- **Starts with:** the condition activates if the text or code starts with those characters. Use it with note templates or standardized codes. For example, if export notes start with `EXP-`, such as `EXP-France`, configure **Starts with: EXP-**.
+- **Ends with:** the condition activates if the text ends with those exact characters. Use it if operators or systems end notes with tags such as `-OK` or `-REVIEWED`.
+
+**Value/Option:** enter the text, number, or option Bold should compare with the field.
+
+<Tip>
+  To create an updated version after changing an operation, open the recipe and click **Copy from another recipe**.
+</Tip>

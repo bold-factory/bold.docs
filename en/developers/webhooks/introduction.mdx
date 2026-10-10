@@ -1,0 +1,108 @@
+---
+es_link: "/es/desarrolladores/webhooks/introduccion"
+title: "Get started with webhooks"
+sidebarTitle: "Introduction"
+description: "Receive Bold event notifications in external systems."
+---
+
+Webhooks send an HTTP notification when an event occurs in Bold. Use them so a management system, analytics tool, internal automation, or intermediary service can react without continuously polling the API.
+
+<Info>
+  Webhooks complement the API. Use the API to query or correct the final state, and use webhooks to learn that something changed.
+</Info>
+
+## What a subscription configures
+
+| Field | Description |
+| --- | --- |
+| Event | Full name of the event you want to receive, such as `Planning.SalesOrder.LineConfirmed`. |
+| Version | Major version of the event contract. |
+| Receiving URL | Public address where your system receives the notification. |
+
+```json
+{
+  "endpoint": "https://integraciones.example.com/bold/webhooks",
+  "eventName": "Planning.SalesOrder.LineConfirmed",
+  "eventVersion": 1
+}
+```
+
+## Workflow
+
+<Steps>
+  <Step title="Create the receiver">
+    Publish a URL that accepts JSON requests and responds promptly. Bold accepts `http` and `https`; use `https` in production.
+  </Step>
+  <Step title="Create the subscription">
+    Register `endpoint`, `eventName`, and `eventVersion` in Bold.
+  </Step>
+  <Step title="Process the data received">
+    Save the event identifier to prevent duplicates, and use the API if you need more data.
+  </Step>
+  <Step title="Return a successful response">
+    Respond with a `2xx` code when you accept the event for processing.
+  </Step>
+</Steps>
+
+## Subscription endpoints
+
+```http
+GET /v1/notifications/webhook/subscriptions
+POST /v1/notifications/webhook/subscriptions
+DELETE /v1/notifications/webhook/subscriptions/{id}
+```
+
+These operations require the `App.Admin` permission.
+
+<Tip>
+  You can also review subscriptions and deliveries in **Webhooks** in the Control panel.
+</Tip>
+
+## Notification history
+
+Bold stores notifications and their delivery attempts so you can diagnose failures.
+
+```http
+GET /v1/notifications/webhook
+GET /v1/notifications/webhook/{id}
+GET /v1/notifications/webhook/{id}/attempts
+POST /v1/notifications/webhook/{id}/retry
+```
+
+| Status | Meaning |
+| --- | --- |
+| `Pending` | The notification is pending or scheduled for a retry. |
+| `Success` | The receiver responded with a `2xx` code. |
+| `Failure` | Automatic attempts are exhausted. You can retry manually. |
+
+<Warning>
+  Do not perform heavy work while responding to the webhook HTTP request. Queue the event, return `2xx`, and process it in the background.
+</Warning>
+
+## Webhook signature
+
+Bold signs the serialized JSON body with HMAC-SHA256 and sends the signature as lowercase hexadecimal in the `X-HMAC-Signature` header.
+
+```javascript
+import crypto from "node:crypto";
+
+function isValidSignature(rawBody, signature, secret) {
+  const expected = crypto
+    .createHmac("sha256", secret)
+    .update(rawBody)
+    .digest("hex");
+
+  if (typeof signature !== "string" || !/^[0-9a-fA-F]{64}$/.test(signature)) {
+    return false;
+  }
+
+  return crypto.timingSafeEqual(
+    Buffer.from(signature, "hex"),
+    Buffer.from(expected, "hex"),
+  );
+}
+```
+
+<Tip>
+  Verify the signature against the unmodified body. If you parse and serialize the JSON again before verification, the signature may not match.
+</Tip>

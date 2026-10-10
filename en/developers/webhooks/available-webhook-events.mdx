@@ -1,0 +1,88 @@
+---
+es_link: "/es/desarrolladores/webhooks/eventos-disponibles"
+title: "Available webhook events"
+description: "Browse the event types you can use in webhook subscriptions."
+---
+
+Bold publishes business events when relevant entities change. Exact names and versions are exposed through the environment's events API.
+
+```http
+GET /v1/notifications/events
+GET /v1/notifications/events/versions
+```
+
+<Info>
+  Always use the list from the environment you are integrating with. New features can add available events. These endpoints require application access.
+</Info>
+
+## Event families
+
+<Columns cols={2}>
+  <Card title="Catalog" icon="boxes">
+    Changes to products, items, properties, and variants.
+  </Card>
+  <Card title="Warehouse" icon="warehouse">
+    Receipts, shipments, lots, locations, inventories, and stock movements.
+  </Card>
+  <Card title="Planning" icon="calendar-range">
+    Sales orders, purchase orders, demand, supply, and forecasts.
+  </Card>
+  <Card title="Production" icon="factory">
+    Requests, orders, operations, recipes, progress, pauses, and completion.
+  </Card>
+  <Card title="Maintenance" icon="wrench">
+    Assets, maintenance work orders, consumption, time, and completion.
+  </Card>
+  <Card title="Costs and people" icon="circle-dollar-sign">
+    Cost changes, employees, and related tasks.
+  </Card>
+</Columns>
+
+## Example names
+
+Names follow the `Domain.Entity.Action` pattern.
+
+| Event | When to use it |
+| --- | --- |
+| `Items.Sku.Created` | Synchronize new items with another system. |
+| `Planning.SalesOrder.LineConfirmed` | React when a sales line starts generating demand. |
+| `Planning.PurchaseOrder.LineConfirmed` | Record expected supply in an external integration. |
+| `Warehouse.Receipt.Received` | Notify another system of an actual material receipt. |
+| `Warehouse.Shipment.Shipped` | Update a logistics system after a shipment. |
+| `Production.Order.Finished` | React to the completion of a manufacturing order. |
+| `Maintenance.WorkOrder.Completed` | Send maintenance completion to an analytics tool or management system. |
+
+<Warning>
+  Do not construct event names manually. Use `/v1/notifications/events/versions` to read the environment's `eventName` and `eventVersion`.
+</Warning>
+
+## Choose an event
+
+<Steps>
+  <Step title="Identify the business change">
+    Decide whether you need to know that a line was confirmed, a receipt was completed, or an order changed state.
+  </Step>
+  <Step title="Check the name and version">
+    Use the available events endpoint to obtain the current contract.
+  </Step>
+  <Step title="Subscribe only to what you need">
+    Avoid broad subscriptions if your integration only needs one event family.
+  </Step>
+  <Step title="Version your consumer">
+    Treat `eventVersion` as part of the contract. Do not mix versions without testing the data sent.
+  </Step>
+</Steps>
+
+## Subscription example
+
+```json
+{
+  "endpoint": "https://integraciones.example.com/bold/sales-orders",
+  "eventName": "Planning.SalesOrder.LineConfirmed",
+  "eventVersion": 1
+}
+```
+
+<Tip>
+  When an event only tells you that something changed, call the API with the identifier received to get the current state before updating your system.
+</Tip>

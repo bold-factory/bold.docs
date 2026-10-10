@@ -1,0 +1,84 @@
+---
+es_link: "/es/conceptos/almacen/lotes"
+title: "Lots"
+description: "Understand when to use lots for traceability, costs and source tracking."
+icon: "scan-line"
+---
+
+A **lot** identifies a traceable set of units of the same item. It lets you separate stock by code, source and cost.
+
+## When to use lots
+
+Use lots if you need:
+
+- purchasing or manufacturing traceability;
+- valuation by actual unit cost;
+- preservation of a purchase or manufacturing source code;
+- a relationship between merged lots and their source lots.
+
+If your operation does not need to separate units by source, you can maintain stock without lots for that item.
+
+## What a lot contains
+
+| Data | Use |
+| --- | --- |
+| Code | Identifies the lot in operations and queries. |
+| Item | Defines which physical unit it contains. |
+| Type | Indicates whether it is an original, merged or provisional lot. |
+| Source | For original lots, indicates purchase, manufacturing or unknown, together with its code and identifier when available. |
+| Current stock | Remaining lot quantity. |
+| Unit cost | Cost applied to the lot's stock. |
+| Audit trail | Dates and authors of creation and last modification. |
+
+A lot is active while its stock is not zero. When it reaches zero, it becomes inactive, but its history is preserved.
+
+## Lot types
+
+Bold distinguishes lot types by how they were created and what traceability they retain.
+
+| Type | When it appears |
+| --- | --- |
+| Original lot | Created from a purchase, manufacturing or a known source. |
+| Merged lot | Groups stock from two lots when you decide to stop separating them. |
+| Provisional lot | Preserves a reference when complete source information is missing. |
+
+The lot type helps you interpret its history. An original lot retains a direct source. A merged lot retains a relationship with its component lots.
+
+## Lot source
+
+The source indicates where traceable material comes from.
+
+| Source | Meaning |
+| --- | --- |
+| Purchase | The lot comes from a supplier inflow. |
+| Manufacturing | The lot comes from an order or production progress. |
+| Unknown | The lot exists, but there is no reliable operational source. |
+
+Avoid using an unknown source as a routine solution. Use it only when the actual history is unavailable.
+
+## Relationship with the warehouse
+
+Bold records stock by item, location and optional lot. If an item uses lots, every receipt, consumption, movement or shipment must preserve the correct lot.
+
+Traceability loses value if your team uses a generic lot to record outflows. The lot should match the physical material being moved or consumed.
+
+## Relationship with costs
+
+The lot retains its recorded unit cost, which may still be zero when cost information is missing. When available, this cost lets you value traceable inventory from purchasing or manufacturing.
+
+Two lots of the same item can have different costs. That difference is normal if they come from different purchases or manufacturing runs.
+
+## Merge lots
+
+Merge lots only when you no longer need to keep their sources separate. Merging simplifies future operations but reduces analysis granularity.
+
+Do not merge lots if you need to keep their source codes or costs separate.
+
+When you merge lots, the resulting lot retains a relationship with the original lots and their quantities. Daily operations use the merged lot from then on.
+
+## Related
+
+- [Stock and movements](/en/concepts/warehouse/stock-and-movements)
+- [Inventory valuation](/en/concepts/costs/inventory-valuation)
+- [Investigate lot traceability](/en/guides/warehouse/investigate-lot-traceability)
+- [Investigate stock discrepancies](/en/guides/warehouse/investigate-stock-discrepancies)

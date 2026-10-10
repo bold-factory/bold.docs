@@ -1,0 +1,52 @@
+---
+es_link: "/es/conceptos/smart-factory/informes"
+title: "Reports"
+description: "Understand embedded Power BI reports and when to use them instead of operational views."
+icon: "chart-bar"
+---
+
+Smart Factory **reports** use embedded Power BI to analyze Bold data with prepared visualizations, filters and fields.
+
+Use them for periodic analysis, indicator monitoring and management views.
+
+## What they represent
+
+| Concept | Use |
+| --- | --- |
+| Report | Analytical view with pages, visualizations and filters. |
+| Data model | Set of entities prepared to analyze Bold data. |
+| Duplicated report | Copy of an existing report you can adapt. |
+| Editable report | Copy you can adapt if you have permissions. |
+
+## When to use them
+
+| Requirement | Use |
+| --- | --- |
+| Analyze trends, compare periods or prepare reports | **Reports**. |
+| View live shop floor status, operations in progress or operational OEE | [Manufacturing dashboards](/en/concepts/manufacturing/dashboards). |
+| Investigate a specific record | The corresponding operational module, such as orders, stock or work orders. |
+
+Reports are not a real-time view. They refresh according to the environment's schedule.
+
+Access to reports, including creation and duplication, requires **analytical reports** in your plan. When this option is disabled, the application does not show the list or allow report creation, and the API rejects those operations.
+
+## Permissions
+
+| Action | Required permission |
+| --- | --- |
+| Open reports | Read access to reports. |
+| Create, duplicate or delete reports | Edit access to reports. |
+
+## Usage rules
+
+- Duplicate reports before making significant changes.
+- Use purpose-oriented names such as `Cost per asset` or `Weekly production`.
+- Review dates, statuses, units and filters before making decisions.
+- Use dashboards when you need live operational status.
+
+## Related
+
+- [Smart Factory](/en/concepts/smart-factory)
+- [Power BI reports](/en/guides/smart-factory/view-power-bi-reports)
+- [Costs](/en/concepts/costs)
+- [Maintenance](/en/concepts/maintenance)

@@ -1,0 +1,84 @@
+---
+es_link: "/es/desarrolladores/webhooks/reintentos-y-errores"
+title: "Webhook retries and errors"
+description: "Design idempotent webhook consumers that tolerate failures."
+---
+
+A webhook crosses two systems. Assume that retries, duplicate deliveries, temporary outages, and late responses can occur.
+
+## Expected responses
+
+| Receiver response | Recommended outcome |
+| --- | --- |
+| `2xx` | Event accepted. Bold can mark the delivery as successful. |
+| `4xx` | Consumer error or rejected data. Review the configuration and contract. |
+| `5xx` | Temporary receiver error. The event should be retryable. |
+| Timeout | The receiver did not respond in time. Queue the work and respond promptly. |
+
+<Warning>
+  Do not return `2xx` if you discarded the event without saving it. Bold will assume that delivery succeeded.
+</Warning>
+
+## Automatic attempts
+
+Bold attempts to send a notification up to five times. After each failure, it schedules the next attempt with an exponential delay.
+
+| Setting | Behavior |
+| --- | --- |
+| Maximum sending time | 30 seconds. |
+| Maximum attempts | 5 automatic attempts. |
+| Automatic delay | `10 * 2^n` seconds, where `n` is the number of attempts made. |
+| Final status after exhausting attempts | `Failure`. |
+| Manual retry | Only for notifications in `Failure`, through `POST /v1/notifications/webhook/{id}/retry`. |
+
+Each attempt stores the HTTP code, response body, or error message. Query `GET /v1/notifications/webhook/{id}/attempts` to diagnose it.
+
+| Failed attempt | Approximate next attempt |
+| --- | --- |
+| 1 | 20 seconds later. |
+| 2 | 40 seconds later. |
+| 3 | 80 seconds later. |
+| 4 | 160 seconds later. |
+| 5 | No further automatic attempt. |
+
+When you request a manual retry, the notification returns to `Pending` and is scheduled for immediate delivery.
+
+## Consumer rules
+
+- Process each event idempotently.
+- Save `eventId` to deduplicate the business event.
+- Save `attemptId` if you need to audit each delivery.
+- Do not rely on strict ordering between events.
+- Query the API if you need to confirm the final state.
+- Record the original data for auditing and troubleshooting.
+- Verify `X-HMAC-Signature` before trusting the data.
+
+## Recommended pattern
+
+<Steps>
+  <Step title="Validate the data received">
+    Check that `eventName`, `majorVersion`, `minorVersion`, and the entity identifier are as expected.
+  </Step>
+  <Step title="Detect duplicates">
+    If you already processed the event, return `2xx` without repeating external effects.
+  </Step>
+  <Step title="Queue the work">
+    Save the event in your system and respond promptly.
+  </Step>
+  <Step title="Process in the background">
+    Call management systems, analytics tools, or other services outside the HTTP response period.
+  </Step>
+</Steps>
+
+```pseudo
+if already_processed(event.eventId):
+  return 200
+
+store(event)
+enqueue(event.eventId)
+return 202
+```
+
+<Tip>
+  If your integration becomes out of sync, use the paginated API to reconcile its state, then resume normal webhook processing.
+</Tip>

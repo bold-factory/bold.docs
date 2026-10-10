@@ -1,0 +1,66 @@
+---
+es_link: "/es/conceptos/catalogo/familia-vs-articulo"
+title: "Family vs item"
+description: "Distinguish families, items and variants to model your catalog without duplicates."
+icon: "git-compare"
+---
+
+The difference between **family** and **item** determines how you organize variants, stock, recipes and analysis.
+
+A **family** groups variants. An **item** represents the specific physical reference that you purchase, manufacture, store, consume or sell.
+
+## Quick comparison
+
+| Concept | What it represents | Example |
+| --- | --- | --- |
+| Family | Commercial or technical grouping | Nordic Table |
+| Property | Attribute that distinguishes variants | Color, length, finish |
+| Item | Specific physical variant | White Nordic Table, 120 cm |
+| Lot | Traceable set of units of an item | Lot manufactured on 2026-06-15 |
+
+<Info>
+  A variant describes a catalog configuration. A lot distinguishes traceable units of the same item. Two lots can contain exactly the same variant.
+</Info>
+
+## Modeling decision
+
+| Question | If the answer is yes |
+| --- | --- |
+| Does it need separate stock? | Create different items. |
+| Is it purchased, sold or manufactured separately? | Create different items. |
+| Does only one characteristic of the same family change? | Use a family with properties. |
+| Does the difference have no effect on operations or analysis? | Do not create a new variant. |
+| Do you need a common recipe with small differences? | Link the recipe to the family and use properties and conditions. |
+
+## Family with several items
+
+Use a family with several items when the variants share an identity but need to operate separately.
+
+Example: **Nordic Table** is the family. **Nordic Table - 160 cm - Oak** and **Nordic Table - 200 cm - Walnut** are items because they have separate stock, orders, costs and manufacturing.
+
+## Family with a single item
+
+A family can contain a single item if you want to prepare the grouping for growth or share properties from the start.
+
+It is optional. If you do not need a grouping, an item without a family is sufficient. You can also link a recipe directly to that item.
+
+## Common mistakes
+
+| Mistake | Effect |
+| --- | --- |
+| Create a family for each variant | You lose the grouping and duplicate properties or recipes. |
+| Create a single item for distinct variants | Stock, costs and traceability get mixed together. |
+| Use free text for variants | Produces inconsistent values and unreliable filters. |
+| Duplicate items with the same properties | Hides duplicates and makes consolidation harder. |
+
+## Practical rule
+
+<Tip>
+  The simplest model is the one that preserves correct stock, traceability and manufacturing. A difference deserves a property when it affects identification or a rule. It deserves a separate item when it needs its own operations, stock or cost.
+</Tip>
+
+## Related
+
+- [Families](/en/concepts/catalog/families)
+- [Items](/en/concepts/catalog/items)
+- [Properties](/en/concepts/catalog/properties)

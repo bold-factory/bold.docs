@@ -1,0 +1,73 @@
+---
+es_link: "/es/ayuda/costes/analizar-costes-de-articulos"
+title: "Analyze item costs"
+description: "Compare planned cost per unit and its breakdown into materials, labor and machine costs."
+---
+
+Use **Item costs** to identify unexpected planned costs and view the data behind each amount.
+
+## Before you start
+
+- You need read access to item costs.
+- The items must exist in the catalog.
+- To interpret a manufactured item's breakdown, also review its recipe, components and employee and resource hourly costs.
+- To interpret a purchased item, review its purchase orders.
+
+## Review the list
+
+**Path:** **Costs > Cost objects > Items**
+
+<Steps>
+  <Step title="Find the item">
+    Search by code or name. Sort or filter the list to narrow the results.
+  </Step>
+  <Step title="Compare planned cost">
+    Review **Materials/unit**, **Labor/unit**, **Machine/unit** and **Planned cost/unit**.
+  </Step>
+  <Step title="Open the details">
+    In **Actions**, open the item. You go directly to the **Costs** tab.
+  </Step>
+</Steps>
+
+## Interpret the details
+
+The **Costs** tab shows the planned total cost per unit and its breakdown.
+
+| Field | What to review |
+| --- | --- |
+| Planned total cost per unit | Planned amount you can edit if you manage the cost manually. |
+| Materials per unit | Planned cost of direct materials and included semi-finished items. |
+| Labor per unit | Planned cost of employee time. |
+| Machine per unit | Planned cost of resource time. |
+| Update cost automatically | Indicates whether Bold should recalculate planned cost when the underlying data changes. |
+
+For purchased items, the details include related purchase orders. For manufactured items, they show the components used to calculate planned cost.
+
+<Info>
+  The materials, labor and machine breakdown is informative. The editable amount is **Planned total cost per unit**.
+</Info>
+
+## Correct a planned cost
+
+<Steps>
+  <Step title="Choose how to maintain the cost">
+    Select **Yes** in **Update cost automatically** to recalculate it from purchasing or manufacturing data. Select **No** to maintain a manual amount.
+  </Step>
+  <Step title="Enter the manual amount if applicable">
+    If you disabled automatic updates, complete **Planned total cost per unit (€)**.
+  </Step>
+  <Step title="Save the changes">
+    Click **Save**. The button is only available if you have edit permission and have changed some data.
+  </Step>
+</Steps>
+
+<Warning>
+  Before replacing an automatic cost with a manual one, review purchases, recipes, components, time records and hourly costs. A manual amount can conceal incomplete master data.
+</Warning>
+
+## Related
+
+- [Theoretical cost vs actual cost](/en/concepts/costs/planned-versus-actual-cost)
+- [Prepare cost data](/en/guides/costs/prepare-cost-data)
+- [Manufacturing order costs](/en/guides/costs/manufacturing-order-costs)
+- [Items](/en/concepts/catalog/items)

@@ -1,0 +1,54 @@
+---
+es_link: "/es/ayuda/ventas/preparar-y-registrar-envio"
+title: "Prepare and record a shipment"
+description: "Prepare complete or partial shipments and record the physical dispatch of stock."
+---
+
+Prepare and record the shipment when a sales order is ready to leave. This workflow reduces stock and records the dispatch for traceability.
+
+You can record a complete or partial shipment:
+
+- **Complete shipment:** includes all the order's pending items and quantities.
+- **Partial shipment:** includes only part of the goods, either because of stock availability or a logistics decision.
+
+## Record a complete shipment
+
+**Path:** **Planning > Sales orders > Order to ship**
+
+### Generate the shipment
+
+Click **Create shipment** at the bottom right.
+
+### Add the information
+
+**Delivery note no.:** you can enter the number your company uses or leave it blank for Bold to generate it automatically.
+
+**Date (optional):** specify the delivery note or dispatch date.
+
+**Shipping location:** physical place within the factory from which the goods leave for the customer.
+
+**Ship immediately:** combines document creation with recording the physical dispatch from inventory. It only appears when you select a shipping location. If you disable it or do not specify a location, the shipment is created as **Pending** so you can review it before clicking **Ship**.
+
+## Record a partial shipment
+
+**Path:** **Warehouse > Material shipments**
+
+<Steps>
+  <Step title="Add a shipment">
+    **Destination:** select the customer who will receive the goods.
+
+    **Delivery note no. (optional):** enter the number your company uses or leave it blank.
+
+    **Shipping location:** select the physical place from which the goods leave.
+  </Step>
+  <Step title="Add the lines">
+    Go to **Warehouse > Material shipments > Created shipment** and add the items you will ship. A shipment can include lines from different orders addressed to the same customer.
+
+    **Order line:** select a pending line.
+
+    **Quantity:** specify the units you want to ship.
+  </Step>
+  <Step title="Record the dispatch">
+    Click **Ship** to record the physical dispatch of the goods. This action creates stock movements.
+  </Step>
+</Steps>

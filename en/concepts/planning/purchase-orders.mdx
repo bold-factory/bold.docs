@@ -1,0 +1,94 @@
+---
+es_link: "/es/conceptos/planificacion/pedidos-de-compra"
+title: "Purchase orders"
+description: "Understand how purchase orders generate supply, how their lines work and their lifecycle."
+icon: "shopping-basket"
+---
+
+A **purchase order** represents a firm commitment with a supplier. Its lines generate incoming supply only when confirmed.
+
+The header identifies the supplier, order code, dates, notes and external references. Lines indicate which item you purchase, in what quantity, with which expected date and receipt status.
+
+## Header and lines
+
+| Part | Contents | Purpose |
+| --- | --- | --- |
+| Header | Supplier, code, name, date, notes and external reference. | Groups the purchasing commitment and connects it to integrations. |
+| Line | Item, quantity, expected date, price, status and received or pending quantities. | Generates supply and lets you track each receipt. |
+
+An order can have several lines. Use separate lines when the item, expected date, price or receipt terms differ.
+
+## What a purchase order line is
+
+A line is the unit planning can count as supply. The order's existence is not enough: incoming stock originates in the line when you confirm it.
+
+| Field | Use |
+| --- | --- |
+| Item | Reference that will enter stock. |
+| Requested quantity | Total quantity you purchase. |
+| Received quantity | Part already recorded through receipts. |
+| Cancelled quantity | Part removed from the commitment. |
+| Pending quantity | Quantity that still generates expected supply. |
+| Expected date | Date planning uses to estimate the receipt. |
+| Total price | Purchasing cost associated with the line when provided. |
+| External reference | Identifier from the business management system, supplier or another system. |
+| Notes | Operational or commercial context. |
+
+## Line lifecycle
+
+| Status | Effect on planning | Meaning |
+| --- | --- | --- |
+| **Unconfirmed draft** | Does not generate incoming stock. | You can adjust the line before committing to the purchase. |
+| **Pending** | Generates supply for the pending quantity. | The line is confirmed and has not been received. |
+| **Partially received** | Generates supply only for the pending part. | One or more receipts have occurred, but a quantity remains to be received. |
+| **Received** | Does not generate pending supply. | The open quantity has been received in the warehouse. |
+| **Cancelled** | Does not generate supply. | The open quantity is removed from the commitment. |
+
+The order's status is derived from the statuses of its lines.
+
+## Main actions
+
+| Action | Result |
+| --- | --- |
+| Confirm line | Changes from draft to pending and starts generating supply. |
+| Update quantity or date | Recalculates the pending quantity and expected date when the status allows it. |
+| Record receipt | Increases the received quantity and physical stock, and reduces pending supply. |
+| Cancel pending line | Removes the open quantity. |
+| Undo cancellation | Returns a canceled line to draft when the rules allow it. |
+
+## Operational rules
+
+- Confirming a line requires an active item and is only possible from draft.
+- You cannot receive a draft line.
+- The quantity cannot fall below the quantity already received.
+- You cannot cancel a received or partially received line as though it had never existed.
+- If you cancel a pending quantity after a partial receipt, Bold retains the received part as history.
+- A line's external reference can only be written once.
+- Date changes are blocked on canceled or received lines.
+- Price changes are blocked on canceled lines.
+
+<Info>
+  The purchase order explains the supplier commitment. The receipt explains the physical inflow that increases stock.
+</Info>
+
+## Relationship with planning and the warehouse
+
+A confirmed line increases incoming stock by its pending quantity. When the warehouse records a receipt, Bold increases physical stock, reduces pending supply and updates the line's status.
+
+The receipt should not replace the order. Use the order for the supplier commitment and the receipt to reflect what physically arrived.
+
+## Permissions
+
+| Action | Required permission |
+| --- | --- |
+| View purchase orders | Read access to purchasing. |
+| Create, edit, confirm or cancel purchase orders | Edit access to purchasing. |
+
+## Related
+
+- [Suppliers](/en/concepts/planning/suppliers)
+- [Demand and supply](/en/concepts/planning/demand-and-supply)
+- [Receipts](/en/concepts/warehouse/receipts)
+- [Know what to purchase](/en/guides/planning/decide-what-to-purchase)
+- [Create a purchase order](/en/guides/planning/create-a-purchase-order)
+- [Receive a purchase order](/en/guides/purchasing/receive-a-purchase-order)

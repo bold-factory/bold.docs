@@ -1,4 +1,5 @@
 ---
+en_link: "/en/concepts/manufacturing/assignments-and-operation-groups"
 title: "Asignaciones y grupos de operaciones"
 description: "Entiende cómo Bold asigna operaciones a estaciones, herramientas, empleados y grupos de ejecución."
 icon: "list-tree"
@@ -10,7 +11,7 @@ Los **grupos de operaciones** reúnen varias operaciones para ejecutarlas como u
 
 ## Asignaciones
 
-Una operación queda preparada cuando tiene los datos mínimos para ejecutarse en planta.
+Una operación cumple los requisitos mínimos de planificación cuando tiene estación, fecha objetivo y la herramienta requerida, si corresponde. El estado de stock informa por separado de la disponibilidad de materiales.
 
 | Dato | Uso |
 | --- | --- |
@@ -33,6 +34,8 @@ Un grupo de operaciones permite trabajar varias operaciones juntas. Es útil cua
 | La planta trabaja por células o colas de trabajo. | Refleja mejor cómo se ejecuta el trabajo real. |
 
 Un grupo no elimina las operaciones individuales. Cada operación conserva su trazabilidad, progreso, consumos y controles.
+
+Las acciones del grupo no aplican las restricciones individuales de inicio y cantidad, tampoco cuando se ejecutan desde modo de trabajo. Crear el grupo o añadirle operaciones requiere permiso de escritura de órdenes de fabricación; el operario puede trabajar después con el grupo ya formado. Al crear un grupo o añadir una operación, revisa las condiciones que muestra el diálogo antes de confirmar. Agrupar es una decisión de gestión sobre cómo ejecutar ese trabajo conjuntamente.
 
 Para crear un grupo necesitas al menos dos operaciones. Todas deben estar **Planificadas** o **Pausadas**, tener cantidad pendiente, pertenecer a la misma estación y no formar parte de otro grupo.
 

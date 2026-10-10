@@ -1,0 +1,54 @@
+---
+es_link: "/es/conceptos/almacen/envios"
+title: "Shipments"
+description: "Understand how shipments document material outflows to customers or suppliers."
+icon: "package-minus"
+---
+
+A **shipment** documents a physical material outflow to a **customer** or **supplier**. Completing it reduces stock for its lines in the specified location.
+
+## Shipment types
+
+| Type | Use |
+| --- | --- |
+| Customer | Deliver material to a customer, usually related to a sale. |
+| Supplier | Record material leaving for a supplier. |
+
+You can create the shipment from a related document or enter it manually, but it always retains one of these two types.
+
+<Info>
+  Manufacturing and maintenance consumption also reduce stock. You record them from the operation or work order that uses the material, and they are not shipments.
+</Info>
+
+## Required data
+
+| Data | Why it matters |
+| --- | --- |
+| Destination | Identifies the customer or supplier receiving the material. |
+| Item and quantity | Define what goes out and in what quantity. |
+| Location | Indicates where stock is deducted from. |
+
+If the material is in another location, first complete the corresponding internal movement.
+
+In a standard shipment, you create the line with an item and quantity. When recording the outflow, Bold automatically selects the lots to deduct if it does not receive an explicit selection. Controlled lot or package selection belongs to a load order's preparation and validation workflow.
+
+## Statuses and rules
+
+| Status | Meaning |
+| --- | --- |
+| **Pending** | You can edit the document before recording the outflow. |
+| **Shipped** | The outflow has reduced stock, and the document is protected. |
+
+To ship, the document must be pending, have a location and contain at least one line. After shipping, you cannot edit its lines or change its location.
+
+A delivered sales line retains the quantity already shipped as history, even if the pending part changes or is canceled afterward.
+
+## Relationship with sales and loads
+
+The sales order explains the customer commitment. The shipment explains the actual outflow. A [load order](/en/concepts/warehouse/load-orders-and-provisioning) can group several shipments to prepare and complete them together.
+
+## Related
+
+- [Prepare and record a shipment](/en/guides/sales/prepare-and-record-a-shipment)
+- [Load orders](/en/concepts/warehouse/load-orders-and-provisioning)
+- [Stock and movements](/en/concepts/warehouse/stock-and-movements)

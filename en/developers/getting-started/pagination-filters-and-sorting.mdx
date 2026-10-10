@@ -1,0 +1,119 @@
+---
+es_link: "/es/desarrolladores/empezar/paginacion"
+title: "Pagination, filters, and sorting"
+description: "Use pageNumber, pageSize, filterBy, and sortBy to browse Bold API lists."
+---
+
+Search and list endpoints return pages of results. Pagination avoids oversized responses and lets you reconcile data consistently.
+
+Some endpoints also accept `filterBy` and `sortBy`. Check each endpoint's OpenAPI reference to see which fields it supports.
+
+## Parameters
+
+| Parameter | Type | Default value | Rules |
+| --- | --- | --- | --- |
+| `pageNumber` | integer | `1` | Must be greater than or equal to `1`. |
+| `pageSize` | integer | `25` | Must be between `1` and `1000`. |
+
+```http
+GET /v1/items/skus?pageNumber=1&pageSize=50
+```
+
+## Filter results
+
+`filterBy` uses expressions in the format `Field[Operator]value`.
+
+```http
+GET /v1/items/skus?filterBy=Name[Contains]mesa&pageNumber=1&pageSize=50
+```
+
+Use the exact field names listed in the endpoint reference. Not all fields support the same operators.
+
+| Operator | Common usage |
+| --- | --- |
+| `Contains` | The field contains the specified text. |
+| `Equals` | The field matches the value exactly. |
+| `StartsWith` | The field starts with the specified text. |
+| `EndsWith` | The field ends with the specified text. |
+| `IsNull` | The field has no value. |
+| `IsNotNull` | The field has a value. |
+| `Gt` | Greater than. |
+| `Gte` | Greater than or equal to. |
+| `Lt` | Less than. |
+| `Lte` | Less than or equal to. |
+| `IsAfter` | Date after the specified value. |
+| `IsOnOrAfter` | Date on or after the specified value. |
+| `IsBefore` | Date before the specified value. |
+| `IsOnOrBefore` | Date on or before the specified value. |
+
+Combine filters with `&&` for **AND** and `||` for **OR**. Use parentheses to group conditions.
+
+```http
+GET /v1/items/skus?filterBy=Name[Contains]mesa%26%26Code[StartsWith]SKU
+```
+
+## Sort results
+
+`sortBy` specifies the sort field. Prefix the field with `-` for descending order.
+
+```http
+GET /v1/items/skus?sortBy=Name&pageNumber=1&pageSize=50
+GET /v1/items/skus?sortBy=-LastModifiedAt&pageNumber=1&pageSize=50
+```
+
+Available fields depend on the endpoint. Date fields such as `CreatedAt` or `LastModifiedAt` are often useful for incremental synchronization when the endpoint exposes them.
+
+## Response
+
+```json
+{
+  "results": [
+    {
+      "reference": "SKU-0001",
+      "name": "Mesa nórdica blanca"
+    }
+  ],
+  "pageNumber": 1,
+  "totalPages": 12,
+  "totalCount": 587,
+  "pageSize": 50
+}
+```
+
+## Browse all pages
+
+<Steps>
+  <Step title="Start with the first page">
+    Use a `pageSize` your integration can process without timing out.
+  </Step>
+  <Step title="Process the results">
+    Save each item using its `id` or `reference`.
+  </Step>
+  <Step title="Continue to the last page">
+    Keep requesting pages while `pageNumber` is less than `totalPages`.
+  </Step>
+  <Step title="Repeat periodically">
+    In critical integrations, combine pagination with webhooks to detect changes between synchronizations.
+  </Step>
+</Steps>
+
+```bash
+page=1
+while true; do
+  response=$(curl "https://api.bold-factory.com/v1/items/skus?pageNumber=$page&pageSize=100" \
+    -H "X-Api-Key: $BOLD_API_KEY")
+
+  total_pages=$(echo "$response" | jq ".totalPages")
+  echo "$response" | jq ".results[]"
+
+  if [ "$page" -ge "$total_pages" ]; then
+    break
+  fi
+
+  page=$((page + 1))
+done
+```
+
+<Tip>
+  Use small pages during testing. Increase `pageSize` only after measuring response times, memory usage, and the receiving system's limits.
+</Tip>

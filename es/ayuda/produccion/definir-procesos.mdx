@@ -1,4 +1,5 @@
 ---
+en_link: "/en/guides/manufacturing/define-processes"
 title: "Definir procesos"
 description: "Crea procesos y asigna estaciones principales o auxiliares para ejecutar cada tipo de trabajo."
 ---
@@ -37,8 +38,8 @@ Después de crear el proceso, indica en qué estaciones puede ejecutarse. Asigna
 
 **Tipo de estación (Principal o Auxiliar):** define el rol de esta máquina para el proceso.
 
-- **Principal:** estación habitual para ejecutar el proceso. Puedes marcar varias como principales si, por ejemplo, tienes tres líneas equivalentes.
-- **Auxiliar:** estación de reserva que se usa cuando las principales no están disponibles o no son adecuadas para un trabajo concreto.
+- **Principal:** estación habitual para ejecutar el proceso. Cada proceso tiene una sola estación principal. Asigna las líneas equivalentes como auxiliares; elegir otra principal convierte la anterior en auxiliar.
+- **Auxiliar:** estación de reserva que se usa cuando la principal no está disponible o no es adecuada para un trabajo concreto.
 
 <Note>
   **Ejemplo:** para un proceso de `Embotellado`, marca la `Línea automática 01` como **Principal** y la `Mesa de envasado manual` como **Auxiliar** para emergencias o lotes pequeños.

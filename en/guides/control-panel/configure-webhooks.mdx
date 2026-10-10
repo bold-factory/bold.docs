@@ -1,0 +1,34 @@
+---
+es_link: "/es/ayuda/panel-de-control/configurar-webhooks"
+title: "Configure webhooks"
+description: "Send Bold events to an external system through HTTPS requests."
+---
+
+**Webhooks** let another system receive a notification when a supported event occurs in Bold.
+
+**Path:** **Control panel > Webhooks**
+
+## Create a subscription
+
+<Steps>
+  <Step title="Prepare the receiving system">
+    Obtain an HTTPS URL that can process the event.
+  </Step>
+  <Step title="Create the subscription">
+    Click **Add subscription**.
+  </Step>
+  <Step title="Configure delivery">
+    Enter the **URL** and select the event.
+  </Step>
+  <Step title="Save the subscription">
+    Click **Create**.
+  </Step>
+</Steps>
+
+## Check deliveries
+
+Open the **Notifications** tab to view the event, date, version, status, URL and sent payload.
+
+<Warning>
+  The receiving system must validate message authenticity and respond correctly. Do not include sensitive data in a destination URL.
+</Warning>

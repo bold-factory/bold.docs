@@ -1,0 +1,85 @@
+---
+es_link: "/es/ayuda/produccion/plan-de-produccion"
+title: "Create a production plan"
+description: "Calculate and review a production scenario before applying it to the plant."
+---
+
+**Path:** **Production > Sequencing > Plans**
+
+Create a **production plan** to calculate the sequence of many operations and review the result before changing shop floor work. The plan starts from the factory's state at that moment: available stock, machines, routing restrictions, and delivery dates.
+
+To directly adjust just a few orders or operations, see [Sequence manually](/en/guides/manufacturing/sequence-manually).
+
+The plan lets you test calendar changes without affecting actual work. You can ask Bold to calculate a sequence considering restrictions such as employee or raw material availability. Changes do not reach operator screens until you review the result and apply the plan.
+
+## Steps to follow
+
+### 1. Create a plan
+
+**Plan name:** the system proposes the current date. Change it to a name that identifies the scenario's objective in history.
+
+<Note>
+  **Examples:** `Morning shift planning`, `Urgent order simulation Customer X`, or `Sequencing without stock restrictions`.
+</Note>
+
+**Restrict by raw material availability:** determines whether available stock limits planning.
+
+- **If enabled:** Bold checks stock and expected arrival dates. If a component is missing, it does not schedule the operation until the material is available.
+
+- **If disabled:** the system does not limit the plan for stock shortages. This lets you analyze manufacturing capacity without supply restrictions.
+
+**Consider employees as a limiting factor:** includes employee availability in planning.
+
+- **If enabled:** the algorithm accounts for employee availability. If you have five available saws but only two operators on that shift, it schedules at most two cutting operations at once.
+- **If disabled:** the system plans according to machine or workstation availability and assumes sufficient people will operate them.
+
+**When creating the plan:** choose what Bold does after preparing the scenario from the current manufacturing state.
+
+- **Create only:** saves the scenario. You can then open it and click **Solve** to calculate a proposal.
+- **Create and solve:** starts calculation when the scenario is created.
+- **Create, solve and apply:** starts calculation and automatically applies the proposal if it finds a solution.
+
+If you choose an option that solves the plan, select **Solving mode**. **Basic (fast)** finds a feasible sequence using a heuristic. **Advanced (optimized)** refines the sequence through mathematical optimization and may take several minutes. The form initially selects **Basic**.
+
+### 2. Analyze the plan
+
+- **Execution dates:** shows the first operation's **start date** and the last operation's **end date**.
+- **Average delay per order:** indicates orders' average delay relative to their planned dates. A high value, such as `50d 2h`, indicates the scenario does not meet those deadlines.
+- **Workload volume:** indicates how many **Orders**, **Operations**, and **Resources** the calculation includes.
+
+The **Diagram** tab translates orders into a visual occupancy calendar:
+
+- **Vertical axis (resources):** lists factory machines, work centers, and lines (for example, _Assembly bench_, _Paint booth_, or _Belt sander_).
+- **Horizontal axis (time):** divides days into hours and work shifts.
+- **Colored blocks:** represent operations scheduled on each resource.
+- **Legend panel (right):** lets you color by manufacturing order, operation, restriction violation, expected delay, product, item, or process. If you select manufacturing order, the system assigns a color to each order so you can visually follow its route through the factory.
+
+### 3. Manage the scenario
+
+- **Clear:** removes the current proposal from the chart to start organizing manually from scratch.
+- **Update:** rereads warehouse and workshop state to incorporate the latest data into the scenario.
+- **Solve:** runs the calculation again to reorganize the work queue. Choose **Basic** for a feasible sequence quickly or **Advanced** to optimize it. The dialog initially selects **Basic**. In advanced mode, the objective gives more weight to order delay than work in progress (WIP) and also considers the plan's total duration.
+
+<Info>
+  Each time you run **Solve**, the algorithm recalculates allocation from scratch. The new proposal replaces any previous automatic ordering.
+</Info>
+
+### 4. Review the Gantt chart
+
+Check dates, resource occupancy, delays, and restriction violations before applying the plan.
+
+### 5. Adjust manually
+
+- **Drag and drop blocks:** if an operation must be delayed, brought forward, or run on another compatible machine, move its block in the Gantt chart.
+
+- **Dynamic cascading changes:** Bold maintains manufacturing restrictions when you move a task. If you delay an initial task, such as _Tabletop cutting_, the system moves dependent later tasks, such as _Sanding_ and _Assembly_. Review the result before applying the plan.
+
+### 6. Save or apply the plan
+
+**Save:** stores changes in this scenario so you can close the screen and continue adjusting later, **without changing workshop work**.
+
+**Apply:** sends the calendar to the shop floor. Work mode queues update with the new sequence.
+
+<Warning>
+  If operations, resources, or requirements change after solving, refresh or solve the plan again before applying it.
+</Warning>

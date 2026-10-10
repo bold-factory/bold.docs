@@ -1,0 +1,84 @@
+---
+es_link: "/es/ayuda/costes/partes-de-trabajo"
+title: "Work order costs"
+description: "Review labor, material and spare part costs in maintenance."
+---
+
+Use **Maintenance costs** to analyze how much a maintenance intervention costs. Bold separates material and labor costs and shows the work order's total cost.
+
+## Data you can review
+
+| Section | What it includes |
+| --- | --- |
+| Total cost | Sum of materials and labor. |
+| Material cost | Spare parts and consumption recorded in the work order. |
+| Labor cost | Hours recorded per employee. |
+| Material details | Item, lot, quantity, cost per unit and total cost. |
+| Labor details | Employee, time, hourly cost and total cost. |
+
+## Before analyzing a work order
+
+- The work order must have recorded materials or time.
+- Material consumption must be associated with a lot to use its actual cost.
+- Employees must have an hourly cost if you want to value their time.
+- Actions and causes must be specified if you want to compare costs by intervention type.
+
+## Analyze the cost of an intervention
+
+<Steps>
+  <Step title="Open the list">
+    Go to **Costs** and open **Work orders**.
+  </Step>
+  <Step title="Filter the work order">
+    Search by code or date range. Sort by total cost to locate expensive interventions.
+  </Step>
+  <Step title="Open the details">
+    Use **Actions** to open the work order and go to the **Costs** tab.
+  </Step>
+  <Step title="Review materials">
+    Check the item, lot, quantity, cost per unit and total cost. If the cost does not match expectations, open the lot.
+  </Step>
+  <Step title="Review labor">
+    Check the employee, time, hourly cost and total cost. If cost is missing, review the employee's hourly cost.
+  </Step>
+</Steps>
+
+## How it is calculated
+
+| Cost | Calculation |
+| --- | --- |
+| Material per line | Consumed quantity x lot cost per unit. |
+| Labor per line | Recorded hours x employee hourly cost. |
+| Work order total cost | Material cost + labor cost. |
+
+<Info>
+  Work order cost relies on data recorded during the intervention. If consumption, lots, time records or hourly costs are missing, the analysis may be incomplete.
+</Info>
+
+## Example
+
+A work order for a conveyor belt consumes `2` bearings from lot `ROD-2026-04` at `€18.00/unit` and records `1.5 h` of a technician's time at `€24.00/h`.
+
+```text
+Materials: 2 x 18.00 = €36.00
+Labor: 1.5 x 24.00 = €36.00
+Total cost: €72.00
+```
+
+You can then compare this cost with other work orders for the same asset, cause or action to identify recurrence.
+
+## Common problems
+
+| Problem | What to review |
+| --- | --- |
+| Material cost is zero | The spare part has no valued lot or consumption is not recorded. |
+| Labor cost is zero | The employee has no hourly cost or the time record is missing. |
+| A work order seems more expensive than expected | Review consumed quantity, lot cost and actual intervention duration. |
+| You cannot see maintenance costs | Review maintenance cost permissions. |
+
+## Related
+
+- [Maintenance](/en/concepts/maintenance)
+- [Work orders](/en/concepts/maintenance/work-orders)
+- [Prepare cost data](/en/guides/costs/prepare-cost-data)
+- [Inventory valuation](/en/guides/costs/value-inventory)

@@ -1,0 +1,103 @@
+---
+es_link: "/es/ayuda/almacen/aprovisionar-materias-primas"
+title: "Provision raw materials"
+description: "Request an operation's inputs and move them to the workstation's consumption location."
+---
+
+Provision raw materials to move an operation's pending materials to the location where they will be consumed.
+
+The operation generates the material need and the warehouse team performs the physical transfer. See [Warehouse movements](/en/concepts/warehouse/warehouse-movements) to understand planning and reservations.
+
+## Before you start
+
+Check that:
+
+- the operation has inputs with a pending quantity;
+- the operation is neither finished nor cancelled;
+- it has an assigned workstation;
+- the workstation has a **Consumption location**;
+- at least one piece of warehouse equipment exists.
+
+To define the location, open **Production > Resources > Workstations**, open the workstation, and select **Consumption location**.
+
+<Warning>
+  Without a consumption location, Bold identifies pending materials but cannot plan the movement to the workstation.
+</Warning>
+
+## Request materials for the operation
+
+**Path:** **Production > Production orders > MO > Materials**
+
+<Steps>
+  <Step title="Review inputs">
+    Check the MO's items and pending quantities.
+  </Step>
+  <Step title="Review provisioning status">
+    Check the indicator to see whether materials are unrequested, pending, on their way, or ready at the workstation.
+  </Step>
+  <Step title="Request materials">
+    Click **Request materials**.
+  </Step>
+</Steps>
+
+Bold first reserves stock already at the consumption location. It then creates **Provisioning** movements only for the missing quantity.
+
+## Execute the transfer
+
+**Path:** **Work mode > Warehouse > Movements**
+
+<Steps>
+  <Step title="Identify the employee">
+    Select the employee who will perform the transfer.
+  </Step>
+  <Step title="Select equipment">
+    Choose the forklift, pallet truck, cart, or manual equipment that will carry the material.
+  </Step>
+  <Step title="Start the movement">
+    Click **Start**. The task is assigned to the equipment and employee.
+  </Step>
+  <Step title="Go to the first source">
+    Follow the indicated location. You can scan its QR code or click **I'm here**.
+  </Step>
+  <Step title="Confirm pick-up">
+    Check the item, lot, quantity, or package. Click **Picked up** to confirm each pick-up.
+  </Step>
+  <Step title="Continue through the stops">
+    Click **Continue** when you finish at a location. Repeat the pick-ups specified by the plan.
+  </Step>
+  <Step title="Deliver to the workstation">
+    Go to the consumption location and confirm **Left** for each material or package.
+  </Step>
+  <Step title="Complete the task">
+    Check that **Current load** is empty. Click **Complete movement**.
+  </Step>
+</Steps>
+
+During pick-up, stock moves to the equipment's internal location. During delivery, it moves to the workstation's consumption location.
+
+## Check that the operation is ready
+
+Return to the operation or check its card in work mode.
+
+| Status | Meaning |
+| --- | --- |
+| **Materials not requested** | Provisioning has not started yet. |
+| **Provisioning pending** | Free stock or an executable plan is missing. |
+| **Provisioning in progress** | Some materials are ready or on their way, but some quantity remains uncovered. |
+| **Provisioning planned** | Everything is covered by stock at the destination or movements. |
+| **Stock provisioned at the location** | All pending inputs are available at the consumption location. |
+| **No provisioning required** | The operation has no pending inputs. |
+
+## If the movement is unavailable
+
+Open **Warehouse > Movements** in management mode and look for **Pending** tasks.
+
+Review **Planning issue** to find whether stock is missing, the package is unavailable, its contents do not match, or a reservation conflict exists.
+
+Bold retries planning when stock arrives or a reservation is released. If the operation's pending quantity changes before starting, it recalculates movements that have not yet been executed.
+
+## Free movement
+
+To store material without a manufacturing or loading request, use **New movement** from **Work mode > Warehouse > Movements**.
+
+In this workflow, you choose the source, pick up loose stock or packages, and select the destination during execution. Use it for storage or internal transfers. It does not replace an operation's material request because it is not linked to its demand.

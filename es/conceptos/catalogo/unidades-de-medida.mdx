@@ -1,4 +1,5 @@
 ---
+en_link: "/en/concepts/catalog/units-of-measure"
 title: "Unidades de medida"
 description: "Entiende cómo las unidades afectan artículos, stock, compras, fabricación e integraciones."
 icon: "ruler"
@@ -66,11 +67,9 @@ Evita crear equivalencias ambiguas. Escribe siempre la equivalencia como **canti
 Cada artículo puede tener una **unidad de fabricación** y una **unidad de almacén**, elegidas entre sus unidades alternativas. Si no eliges ninguna, la preferencia usa la unidad base.
 
 - El **modo de trabajo** de fabricación muestra las cantidades de la operación, sus materiales y coproductos en la unidad de fabricación de cada artículo, con sus decimales, y registra las cantidades introducidas en esa unidad.
-- La unidad de almacén se guarda como preferencia del artículo. Las vistas de almacén siguen mostrando la unidad base.
+- La unidad de almacén se guarda como preferencia del artículo. Elegirla no cambia la unidad que muestran las pantallas de almacén: siguen usando la unidad base.
 
 Las cantidades se siguen guardando y devolviendo por la API en la unidad base. Si cambias una equivalencia, el modo de trabajo de fabricación muestra las cantidades anteriores con la nueva equivalencia. Si eliminas una alternativa marcada como preferida, su preferencia vuelve a la unidad base.
-
-{/* TODO: document which warehouse screens use the warehouse unit once the client applies it. */}
 
 ## Impacto en planificación
 

@@ -1,0 +1,84 @@
+---
+es_link: "/es/ayuda/produccion/ejecutar-operaciones-en-planta"
+title: "Execute shop floor operations"
+description: "Start, pause, record progress, consume materials, and finish operations from work mode."
+---
+
+Execute shop floor operations when an order has prepared work. This workflow records what actually happens: who works, where, for how long, what they consume, what they produce, and which issues arise.
+
+Daily execution takes place in **work mode**. Manage recipes, orders, resources, and sequences from the **Control panel**.
+
+If someone forgets to record their work, you can enter operation execution from the **Control panel**.
+
+## Record work
+
+### 1. Identify the employee
+
+Select the employee who will record the work.
+
+### 2. Open production
+
+Open production from **work mode**.
+
+### 3. Choose the task list
+
+The operator can change their work queue perspective according to how the day is organized:
+
+- **My operations:** shows active operations matching the identified employee's skills or usual workstations, according to the criterion configured by the company.
+- **By workstation:** shows pending jobs at the machine or work center where they are physically located (for example, all tasks for the _punch press_). It is useful when several operators rotate or share a machine.
+- **By area / By process:** groups tasks by areas, such as _Woodworking_ or _Assembly_, or by process type.
+
+### 4. Review priority
+
+Cards appear from top to bottom according to the defined sequence:
+
+- The first card represents the queue's current priority. For example, it might show order `OF-000060` for _Board drilling_.
+- Lower cards show upcoming jobs and help anticipate needed materials or tools.
+
+### 5. Review the work card
+
+Each card summarizes the information needed to execute the operation:
+
+- **Identification:** order code, operation name, and item description.
+- **Progress:** completed quantity compared with planned quantity, for example `1 of 2 units`.
+- **Truck icon (material availability):** indicates whether raw materials are available at the work center or warehouse to begin work.
+
+### 6. Apply quick filters
+
+The **Filters** bar lets you enable **Hide not started**, **Hide restricted**, and **Hide finished**. You can also search by text, scan a code, or limit the list by date.
+
+### 7. Control execution time
+
+Bold records the operation's execution time.
+
+- **Pause time:** if the operator stops production for a break, tool change, or issue, they must click **Stop**. The counter stops until they resume the operation.
+- **Resume:** on returning to the work center, click **Resume** to continue the paused operation.
+
+### 8. Record manufactured units
+
+Record progress as you finish units:
+
+- You can use **\+** and **-** to enter individual units.
+- You can type the exact number directly in the numeric field.
+- If you processed the complete lot, click **All (50)** to enter the total planned quantity.
+
+### 9. Record waste or defective pieces
+
+If a piece turns out incorrectly, breaks, or fails the quality standard during the process, the operator must click **Defects** and enter the rejected quantity.
+
+### 10. Review materials, lots, and co-products
+
+Each material and co-product shows its theoretical quantity according to its configuration and applicable progress, alongside the quantity to record:
+
+- If the actual quantity differs, enter it on the line. Bold shows the difference from the theoretical quantity and retains your value even if you change units.
+- To make an edited line follow the theoretical quantity again, click the return-to-theoretical icon next to the quantity.
+- If the material uses lots, they are consumed FIFO by default and **Lot** shows **FIFO**. To choose lots, click that button: lots with stock expand, identified by source code or, if none exists, internal code. Once selected, the button shows how many lots will be consumed. Enter the consumed quantity for each lot, click **Scan** to read a lot code, or **Distribute FIFO** to distribute the theoretical quantity among the oldest lots. The material quantity becomes the sum of its lots.
+
+Everything you prepare is automatically saved as the operation's draft without further action. Saved changes are restored when reloading or continuing from another tablet. If **Offline** appears, keep the screen open until the connection returns. See [Work mode](/en/concepts/work-mode) for sharing between devices.
+
+### 11. Confirm work and update status
+
+To save progress, choose one option:
+
+- **Confirm without finishing:** use it if the operator's shift has ended or they must pause the task but **pieces in the total lot still remain to be manufactured**. It saves units made so far and keeps the card open to continue later.
+- **Confirm and finish:** use it when you have completed the target lot or consider the operation finished. The card closes and no longer appears in the pending work list.

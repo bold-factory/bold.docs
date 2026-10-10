@@ -1,0 +1,44 @@
+---
+es_link: "/es/conceptos/costes/valoracion-de-inventario"
+title: "Inventory valuation"
+description: "Understand how stock is valued by item, lot, and location."
+icon: "warehouse"
+---
+
+**Inventory valuation** calculates the economic value of recorded stock.
+
+Bold values stock lines using positive recorded quantity, including reserved stock, and associated cost, usually by lot or source.
+
+<Info>
+  Valuation uses a single currency: euros (EUR). Bold currently does not support valuation in multiple currencies.
+</Info>
+
+## What is valued
+
+| Data | Usage |
+| --- | --- |
+| Item | Reference being valued. |
+| Location | Where the stock is held. |
+| Lot | Source and cost of the traceable group. |
+| Quantity | Positive recorded stock. |
+| Unit cost | Cost applied to that line. |
+| Value | Quantity multiplied by unit cost. |
+
+## Formula
+
+```text
+Line value = positive recorded stock x unit cost
+Total value in EUR = sum of lines valued in EUR
+```
+
+## Common differences
+
+Two lines for the same item can have different costs if they belong to different lots. This preserves differences from purchasing, manufacturing, or adjustments.
+
+If a lot has no cost, check its source. It may come from a receipt without a price, an adjustment, temporary consumption, or incomplete manufacturing.
+
+## Related
+
+- [Lots](/en/concepts/warehouse/lots)
+- [Stock and movements](/en/concepts/warehouse/stock-and-movements)
+- [Inventory valuation guide](/en/guides/costs/value-inventory)

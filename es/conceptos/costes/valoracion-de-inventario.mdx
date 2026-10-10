@@ -1,4 +1,5 @@
 ---
+en_link: "/en/concepts/costs/inventory-valuation"
 title: "Valoración de inventario"
 description: "Entiende cómo se valora el stock por artículo, lote y ubicación."
 icon: "warehouse"
@@ -6,7 +7,7 @@ icon: "warehouse"
 
 La **valoración de inventario** calcula el valor económico del stock registrado.
 
-Bold valora líneas de stock usando cantidad disponible y coste asociado, normalmente por lote u origen.
+Bold valora líneas de stock usando la cantidad positiva registrada, incluido el stock reservado, y el coste asociado, normalmente por lote u origen.
 
 <Info>
   La valoración usa una única moneda: euros (EUR). Bold no admite actualmente valoraciones multimoneda.
@@ -26,7 +27,7 @@ Bold valora líneas de stock usando cantidad disponible y coste asociado, normal
 ## Fórmula
 
 ```text
-Valor de línea = stock disponible x coste unitario
+Valor de línea = stock positivo registrado x coste unitario
 Valor total en EUR = suma de líneas valoradas en EUR
 ```
 

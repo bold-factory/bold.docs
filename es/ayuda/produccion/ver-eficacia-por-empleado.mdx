@@ -1,0 +1,95 @@
+---
+en_link: "/en/guides/manufacturing/view-effectiveness-by-employee"
+title: "Ver la eficacia por empleado"
+description: "Cruza el trabajo de un empleado con su horario y compara su producción con el tiempo teórico."
+---
+
+Usa **Eficacia por empleado** para analizar a una persona durante un periodo: cuánto de su horario ha estado trabajando, cuánto tiempo ha estado sin tareas, cuánto ha trabajado fuera de horario y qué eficiencia ha tenido frente al tiempo teórico de las operaciones.
+
+Es el equivalente al OEE para personas, conocido como **OLE** (_Overall Labor Effectiveness_).
+
+## Revisar la eficacia
+
+**Ruta:** **Smart Factory > Cuadros de mando > Eficacia por empleado**
+
+### 1. Elegir el empleado y el periodo
+
+Selecciona el empleado y las fechas de inicio y fin. Bold usa el horario del empleado (horario personal, calendario local y turno) para saber cuándo debía trabajar.
+
+### 2. Leer la línea temporal
+
+| Estado | Significado |
+| --- | --- |
+| Trabajando | Dentro de su horario y con alguna tarea registrada. |
+| Trabajando fuera de horario | Con tareas fuera de su horario, incluidos los días no laborables. |
+| Tiempo muerto | Dentro de su horario y sin ninguna tarea registrada. |
+| Tiempo muerto por parada | Tiempo muerto justo después de que su operación se pausara, mientras la pausa sigue abierta. Muestra el motivo de la pausa. |
+| Fuera de horario | Día laborable, fuera de sus periodos de trabajo. |
+| Día no laborable | El horario asigna a ese día una jornada sin periodos, por ejemplo vacaciones o baja. No cuenta como tiempo muerto. |
+| Sin horario definido | Ninguna regla del horario cubre ese día. No se puede calcular el tiempo muerto. |
+
+Se consideran tareas las operaciones de fabricación, las órdenes de mantenimiento y las cargas y movimientos de almacén. Si el empleado tiene varias tareas a la vez, su tiempo se reparte a partes iguales entre ellas.
+
+<Tip>
+  Registra las bajas y vacaciones en el horario personal del empleado con una jornada sin periodos. Así no aparecen como tiempo muerto.
+</Tip>
+
+### 3. Interpretar los indicadores
+
+#### Ocupación
+
+Ocupación (%) = (Tiempo trabajado dentro del horario / Tiempo de horario) \* 100
+
+Un valor bajo indica tiempo de horario sin tareas registradas: falta de carga, esperas, paradas o trabajo que no se está registrando.
+
+#### Eficiencia
+
+Eficiencia (%) = (Tiempo estándar ganado / Tiempo real valorado) \* 100
+
+- **Tiempo estándar ganado:** tiempo teórico de las unidades producidas (buenas y rechazadas) según los pasos de la operación, multiplicado por las personas requeridas.
+- **Tiempo real valorado:** tiempo del empleado en operaciones con tiempo teórico cuya producción ya se ha registrado.
+
+Cada registro de producción cierra un tramo de la operación. El tiempo teórico de las unidades registradas se reparte entre todos los que trabajaron en ese tramo, en proporción a su tiempo. Si varias personas trabajan juntas en una operación, todas tienen la misma eficiencia en ella.
+
+El tiempo posterior al último registro de una operación abierta queda **pendiente de valorar** y no penaliza la eficiencia hasta que se registra más producción. En procesos largos, registrar producción parcial con frecuencia hace que la eficiencia se actualice antes.
+
+La producción registrada sin tiempo de equipo se combina con un tramo trabajado del mismo estado de valoración. Si el único tramo trabajado sigue pendiente, esas unidades todavía no se atribuyen al empleado; otro registro de producción o la finalización pueden permitir atribuirlas cuando Bold recalcula la operación.
+
+No se valora el tiempo en operaciones sin tiempo teórico, desatendidas o canceladas.
+
+<Warning>
+  Si una operación registra producción en mucho menos tiempo del teórico (más de 5 veces más rápido), Bold la marca como **no fiable** y no la tiene en cuenta en la eficiencia. Suele ocurrir cuando el trabajo se registra a posteriori sin asignar el tiempo real.
+</Warning>
+
+#### Calidad
+
+Calidad (%) = (Unidades buenas / Unidades producidas) \* 100, según la parte del empleado en cada tramo.
+
+#### Productividad sobre jornada
+
+Productividad (%) = (Tiempo estándar ganado / Tiempo de horario) \* 100
+
+Combina ocupación y eficiencia en un solo número.
+
+#### OLE
+
+OLE (%) = (Ocupación (%) / 100) × (Eficiencia (%) / 100) × (Calidad (%) / 100) × 100
+
+### 4. Revisar el detalle
+
+- **Por día:** horario, trabajo dentro y fuera de horario, tiempo muerto, ocupación y eficiencia de cada día.
+- **Por operación:** tiempo del empleado y del equipo, compañeros, tiempo valorado y pendiente, estándar ganado, eficiencia y unidades atribuidas.
+- **Tiempo muerto:** cada intervalo sin tareas dentro del horario, con el motivo de la pausa cuando se conoce.
+
+## Limitaciones
+
+- Bold no registra fichajes: el tiempo muerto es el horario menos el trabajo registrado.
+- El horario de días pasados se calcula con la configuración actual del horario.
+- La eficiencia de días anteriores puede cambiar al registrar producción de operaciones que seguían abiertas.
+
+## Relacionado
+
+- [Cuadros de mando](/es/conceptos/fabricacion/cuadros-de-mando)
+- [Ver el OEE por estación](/es/ayuda/produccion/ver-oee-por-estacion)
+- [Configurar horarios](/es/ayuda/personal/configurar-horarios)
+- [Asignaciones y grupos de operaciones](/es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones)

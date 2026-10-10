@@ -1,0 +1,68 @@
+---
+es_link: "/es/conceptos/planificacion/clientes"
+title: "Customers"
+description: "Understand how customers identify demand and connect sales orders, deliveries and integrations."
+icon: "user-round"
+---
+
+A **customer** is a planning master record. It identifies who generates commercial demand and lets you group sales orders, deliveries, external references and service analysis.
+
+A customer record does not replace a sales tool. Keep only data that affects planning, orders, deliveries or integrations in Bold.
+
+## What it is for
+
+| Use | What it provides |
+| --- | --- |
+| Sales orders | Indicates who requests the items and lets you filter commitments. |
+| Demand | Groups requirements by account, channel or operational customer. |
+| Shipments | Preserves the commercial source of warehouse outflows. |
+| Integrations | Links Bold customers to a business management system, sales tool, online store or imports. |
+| Analysis | Helps you review fulfillment, delays and demand by customer. |
+
+## Main data
+
+| Data | Use | Recommendation |
+| --- | --- | --- |
+| Name | Identifies the customer in lists, sales orders and filters. | Use the name your team recognizes in operations. |
+| External reference | Connects the customer to another system. | Keep a unique, stable reference. |
+| Audit trail | Shows creation and last modification. | Use it to review changes, not as operational data. |
+
+## Relationship with sales orders
+
+Each sales order belongs to a customer. The order header stores the commercial context, and its lines explain which items are needed, in what quantity and by which date.
+
+Confirmed lines generate demand and can be grouped by customer. Draft lines do not generate demand.
+
+<Info>
+  The customer identifies the source of demand. The sales order explains the commitment. The shipment records the physical outflow.
+</Info>
+
+## Lifecycle
+
+| Status | Meaning |
+| --- | --- |
+| **Active** | You can use the customer in new orders and integrations. |
+| **Inactive** | The customer is retained for traceability, but you should not use it for new operational data. |
+
+When you delete a customer, Bold marks it inactive through soft deletion. Previous orders and events retain the reference to preserve history.
+
+## Operational rules
+
+- The name should clearly identify the customer for operations.
+- The external reference should remain stable if it comes from an integration.
+- Check for duplicates before importing sales orders.
+- Do not use a generic customer if you need to analyze service, deliveries or delays by account.
+- If a customer becomes inactive, create or select another customer for new commitments.
+
+## Permissions
+
+| Action | Required permission |
+| --- | --- |
+| View customers | Read access to commercial planning. |
+| Create, edit or delete customers | Edit access to customers. |
+
+## Related
+
+- [Sales orders](/en/concepts/planning/sales-orders)
+- [Demand and supply](/en/concepts/planning/demand-and-supply)
+- [Create a sales order](/en/guides/sales/introduction)

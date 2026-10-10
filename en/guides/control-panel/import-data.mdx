@@ -1,0 +1,97 @@
+---
+es_link: "/es/ayuda/panel-de-control/importar-datos"
+title: "Import data"
+description: "Upload data from CSV or Excel to create, update, merge, cancel or delete records in bulk."
+---
+
+Use **Import data** to make bulk changes from a CSV or Excel file. Each import combines an object with an action, such as creating families, updating items, adding order lines or cancelling MOs.
+
+## What you can import
+
+| Area | Example actions |
+| --- | --- |
+| Catalog | Create or delete families and items, merge items, add or delete values, create properties and manage item suppliers. |
+| Planning | Create, edit or delete customers, suppliers, sales orders and purchase orders. |
+| Manufacturing | Create or edit areas, workstations and operation types; create recipes, versions, operations, materials, steps and inspections, or cancel MOs and requests. |
+| Warehouse | Create or edit locations; create receipts and shipments, add or delete lines, receive, ship, reverse and import stock counts. |
+| Operational data | Create or edit employees and maintenance assets; update planning, lot management and relationships according to the available template. |
+
+## Before importing data
+
+Before uploading a file, check these rules:
+
+1. **Accepted formats:** files with the `.xlsx` or `.csv` extension are allowed.
+2. **In Excel:** Bold reads only the **first sheet** and takes column names from the **first row**.
+3. **In CSV:** the first row must contain column names.
+4. **Required fields:** the screen indicates which Bold fields you must map to the file columns.
+5. **Actions with impact:** cancelling, deleting or merging data can affect stock, orders, traceability and manufacturing history. Limit these imports to authorized staff.
+
+## Available actions by entity
+
+The screen organizes templates by entity and action. Always review the specific template because each action has different required columns.
+
+| Entity | Common actions |
+| --- | --- |
+| Family | Create or delete. |
+| Item | Create, delete, merge, add values, delete values, update planning and update lot management. |
+| Customer and supplier | Create, edit or delete. |
+| Recipe | Create a recipe, add a version, add an operation, add a raw material or semi-finished item, add a step and add an inspection. |
+| Receipt | Create, add lines, delete lines, receive or reverse. |
+| Shipment | Create, add lines, delete lines, ship or reverse. |
+| Stock count | Add count entries. |
+| Sales order | Create, delete, add lines, edit lines or cancel lines. |
+| Purchase order | Create, delete, add lines, edit lines or cancel lines. |
+| Manufacturing order | Cancel orders. |
+| Manufacturing request | Cancel requests. |
+
+<Warning>
+  Imports can create, modify, cancel, merge or delete data. Always review the template and test with a few records before running bulk uploads.
+</Warning>
+
+## Import data from CSV or Excel
+
+**Path:** **Control panel > Import data**
+
+<Steps>
+  <Step title="Select the object and action">
+    In **Data to import**, choose the information you will change. For example, select **Item** to work with raw materials, semi-finished items or finished products.
+
+    In **Action to perform**, choose the change. For example, **Edit** lets you update names, descriptions or lead times of existing records using their code.
+  </Step>
+  <Step title="Upload your file">
+    Click **Select file** and choose the CSV or Excel file. Bold shows the number of detected rows and columns.
+  </Step>
+  <Step title="Map the columns">
+    Map each field required by Bold to the corresponding file column.
+  </Step>
+  <Step title="Review and confirm">
+    Once you have mapped the required fields, click the review button to process the upload.
+  </Step>
+</Steps>
+
+## Recommendations by risk
+
+| Action | Risk | Recommendation |
+| --- | --- | --- |
+| Create master data | Medium | Review duplicates, codes and units. |
+| Update planning or lots | High | Check the impact on projected stock and traceability. |
+| Cancel sales, purchase or manufacturing orders | High | Review statuses and work already performed. |
+| Merge items | High | Only allow users who understand the catalog, stock and planning to do it. |
+| Delete records | High | Confirm dependencies before importing. |
+
+## Common problems
+
+| Problem | What to review |
+| --- | --- |
+| A row is rejected | Check required columns, date formats, codes and references. |
+| Duplicates are created | Normalize codes and references before importing. |
+| The result affects other modules | Imports can update projections used by planning, warehouse or manufacturing. |
+| The Excel/CSV file looks wrong | Check the separator, encoding and template headers. |
+
+## Related
+
+- [Catalog](/en/concepts/catalog)
+- [Planning](/en/concepts/planning)
+- [Warehouse](/en/concepts/warehouse)
+- [Manufacturing](/en/concepts/manufacturing)
+- [Data and files](/en/concepts/control-panel/data-and-files)

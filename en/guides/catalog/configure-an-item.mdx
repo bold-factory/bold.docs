@@ -1,0 +1,58 @@
+---
+es_link: "/es/ayuda/articulos/editar-un-articulo"
+title: "Configure an item"
+description: "Complete an item's properties and operational rules to purchase, manufacture or store it."
+---
+
+Complete the item configuration so Bold can use it in stock, planning, purchasing and manufacturing. Define only the data that applies to your operations.
+
+**Path:** **Catalog > Items > Item to configure**
+
+## Assign property values
+
+Assign a value to each required family property. Depending on its configuration, the value can be a number, an option, text, yes/no or a date. The item is valid once all required properties are complete.
+
+## Add an additional property (optional)
+
+Add an additional property when an item has its own characteristic that should not apply to the entire family.
+
+<Note>
+  **Example:** a T-shirt family requires **Size** and **Color**. If only one technical T-shirt needs a **Breathability type**, add that property to the item without changing the whole family.
+</Note>
+
+## Configure alternative units
+
+In **Alternative units**, add the additional ways you work with the item and specify their precision and equivalence to the base unit.
+
+**Alternative unit:** select the corresponding unit you previously created in the catalog.
+
+**Decimal places:** set the number of decimals used to display quantities in the alternative unit. Enter `0` to display whole units or `2` to display two decimals. This setting does not prevent fractional quantities.
+
+**Equivalence:** enter two quantities, `[quantity] [alternative unit] = [quantity] [base unit]`, as you would express the relationship. Both must be greater than zero.
+
+<Note>
+  **Example:** if a tub contains 5 kg of resin, define kilograms as the base unit, tubs as the alternative unit and the equivalence `1 tub = 5 kg`. When you enter 10 tubs in a supported operation, Bold converts them to 50 kg. If 3 boxes make 1 pallet, enter `3 boxes = 1 pallet` instead of a decimal factor.
+</Note>
+
+To change an alternative unit's equivalence or precision, click the edit icon in its row. You cannot change the selected unit: delete the alternative and add another one.
+
+Bold converts quantities entered using an alternative to the base unit in operations that allow unit selection. To change the item's base unit, delete all its alternative units first. Changing the base unit does not recalculate historical quantities.
+
+### Choose the manufacturing and warehouse units
+
+In the alternative unit table, select an alternative's **Manufacturing** checkbox so manufacturing work mode displays the item in that unit. The **Warehouse** checkbox saves the preferred warehouse unit. Only one unit can be selected in each column. If you clear the checkbox, the preference returns to the base unit.
+
+Manufacturing **work mode** uses the manufacturing unit of the manufactured item and of each material or co-product. It displays converted quantities with that unit's decimal places, and you enter recorded quantities in that unit. The rest of the application continues to display the base unit.
+
+If you delete an alternative selected as the manufacturing or warehouse unit, its preference returns to the base unit.
+
+## Configure planning
+
+On the **Planning** tab, you can view stock and configure procurement.
+
+Complete the relevant fields:
+
+- **Reorder point:** specify the stock threshold for replenishment to stock through purchasing or manufacturing.
+- **Minimum order:** specify the minimum quantity you purchase or manufacture. For example, if you need 2 boards and the minimum order is `10`, Bold proposes 10.
+- **Lot size (optional):** use this if you purchase or manufacture in fixed packs. For example, with lots of 6 boards, a requirement for 7 rounds up to 12.
+- **Procurement lead time (working days, optional):** specify how long the item takes to become available from the start of purchasing or manufacturing. Bold uses this to calculate when procurement should begin.

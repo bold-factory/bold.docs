@@ -1,0 +1,86 @@
+---
+es_link: "/es/ayuda/compras/recibir-pedido-de-compra"
+title: "Receive a purchase order"
+description: "Record materials received from a purchase order and update stock and received quantities."
+---
+
+Receiving a purchase order creates a **receipt** linked to its lines. When you receive it, Bold increases stock and updates the order's received quantities.
+
+<Info>
+  You need read access to view receipts and edit access to create, receive, reverse, or complete inspections.
+</Info>
+
+A receipt can be complete or partial:
+
+- **Complete receipt:** records all pending items and quantities on the order.
+- **Partial receipt:** records a quantity smaller than requested. The line remains partially received and the rest stays pending.
+
+## Create a receipt from the order
+
+**Path:** **Planning > Purchase orders > Order > Create receipt**
+
+### Complete the receipt
+
+To record the arrival of goods, complete these fields:
+
+**Delivery note code (optional):** enter the supplier's delivery document code.
+
+**Date (optional):** enter the delivery note date.
+
+**Receipt location (optional):** select where the material is deposited.
+
+If you choose a location, you can leave **Receive immediately** enabled to create and receive the document in one action. If you disable it or do not enter a location, the receipt is created as pending. Review it before clicking **Receive**.
+
+Click **Create** to generate the receipt with the order's pending lines.
+
+## Create a partial receipt
+
+**Path:** **Warehouse > Receipts**
+
+<Steps>
+  <Step title="Add a receipt">
+    **Origin:** select the supplier you purchased from.
+
+    **Delivery note number:** enter the number on the document provided by the carrier.
+
+    **Delivery note date:** enter the date shown on the delivery document.
+
+    **Receipt location:** select the physical place where the order is unloaded and stored, such as a warehouse, shelf, or factory area.
+  </Step>
+  <Step title="Open the receipt">
+    In the actions column, open the receipt you just created.
+  </Step>
+  <Step title="Add lines">
+    Add the items that arrived.
+
+    **Order line:** select a pending line from the supplier's orders. If you received more than one item, add a line for each.
+
+    **Quantity:** enter the units counted during unloading.
+
+    **Supplier lot:** enter the lot, batch, or series assigned to the parts by the manufacturer. It usually appears on a pallet or box label.
+  </Step>
+  <Step title="Receive the material">
+    Review the lines and click **Receive**.
+
+    <Warning>
+      **Receive** requires a location, at least one line, and all required inspections completed.
+    </Warning>
+  </Step>
+</Steps>
+
+## Correct or undo a receipt
+
+**Path:** **Warehouse > Receipts > Received order**
+
+### Undo the receipt
+
+If you record an incorrect quantity or lot, click **Undo receipt** to correct the document.
+
+Clicking **Undo receipt** automatically does two things:
+
+- **Stock correction:** the system subtracts the units added by this receipt. Later stock movements remain recorded.
+- **Status change:** the document returns to **Pending receipt** so you can correct quantities, items, or other data.
+
+<Warning>
+  Avoid correcting a received receipt with adjustments when you can reverse it. Reversal better preserves its relationship with the purchase order.
+</Warning>

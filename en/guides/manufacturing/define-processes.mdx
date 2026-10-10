@@ -1,0 +1,46 @@
+---
+es_link: "/es/ayuda/produccion/definir-procesos"
+title: "Define processes"
+description: "Create processes and assign primary or auxiliary workstations to execute each type of work."
+---
+
+**Processes** are reusable categories of productive work, such as cutting, assembly, welding, painting, or inspection.
+
+They connect a recipe operation with resources capable of performing it. An operation specifies the process it needs; Bold can propose or limit workstations compatible with that process.
+
+## Steps to follow
+
+**Path:** **Production > Processes > Add new type**
+
+**Name:** use a short technical name identifying the action, such as `Pressing`, `Packaging`, `Drilling`, or `Quality control`.
+
+**Description:** detail the tasks included in the process. For example, for `Joining pieces` in textiles, you could write `Construction and sewing (overlocking and flat stitching) of front and back panels`.
+
+## Assign workstations to the process
+
+After creating the process, specify the workstations where it can run. Assign one or more as appropriate.
+
+**Path:** **Production > Processes > Created process**
+
+**+ Assign workstation**
+
+**Workstation:** select the machine, line, or table where the process can run. For example, for `Welding`, select **TIG welding workstation 02**.
+
+<Tip>
+  If the workstation you need does not appear, make sure you have already created it in **Prepare work centers and machines**.
+</Tip>
+
+**Efficiency (%):** enter this workstation's rate for the process. `100 %` represents standard speed.
+
+- **If the workstation runs at the standard rate:** leave it at `100 %`.
+- **If it runs more slowly:** reduce the percentage, for example to `80 %`. The system calculates longer production times when using this workstation.
+- If you do not need this level of detail, leave the default: `100 %`.
+
+**Workstation type (Primary or Auxiliary):** defines this machine's role in the process.
+
+- **Primary:** usual workstation for the process. Each process has one primary workstation. Assign equivalent lines as auxiliary workstations; selecting another primary changes the previous one to auxiliary.
+- **Auxiliary:** backup workstation used when the primary workstation is unavailable or unsuitable for a particular job.
+
+<Note>
+  **Example:** for a `Bottling` process, mark `Automatic line 01` as **Primary** and `Manual packaging table` as **Auxiliary** for emergencies or small lots.
+</Note>

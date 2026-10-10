@@ -1,0 +1,61 @@
+---
+es_link: "/es/ayuda/panel-de-control/crear-etiquetas-y-codigos"
+title: "Create labels and codes"
+description: "Prepare printable labels with codes for the objects supported by Bold."
+---
+
+Create labels and codes to identify or scan physical elements. A readable label helps with receipts, movements, manufacturing and shipments.
+
+## Decide what to label
+
+**Path:** **Control panel > Designs**
+
+<Steps>
+  <Step title="Choose the object">
+    Choose an available type: manufacturing operation, operations group, operations of an MO, lot, item, package, receipt line, employee or workstation.
+  </Step>
+  <Step title="Define the code">
+    Use a stable, unique reference for scanning. Avoid codes that change frequently.
+  </Step>
+  <Step title="Add a template">
+    Complete the basic label data:
+
+    - In **Name**, enter a descriptive reference, such as `Lot label 100x50` or `Workstation QR codes`.
+    - In **Canvas width (mm)** and **Canvas height (mm)**, specify the paper dimensions.
+    - In **Template type**, choose the corresponding Bold element, such as **Item**, **Lot**, **Container** or **Workstation**.
+  </Step>
+  <Step title="Add elements">
+    In the design area, drag and place the elements you need:
+
+    - **Barcode:** represents a variable, such as an item or lot code, in a linear format a scanner can read.
+    - **Fixed text:** displays titles, field names or notices that do not change between prints.
+    - **QR code:** represents a variable in a two-dimensional code compatible with suitable cameras and readers.
+    - **Rectangle:** visually groups or separates information.
+    - **Variable text:** inserts data from the labeled object, such as the item name, quantity or target date.
+    - **Image:** adds static elements, such as a logo, pictogram or diagram.
+  </Step>
+  <Step title="Save and test the label">
+    Save the template and print a test label. Scan it with the shop floor or warehouse readers and check that the codes and text are readable before using it in production.
+  </Step>
+</Steps>
+
+## Common uses
+
+| Label | Use |
+| --- | --- |
+| Item | Identify material during receipt or preparation. |
+| Lot | Maintain traceability during consumption, shipment or stock counts. |
+| Package | Move a grouped physical unit. |
+| Receipt line | Identify material during receipt. |
+| Employee or workstation | Identify the resource by scanning. |
+| Operation or operations group | Locate work by scanning. |
+
+<Tip>
+  Prioritize labels that prevent repeated errors. Do not label everything if the team will not scan or read it during the process.
+</Tip>
+
+## Related
+
+- [Designs and labels](/en/concepts/control-panel/designs-and-labels)
+- [Work with packages and containers](/en/guides/warehouse/work-with-packages-and-containers)
+- [Work mode](/en/concepts/work-mode)

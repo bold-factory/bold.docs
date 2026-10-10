@@ -1,0 +1,79 @@
+---
+es_link: "/es/ayuda/almacen/ajustar-stock"
+title: "Adjust stock"
+description: "Correct individual stock discrepancies with a traceable movement."
+---
+
+A stock adjustment corrects an individual difference between the recorded quantity and physical stock. Use it when you have identified what to correct and do not need a full stock count.
+
+Bold records the adjustment as a technical stock count with one line. History retains the location, lot, specified final quantity, applied difference, and comment.
+
+## When to use an adjustment
+
+Use an adjustment to:
+
+- correct a small discrepancy detected outside a stock count;
+- record known wastage;
+- correct a discrepancy when its source movement cannot be reconstructed;
+- adjust a location or lot after an investigation.
+
+<Warning>
+  Do not use adjustments to hide recurring errors. If discrepancies occur frequently, review receiving, picking, consumption, shipments, or stock counts.
+</Warning>
+
+## Create an adjustment
+
+**Path:** **Catalog > Items > Item to change > Warehouse**
+
+<Steps>
+  <Step title="Identify the affected stock">
+    Review the item, location, and lot. Make sure a recent movement does not explain the difference.
+  </Step>
+  <Step title="Adjust stock">
+    Record the total quantity you counted for that item at the location.
+
+    **Location:** select the specific area or shelf holding the item's stock from the dropdown.
+
+    **Quantity:** enter the total physical stock that should be recorded.
+
+    **Comments (optional):** briefly explain the adjustment to maintain traceability, for example _Material damaged during transfer_ or _Discrepancy after counting_.
+
+    Click **Adjust** to apply the change.
+  </Step>
+  <Step title="Review the result">
+    Check stock and movements to confirm the final quantity is correct.
+  </Step>
+</Steps>
+
+## What Bold records
+
+| Data | Use |
+| --- | --- |
+| Location | Defines where the balance is corrected. |
+| Lot | Maintains traceability when the item manages lots. |
+| Quantity | The final physical stock that should remain. |
+| Comment | Explains the correction's reason. |
+| Applied adjustment | Difference between recorded stock and the specified final quantity. |
+
+<Info>
+  If you do not select a lot for an item without lot management, Bold uses the internal unknown lot. For items with lots, select the actual lot to preserve traceability.
+</Info>
+
+## Adjustment or stock count
+
+| Situation | Use |
+| --- | --- |
+| A specific difference for one item, location, and lot. | Stock adjustment. |
+| Many items in the same area. | Stock count. |
+| Periodic count or period closing. | Stock count. |
+| Correction after an investigation with a clear cause. | Stock adjustment. |
+
+<Tip>
+  If the discrepancy affects many items or locations, create a stock count. This is clearer than a series of separate adjustments.
+</Tip>
+
+## Related
+
+- [Warehouse](/en/concepts/warehouse)
+- [Take a stock count](/en/guides/warehouse/take-a-stock-count)
+- [Investigate stock discrepancies](/en/guides/warehouse/investigate-stock-discrepancies)

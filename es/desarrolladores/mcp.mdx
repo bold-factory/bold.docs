@@ -1,7 +1,8 @@
 ---
+en_link: "/en/developers/mcp"
 title: "Conectar ChatGPT o Claude Code por MCP"
 sidebarTitle: "Servidor MCP"
-description: "Conecta ChatGPT Desktop o Claude Code con Bold para consultar información desde tu asistente."
+description: "Conecta la aplicación de escritorio de ChatGPT o Claude Code con Bold para consultar información desde tu asistente."
 ---
 
 MCP conecta tu asistente con Bold para que puedas consultar información usando preguntas normales, sin programar. Por ejemplo, puedes pedirle que busque órdenes de fabricación o revise el stock de un artículo.
@@ -35,7 +36,7 @@ Ten a mano estos datos durante la configuración:
         En ChatGPT Desktop, ve a **Settings > MCP servers** y selecciona **Add server**.
       </Step>
       <Step title="Introduce los datos de Bold">
-        Usa los valores de la tabla anterior: pon `Bold` como nombre, elige **Streamable HTTP**, pega la dirección del servidor y añade la cabecera `X-Api-Key` con tu clave API como valor.
+        Pon `Bold` como nombre, elige **Streamable HTTP** y pega la dirección del servidor. Añade la cabecera `X-Api-Key` con tu clave API como valor. Si tu pantalla no ofrece cabeceras, usa **Configuración manual** más abajo.
       </Step>
       <Step title="Guarda y comprueba la conexión">
         Guarda el servidor y selecciona **Restart**. Abre una tarea local y escribe `/mcp`. Si `bold` aparece como conectado, la configuración está lista.
@@ -43,20 +44,20 @@ Ten a mano estos datos durante la configuración:
     </Steps>
 
     <Accordion title="Configuración manual">
-      Si no puedes añadir la conexión desde la pantalla de configuración, abre el archivo `~/.codex/config.toml`. En Windows está en `%USERPROFILE%\.codex\config.toml`.
+      Abre el archivo `~/.codex/config.toml`. En Windows está en `%USERPROFILE%\.codex\config.toml`. Esta configuración también sirve para Codex CLI y la extensión del editor.
 
-      Añade este bloque y sustituye `TU_CLAVE_API` por tu clave de Bold:
+      Añade este bloque y sustituye `API_KEY` por tu clave de Bold:
 
       ```toml
       [mcp_servers.bold]
       url = "https://api.bold-factory.com/mcp"
-      http_headers = { "X-Api-Key" = "TU_CLAVE_API" }
+      http_headers = { "X-Api-Key" = "API_KEY" }
       ```
 
       Guarda el archivo y reinicia el servidor desde **Settings > MCP servers**.
     </Accordion>
 
-    Consulta la [configuración MCP de ChatGPT Desktop](https://learn.chatgpt.com/docs/extend/mcp) para más opciones.
+    Estos pasos se aplican a tareas locales en la aplicación de escritorio. Consulta la [guía oficial de configuración MCP](https://learn.chatgpt.com/docs/extend/mcp) para otros clientes compatibles.
   </Tab>
 
   <Tab title="Claude Code">
@@ -64,10 +65,10 @@ Ten a mano estos datos durante la configuración:
 
     <Steps>
       <Step title="Añade el servidor">
-        Ejecuta este comando en la terminal y sustituye `TU_CLAVE_API` por tu clave de Bold:
+        Ejecuta este comando en la terminal y sustituye `API_KEY` por tu clave de Bold:
 
         ```bash
-        claude mcp add --transport http --scope user bold https://api.bold-factory.com/mcp --header "X-Api-Key: TU_CLAVE_API"
+        claude mcp add --transport http --scope user bold https://api.bold-factory.com/mcp --header "X-Api-Key: API_KEY"
         ```
 
         Este comando guarda la conexión en tu configuración personal para que puedas usarla desde distintos proyectos.

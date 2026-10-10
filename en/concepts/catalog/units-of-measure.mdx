@@ -1,0 +1,93 @@
+---
+es_link: "/es/conceptos/catalogo/unidades-de-medida"
+title: "Units of measure"
+description: "Understand how units affect items, stock, purchasing, manufacturing and integrations."
+icon: "ruler"
+---
+
+The **unit of measure** indicates how an item is quantified. It affects stock, purchasing, sales, consumption, production, costs and rounding. Bold maintains a reusable catalog of units so all items use consistent codes and names.
+
+Choose units carefully. Changing an item's unit after operations have begun can make it harder to compare historical records, integrations and quantities.
+
+## Where it is used
+
+| Area | Use |
+| --- | --- |
+| Catalog | Defines how the item's quantity is expressed. |
+| Warehouse | Records physical stock, movements, lots and packages. |
+| Planning | Calculates demand, supply, reorder points and lot sizes. |
+| Purchasing and sales | Expresses order line quantities. |
+| Manufacturing | Calculates inputs, co-products, progress and production. |
+| Costs | Interprets unit cost and inventory valuation. |
+
+## Base unit and precision
+
+Each item has a **base unit**. Bold stores and returns its quantities normalized in the current base unit, together with the precision to display. Not all units support the same operational granularity.
+
+| Case | Practical decision |
+| --- | --- |
+| Indivisible pieces | Use whole quantities if you do not sell or consume fractions. |
+| Weight, volume or length | Define enough decimals for purchasing, stock and consumption. |
+| Bulk material | Align precision with scales, external systems and tolerances. |
+| Semi-finished items | Use the unit that will actually be moved and consumed. |
+
+## Alternative units and conversion
+
+You can add alternative units to an item and specify their equivalence to the base unit using two quantities. For example, if the base unit is `units` and a box contains 12 units, configure the equivalence as follows:
+
+`1 box = 12 units`
+
+If the ratio does not give an exact number in one direction, express it in the other direction. For example, if 3 boxes make 1 pallet and the base unit is the pallet, configure `3 boxes = 1 pallet`. Bold preserves the ratio as you enter it, so 3 boxes convert to exactly 1 pallet.
+
+This feature requires **alternative units of measure** in your plan. If it is disabled, you cannot add or change equivalences or enter quantities with alternative units in orders or other new records. The base unit remains available, and historical data retains the unit in which it was recorded.
+
+When an operation lets you specify the quantity's unit, Bold applies that equivalence and saves the result in the base unit, rounded to 10 decimal places. Each alternative also has its own display precision, which does not affect the stored quantity.
+
+Bold also preserves the original alternative quantity and unit entered in:
+
+- purchase and sales order lines;
+- receipts and shipments;
+- stock counts and stock adjustments;
+- manufactured and rejected quantities, consumption and co-products recorded during manufacturing.
+
+Returned records include that original data when available. In the application's tables, you can view it in the quantity's pop-up details. Outside views with a preferred unit, the main figure appears in the item's current base unit.
+
+The same unit cannot be both the item's base unit and an alternative, or appear twice among its alternatives. Both quantities in the equivalence must be greater than zero.
+
+<Warning>
+  To change the base unit, first delete the item's alternative units. The change does not convert or modify figures already recorded. If a stock quantity was `10 units` and you correct the base unit to `m³`, it becomes interpreted as `10 m³`.
+</Warning>
+
+Use a base unit change to correct a unit that was configured incorrectly. Do not use it to transform quantities between units: if you need that transformation, configure an alternative unit with its equivalence.
+
+Avoid ambiguous equivalences. Always write the equivalence as **quantity of the alternative unit = quantity of the base unit**.
+
+### Preferred units by view
+
+Each item can have a **manufacturing unit** and a **warehouse unit**, chosen from its alternative units. If you do not choose one, the preference uses the base unit.
+
+- Manufacturing **work mode** shows operation quantities, materials and co-products in each item's manufacturing unit, with its decimals, and records quantities entered in that unit.
+- The warehouse unit is saved as an item preference. Choosing it does not change the unit shown on warehouse screens: they continue to use the base unit.
+
+Quantities are still stored and returned by the API in the base unit. If you change an equivalence, manufacturing work mode shows earlier quantities using the new equivalence. If you delete an alternative marked as preferred, its preference returns to the base unit.
+
+## Impact on planning
+
+Reorder point, minimum order, lot size and procurement lead time depend on quantities in the item's unit.
+
+If you change the unit or precision, review:
+
+- physical stock;
+- demand and supply;
+- suppliers;
+- recipes and inputs;
+- costs;
+- imports and integrations.
+
+## Related
+
+- [Items](/en/concepts/catalog/items)
+- [Planning](/en/concepts/planning)
+- [Stock and movements](/en/concepts/warehouse/stock-and-movements)
+- [Recipes and versions](/en/concepts/manufacturing/recipes-and-versions)
+- [Theoretical cost vs actual cost](/en/concepts/costs/planned-versus-actual-cost)

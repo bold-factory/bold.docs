@@ -1,0 +1,53 @@
+---
+es_link: "/es/ayuda/panel-de-control/activar-notificaciones"
+title: "Enable notifications"
+description: "Create event subscriptions and adjust their channels and filters to receive alerts in Bold or by email."
+---
+
+**Path:** **Control panel > Notifications**
+
+Create a subscription to receive an event through **App** or **Email**. Subscriptions belong to your user. The page shows your active subscriptions under **Your subscriptions**.
+
+## Create a subscription
+
+<Steps>
+  <Step title="Open the wizard">
+    Click **Create a subscription**.
+  </Step>
+  <Step title="Choose the channel">
+    Select **App** to receive alerts in Bold's notification center or **Email** to receive them by email. Click **Continue**.
+  </Step>
+  <Step title="Select the entity">
+    In **Entity**, choose the type of record you want to follow and click **Continue**.
+  </Step>
+  <Step title="Select the event">
+    In **Event**, choose the change you want to receive and click **Continue**. Only events you are not yet subscribed to in the selected channel appear.
+  </Step>
+  <Step title="Review filters and create the subscription">
+    Filters are optional. To limit alerts, click **Add filter** and define a condition with the relevant property, operator and value.
+
+    If you want to receive the event every time it occurs, leave the filters empty. If the event has no available attributes, you cannot add filters.
+
+    Click **Create subscription**. The new subscription appears under **Your subscriptions**.
+  </Step>
+</Steps>
+
+<Note>
+  To receive the same event through **App** and **Email**, create a subscription for each channel. You can use different filters for each one.
+</Note>
+
+## Adjust or remove a subscription
+
+Each card shows the channel, entity and event. The **Filtered** indicator lets you view the saved condition; **No filters** means you receive the event every time it occurs.
+
+- **Change filters:** click **Edit filters** on the card, adjust the conditions and click **Save**. This action only appears if the event supports filters. To receive all alerts for the event again, remove the conditions and save.
+- **Stop receiving the event:** click **Remove** on its card. If you also have a subscription to the same event in the other channel, that subscription remains.
+- **Receive it again or add another channel:** click **Create a subscription** and complete the wizard again.
+
+## If you cannot find an event
+
+Check the selected channel and the cards under **Your subscriptions**. An event you are already subscribed to does not appear for you to add again in that channel. Use its card to edit filters or go back in the wizard to choose the other channel.
+
+<Note>
+  Use [webhooks](/en/guides/control-panel/configure-webhooks) when the recipient is another system. Notifications are intended to alert Bold users.
+</Note>

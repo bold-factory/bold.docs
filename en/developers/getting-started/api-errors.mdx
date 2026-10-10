@@ -1,0 +1,61 @@
+---
+es_link: "/es/desarrolladores/empezar/errores"
+title: "API errors"
+description: "Interpret Bold API errors and resolve their most common causes."
+---
+
+The Bold API returns JSON errors in the `ProblemDetails` format. Some errors include additional fields such as `code`, `parameters`, `requestId`, and `traceId` to help diagnose the issue.
+
+## Structure
+
+```json
+{
+  "type": "https://api.bold-factory.com/errors/missing-permissions",
+  "title": "Missing permissions",
+  "status": 403,
+  "detail": "Missing permissions: Items.Products.Read",
+  "instance": "GET /v1/items/products",
+  "code": "missing-permissions",
+  "parameters": {
+    "permissions": ["Items.Products.Read"]
+  },
+  "requestId": "0HN..."
+}
+```
+
+## Common HTTP codes
+
+| Code | Meaning | What to do |
+| --- | --- | --- |
+| `400 Bad Request` | The request does not have the expected format. | Check types, required fields, dates, paths, and query parameters. |
+| `401 Unauthorized` | The credential is invalid. | Check `Authorization` or `X-Api-Key`. |
+| `403 Forbidden` | Required permissions are missing. | Add the permission to the profile or use another credential. |
+| `404 Not Found` | The entity does not exist in the current organization. | Check `id`, `reference`, organization, and environment. |
+| `409 Conflict` | The operation conflicts with related entities or the current state. | Check dependencies before deleting or changing data. |
+| `422 Unprocessable Entity` | The request format is valid but violates a business rule. | Read `title`, `detail`, and `parameters`. |
+| `500 Internal Server Error` | An unexpected error occurred. | Save `requestId` and contact support if it persists. |
+
+## Troubleshoot errors
+
+<Steps>
+  <Step title="Read the detail field">
+    The text usually explains the specific rule that failed.
+  </Step>
+  <Step title="Look for parameters">
+    The parameters identify the quantities, permissions, references, or states involved.
+  </Step>
+  <Step title="Check the entity's state">
+    Many operations are blocked after you receive, ship, confirm, start, or finish work.
+  </Step>
+  <Step title="Save the request identifier">
+    Include `requestId` or `traceId` when you report an issue.
+  </Step>
+</Steps>
+
+<Accordion title="Permission errors">
+  If you receive `403`, the credential exists and belongs to an organization but lacks at least one required permission. Review the permission profile in **Control panel > Roles**. Integration API keys do not have configurable permission scopes.
+</Accordion>
+
+<Accordion title="State errors">
+  If you receive `409` or `422`, check the entity's state. For example, a completed receipt, a dispatched shipment, or a finished order protects some of its data to preserve traceability.
+</Accordion>

@@ -1,0 +1,43 @@
+---
+es_link: "/es/ayuda/personal/introduccion"
+title: "Manage people"
+description: "Manage employees, work days, calendars and shifts to coordinate capacity and work monitoring."
+---
+
+The People module brings together employees and their schedules for manufacturing, maintenance and productivity analysis.
+
+## Work areas
+
+<Columns cols={2}>
+  <Card title="Register an employee" icon="user-plus" href="/en/guides/people/register-an-employee">
+    Create employees to assign work, record activity and calculate costs.
+  </Card>
+  <Card title="Configure shifts and calendars" icon="calendar-range" href="/en/guides/people/configure-shifts-and-calendars">
+    Define work days, shift patterns, public holidays and local exceptions.
+  </Card>
+  <Card title="Assign employee schedules" icon="clock" href="/en/guides/people/configure-employee-schedules">
+    Apply a calendar, shift and exceptions to each employee.
+  </Card>
+</Columns>
+
+## Recommended order
+
+<Steps>
+  <Step title="Register an employee">
+    Register the people involved in production, maintenance or costs.
+  </Step>
+  <Step title="Configure shifts and calendars">
+    Create base work days, build shift patterns and record public holidays or closures by site.
+  </Step>
+  <Step title="Assign employee schedules">
+    Apply the shift, local calendar and exceptions that correspond to each person.
+  </Step>
+</Steps>
+
+## Scheduling priority
+
+An employee's effective schedule is resolved in this order:
+
+1. Explicit assignment for a particular date.
+2. Local calendar exception.
+3. Repeating shift pattern.

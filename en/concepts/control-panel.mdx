@@ -1,0 +1,51 @@
+---
+es_link: "/es/conceptos/panel-de-control"
+title: "Control panel"
+description: "A map of company settings, access, integrations, data and designs."
+icon: "settings"
+---
+
+The **Control panel** brings together Bold's administrative settings. From here, you manage the company, people's access, integrations and resources shared by several modules.
+
+## Concepts in this group
+
+<Columns cols={2}>
+  <Card title="Account and company" icon="building-2" href="/en/concepts/control-panel/account-and-company">
+    Company data, subscription, invoices and AI credits.
+  </Card>
+  <Card title="Users, permission profiles and permissions" icon="shield" href="/en/concepts/control-panel/users-permission-profiles-and-permissions">
+    People's access and each profile's capabilities.
+  </Card>
+  <Card title="Channels and related identities" icon="messages-square" href="/en/concepts/control-panel/channels-and-related-identities">
+    Linking a personal identity to a messaging channel.
+  </Card>
+  <Card title="Integration keys and external notifications" icon="key-round" href="/en/concepts/control-panel/integration-keys-and-external-notifications">
+    Technical credentials and event delivery to external systems.
+  </Card>
+  <Card title="Notifications" icon="bell" href="/en/concepts/control-panel/notifications">
+    Alerts for people inside and outside the application.
+  </Card>
+  <Card title="Audit and events" icon="history" href="/en/concepts/control-panel/audit-and-events">
+    Change history and events that trigger other processes.
+  </Card>
+  <Card title="Data and files" icon="database" href="/en/concepts/control-panel/data-and-files">
+    Imports, files and shared evidence.
+  </Card>
+  <Card title="Designs and labels" icon="badge" href="/en/concepts/control-panel/designs-and-labels">
+    Templates and formats for identification or output.
+  </Card>
+</Columns>
+
+## Administrative access
+
+User permissions protect Control panel actions. An integration key works differently: it currently has broad administrative access to the tenant and does not support configurable scopes.
+
+<Warning>
+  Treat each integration key as an administrative credential. Store it in a secrets manager, use a different key for each system and revoke it when it is no longer needed.
+</Warning>
+
+## Related
+
+- [Administer the company](/en/guides/control-panel/introduction)
+- [Invite users](/en/guides/users-and-permissions/invite-users)
+- [Company settings](/en/guides/control-panel/configure-the-company)

@@ -1,0 +1,46 @@
+---
+es_link: "/es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos"
+title: "Integration keys and external notifications"
+description: "Understand administrative credentials and event delivery to external systems."
+icon: "key-round"
+---
+
+**Integration keys** let an external system authenticate with Bold. **External notifications** notify other systems when an event occurs.
+
+## Integration keys
+
+An integration key currently has broad administrative access to the tenant's data and actions. You cannot assign it permissions or configurable scopes.
+
+<Warning>
+  Anyone who obtains the key can act with elevated privileges on the tenant. Do not include it in client code, messages, public documentation or application logs.
+</Warning>
+
+Take these measures:
+
+- create a different key for each external system;
+- store it in a secrets manager;
+- limit who can view it in the system that uses it;
+- revoke it if it is no longer used or you suspect exposure;
+- coordinate key rotation with the integration.
+
+The complete key is displayed when you create it. Keep a secure copy at that time.
+
+## External notifications
+
+| Concept | Use |
+| --- | --- |
+| Event | Relevant change in Bold, such as a change to stock, a sales or purchase order, a manufacturing order or a work order. |
+| Subscription | Configuration that determines which events are sent and to which destination. |
+| Delivery | HTTP request sent to the external system. |
+
+Use external notifications when another system needs to react to catalog, stock, order, manufacturing or maintenance changes.
+
+<Tip>
+  For critical integrations, combine external notifications with periodic reconciliation through the API. Reconciliation lets you detect differences even if a delivery fails.
+</Tip>
+
+## Related
+
+- [Authentication for integrations](/en/developers/getting-started/authentication)
+- [Audit and events](/en/concepts/control-panel/audit-and-events)
+- [Users, permission profiles and permissions](/en/concepts/control-panel/users-permission-profiles-and-permissions)

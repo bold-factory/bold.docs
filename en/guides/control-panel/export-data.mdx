@@ -1,0 +1,69 @@
+---
+es_link: "/es/ayuda/panel-de-control/exportar-datos"
+title: "Export data"
+description: "Download Bold collections as CSV or Excel to analyze, archive or process them with other tools."
+---
+
+Use **Export data** to download a complete collection as it exists at the time of the query. Filters and date ranges from other lists do not apply to the export.
+
+## Before you start
+
+- You need access to reports and **Control panel > Export data**.
+- Decide whether you will process the file automatically or review it manually.
+- Prepare a secure location to save it. The export can contain operational or personal information.
+
+## Choose the format and collection
+
+**Path:** **Control panel > Data > Export data**
+
+| Format | Common use |
+| --- | --- |
+| CSV | Plain text for integrations, scripts and analysis tools. |
+| Excel | An `.xlsx` workbook for review and processing in a spreadsheet. |
+
+Collections are grouped by area:
+
+| Area | Available examples |
+| --- | --- |
+| Catalog | Families, items, properties and property options. |
+| Manufacturing | Areas, processes, workstations, MOs, operations, consumption, progress, inspections and pauses. |
+| Planning | Customers, suppliers and sales or purchase orders with their lines. |
+| Warehouse | Locations, lots, receipts, inspections, shipments and their lines, and stock history. |
+| People | Employees and employee tasks. |
+| Costs | Items, MOs and operations. |
+| Maintenance | Assets, causes, actions, work orders, time records and materials. |
+
+## Download an export
+
+<Steps>
+  <Step title="Select the format">
+    Choose **CSV** or **Excel**.
+  </Step>
+  <Step title="Select the object">
+    Open **Data to export** and choose a collection within the appropriate area.
+  </Step>
+  <Step title="Download the file">
+    Click **Download CSV** or **Download Excel**.
+  </Step>
+  <Step title="Identify the snapshot">
+    The file name includes the collection and download date, such as `items_2026-09-16.xlsx`.
+  </Step>
+</Steps>
+
+<Info>
+  The file is a snapshot. Later changes in Bold do not update an export you have already downloaded.
+</Info>
+
+<Warning>
+  The export downloads all available data in the collection, rather than only the rows you previously viewed in other lists. Review who can access the file and avoid sending it through unauthorized channels.
+</Warning>
+
+## If you need another structure
+
+Export related collections separately and combine them in your analysis tool using their identifiers or references. Changes you make in those files do not return to Bold. For bulk uploads, use [Import data](/en/guides/control-panel/import-data).
+
+## Related
+
+- [Data and files](/en/concepts/control-panel/data-and-files)
+- [Import data](/en/guides/control-panel/import-data)
+- [Manage files](/en/guides/control-panel/manage-files)

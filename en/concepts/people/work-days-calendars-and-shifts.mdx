@@ -1,0 +1,59 @@
+---
+es_link: "/es/conceptos/personal/jornadas-calendarios-y-turnos"
+title: "Work days, calendars, and shifts"
+description: "Understand how Bold models schedules, exceptions, and work cycles."
+icon: "calendar-clock"
+---
+
+Work days, calendars, and shifts describe when an employee is expected to work.
+
+They are used for capacity, assignments, expected time, and productivity analysis.
+
+To distinguish expected availability from recorded work, see [Planned periods and tasks](/en/concepts/people/planned-periods-and-tasks).
+
+## Concepts
+
+| Concept | Usage |
+| --- | --- |
+| Work day | Template of work periods for a typical day. |
+| Local calendar | Exceptions for holidays, closures, or special days. |
+| Shift | Repeating cycle that applies work days over several days. |
+| Assignment | Relationship between an employee and their work pattern. |
+
+## Work day
+
+A work day defines work periods. It can represent mornings, afternoons, nights, rest, or split shifts.
+
+Use a period ending the following day for night shifts.
+
+Periods within the same work day must not overlap. If the duration looks incorrect, check whether any period crosses midnight.
+
+## Local calendar
+
+A local calendar introduces exceptions: holidays, closures, special work days, or one-off changes.
+
+Exceptions should be clear and take priority over the repeating pattern.
+
+If a plant has different holidays, use a separate calendar. If a date shows a different work day, check whether a manual assignment has higher priority.
+
+## Shifts
+
+A shift defines a cycle. For example: five morning days, two rest days, and five afternoon days.
+
+Each segment specifies which work day applies and how many consecutive days it lasts.
+
+Each segment must last at least one day. The shift's start date determines how the cycle aligns with the calendar.
+
+## Resolution priority
+
+| Priority | Rule |
+| --- | --- |
+| 1 | Manual assignment or direct exception. |
+| 2 | Local calendar. |
+| 3 | Repeating shift pattern. |
+
+## Related
+
+- [Employees](/en/concepts/people/employees)
+- [Planned periods and tasks](/en/concepts/people/planned-periods-and-tasks)
+- [Configure schedules and shifts](/en/guides/people/configure-employee-schedules)

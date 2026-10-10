@@ -1,0 +1,80 @@
+---
+es_link: "/es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones"
+title: "Assignments and operation groups"
+description: "Understand how Bold assigns operations to stations, tools, employees and execution groups."
+icon: "list-tree"
+---
+
+**Assignments** prepare an operation for execution. They indicate where, when and with which resources it will run.
+
+**Operation groups** bring together several operations for execution as an operational block when they share a work context.
+
+## Assignments
+
+An operation meets the minimum planning requirements when it has a workstation, a target date and any required tool. Stock status separately indicates material availability.
+
+| Data | Use |
+| --- | --- |
+| Workstation | Place where the operation runs. |
+| Target date | Reference for planning and prioritization. |
+| Required tools | Auxiliary resources needed when the operation requires a characteristic. |
+| Stock status | Indicates whether expected materials are available. |
+
+The station, date and tool can come from a manual action, sequencing or an applied production plan. The plan does not assign employees: an employee's operational assignment is recorded when starting work or assigning them to a group.
+
+## Operation groups
+
+An operation group lets you work on several operations together. It is useful when they share a station, employee, materials, setup or pace of progress.
+
+| Case | Why use a group |
+| --- | --- |
+| Several orders run in the same setup. | Avoids starting and pausing operations one by one. |
+| An employee works on a batch of similar operations. | Centralizes progress and pauses. |
+| Several operations share material availability. | Helps you review stock and checks together. |
+| The shop floor works in cells or work queues. | Better reflects how actual work is executed. |
+
+A group does not remove individual operations. Each operation retains its traceability, progress, consumption and checks.
+
+Group actions do not apply individual start and quantity restrictions, including when executed from work mode. Creating the group or adding operations requires manufacturing order write permission; the operator can then work with the existing group. When creating a group or adding an operation, review the conditions shown in the dialog before confirming. Grouping is a management decision about how to execute that work together.
+
+You need at least two operations to create a group. All must be **Planned** or **Paused**, have a pending quantity, belong to the same station and not belong to another group.
+
+## Common statuses
+
+| Status | Meaning |
+| --- | --- |
+| **Planned** | The group exists and can be prepared for execution. |
+| **In progress** | Work has started. |
+| **Paused** | Work is temporarily stopped. |
+| **Finished** | The group has ended, and operations retain their history. |
+
+Group statuses help you operate on the shop floor. Each operation's statuses continue to explain its actual progress.
+
+Read [Manufacturing statuses](/en/concepts/manufacturing/manufacturing-statuses) to compare groups, operations, orders and plans.
+
+## Relationship with work mode
+
+In [Work mode](/en/concepts/work-mode), the operator sees active, recent or available operations according to the employee, station, area and assignments.
+
+When they start, pause, resume or record progress, Bold updates execution and preserves who performed each action.
+
+If work stops, record a [pause reason](/en/concepts/manufacturing/pause-reasons-and-interruptions) to explain the interruption.
+
+## Design rules
+
+- Assign a station before executing the operation.
+- Select tools when the operation requires specific characteristics.
+- Group only operations your team actually executes together.
+- Review checks and stock before starting critical work.
+- Do not use groups to hide operations that should be measured separately.
+
+## Related
+
+- [Operations and restrictions](/en/concepts/manufacturing/operations-and-restrictions)
+- [Manufacturing statuses](/en/concepts/manufacturing/manufacturing-statuses)
+- [Resources](/en/concepts/manufacturing/resources)
+- [Tools and characteristics](/en/concepts/manufacturing/tools-and-characteristics)
+- [Pause reasons and interruptions](/en/concepts/manufacturing/pause-reasons-and-interruptions)
+- [Sequencing](/en/concepts/manufacturing/sequencing)
+- [Prepare workstations and machines](/en/guides/manufacturing/prepare-work-centers-and-machines)
+- [Execute operations on the shop floor](/en/guides/manufacturing/execute-shop-floor-operations)

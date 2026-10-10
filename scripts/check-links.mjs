@@ -4,7 +4,8 @@ import { fileURLToPath } from "node:url";
 
 const scriptsDirectory = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(scriptsDirectory, "..");
-const contentRoot = path.join(projectRoot, "es");
+const docsConfig = JSON.parse(readFileSync(path.join(projectRoot, "docs.json"), "utf8"));
+const languages = docsConfig.navigation.languages.map(({ language }) => language);
 
 function walk(directory) {
   return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
@@ -25,14 +26,14 @@ function pageExists(pagePath) {
   );
 }
 
-const mdxFiles = walk(contentRoot).filter((filePath) => filePath.endsWith(".mdx"));
+const mdxFiles = languages.flatMap((language) => walk(path.join(projectRoot, language)))
+  .filter((filePath) => filePath.endsWith(".mdx"));
 const errors = [];
 const navigationPages = new Set();
-const docsConfig = JSON.parse(readFileSync(path.join(projectRoot, "docs.json"), "utf8"));
 
 function collectNavigationPages(value, parentKey = "") {
   if (typeof value === "string") {
-    if (value.startsWith("es/") && parentKey !== "directory") {
+    if (languages.some((language) => value.startsWith(`${language}/`)) && parentKey !== "directory") {
       navigationPages.add(value);
     }
     return;
@@ -82,7 +83,7 @@ for (const filePath of mdxFiles) {
 
     internalLinkCount += 1;
 
-    if (target.startsWith("/es/")) {
+    if (languages.some((language) => target.startsWith(`/${language}/`))) {
       if (!pageExists(target)) errors.push(`${fileName}: no existe ${reference}`);
       continue;
     }
