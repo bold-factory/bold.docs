@@ -1,0 +1,21 @@
+es/ayuda/planificacion/asistente-de-compras.mdx
+  s_a846cff01c1d4e::t_44ac571a0ae66a 72-73
+es/conceptos/planificacion/asignacion-de-demanda-y-suministro.mdx
+  s_a846cff01c1d4e::t_44ac571a0ae66a 36-46,107
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "29235b81e00d4bd892556920fd66081bedf33bf4",
+  "prompts": {},
+  "sessions": {
+    "s_a846cff01c1d4e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6bcb3f06-266b-43a5-acc8-ba65f82f46c5",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
