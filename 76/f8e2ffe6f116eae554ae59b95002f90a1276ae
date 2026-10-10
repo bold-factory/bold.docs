@@ -1,0 +1,23 @@
+en/updates/changelog.mdx
+  s_63542ac882f504::t_1c99e7b4e09e5a 8-111,124-128,132,139-141
+es/novedades/changelog.mdx
+  s_63542ac882f504::t_fbd448baa85208 8-111,124-128,132,139-141
+sources/translations/en.json
+  s_63542ac882f504::t_ffb68a5d57d15f 869
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "76f8e2ffe6f116eae554ae59b95002f90a1276ae",
+  "prompts": {},
+  "sessions": {
+    "s_63542ac882f504": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a127c9-d93f-7f90-bcfb-5d98e896a730",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
