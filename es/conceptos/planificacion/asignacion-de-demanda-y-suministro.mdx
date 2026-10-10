@@ -33,7 +33,17 @@ La política de aprovisionamiento decide si una necesidad se cubre de forma dire
 | **Contra pedido** | La necesidad se relaciona con un suministro concreto. Es útil cuando cada venta o petición requiere cobertura propia. |
 | **Contra stock** | Varias necesidades comparten el stock disponible y los suministros futuros. Es útil cuando repones inventario común. |
 
-Bold resuelve primero las relaciones directas contra pedido. Después reparte el stock y los suministros compartidos entre las necesidades contra stock.
+Bold resuelve primero los suministros vinculados: cada necesidad toma antes que nada lo que está vinculado a ella o a su documento de origen. Después reparte el stock y los suministros compartidos, empezando por las necesidades contra pedido y siguiendo con las necesidades contra stock por tipo y fecha.
+
+## Suministro vinculado
+
+Un suministro puede quedar vinculado a una necesidad concreta o al documento que la origina, como una OF. Un suministro vinculado a una OF cubre cualquier material de esa OF y no cubre otras necesidades mientras esa OF lo necesite.
+
+- Los pedidos de compra generados desde el asistente de compras de una OF quedan vinculados a esa OF.
+- Las peticiones de fabricación creadas para el material de una OF quedan vinculadas a esa necesidad.
+- Una necesidad usa su suministro vinculado antes que el stock libre, aunque el stock esté disponible antes.
+- Si el suministro vinculado supera lo que necesita su OF, el exceso se reparte entre el resto de necesidades.
+- Al recibir el material, la cantidad recibida pasa al stock general y deja de estar vinculada.
 
 Consulta [Política de aprovisionamiento](/es/conceptos/planificacion/politica-de-aprovisionamiento) para configurar cuándo un artículo se compra, se fabrica o se cubre contra stock.
 
@@ -94,6 +104,7 @@ La asignación se recalcula cuando cambia la realidad operativa.
 | Petición de fabricación nueva o actualizada | Genera o ajusta suministro esperado. |
 | Fabricación completada | Convierte producción pendiente en stock físico. |
 | Política de aprovisionamiento modificada | Puede cambiar si la necesidad se cubre contra pedido o contra stock. |
+| OF terminada o material eliminado | El suministro vinculado a esa necesidad pasa a repartirse con el resto. |
 
 ## Relacionado
 
