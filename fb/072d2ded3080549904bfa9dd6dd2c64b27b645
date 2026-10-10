@@ -1,0 +1,19 @@
+es/conceptos/modo-de-trabajo.mdx
+  s_958f93047628c8::t_62cce183bc1d23 74
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "fb072d2ded3080549904bfa9dd6dd2c64b27b645",
+  "prompts": {},
+  "sessions": {
+    "s_958f93047628c8": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12593-55ba-7753-a26d-c56908f19034",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
