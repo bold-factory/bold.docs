@@ -1,0 +1,197 @@
+en/concepts/manufacturing/inspections-and-checks.mdx
+  s_63542ac882f504::t_f24315e969e1d5 52
+en/guides/warehouse/configure-and-complete-receipt-inspections.mdx
+  s_63542ac882f504::t_f24315e969e1d5 13
+en/guides/costs/introduction.mdx
+  s_63542ac882f504::t_d1eed4e339f335 52
+es/ayuda/produccion/definir-procesos.mdx
+  s_63542ac882f504::t_f24315e969e1d5 41-42
+es/ayuda/produccion/ver-eficacia-por-empleado.mdx
+  s_63542ac882f504::t_6b3d41432ad494 56-57
+  s_63542ac882f504::t_97e568d49247e4 76
+scripts/check-translations.test.mjs
+  s_63542ac882f504::t_b68d0bec1526fc 51-58
+en/guides/manufacturing/view-effectiveness-by-employee.mdx
+  s_63542ac882f504::t_f90965976267d3 56-57
+  s_63542ac882f504::t_a9a084da4490c2 76
+es/desarrolladores/empezar/errores.mdx
+  s_63542ac882f504::t_d1eed4e339f335 56
+es/conceptos/costes/valoracion-de-inventario.mdx
+  s_63542ac882f504::t_d1eed4e339f335 10,30
+scripts/check-translations.mjs
+  s_63542ac882f504::t_b68d0bec1526fc 25-30
+en/concepts/costs/inventory-valuation.mdx
+  s_63542ac882f504::t_d1eed4e339f335 10,30
+es/ayuda/costes/introduccion.mdx
+  s_63542ac882f504::t_d1eed4e339f335 52
+en/concepts/catalog/families.mdx
+  s_63542ac882f504::t_19be782767e1ae 41
+en/concepts/manufacturing/assignments-and-operation-groups.mdx
+  s_63542ac882f504::t_7379910c464e0a 14
+en/concepts/manufacturing/resources.mdx
+  s_63542ac882f504::t_edbcb7fbb15a86 32
+en/concepts/manufacturing/sequencing.mdx
+  s_63542ac882f504::t_cb5a781a5ed26b 20
+en/concepts/overview.mdx
+  s_63542ac882f504::t_588b246cad9f30 30,37
+en/concepts/people/skills-and-usual-workstations.mdx
+  s_63542ac882f504::t_f80bc0c1ec8a4e 66
+en/concepts/planning/procurement-policy.mdx
+  s_63542ac882f504::t_86408479fd53ee 56
+en/concepts/warehouse/lots.mdx
+  s_63542ac882f504::t_aa8934439b1fc3 67
+en/developers/getting-started/api-errors.mdx
+  s_63542ac882f504::t_595363f6361bdb 56
+en/developers/getting-started/authentication.mdx
+  s_63542ac882f504::t_c4d565fccfbb94 70
+en/developers/getting-started/pagination-filters-and-sorting.mdx
+  s_63542ac882f504::t_6de833b185ad5e 52
+en/developers/mcp.mdx
+  s_63542ac882f504::t_6121c9d3008468 49,54,68,71
+en/developers/webhooks/introduction.mdx
+  s_63542ac882f504::t_5c65203446f855 95
+en/guides/catalog/configure-an-item.mdx
+  s_63542ac882f504::t_b71ed8dd520fff 29,55
+en/guides/catalog/create-an-item.mdx
+  s_63542ac882f504::t_3c78a4322865e9 32
+en/guides/catalog/group-items-into-families.mdx
+  s_63542ac882f504::t_d77831045c311c 38
+en/guides/control-panel/create-labels-and-codes.mdx
+  s_63542ac882f504::t_e42458d1ad2fac 11
+en/guides/control-panel/import-data.mdx
+  s_63542ac882f504::t_cd0f5a27c97eeb 13,15-17
+en/guides/costs/configure-employee-costs.mdx
+  s_63542ac882f504::t_d8e14e7640ea42 11,55
+en/guides/costs/manufacturing-order-costs.mdx
+  s_63542ac882f504::t_50a8dffa57c04b 21
+en/guides/costs/prepare-cost-data.mdx
+  s_63542ac882f504::t_4eebc45321cd98 13,31
+en/guides/getting-started/define-a-manufacturing-process.mdx
+  s_63542ac882f504::t_4076727e81b5c2 57
+en/guides/getting-started/prepare-master-data.mdx
+  s_63542ac882f504::t_f514d69cacb402 29
+en/guides/manufacturing/adapt-manufacturing-to-variants.mdx
+  s_63542ac882f504::t_61ab19648fe53b 50-51
+en/guides/manufacturing/analyze-stops-and-production-losses.mdx
+  s_63542ac882f504::t_525b4608b342c7 15
+en/guides/manufacturing/create-an-mo-without-a-sales-order.mdx
+  s_63542ac882f504::t_9af8cd95247c0d 19
+en/guides/manufacturing/define-processes.mdx
+  s_63542ac882f504::t_aeebc670fd9918 41-42
+en/guides/manufacturing/execute-shop-floor-operations.mdx
+  s_63542ac882f504::t_4affc3d114b263 27
+en/guides/manufacturing/manage-manufacturing-orders.mdx
+  s_63542ac882f504::t_3ad5fc7657d8c0 53
+en/guides/manufacturing/prepare-work-centers-and-machines.mdx
+  s_63542ac882f504::t_381653c9e8531b 36,65
+en/guides/planning/decide-what-to-manufacture.mdx
+  s_63542ac882f504::t_7fbd15d51a40ab 7
+en/guides/purchasing/receive-a-purchase-order.mdx
+  s_63542ac882f504::t_1e0a790c670d35 81
+en/guides/smart-factory/view-power-bi-reports.mdx
+  s_63542ac882f504::t_bc68af5fb8b500 75
+en/guides/users-and-permissions/invite-users.mdx
+  s_63542ac882f504::t_9725012b155e5b 59,66
+en/guides/warehouse/adjust-stock.mdx
+  s_63542ac882f504::t_439aa069ebc5b7 17
+en/guides/warehouse/introduction.mdx
+  s_63542ac882f504::t_872b60941b32ae 47
+en/guides/warehouse/investigate-lot-traceability.mdx
+  s_63542ac882f504::t_de5a3303117264 39
+en/guides/warehouse/move-stock-between-locations.mdx
+  s_63542ac882f504::t_1accd9f3e3d1f2 18
+en/guides/warehouse/provision-raw-materials.mdx
+  s_63542ac882f504::t_d921846e4b14aa 86
+en/guides/warehouse/register-warehouse-equipment.mdx
+  s_63542ac882f504::t_f8f16999938aa5 7
+es/ayuda/almacen/ajustar-stock.mdx
+  s_63542ac882f504::t_2fc4e25c109a68 17
+es/ayuda/almacen/aprovisionar-materias-primas.mdx
+  s_63542ac882f504::t_a72049cbc9fe41 86
+es/ayuda/almacen/introduccion.mdx
+  s_63542ac882f504::t_97d8165a0703d1 47
+es/ayuda/almacen/investigar-trazabilidad-de-un-lote.mdx
+  s_63542ac882f504::t_5f4879fa97b4f7 39
+es/ayuda/almacen/mover-stock.mdx
+  s_63542ac882f504::t_d80a78808c992e 18
+es/ayuda/articulos/crear-un-articulo.mdx
+  s_63542ac882f504::t_6669550de23644 32
+es/ayuda/articulos/crear-una-familia.mdx
+  s_63542ac882f504::t_379d9f2ea76cf2 38
+es/ayuda/articulos/editar-un-articulo.mdx
+  s_63542ac882f504::t_a2a6497f2a0d51 29,55
+es/ayuda/articulos/unidades-de-medida.mdx
+  s_63542ac882f504::t_7f1953103b334f 15
+es/ayuda/compras/recibir-pedido-de-compra.mdx
+  s_63542ac882f504::t_655085c1befb0b 81
+es/ayuda/costes/configurar-costes-del-personal.mdx
+  s_63542ac882f504::t_9b49d70402eb25 11,55
+es/ayuda/costes/ordenes-de-fabricacion.mdx
+  s_63542ac882f504::t_105fa850dc7d0e 21
+es/ayuda/costes/preparar-datos-de-coste.mdx
+  s_63542ac882f504::t_318612d744f55b 13,31
+es/ayuda/panel-de-control/importar-datos.mdx
+  s_63542ac882f504::t_4b7965a1f54ac2 13,15-17
+es/ayuda/planificacion/priorizar-necesidades.mdx
+  s_63542ac882f504::t_9320bd55673901 7
+es/ayuda/primeros-pasos/configurar-receta-minima.mdx
+  s_63542ac882f504::t_4a5c734168e41c 57
+es/ayuda/primeros-pasos/preparar-datos-base.mdx
+  s_63542ac882f504::t_4a908956703da0 1-12,17-24,27-36,39-62,64-83
+es/ayuda/produccion/crear-recursos.mdx
+  s_63542ac882f504::t_6de2a7d0f4e05f 36,65
+es/ayuda/produccion/ejecutar-operaciones-en-planta.mdx
+  s_63542ac882f504::t_735495d9e373a2 27
+es/ayuda/produccion/generar-peticiones-manualmente.mdx
+  s_63542ac882f504::t_62aa9be66e5e36 19
+es/ayuda/produccion/lanzar-ofs.mdx
+  s_63542ac882f504::t_2f19a5a6a583fc 53
+es/ayuda/produccion/para-que-son-necesarias-las-condiciones.mdx
+  s_63542ac882f504::t_6981eafcb81e96 50-51
+es/ayuda/produccion/revisar-oee-y-paradas.mdx
+  s_63542ac882f504::t_db30bf2da43855 15
+es/ayuda/smart-factory/informes-powerbi.mdx
+  s_63542ac882f504::t_fae6e3259e7647 75
+es/ayuda/usuarios-y-permisos/invitar-usuarios.mdx
+  s_63542ac882f504::t_ca68a57d3b0bd8 59,66
+es/conceptos/almacen/lotes.mdx
+  s_63542ac882f504::t_d01186b683352e 67
+es/conceptos/catalogo/familias.mdx
+  s_63542ac882f504::t_3d8ad8f43ee612 41
+es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones.mdx
+  s_63542ac882f504::t_c711eac29dae7d 14
+es/conceptos/fabricacion/recursos.mdx
+  s_63542ac882f504::t_a629adf26a7a92 32
+es/conceptos/fabricacion/secuenciacion.mdx
+  s_63542ac882f504::t_0ab8a15892b5bb 20
+es/conceptos/personal/habilidades-y-estaciones-habituales.mdx
+  s_63542ac882f504::t_cf91fce0fd4943 66
+es/conceptos/planificacion/politica-de-aprovisionamiento.mdx
+  s_63542ac882f504::t_22619bd84687a2 56
+es/desarrolladores/empezar/autenticacion.mdx
+  s_63542ac882f504::t_813a993b1924ca 70
+es/desarrolladores/empezar/paginacion.mdx
+  s_63542ac882f504::t_5111cc23ea2a15 52
+es/desarrolladores/mcp.mdx
+  s_63542ac882f504::t_ea0798a8c1f9f7 49,54,68,71
+es/desarrolladores/webhooks/introduccion.mdx
+  s_63542ac882f504::t_8480714bbdac83 95
+sources/translations/en.json
+  s_63542ac882f504::t_3da18f9f946841 9,14,39,49,54,84,89,99,109,114,124,129,134,144,209,254,269,289,304,319,324,334,344,359,369,379,409,419,479,524,549,559,624,629,729,774,814,819,834,839,854
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "93d0c5d60563ca0daef9764fca57848fe6ab9925",
+  "prompts": {},
+  "sessions": {
+    "s_63542ac882f504": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a127c9-d93f-7f90-bcfb-5d98e896a730",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
