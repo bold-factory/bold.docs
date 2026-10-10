@@ -73,6 +73,7 @@ Mientras preparas un registro de producción de una operación, Bold guarda un b
 - El borrador se descarta al registrar el progreso por cualquier vía: modo de trabajo, Panel de control, API o Boldy. Los demás dispositivos lo detectan y muestran las cantidades pendientes actualizadas.
 - Si separas una operación de un grupo y Bold registra en ella el exceso de producción del grupo, también descarta su borrador. Si la separación no registra progreso, lo conserva.
 - También se descarta al finalizar o cancelar la operación y se elimina al borrarla. Si la finalización falla, el borrador se conserva.
+- Si reabres una operación o deshaces un registro, los guardados y confirmaciones pendientes de antes de ese cambio se rechazan. Vuelve a abrir el registro para preparar las cantidades actuales.
 
 Consulta [Controles, consumos y pausas](/es/conceptos/fabricacion/controles-consumos-y-pausas) para ver cómo se calculan las cantidades teóricas y cómo se eligen los lotes.
 
