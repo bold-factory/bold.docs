@@ -65,6 +65,18 @@ Las pestañas **Por estación**, **Por área**, **Por proceso** y **Buscar** son
 
 Producción presenta operaciones y grupos como unidades de trabajo. Sus registros describen progreso, consumos, producción, controles, tiempos e interrupciones según la configuración de la orden.
 
+Mientras preparas un registro de producción de una operación, Bold guarda un borrador automáticamente, sin botón de guardar. El borrador incluye las cantidades completadas y rechazadas, los consumos con sus lotes y los coproductos:
+
+- Hay un único borrador por operación, compartido por todos los empleados y dispositivos. Los cambios guardados se recuperan al volver a la operación. Si intentas recargar o cerrar con cambios pendientes, el navegador te avisa; cancela la salida y espera a que terminen de guardarse.
+- Si no hay conexión, Bold lo indica y vuelve a intentar guardar el borrador.
+- Si varios operarios trabajan en el mismo registro, cada dispositivo recibe los cambios de los demás en pocos segundos. Las líneas cambiadas en otro dispositivo se destacan con el nombre del empleado. Un campo que estás editando no se sobrescribe; si dos personas cambian la misma línea, prevalece el último cambio guardado.
+- El borrador se descarta al registrar el progreso por cualquier vía: modo de trabajo, Panel de control, API o Boldy. Los demás dispositivos lo detectan y muestran las cantidades pendientes actualizadas.
+- Si separas una operación de un grupo y Bold registra en ella el exceso de producción del grupo, también descarta su borrador. Si la separación no registra progreso, lo conserva.
+- También se descarta al finalizar o cancelar la operación y se elimina al borrarla. Si la finalización falla, el borrador se conserva.
+- Si reabres una operación o deshaces un registro, los guardados y confirmaciones pendientes de antes de ese cambio se rechazan. Vuelve a abrir el registro para preparar las cantidades actuales.
+
+Consulta [Controles, consumos y pausas](/es/conceptos/fabricacion/controles-consumos-y-pausas) para ver cómo se calculan las cantidades teóricas y cómo se eligen los lotes.
+
 Un [motivo de pausa](/es/conceptos/fabricacion/motivos-de-pausa-e-interrupciones) clasifica cada interrupción. La pausa conserva duración y contexto para que los cuadros de mando distingan ejecución y tiempo detenido.
 
 ## Entidades de almacén

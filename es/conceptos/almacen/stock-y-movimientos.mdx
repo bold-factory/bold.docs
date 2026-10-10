@@ -91,6 +91,40 @@ En la ficha de un artículo, la pestaña de stock muestra los **Últimos cambios
 
 Para descargar todo el historial de stock, usa la colección **Historial de stock** en [Exportar datos](/es/ayuda/panel-de-control/exportar-datos). La exportación no aplica los filtros de esta pantalla.
 
+## Stock a fecha
+
+**Ruta:** **Almacén > Control del stock > Historial de stock > Stock a fecha**
+
+El stock a fecha muestra cuánto stock había en cada unidad de stock en un momento concreto del pasado. Úsalo para valorar el inventario a un cierre o para encontrar el último momento en que un saldo era correcto.
+
+Bold lo calcula a partir del historial de stock. Para cada combinación de artículo, ubicación y lote, toma el saldo que dejó el último cambio registrado hasta ese momento, incluidas las reclasificaciones de lote.
+
+| Filtro | Comportamiento |
+| --- | --- |
+| Fecha y hora | Obligatoria. No puede ser futura. Los atajos rellenan el cierre de ayer, del mes, del trimestre o del año anterior. |
+| Artículo | Opcional. Muestra solo las unidades de stock de ese artículo. |
+| Ubicación | Opcional. Muestra solo las unidades de stock de esa ubicación exacta. |
+
+Pulsa **Consultar** para aplicar la fecha, el artículo y la ubicación. La URL guarda la consulta, así que puedes compartirla o volver a ella.
+
+El resultado tiene en cuenta estas reglas:
+
+- Solo aparecen las combinaciones que ya tenían un cambio registrado o existían en ese momento.
+- Las cantidades son las de ese momento. Los códigos y nombres de artículos, ubicaciones y lotes son los actuales.
+- La columna **Lote** solo se rellena en los artículos que trabajan con lotes. Los demás artículos muestran una sola fila por ubicación, con el stock de todas sus unidades de stock en ella.
+- El stock negativo siempre aparece y se resalta en rojo.
+
+Sobre el resultado puedes cambiar cómo se agrupan las filas. Estas opciones no filtran unidades de stock:
+
+| Opción | Comportamiento |
+| --- | --- |
+| Sumar lotes | Muestra una fila por artículo y ubicación con el stock de todos sus lotes. Solo cambia los artículos que trabajan con lotes. |
+| Sumar ubicaciones | Muestra una fila por artículo y lote con el stock de todas sus ubicaciones. |
+| Las dos opciones | Muestra una fila por artículo con su stock total. |
+| Incluir registros sin stock | Muestra también las filas con saldo cero. Están ocultas por defecto, incluidas las que quedan a cero al sumar. |
+
+Haz clic en **Exportar** para descargar el resultado en Excel (.xlsx) o CSV. El archivo aplica la fecha, los filtros y las opciones de agrupación, y ordena las filas por código de artículo, ubicación y lote. No aplica los filtros de las columnas de la tabla. Para la exportación necesitas el mismo permiso que para consultar el stock de los artículos.
+
 ## Stock negativo
 
 Un stock negativo indica que Bold registró una salida antes de tener una entrada que la cubra en la misma combinación de artículo, ubicación y lote.

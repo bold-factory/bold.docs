@@ -32,11 +32,31 @@ El consumo descuenta material del almacén. Puede registrarse al comenzar, por u
 | Por unidad | Quieres precisión ligada al avance. |
 | Al final | La cantidad depende de mermas o ajustes reales. |
 
-Si el artículo trabaja con lotes, el consumo debe indicar el lote físico correcto.
-
 La cantidad de una entrada se define por unidad fabricada. Si una operación produce `10` unidades y una entrada consume `2` unidades por cada una, el consumo previsto total será `20`.
 
 Usa consumo por progreso cuando necesitas medir materiales con precisión durante la operación. Usa consumo al final si la cantidad real se conoce al cierre.
+
+### Cantidad teórica y cantidad manual
+
+Al registrar progreso en el [modo de trabajo](/es/conceptos/modo-de-trabajo), cada material y cada coproducto muestran su **cantidad teórica**, calculada según su configuración y el progreso aplicable, junto a la cantidad que se va a registrar y la diferencia entre ambas. Las líneas configuradas por progreso usan las unidades de ese registro; las configuradas al final usan el total acumulado de la operación.
+
+- Mientras no cambias una línea, sigue la cantidad teórica y se recalcula con el progreso aplicable al cambiar las unidades completadas o rechazadas.
+- Si escribes una cantidad o asignas lotes, la línea pasa a ser **manual** y conserva tu valor aunque cambien las unidades.
+- Si la cantidad teórica cambia después de editar una línea manual, la diferencia con la nueva teórica se ve en la línea y puedes volver al teórico. Al confirmar, Bold te avisa de las líneas editadas cuya teórica ha cambiado, pero no impide el registro.
+
+Lo que ves en cada línea es lo que se registra al confirmar.
+
+### Lotes
+
+Si el artículo trabaja con lotes, eliges los lotes en la propia línea del material:
+
+- Sin lotes asignados, el almacén asigna los lotes por FIFO (primero en entrar, primero en salir) en la ubicación de entrada del puesto de trabajo. Si allí no hay stock suficiente, usa lotes de otras ubicaciones.
+- Al asignar lotes, la cantidad de la línea es la suma de sus lotes. Las cantidades de los lotes se indican en la misma unidad que la línea.
+- **Repartir FIFO** reparte la cantidad teórica entre los lotes con stock en la ubicación de entrada del puesto. Si no alcanza, la línea muestra la diferencia con la cantidad teórica. Después puedes ajustar la cantidad de cada lote.
+- Por defecto el detalle de lotes está plegado y la línea indica **FIFO**. Al desplegarlo se ven los lotes con stock, primero los de la ubicación de entrada del puesto. Cada lote se identifica por su código de origen o, si no lo tiene, por su código interno. Para elegir un lote, escribe la cantidad que consumes de él o escanea su código.
+- Si dejas todos los lotes a cero, la línea vuelve a la cantidad teórica y a la asignación automática.
+
+El consumo de un lote descuenta stock en la ubicación de entrada del puesto, aunque el lote esté guardado en otra ubicación. Por eso la lista indica los lotes que están en otras ubicaciones y muestra el **Stock en entrada**, junto al total en todas las ubicaciones al pasar el cursor. Bold avisa cuando la cantidad de un lote supera su stock en la entrada, pero no impide el registro. El escáner reconoce tanto el código de origen como el interno.
 
 ## Producción y coproductos
 
