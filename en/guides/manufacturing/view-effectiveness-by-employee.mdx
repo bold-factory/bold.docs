@@ -53,6 +53,8 @@ Each production record closes a segment of the operation. The theoretical time f
 
 Time after the last record on an open operation remains **pending valuation** and does not penalize efficiency until more production is recorded. In long processes, frequently recording partial production updates efficiency sooner.
 
+Production recorded without team time is combined with a worked segment of the same valuation state. If the only worked segment is still pending, those units are not attributed to the employee yet; a later production record or completion can make them attributable when Bold recalculates the operation.
+
 Time in operations without theoretical time, unattended operations, or cancelled operations is not evaluated.
 
 <Warning>
@@ -71,7 +73,7 @@ Combines utilization and efficiency in one number.
 
 #### OLE
 
-OLE (%) = Utilization × Efficiency × Quality
+OLE (%) = (Utilization (%) / 100) × (Efficiency (%) / 100) × (Quality (%) / 100) × 100
 
 ### 4. Review details
 

@@ -46,12 +46,12 @@ Ten a mano estos datos durante la configuración:
     <Accordion title="Configuración manual">
       Abre el archivo `~/.codex/config.toml`. En Windows está en `%USERPROFILE%\.codex\config.toml`. Esta configuración también sirve para Codex CLI y la extensión del editor.
 
-      Añade este bloque y sustituye `TU_CLAVE_API` por tu clave de Bold:
+      Añade este bloque y sustituye `API_KEY` por tu clave de Bold:
 
       ```toml
       [mcp_servers.bold]
       url = "https://api.bold-factory.com/mcp"
-      http_headers = { "X-Api-Key" = "TU_CLAVE_API" }
+      http_headers = { "X-Api-Key" = "API_KEY" }
       ```
 
       Guarda el archivo y reinicia el servidor desde **Settings > MCP servers**.
@@ -65,10 +65,10 @@ Ten a mano estos datos durante la configuración:
 
     <Steps>
       <Step title="Añade el servidor">
-        Ejecuta este comando en la terminal y sustituye `TU_CLAVE_API` por tu clave de Bold:
+        Ejecuta este comando en la terminal y sustituye `API_KEY` por tu clave de Bold:
 
         ```bash
-        claude mcp add --transport http --scope user bold https://api.bold-factory.com/mcp --header "X-Api-Key: TU_CLAVE_API"
+        claude mcp add --transport http --scope user bold https://api.bold-factory.com/mcp --header "X-Api-Key: API_KEY"
         ```
 
         Este comando guarda la conexión en tu configuración personal para que puedas usarla desde distintos proyectos.

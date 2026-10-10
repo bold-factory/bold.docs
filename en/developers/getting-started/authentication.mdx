@@ -67,7 +67,7 @@ Authentication answers "who is calling". Permissions answer "what they can do".
 | Error | Common cause | What to check |
 | --- | --- | --- |
 | `401 Unauthorized` | The credential is missing, expired, or invalid. | Header, session credential, API key, and environment. |
-| `403 Forbidden` | The credential is valid but lacks permissions. | Permission profile, user permissions, or permissions associated with the integration. |
+| `403 Forbidden` | The credential is valid but lacks permissions. | Permission profile and user permissions for session credentials. |
 | `404 Not Found` | The entity does not exist or is not visible to the organization. | Organization, reference, identifier, and read permissions. |
 
 ## Example

@@ -22,7 +22,12 @@ function walk(directory) {
 function headings(content) {
   const seen = new Map();
   return [...content.replace(/```[\s\S]*?```/g, '').matchAll(/^\s{0,3}(#{1,6})\s+(.+?)\s*#*\s*$/gm)].map(match => {
-    const text = match[2].replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/[`*_]/g, '');
+    const text = match[2]
+      .replace(/<\/?[A-Za-z][^>]*>/g, ' ')
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+      .replace(/`([^`]*)`/g, '$1')
+      .replace(/(\*\*|__)(.*?)\1/g, '$2')
+      .replace(/(^|\s)[*_]([^*_\n]+)[*_]/g, '$1$2');
     const encoded = encodeURIComponent(text.toLowerCase().trim().replace(/\s+/g, '-'));
     const hasEncodedCharacters = /%[0-9A-F]{2}/.test(encoded);
     let slug = encoded.normalize('NFKD').replace(/[̀-ͯ]/g, '')

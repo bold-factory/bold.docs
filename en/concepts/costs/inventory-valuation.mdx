@@ -7,7 +7,7 @@ icon: "warehouse"
 
 **Inventory valuation** calculates the economic value of recorded stock.
 
-Bold values stock lines using available quantity and associated cost, usually by lot or source.
+Bold values stock lines using positive recorded quantity, including reserved stock, and associated cost, usually by lot or source.
 
 <Info>
   Valuation uses a single currency: euros (EUR). Bold currently does not support valuation in multiple currencies.
@@ -27,7 +27,7 @@ Bold values stock lines using available quantity and associated cost, usually by
 ## Formula
 
 ```text
-Line value = available stock x unit cost
+Line value = positive recorded stock x unit cost
 Total value in EUR = sum of lines valued in EUR
 ```
 

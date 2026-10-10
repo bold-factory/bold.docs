@@ -33,7 +33,7 @@ Desde esta vista se gestionan:
 
 **Capacidad:** indica si la estación puede procesar varios trabajos a la vez.
 
-- **Si no marcas la casilla**, el sistema entiende que la estación tiene un límite estricto. Por ejemplo, una máquina CNC, un robot de soldadura o un puesto manual pueden procesar una pieza u orden a la vez.
+- **Si no marcas la casilla**, la planificación asigna una sola operación a la vez a la estación. Por ejemplo, las operaciones de una máquina CNC, un robot de soldadura o un puesto manual no pueden solaparse.
 - **Si marcas la casilla**, indicas que la estación puede procesar trabajo simultáneo. Por ejemplo, puede ser un horno industrial, una cinta transportadora o una zona de secado.
 
 **Área:** selecciona el área a la que pertenece la estación. Por ejemplo, asigna `Mesa de ensamblaje B` al área `Montaje final`.
@@ -62,7 +62,7 @@ Una **herramienta** es un elemento auxiliar, molde, matriz, utillaje o consumibl
 
 **Ruta:** **Fabricación > Recursos > Herramienta**
 
-**Asignar características:** añade propiedades para filtrar herramientas y determinar su compatibilidad con cada trabajo.
+**Asignar características:** con **Planificación avanzada** habilitada en el plan, añade propiedades para filtrar herramientas y determinar su compatibilidad con cada trabajo.
 
 <Note>
   **Ejemplo:** para la herramienta `Molde carcasa frontal X`, asigna estas características:

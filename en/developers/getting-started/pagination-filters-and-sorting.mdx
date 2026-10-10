@@ -49,7 +49,7 @@ Use the exact field names listed in the endpoint reference. Not all fields suppo
 Combine filters with `&&` for **AND** and `||` for **OR**. Use parentheses to group conditions.
 
 ```http
-GET /v1/items/skus?filterBy=Name[Contains]mesa&&Code[StartsWith]SKU
+GET /v1/items/skus?filterBy=Name[Contains]mesa%26%26Code[StartsWith]SKU
 ```
 
 ## Sort results

@@ -33,7 +33,7 @@ This view manages:
 
 **Capacity:** indicate whether the workstation can process several jobs at once.
 
-- **If you leave the checkbox unchecked**, the system treats the workstation as having a strict limit. For example, a CNC machine, welding robot, or manual work center can process one piece or order at a time.
+- **If you leave the checkbox unchecked**, planning assigns only one operation at a time to the workstation. For example, operations on a CNC machine, welding robot, or manual work center cannot overlap.
 - **If you select the checkbox**, you indicate that the workstation can process simultaneous work. For example, it could be an industrial oven, conveyor belt, or drying area.
 
 **Area:** select the area the workstation belongs to. For example, assign `Assembly table B` to `Final assembly`.
@@ -62,7 +62,7 @@ A **tool** is an auxiliary element, mold, die, fixture, or critical consumable i
 
 **Path:** **Production > Resources > Tool**
 
-**Assign characteristics:** add properties to filter tools and determine their compatibility with each job.
+**Assign characteristics:** with **Advanced planning** enabled in your plan, add properties to filter tools and determine their compatibility with each job.
 
 <Note>
   **Example:** assign these characteristics to the tool `Front housing mold X`:

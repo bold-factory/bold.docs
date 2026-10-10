@@ -48,6 +48,14 @@ test('Spanish heading anchors must be translated', () => fixture(({ write, execu
   write('en/example.mdx', english.replace('#first-section)', '#primera-sección)'));
   assert.match(execute().stderr, /missing heading anchor/);
 }));
+test('heading anchors retain inline underscores and unwrap Markdown emphasis', () => fixture(({ write, execute }) => {
+  write('en/example.mdx', english.replace('## First section', '## **First** api_key *section*')
+    .replace('#first-section)', '#first-api_key-section)'));
+  assert.equal(execute().status, 0);
+  write('en/example.mdx', english.replace('## First section', '## api*key')
+    .replace('#first-section)', '#api-key)'));
+  assert.equal(execute().status, 0);
+}));
 test('technical API examples cannot silently drift', () => fixture(({ write, execute }) => {
   write('en/example.mdx', english.replace('/v1/items/skus', '/v1/items/products'));
   assert.match(execute().stderr, /technical code examples differ/);

@@ -53,6 +53,8 @@ Cada registro de producción cierra un tramo de la operación. El tiempo teóric
 
 El tiempo posterior al último registro de una operación abierta queda **pendiente de valorar** y no penaliza la eficiencia hasta que se registra más producción. En procesos largos, registrar producción parcial con frecuencia hace que la eficiencia se actualice antes.
 
+La producción registrada sin tiempo de equipo se combina con un tramo trabajado del mismo estado de valoración. Si el único tramo trabajado sigue pendiente, esas unidades todavía no se atribuyen al empleado; otro registro de producción o la finalización pueden permitir atribuirlas cuando Bold recalcula la operación.
+
 No se valora el tiempo en operaciones sin tiempo teórico, desatendidas o canceladas.
 
 <Warning>
@@ -71,7 +73,7 @@ Combina ocupación y eficiencia en un solo número.
 
 #### OLE
 
-OLE (%) = Ocupación × Eficiencia × Calidad
+OLE (%) = (Ocupación (%) / 100) × (Eficiencia (%) / 100) × (Calidad (%) / 100) × 100
 
 ### 4. Revisar el detalle
 

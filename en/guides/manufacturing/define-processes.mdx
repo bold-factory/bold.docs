@@ -38,8 +38,8 @@ After creating the process, specify the workstations where it can run. Assign on
 
 **Workstation type (Primary or Auxiliary):** defines this machine's role in the process.
 
-- **Primary:** usual workstation for the process. You can mark several as primary if, for example, you have three equivalent lines.
-- **Auxiliary:** backup workstation used when primary ones are unavailable or unsuitable for a particular job.
+- **Primary:** usual workstation for the process. Each process has one primary workstation. Assign equivalent lines as auxiliary workstations; selecting another primary changes the previous one to auxiliary.
+- **Auxiliary:** backup workstation used when the primary workstation is unavailable or unsuitable for a particular job.
 
 <Note>
   **Example:** for a `Bottling` process, mark `Automatic line 01` as **Primary** and `Manual packaging table` as **Auxiliary** for emergencies or small lots.
