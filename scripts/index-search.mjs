@@ -14,6 +14,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { createHeadingSlugger } from "./heading-anchors.mjs";
 
 const scriptsDirectory = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(scriptsDirectory, "..");
@@ -123,33 +124,6 @@ function toPlainText(markdown) {
       .replace(/\n{2,}/g, "\n")
       .trim()
   );
-}
-
-// Mirrors the heading ids rendered by Mintlify (@mintlify/common slugify +
-// cleanHeadingId): accented headings keep their characters, e.g.
-// "Cuándo usar un ajuste" -> "cuándo-usar-un-ajuste".
-function createHeadingSlugger() {
-  const occurrences = new Map();
-  return (heading) => {
-    const text = toInlineText(heading);
-    const encoded = encodeURIComponent(text.toLowerCase().trim().replace(/\s+/g, "-"));
-    const hasEncodedCharacters = /%[0-9A-F]{2}/.test(encoded);
-    let slug = encoded
-      .normalize("NFKD")
-      .replace(/[̀-ͯ]/g, "")
-      .replace(hasEncodedCharacters ? /[^a-zA-Z\d%_]+/g : /[^a-z\d_]+/g, "-")
-      .replace(/^-+|-+$/g, "")
-      .replace(/-{2,}/g, "-");
-    if (!hasEncodedCharacters) slug = slug.toLowerCase();
-
-    const count = occurrences.get(slug) ?? 0;
-    occurrences.set(slug, count + 1);
-    if (count > 0) slug = `${slug}-${count + 1}`;
-
-    return decodeURIComponent(slug)
-      .replace(/[?,;:!'"()[\]{}]/g, "")
-      .replace(/\p{Extended_Pictographic}|[‍︎️]/gu, "");
-  };
 }
 
 function splitLongText(text) {

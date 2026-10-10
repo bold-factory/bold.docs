@@ -4,7 +4,7 @@ title: "Value inventory"
 description: "View the current value of stock by item, lot and location."
 ---
 
-Use **Inventory valuation** to view the financial value of available stock. Bold calculates it from positive stock quantities and their lots' cost per unit.
+Use **Inventory valuation** to view the financial value of positive recorded stock, including reserved stock. Bold calculates it from those quantities and their lots' cost per unit.
 
 ## Data you can review
 
@@ -14,14 +14,14 @@ Use **Inventory valuation** to view the financial value of available stock. Bold
 | Item | Item being valued. |
 | Location | Place where the stock is located. |
 | Lot | Lot that provides the cost per unit. |
-| Stock | Available quantity in the item's unit. |
+| Stock | Positive recorded quantity in the item's unit, including reserved stock. |
 | Cost/unit | Lot cost per unit. |
 | Total value | Stock multiplied by cost per unit. |
 
 ## How it is calculated
 
 ```text
-Line value = available stock × lot cost per unit
+Line value = positive recorded stock × lot cost per unit
 Total inventory value = sum of lines with positive stock
 ```
 

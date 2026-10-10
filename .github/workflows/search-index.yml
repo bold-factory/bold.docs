@@ -8,6 +8,7 @@ on:
       - "es/**"
       - "docs.json"
       - "scripts/index-search.mjs"
+      - "scripts/heading-anchors.mjs"
       - ".github/workflows/search-index.yml"
   workflow_dispatch:
 

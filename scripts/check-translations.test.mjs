@@ -18,6 +18,7 @@ function fixture(run) {
   const write = (name, content) => writeFileSync(path.join(directory, name), content);
   for (const folder of ['scripts', 'es', 'en', 'sources/translations']) mkdirSync(path.join(directory, folder), { recursive: true });
   copyFileSync(path.join(root, 'scripts/check-translations.mjs'), path.join(directory, 'scripts/check-translations.mjs'));
+  copyFileSync(path.join(root, 'scripts/heading-anchors.mjs'), path.join(directory, 'scripts/heading-anchors.mjs'));
   write('es/example.mdx', spanish);
   write('en/example.mdx', english);
   write('docs.json', JSON.stringify({ navigation: { languages: [{ language: 'es', pages: ['es/example'] }, { language: 'en', pages: ['en/example'] }] } }));
@@ -54,6 +55,16 @@ test('heading anchors retain inline underscores and unwrap Markdown emphasis', (
   assert.equal(execute().status, 0);
   write('en/example.mdx', english.replace('## First section', '## api*key')
     .replace('#first-section)', '#api-key)'));
+  assert.equal(execute().status, 0);
+}));
+test('heading anchors preserve code spans and Markdown autolinks', () => fixture(({ write, execute }) => {
+  write('en/example.mdx', english.replace('## First section', '## `api_key<T>`')
+    .replace('#first-section)', '#api_key%3Ct%3E)'));
+  assert.equal(execute().status, 0);
+  write('en/example.mdx', english.replace('## First section', '## <https://example.com>')
+    .replace('#first-section)', '#https%2F%2Fexample-com)'));
+  assert.equal(execute().status, 0);
+  write('en/example.mdx', english.replace('## First section', '## <span>**First** section</span>'));
   assert.equal(execute().status, 0);
 }));
 test('technical API examples cannot silently drift', () => fixture(({ write, execute }) => {

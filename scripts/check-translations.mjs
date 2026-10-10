@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHeadingSlugger } from './heading-anchors.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const manifestPath = path.join(root, 'sources/translations/en.json');
@@ -20,27 +21,9 @@ function walk(directory) {
 }
 
 function headings(content) {
-  const seen = new Map();
-  return [...content.replace(/```[\s\S]*?```/g, '').matchAll(/^\s{0,3}(#{1,6})\s+(.+?)\s*#*\s*$/gm)].map(match => {
-    const text = match[2]
-      .replace(/<\/?[A-Za-z][^>]*>/g, ' ')
-      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-      .replace(/`([^`]*)`/g, '$1')
-      .replace(/(\*\*|__)(.*?)\1/g, '$2')
-      .replace(/(^|\s)[*_]([^*_\n]+)[*_]/g, '$1$2');
-    const encoded = encodeURIComponent(text.toLowerCase().trim().replace(/\s+/g, '-'));
-    const hasEncodedCharacters = /%[0-9A-F]{2}/.test(encoded);
-    let slug = encoded.normalize('NFKD').replace(/[̀-ͯ]/g, '')
-      .replace(hasEncodedCharacters ? /[^a-zA-Z\d%_]+/g : /[^a-z\d_]+/g, '-')
-      .replace(/^-+|-+$/g, '').replace(/-{2,}/g, '-');
-    if (!hasEncodedCharacters) slug = slug.toLowerCase();
-    const count = seen.get(slug) ?? 0;
-    seen.set(slug, count + 1);
-    if (count) slug = `${slug}-${count + 1}`;
-    slug = decodeURIComponent(slug).replace(/[?,;:!'"()[\]{}]/g, '')
-      .replace(/\p{Extended_Pictographic}|[‍︎️]/gu, '');
-    return { level: match[1].length, slug };
-  });
+  const slugify = createHeadingSlugger();
+  return [...content.replace(/```[\s\S]*?```/g, '').matchAll(/^\s{0,3}(#{1,6})\s+(.+?)\s*#*\s*$/gm)]
+    .map(match => ({ level: match[1].length, slug: slugify(match[2]) }));
 }
 
 function signature(content) {
