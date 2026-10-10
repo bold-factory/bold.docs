@@ -1,0 +1,30 @@
+sources/translations/en.json
+  s_1734fff885c752::t_d6a29abbe24620 869
+en/updates/changelog.mdx
+  s_1734fff885c752::t_b0e43d8755fc65 9-43
+  s_45ac069563f88b::t_9096de3876cc48 8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "80b81a480ce8f777b1a6214de6ee0dfaa2a1402b",
+  "prompts": {},
+  "sessions": {
+    "s_1734fff885c752": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12811-8af6-7363-8275-d8ad1ef15129",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_45ac069563f88b": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a126c6-d484-7dd3-94c5-732bd832f467",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
