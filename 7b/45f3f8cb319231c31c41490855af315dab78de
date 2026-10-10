@@ -1,0 +1,42 @@
+en/guides/costs/value-inventory.mdx
+  s_63542ac882f504::t_8043f76e0433ea 7,17,24
+scripts/check-translations.test.mjs
+  s_63542ac882f504::t_d14316446d326b 21,60-68
+  s_145fa27d1a19c4::t_61a0de38205373 69
+.github/workflows/search-index.yml
+  s_63542ac882f504::t_c6dc1c6250a86a 11
+es/ayuda/costes/valoracion-inventario.mdx
+  s_63542ac882f504::t_8043f76e0433ea 7,17,24
+scripts/check-translations.mjs
+  s_63542ac882f504::t_77f183964ff355 6,24-26
+scripts/heading-anchors.mjs
+  s_63542ac882f504::t_cd87215802c92d 1-31
+scripts/index-search.mjs
+  s_63542ac882f504::t_2e3a61bb848dda 17
+sources/translations/en.json
+  s_63542ac882f504::t_6c51aeef24c375 149
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7b45f3f8cb319231c31c41490855af315dab78de",
+  "prompts": {},
+  "sessions": {
+    "s_145fa27d1a19c4": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a126ad-8092-7732-8bd5-f326029c92c4",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_63542ac882f504": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a127c9-d93f-7f90-bcfb-5d98e896a730",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
