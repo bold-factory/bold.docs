@@ -71,6 +71,7 @@ Mientras preparas un registro de producción de una operación, Bold guarda un b
 - Si no hay conexión, Bold lo indica y vuelve a intentar guardar el borrador.
 - Si varios operarios trabajan en el mismo registro, cada dispositivo recibe los cambios de los demás en pocos segundos. Las líneas cambiadas en otro dispositivo se destacan con el nombre del empleado. Un campo que estás editando no se sobrescribe; si dos personas cambian la misma línea, prevalece el último cambio guardado.
 - El borrador se descarta al registrar el progreso por cualquier vía: modo de trabajo, Panel de control, API o Boldy. Los demás dispositivos lo detectan y muestran las cantidades pendientes actualizadas.
+- Si separas una operación de un grupo y Bold registra en ella el exceso de producción del grupo, también descarta su borrador. Si la separación no registra progreso, lo conserva.
 - También se descarta al finalizar o cancelar la operación y se elimina al borrarla. Si la finalización falla, el borrador se conserva.
 
 Consulta [Controles, consumos y pausas](/es/conceptos/fabricacion/controles-consumos-y-pausas) para ver cómo se calculan las cantidades teóricas y cómo se eligen los lotes.
