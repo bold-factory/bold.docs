@@ -6,6 +6,42 @@ rss: true
 ---
 
 <Update
+  label="2026-10-05"
+  tags={["New features", "Improvements", "Fixes"]}
+>
+  ## Attended operations, unattended operations and waits
+
+  - Each process has an **Activity type**: **Process**, for productive work, or **Wait**, for periods such as resting or drying.
+  - Choose **Staff attendance** for each station compatible with a process. **Attended** requires personnel presence, and **Unattended** lets the machine work on its own. You can change this from the process, from the station's capabilities or when importing data.
+  - Each operation takes its execution mode from the activity type and the selected station. When you change the configuration, Bold updates operations that have not started. Started and canceled operations keep their mode.
+  - In work mode, an attended operation needs an employee to start or resume. An unattended operation does not, and you can stop it with **Stop** even when nobody is working on it. You cannot start a process without a selected station.
+  - Waits start automatically when their preceding operations finish, run continuously for their planned duration and finish automatically. You cannot start them manually or pause them.
+  - Unattended operations and waits do not reserve personnel in production plans.
+  - Stations no longer have the **Complete operations automatically** option. Processes that completed this way become **Wait** activities.
+
+  ## Operation comments
+
+  - Operations support formatted comments and attachments. In MO management, view them in **Info**, below the order notes. In work mode, they have a separate **Comments** section and are attributed to the active employee.
+  - The most recent comments appear first. You can comment on completed operations. Canceled operations display their comments but do not allow you to add or delete them.
+  - Progress recording in work mode no longer includes a comments field. Use **Comments** to leave observations about the operation.
+  - The API lets you view, add and delete an operation's comments.
+
+  ## Improvements
+
+  - **Control panel > Notifications** displays your active subscriptions as cards, with the entity, event, channel and applied filters. **Create a subscription** guides you through choosing a channel, entity, event and filters. Each card lets you **Edit filters** or **Remove** the subscription.
+  - When editing a subscription's filters, Bold indicates whether a condition, an **AND** or **OR** operator or a parenthesis is missing. You cannot save the filter until it is complete.
+  - Notifications and webhooks include two new purchase order events: a line was added and a line's cancellation was undone.
+  - Operation cards in work mode show the employees working on them. Click or hover over their initials to see their full names.
+  - In work mode, **Materials** shows whether each material has sufficient stock, is on its way, with the expected date when known, or is missing.
+  - Work orders add the **Work** and **Finish** permissions. **Work** lets you complete actions, record time and materials and comment without editing the work order. Completing a work order requires **Finish**, so review which profiles should have it.
+
+  ## Fixes
+
+  - Receipts no longer accept draft purchase order lines. Bold prevents you from adding these lines or receiving a receipt that includes them.
+  - Deleting a shipment releases its lines' external references. An integration can then send those lines again in another shipment.
+</Update>
+
+<Update
   label="2026-10-01"
   tags={["New features", "Improvements", "Fixes"]}
 >
