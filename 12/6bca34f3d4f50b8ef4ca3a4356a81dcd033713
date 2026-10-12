@@ -1,0 +1,25 @@
+es/ayuda/produccion/crear-motivos-de-pausa.mdx
+  s_71d59361d1550a::t_f7293fdcddf5c2 21,25-26
+  s_71d59361d1550a::t_481a7d97a4bfd8 24
+en/guides/manufacturing/create-pause-reasons.mdx
+  s_71d59361d1550a::t_f7293fdcddf5c2 21,25-26
+  s_71d59361d1550a::t_481a7d97a4bfd8 24
+sources/translations/en.json
+  s_71d59361d1550a::t_067b7752800c4a 299
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "126bca34f3d4f50b8ef4ca3a4356a81dcd033713",
+  "prompts": {},
+  "sessions": {
+    "s_71d59361d1550a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12fdc-be35-7e93-949c-4ed0180b9e67",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
