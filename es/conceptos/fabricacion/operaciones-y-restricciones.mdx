@@ -77,7 +77,9 @@ Los límites de cantidad guardados con la antigua opción de confirmación usan 
 
 Bold registra qué restricciones te has saltado y su exigencia en el momento de la acción. El backend también aplica los bloqueos a las llamadas de API que inician o registran unidades en una operación individual. Las [acciones de un grupo](/es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones) están exentas de estas restricciones, tanto en gestión como en modo de trabajo.
 
-El indicador muestra si puedes continuar, si faltan unidades o si hay condiciones pendientes. En **Información** puedes revisar cada condición y abrir la operación anterior para comprobar si falta registrar progreso.
+El indicador muestra si puedes continuar, si faltan unidades o si hay condiciones pendientes. En **Información** puedes revisar cada condición y abrir la operación anterior para comprobar si falta registrar progreso. El acceso a la operación anterior solo aparece mientras el modo de trabajo la muestra: sin bloquear y planificada, en curso, pausada o finalizada hace menos de 12 horas.
+
+Si una operación empezó antes de que se cumpliera su condición de inicio, la condición aparece como incumplida aunque la anterior termine después. Indica qué hito no se esperó, también con **Avisar pero permitir**. Si la anterior ha progresado, Bold solo detecta que no se esperaron sus primeras unidades cuando la anterior empezó más tarde que la siguiente.
 
 El filtro **Ocultar restringidas** oculta solo operaciones sin iniciar con condiciones de inicio pendientes de tipo **Ocultar por defecto, pero permitir con aviso** o **Ocultar y prohibir**. También oculta las que superan un límite de cantidad configurado como **Prohibir**. Las operaciones que ya empezaron siguen visibles.
 

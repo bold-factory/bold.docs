@@ -77,7 +77,9 @@ Quantity limits saved with the old confirmation option use **Warn but allow**.
 
 Bold records which restrictions you bypassed and their enforcement at the time of the action. The backend also applies blocks to API calls that start or record units in an individual operation. [Group actions](/en/concepts/manufacturing/assignments-and-operation-groups) are exempt from these restrictions in both management and work mode.
 
-The indicator shows whether you can continue, units are missing or conditions remain pending. In **Information**, you can review each condition and open the preceding operation to check whether progress still needs recording.
+The indicator shows whether you can continue, units are missing or conditions remain pending. In **Information**, you can review each condition and open the preceding operation to check whether progress still needs recording. The shortcut to the preceding operation only appears while work mode lists it: unblocked and planned, in progress, paused, or finished less than 12 hours ago.
+
+If an operation started before its start condition was met, the condition shows as unmet even after the preceding operation finishes. It names the milestone that was not awaited, including with **Warn but allow**. When the preceding operation has progressed, Bold only detects that its first units were not awaited if it started later than the following operation.
 
 The **Hide restricted** filter hides only operations that have not started and have pending start conditions of type **Hide by default, but allow with a warning** or **Hide and forbid**. It also hides operations that exceed a quantity limit configured as **Forbid**. Operations that have already started remain visible.
 
