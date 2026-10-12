@@ -30,16 +30,26 @@ Open **Employee activity** to distinguish who has an active operation and who do
 
 ## View active workstations
 
-Open **Workstation status** to see workstations with activity in progress. The view groups active assignments by workstation and operation.
+Open **Workstation status** to see what is happening at each workstation right now. The page refreshes itself every 30 seconds.
+
+At the top, a summary shows active workstations out of the total, operations in progress, employees clocked in, and the number of operations with alerts.
+
+Workstations are grouped by area. Workstations with operations in progress show a green dot; workstations without activity are dimmed and labeled **No activity**.
 
 For each operation, you can review:
 
 - MO code and operation name.
-- Completed quantity compared with planned quantity.
 - Item and order requester.
-- Assigned employees and time elapsed since they started.
+- Completed quantity compared with planned quantity, with a progress bar.
+- Clocked-in employees and time elapsed since they started. Hover over an employee to see their name and start date.
 
-Click the operation to open its details. If the page shows **There is no activity in progress right now**, there are no active assignments associated with a workstation.
+The view highlights these alerts:
+
+- **Long clock-in**: the clock-in turns amber after 12 hours and red after 24 hours. This usually means someone forgot to clock out.
+- **Overdue operation**: the operation's target date has passed.
+- **Understaffed**: fewer employees are clocked in than the operation requires.
+
+Click the operation to open its details. If the page shows **There is no activity in progress right now**, there are no workstations or active assignments to show.
 
 ## Review production records
 

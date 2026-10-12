@@ -296,7 +296,7 @@
     {
       "source": "es/ayuda/produccion/crear-motivos-de-pausa.mdx",
       "target": "en/guides/manufacturing/create-pause-reasons.mdx",
-      "sourceHash": "704b0e591ff533e9ef788e0c8f04e6a7e7d3595ab26c830f01e595bed8576879"
+      "sourceHash": "6204b784191d335e26024bc5fb12bcc3a6d5206707f19d91d86849ba9d6495d6"
     },
     {
       "source": "es/ayuda/produccion/crear-recursos.mdx",
@@ -376,7 +376,7 @@
     {
       "source": "es/ayuda/produccion/ver-eficacia-por-empleado.mdx",
       "target": "en/guides/manufacturing/view-effectiveness-by-employee.mdx",
-      "sourceHash": "8bbd77f19b06e2e7a507cb33442327bb81a0aafb2f325cbbaae59bde0c25e113"
+      "sourceHash": "67783cf5d1de70193102992760c3e7f35035a2ff6743de26f5aa4ec2863e76a4"
     },
     {
       "source": "es/ayuda/produccion/ver-evolucion-del-oee.mdx",
@@ -391,7 +391,7 @@
     {
       "source": "es/ayuda/produccion/ver-progreso-en-la-produccion.mdx",
       "target": "en/guides/manufacturing/monitor-production-in-real-time.mdx",
-      "sourceHash": "6f4ea17eb1212d8f713136e94d19b592723e8678a22105f5bcbe531b4603b509"
+      "sourceHash": "5d324c4509e8ff9a57f3ab541f4c96f11ab42780d79f4a6066e373fb94a69182"
     },
     {
       "source": "es/ayuda/smart-factory/consultar-o-delegar-con-ia.mdx",
@@ -566,7 +566,7 @@
     {
       "source": "es/conceptos/fabricacion/cuadros-de-mando.mdx",
       "target": "en/concepts/manufacturing/dashboards.mdx",
-      "sourceHash": "43e5ed5f4d6b9a73e1a44ca689b024e0fe38166a6810921814282e18b08d739f"
+      "sourceHash": "9cbc49c9c2cd562643eb44f4ea7df87c75397469cd276209375cb10a64915e84"
     },
     {
       "source": "es/conceptos/fabricacion/estados-de-fabricacion.mdx",
@@ -591,7 +591,7 @@
     {
       "source": "es/conceptos/fabricacion/operaciones-y-restricciones.mdx",
       "target": "en/concepts/manufacturing/operations-and-restrictions.mdx",
-      "sourceHash": "9076659bced639f14c0ecb2446440ce5cef72526a2391bb0ad6bee91a2490586"
+      "sourceHash": "a573a7a4bf541ef3a23448ebda610c6dab35e0874fe4be44e76d1f759d82ddd5"
     },
     {
       "source": "es/conceptos/fabricacion/ordenes-de-fabricacion.mdx",

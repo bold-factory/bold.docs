@@ -87,6 +87,8 @@ To prepare an operation while the preceding one produces, choose to start when t
 
 A timed wait does not offer **At any time**. Automatic start respects all its start conditions, including those configured as **Warn but allow**. If it starts before its preceding operations end, it does not complete automatically until its duration has elapsed and all preceding operations have closed.
 
+If you pause a timed wait or undo its completion, it stays paused until you resume it manually. Paused time extends its duration before automatic completion.
+
 Sequencing follows conditions regardless of enforcement. Precedence configured as **Warn but allow** can also order the plan.
 
 Restrictions should not be duplicated or create cycles. A cycle would prevent determining which operation unlocks another and can block [sequencing](/en/concepts/manufacturing/sequencing).

@@ -87,6 +87,8 @@ Para preparar una operación mientras la anterior produce, elige el inicio cuand
 
 Una espera temporizada no ofrece **En cualquier momento**. El inicio automático respeta todas sus condiciones de inicio, incluso las configuradas como **Avisar pero permitir**. Si empieza antes de que terminen sus operaciones anteriores, no se completa automáticamente hasta que haya transcurrido su duración y hayan cerrado todas las anteriores.
 
+Si pausas una espera temporizada o deshaces su finalización, permanece pausada hasta que la reanudes manualmente. El tiempo de pausa prolonga su duración antes de la finalización automática.
+
 La secuenciación sigue las condiciones, con independencia de su exigencia. Una precedencia configurada como **Avisar pero permitir** también puede ordenar el plan.
 
 No deben duplicarse ni crear ciclos. Un ciclo impediría saber qué operación desbloquea a otra y puede bloquear la [secuenciación](/es/conceptos/fabricacion/secuenciacion).
