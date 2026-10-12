@@ -1,0 +1,25 @@
+en/concepts/manufacturing/dashboards.mdx
+  s_04d937ea67e3d8::t_62e79a15cdd3ce 22,47
+en/guides/manufacturing/view-effectiveness-by-employee.mdx
+  s_04d937ea67e3d8::t_0b3f408c23d5de 3,7,11,13
+es/ayuda/produccion/ver-eficacia-por-empleado.mdx
+  s_04d937ea67e3d8::t_740526e8f41759 3,7,11,13
+es/conceptos/fabricacion/cuadros-de-mando.mdx
+  s_04d937ea67e3d8::t_60fd64ce0174e9 22,47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "cdc226e6632190f40f95384815258688d0c9c458",
+  "prompts": {},
+  "sessions": {
+    "s_04d937ea67e3d8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "746e3286-7447-4587-bb3b-a35771c721be",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
