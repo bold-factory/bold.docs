@@ -1,0 +1,23 @@
+en/concepts/manufacturing/operations-and-restrictions.mdx
+  s_71d59361d1550a::t_0e1c729b8bfccf 90-91
+es/conceptos/fabricacion/operaciones-y-restricciones.mdx
+  s_71d59361d1550a::t_0e1c729b8bfccf 90-91
+sources/translations/en.json
+  s_71d59361d1550a::t_51291983cecfd3 299,379,394,569,594
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7724d574b26412e1f1e7bf05ed0fce72efec01b2",
+  "prompts": {},
+  "sessions": {
+    "s_71d59361d1550a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12fdc-be35-7e93-949c-4ed0180b9e67",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
