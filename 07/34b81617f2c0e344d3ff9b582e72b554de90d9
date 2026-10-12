@@ -1,0 +1,21 @@
+es/conceptos/fabricacion/operaciones-y-restricciones.mdx
+  s_cf6c473db2dd86::t_bcf84b734f8e40 82
+sources/translations/en.json
+  s_cf6c473db2dd86::t_c469828f204f05 594
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0734b81617f2c0e344d3ff9b582e72b554de90d9",
+  "prompts": {},
+  "sessions": {
+    "s_cf6c473db2dd86": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1301e-5c4a-7352-8763-f6d8d6b3eced",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
