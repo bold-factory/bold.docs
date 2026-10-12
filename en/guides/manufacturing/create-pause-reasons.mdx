@@ -18,7 +18,9 @@ Recording the reason lets you analyze losses and recurring stops.
 
 **Interruption type:** choose **Planned** or **Unplanned**. The form explains how each option affects OEE.
 
-- **Planned:** for predictable stops in your usual operations, such as `Lunch`, `Shift change`, or `Scheduled cleaning`. Their duration is subtracted from planned production time, so they do not reduce the workstation's availability or OEE.
+- **Planned:** for predictable stops in your usual operations, such as `Lunch`, `Shift change`, or `Scheduled cleaning`. Their duration is deducted from the workstation's scheduled time to calculate planned production time, so they do not reduce the workstation's availability or OEE.
 - **Unplanned:** for unexpected events such as `Electrical fault`, `Raw material shortage`, or `Machine jam`. Their duration counts as lost production time, so they reduce availability and, with it, OEE.
 
-OEE is calculated as availability × performance × quality, where availability is running time divided by shift time minus planned stops.
+OEE (%) = (availability (%) / 100) × (performance (%) / 100) × (quality (%) / 100) × 100.
+
+Availability (%) is (actual operating time / (workstation scheduled time − planned stops that stopped it)) × 100. See [View OEE by workstation](/en/guides/manufacturing/view-oee-by-workstation) to review each indicator.

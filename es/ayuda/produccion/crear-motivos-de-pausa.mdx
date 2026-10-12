@@ -18,7 +18,9 @@ Registrar el motivo permite analizar pérdidas y paradas recurrentes.
 
 **Tipo de pausa:** elige **Planificada** o **No planificada**. El formulario explica cómo afecta cada opción al OEE.
 
-- **Planificada:** para paradas previsibles de tu operativa habitual, como `Almuerzo`, `Cambio de turno` o `Limpieza programada`. Su duración se descuenta del tiempo de producción planificado, así que no reduce la disponibilidad ni el OEE de la estación.
+- **Planificada:** para paradas previsibles de tu operativa habitual, como `Almuerzo`, `Cambio de turno` o `Limpieza programada`. Su duración se descuenta del tiempo programado de la estación para calcular el tiempo de producción planificado, así que no reduce la disponibilidad ni el OEE de la estación.
 - **No planificada:** para imprevistos como `Avería eléctrica`, `Falta de materia prima` o `Atasco de máquina`. Su duración cuenta como tiempo de producción perdido, así que reduce la disponibilidad y, con ella, el OEE.
 
-El OEE se calcula como disponibilidad × rendimiento × calidad, donde la disponibilidad es el tiempo en marcha dividido entre el tiempo de turno menos las paradas planificadas.
+OEE (%) = (disponibilidad (%) / 100) × (rendimiento (%) / 100) × (calidad (%) / 100) × 100.
+
+La disponibilidad (%) es (tiempo real de funcionamiento / (tiempo programado de la estación − paradas planificadas que la detuvieron)) × 100. Consulta [Ver OEE por estación](/es/ayuda/produccion/ver-oee-por-estacion) para revisar cada indicador.

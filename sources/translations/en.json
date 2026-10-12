@@ -296,7 +296,7 @@
     {
       "source": "es/ayuda/produccion/crear-motivos-de-pausa.mdx",
       "target": "en/guides/manufacturing/create-pause-reasons.mdx",
-      "sourceHash": "3b9d58d7d4b12e62986b3f7794cef0f7c45a33b97c922f1972124451f7f68e64"
+      "sourceHash": "6204b784191d335e26024bc5fb12bcc3a6d5206707f19d91d86849ba9d6495d6"
     },
     {
       "source": "es/ayuda/produccion/crear-recursos.mdx",
