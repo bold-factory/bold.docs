@@ -30,16 +30,26 @@ Abre **Actividad de los empleados** para distinguir quién tiene una operación 
 
 ## Consultar las estaciones activas
 
-Abre **Estado de las estaciones de trabajo** para ver las estaciones que tienen actividad en curso. La vista agrupa las asignaciones activas por estación y por operación.
+Abre **Estado de las estaciones de trabajo** para ver qué ocurre ahora mismo en cada estación. La página se actualiza sola cada 30 segundos.
+
+En la parte superior verás un resumen con las estaciones activas sobre el total, las operaciones en curso, los operarios fichados y el número de operaciones con alertas.
+
+Las estaciones se agrupan por área. Las que tienen operaciones en curso aparecen con un punto verde; las que no tienen actividad aparecen atenuadas con la etiqueta **Sin actividad**.
 
 En cada operación puedes revisar lo siguiente:
 
 - El código de la OF y el nombre de la operación.
-- La cantidad completada frente a la planificada.
 - El artículo y el solicitante de la orden.
-- Los empleados asignados y el tiempo transcurrido desde que empezaron.
+- La cantidad completada frente a la planificada, con una barra de progreso.
+- Los empleados fichados y el tiempo transcurrido desde que empezaron. Pasa el cursor por encima para ver el nombre y la fecha de inicio.
 
-Haz clic en la operación para abrir su detalle. Si la página muestra **No hay ninguna actividad en curso ahora mismo**, no hay asignaciones activas asociadas a una estación.
+La vista destaca estas alertas:
+
+- **Fichaje largo**: el fichaje aparece en ámbar si lleva abierto más de 12 horas y en rojo si lleva más de 24 horas. Suele indicar que alguien olvidó cerrarlo.
+- **Operación vencida**: la fecha objetivo de la operación ya ha pasado.
+- **Faltan operarios**: hay menos empleados fichados de los que requiere la operación.
+
+Haz clic en la operación para abrir su detalle. Si la página muestra **No hay ninguna actividad en curso ahora mismo**, no hay estaciones ni asignaciones activas que mostrar.
 
 ## Revisar los registros de producción
 
