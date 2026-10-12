@@ -16,6 +16,9 @@ Recording the reason lets you analyze losses and recurring stops.
 
 **Description (optional):** explain when to use the reason so the whole workshop follows the same criteria. For example: `30-minute break for the morning shift. Use only between 13:00 and 14:00.`
 
-**Planned:** enable this checkbox when the pause is scheduled. Bold treats it as an organizational stop, so it does not penalize efficiency indicators (OEE) or count as a technical failure.
+**Interruption type:** choose **Planned** or **Unplanned**. The form explains how each option affects OEE.
 
-Leave it unchecked for unexpected events such as `Electrical fault`, `Raw material shortage`, or `Machine jam`.
+- **Planned:** for predictable stops in your usual operations, such as `Lunch`, `Shift change`, or `Scheduled cleaning`. Their duration is subtracted from planned production time, so they do not reduce the workstation's availability or OEE.
+- **Unplanned:** for unexpected events such as `Electrical fault`, `Raw material shortage`, or `Machine jam`. Their duration counts as lost production time, so they reduce availability and, with it, OEE.
+
+OEE is calculated as availability × performance × quality, where availability is running time divided by shift time minus planned stops.

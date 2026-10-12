@@ -16,6 +16,9 @@ Registrar el motivo permite analizar pérdidas y paradas recurrentes.
 
 **Descripción (opcional):** explica cuándo debe usarse el motivo para que todo el taller aplique el mismo criterio. Por ejemplo: `Pausa de 30 minutos para el turno de mañana. Usar solo entre las 13:00 y las 14:00.`
 
-**Planificada:** activa esta casilla cuando la pausa esté programada. Bold la tratará como una parada organizativa, por lo que no penalizará los indicadores de eficiencia (OEE) ni la contará como un fallo técnico.
+**Tipo de pausa:** elige **Planificada** o **No planificada**. El formulario explica cómo afecta cada opción al OEE.
 
-Déjala desmarcada para imprevistos como `Avería eléctrica`, `Falta de materia prima` o `Atasco de máquina`.
+- **Planificada:** para paradas previsibles de tu operativa habitual, como `Almuerzo`, `Cambio de turno` o `Limpieza programada`. Su duración se descuenta del tiempo de producción planificado, así que no reduce la disponibilidad ni el OEE de la estación.
+- **No planificada:** para imprevistos como `Avería eléctrica`, `Falta de materia prima` o `Atasco de máquina`. Su duración cuenta como tiempo de producción perdido, así que reduce la disponibilidad y, con ella, el OEE.
+
+El OEE se calcula como disponibilidad × rendimiento × calidad, donde la disponibilidad es el tiempo en marcha dividido entre el tiempo de turno menos las paradas planificadas.
