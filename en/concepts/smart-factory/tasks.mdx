@@ -49,6 +49,16 @@ The owner can continue their task. Intervening in someone else's shared task req
 
 Tasks expire after 28 days of inactivity. If you need to resume an expired task, create another with the necessary context.
 
+## Conversation context
+
+Boldy remembers the task conversation: instructions, messages, results of the tools it uses, and available tools. This memory has a maximum size that depends on the intelligence level.
+
+Next to the message box, the **context** indicator shows how much of that memory the conversation takes up. Hover over it to see the tokens used, the available maximum and the percentage at which Boldy summarizes the conversation, marked on the bar. It also shows the free space and the split by category: the total comes from usage reported by the model and the split is approximate.
+
+When the conversation approaches the maximum, Boldy summarizes it automatically and continues from the summary. It keeps the instructions and the most recent exchanges, but it can lose details from older messages. If you need Boldy to consider earlier information, mention it again.
+
+If a tool returns too much data, Boldy discards it and can request it again with narrower filters. To avoid this, limit the period or the number of records in your instructions.
+
 ## Source channel
 
 A task started from a messaging channel retains that channel. You can view activity and results on the web, but must respond from the same external conversation.

@@ -596,7 +596,7 @@
     {
       "source": "es/conceptos/fabricacion/ordenes-de-fabricacion.mdx",
       "target": "en/concepts/manufacturing/manufacturing-orders.mdx",
-      "sourceHash": "cbbd1491d4ecddd145be0137d85c9b31514320f5c377450520290f2fa32182d4"
+      "sourceHash": "7585bd1dfb34c08a68b4927ac46b6ab13f736a210ca894cb0f21f8016d8b3a63"
     },
     {
       "source": "es/conceptos/fabricacion/peticiones-de-fabricacion.mdx",
@@ -806,7 +806,7 @@
     {
       "source": "es/conceptos/smart-factory/tareas.mdx",
       "target": "en/concepts/smart-factory/tasks.mdx",
-      "sourceHash": "750abeca256a1865d30d0bea5a5db1f072b863a0494470cba771f0177e44bcbc"
+      "sourceHash": "0993a43abf51d36167c8136b4a11dc43bc6beaeff20f56d8003a5d533f8dfdee"
     },
     {
       "source": "es/desarrolladores/empezar/autenticacion.mdx",
