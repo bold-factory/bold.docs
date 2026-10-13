@@ -1,0 +1,39 @@
+sources/translations/en.json
+  s_45ac069563f88b::t_2e6011941155bb 809
+en/concepts/smart-factory/tasks.mdx
+  s_ebd018c1d4e4d0::t_f6f207b64d1d76 56
+es/conceptos/smart-factory/tareas.mdx
+  s_5799c8360b5dc5::t_a83576522d6604 56
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f40d57539b3b4136fcdd27d6be1da1980a18eee2",
+  "prompts": {},
+  "sessions": {
+    "s_45ac069563f88b": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a126c6-d484-7dd3-94c5-732bd832f467",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_5799c8360b5dc5": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0aaab-732f-77c2-aa43-88ea4c6387ef",
+        "model": "unknown"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_ebd018c1d4e4d0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a126c8-811b-70e1-86d4-b00a84904d22",
+        "model": "unknown"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
