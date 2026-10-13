@@ -1,0 +1,21 @@
+en/concepts/smart-factory/tasks.mdx
+  s_f1a11163bf8be3::t_a263d2603db465 58
+es/conceptos/smart-factory/tareas.mdx
+  s_f1a11163bf8be3::t_a263d2603db465 58
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "cf16c5f8dec4bc5eb77d589ab28b7ce2f8b9e671",
+  "prompts": {},
+  "sessions": {
+    "s_f1a11163bf8be3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "97bc593b-635d-4b4d-884a-1f887d3d8939",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
