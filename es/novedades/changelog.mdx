@@ -6,6 +6,75 @@ rss: true
 ---
 
 <Update
+  label="2026-10-12"
+  tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
+>
+  ## Restricciones entre operaciones
+
+  - Al conectar dos operaciones de una receta o de una OF eliges entre **Total · esperar a que finalice**, **Parcial · avanzar según piezas** y **Orden sugerido - no bloquear**. Con **Personalizada** configuras por separado cuándo se puede iniciar la operación siguiente y cuántas unidades se pueden completar en ella.
+  - Cada condición indica cómo se aplica. El inicio puede avisar pero permitir, ocultarse por defecto pero permitir con aviso, u ocultarse y prohibirse. El límite de unidades puede avisar pero permitir, o prohibir.
+  - Las restricciones existentes se convierten a las nuevas condiciones. Las que no coinciden con una opción predefinida se abren en **Personalizada** con sus valores.
+  - En el diagrama de operaciones, arrastra el puerto de una operación hasta otra para conectarlas. Pasa el cursor sobre una flecha para ver su restricción y haz clic con el botón derecho para editarla o eliminarla. **Recalcular posiciones** coloca cada operación debajo de sus anteriores. El doble clic abre una operación también en los diagramas de solo lectura.
+  - En el modo de trabajo, una condición que prohíbe impide iniciar la operación o registrar más unidades, y Bold indica el motivo. Si la condición solo avisa, Bold te pide confirmarlo para continuar. **Ocultar restringidas** solo oculta operaciones que todavía no han empezado.
+  - En la gestión de la OF puedes saltarte una restricción que prohíbe si tienes permiso de escritura de órdenes de fabricación. Bold te pide confirmarlo antes de continuar.
+  - Los planes de producción tienen en cuenta las condiciones de inicio y de unidades de cada restricción, aunque solo avisen. Las acciones de un grupo de operaciones no aplican las restricciones individuales.
+  - En la API, las restricciones sustituyen el campo `type` por `start` y `quantity`. Si tu integración crea o lee restricciones, actualízala.
+
+  ## Registro de progreso compartido en el modo de trabajo
+
+  - Las cantidades, consumos, lotes y coproductos que preparas al registrar progreso se guardan automáticamente. Si recargas la página, cambias de pantalla o continúas en otra tablet, recuperas lo que habías preparado.
+  - Cada operación tiene un único borrador, compartido por todos los empleados y dispositivos que trabajan en ella. Las líneas que ha cambiado otra persona indican **Cambiado por** y su nombre, o **Cambiado en otro dispositivo**.
+  - Si la cantidad teórica de alguna línea ha cambiado después de editarla, Bold te avisa antes de confirmar. Si otro dispositivo ya ha confirmado o descartado el registro, Bold muestra las cantidades pendientes actualizadas en lugar de registrarlas dos veces.
+  - Sin conexión, Bold indica que guardará los cambios cuando la recupere. El navegador te avisa si intentas salir con cambios sin guardar.
+  - El borrador se descarta al registrar el progreso y al finalizar o cancelar la operación.
+
+  ## Aplicación en español e inglés
+
+  - La aplicación está disponible en español e inglés, incluidos los mensajes de validación, los errores y la ayuda contextual.
+  - En **Panel de control > Mi cuenta > Preferencias** eliges tu **Idioma**. Con **Idioma de la empresa** se usa el idioma de **Panel de control > Configuración**. Tu preferencia se aplica en todas tus empresas.
+  - Cada empleado puede tener su propio **Idioma** para el modo de trabajo. Si no lo tiene, se usa el de la empresa.
+  - Los números y las fechas siguen el formato de la empresa, sea cual sea el idioma elegido.
+
+  ## Eficacia por empleado
+
+  - **Smart Factory > Cuadros de mando > Eficacia por empleado** cruza el trabajo registrado de un empleado con su horario durante el periodo que elijas.
+  - Una línea temporal distingue el tiempo trabajado dentro y fuera de horario, el tiempo muerto, incluido el que sigue a una parada, y los días no laborables o sin horario definido.
+  - Los indicadores son **Ocupación**, **Eficiencia**, **Calidad**, **Productividad sobre jornada** y **OLE**, el equivalente al OEE para personas. También puedes revisar el detalle por día y por operación.
+  - Las bajas y vacaciones registradas como jornadas sin periodos en el horario personal no cuentan como tiempo muerto.
+
+  ## Stock a fecha
+
+  - **Almacén > Control del stock > Historial de stock** incorpora **Stock a fecha**. Muestra el stock de cada artículo, ubicación y lote en una fecha y hora pasadas, con atajos para cierres habituales como el final del mes o del año anterior.
+  - Puedes limitar la consulta a un artículo o a una ubicación, usar **Sumar lotes** o **Sumar ubicaciones** y mostrar las combinaciones a cero con **Incluir registros sin stock**. El stock negativo se resalta en rojo.
+  - Las cantidades son las de ese momento, pero los códigos y nombres son los actuales. **Exportar** descarga el resultado en Excel o CSV.
+  - La API permite consultar y exportar el stock a una fecha.
+
+  ## Compras reservadas para una OF
+
+  - El asistente de compras de una OF muestra todos sus materiales de compra, también cuando ya están cubiertos. El botón indica **Resolver faltantes** si falta material y **Asistente de compras** en los demás casos.
+  - **Proponer lo que necesita la OF** rellena la cantidad que necesita la orden en una línea o en todas a la vez.
+  - Los pedidos de compra creados desde el asistente quedan reservados para esa OF. Cubren primero sus necesidades y solo el excedente queda disponible para otras. Al recibirlos, el material pasa a stock normal.
+
+  ## Mejoras
+
+  - En **Panel de control > Mi cuenta** puedes cambiar tu nombre y tus apellidos. El email identifica tu cuenta y no se puede cambiar. El nombre del empleado vinculado no se modifica.
+  - Desde la gestión de la OF puedes iniciar, pausar, reanudar y deshacer la finalización de una espera. Las pausas retrasan su finalización automática.
+  - Una espera empieza automáticamente cuando se cumplen las condiciones de inicio de sus restricciones. No finaliza mientras quede abierta alguna de sus operaciones anteriores.
+  - Las notificaciones, los webhooks y las automatizaciones incluyen el evento de inicio de una operación de fabricación.
+  - **Envíos** muestra el estado **Cancelado**. El filtro **Ocultar cancelados**, activo por defecto, oculta los envíos cancelados, también en los envíos de un cliente. Las líneas de envío de un pedido de venta ya no muestran envíos cancelados.
+
+  ## Correcciones
+
+  - Al elegir o escanear un lote en el modo de trabajo, Bold usa el stock de la ubicación de entrada de la operación (**Stock en entrada**) en lugar del total de todas las ubicaciones.
+  - Las automatizaciones que se activan con un evento reciben los datos de ese evento.
+  - Las instrucciones de una automatización admiten hasta 30.000 caracteres, en lugar de limitarse a 12.000.
+  - El **Planificador de cargas** muestra el nombre del cliente en lugar de su identificador y la fecha requerida de cada línea en **Requerido**.
+  - Los filtros largos de una suscripción a notificaciones se ajustan al ancho del diálogo en lugar de desbordarlo.
+  - El gráfico **Previsión de stock** del asistente de compras muestra el stock negativo con su signo en el detalle emergente.
+  - Las necesidades contra pedido se atienden por orden de fecha necesaria al repartir el stock y las entradas previstas.
+</Update>
+
+<Update
   label="2026-10-05"
   tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
 >

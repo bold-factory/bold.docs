@@ -6,6 +6,75 @@ rss: true
 ---
 
 <Update
+  label="2026-10-12"
+  tags={["New features", "Improvements", "Fixes"]}
+>
+  ## Restrictions between operations
+
+  - When you connect two operations in a recipe or an MO, choose **Full · wait until finished**, **Partial · advance as units are completed** or **Suggested order - do not block**. With **Custom**, you configure separately when the next operation can start and how many units can be completed in it.
+  - Each condition defines how it applies. The start condition can warn but allow, be hidden by default but allowed after a warning, or be hidden and forbidden. The unit limit can warn but allow, or forbid.
+  - Existing restrictions are converted to the new conditions. Those that do not match a predefined option open in **Custom** with their values.
+  - In the operations diagram, drag the port of one operation onto another to connect them. Hover over an arrow to see its restriction and right-click it to edit or delete it. **Recalculate positions** places each operation below its predecessors. Double-clicking opens an operation in read-only diagrams too.
+  - In work mode, a forbidding condition prevents you from starting the operation or recording more units, and Bold shows the reason. If the condition only warns, Bold asks you to confirm before continuing. **Hide restricted** only hides operations that have not started yet.
+  - In MO management, you can skip a forbidding restriction if you have write permission for manufacturing orders. Bold asks you to confirm before continuing.
+  - Production plans take each restriction's start and unit conditions into account, even when they only warn. Operation group actions do not apply individual restrictions.
+  - In the API, restrictions replace the `type` field with `start` and `quantity`. If your integration creates or reads restrictions, update it.
+
+  ## Shared progress recording in work mode
+
+  - The quantities, consumptions, lots and co-products you prepare when recording progress are saved automatically. If you reload the page, switch screens or continue on another tablet, you recover what you had prepared.
+  - Each operation has a single draft, shared by every employee and device working on it. Lines changed by someone else show **Changed by** and their name, or **Changed on another device**.
+  - If the theoretical quantity of a line changed after you edited it, Bold warns you before you confirm. If another device has already confirmed or discarded the record, Bold shows the updated pending quantities instead of recording them twice.
+  - When offline, Bold indicates that it will save the changes once the connection is back. The browser warns you if you try to leave with unsaved changes.
+  - The draft is discarded when you record the progress and when you finish or cancel the operation.
+
+  ## Application in Spanish and English
+
+  - The application is available in Spanish and English, including validation messages, errors and contextual help.
+  - Choose your **Language** in **Control panel > My account > Preferences**. **Company language** uses the language set in **Control panel > Settings**. Your preference applies to all your companies.
+  - Each employee can have their own **Language** for work mode. When it is not set, the company language applies.
+  - Numbers and dates follow the company format, whatever language you choose.
+
+  ## Effectiveness by employee
+
+  - **Smart Factory > Dashboards > Effectiveness by employee** compares an employee's recorded work with their schedule over the period you choose.
+  - A timeline distinguishes time worked inside and outside the schedule, idle time, including idle time after a stop, and non-working days or days without a defined schedule.
+  - The indicators are **Utilization**, **Efficiency**, **Quality**, **Productivity over schedule** and **OLE**, the equivalent of OEE for people. You can also review the breakdown by day and by operation.
+  - Leave and holidays recorded as work days without periods in the employee's personal schedule do not count as idle time.
+
+  ## Stock at date
+
+  - **Warehouse > Stock control > Stock history** adds **Stock at date**. It shows the stock of each item, location and lot at a past date and time, with shortcuts for common closing dates such as the end of the previous month or year.
+  - You can limit the query to an item or a location, use **Sum lots** or **Sum locations** and show zero combinations with **Include records without stock**. Negative stock is highlighted in red.
+  - Quantities are those at that moment, but codes and names are the current ones. **Export** downloads the result in Excel or CSV.
+  - The API lets you query and export stock at a date.
+
+  ## Purchases reserved for an MO
+
+  - An MO's purchase assistant shows all its purchased materials, including when they are already covered. The button reads **Resolve shortages** when material is missing and **Purchase assistant** otherwise.
+  - **Propose what the production order needs** fills in the quantity the order needs for one line or for all of them at once.
+  - Purchase orders created from the assistant are reserved for that MO. They cover its needs first, and only the surplus is available for other needs. Once received, the material becomes regular stock.
+
+  ## Improvements
+
+  - In **Control panel > My account**, you can change your first and last name. Your email identifies your account and cannot be changed. The linked employee's name does not change.
+  - From MO management, you can start, pause, resume and undo the finish of a wait. Pauses delay its automatic completion.
+  - A wait starts automatically when the start conditions of its restrictions are met. It does not finish while any of its preceding operations remains open.
+  - Notifications, webhooks and automations include the event for the start of a manufacturing operation.
+  - **Shipments** shows the **Cancelled** status. The **Hide cancelled** filter, enabled by default, hides cancelled shipments, including in a customer's shipments. A sales order's shipment lines no longer show cancelled shipments.
+
+  ## Fixes
+
+  - When you choose or scan a lot in work mode, Bold uses the stock at the operation's input location (**Input stock**) instead of the total across all locations.
+  - Automations triggered by an event receive that event's data.
+  - Automation instructions accept up to 30,000 characters instead of being limited to 12,000.
+  - The **Load planner** shows the customer name instead of its identifier, and each line's required date in **Required**.
+  - Long filters in a notification subscription wrap to the dialog width instead of overflowing it.
+  - The **Stock forecast** chart in the purchase assistant shows negative stock with its sign in the tooltip.
+  - To-order needs are served in order of their needed date when stock and expected receipts are allocated.
+</Update>
+
+<Update
   label="2026-10-05"
   tags={["New features", "Improvements", "Fixes"]}
 >
