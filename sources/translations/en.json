@@ -511,7 +511,7 @@
     {
       "source": "es/conceptos/catalogo/articulos.mdx",
       "target": "en/concepts/catalog/items.mdx",
-      "sourceHash": "bda7119a481c70cb9197e0e0522e140d5e56a3083083e8e6af0c34a7cc1ceb2c"
+      "sourceHash": "b7c33f35a98339333da9fa771347361ab0c2f011da27345d8c471681ea8ae4f6"
     },
     {
       "source": "es/conceptos/catalogo/familia-vs-articulo.mdx",
@@ -806,7 +806,7 @@
     {
       "source": "es/conceptos/smart-factory/tareas.mdx",
       "target": "en/concepts/smart-factory/tasks.mdx",
-      "sourceHash": "0993a43abf51d36167c8136b4a11dc43bc6beaeff20f56d8003a5d533f8dfdee"
+      "sourceHash": "3d85cb0c1905c05956d3b7c4f0fe33187365accf22748c5cd1057cc9d3361c87"
     },
     {
       "source": "es/desarrolladores/empezar/autenticacion.mdx",
@@ -856,7 +856,7 @@
     {
       "source": "es/desarrolladores/webhooks/payloads.mdx",
       "target": "en/developers/webhooks/webhook-payloads.mdx",
-      "sourceHash": "38e699914ddceb078c73e0b1cbbd63f56716d93ab1bf5f326d45b32f062d5d04"
+      "sourceHash": "f8d00ec37a0f65e71f3afca5fa98e3d892d9877f6ef90071b55822e1f49f3f7d"
     },
     {
       "source": "es/desarrolladores/webhooks/reintentos-y-errores.mdx",
