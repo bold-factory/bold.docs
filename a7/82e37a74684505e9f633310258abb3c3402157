@@ -1,0 +1,29 @@
+es/conceptos/catalogo/articulos.mdx
+  s_5b8b96ed0c17bb::t_e6f94914147cbe 47
+es/desarrolladores/webhooks/payloads.mdx
+  s_5b8b96ed0c17bb::t_b7eb11fc8cabf4 57
+  s_5b8b96ed0c17bb::t_e6f94914147cbe 58
+en/developers/webhooks/webhook-payloads.mdx
+  s_5b8b96ed0c17bb::t_b7eb11fc8cabf4 57
+  s_5b8b96ed0c17bb::t_e6f94914147cbe 58
+en/concepts/catalog/items.mdx
+  s_5b8b96ed0c17bb::t_e6f94914147cbe 47
+sources/translations/en.json
+  s_5b8b96ed0c17bb::t_b2c582ab0f9b09 514,809,859
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a782e37a74684505e9f633310258abb3c3402157",
+  "prompts": {},
+  "sessions": {
+    "s_5b8b96ed0c17bb": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a136f6-6af9-7782-ad3b-a531bd59acb3",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
