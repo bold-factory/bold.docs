@@ -52,6 +52,10 @@ Cada webhook envía un cuerpo JSON con un sobre común y un campo `payload` espe
 }
 ```
 
+## Campos específicos del evento
+
+En `Items.Sku.Deleted`, `payload.mergedIntoSkuId` identifica el artículo que permanece cuando el borrado forma parte de una consolidación. En un borrado normal, este campo no está presente.
+
 ## Buenas prácticas
 
 <Accordion title="Versiona por majorVersion">

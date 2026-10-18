@@ -1041,6 +1041,7 @@
                 "pages": [
                   "es/ayuda/usuarios-y-permisos/invitar-usuarios",
                   "es/ayuda/panel-de-control/vincular-telegram",
+                  "es/ayuda/panel-de-control/vincular-whatsapp",
                   "es/ayuda/panel-de-control/disenar-roles-por-responsabilidad",
                   "es/ayuda/panel-de-control/configuracion-de-empresa",
                   "es/ayuda/panel-de-control/importar-datos",
@@ -1437,6 +1438,7 @@
                 "pages": [
                   "en/guides/users-and-permissions/invite-users",
                   "en/guides/control-panel/link-telegram-to-your-account",
+                  "en/guides/control-panel/link-whatsapp-to-your-account",
                   "en/guides/control-panel/design-permission-profiles-by-responsibility",
                   "en/guides/control-panel/configure-the-company",
                   "en/guides/control-panel/import-data",

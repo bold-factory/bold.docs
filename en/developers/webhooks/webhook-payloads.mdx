@@ -52,6 +52,10 @@ Each webhook sends a JSON body with a common envelope and an event-specific `pay
 }
 ```
 
+## Event-specific fields
+
+For `Items.Sku.Deleted`, `payload.mergedIntoSkuId` identifies the surviving item when deletion is part of consolidation. For a regular deletion, this field is absent.
+
 ## Good practices
 
 <Accordion title="Version by majorVersion">

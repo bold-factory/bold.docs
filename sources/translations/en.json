@@ -211,12 +211,17 @@
     {
       "source": "es/ayuda/panel-de-control/introduccion.mdx",
       "target": "en/guides/control-panel/introduction.mdx",
-      "sourceHash": "215ca4fba7658d88a347d6ea37a0ac617c38ef464394c99f957c0254538d2b92"
+      "sourceHash": "632447fc4420fc1fc6836e73fef82caed36a6734c753afbe72025f0bf5ab6c54"
     },
     {
       "source": "es/ayuda/panel-de-control/vincular-telegram.mdx",
       "target": "en/guides/control-panel/link-telegram-to-your-account.mdx",
       "sourceHash": "16cc6b6bda3fb8930c32b8d6312e7beb242a5d539692a5e88d94c40ffbf0953b"
+    },
+    {
+      "source": "es/ayuda/panel-de-control/vincular-whatsapp.mdx",
+      "target": "en/guides/control-panel/link-whatsapp-to-your-account.mdx",
+      "sourceHash": "98a7da4b6726ce864c0baddac0158424e1c1233228404561107108c196425038"
     },
     {
       "source": "es/ayuda/personal/configurar-horarios.mdx",
@@ -511,7 +516,7 @@
     {
       "source": "es/conceptos/catalogo/articulos.mdx",
       "target": "en/concepts/catalog/items.mdx",
-      "sourceHash": "bda7119a481c70cb9197e0e0522e140d5e56a3083083e8e6af0c34a7cc1ceb2c"
+      "sourceHash": "8a827fea843484acc61a7f0de6068672d3fb584504df0f24ac872f1b211667f1"
     },
     {
       "source": "es/conceptos/catalogo/familia-vs-articulo.mdx",
@@ -686,7 +691,7 @@
     {
       "source": "es/conceptos/panel-de-control/cuenta-y-empresa.mdx",
       "target": "en/concepts/control-panel/account-and-company.mdx",
-      "sourceHash": "501debdb9c95b8a8dfe01319f06477bb03de0570437149a94419503c38baeca3"
+      "sourceHash": "379a582c40e6e62ce3e8761560ea15f6f191014fda0906e199c993e7defb8433"
     },
     {
       "source": "es/conceptos/panel-de-control/datos-y-archivos.mdx",
@@ -701,7 +706,7 @@
     {
       "source": "es/conceptos/panel-de-control/identidades-relacionadas.mdx",
       "target": "en/concepts/control-panel/channels-and-related-identities.mdx",
-      "sourceHash": "909d7a670679603449a15be1108e9c55f08fda76e1d4749058a543efd4db60a3"
+      "sourceHash": "1b16c33ebea98adf614730ea9093e6d3114a61327a786c24b7794b600bbf2324"
     },
     {
       "source": "es/conceptos/panel-de-control/notificaciones.mdx",
@@ -806,7 +811,7 @@
     {
       "source": "es/conceptos/smart-factory/tareas.mdx",
       "target": "en/concepts/smart-factory/tasks.mdx",
-      "sourceHash": "0993a43abf51d36167c8136b4a11dc43bc6beaeff20f56d8003a5d533f8dfdee"
+      "sourceHash": "3d85cb0c1905c05956d3b7c4f0fe33187365accf22748c5cd1057cc9d3361c87"
     },
     {
       "source": "es/desarrolladores/empezar/autenticacion.mdx",
@@ -856,7 +861,7 @@
     {
       "source": "es/desarrolladores/webhooks/payloads.mdx",
       "target": "en/developers/webhooks/webhook-payloads.mdx",
-      "sourceHash": "38e699914ddceb078c73e0b1cbbd63f56716d93ab1bf5f326d45b32f062d5d04"
+      "sourceHash": "3153d81aa7a9b6f81de72bc5cb6fbab0ff249832cfce6723559c8143f49860fa"
     },
     {
       "source": "es/desarrolladores/webhooks/reintentos-y-errores.mdx",
