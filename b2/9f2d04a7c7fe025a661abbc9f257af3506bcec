@@ -1,0 +1,39 @@
+en/guides/control-panel/introduction.mdx
+  s_e8c7e88012a530::t_5981cf3c388710 18-20
+en/concepts/control-panel/channels-and-related-identities.mdx
+  s_e8c7e88012a530::t_5981cf3c388710 25,31-36,47-49,84
+docs.json
+  s_e8c7e88012a530::t_5981cf3c388710 1044,1441
+en/concepts/control-panel/account-and-company.mdx
+  s_e8c7e88012a530::t_5981cf3c388710 27
+es/ayuda/panel-de-control/introduccion.mdx
+  s_e8c7e88012a530::t_5981cf3c388710 18-20
+en/guides/control-panel/link-whatsapp-to-your-account.mdx
+  s_e8c7e88012a530::t_25890334ace1d2 1-91
+es/ayuda/panel-de-control/vincular-whatsapp.mdx
+  s_e8c7e88012a530::t_27201e15a08806 1-91
+es/conceptos/panel-de-control/cuenta-y-empresa.mdx
+  s_e8c7e88012a530::t_5981cf3c388710 27
+es/conceptos/panel-de-control/identidades-relacionadas.mdx
+  s_e8c7e88012a530::t_5981cf3c388710 25,31-36,47-49,84
+sources/translations/en.json
+  s_e8c7e88012a530::t_5981cf3c388710 222-223,225
+  s_e8c7e88012a530::t_aafe346d24858a 214,224,694,709
+  s_e8c7e88012a530::t_f08f6f37e98aa5 221
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b29f2d04a7c7fe025a661abbc9f257af3506bcec",
+  "prompts": {},
+  "sessions": {
+    "s_e8c7e88012a530": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8196aac4-7f94-47d2-aa25-a1016791df6b",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
