@@ -221,7 +221,7 @@
     {
       "source": "es/ayuda/panel-de-control/vincular-whatsapp.mdx",
       "target": "en/guides/control-panel/link-whatsapp-to-your-account.mdx",
-      "sourceHash": "2a9c02c225665753c7aa69270bbd83d26d69ee85ce3c185d3f23b5bf1f28a5f7"
+      "sourceHash": "34a92c937bca9ee68c9804d6cabac77ef502faf8546864d3bf603b7fa6464d15"
     },
     {
       "source": "es/ayuda/personal/configurar-horarios.mdx",
@@ -516,7 +516,7 @@
     {
       "source": "es/conceptos/catalogo/articulos.mdx",
       "target": "en/concepts/catalog/items.mdx",
-      "sourceHash": "b7c33f35a98339333da9fa771347361ab0c2f011da27345d8c471681ea8ae4f6"
+      "sourceHash": "8a827fea843484acc61a7f0de6068672d3fb584504df0f24ac872f1b211667f1"
     },
     {
       "source": "es/conceptos/catalogo/familia-vs-articulo.mdx",
@@ -861,7 +861,7 @@
     {
       "source": "es/desarrolladores/webhooks/payloads.mdx",
       "target": "en/developers/webhooks/webhook-payloads.mdx",
-      "sourceHash": "f8d00ec37a0f65e71f3afca5fa98e3d892d9877f6ef90071b55822e1f49f3f7d"
+      "sourceHash": "3153d81aa7a9b6f81de72bc5cb6fbab0ff249832cfce6723559c8143f49860fa"
     },
     {
       "source": "es/desarrolladores/webhooks/reintentos-y-errores.mdx",

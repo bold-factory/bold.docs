@@ -44,7 +44,7 @@ Two active items with the same family and values usually indicate a duplicate or
 Bold can suggest consolidating items when they have the same family and property values. Consolidation leaves one item as the valid reference and removes the duplicate, but it does not transfer all its relationships in the same way.
 
 - Manufacturing requests with no allocated quantity move to the remaining item.
-- Draft or confirmed sales order lines with no deliveries move to the remaining item and retain their status. Removing the duplicate during consolidation does not cancel these lines.
+- Sales order lines in **Unconfirmed draft** or **Pending** status, with no deliveries, move to the remaining item and retain their status. Removing the duplicate during consolidation does not cancel these lines.
 - Active manufacturing orders for the removed item are canceled.
 - References to the item in editable recipe versions are removed.
 

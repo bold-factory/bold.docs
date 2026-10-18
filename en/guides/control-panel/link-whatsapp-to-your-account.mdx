@@ -43,13 +43,11 @@ After linking the account, click **Open conversation** or write directly to the 
 
 The conversation remains in WhatsApp. You can view the task, its activity and its result in **Smart Factory > Tasks**, but you must reply from WhatsApp.
 
-Messages you send shortly afterward continue the most recent task. To continue a specific task, reply by quoting one of Boldy's messages from that task.
+By default, messages you send within two hours of the latest accepted message continue the most recent task. After the configured inactivity period, a new message starts a new task. To continue a specific task, reply by quoting one of Boldy's messages from that task.
 
 For now, Boldy reads only text messages in WhatsApp. If you send images, documents or voice notes, Boldy tells you that it can only read text.
 
-If Boldy finishes a reply more than 24 hours after your last message, you may not receive it in the chat. Check the result in **Smart Factory > Tasks**.
-
-{/* TODO: Confirm whether a WhatsApp notice with the task link is sent when the 24-hour window is closed; it depends on the number's configuration. */}
+If Boldy finishes a reply more than 24 hours after your last message, the reply cannot be sent as ordinary chat text. When the number has an approved notification template configured, Boldy sends a notice with a link to the task in Bold. Without that template, no notice is sent. You can check the result in **Smart Factory > Tasks** in either case.
 
 ## Unlink WhatsApp
 
