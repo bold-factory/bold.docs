@@ -22,13 +22,18 @@ flowchart LR
 
 | Elemento | Qué representa |
 | --- | --- |
-| Canal | Medio externo desde el que se conversa con Bold, como Telegram. |
+| Canal | Medio externo desde el que se conversa con Bold, como Telegram o WhatsApp. |
 | Identidad personal | Cuenta que identifica a la persona dentro del canal. |
 | Identidad relacionada | Vínculo verificado entre la identidad del canal y un usuario de Bold. |
 | Usuario de Bold | Identidad que aporta el perfil y los permisos aplicables. |
 | Canal de origen | Canal asociado a una tarea iniciada desde una conversación externa. |
 
-Actualmente, Telegram puede actuar como canal cuando está habilitado para la empresa. El mismo modelo conceptual permite incorporar otros canales de mensajería en el futuro.
+Actualmente hay dos canales:
+
+| Canal | Disponibilidad | Conversación |
+| --- | --- | --- |
+| Telegram | Cuando está habilitado para la empresa, mediante el bot de la empresa. | Admite texto, imágenes, documentos y audio. |
+| WhatsApp | Cuando aparece en **Mi cuenta**, mediante el número de WhatsApp de Bold Factory, común para todas las empresas. | De momento, solo admite texto. |
 
 ## Vínculo e identidad
 
@@ -39,6 +44,9 @@ El vínculo pertenece a una persona. La verificación se realiza mediante un enl
 | Sin vincular | Bold no relaciona la identidad del canal con un usuario. |
 | Vinculada | La identidad externa se reconoce como el usuario asociado. |
 | Desvinculada | La conversación con Boldy deja de estar disponible desde esa identidad hasta que se establezca un nuevo vínculo. |
+| Rechazada | El vínculo no se completa porque la identidad ya está vinculada a otro usuario de la empresa o, en WhatsApp, en otra empresa. |
+
+Cada usuario puede tener una identidad vinculada por canal, y cada identidad externa corresponde a un único usuario de la empresa. Además, una identidad de WhatsApp solo puede estar vinculada en una empresa a la vez. Para usarla en otra empresa, primero hay que desvincularla en la empresa donde está vinculada.
 
 <Warning>
   Una identidad externa es personal. Compartirla entre varios usuarios rompe la correspondencia entre la persona que conversa y los permisos aplicados.
@@ -73,5 +81,6 @@ El canal cambia el lugar de la conversación, no la identidad ni el alcance del 
 ## Relacionado
 
 - [Vincular Telegram](/es/ayuda/panel-de-control/vincular-telegram)
+- [Vincular WhatsApp](/es/ayuda/panel-de-control/vincular-whatsapp)
 - [Tareas](/es/conceptos/smart-factory/tareas)
 - [Usuarios, perfiles y permisos](/es/conceptos/panel-de-control/usuarios-roles-y-permisos)
