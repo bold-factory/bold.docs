@@ -1,0 +1,33 @@
+en/concepts/catalog/items.mdx
+  s_05272057169e4d::t_97eae5eabeff55 47
+en/developers/webhooks/webhook-payloads.mdx
+  s_05272057169e4d::t_97eae5eabeff55 55,59
+  s_05272057169e4d::t_eb1917ddc55908 60
+es/ayuda/panel-de-control/vincular-whatsapp.mdx
+  s_05272057169e4d::t_97eae5eabeff55 46,50
+es/desarrolladores/webhooks/payloads.mdx
+  s_05272057169e4d::t_97eae5eabeff55 55,59
+  s_05272057169e4d::t_d14d7ed0510b80 60
+en/guides/control-panel/link-whatsapp-to-your-account.mdx
+  s_05272057169e4d::t_97eae5eabeff55 46,50
+es/conceptos/catalogo/articulos.mdx
+  s_05272057169e4d::t_97eae5eabeff55 47
+sources/translations/en.json
+  s_05272057169e4d::t_539841a18bd2d1 224,519,864
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "755a6cfca2c8c52f4e5326ed7985f62e8b82ad7a",
+  "prompts": {},
+  "sessions": {
+    "s_05272057169e4d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a15128-ee92-7671-865a-f0b18b0e7389",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
