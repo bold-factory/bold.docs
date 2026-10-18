@@ -1,0 +1,23 @@
+en/guides/control-panel/link-whatsapp-to-your-account.mdx
+  s_05272057169e4d::t_8bec3d2cda9337 46
+es/ayuda/panel-de-control/vincular-whatsapp.mdx
+  s_05272057169e4d::t_8bec3d2cda9337 46
+sources/translations/en.json
+  s_05272057169e4d::t_f1b4f22d4b95ba 224
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "345126acd6d6fa1561470ecd8cb483702f874e8a",
+  "prompts": {},
+  "sessions": {
+    "s_05272057169e4d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a15128-ee92-7671-865a-f0b18b0e7389",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
