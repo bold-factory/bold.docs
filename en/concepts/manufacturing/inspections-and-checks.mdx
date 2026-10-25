@@ -39,7 +39,7 @@ Configure the type according to the data you need to retain.
 
 A manufacturing check asks for one or more values, each with its own type. For example, a check per barrel can ask for pH, acidity and salt level, and a packaging check can ask for vacuum pressure, seal and weight. A check without values is a confirmation.
 
-Each time the check is done, a **record** keeps those values and, optionally, a free reference to tell it apart, such as the barrel or sample number.
+Each time the check is done, a **record** keeps those values. If the check asks for several records, each one can have a free reference to tell it apart, such as the barrel or sample number.
 
 ### How many records it asks for
 
@@ -69,6 +69,17 @@ While a check has records, you cannot add or remove values or change their type.
 Checks do not depend on progress: you can record units while checks are pending. Once the operation is finished or cancelled, its records can no longer change.
 
 If the operator cannot start or finish, review which required check has missing or partial records.
+
+### Order
+
+The checks of an operation have their own order, separate from the order of the steps. You can change it in the recipe and in the MO. When the MO is created, its checks copy the order of the recipe.
+
+### In work mode
+
+The operator sees the checks of the operation in that order. Each check shows its requirement as an icon, highlighted while it blocks the operation, and its status:
+
+- A check with a single record is filled in directly on its card, without a reference. Values are saved with **Save**. If it only asks for a yes/no value, it is saved when the answer is chosen. Photos and files are saved when uploaded. A confirmation is recorded with **Confirm**. Its status is **Done**, **Partial**, or **Pending**.
+- A check with several records shows the list of records and the **Add record** button. Its status shows the completed records out of the required ones, such as `2/5`, with `+` if more can be added.
 
 ## Receipt inspections
 

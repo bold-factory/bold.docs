@@ -39,7 +39,7 @@ Configura el tipo según el dato que necesitas conservar.
 
 Un control de fabricación pide uno o varios datos, cada uno con su tipo. Por ejemplo, un control por barril puede pedir pH, acidez y grados de sal, y un control de envasado puede pedir presión de vacío, cierre y peso. Un control sin datos es una confirmación.
 
-Cada vez que se realiza el control queda un **registro** con esos datos y, si quieres, una referencia libre para identificarlo, como el número de barril o de muestra.
+Cada vez que se realiza el control queda un **registro** con esos datos. Si el control pide varios registros, cada uno puede llevar una referencia libre para identificarlo, como el número de barril o de muestra.
 
 ### Cuántos registros pide
 
@@ -69,6 +69,17 @@ Mientras un control tenga registros, no puedes añadir ni quitar datos ni cambia
 Los controles no dependen del avance: puedes registrar unidades aunque falten controles. Cuando la operación está finalizada o cancelada, sus registros ya no se pueden cambiar.
 
 Si el operario no puede iniciar o finalizar, revisa qué control exigido tiene registros pendientes o a medias.
+
+### Orden
+
+Los controles de una operación tienen su propio orden, independiente del de los pasos. Puedes cambiarlo en la receta y en la OF. Al crear la OF, sus controles copian el orden de la receta.
+
+### En el modo de trabajo
+
+El operario ve los controles de la operación en ese orden. Cada control muestra su exigencia con un icono, resaltado mientras bloquea la operación, y su estado:
+
+- Un control con un único registro se rellena directamente en su tarjeta, sin referencia. Los datos se guardan con **Guardar**. Si solo pide un dato de sí/no, se guarda al elegir la respuesta. Las fotos y archivos se guardan al subirlos. Una confirmación se registra con **Confirmar**. Su estado es **Hecho**, **A medias** o **Pendiente**.
+- Un control con varios registros muestra la lista de registros y el botón **Añadir registro**. Su estado indica los registros completos sobre los exigidos, como `2/5`, con `+` si se pueden añadir más.
 
 ## Inspecciones de recepción
 
