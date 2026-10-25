@@ -76,22 +76,22 @@ Los **controles** obligan al operario a registrar una comprobación al iniciar o
 
 ### 1. Añadir un control
 
-**Nombre:** escribe un título breve y descriptivo, como `Medición de temperatura`, `Revisión visual del sellado` o `Firma de seguridad`.
+Haz clic en **Añadir control** y completa estos campos:
+
+**Nombre:** escribe un título breve y descriptivo, como `Medición de temperatura` o `Revisión visual del sellado`.
 
 **Instrucciones:** explica cómo realizar el control. Puedes añadir texto, usar fórmulas o adjuntar planos, fotografías de referencia o manuales en PDF.
 
-**¿Qué tipo de control se requiere?**
+**Datos que se piden:** haz clic en **Añadir dato** para cada valor que deba registrar el operario y elige su tipo: **Número**, **Sí/no**, **Texto**, **Foto** o **Archivo**. Sin datos, el control es una confirmación de que se ha hecho.
 
-Elige el formato del resultado: **Simple** para confirmar que se realizó, **Sí/no**, **Número**, **Texto**, **Foto** o **Archivo**.
+**Número de registros:** indica cuántas veces hay que hacer el control. Admite fórmulas, como `ceil(Cantidad de la OF / 500)`. Marca **Permitir añadir más** para que sea un mínimo y el operario pueda añadir más registros.
 
-**¿Cuándo hay que realizar el control?**
+**¿Cuándo se exige?:** elige **Antes de iniciar**, **Antes de finalizar** u **Opcional — no bloquea la operación**.
 
-Elige cuándo debe realizarse:
+**Duración por registro (minutos):** indica el tiempo estimado de cada registro. También admite fórmulas.
 
-**Al comienzo:** preparación de máquina, carga inicial o revisión previa.
+Consulta [Inspecciones y controles](/es/conceptos/fabricacion/inspecciones-y-controles) para ver cómo afectan los registros y la exigencia a la operación.
 
-**Cada unidad:** acciones repetitivas que dependen de la cantidad producida.
+### 2. Ordenar los controles
 
-**Al final:** limpieza, cierre documental o comprobación final.
-
-**Duración (minutos):** indica el tiempo estimado para completar el control.
+Usa las flechas de la tabla de controles para subir o bajar cada control. Los controles tienen su propio orden, independiente del de los pasos. Las OF creadas con la receta copian ese orden, y el **modo de trabajo** muestra los controles en él.

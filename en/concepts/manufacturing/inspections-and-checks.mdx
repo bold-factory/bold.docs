@@ -13,7 +13,7 @@ Use them when a check must link to an actual operation, item, receipt or movemen
 
 | Area | What it validates |
 | --- | --- |
-| Production | Mandatory operation checks at the start, during progress or at the end. |
+| Production | Operation checks required before starting, before finishing, or optional. |
 | Catalog | Inspections associated with the item to define what to review. |
 | Warehouse | Mandatory or optional receipt inspections. |
 | Maintenance | Mandatory or optional actions with results within a work order. |
@@ -35,15 +35,51 @@ Not all checks are strictly about quality. Some record operational confirmations
 
 Configure the type according to the data you need to retain.
 
-## Execution moment
+## Manufacturing checks
 
-| Moment | Effect |
+A manufacturing check asks for one or more values, each with its own type. For example, a check per barrel can ask for pH, acidity and salt level, and a packaging check can ask for vacuum pressure, seal and weight. A check without values is a confirmation.
+
+Each time the check is done, a **record** keeps those values. If the check asks for several records, each one can have a free reference to tell it apart, such as the barrel or sample number.
+
+### How many records it asks for
+
+| Setting | Effect |
 | --- | --- |
-| At the start | Blocks starting until validation is complete. |
-| Per unit or progress | Requires records corresponding to progress. |
-| At the end | Blocks closing until the check is complete. |
+| Exact number | The check asks for exactly that number of records. No more can be added. |
+| Minimum number, allowing more | The check asks for at least that number of records and more can be added, for example one per barrel when you do not know how many there will be. |
 
-In manufacturing, all configured checks are mandatory. If the operator cannot start or finish, review which check is missing and whether it requires a file, photo, value or confirmation.
+In the recipe, the number of records is a formula, like quantities and durations. For example, `ceil(Production order quantity / 500)` asks for one sample every 500 units of the MO. Insert **Production order quantity** from **Order data** in the editor. The formula is calculated when the MO is created. If it is 0, the MO does not include the check. In the MO you can change the number of records of each check.
+
+Records are not created in advance: they appear when someone adds them.
+
+### Partial records
+
+You can save a record with only some of its values and complete it later. For example, you measure the pH of a barrel and add the acidity when you have the result. Saving only changes the values you send: if two people complete different values of the same record, both are kept. A record is complete when it has all its values.
+
+While a check has records, you cannot add or remove values or change their type. You can still change their names and order.
+
+### When it is required
+
+| Requirement | Effect |
+| --- | --- |
+| Before starting | Blocks starting and finishing while records are missing or partial. You can record it before starting the operation. |
+| Before finishing | Blocks finishing while records are missing or partial. |
+| Optional | Does not block the operation. Bold still shows what is pending. |
+
+Checks do not depend on progress: you can record units while checks are pending. Once the operation is finished or cancelled, its records can no longer change.
+
+If the operator cannot start or finish, review which required check has missing or partial records.
+
+### Order
+
+The checks of an operation have their own order, separate from the order of the steps. You can change it in the recipe and in the MO. When the MO is created, its checks copy the order of the recipe.
+
+### In work mode
+
+The operator sees the checks of the operation in that order. Each check shows its requirement as an icon, highlighted while it blocks the operation, and its status:
+
+- A check with a single record is filled in directly on its card, without a reference. Values are saved with **Save**. If it only asks for a yes/no value, it is saved when the answer is chosen. Photos and files are saved when uploaded. A confirmation is recorded with **Confirm**. Its status is **Done**, **Partial**, or **Pending**.
+- A check with several records shows the list of records and the **Add record** button. Its status shows the completed records out of the required ones, such as `2/5`, with `+` if more can be added.
 
 ## Receipt inspections
 

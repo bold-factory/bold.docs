@@ -13,7 +13,7 @@ Las **inspecciones y controles** capturan evidencias, validaciones y resultados 
 
 | Área | Qué valida |
 | --- | --- |
-| Producción | Controles obligatorios de operación al inicio, durante el avance o al final. |
+| Producción | Controles de operación exigidos antes de iniciar, antes de finalizar u opcionales. |
 | Catálogo | Inspecciones asociadas al artículo para definir qué revisar. |
 | Almacén | Inspecciones obligatorias u opcionales de recepción. |
 | Mantenimiento | Acciones obligatorias u opcionales con resultado dentro de un parte de trabajo. |
@@ -35,15 +35,51 @@ No todos los controles son de calidad estricta. Algunos registran confirmaciones
 
 Configura el tipo según el dato que necesitas conservar.
 
-## Momento de ejecución
+## Controles de fabricación
 
-| Momento | Efecto |
+Un control de fabricación pide uno o varios datos, cada uno con su tipo. Por ejemplo, un control por barril puede pedir pH, acidez y grados de sal, y un control de envasado puede pedir presión de vacío, cierre y peso. Un control sin datos es una confirmación.
+
+Cada vez que se realiza el control queda un **registro** con esos datos. Si el control pide varios registros, cada uno puede llevar una referencia libre para identificarlo, como el número de barril o de muestra.
+
+### Cuántos registros pide
+
+| Configuración | Efecto |
 | --- | --- |
-| Al inicio | Bloquea el arranque hasta completar la validación. |
-| Por unidad o progreso | Exige los registros correspondientes al avance. |
-| Al final | Bloquea el cierre hasta completar la comprobación. |
+| Número exacto | El control pide exactamente ese número de registros. No se pueden añadir más. |
+| Número mínimo, permitiendo añadir más | El control pide al menos ese número de registros y se pueden añadir más, por ejemplo uno por barril cuando no sabes cuántos habrá. |
 
-En fabricación, todos los controles configurados son obligatorios. Si el operario no puede iniciar o finalizar, revisa qué control falta y si requiere archivo, foto, valor o confirmación.
+En la receta, el número de registros es una fórmula, como las cantidades y duraciones. Por ejemplo, `ceil(Cantidad de la OF / 500)` pide una muestra por cada 500 unidades de la OF. Inserta **Cantidad de la OF** desde **Dato de la orden** en el editor. La fórmula se calcula al crear la OF. Si da 0, la OF no incluye el control. En la OF puedes cambiar el número de registros de cada control.
+
+Los registros no se crean de antemano: aparecen cuando alguien los añade.
+
+### Registros a medias
+
+Puedes guardar un registro con solo algunos datos y completarlo más tarde. Por ejemplo, mides el pH de un barril y añades la acidez cuando tengas el resultado. Al guardar, solo cambian los datos que envías: si dos personas completan datos distintos del mismo registro, se conservan los dos. Un registro queda completo cuando tiene todos sus datos.
+
+Mientras un control tenga registros, no puedes añadir ni quitar datos ni cambiar su tipo. Sí puedes cambiar su nombre y su orden.
+
+### Cuándo se exige
+
+| Exigencia | Efecto |
+| --- | --- |
+| Antes de iniciar | Bloquea el arranque y el cierre mientras falten registros o haya registros a medias. Puedes registrarlo antes de iniciar la operación. |
+| Antes de finalizar | Bloquea el cierre mientras falten registros o haya registros a medias. |
+| Opcional | No bloquea la operación. Bold sigue mostrando lo que falta. |
+
+Los controles no dependen del avance: puedes registrar unidades aunque falten controles. Cuando la operación está finalizada o cancelada, sus registros ya no se pueden cambiar.
+
+Si el operario no puede iniciar o finalizar, revisa qué control exigido tiene registros pendientes o a medias.
+
+### Orden
+
+Los controles de una operación tienen su propio orden, independiente del de los pasos. Puedes cambiarlo en la receta y en la OF. Al crear la OF, sus controles copian el orden de la receta.
+
+### En el modo de trabajo
+
+El operario ve los controles de la operación en ese orden. Cada control muestra su exigencia con un icono, resaltado mientras bloquea la operación, y su estado:
+
+- Un control con un único registro se rellena directamente en su tarjeta, sin referencia. Los datos se guardan con **Guardar**. Si solo pide un dato de sí/no, se guarda al elegir la respuesta. Las fotos y archivos se guardan al subirlos. Una confirmación se registra con **Confirmar**. Su estado es **Hecho**, **A medias** o **Pendiente**.
+- Un control con varios registros muestra la lista de registros y el botón **Añadir registro**. Su estado indica los registros completos sobre los exigidos, como `2/5`, con `+` si se pueden añadir más.
 
 ## Inspecciones de recepción
 

@@ -76,22 +76,22 @@ Use them to capture evidence, quality parameters, or validations that must be li
 
 ### 1. Add an inspection
 
-**Name:** enter a short descriptive title, such as `Temperature measurement`, `Visual seal inspection`, or `Safety signature`.
+Click **Add inspection** and fill in these fields:
+
+**Name:** enter a short descriptive title, such as `Temperature measurement` or `Visual seal inspection`.
 
 **Instructions:** explain how to perform the inspection. You can add text, use formulas, or attach drawings, reference photos, or PDF manuals.
 
-**What type of inspection is required?**
+**Values to record:** click **Add value** for each value the operator must record and choose its type: **Number**, **Yes/no**, **Text**, **Photo**, or **File**. Without values, the inspection is a confirmation that it was done.
 
-Choose the result format: **Simple** to confirm it was performed, **Yes/no**, **Number**, **Text**, **Photo**, or **File**.
+**Number of records:** enter how many times the inspection must be done. It accepts formulas, such as `ceil(Production order quantity / 500)`. Select **Allow adding more** to make it a minimum so the operator can add more records.
 
-**When must the inspection be performed?**
+**When is it required?:** choose **Before starting**, **Before finishing**, or **Optional — does not block the operation**.
 
-Choose when it should be performed:
+**Duration per record (minutes):** enter the estimated time of each record. It also accepts formulas.
 
-**At the start:** machine preparation, initial loading, or preliminary check.
+See [Inspections and checks](/en/concepts/manufacturing/inspections-and-checks) for how records and requirements affect the operation.
 
-**Every unit:** repetitive actions depending on the produced quantity.
+### 2. Order the inspections
 
-**At the end:** cleaning, document closing, or final check.
-
-**Duration (minutes):** enter the estimated time to complete the inspection.
+Use the arrows in the inspections table to move each inspection up or down. Inspections have their own order, separate from the order of the steps. Production orders created from the recipe copy that order, and **work mode** shows the inspections in it.
