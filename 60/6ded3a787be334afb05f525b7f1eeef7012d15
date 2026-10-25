@@ -1,0 +1,27 @@
+en/concepts/manufacturing/checks-consumption-and-pauses.mdx
+  s_7b93f81fed3089::t_6760966d23e1a6 25
+es/conceptos/fabricacion/inspecciones-y-controles.mdx
+  s_7b93f81fed3089::t_0443fb1bd75bf9 51
+en/concepts/manufacturing/inspections-and-checks.mdx
+  s_7b93f81fed3089::t_bb13e99e1fa67b 51
+es/conceptos/fabricacion/controles-consumos-y-pausas.mdx
+  s_7b93f81fed3089::t_6760966d23e1a6 25
+sources/translations/en.json
+  s_7b93f81fed3089::t_53af1bd0dbf84c 569,589
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "606ded3a787be334afb05f525b7f1eeef7012d15",
+  "prompts": {},
+  "sessions": {
+    "s_7b93f81fed3089": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17303-660e-7473-8ebb-95096695c009",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
