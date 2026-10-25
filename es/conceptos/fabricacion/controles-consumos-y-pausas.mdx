@@ -11,17 +11,20 @@ Consulta [Inspecciones y controles](/es/conceptos/fabricacion/inspecciones-y-con
 
 ## Controles
 
-Un **control** es una comprobación obligatoria asociada a una operación. Debes completarlo en el momento configurado.
+Un **control** es una comprobación asociada a una operación. Cada vez que se realiza queda un **registro** con los datos que pide el control, por ejemplo pH, acidez y grados de sal de un barril.
 
-| Tipo | Uso |
+| Dato | Uso |
 | --- | --- |
-| Confirmación | Verificar que una acción se hizo. |
-| Sí/no | Registrar aceptación o rechazo simple. |
 | Número | Medir un valor. |
+| Sí/no | Registrar aceptación o rechazo simple. |
 | Texto | Anotar una observación. |
-| Imagen o archivo | Adjuntar evidencia. |
+| Foto o archivo | Adjuntar evidencia. |
 
-Los controles de inicio bloquean el arranque mientras estén pendientes. Una operación no puede finalizar si queda algún control pendiente.
+Un control sin datos es una confirmación de que la acción se hizo.
+
+Según su configuración, un control se exige antes de iniciar, antes de finalizar o es opcional. Los controles exigidos antes de iniciar bloquean el arranque mientras falten registros. Una operación no puede finalizar si a algún control exigido le faltan registros o tiene registros a medias. Registrar el avance no depende de los controles.
+
+Consulta [Inspecciones y controles](/es/conceptos/fabricacion/inspecciones-y-controles#controles-de-fabricacion) para ver cuántos registros pide un control y cómo se guardan a medias.
 
 ## Consumos
 
