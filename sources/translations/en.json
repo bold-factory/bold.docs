@@ -221,7 +221,7 @@
     {
       "source": "es/ayuda/panel-de-control/vincular-whatsapp.mdx",
       "target": "en/guides/control-panel/link-whatsapp-to-your-account.mdx",
-      "sourceHash": "98a7da4b6726ce864c0baddac0158424e1c1233228404561107108c196425038"
+      "sourceHash": "b7af84401f66549eab039eef58d2b0e6613caa1011f5de740c3f44271f86210e"
     },
     {
       "source": "es/ayuda/personal/configurar-horarios.mdx",
@@ -331,7 +331,7 @@
     {
       "source": "es/ayuda/produccion/especificar-materiales-pasos-y-controles.mdx",
       "target": "en/guides/manufacturing/specify-materials-steps-and-inspections.mdx",
-      "sourceHash": "4a0f6d6ed9b4a83bcb886a5ede6a2a3caa362a2220344496e419c4f078c78c2e"
+      "sourceHash": "0d29f7bec40c6131e1a19650e2c30f84d2e059aae0948eac181ccf3fee727cfb"
     },
     {
       "source": "es/ayuda/produccion/generar-peticiones-manualmente.mdx",
@@ -586,7 +586,7 @@
     {
       "source": "es/conceptos/fabricacion/inspecciones-y-controles.mdx",
       "target": "en/concepts/manufacturing/inspections-and-checks.mdx",
-      "sourceHash": "9e7251e8c72f7314090a7d723327fb48f0f9f2516b3015648b0a29bb26cae9d4"
+      "sourceHash": "797a7c31b331dc19a4298a689e32797fc9a04cd0b40fc994cb297da1bf53539c"
     },
     {
       "source": "es/conceptos/fabricacion/motivos-de-pausa-e-interrupciones.mdx",
