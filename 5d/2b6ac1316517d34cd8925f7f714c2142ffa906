@@ -1,0 +1,33 @@
+es/ayuda/produccion/especificar-materiales-pasos-y-controles.mdx
+  s_568ce2e9684deb::t_52b69d1a1903f4 79-80
+en/guides/manufacturing/specify-materials-steps-and-inspections.mdx
+  s_568ce2e9684deb::t_44670a4f0219e6 79-80
+en/concepts/manufacturing/inspections-and-checks.mdx
+  s_568ce2e9684deb::t_994039b46291c7 38,40-63,65-69,71
+  s_568ce2e9684deb::t_7f2e4748995dbd 16
+en/concepts/manufacturing/checks-consumption-and-pauses.mdx
+  s_568ce2e9684deb::t_cf22f91b803cda 14,16,19,21-25,27
+es/conceptos/fabricacion/inspecciones-y-controles.mdx
+  s_568ce2e9684deb::t_b75141f385132b 16
+  s_568ce2e9684deb::t_750a956d29cce4 38,40-63,65-69,71
+es/conceptos/fabricacion/controles-consumos-y-pausas.mdx
+  s_568ce2e9684deb::t_83c3eb6330a231 14,16,19,21-25,27
+sources/translations/en.json
+  s_568ce2e9684deb::t_9321a66c14a8a3 334,569,589
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5d2b6ac1316517d34cd8925f7f714c2142ffa906",
+  "prompts": {},
+  "sessions": {
+    "s_568ce2e9684deb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bdb5ee62-2662-4ef9-8296-6937217bdff1",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
