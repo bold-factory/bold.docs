@@ -1,0 +1,28 @@
+sources/translations/en.json
+  s_e8c7e88012a530::t_8aaf50bc2fa69b 224
+  s_45ac069563f88b::t_4305a705f4923b 334,589
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4edf7e4a44a0ac8de6b9ce12c7c5da11f00fe43f",
+  "prompts": {},
+  "sessions": {
+    "s_45ac069563f88b": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a126c6-d484-7dd3-94c5-732bd832f467",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_e8c7e88012a530": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8196aac4-7f94-47d2-aa25-a1016791df6b",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
