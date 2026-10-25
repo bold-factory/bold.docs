@@ -566,7 +566,7 @@
     {
       "source": "es/conceptos/fabricacion/controles-consumos-y-pausas.mdx",
       "target": "en/concepts/manufacturing/checks-consumption-and-pauses.mdx",
-      "sourceHash": "20bbdc115414d9b8219ac0d10ec44ef41ffbda2274075b7072dfd162f3e238b6"
+      "sourceHash": "5aeeb2678c2ab7a6718a44d7b9ac2dbc1d5a939d32b7f8fb577e13d33684052d"
     },
     {
       "source": "es/conceptos/fabricacion/cuadros-de-mando.mdx",
@@ -586,7 +586,7 @@
     {
       "source": "es/conceptos/fabricacion/inspecciones-y-controles.mdx",
       "target": "en/concepts/manufacturing/inspections-and-checks.mdx",
-      "sourceHash": "3e775db97b9903d4c1a30d91c81e144e3472ae96a118c8f53eac6a5cab18199d"
+      "sourceHash": "9e7251e8c72f7314090a7d723327fb48f0f9f2516b3015648b0a29bb26cae9d4"
     },
     {
       "source": "es/conceptos/fabricacion/motivos-de-pausa-e-interrupciones.mdx",

@@ -48,7 +48,7 @@ Cada vez que se realiza el control queda un **registro** con esos datos y, si qu
 | Número exacto | El control pide exactamente ese número de registros. No se pueden añadir más. |
 | Número mínimo, permitiendo añadir más | El control pide al menos ese número de registros y se pueden añadir más, por ejemplo uno por barril cuando no sabes cuántos habrá. |
 
-En la receta, el número de registros es una fórmula, como las cantidades y duraciones. Por ejemplo, `ceil([[OrderQuantity]] / 500)` pide una muestra por cada 500 unidades de la OF. La fórmula se calcula al crear la OF. Si da 0, la OF no incluye el control. En la OF puedes cambiar el número de registros de cada control.
+En la receta, el número de registros es una fórmula, como las cantidades y duraciones. Por ejemplo, `ceil(Cantidad de la OF / 500)` pide una muestra por cada 500 unidades de la OF. Inserta **Cantidad de la OF** desde **Dato de la orden** en el editor. La fórmula se calcula al crear la OF. Si da 0, la OF no incluye el control. En la OF puedes cambiar el número de registros de cada control.
 
 Los registros no se crean de antemano: aparecen cuando alguien los añade.
 

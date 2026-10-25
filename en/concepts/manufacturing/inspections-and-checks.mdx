@@ -48,7 +48,7 @@ Each time the check is done, a **record** keeps those values and, optionally, a 
 | Exact number | The check asks for exactly that number of records. No more can be added. |
 | Minimum number, allowing more | The check asks for at least that number of records and more can be added, for example one per barrel when you do not know how many there will be. |
 
-In the recipe, the number of records is a formula, like quantities and durations. For example, `ceil([[OrderQuantity]] / 500)` asks for one sample every 500 units of the MO. The formula is calculated when the MO is created. If it is 0, the MO does not include the check. In the MO you can change the number of records of each check.
+In the recipe, the number of records is a formula, like quantities and durations. For example, `ceil(Production order quantity / 500)` asks for one sample every 500 units of the MO. Insert **Production order quantity** from **Order data** in the editor. The formula is calculated when the MO is created. If it is 0, the MO does not include the check. In the MO you can change the number of records of each check.
 
 Records are not created in advance: they appear when someone adds them.
 
