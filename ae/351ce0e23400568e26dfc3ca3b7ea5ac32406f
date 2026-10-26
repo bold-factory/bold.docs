@@ -1,0 +1,25 @@
+en/concepts/manufacturing/inspections-and-checks.mdx
+  s_966cf56cfe07f5::t_292e1ec22ceab1 40
+en/guides/manufacturing/specify-materials-steps-and-inspections.mdx
+  s_966cf56cfe07f5::t_d8cf41544a135e 85
+es/ayuda/produccion/especificar-materiales-pasos-y-controles.mdx
+  s_966cf56cfe07f5::t_5de3c8a21a1e45 85
+es/conceptos/fabricacion/inspecciones-y-controles.mdx
+  s_966cf56cfe07f5::t_9373641db2dcfb 40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ae351ce0e23400568e26dfc3ca3b7ea5ac32406f",
+  "prompts": {},
+  "sessions": {
+    "s_966cf56cfe07f5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a0460df1-a980-4dbc-b31a-5220f3bf7eb9",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
