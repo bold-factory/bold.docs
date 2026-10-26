@@ -1,0 +1,21 @@
+en/concepts/manufacturing/inspections-and-checks.mdx
+  s_966cf56cfe07f5::t_b888a120959eee 79,81-91
+es/conceptos/fabricacion/inspecciones-y-controles.mdx
+  s_966cf56cfe07f5::t_3b376f45a80df1 79,81-91
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f9e39a25d34758bba93e7982ecb120b6d5e42485",
+  "prompts": {},
+  "sessions": {
+    "s_966cf56cfe07f5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a0460df1-a980-4dbc-b31a-5220f3bf7eb9",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
