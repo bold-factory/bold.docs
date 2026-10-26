@@ -39,6 +39,11 @@ Group actions do not apply individual start and quantity restrictions, including
 
 You need at least two operations to create a group. All must be **Planned** or **Paused**, have a pending quantity, belong to the same station and not belong to another group.
 
+The group adjusts when one of its operations is no longer available:
+
+- If you cancel the manufacturing order of a grouped operation, the operation leaves the group and the group's total quantity decreases. The group dissolves when it has no operations left. If the group is **Planned** or **Paused**, it also dissolves when only one operation remains.
+- If you delete a grouped operation, Bold ejects it from the group first. You can only delete it while the group is **Planned**.
+
 ## Common statuses
 
 | Status | Meaning |
