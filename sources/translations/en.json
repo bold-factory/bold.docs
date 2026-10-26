@@ -331,7 +331,7 @@
     {
       "source": "es/ayuda/produccion/especificar-materiales-pasos-y-controles.mdx",
       "target": "en/guides/manufacturing/specify-materials-steps-and-inspections.mdx",
-      "sourceHash": "6de40ba72237b7671b6bacb1acc80e84a43008daba1a70ef27f3adda33c5eab4"
+      "sourceHash": "ef86bd6871aeed03a2cc289be58b97be8c591efe203fe6953ab799c0d1186f93"
     },
     {
       "source": "es/ayuda/produccion/generar-peticiones-manualmente.mdx",
@@ -561,7 +561,7 @@
     {
       "source": "es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones.mdx",
       "target": "en/concepts/manufacturing/assignments-and-operation-groups.mdx",
-      "sourceHash": "3a713443dea62e3b32d94535553f74bdfd5140aea5e1b36eed2fa0623ad5e8cd"
+      "sourceHash": "b8c958522c438cb9568b4814a475c7759fdb55d654712861439e32784189c931"
     },
     {
       "source": "es/conceptos/fabricacion/controles-consumos-y-pausas.mdx",
@@ -586,7 +586,7 @@
     {
       "source": "es/conceptos/fabricacion/inspecciones-y-controles.mdx",
       "target": "en/concepts/manufacturing/inspections-and-checks.mdx",
-      "sourceHash": "ff60f247f05d76d7a1d611dca42ca65c3ef703ef843035490177e2fa66b33dfa"
+      "sourceHash": "c59a7fb53014e0b7a3efa5d2a5c4e1b38b90316ba14ab24d0532540e0ee176b4"
     },
     {
       "source": "es/conceptos/fabricacion/motivos-de-pausa-e-interrupciones.mdx",
