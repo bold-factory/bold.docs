@@ -6,6 +6,52 @@ rss: true
 ---
 
 <Update
+  label="2026-10-19"
+  tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
+>
+  ## Boldy en WhatsApp
+
+  - Puedes conversar con Boldy desde WhatsApp, a través del número de Bold Factory. En **Panel de control > Mi cuenta**, pulsa **Vincular WhatsApp** en la sección **WhatsApp**, luego **Abrir WhatsApp** y envía sin modificar el mensaje que aparece escrito. Cuando Boldy confirma el vínculo, la sección muestra **Vinculado como** y tu número o nombre de perfil.
+  - Cada WhatsApp corresponde a un único usuario y solo puede estar vinculado en una empresa a la vez. Para usarlo en otra empresa, pulsa **Desvincular** en la empresa actual y vincúlalo en la nueva.
+  - Por defecto, un mensaje enviado en las dos horas siguientes al último continúa la tarea más reciente. Pasado ese tiempo, un mensaje nuevo inicia otra tarea. Para continuar una tarea concreta, responde citando un mensaje de Boldy de esa tarea.
+  - De momento, Boldy solo lee mensajes de texto en WhatsApp. Si envías imágenes, documentos o notas de voz, te indica que solo puede leer texto.
+  - Las tareas iniciadas desde WhatsApp aparecen en **Smart Factory > Tareas** con su canal. Puedes consultar su actividad y su resultado, pero las respuestas se envían desde WhatsApp. Si Boldy termina más de 24 horas después de tu último mensaje, consulta el resultado en **Tareas**.
+
+  ## Contexto de las conversaciones con Boldy
+
+  - Junto al cuadro de mensaje de una tarea, el indicador de **contexto** muestra qué parte de la memoria de Boldy ocupa la conversación. Pasa el cursor sobre él para ver los tokens usados, el máximo disponible, el porcentaje a partir del que Boldy resume la conversación y un reparto aproximado por categorías.
+  - Cuando la conversación se acerca al máximo, Boldy la resume automáticamente y continúa a partir del resumen. Así puedes seguir trabajando en tareas largas.
+  - Una línea **Historial resumido** marca ese punto en la tarea y en el panel de chat. Boldy conserva tus instrucciones y los mensajes más recientes, pero puede perder detalles de mensajes antiguos. Si un dato anterior es importante, vuelve a indicarlo.
+
+  ## Estado de las estaciones en tiempo real
+
+  - **Smart Factory > Cuadros de mando > Estado de las estaciones de trabajo** empieza con un resumen de las estaciones activas sobre el total, las operaciones en curso, los operarios fichados y las operaciones con alertas.
+  - Las estaciones se agrupan por área. Las que no tienen actividad aparecen atenuadas con **Sin actividad**, para que veas de un vistazo cuáles están paradas.
+  - Cada operación muestra su progreso con una barra y los empleados fichados con el tiempo transcurrido. Pasa el cursor sobre un empleado para ver su nombre y la fecha de inicio.
+  - La vista destaca los fichajes abiertos más de 12 horas, en rojo a partir de 24, las operaciones con la fecha objetivo vencida y las que tienen menos operarios fichados de los que requieren.
+  - La página se actualiza cada 30 segundos e indica cuándo se actualizó por última vez.
+
+  ## Mejoras
+
+  - Al crear o editar un motivo de pausa, eliges el **Tipo de pausa**: **Planificada** o **No planificada**. El formulario explica cómo afecta cada opción a la disponibilidad y al OEE de la estación.
+  - El cuadro de mando **Eficacia por empleado** pasa a llamarse **Productividad por empleado**.
+  - **Fabricación > Recursos > Diagrama** muestra cada área como una tarjeta con sus estaciones y sus subáreas anidadas. Todas las estaciones aparecen dentro de su área. Un solo clic abre el área o la estación, y las estaciones con capacidad infinita lo indican.
+  - En la gestión de la OF y de sus operaciones, todas las acciones están en una única barra inferior, como en el resto de la aplicación. Las acciones de la orden o de la operación siempre están visibles, junto a las de la pestaña abierta, como guardar o añadir un material, una asignación o una restricción.
+  - En las entradas y los coproductos de una OF ya no puedes cambiar el artículo. Para usar otro, elimina la entrada o el coproducto y añade uno nuevo. Así, la planificación de materiales, las reservas de stock y el coste previsto se asocian al artículo correcto. La API también rechaza este cambio.
+  - En el webhook `Items.Sku.Deleted`, el campo `mergedIntoSkuId` identifica el artículo que permanece cuando el borrado forma parte de una consolidación.
+
+  ## Correcciones
+
+  - Al consolidar artículos, las líneas de venta en **Borrador no confirmado** o **Pendiente** sin entregas pasan al artículo que permanece y conservan su estado, en lugar de cancelarse. Las peticiones de fabricación sin cantidad asignada también se trasladan siempre al artículo que permanece.
+  - Una espera temporizada que pausas, o cuya finalización deshaces, permanece pausada hasta que la reanudas manualmente. Antes podía reanudarse sola.
+  - Si una operación empezó antes de que se cumpliera su condición de inicio, la restricción aparece como incumplida, aunque la operación anterior ya haya terminado. El acceso a la operación anterior solo aparece mientras el modo de trabajo la muestra.
+  - Las fotos de los empleados, las imágenes de los artículos y las imágenes insertadas en textos con formato se muestran correctamente.
+  - **Actividad de los empleados** muestra la foto de cada empleado.
+  - En las tareas de Boldy, tus mensajes muestran su formato, como listas, negritas o enlaces.
+  - Boldy tiene en cuenta el idioma configurado para la empresa, en lugar de asumir el español.
+</Update>
+
+<Update
   label="2026-10-12"
   tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
 >
