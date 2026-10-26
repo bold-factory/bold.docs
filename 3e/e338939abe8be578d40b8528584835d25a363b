@@ -1,0 +1,21 @@
+en/concepts/manufacturing/assignments-and-operation-groups.mdx
+  s_7749f957b11a97::t_1f98a4a185673b 42-46
+es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones.mdx
+  s_7749f957b11a97::t_7a229d820387b6 42-46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3ee338939abe8be578d40b8528584835d25a363b",
+  "prompts": {},
+  "sessions": {
+    "s_7749f957b11a97": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d4ce58fb-b273-45c6-856e-914cf592de9c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
