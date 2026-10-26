@@ -6,6 +6,36 @@ rss: true
 ---
 
 <Update
+  label="2026-10-26"
+  tags={["New features", "Improvements", "Fixes"]}
+>
+  ## Checks with multiple values and records
+
+  - A manufacturing check can ask for several values, each with its own type: **Number**, **Yes/no**, **Text**, **Photo** or **File**. For example, a check per barrel can ask for pH, acidity and salt level. A check without values is a confirmation that it was done.
+  - Each time a check is done, a record keeps its values. In **Number of records**, set how many are required. In the recipe, you can use a formula, such as `ceil(Production order quantity / 500)`. With **Allow adding more**, that number is a minimum and the operator can add more records.
+  - **When is it required?** replaces the check's timing. **Before starting** blocks starting and finishing the operation, **Before finishing** blocks finishing, and **Optional** does not block it. Recording units does not depend on checks.
+  - You can save a partial record and complete it later, for example when you have a test result. If two people complete different values of the same record, both are kept.
+  - In work mode, checks appear in their order, with an icon showing when they are required. A check with a single record is filled in on its own card. A check with several records shows the list and **Add record**, and each record can have a reference, such as the barrel number.
+  - Reorder checks with the arrows in the recipe and in the MO. From MO management, you can also add, edit and remove records.
+  - Existing checks are converted automatically and keep the results already recorded. Checks at the start are required before starting, and checks at the end before finishing. In recipes, per-unit checks ask for as many records as they generated before.
+  - Importing recipe checks in **Control panel > Import data** includes the value to record, its type, the number of records and when it is required.
+  - In the API, the records of a check are read, created, updated and removed individually, and each photo or file is uploaded to its value. If your integration creates or completes checks, update it.
+
+  ## Improvements
+
+  - When you link WhatsApp in **Control panel > My account**, **Link from another device** shows a QR code. Scan it with the phone where you use WhatsApp to open it with the link message. You can also copy the number and the link code and send the code by hand before it expires.
+  - Recipe formulas support `min` and `max` with two values, for example to cap a result with `min(100, ceil(Production order quantity / 500))`.
+  - When you connect an assistant through MCP, Bold sends it usage instructions. They tell it to rely on Bold's results and documentation, not to invent data or rules, and not to assume a change succeeded unless Bold confirms it.
+
+  ## Fixes
+
+  - You can attach XML files to Boldy tasks, including when you send them through Telegram. Previously, Bold rejected the upload.
+  - If you open an item without a description and leave without making changes, Bold no longer asks you to discard unsaved changes.
+  - In an item's **Expected outgoing** and in the purchase and production assistants, the status filter offers planning statuses, such as **Not planned** or **Planned**.
+  - In a lot's **Movement history**, co-product production and its reversal link to the MO or operation that caused them.
+</Update>
+
+<Update
   label="2026-10-19"
   tags={["New features", "Improvements", "Fixes"]}
 >

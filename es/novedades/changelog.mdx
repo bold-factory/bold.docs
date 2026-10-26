@@ -6,6 +6,36 @@ rss: true
 ---
 
 <Update
+  label="2026-10-26"
+  tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
+>
+  ## Controles con varios datos y registros
+
+  - Un control de fabricación puede pedir varios datos, cada uno con su tipo: **Número**, **Sí/no**, **Texto**, **Foto** o **Archivo**. Por ejemplo, un control por barril puede pedir pH, acidez y grados de sal. Un control sin datos es una confirmación de que se ha hecho.
+  - Cada vez que se realiza un control queda un registro con sus datos. En **Número de registros** indicas cuántos se piden. En la receta puedes usar una fórmula, como `ceil(Cantidad de la OF / 500)`. Con **Permitir añadir más**, ese número es un mínimo y el operario puede añadir más registros.
+  - **¿Cuándo se exige?** sustituye al momento del control. **Antes de iniciar** bloquea el inicio y la finalización de la operación, **Antes de finalizar** bloquea la finalización y **Opcional** no la bloquea. Registrar unidades no depende de los controles.
+  - Puedes guardar un registro a medias y completarlo más tarde, por ejemplo cuando tengas el resultado de un análisis. Si dos personas completan datos distintos del mismo registro, se conservan los dos.
+  - En el modo de trabajo, los controles aparecen en su orden, con un icono que indica cuándo se exigen. Un control con un único registro se rellena en su propia tarjeta. Uno con varios registros muestra la lista y **Añadir registro**, y cada registro puede llevar una referencia, como el número de barril.
+  - Ordena los controles con las flechas de la receta y de la OF. Desde la gestión de la OF también puedes añadir, editar y eliminar registros.
+  - Los controles existentes se convierten automáticamente y conservan los resultados ya registrados. Los de inicio se exigen antes de iniciar y los de final, antes de finalizar. En las recetas, los controles por unidad piden tantos registros como generaban antes.
+  - La importación de controles de receta en **Panel de control > Importar datos** incluye el dato a registrar, su tipo, el número de registros y cuándo se exige.
+  - En la API, los registros de un control se consultan, crean, actualizan y eliminan por separado, y cada foto o archivo se sube a su dato. Si tu integración crea o completa controles, actualízala.
+
+  ## Mejoras
+
+  - Al vincular WhatsApp en **Panel de control > Mi cuenta**, **Vincular desde otro dispositivo** muestra un código QR. Escanéalo con el móvil donde usas WhatsApp para abrirlo con el mensaje de vinculación. También puedes copiar el número y el código de vinculación y enviar el código a mano antes de que caduque.
+  - Las fórmulas de receta admiten `min` y `max` con dos valores, por ejemplo para limitar un resultado con `min(100, ceil(Cantidad de la OF / 500))`.
+  - Al conectar un asistente por MCP, Bold le envía instrucciones de uso. Le indican que se base en los resultados y la documentación de Bold, que no invente datos ni reglas y que no dé por hecho un cambio que Bold no haya confirmado.
+
+  ## Correcciones
+
+  - Puedes adjuntar archivos XML en las tareas de Boldy, también cuando se los envías por Telegram. Antes, Bold rechazaba la subida.
+  - Si abres un artículo sin descripción y sales sin hacer cambios, Bold ya no te pide descartar cambios sin guardar.
+  - En **Salidas previstas** de un artículo y en los asistentes de compras y de fabricación, el filtro de estado ofrece los estados de planificación, como **No planificado** o **Planificado**.
+  - En el **Historial de movimientos** de un lote, la producción de coproductos y su anulación enlazan con la OF o la operación que las originó.
+</Update>
+
+<Update
   label="2026-10-19"
   tags={["Nuevas funcionalidades", "Mejoras", "Correcciones"]}
 >
