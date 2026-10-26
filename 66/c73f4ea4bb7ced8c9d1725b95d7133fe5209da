@@ -1,0 +1,29 @@
+en/concepts/manufacturing/inspections-and-checks.mdx
+  s_f4adec264f282c::t_4787f715fdbdab 88
+es/conceptos/fabricacion/inspecciones-y-controles.mdx
+  s_f4adec264f282c::t_4787f715fdbdab 88
+es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones.mdx
+  s_f4adec264f282c::t_4787f715fdbdab 45
+en/guides/manufacturing/specify-materials-steps-and-inspections.mdx
+  s_f4adec264f282c::t_4787f715fdbdab 85
+es/ayuda/produccion/especificar-materiales-pasos-y-controles.mdx
+  s_f4adec264f282c::t_4787f715fdbdab 85
+sources/translations/en.json
+  s_f4adec264f282c::t_18bdf883025bbc 334,564,589
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "66c73f4ea4bb7ced8c9d1725b95d7133fe5209da",
+  "prompts": {},
+  "sessions": {
+    "s_f4adec264f282c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17a59-d97a-75b1-b832-9e374bf44182",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
