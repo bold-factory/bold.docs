@@ -1,0 +1,25 @@
+en/guides/sales/change-an-order.mdx
+  s_4c1c00f23cbd60::t_dd0cc0e81af01d 35-59
+es/ayuda/ventas/cambiar-un-pedido.mdx
+  s_4c1c00f23cbd60::t_ef1a9ae9d00b35 35-59
+en/guides/sales/introduction.mdx
+  s_4c1c00f23cbd60::t_8788c445806fca 39-40
+es/ayuda/ventas/introduccion.mdx
+  s_4c1c00f23cbd60::t_122ae8ed0e78c0 39-40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0fc09ffd310e9aeefbc463922b3400e47d8e5821",
+  "prompts": {},
+  "sessions": {
+    "s_4c1c00f23cbd60": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d3895e5a-3d61-4f1e-b1bf-4d7bbbc32cba",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
