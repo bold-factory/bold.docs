@@ -1,0 +1,21 @@
+es/conceptos/panel-de-control/cuenta-y-empresa.mdx
+  s_c42ffd2225dfa6::t_21c880375a81cc 47
+en/concepts/control-panel/account-and-company.mdx
+  s_c42ffd2225dfa6::t_e5500ab1884ce4 47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6a18098d977fcee281e1025789cae6ea8e39d50e",
+  "prompts": {},
+  "sessions": {
+    "s_c42ffd2225dfa6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f684e319-294d-41b0-b0a6-c586d82bd73a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
