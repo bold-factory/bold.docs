@@ -1,0 +1,23 @@
+en/concepts/control-panel/users-permission-profiles-and-permissions.mdx
+  s_8eeb58b489f2a9::t_0b8ebf88d3c54f 31-36
+es/conceptos/panel-de-control/usuarios-roles-y-permisos.mdx
+  s_8eeb58b489f2a9::t_0b8ebf88d3c54f 31-36
+sources/translations/en.json
+  s_8eeb58b489f2a9::t_31f200289e0b3f 719
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ad9fd2cb1afc802f22a54d1aeb27287c12fca1fd",
+  "prompts": {},
+  "sessions": {
+    "s_8eeb58b489f2a9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d0d9d30d-2f0c-4ef2-8851-dc3c10fd7988",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
