@@ -1,0 +1,23 @@
+es/conceptos/fabricacion/peticiones-de-fabricacion.mdx
+  s_37c13e1da2c8e4::t_52d325862ba074 50-53
+en/concepts/manufacturing/manufacturing-requests.mdx
+  s_37c13e1da2c8e4::t_3c48ed9dd819ac 50-53
+sources/translations/en.json
+  s_37c13e1da2c8e4::t_3cb735048743d8 609
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b5ebbfd81da9c6295b55e311872296ad9f34920c",
+  "prompts": {},
+  "sessions": {
+    "s_37c13e1da2c8e4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5617a659-d655-4fac-a2a7-2f3fbc511297",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
