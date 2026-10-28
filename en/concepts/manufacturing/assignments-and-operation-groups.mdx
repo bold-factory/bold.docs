@@ -44,6 +44,12 @@ The group adjusts when one of its operations is no longer available:
 - If you cancel the manufacturing order of a grouped operation, the operation leaves the group and the group's total quantity decreases. The group dissolves when it has no operations left. If the group is **Planned** or **Paused**, it also dissolves when only one operation remains.
 - If you delete a grouped operation, Bold ejects it from the group first. You can only delete it while the group is **Planned**.
 
+Progress recorded in the group is not split among its operations until the group finishes. When an operation leaves earlier:
+
+- The group keeps the progress that fits within the quantity of the remaining operations. Any excess goes to the ejected operation.
+- If the group dissolves because only one operation remains, that operation receives the group's remaining progress.
+- You cannot dissolve a group with several operations and recorded progress, because Bold cannot tell which operation each unit belongs to. Finish the group with a breakdown, or eject operations until it dissolves.
+
 ## Common statuses
 
 | Status | Meaning |
