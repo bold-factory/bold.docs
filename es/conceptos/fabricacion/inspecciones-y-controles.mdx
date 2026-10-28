@@ -37,7 +37,7 @@ Configura el tipo según el dato que necesitas conservar.
 
 ## Controles de fabricación
 
-Un control de fabricación pide uno o varios datos, cada uno con su tipo. Por ejemplo, un control por barril puede pedir pH, acidez y grados de sal, y un control de envasado puede pedir presión de vacío, cierre y peso. Un control sin datos es una confirmación.
+Un control de fabricación pide uno o varios datos, cada uno con su tipo. Por ejemplo, un control por barril puede pedir pH, acidez y grados de sal, y un control de envasado puede pedir presión de vacío, cierre y peso. Un control sin datos es una confirmación. Si el control pide un solo dato y no le pones nombre, el dato se llama como el control y cambia con él cuando renombras el control.
 
 Cada vez que se realiza el control queda un **registro** con esos datos. Si el control pide varios registros, cada uno puede llevar una referencia libre para identificarlo, como el número de barril o de muestra.
 
@@ -76,10 +76,19 @@ Los controles de una operación tienen su propio orden, independiente del de los
 
 ### En el modo de trabajo
 
-El operario ve los controles de la operación en ese orden. Cada control muestra su exigencia con un icono, resaltado mientras bloquea la operación, y su estado:
+El operario ve los controles de la operación en ese orden. Un icono al principio de cada control indica su estado:
 
-- Un control con un único registro se rellena directamente en su tarjeta, sin referencia. Los datos se guardan con **Guardar**. Si solo pide un dato de sí/no, se guarda al elegir la respuesta. Las fotos y archivos se guardan al subirlos. Una confirmación se registra con **Confirmar**. Su estado es **Hecho**, **A medias** o **Pendiente**.
-- Un control con varios registros muestra la lista de registros y el botón **Añadir registro**. Su estado indica los registros completos sobre los exigidos, como `2/5`, con `+` si se pueden añadir más.
+| Icono | Estado |
+| --- | --- |
+| Check verde | Hecho. |
+| Círculo naranja con ▶ | Pendiente y exigido antes de iniciar. |
+| Círculo naranja con una bandera | Pendiente y exigido antes de finalizar. |
+| Círculo gris vacío | Pendiente y opcional. |
+
+Un control a medias conserva el icono de pendiente. El check verde aparece cuando completas los registros exigidos. Al pasar por encima, el icono indica también si está a medias y si bloquea la operación.
+
+- Un control con un único registro ocupa una sola línea: el nombre y, a continuación, sus datos, sin referencia. Si el dato se llama igual que el control, no se repite su nombre. Cuando los datos no caben en la línea, pasan a la siguiente. Al cambiar un dato aparece el botón **Guardar**, que en el móvil muestra solo su icono. Si solo pide un dato de sí/no, se guarda al elegir la respuesta. Las fotos y archivos se guardan al subirlos. Una confirmación se registra con **Confirmar**.
+- Un control con varios registros muestra junto al nombre los registros completos sobre los exigidos, como `2/5`, con `+` si se pueden añadir más, y el botón **Añadir registro**. Debajo aparece la lista de registros.
 
 ## Inspecciones de recepción
 

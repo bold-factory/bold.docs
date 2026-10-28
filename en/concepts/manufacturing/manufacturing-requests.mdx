@@ -47,6 +47,10 @@ If there is no customer, the requester is optional free text. Requests created f
 
 Each MO copies the customer and requester from its request when created. If you later change the request, existing MOs retain the original values.
 
+## Required date of a sales order line
+
+When the request comes from a make-to-order sales order line, its **Required date** follows the line's target date. The request is marked **Firm** when the line has a committed date, even if committing it does not change the target date. The request's MOs receive the same required date and **Firm** mark.
+
 ## Statuses
 
 | Status | Meaning |

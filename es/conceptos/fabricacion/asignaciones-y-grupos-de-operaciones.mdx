@@ -39,6 +39,11 @@ Las acciones del grupo no aplican las restricciones individuales de inicio y can
 
 Para crear un grupo necesitas al menos dos operaciones. Todas deben estar **Planificadas** o **Pausadas**, tener cantidad pendiente, pertenecer a la misma estación y no formar parte de otro grupo.
 
+El grupo se ajusta cuando una de sus operaciones deja de estar disponible:
+
+- Si cancelas la OF de una operación agrupada, la operación sale del grupo y la cantidad total del grupo se reduce. El grupo se disuelve cuando ya no le quedan operaciones. Si el grupo está **Planificado** o **Pausado**, también se disuelve cuando le queda una sola operación.
+- Si eliminas una operación agrupada, Bold la expulsa del grupo antes de eliminarla. Solo puedes eliminarla mientras el grupo está **Planificado**.
+
 ## Estados habituales
 
 | Estado | Significado |

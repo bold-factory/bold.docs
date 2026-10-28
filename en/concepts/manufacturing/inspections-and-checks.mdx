@@ -37,7 +37,7 @@ Configure the type according to the data you need to retain.
 
 ## Manufacturing checks
 
-A manufacturing check asks for one or more values, each with its own type. For example, a check per barrel can ask for pH, acidity and salt level, and a packaging check can ask for vacuum pressure, seal and weight. A check without values is a confirmation.
+A manufacturing check asks for one or more values, each with its own type. For example, a check per barrel can ask for pH, acidity and salt level, and a packaging check can ask for vacuum pressure, seal and weight. A check without values is a confirmation. If the check asks for a single value and you do not name it, the value takes the name of the check and changes with it when you rename the check.
 
 Each time the check is done, a **record** keeps those values. If the check asks for several records, each one can have a free reference to tell it apart, such as the barrel or sample number.
 
@@ -76,10 +76,19 @@ The checks of an operation have their own order, separate from the order of the 
 
 ### In work mode
 
-The operator sees the checks of the operation in that order. Each check shows its requirement as an icon, highlighted while it blocks the operation, and its status:
+The operator sees the checks of the operation in that order. An icon at the start of each check shows its status:
 
-- A check with a single record is filled in directly on its card, without a reference. Values are saved with **Save**. If it only asks for a yes/no value, it is saved when the answer is chosen. Photos and files are saved when uploaded. A confirmation is recorded with **Confirm**. Its status is **Done**, **Partial**, or **Pending**.
-- A check with several records shows the list of records and the **Add record** button. Its status shows the completed records out of the required ones, such as `2/5`, with `+` if more can be added.
+| Icon | Status |
+| --- | --- |
+| Green check | Done. |
+| Orange circle with ▶ | Pending and required before starting. |
+| Orange circle with a flag | Pending and required before finishing. |
+| Empty gray circle | Pending and optional. |
+
+A partial check keeps the pending icon. The green check appears when you complete the required records. Hovering over the icon also shows whether it is partial and whether it blocks the operation.
+
+- A check with a single record takes one line: the name followed by its values, without a reference. If the value has the same name as the check, its name is not repeated. When the values do not fit on the line, they continue on the next one. When a value changes, the **Save** button appears; on phones it only shows its icon. If it only asks for a yes/no value, it is saved when the answer is chosen. Photos and files are saved when uploaded. A confirmation is recorded with **Confirm**.
+- A check with several records shows, next to its name, the completed records out of the required ones, such as `2/5`, with `+` if more can be added, and the **Add record** button. The list of records appears below.
 
 ## Receipt inspections
 
