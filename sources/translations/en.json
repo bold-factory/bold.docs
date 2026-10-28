@@ -201,7 +201,7 @@
     {
       "source": "es/ayuda/panel-de-control/gestionar-archivos.mdx",
       "target": "en/guides/control-panel/manage-files.mdx",
-      "sourceHash": "2b639d6e1b1bba9da9f40fee5f92fd73e7493c0a1dfc68b60b9167c65c9f8112"
+      "sourceHash": "bf1d15104493c34b44976342ba226b0c1e863e41b4c05270099856a029c9fd73"
     },
     {
       "source": "es/ayuda/panel-de-control/importar-datos.mdx",
