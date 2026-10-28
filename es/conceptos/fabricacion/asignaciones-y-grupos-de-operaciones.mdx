@@ -47,6 +47,7 @@ El grupo se ajusta cuando una de sus operaciones deja de estar disponible:
 El progreso registrado en el grupo no se reparte entre sus operaciones hasta que el grupo finaliza. Cuando una operación sale antes:
 
 - El grupo conserva el progreso que cabe en la cantidad de las operaciones que quedan. Si lo supera, el exceso pasa a la operación expulsada.
+- Si seleccionas operaciones agrupadas en las operaciones de una OF y usas **Finalizar** o **Registrar y finalizar**, cada una sale del grupo y se lleva el progreso del grupo que le corresponda, hasta su cantidad. Después se finaliza como el resto. Funciona también con el grupo **En curso**.
 - Si el grupo se disuelve porque solo le queda una operación, esa operación recibe el progreso restante del grupo.
 - No puedes disolver un grupo con varias operaciones y progreso registrado, porque Bold no sabe a qué operación corresponde cada unidad. Finaliza el grupo indicando el reparto o expulsa operaciones hasta que se disuelva.
 

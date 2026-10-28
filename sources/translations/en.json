@@ -561,7 +561,7 @@
     {
       "source": "es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones.mdx",
       "target": "en/concepts/manufacturing/assignments-and-operation-groups.mdx",
-      "sourceHash": "2695a417b49630a75838268f20c1fddd99eaf00930436592365cf9aba80de66f"
+      "sourceHash": "3e9bcfb410bc7145e43a9b18a4942017f46d417fadcaad762cf40edcd58e7bc3"
     },
     {
       "source": "es/conceptos/fabricacion/controles-consumos-y-pausas.mdx",

@@ -47,6 +47,7 @@ The group adjusts when one of its operations is no longer available:
 Progress recorded in the group is not split among its operations until the group finishes. When an operation leaves earlier:
 
 - The group keeps the progress that fits within the quantity of the remaining operations. Any excess goes to the ejected operation.
+- If you select grouped operations in a manufacturing order's operations and use **Finish** or **Record and finish**, each one leaves the group and takes the group progress that corresponds to it, up to its quantity. It is then finished like the rest. This also works while the group is **In progress**.
 - If the group dissolves because only one operation remains, that operation receives the group's remaining progress.
 - You cannot dissolve a group with several operations and recorded progress, because Bold cannot tell which operation each unit belongs to. Finish the group with a breakdown, or eject operations until it dissolves.
 
