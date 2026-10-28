@@ -1,0 +1,23 @@
+sources/translations/en.json
+  s_cc84412336823e::t_ce404d02943b8d 429,444,694
+en/guides/sales/change-an-order.mdx
+  s_cc84412336823e::t_ce404d02943b8d 52
+es/ayuda/ventas/cambiar-un-pedido.mdx
+  s_cc84412336823e::t_ce404d02943b8d 52
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0b6143fec09df1c29eef4b4a3bbbb188495775e5",
+  "prompts": {},
+  "sessions": {
+    "s_cc84412336823e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8371d5b-7495-4ed5-8c8f-c8a18e3451f9",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
