@@ -426,7 +426,7 @@
     {
       "source": "es/ayuda/ventas/cambiar-un-pedido.mdx",
       "target": "en/guides/sales/change-an-order.mdx",
-      "sourceHash": "ac54866a611c9119a38a0f9b6bda8d187d193ca00de88cdceb441e2f3aa10e0f"
+      "sourceHash": "92483a319b4c3ea8d5c94ce226d7fb33b1213407a66fd07744a3e3f84f53734b"
     },
     {
       "source": "es/ayuda/ventas/cancelar-pedido.mdx",
@@ -441,7 +441,7 @@
     {
       "source": "es/ayuda/ventas/introduccion.mdx",
       "target": "en/guides/sales/introduction.mdx",
-      "sourceHash": "ce06f8c28abe089323f12e27b6fc3537a1eee465ee0c391070cd145dab61cfc7"
+      "sourceHash": "9e657e0e3521d27bd572674e381397838412591585d68bd23ee53c353bf32bb9"
     },
     {
       "source": "es/ayuda/ventas/preparar-y-registrar-envio.mdx",
@@ -691,7 +691,7 @@
     {
       "source": "es/conceptos/panel-de-control/cuenta-y-empresa.mdx",
       "target": "en/concepts/control-panel/account-and-company.mdx",
-      "sourceHash": "379a582c40e6e62ce3e8761560ea15f6f191014fda0906e199c993e7defb8433"
+      "sourceHash": "d4ee8be455fc02bdb0a8224363c5bf4ec5a945753b835f31a5f10a3761594032"
     },
     {
       "source": "es/conceptos/panel-de-control/datos-y-archivos.mdx",
