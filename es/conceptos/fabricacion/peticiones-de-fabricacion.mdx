@@ -47,6 +47,10 @@ Si no hay cliente, el solicitante es un texto libre opcional. Las peticiones cre
 
 Cada OF copia el cliente y el solicitante de su petición al crearse. Si después cambias la petición, las OF existentes conservan los valores originales.
 
+## Fecha requerida de una línea de pedido de venta
+
+Cuando la petición nace de una línea de pedido de venta contra pedido, su **Fecha requerida** sigue a la fecha objetivo de la línea. La petición se marca como **Firme** si la línea tiene fecha comprometida, aunque comprometerla no cambie la fecha objetivo. Las OF de la petición reciben la misma fecha requerida y la misma marca **Firme**.
+
 ## Estados
 
 | Estado | Significado |

@@ -606,7 +606,7 @@
     {
       "source": "es/conceptos/fabricacion/peticiones-de-fabricacion.mdx",
       "target": "en/concepts/manufacturing/manufacturing-requests.mdx",
-      "sourceHash": "e02adcd8eb173aa610309985b8c3b86e098076210527958f1257f27eb2788174"
+      "sourceHash": "6a3e1ca43aa7bf6aa92f2cf5d8aae5c6cdfcae86b6996ddef26f5b98dcb64199"
     },
     {
       "source": "es/conceptos/fabricacion/planes-de-produccion.mdx",
