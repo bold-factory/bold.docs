@@ -6,6 +6,52 @@ rss: true
 ---
 
 <Update
+  label="2026-10-19"
+  tags={["New features", "Improvements", "Fixes"]}
+>
+  ## Boldy on WhatsApp
+
+  - You can chat with Boldy from WhatsApp, through the Bold Factory number. In **Control panel > My account**, click **Link WhatsApp** in the **WhatsApp** section, then **Open WhatsApp**, and send the prewritten message without changing it. When Boldy confirms the link, the section shows **Linked as** followed by your number or profile name.
+  - Each WhatsApp account belongs to a single user and can only be linked in one company at a time. To use it in another company, click **Unlink** in the current company and link it in the new one.
+  - By default, a message sent within two hours of the previous one continues the most recent task. After that, a new message starts another task. To continue a specific task, reply by quoting a Boldy message from that task.
+  - For now, Boldy only reads text messages on WhatsApp. If you send images, documents or voice notes, it tells you that it can only read text.
+  - Tasks started from WhatsApp appear in **Smart Factory > Tasks** with their channel. You can view their activity and result, but replies are sent from WhatsApp. If Boldy finishes more than 24 hours after your last message, check the result in **Tasks**.
+
+  ## Boldy conversation context
+
+  - Next to a task's message box, the **context** indicator shows how much of Boldy's memory the conversation takes up. Hover over it to see the tokens used, the available maximum, the percentage at which Boldy summarizes the conversation, and an approximate split by category.
+  - When the conversation approaches the maximum, Boldy summarizes it automatically and continues from the summary. This lets you keep working on long tasks.
+  - A **History summarized** line marks that point in the task and in the chat panel. Boldy keeps your instructions and the most recent messages, but it can lose details from older messages. If earlier information matters, mention it again.
+
+  ## Real-time workstation status
+
+  - **Smart Factory > Dashboards > Workstation status** starts with a summary of active workstations out of the total, operations in progress, employees clocked in, and operations with alerts.
+  - Workstations are grouped by area. Workstations without activity are dimmed and labeled **No activity**, so you can see at a glance which ones are idle.
+  - Each operation shows its progress with a bar and the clocked-in employees with the time elapsed. Hover over an employee to see their name and start date.
+  - The view highlights clock-ins open for more than 12 hours, in red after 24, operations whose target date has passed, and operations with fewer employees clocked in than they require.
+  - The page refreshes every 30 seconds and shows when it was last updated.
+
+  ## Improvements
+
+  - When you create or edit a pause reason, choose the **Interruption type**: **Planned** or **Unplanned**. The form explains how each option affects the workstation's availability and OEE.
+  - The **Effectiveness by employee** dashboard is now called **Productivity by employee**.
+  - **Production > Resources > Diagram** shows each area as a card containing its workstations and nested sub-areas. Every workstation appears inside its area. A single click opens the area or workstation, and workstations with infinite capacity are labeled as such.
+  - In MO and operation management, all actions are in a single bottom action bar, as in the rest of the application. Order or operation actions are always visible, alongside those of the open tab, such as saving or adding a material, an assignment or a restriction.
+  - You can no longer change the item of an MO input or co-product. To use another item, delete the input or co-product and add a new one. This way, material planning, stock reservations and planned cost are linked to the correct item. The API also rejects this change.
+  - In the `Items.Sku.Deleted` webhook, the `mergedIntoSkuId` field identifies the surviving item when the deletion is part of a consolidation.
+
+  ## Fixes
+
+  - When items are consolidated, sales order lines in **Unconfirmed draft** or **Pending** status with no deliveries move to the surviving item and keep their status instead of being cancelled. Manufacturing requests with no assigned quantity also always move to the surviving item.
+  - A timed wait that you pause, or whose completion you undo, stays paused until you resume it manually. Previously, it could resume on its own.
+  - If an operation started before its start condition was met, the restriction shows as unmet even after the preceding operation finishes. The shortcut to the preceding operation only appears while work mode lists it.
+  - Employee pictures, item images and images embedded in formatted text display correctly.
+  - **Employee activity** shows each employee's picture.
+  - In Boldy tasks, your messages display their formatting, such as lists, bold text or links.
+  - Boldy takes the company's configured language into account instead of assuming Spanish.
+</Update>
+
+<Update
   label="2026-10-12"
   tags={["New features", "Improvements", "Fixes"]}
 >
