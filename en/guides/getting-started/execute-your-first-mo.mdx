@@ -1,87 +1,43 @@
 ---
 es_link: "/es/ayuda/primeros-pasos/ejecutar-primera-of"
 title: "Execute your first MO"
-description: "Record the first execution of a manufacturing order from work mode."
+description: "Record the work of your first manufacturing order from work mode."
 ---
 
-Execute the MO to check the shop floor workflow. During the operation, Bold records who works, where they work, the quantity they complete, the materials they consume, and the stock they produce.
+**Work mode** is the screen the shop floor uses. From it, each person records what they do, at which workstation, and how many units they manufacture.
 
-Use a small quantity. The goal is to validate operational recording before extending the workflow to more items or teams.
-
-## Before you start
-
-Check that:
-
-- the MO exists and is neither cancelled nor blocked;
-- the operation has a process and a compatible resource;
-- the employee appears in **work mode**;
-- the components exist if you will record consumption;
-- the consumption or production location is clear if you work with stock;
-- you can complete any required inspections.
-
-## Execute the operation
+## Steps
 
 <Steps>
   <Step title="Open work mode">
-    Access it from the tablet, terminal, or computer used on the shop floor.
+    Click **Work mode** in the header.
   </Step>
-  <Step title="Select the employee">
-    Identify who will record the activity. Time and actions will be associated with that person.
+  <Step title="Identify yourself">
+    Choose your employee. Bold links the work you record to that person.
   </Step>
   <Step title="Find the operation">
-    Locate the operation by MO, item, workstation, process, or work list.
-  </Step>
-  <Step title="Review the details">
-    Check the item, planned quantity, workstation, components, and steps before starting.
+    Go to **Production** and find your MO's operation by process or by workstation.
   </Step>
   <Step title="Start the operation">
-    Start work when the operation is ready and has no pending blocks.
+    Click **Start**. Bold starts tracking the working time.
   </Step>
-  <Step title="Record progress">
-    Enter the completed quantity, rejects, comments, or evidence if the workflow requires them.
+  <Step title="Record the units">
+    Enter the units manufactured with **+** and **-**, or click **All** to record the full quantity.
   </Step>
-  <Step title="Consume materials">
-    Record the components used, location, and lot where applicable. Use actual quantities when they differ from those planned.
-  </Step>
-  <Step title="Finish">
-    Close the operation when no work remains. If it was the only operation, check that the MO is finished.
+  <Step title="Complete the operation">
+    Click **Complete**.
   </Step>
 </Steps>
 
-## What is traced
-
-| Record | Value |
-| --- | --- |
-| Employee | Shows who executed the work. |
-| Resource | Indicates where the operation took place. |
-| Time | Supports productivity and cost tracking. |
-| Progress | Updates the completed quantity and MO status. |
-| Consumption | Reduces component stock if the workflow records materials. |
-| Production | Increases finished item stock where applicable. |
-
 <Check>
-  When you close the operation, check that the finished item appears as produced and the MO shows the expected status.
+  Go back to the **Control panel** and open the MO. It is finished, and the item's stock has increased by the units manufactured.
 </Check>
 
-## If something is blocked
+## If something doesn't work
 
-| Block | What to check |
+| Problem | What to check |
 | --- | --- |
-| The operation does not appear | MO status, assignment, workstation, date, or view filters. |
-| You cannot start | Initial inspections, restrictions, tool, resource, or permissions. |
-| You cannot consume materials | Stock, location, lot, or input configuration. |
-| You cannot finish | Final inspections, completed quantity, required comments, or permissions. |
+| The operation doesn't appear | The recipe version is active and the MO was created after you activated it. |
+| You can't start the operation | The workstation is assigned to the operation's process. |
 
-## Complete the cycle with a shipment
-
-Dispatch is optional in getting started. Do it if you want to check that produced stock can be shipped against the order.
-
-<Card title="Prepare and record a shipment" icon="truck" href="/en/guides/sales/prepare-and-record-a-shipment">
-  Prepare the goods and record the order dispatch when you want to validate logistics.
-</Card>
-
-## Detailed guide
-
-<Card title="Execute shop floor operations" icon="play" href="/en/guides/manufacturing/execute-shop-floor-operations">
-  See the complete workflow for starting, pausing, progress, consumption, inspections, and closing.
-</Card>
+To learn about pauses, defects, materials, and inspections, see [Execute shop floor operations](/en/guides/manufacturing/execute-shop-floor-operations).

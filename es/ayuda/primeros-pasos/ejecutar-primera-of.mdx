@@ -1,87 +1,43 @@
 ---
 en_link: "/en/guides/getting-started/execute-your-first-mo"
 title: "Ejecutar la primera OF"
-description: "Registra la primera ejecución de una orden de fabricación desde el modo de trabajo."
+description: "Registra el trabajo de tu primera orden de fabricación desde el modo de trabajo."
 ---
 
-Ejecuta la OF para comprobar el recorrido en planta. Durante la operación, Bold registra quién trabaja, dónde lo hace, qué cantidad completa, qué materiales consume y qué stock produce.
+El **modo de trabajo** es la pantalla que usa la planta. Desde ella, cada persona registra qué hace, en qué estación y cuántas unidades fabrica.
 
-Usa una cantidad pequeña. El objetivo es validar el registro operativo antes de abrir el flujo a más referencias o equipos.
-
-## Antes de empezar
-
-Revisa:
-
-- la OF existe y no está cancelada ni bloqueada;
-- la operación tiene proceso y recurso compatible;
-- el empleado aparece en el **modo de trabajo**;
-- los componentes existen si vas a registrar consumos;
-- la ubicación de consumo o producción está clara si trabajas con stock;
-- los controles obligatorios, si existen, se pueden completar.
-
-## Ejecutar la operación
+## Pasos
 
 <Steps>
   <Step title="Abre el modo de trabajo">
-    Entra desde la tableta, el terminal o el equipo que use la planta.
+    Pulsa **Modo trabajo** en la cabecera.
   </Step>
-  <Step title="Selecciona el empleado">
-    Identifica quién va a registrar la actividad. El tiempo y las acciones quedarán asociados a esa persona.
+  <Step title="Identifícate">
+    Elige tu empleado. Bold asocia a esa persona el trabajo que registres.
   </Step>
   <Step title="Busca la operación">
-    Localiza la operación por OF, artículo, estación, proceso o lista de trabajo.
-  </Step>
-  <Step title="Revisa la ficha">
-    Comprueba artículo, cantidad planificada, estación, componentes y pasos antes de iniciar.
+    Entra en **Fabricación** y localiza la operación de tu OF por proceso o por estación.
   </Step>
   <Step title="Inicia la operación">
-    Empieza el trabajo cuando la operación esté lista y no tenga bloqueos pendientes.
+    Pulsa **Iniciar**. Bold empieza a contar el tiempo de trabajo.
   </Step>
-  <Step title="Registra avance">
-    Indica cantidad completada, rechazos, comentarios o evidencias si el flujo lo pide.
+  <Step title="Registra las unidades">
+    Indica las unidades fabricadas con **+** y **-**, o pulsa **Todas** para registrar la cantidad completa.
   </Step>
-  <Step title="Consume materiales">
-    Registra los componentes usados, ubicación y lote si aplica. Usa cantidades reales cuando difieran de lo previsto.
-  </Step>
-  <Step title="Finaliza">
-    Cierra la operación cuando no quede trabajo pendiente. Si era la única operación, revisa que la OF quede finalizada.
+  <Step title="Completa la operación">
+    Pulsa **Completar**.
   </Step>
 </Steps>
 
-## Qué queda trazado
-
-| Registro | Valor |
-| --- | --- |
-| Empleado | Permite ver quién ejecutó el trabajo. |
-| Recurso | Indica dónde se hizo la operación. |
-| Tiempo | Alimenta seguimiento de productividad y costes. |
-| Avance | Actualiza cantidad completada y estado de la OF. |
-| Consumos | Reducen el stock de componentes si el flujo registra material. |
-| Producción | Aumenta el stock del artículo terminado cuando corresponde. |
-
 <Check>
-  Cuando cierres la operación, revisa que el artículo terminado aparezca como producido y que la OF muestre el estado esperado.
+  Vuelve al **Panel de control** y abre la OF. Está finalizada, y el stock del artículo ha aumentado en las unidades fabricadas.
 </Check>
 
-## Si algo se bloquea
+## Si algo no funciona
 
-| Bloqueo | Qué revisar |
+| Problema | Qué revisar |
 | --- | --- |
-| No aparece la operación | Estado de la OF, asignación, estación, fecha o filtros de la vista. |
-| No puedes iniciar | Controles iniciales, restricciones, herramienta, recurso o permisos. |
-| No puedes consumir | Stock, ubicación, lote o configuración de entradas. |
-| No puedes finalizar | Controles finales, cantidad completada, comentarios obligatorios o permisos. |
+| No aparece la operación | La versión de la receta está activa y la OF se creó después de activarla. |
+| No puedes iniciar la operación | La estación está asignada al proceso de la operación. |
 
-## Cerrar el ciclo con envío
-
-La expedición es opcional en primeros pasos. Hazla si quieres comprobar que el stock producido puede salir contra el pedido.
-
-<Card title="Preparar y registrar un envío" icon="truck" href="/es/ayuda/ventas/preparar-y-registrar-envio">
-  Prepara la salida y registra la expedición del pedido cuando quieras validar logística.
-</Card>
-
-## Guía de detalle
-
-<Card title="Ejecutar operaciones en planta" icon="play" href="/es/ayuda/produccion/ejecutar-operaciones-en-planta">
-  Consulta el flujo completo de inicio, pausas, avance, consumos, controles y cierre.
-</Card>
+Para conocer pausas, defectos, materiales y controles, consulta [Ejecutar operaciones en planta](/es/ayuda/produccion/ejecutar-operaciones-en-planta).

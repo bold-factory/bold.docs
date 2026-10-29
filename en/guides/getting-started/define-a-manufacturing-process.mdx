@@ -1,86 +1,37 @@
 ---
 es_link: "/es/ayuda/primeros-pasos/configurar-receta-minima"
 title: "Define a manufacturing process"
-description: "Define a simple process to manufacture the product in your first walkthrough."
+description: "Create a recipe with one operation to manufacture the item in your first MO."
 ---
 
-To define the process in Bold, create a simple **recipe** that generates an executable MO without modeling the entire manufacturing process yet. A recipe describes the operations, materials, and instructions needed to manufacture a product. See [Recipes and versions](/en/concepts/manufacturing/recipes-and-versions) for its complete structure.
+A **recipe** describes how an item is manufactured. Bold uses it as a template to create MOs. To start, one operation is enough. See [Recipes and versions](/en/concepts/manufacturing/recipes-and-versions) to learn its full structure.
 
-Start with one main operation, the essential consumption, and a clear output of the finished item.
-
-You can add more operations, inspections, restrictions, conditions, tools, and variants once you have validated this first walkthrough.
-
-## Before you start
-
-You need:
-
-- a manufacturable family;
-- a finished item associated with that family;
-- the components you want to consume;
-- a process and a resource compatible with the operation;
-- permission to create and activate recipes.
-
-## Define the process in Bold
+## Steps
 
 <Steps>
-  <Step title="Open recipes">
-    Go to **Production > Recipes** and create a recipe for the chosen family.
+  <Step title="Create the recipe">
+    Go to **Production > Recipes** and add a recipe. Use the item's name as its name.
   </Step>
-  <Step title="Create an editable version">
-    Use a new version to prepare the structure. Do not activate it until you have reviewed the operations, inputs, and outputs.
+  <Step title="Link the item">
+    In the recipe, click **Link item** and choose the item you created.
   </Step>
-  <Step title="Add a main operation">
-    Create an operation representing the main work, such as **Assembly**, **Mixing**, **Cutting**, or **Packaging**.
+  <Step title="Add a version">
+    Add a version. Bold uses the date as its name.
   </Step>
-  <Step title="Associate the process">
-    Select a process that can run on the resource you created. This lets the MO find compatible workstations.
-  </Step>
-  <Step title="Add inputs">
-    Specify the components and the quantity consumed per unit manufactured. Use quantities that are easy to check in the first walkthrough.
-  </Step>
-  <Step title="Define the output">
-    Check that the recipe produces the expected finished item. The MO uses this information to record production.
+  <Step title="Add an operation">
+    Click **+ Add operation**, choose the process you created, and enter a name for the operation.
   </Step>
   <Step title="Activate the version">
-    Activate the version when the structure is consistent. Only active versions are used to create new orders.
+    Click **Activate version**. New MOs use the active version.
   </Step>
 </Steps>
 
-## What to include and what to leave out
-
-| Element | First walkthrough | Later |
-| --- | --- | --- |
-| Operations | One main operation. | Several stages with dependencies. |
-| Inputs | Essential components. | Formulas, variants, and consumption at specific moments. |
-| Steps | Short instructions if they help the shop floor. | Detailed instructions for each stage. |
-| Inspections | Only to check an essential requirement. | Additional quality inspections. |
-| Restrictions | None if there is only one operation. | Start conditions and quantity limits with configurable enforcement. |
-| Tools | Only if required to execute the operation. | Fixtures, molds, and required characteristics. |
-
-<Warning>
-  If you add required inspections, make sure the team knows how to complete them in **work mode**. A required inspection can block an operation from starting or finishing.
-</Warning>
-
-## Quick check
-
-Before creating the order, check that:
-
-- the recipe version is active;
-- the operation has a process;
-- at least one resource is compatible with that process;
-- the inputs use existing items;
-- the output matches the finished item you will sell.
-
-## Detailed guide
-
-<Card title="Create a recipe" icon="book-open" href="/en/guides/manufacturing/design-the-manufacturing-steps">
-  See the complete guide to recipes, versions, operations, inputs, steps, inspections, and restrictions.
-</Card>
+<Tip>
+  Materials, inspections, and multiple operations can wait. Add them in a new version once you complete your first MO. See [Design the manufacturing steps](/en/guides/manufacturing/design-the-manufacturing-steps).
+</Tip>
 
 ## Next step
 
-Once the recipe is active, create a sales order for the manufactured item and turn it into an MO.
-
-<Card title="Create an order and launch an MO" icon="clipboard-list" href="/en/guides/getting-started/create-an-order-and-launch-an-mo">
-  Record demand and generate executable production work.
+<Card title="Launch your first MO" icon="rocket" href="/en/guides/getting-started/launch-your-first-mo">
+  Turn a need into work for the shop floor.
 </Card>

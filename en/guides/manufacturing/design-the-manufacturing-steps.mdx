@@ -14,11 +14,22 @@ A recipe does not execute work itself. It serves as a template for creating **ma
 
 ### 1. Add a recipe
 
-**Family:** select the family whose manufacturing you want to define.
+**Name:** enter a name that identifies the way of manufacturing, for example the item's or the family's name.
 
-**Name:** when you select a family, Bold automatically assigns the recipe name. Change it if you need to distinguish different ways of manufacturing its items.
+**External reference (optional):** enter the code that identifies the recipe in another system.
 
-### 2. Add a version
+### 2. Specify which items it applies to
+
+In the recipe's **Uses** tab, link the items or families manufactured with it:
+
+- **Link item:** the recipe applies to that specific item. Use it for items without a family or with their own way of manufacturing.
+- **Link family:** the recipe applies to the items in the family. If it should apply only to some variants, add an applicability condition on their properties.
+
+<Tip>
+  You can also link the recipe from the item's or the family's page with **Link existing recipe**.
+</Tip>
+
+### 3. Add a version
 
 **Name:** Bold automatically uses the creation date, but you can enter a different name.
 
@@ -26,7 +37,7 @@ A recipe does not execute work itself. It serves as a template for creating **ma
   **Examples:** `Initial version`, `July 16, 2026`, or `Updated version`.
 </Note>
 
-### 3. Create the operation diagram
+### 4. Create the operation diagram
 
 Although you can add and move blocks freely, organize the diagram in the same order you manufacture the item. This makes the workflow easier to review.
 

@@ -33,6 +33,14 @@
   },
   "redirects": [
     {
+      "source": "/es/ayuda/primeros-pasos/crear-pedido-y-lanzar-of",
+      "destination": "/es/ayuda/primeros-pasos/lanzar-primera-of"
+    },
+    {
+      "source": "/en/guides/getting-started/create-an-order-and-launch-an-mo",
+      "destination": "/en/guides/getting-started/launch-your-first-mo"
+    },
+    {
       "source": "/es/ayuda/primeros-pasos/flujo-basico-de-trabajo",
       "destination": "/es/ayuda/primeros-pasos/introduccion"
     },
@@ -382,7 +390,7 @@
     },
     {
       "source": "/en/ayuda/primeros-pasos/crear-pedido-y-lanzar-of",
-      "destination": "/en/guides/getting-started/create-an-order-and-launch-an-mo"
+      "destination": "/en/guides/getting-started/launch-your-first-mo"
     },
     {
       "source": "/en/ayuda/primeros-pasos/ejecutar-primera-of",
@@ -878,7 +886,7 @@
                 "pages": [
                   "es/ayuda/primeros-pasos/preparar-datos-base",
                   "es/ayuda/primeros-pasos/configurar-receta-minima",
-                  "es/ayuda/primeros-pasos/crear-pedido-y-lanzar-of",
+                  "es/ayuda/primeros-pasos/lanzar-primera-of",
                   "es/ayuda/primeros-pasos/ejecutar-primera-of"
                 ]
               },
@@ -1275,7 +1283,7 @@
                 "pages": [
                   "en/guides/getting-started/prepare-master-data",
                   "en/guides/getting-started/define-a-manufacturing-process",
-                  "en/guides/getting-started/create-an-order-and-launch-an-mo",
+                  "en/guides/getting-started/launch-your-first-mo",
                   "en/guides/getting-started/execute-your-first-mo"
                 ]
               },

@@ -1,83 +1,34 @@
 ---
-title: "Preparar datos base"
+title: "Preparar la estación y el artículo"
+sidebarTitle: "Preparar estación y artículo"
 en_link: "/en/guides/getting-started/prepare-master-data"
-description: "Crea el catálogo, los empleados y los recursos mínimos para lanzar una primera fabricación."
+description: "Crea la estación, el proceso y el artículo que necesitas para fabricar tu primera OF."
 ---
 
-Prepara solo los datos que necesitas para completar el primer recorrido. El objetivo es que un pedido pueda convertirse en una OF ejecutable, no cargar toda la operativa de la empresa.
+Para fabricar tu primera OF necesitas tres cosas: una estación donde se trabaja, un proceso que se hace en ella y el artículo que vas a fabricar.
 
-Usa un producto habitual y fácil de reconocer. Si empiezas con un caso raro, acabarás resolviendo excepciones antes de validar el flujo principal.
+Bold ya incluye el resto. Tu empresa tiene una ubicación de almacén con su nombre, y la persona que da de alta la cuenta tiene un empleado para registrar trabajo en planta.
 
-## Resultado esperado
-
-Al terminar, debes tener:
-
-- una familia para el producto;
-- un artículo terminado asociado a una familia;
-- los componentes que quieras consumir en la receta;
-- al menos un empleado operativo;
-- un proceso y un recurso de producción compatible;
-- una ubicación básica si vas a registrar consumos o producción con stock.
-
-## Crear la base mínima
+## Pasos
 
 <Steps>
-  <Step title="Crea la familia">
-    Accede a **Catálogo > Familias** y crea la familia correspondiente al artículo terminado. Usa un código estable y un nombre descriptivo.
+  <Step title="Crea un área y una estación">
+    Entra en **Fabricación > Recursos**. Añade un área, por ejemplo `Taller`, y una estación dentro de ella, por ejemplo `Mesa de montaje 1`.
   </Step>
-  <Step title="Crea el artículo terminado">
-    Entra en **Catálogo > Artículos** y crea la referencia fabricable. Selecciona la familia creada en el paso anterior. Configura el origen de aprovisionamiento como **Fabricación**.
+  <Step title="Crea el proceso">
+    Entra en **Fabricación > Procesos > Añadir nuevo tipo** y crea el proceso, por ejemplo `Montaje`. Después, abre el proceso, pulsa **+ Asignar estación** y elige la estación que has creado.
   </Step>
-  <Step title="Crea los componentes">
-    Añade los artículos que consumirá la receta. Para el primer recorrido, usa pocos componentes y cantidades simples.
-  </Step>
-  <Step title="Crea un empleado operativo">
-    Entra en **Personal > Empleados** y crea la persona que registrará trabajo en planta. Vincula un usuario si esa persona debe iniciar sesión.
-  </Step>
-  <Step title="Crea proceso y recurso">
-    Crea un proceso, como **Montaje**, **Corte** o **Envasado**. Después, crea una estación, máquina, línea o puesto que pueda ejecutarlo.
-  </Step>
-  <Step title="Crea una ubicación básica">
-    Añade una ubicación inicial si vas a consumir componentes o registrar stock producido. Puedes separar zonas de recepción, producción y expedición más adelante.
+  <Step title="Crea el artículo">
+    Entra en **Catálogo > Artículos > Crear nuevo**. Escribe el nombre, elige la unidad y selecciona **Fabricación** como origen de aprovisionamiento. Puedes dejar la familia vacía.
   </Step>
 </Steps>
 
-## Decisiones recomendadas
-
-| Decisión | Recomendación para el primer recorrido |
-| --- | --- |
-| Familia | Usa una familia simple con una variante. |
-| Artículo terminado | Márcalo como fabricable y usa una unidad conocida. |
-| Componentes | Crea solo los materiales que quieras ver consumidos. |
-| Lotes | Déjalos fuera salvo que la trazabilidad sea imprescindible. |
-| Recurso | Usa una estación o puesto con nombre reconocible para planta. |
-| Empleado | Crea una persona operativa real o de prueba que el equipo identifique. |
-
-<Tip>
-  Si no estás seguro de cómo modelar una variante, crea primero una referencia simple. Corrige el patrón antes de cargar muchas familias parecidas.
-</Tip>
-
-## Guías de detalle
-
-<Columns cols={2}>
-  <Card title="Agrupar artículos en familias" icon="package-open" href="/es/ayuda/articulos/crear-una-familia">
-    Crea la familia que agrupa artículos y variantes.
-  </Card>
-  <Card title="Crear un artículo" icon="barcode" href="/es/ayuda/articulos/crear-un-articulo">
-    Crea la referencia que se vende, fabrica, consume o almacena.
-  </Card>
-  <Card title="Registrar un empleado" icon="user-round" href="/es/ayuda/personal/empleados">
-    Prepara la persona que registrará actividad operativa.
-  </Card>
-  <Card title="Preparar puestos y máquinas" icon="settings-2" href="/es/ayuda/produccion/crear-recursos">
-    Define procesos, estaciones y compatibilidades para ejecutar operaciones.
-  </Card>
-</Columns>
+<Info>
+  Si tu empresa solo tiene una ubicación, Bold la asigna a cada estación nueva como ubicación de consumo y de generación. Así, lo que fabriques entra en stock sin configurar nada más.
+</Info>
 
 ## Siguiente paso
 
-Cuando la familia, los artículos, el empleado y el recurso existan, configura una receta mínima para el producto elegido.
-
 <Card title="Definir un proceso de fabricación" icon="book-open" href="/es/ayuda/primeros-pasos/configurar-receta-minima">
-  Define la estructura necesaria para crear una OF ejecutable.
+  Crea una receta con una operación para el artículo.
 </Card>

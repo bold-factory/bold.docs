@@ -176,7 +176,7 @@
     {
       "source": "es/ayuda/panel-de-control/configuracion-de-empresa.mdx",
       "target": "en/guides/control-panel/configure-the-company.mdx",
-      "sourceHash": "53a5bb96195e83ce4a9f513bdc767e57335659dc20a516e235bf9274601a293d"
+      "sourceHash": "c615ee21033b271a6eae01c6e2643b0b1cfd3264f40211133a94ab0dbae50e30"
     },
     {
       "source": "es/ayuda/panel-de-control/configurar-webhooks.mdx",
@@ -271,27 +271,27 @@
     {
       "source": "es/ayuda/primeros-pasos/configurar-receta-minima.mdx",
       "target": "en/guides/getting-started/define-a-manufacturing-process.mdx",
-      "sourceHash": "6cc612d98aea3beda361b010875bd21ed826e2bcff60eb8cc4fa9872a08f398f"
-    },
-    {
-      "source": "es/ayuda/primeros-pasos/crear-pedido-y-lanzar-of.mdx",
-      "target": "en/guides/getting-started/create-an-order-and-launch-an-mo.mdx",
-      "sourceHash": "2af62f6e449d04444d4963dfcc8e9f57de84b4128d76d31c05eeffbeda70352f"
+      "sourceHash": "b10f3890aeee411a06816cdbfa89b0bcb6040c0f334d1fa2a73d1b5c813db120"
     },
     {
       "source": "es/ayuda/primeros-pasos/ejecutar-primera-of.mdx",
       "target": "en/guides/getting-started/execute-your-first-mo.mdx",
-      "sourceHash": "9e26b3cfa71e9e494d5d6a97688016d48b670d17f418ce4d1b16cbbe4f7d4b76"
+      "sourceHash": "0155c35fc65fd4973b27014ba45229e1952b2d64b3e7dad8571057c7cdf8d388"
     },
     {
       "source": "es/ayuda/primeros-pasos/introduccion.mdx",
       "target": "en/guides/getting-started/introduction.mdx",
-      "sourceHash": "d2cefb50e8f705d847af778718f8d071f812f199bb9e50a2d7e954d3a7ebd5e2"
+      "sourceHash": "1b04bb321c51f5dfcd38ce812848d428dad12969dba13013d69c0eb3069f4862"
+    },
+    {
+      "source": "es/ayuda/primeros-pasos/lanzar-primera-of.mdx",
+      "target": "en/guides/getting-started/launch-your-first-mo.mdx",
+      "sourceHash": "1e4cd4f5084b8b7456bd4f1199024e2e1c95eb30cc755e01d4494d0275287ac9"
     },
     {
       "source": "es/ayuda/primeros-pasos/preparar-datos-base.mdx",
       "target": "en/guides/getting-started/prepare-master-data.mdx",
-      "sourceHash": "5780a42b8182cb123acc6586c7893d8c3071199ac791521ee1480a13d148885b"
+      "sourceHash": "4b0790636b909b83c897f2dc987c5d17a74f5abb039dd5067fc5e32804261659"
     },
     {
       "source": "es/ayuda/produccion/asignar-recursos.mdx",
@@ -316,7 +316,7 @@
     {
       "source": "es/ayuda/produccion/crear-una-receta.mdx",
       "target": "en/guides/manufacturing/design-the-manufacturing-steps.mdx",
-      "sourceHash": "fa7994ca39331613f3fd741303cac19d93ff8582121c18940ade04422bc4715c"
+      "sourceHash": "083430eadf65d83cef16916154529b6e35199516b10e94af945186441ff9915b"
     },
     {
       "source": "es/ayuda/produccion/definir-procesos.mdx",

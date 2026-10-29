@@ -14,11 +14,22 @@ Una receta no ejecuta trabajo por sí sola. Se usa como plantilla para crear **�
 
 ### 1. Añadir una receta
 
-**Familia:** selecciona la familia cuya fabricación quieres definir.
+**Nombre:** escribe un nombre que identifique la forma de fabricar, por ejemplo el del artículo o la familia.
 
-**Nombre:** al seleccionar una familia, Bold asigna automáticamente el nombre de la receta. Cámbialo si necesitas distinguir varias formas de fabricar sus artículos.
+**Referencia externa (opcional):** indica el código con el que identificas la receta en otro sistema.
 
-### 2. Añadir una versión
+### 2. Indicar a qué artículos se aplica
+
+En la pestaña **Usos** de la receta, vincula los artículos o las familias que se fabrican con ella:
+
+- **Vincular artículo:** la receta se aplica a ese artículo concreto. Úsalo para artículos sin familia o con una forma de fabricar propia.
+- **Vincular familia:** la receta se aplica a los artículos de la familia. Si solo debe aplicarse a algunas variantes, añade una condición de aplicabilidad sobre sus propiedades.
+
+<Tip>
+  También puedes vincular la receta desde la ficha del artículo o de la familia con **Vincular receta existente**.
+</Tip>
+
+### 3. Añadir una versión
 
 **Nombre:** Bold usa automáticamente la fecha de creación, pero puedes indicar un nombre diferente.
 
@@ -26,7 +37,7 @@ Una receta no ejecuta trabajo por sí sola. Se usa como plantilla para crear **�
   **Ejemplos:** `Versión inicial`, `16 de julio de 2026` o `Versión actualizada`.
 </Note>
 
-### 3. Crear el diagrama de operaciones
+### 4. Crear el diagrama de operaciones
 
 Aunque puedes añadir y mover los bloques libremente, organiza el diagrama en el mismo orden en que fabricas el artículo. Así podrás revisar el flujo con mayor facilidad.
 
