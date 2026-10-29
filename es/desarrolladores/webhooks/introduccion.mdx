@@ -87,7 +87,7 @@ Bold firma el cuerpo JSON serializado con HMAC-SHA256 y lo envía como hexadecim
 
 Cada organización tiene un único secreto de firma para todas sus suscripciones. Para consultarlo, entra en **Panel de control**, abre **Webhooks** y selecciona la pestaña **Firma**. Puedes mostrarlo o copiarlo, y guardarlo en el gestor de secretos del sistema que recibe los webhooks.
 
-También puedes obtenerlo por API con una cuenta con perfil de administrador:
+También puedes obtenerlo por API con una cuenta con el rol `App.Admin`:
 
 ```http
 GET /v1/admin/tenants/self/webhooksSecret

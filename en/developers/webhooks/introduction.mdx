@@ -52,7 +52,7 @@ POST /v1/notifications/webhook/subscriptions
 DELETE /v1/notifications/webhook/subscriptions/{id}
 ```
 
-These operations require the `App.Admin` permission.
+These operations require the `App.Admin` role.
 
 <Tip>
   You can also review subscriptions and deliveries in **Webhooks** in the Control panel.
@@ -87,7 +87,7 @@ Bold signs the serialized JSON body with HMAC-SHA256 and sends the signature as 
 
 Each organization has a single signing secret for all its subscriptions. To view it, go to **Control panel**, open **Webhooks** and select the **Signature** tab. You can show or copy it, then store it in the secrets manager of the system that receives the webhooks.
 
-You can also get it through the API with an account that has the administrator profile:
+You can also get it through the API with an account that has the `App.Admin` role:
 
 ```http
 GET /v1/admin/tenants/self/webhooksSecret
