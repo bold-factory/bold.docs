@@ -1,0 +1,53 @@
+en/guides/getting-started/execute-your-first-mo.mdx
+  s_98cd2a99ef517e::t_be8d072be39708 4,7,9,13,15-16,19,22,24-25,27-28,33,36,38,40-41,43
+docs.json
+  s_98cd2a99ef517e::t_680bf8de0f0275 35-42
+  s_98cd2a99ef517e::t_3db0093a3588a7 393,889,1286
+es/ayuda/produccion/crear-una-receta.mdx
+  s_98cd2a99ef517e::t_ba5180e56d84e7 40
+  s_98cd2a99ef517e::t_6373ce36918620 17,19,21-32
+en/guides/getting-started/prepare-master-data.mdx
+  s_98cd2a99ef517e::t_6f14aa0f68035d 2-3,5,8,10,12,15-16,18-19,21-22,26-28,33
+sources/translations/en.json
+  s_98cd2a99ef517e::t_3c0d6b4f08aa15 179,274,279,284-289,294
+  s_98cd2a99ef517e::t_3552953f632280 319
+en/guides/getting-started/launch-your-first-mo.mdx
+  s_98cd2a99ef517e::t_b9470a72d16e9e 2-27
+en/guides/getting-started/introduction.mdx
+  s_98cd2a99ef517e::t_e00455e4a76dc2 4,7,9,11,14-15,17-18,21,23-24,28-30,32,35-36,40,43-44,48,52,54
+es/ayuda/primeros-pasos/lanzar-primera-of.mdx
+  s_98cd2a99ef517e::t_23a4a3f5e8e6d1 1-28
+es/ayuda/primeros-pasos/introduccion.mdx
+  s_98cd2a99ef517e::t_aa420dce8229ae 4,7,9,11,14-15,17-18,21,23-24,28-30,32,35-36,40,43-44,48,52,54
+es/ayuda/primeros-pasos/ejecutar-primera-of.mdx
+  s_98cd2a99ef517e::t_645b07239c2891 4,7,9,13,15-16,19,22,24-25,27-28,33,36,38,40-41,43
+en/guides/control-panel/configure-the-company.mdx
+  s_98cd2a99ef517e::t_3db0093a3588a7 123
+en/guides/manufacturing/design-the-manufacturing-steps.mdx
+  s_98cd2a99ef517e::t_41cc96e14d6c82 40
+  s_98cd2a99ef517e::t_8f1c2fc2f7b058 17,19,21-32
+es/ayuda/primeros-pasos/configurar-receta-minima.mdx
+  s_98cd2a99ef517e::t_3986b773a6bb4c 4,7,9,12-13,15-16,18-19,21-22,25,29-31,35-36
+es/ayuda/primeros-pasos/preparar-datos-base.mdx
+  s_98cd2a99ef517e::t_9a63f60400094a 2-3,5,8,10,12,15-16,18-19,21-22,26-28,33
+es/ayuda/panel-de-control/configuracion-de-empresa.mdx
+  s_98cd2a99ef517e::t_3db0093a3588a7 123
+en/guides/getting-started/define-a-manufacturing-process.mdx
+  s_98cd2a99ef517e::t_d176deffaceadc 4,7,9,12-13,15-16,18-19,21-22,25,29-31,35-36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ffe6c2fb5244e2575f072d830845fca78789db08",
+  "prompts": {},
+  "sessions": {
+    "s_98cd2a99ef517e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bd5542b4-0a56-4f21-a2bf-a291764aea11",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
