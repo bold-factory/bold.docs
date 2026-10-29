@@ -1,0 +1,31 @@
+es/ayuda/ventas/cambiar-un-pedido.mdx
+  s_49be0a43c6a7dd::t_065c9ef5f4efb8 56
+en/concepts/manufacturing/assignments-and-operation-groups.mdx
+  s_49be0a43c6a7dd::t_065c9ef5f4efb8 47
+es/ayuda/ventas/introduccion.mdx
+  s_49be0a43c6a7dd::t_065c9ef5f4efb8 39
+en/guides/sales/change-an-order.mdx
+  s_49be0a43c6a7dd::t_065c9ef5f4efb8 56
+en/guides/sales/introduction.mdx
+  s_49be0a43c6a7dd::t_065c9ef5f4efb8 39
+es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones.mdx
+  s_49be0a43c6a7dd::t_065c9ef5f4efb8 47,49
+sources/translations/en.json
+  s_49be0a43c6a7dd::t_12ee06e2f24316 429,444,564
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7e73802007ce0c2e71725cc2527017ea1f27dc28",
+  "prompts": {},
+  "sessions": {
+    "s_49be0a43c6a7dd": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a184f7-f10a-7153-b7e3-1b50b73e0b75",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
