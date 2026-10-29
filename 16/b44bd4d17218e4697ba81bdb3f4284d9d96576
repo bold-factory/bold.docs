@@ -1,0 +1,35 @@
+en/guides/getting-started/introduction.mdx
+  s_84d485664bd117::t_fb6db06c8780a0 7,9,21,29
+en/guides/getting-started/prepare-master-data.mdx
+  s_84d485664bd117::t_fb6db06c8780a0 10,27
+en/guides/getting-started/define-a-manufacturing-process.mdx
+  s_84d485664bd117::t_fb6db06c8780a0 16
+es/ayuda/primeros-pasos/ejecutar-primera-of.mdx
+  s_84d485664bd117::t_fb6db06c8780a0 25,28,33,41
+es/ayuda/primeros-pasos/configurar-receta-minima.mdx
+  s_84d485664bd117::t_fb6db06c8780a0 16
+es/ayuda/primeros-pasos/introduccion.mdx
+  s_84d485664bd117::t_fb6db06c8780a0 7,9,21,29
+es/ayuda/primeros-pasos/preparar-datos-base.mdx
+  s_84d485664bd117::t_fb6db06c8780a0 10,27
+en/guides/getting-started/execute-your-first-mo.mdx
+  s_84d485664bd117::t_fb6db06c8780a0 25,28,33,41
+sources/translations/en.json
+  s_84d485664bd117::t_e8da1b8777ad83 274,279,284,294
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "16b44bd4d17218e4697ba81bdb3f4284d9d96576",
+  "prompts": {},
+  "sessions": {
+    "s_84d485664bd117": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1880e-3096-7c71-b2a3-92835e90a735",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
