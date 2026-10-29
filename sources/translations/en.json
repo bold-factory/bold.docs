@@ -686,7 +686,7 @@
     {
       "source": "es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos.mdx",
       "target": "en/concepts/control-panel/integration-keys-and-external-notifications.mdx",
-      "sourceHash": "2212d42c166f249e0ce2babde5f75bcc27934aa25aa3e8e680c61c998f092969"
+      "sourceHash": "62457024b5456f8cba9792ad73dfce26a94e94dae0977885096e4ba4c48780bb"
     },
     {
       "source": "es/conceptos/panel-de-control/cuenta-y-empresa.mdx",
@@ -856,7 +856,7 @@
     {
       "source": "es/desarrolladores/webhooks/introduccion.mdx",
       "target": "en/developers/webhooks/introduction.mdx",
-      "sourceHash": "b22ef854193ee71b90c9a7883a418f7ecc2ca97824bea0f9d2e62287a548bccc"
+      "sourceHash": "6558633008c688fd523eb7e09e66bdae0e3eb37343bd63e2d56eaa848de6c41b"
     },
     {
       "source": "es/desarrolladores/webhooks/payloads.mdx",
