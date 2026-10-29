@@ -1,83 +1,34 @@
 ---
-title: "Prepare master data"
+title: "Prepare the workstation and the item"
+sidebarTitle: "Prepare workstation and item"
 es_link: "/es/ayuda/primeros-pasos/preparar-datos-base"
-description: "Create the minimum catalog, employees, and resources to launch your first manufacturing run."
+description: "Create the workstation, the process, and the item you need to manufacture your first MO."
 ---
 
-Prepare only the data you need to complete the first walkthrough. The goal is to turn an order into an executable MO, without entering the company's entire operation.
+To manufacture your first MO, you need three things: a workstation where the work happens, a process performed there, and the item you will manufacture.
 
-Use a familiar product that is easy to recognize. Starting with an unusual case means resolving exceptions before validating the main workflow.
+Bold creates a warehouse location named after your company and an employee so the person who signs up the account can record shop floor work.
 
-## Expected result
-
-When you finish, you should have:
-
-- a family for the product;
-- a finished item associated with a family;
-- the components you want to consume in the recipe;
-- at least one operational employee;
-- a process and a compatible production resource;
-- a basic location if you will record consumption or production with stock.
-
-## Create the minimum foundation
+## Steps
 
 <Steps>
-  <Step title="Create the family">
-    Go to **Catalog > Families** and create the family for the finished item. Use a stable code and a descriptive name.
+  <Step title="Create an area and a workstation">
+    Go to **Production > Resources**. Add an area, for example `Workshop`, and a workstation inside it, for example `Assembly bench 1`.
   </Step>
-  <Step title="Create the finished item">
-    Go to **Catalog > Items** and create the manufacturable item. Select the family created above. Set the procurement source to **Make**.
+  <Step title="Create the process">
+    Go to **Production > Processes > Add new type** and create the process, for example `Assembly`. Then open the process, click **+ Assign workstation**, and choose the workstation you created.
   </Step>
-  <Step title="Create the components">
-    Add the items the recipe will consume. For the first walkthrough, use a few components and simple quantities.
-  </Step>
-  <Step title="Create an operational employee">
-    Go to **People > Employees** and create the person who will record shop floor work. Link a user if that person needs to sign in.
-  </Step>
-  <Step title="Create a process and resource">
-    Create a process, such as **Assembly**, **Cutting**, or **Packaging**. Then create a workstation, machine, line, or work center that can execute it.
-  </Step>
-  <Step title="Create a basic location">
-    Add an initial location if you will consume components or record produced stock. You can separate receiving, production, and dispatch areas later.
+  <Step title="Create the item">
+    Go to **Catalog > Items > Create new**. Enter the name, choose the unit, and select **Make** as the procurement source. You can leave the family empty.
   </Step>
 </Steps>
 
-## Recommended decisions
-
-| Decision | Recommendation for the first walkthrough |
-| --- | --- |
-| Family | Use a simple family with one variant. |
-| Finished item | Mark it as manufacturable and use a familiar unit. |
-| Components | Create only the materials whose consumption you want to see. |
-| Lots | Leave them out unless traceability is essential. |
-| Resource | Use a workstation or work center with a name the shop floor recognizes. |
-| Employee | Create a real or test operational person the team can identify. |
-
-<Tip>
-  If you are unsure how to model a variant, first create a simple item. Correct the pattern before entering many similar families.
-</Tip>
-
-## Detailed guides
-
-<Columns cols={2}>
-  <Card title="Group items into families" icon="package-open" href="/en/guides/catalog/group-items-into-families">
-    Create the family that groups items and variants.
-  </Card>
-  <Card title="Register an item" icon="barcode" href="/en/guides/catalog/create-an-item">
-    Create the item that you sell, manufacture, consume, or store.
-  </Card>
-  <Card title="Register an employee" icon="user-round" href="/en/guides/people/register-an-employee">
-    Prepare the person who will record operational activity.
-  </Card>
-  <Card title="Prepare work centers and machines" icon="settings-2" href="/en/guides/manufacturing/prepare-work-centers-and-machines">
-    Define processes, workstations, and compatibility to execute operations.
-  </Card>
-</Columns>
+<Info>
+  If your company has only one active storage location, Bold assigns it to each new workstation as its consumption and output location. If it has several, open the workstation in **Production > Resources** and configure **Consumption location** and **Output location**. See [Prepare work centers and machines](/en/guides/manufacturing/prepare-work-centers-and-machines).
+</Info>
 
 ## Next step
 
-Once the family, items, employee, and resource exist, configure a minimum recipe for the chosen product.
-
 <Card title="Define a manufacturing process" icon="book-open" href="/en/guides/getting-started/define-a-manufacturing-process">
-  Define the structure needed to create an executable MO.
+  Create a recipe with one operation for the item.
 </Card>
