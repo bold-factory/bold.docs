@@ -271,17 +271,17 @@
     {
       "source": "es/ayuda/primeros-pasos/configurar-receta-minima.mdx",
       "target": "en/guides/getting-started/define-a-manufacturing-process.mdx",
-      "sourceHash": "b10f3890aeee411a06816cdbfa89b0bcb6040c0f334d1fa2a73d1b5c813db120"
+      "sourceHash": "8853393baf0de5b78c810e1da8186bde3aa828de70366f2f3e3ee426116f0265"
     },
     {
       "source": "es/ayuda/primeros-pasos/ejecutar-primera-of.mdx",
       "target": "en/guides/getting-started/execute-your-first-mo.mdx",
-      "sourceHash": "0155c35fc65fd4973b27014ba45229e1952b2d64b3e7dad8571057c7cdf8d388"
+      "sourceHash": "3ff1dfc62158b4da1ffbd56aaf002d08d3801d2391e8ae2503b4c317a17ecaa4"
     },
     {
       "source": "es/ayuda/primeros-pasos/introduccion.mdx",
       "target": "en/guides/getting-started/introduction.mdx",
-      "sourceHash": "1b04bb321c51f5dfcd38ce812848d428dad12969dba13013d69c0eb3069f4862"
+      "sourceHash": "d9429a56a90c68b51a4a2bb76ebf50383989da71f109855824023c612e1bbf16"
     },
     {
       "source": "es/ayuda/primeros-pasos/lanzar-primera-of.mdx",
@@ -291,7 +291,7 @@
     {
       "source": "es/ayuda/primeros-pasos/preparar-datos-base.mdx",
       "target": "en/guides/getting-started/prepare-master-data.mdx",
-      "sourceHash": "4b0790636b909b83c897f2dc987c5d17a74f5abb039dd5067fc5e32804261659"
+      "sourceHash": "582b0fe6c84935bd2dccfc984b599f3829758f3292b46c96c90b98ce6add517f"
     },
     {
       "source": "es/ayuda/produccion/asignar-recursos.mdx",
