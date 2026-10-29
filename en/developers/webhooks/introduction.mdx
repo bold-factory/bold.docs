@@ -83,6 +83,26 @@ POST /v1/notifications/webhook/{id}/retry
 
 Bold signs the serialized JSON body with HMAC-SHA256 and sends the signature as lowercase hexadecimal in the `X-HMAC-Signature` header.
 
+### Get the signing secret
+
+Each organization has a single signing secret for all its subscriptions. To view it, go to **Control panel**, open **Webhooks** and select the **Signature** tab. You can show or copy it, then store it in the secrets manager of the system that receives the webhooks.
+
+You can also get it through the API with an account that has the administrator profile:
+
+```http
+GET /v1/admin/tenants/self/webhooksSecret
+```
+
+### Rotate the secret
+
+If you think the secret has been exposed, use **Regenerate secret** in the **Signature** tab or call:
+
+```http
+POST /v1/admin/tenants/self/webhooksSecret/rotate
+```
+
+The response includes the new secret. Bold signs the next notifications with it immediately, and the previous secret stops working at the same time. Update the secret in your integrations right after rotating it. If a notification fails in the meantime, you can retry it from the notification history.
+
 ```javascript
 import crypto from "node:crypto";
 

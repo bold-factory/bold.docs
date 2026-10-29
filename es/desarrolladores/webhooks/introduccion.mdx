@@ -83,6 +83,26 @@ POST /v1/notifications/webhook/{id}/retry
 
 Bold firma el cuerpo JSON serializado con HMAC-SHA256 y lo envía como hexadecimal en minúsculas en la cabecera `X-HMAC-Signature`.
 
+### Obtener el secreto de firma
+
+Cada organización tiene un único secreto de firma para todas sus suscripciones. Para consultarlo, entra en **Panel de control**, abre **Webhooks** y selecciona la pestaña **Firma**. Puedes mostrarlo o copiarlo, y guardarlo en el gestor de secretos del sistema que recibe los webhooks.
+
+También puedes obtenerlo por API con una cuenta con perfil de administrador:
+
+```http
+GET /v1/admin/tenants/self/webhooksSecret
+```
+
+### Rotar el secreto
+
+Si crees que el secreto se ha expuesto, usa **Regenerar secreto** en la pestaña **Firma** o llama a:
+
+```http
+POST /v1/admin/tenants/self/webhooksSecret/rotate
+```
+
+La respuesta incluye el secreto nuevo. Las notificaciones siguientes se firman con él de inmediato y no hay periodo de convivencia con el anterior. Actualiza el secreto en tus integraciones justo después de rotarlo. Si alguna notificación falla mientras tanto, puedes reintentarla desde el historial.
+
 ```javascript
 import crypto from "node:crypto";
 

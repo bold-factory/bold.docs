@@ -35,6 +35,8 @@ La clave completa se muestra al crearla. Conserva una copia segura en ese moment
 
 Usa avisos externos cuando otro sistema necesite reaccionar a cambios de catálogo, stock, pedidos, fabricación o mantenimiento.
 
+Bold firma cada entrega con un **secreto de firma** para que el sistema externo compruebe que la petición viene de Bold. Los administradores pueden consultarlo, copiarlo o regenerarlo en la pestaña **Firma** de **Webhooks**. Al regenerarlo, las entregas siguientes usan el secreto nuevo y el anterior deja de servir. Consulta [Firma del webhook](/es/desarrolladores/webhooks/introduccion#firma-del-webhook).
+
 <Tip>
   Para integraciones críticas, combina los avisos externos con una reconciliación periódica mediante la API. La reconciliación permite detectar diferencias aunque una entrega falle.
 </Tip>
