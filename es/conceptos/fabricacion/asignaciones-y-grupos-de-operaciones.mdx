@@ -44,6 +44,13 @@ El grupo se ajusta cuando una de sus operaciones deja de estar disponible:
 - Si cancelas la OF de una operación agrupada, la operación sale del grupo y la cantidad total del grupo se reduce. El grupo se disuelve cuando ya no le quedan operaciones. Si el grupo está **Planificado** o **Pausado**, también se disuelve cuando le queda una sola operación.
 - Si eliminas una operación agrupada, Bold la expulsa del grupo antes de eliminarla. Solo puedes eliminarla mientras el grupo está **Planificado**.
 
+El progreso registrado se mantiene en el grupo hasta que una operación sale o el grupo finaliza. Cuando una operación sale antes:
+
+- El grupo conserva el progreso que cabe en la cantidad de las operaciones que quedan. Si el progreso supera esa cantidad restante, el exceso pasa a la operación expulsada.
+- Si seleccionas operaciones agrupadas en las operaciones de una OF y usas **Finalizar** o **Registrar y finalizar**, cada una sale del grupo y se lleva el progreso del grupo que le corresponda, hasta su cantidad. Después se finaliza como el resto. Funciona también con el grupo **En curso**.
+- Si el grupo se disuelve porque solo le queda una operación, esa operación recibe el progreso restante del grupo.
+- No puedes disolver un grupo con varias operaciones y progreso registrado, porque Bold no sabe a qué operación corresponde cada unidad. Finaliza el grupo indicando el reparto o expulsa operaciones hasta que se disuelva.
+
 ## Estados habituales
 
 | Estado | Significado |
