@@ -35,6 +35,8 @@ The complete key is displayed when you create it. Keep a secure copy at that tim
 
 Use external notifications when another system needs to react to catalog, stock, order, manufacturing or maintenance changes.
 
+Bold signs every delivery with a **signing secret** so the external system can check that the request comes from Bold. Administrators can view, copy or regenerate it in the **Signature** tab of **Webhooks**. After you regenerate it, upcoming deliveries use the new secret and the previous one stops working. See [Webhook signature](/en/developers/webhooks/introduction#webhook-signature).
+
 <Tip>
   For critical integrations, combine external notifications with periodic reconciliation through the API. Reconciliation lets you detect differences even if a delivery fails.
 </Tip>
