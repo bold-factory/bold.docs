@@ -426,7 +426,7 @@
     {
       "source": "es/ayuda/ventas/cambiar-un-pedido.mdx",
       "target": "en/guides/sales/change-an-order.mdx",
-      "sourceHash": "92483a319b4c3ea8d5c94ce226d7fb33b1213407a66fd07744a3e3f84f53734b"
+      "sourceHash": "1817ef44a62458b5e25754f4c8f1c3c6d3cd9a1f9100ea8592ec7ba937d763ee"
     },
     {
       "source": "es/ayuda/ventas/cancelar-pedido.mdx",
@@ -441,7 +441,7 @@
     {
       "source": "es/ayuda/ventas/introduccion.mdx",
       "target": "en/guides/sales/introduction.mdx",
-      "sourceHash": "9e657e0e3521d27bd572674e381397838412591585d68bd23ee53c353bf32bb9"
+      "sourceHash": "6ed0175ed333b346f5ba5ce9849ec1722b19de47b21ff9cb880645d7c2c8ca38"
     },
     {
       "source": "es/ayuda/ventas/preparar-y-registrar-envio.mdx",
@@ -561,7 +561,7 @@
     {
       "source": "es/conceptos/fabricacion/asignaciones-y-grupos-de-operaciones.mdx",
       "target": "en/concepts/manufacturing/assignments-and-operation-groups.mdx",
-      "sourceHash": "3e9bcfb410bc7145e43a9b18a4942017f46d417fadcaad762cf40edcd58e7bc3"
+      "sourceHash": "220286cf447d2b06e97bfb1870767f9fa7ab85da5363c1c630bcf24dd2e045bf"
     },
     {
       "source": "es/conceptos/fabricacion/controles-consumos-y-pausas.mdx",
