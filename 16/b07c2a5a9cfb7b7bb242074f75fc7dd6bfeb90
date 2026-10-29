@@ -1,0 +1,25 @@
+en/concepts/control-panel/integration-keys-and-external-notifications.mdx
+  s_74a7ee01f292bd::t_8bd14b06628afe 38-39
+en/developers/webhooks/introduction.mdx
+  s_74a7ee01f292bd::t_8bd14b06628afe 86-105
+es/conceptos/panel-de-control/claves-de-integracion-y-avisos-externos.mdx
+  s_74a7ee01f292bd::t_8bd14b06628afe 38-39
+es/desarrolladores/webhooks/introduccion.mdx
+  s_74a7ee01f292bd::t_8bd14b06628afe 86-105
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "16b07c2a5a9cfb7b7bb242074f75fc7dd6bfeb90",
+  "prompts": {},
+  "sessions": {
+    "s_74a7ee01f292bd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "828324b2-1e36-43de-a6c2-5a04e086cd87",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
