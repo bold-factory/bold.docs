@@ -1,0 +1,23 @@
+en/developers/webhooks/introduction.mdx
+  s_45af3b72d69c13::t_79d3d3a3ffd4b0 55,90
+es/desarrolladores/webhooks/introduccion.mdx
+  s_45af3b72d69c13::t_79d3d3a3ffd4b0 90
+sources/translations/en.json
+  s_45af3b72d69c13::t_04065f337558ec 859
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d4249ddb411bde1c8abc5b63526f6646436ca785",
+  "prompts": {},
+  "sessions": {
+    "s_45af3b72d69c13": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a187a2-867f-7182-878c-6670051b447d",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
