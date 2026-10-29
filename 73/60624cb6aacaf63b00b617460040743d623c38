@@ -1,0 +1,19 @@
+sources/translations/en.json
+  s_84d485664bd117::t_06c2321e028f00 564
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7360624cb6aacaf63b00b617460040743d623c38",
+  "prompts": {},
+  "sessions": {
+    "s_84d485664bd117": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1880e-3096-7c71-b2a3-92835e90a735",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
