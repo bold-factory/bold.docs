@@ -596,7 +596,7 @@
     {
       "source": "es/conceptos/fabricacion/operaciones-y-restricciones.mdx",
       "target": "en/concepts/manufacturing/operations-and-restrictions.mdx",
-      "sourceHash": "166db3ff8cc14015ea02c4d62d88de3f5183a118bc87bfccfe9e83ae2dc27392"
+      "sourceHash": "d961dfb2b7fbf1df455089f028d900009225e484be4ee9ebb7a3c2970474b25d"
     },
     {
       "source": "es/conceptos/fabricacion/ordenes-de-fabricacion.mdx",
