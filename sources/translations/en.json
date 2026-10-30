@@ -326,7 +326,7 @@
     {
       "source": "es/ayuda/produccion/ejecutar-operaciones-en-planta.mdx",
       "target": "en/guides/manufacturing/execute-shop-floor-operations.mdx",
-      "sourceHash": "58417823efe1961a8cced6aadf2a849afdebfd9c96597884dbf6c80626d1cab7"
+      "sourceHash": "8c3d64d9369019365c11361252dd7c845659326c2c969553014026b4592ffdbe"
     },
     {
       "source": "es/ayuda/produccion/especificar-materiales-pasos-y-controles.mdx",
@@ -356,7 +356,7 @@
     {
       "source": "es/ayuda/produccion/modo-rapido.mdx",
       "target": "en/guides/manufacturing/sequence-manually.mdx",
-      "sourceHash": "3f59374ed89bfb2769603866f2470aef9eed16a8b294886ef14a689a4d9081ca"
+      "sourceHash": "c32de5cf353635a52037994c84d80ffe2227ec178d553c7df41a390b611e6130"
     },
     {
       "source": "es/ayuda/produccion/para-que-son-necesarias-las-condiciones.mdx",
@@ -596,7 +596,7 @@
     {
       "source": "es/conceptos/fabricacion/operaciones-y-restricciones.mdx",
       "target": "en/concepts/manufacturing/operations-and-restrictions.mdx",
-      "sourceHash": "e5a97f3a770690bb05514d60f7dbdb0df56dcca967467d045eac7e7e9223602a"
+      "sourceHash": "166db3ff8cc14015ea02c4d62d88de3f5183a118bc87bfccfe9e83ae2dc27392"
     },
     {
       "source": "es/conceptos/fabricacion/ordenes-de-fabricacion.mdx",
@@ -676,7 +676,7 @@
     {
       "source": "es/conceptos/panel-de-control.mdx",
       "target": "en/concepts/control-panel.mdx",
-      "sourceHash": "c9d5e3a291d1907bc7c45cc4e0d275c8c831e8ff6b70a5c79f7b80ea57662f96"
+      "sourceHash": "681a02be5ff4a653ea00d70b54d1fffe55ae48cad3b9822f74df0f2781479dfe"
     },
     {
       "source": "es/conceptos/panel-de-control/auditoria-y-eventos.mdx",
