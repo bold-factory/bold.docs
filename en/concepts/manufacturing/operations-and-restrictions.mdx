@@ -35,6 +35,10 @@ Restrictions link a preceding operation to a following one. Configure separately
 
 In a recipe or MO diagram, **Recalculate positions** orders blocks according to their restrictions. Confirm the dialog to save the new arrangement. You need write permission for recipes or manufacturing orders, respectively; recipe versions must be editable.
 
+In the operations table of a recipe or MO, the **#** column numbers operations according to their restrictions: each one appears after its predecessors. Operations that do not depend on each other are sorted by name, with numbers in numeric order, so "Op 2" comes before "Op 10". The table opens in this order, and the API returns operations in the same order. If you sort by another column, sort by **#** to get the sequence back.
+
+In an MO diagram, right-click an operation to open it with **View details** or use the actions its status allows: **Start**, **Pause**, **Resume**, **Record progress**, **Complete** (timed waits), or **Undo finish**. **Record progress** opens the same record as the operation page. As in [work mode](/en/concepts/work-mode), you choose **Record without finishing** or **Record and finish** when you confirm.
+
 | Start condition | Met when the preceding operation... |
 | --- | --- |
 | At any time | Imposes no start condition. |
@@ -90,6 +94,10 @@ To prepare an operation while the preceding one produces, choose to start when t
 A timed wait does not offer **At any time**. Automatic start respects all its start conditions, including those configured as **Warn but allow**. If it starts before its preceding operations end, it does not complete automatically until its duration has elapsed and all preceding operations have closed.
 
 If you pause a timed wait or undo its completion, it stays paused until you resume it manually. Paused time extends its duration before automatic completion.
+
+With write permission on manufacturing orders, you can bring a wait forward from work mode: **Start** starts it without waiting for the automatic start, and **Complete** finishes it before its duration elapses and marks its pending units as completed. You can also complete it from the operation page or from the context menu of the MO diagram. Without that permission, you cannot start, record progress on, or finish a wait manually, including through the API; work mode does not show these actions.
+
+A wait consumes no materials, produces no co-products and has no controls, so Bold does not show those sections on its operations or on recipe operations.
 
 Sequencing follows conditions regardless of enforcement. Precedence configured as **Warn but allow** can also order the plan.
 

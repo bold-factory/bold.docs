@@ -28,9 +28,27 @@ Usa **Órdenes** para revisar todas las OF abiertas. Ordena la lista por fecha r
 
 - **Fecha objetivo:** organiza la lista según la fecha interna prevista para ejecutar el trabajo en planta.
 
+### Filtrar la lista
+
+Los filtros solo cambian las OF que ves. El número de cada OF sigue indicando su posición en la secuencia completa, y la lista indica cuántas OF se muestran del total.
+
+- **Ocultar planificadas:** oculta las OF que ya tienen fecha objetivo.
+- **Solo fechas firmes:** muestra solo las OF con fecha requerida **Firme**, tanto de peticiones manuales como de pedidos de venta con fecha comprometida. Consulta [Peticiones de fabricación](/es/conceptos/fabricacion/peticiones-de-fabricacion#fecha-requerida-de-una-l%C3%ADnea-de-pedido-de-venta).
+- **Fecha requerida:** limita la lista por fecha requerida.
+
+| Opción | OF que se muestran |
+| --- | --- |
+| **Todas** | Todas, sin filtrar por fecha. |
+| **Vencidas** | Fecha requerida anterior a hoy. |
+| **Hoy** | Fecha requerida hoy. |
+| **Hasta 7 días** | Fecha requerida dentro de los próximos 7 días, incluidas las vencidas. |
+| **Personalizado** | Fecha requerida entre las fechas **Desde** y **Hasta**, ambas incluidas. Puedes dejar vacía una de las dos. |
+
+Al filtrar por fecha requerida, se ocultan las OF sin fecha requerida. Los filtros se pueden combinar. Por ejemplo, **Solo fechas firmes** con **Hoy** muestra las entregas comprometidas para hoy.
+
 ### Ajustar la fecha objetivo
 
-La lista muestra la prioridad calculada de cada OF. Cambia la **fecha objetivo** para adelantarla o retrasarla. Bold muestra una alerta si la nueva fecha queda después de la fecha requerida.
+La lista muestra la prioridad calculada de cada OF. Cambia la **fecha objetivo** para adelantarla o retrasarla. Bold muestra una alerta si la nueva fecha queda después de la fecha requerida, junto con los días de retraso. El retraso aparece en rojo si la fecha requerida es firme y en ámbar si no lo es.
 
 ## Operaciones
 

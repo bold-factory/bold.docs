@@ -276,12 +276,12 @@
     {
       "source": "es/ayuda/primeros-pasos/ejecutar-primera-of.mdx",
       "target": "en/guides/getting-started/execute-your-first-mo.mdx",
-      "sourceHash": "3ff1dfc62158b4da1ffbd56aaf002d08d3801d2391e8ae2503b4c317a17ecaa4"
+      "sourceHash": "a4cff2f2711a5dde43217fcf452ccf7b508ed2e7857da77e2e1dbe4dfd2e8dc7"
     },
     {
       "source": "es/ayuda/primeros-pasos/introduccion.mdx",
       "target": "en/guides/getting-started/introduction.mdx",
-      "sourceHash": "d9429a56a90c68b51a4a2bb76ebf50383989da71f109855824023c612e1bbf16"
+      "sourceHash": "cb9e18ca5653b13d8ca6b72e3a2cc46472527b5f8da2f23d0e4a378b960d2bc1"
     },
     {
       "source": "es/ayuda/primeros-pasos/lanzar-primera-of.mdx",
@@ -291,7 +291,7 @@
     {
       "source": "es/ayuda/primeros-pasos/preparar-datos-base.mdx",
       "target": "en/guides/getting-started/prepare-master-data.mdx",
-      "sourceHash": "582b0fe6c84935bd2dccfc984b599f3829758f3292b46c96c90b98ce6add517f"
+      "sourceHash": "3b554b22d7cf0c28147375a54eaa8d412360963ab9353599ce72c79504313181"
     },
     {
       "source": "es/ayuda/produccion/asignar-recursos.mdx",
@@ -326,7 +326,7 @@
     {
       "source": "es/ayuda/produccion/ejecutar-operaciones-en-planta.mdx",
       "target": "en/guides/manufacturing/execute-shop-floor-operations.mdx",
-      "sourceHash": "58417823efe1961a8cced6aadf2a849afdebfd9c96597884dbf6c80626d1cab7"
+      "sourceHash": "8c3d64d9369019365c11361252dd7c845659326c2c969553014026b4592ffdbe"
     },
     {
       "source": "es/ayuda/produccion/especificar-materiales-pasos-y-controles.mdx",
@@ -356,7 +356,7 @@
     {
       "source": "es/ayuda/produccion/modo-rapido.mdx",
       "target": "en/guides/manufacturing/sequence-manually.mdx",
-      "sourceHash": "f02dbdbb89a059daed8e871a77ce1238938364516713bf2682a9169d5356a2ed"
+      "sourceHash": "c32de5cf353635a52037994c84d80ffe2227ec178d553c7df41a390b611e6130"
     },
     {
       "source": "es/ayuda/produccion/para-que-son-necesarias-las-condiciones.mdx",
@@ -596,7 +596,7 @@
     {
       "source": "es/conceptos/fabricacion/operaciones-y-restricciones.mdx",
       "target": "en/concepts/manufacturing/operations-and-restrictions.mdx",
-      "sourceHash": "96c6c10d0e26344ff8aa0ec44dd3892abdfd37416b045e23e1bf2080a8f8c549"
+      "sourceHash": "166db3ff8cc14015ea02c4d62d88de3f5183a118bc87bfccfe9e83ae2dc27392"
     },
     {
       "source": "es/conceptos/fabricacion/ordenes-de-fabricacion.mdx",
@@ -676,7 +676,7 @@
     {
       "source": "es/conceptos/panel-de-control.mdx",
       "target": "en/concepts/control-panel.mdx",
-      "sourceHash": "c9d5e3a291d1907bc7c45cc4e0d275c8c831e8ff6b70a5c79f7b80ea57662f96"
+      "sourceHash": "681a02be5ff4a653ea00d70b54d1fffe55ae48cad3b9822f74df0f2781479dfe"
     },
     {
       "source": "es/conceptos/panel-de-control/auditoria-y-eventos.mdx",
