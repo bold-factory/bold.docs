@@ -1,0 +1,35 @@
+es/conceptos/fabricacion/operaciones-y-restricciones.mdx
+  s_1865b8cfb41d45::t_79af48a68b0fdd 40
+en/guides/manufacturing/sequence-manually.mdx
+  s_1865b8cfb41d45::t_79af48a68b0fdd 36
+es/conceptos/panel-de-control.mdx
+  s_1865b8cfb41d45::t_79af48a68b0fdd 8
+en/concepts/manufacturing/operations-and-restrictions.mdx
+  s_1865b8cfb41d45::t_79af48a68b0fdd 40
+en/guides/manufacturing/execute-shop-floor-operations.mdx
+  s_1865b8cfb41d45::t_79af48a68b0fdd 9,11
+en/concepts/control-panel.mdx
+  s_1865b8cfb41d45::t_79af48a68b0fdd 8
+sources/translations/en.json
+  s_1865b8cfb41d45::t_0ea5f671e35300 329,359,599,679
+es/ayuda/produccion/modo-rapido.mdx
+  s_1865b8cfb41d45::t_79af48a68b0fdd 36
+es/ayuda/produccion/ejecutar-operaciones-en-planta.mdx
+  s_1865b8cfb41d45::t_79af48a68b0fdd 9,11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b094f1cb1436ba0b4a954b671bf2ab99ef3e5126",
+  "prompts": {},
+  "sessions": {
+    "s_1865b8cfb41d45": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a18cb3-f4c4-71e3-b01b-0fa327a3a051",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
