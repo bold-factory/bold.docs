@@ -28,9 +28,27 @@ Use **Orders** to review all open MOs. Sort by required or target date and chang
 
 - **Target date:** sorts by the internal date planned to execute shop floor work.
 
+### Filter the list
+
+Filters only change which MOs you see. Each MO's number still shows its position in the full sequence, and the list shows how many MOs are visible out of the total.
+
+- **Hide planned:** hides MOs that already have a target date.
+- **Firm dates only:** shows only MOs with a **Firm** required date, that is, those coming from a sales order line with a committed date. See [Manufacturing requests](/en/concepts/manufacturing/manufacturing-requests#required-date-of-a-sales-order-line).
+- **Due date:** limits the list by required date.
+
+| Option | MOs shown |
+| --- | --- |
+| **All** | All of them, with no date filter. |
+| **Overdue** | Required date before today. |
+| **Today** | Required date today. |
+| **Up to 7 days** | Required date within the next 7 days, including overdue ones. |
+| **Custom** | Required date between the **From** and **To** dates, both included. You can leave either one empty. |
+
+When you filter by required date, MOs without a required date are hidden. You can combine filters. For example, **Firm dates only** with **Today** shows the deliveries committed for today.
+
 ### Adjust the target date
 
-The list shows each MO's calculated priority. Change its **target date** to bring it forward or delay it. Bold shows an alert if the new date is after the required date.
+The list shows each MO's calculated priority. Change its **target date** to bring it forward or delay it. Bold shows an alert if the new date is after the required date, together with the days of delay. The delay is shown in red when the required date is firm and in amber when it is not.
 
 ## Operations
 
