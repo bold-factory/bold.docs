@@ -95,6 +95,8 @@ A timed wait does not offer **At any time**. Automatic start respects all its st
 
 If you pause a timed wait or undo its completion, it stays paused until you resume it manually. Paused time extends its duration before automatic completion.
 
+With write permission on manufacturing orders, you can bring a wait forward from work mode: **Start** starts it without waiting for the automatic start, and **Complete** records its progress and finishes it before its duration elapses. Without that permission, you cannot start, record progress on, or finish a wait manually, including through the API; work mode does not show these actions.
+
 Sequencing follows conditions regardless of enforcement. Precedence configured as **Warn but allow** can also order the plan.
 
 Restrictions should not be duplicated or create cycles. A cycle would prevent determining which operation unlocks another and can block [sequencing](/en/concepts/manufacturing/sequencing).
