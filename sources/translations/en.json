@@ -276,12 +276,12 @@
     {
       "source": "es/ayuda/primeros-pasos/ejecutar-primera-of.mdx",
       "target": "en/guides/getting-started/execute-your-first-mo.mdx",
-      "sourceHash": "3ff1dfc62158b4da1ffbd56aaf002d08d3801d2391e8ae2503b4c317a17ecaa4"
+      "sourceHash": "a4cff2f2711a5dde43217fcf452ccf7b508ed2e7857da77e2e1dbe4dfd2e8dc7"
     },
     {
       "source": "es/ayuda/primeros-pasos/introduccion.mdx",
       "target": "en/guides/getting-started/introduction.mdx",
-      "sourceHash": "d9429a56a90c68b51a4a2bb76ebf50383989da71f109855824023c612e1bbf16"
+      "sourceHash": "cb9e18ca5653b13d8ca6b72e3a2cc46472527b5f8da2f23d0e4a378b960d2bc1"
     },
     {
       "source": "es/ayuda/primeros-pasos/lanzar-primera-of.mdx",
@@ -291,7 +291,7 @@
     {
       "source": "es/ayuda/primeros-pasos/preparar-datos-base.mdx",
       "target": "en/guides/getting-started/prepare-master-data.mdx",
-      "sourceHash": "582b0fe6c84935bd2dccfc984b599f3829758f3292b46c96c90b98ce6add517f"
+      "sourceHash": "3b554b22d7cf0c28147375a54eaa8d412360963ab9353599ce72c79504313181"
     },
     {
       "source": "es/ayuda/produccion/asignar-recursos.mdx",
@@ -356,7 +356,7 @@
     {
       "source": "es/ayuda/produccion/modo-rapido.mdx",
       "target": "en/guides/manufacturing/sequence-manually.mdx",
-      "sourceHash": "f02dbdbb89a059daed8e871a77ce1238938364516713bf2682a9169d5356a2ed"
+      "sourceHash": "3f59374ed89bfb2769603866f2470aef9eed16a8b294886ef14a689a4d9081ca"
     },
     {
       "source": "es/ayuda/produccion/para-que-son-necesarias-las-condiciones.mdx",
@@ -596,7 +596,7 @@
     {
       "source": "es/conceptos/fabricacion/operaciones-y-restricciones.mdx",
       "target": "en/concepts/manufacturing/operations-and-restrictions.mdx",
-      "sourceHash": "96c6c10d0e26344ff8aa0ec44dd3892abdfd37416b045e23e1bf2080a8f8c549"
+      "sourceHash": "e5a97f3a770690bb05514d60f7dbdb0df56dcca967467d045eac7e7e9223602a"
     },
     {
       "source": "es/conceptos/fabricacion/ordenes-de-fabricacion.mdx",

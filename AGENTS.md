@@ -18,7 +18,7 @@
 
 - Use **orden de fabricación** and **OF**, not **orden de producción**.
 - Use **coproducto**, not **co-producto**.
-- Use **Panel de control** for the administration and configuration area.
+- Use **Panel de control** only for the administration and configuration area: company, users, perfiles, API keys, webhooks, subscription and similar settings. Operational modules such as **Fabricación**, **Almacén**, **Ventas** or **Catálogo** are not part of it, and neither is "everything outside the modo de trabajo". Refer to those screens by their menu path, for example **Fabricación > Órdenes de fabricación**.
 - Use **modo de trabajo** for the operator-facing execution interface.
 - Distinguish **usuario** (an account with access) from **empleado** (a person whose work or presence is recorded).
 - Use **perfil** for a named set of permissions in user-facing content. Use `role` only for API fields or code references.
@@ -37,6 +37,7 @@
 - Do not use Bold-specific concepts in guide titles. Widely understood industrial terms and abbreviations, such as **OF**, are acceptable.
 - Introduce Bold-specific concepts in the guide body with a short explanation and a link to the relevant page in **Concepts**.
 - Each guide should explain how to complete a process in Bold, including alternative workflows when more than one is available.
+- Exception: the **Primeros pasos** / **Getting started** guides show only the basic flow for a new account. Do not add alternatives, optional settings, or conditions such as multiple locations; link to the full guide from later sections instead.
 - Give pages unique `title` values for search and browser context. Use `sidebarTitle` when the navigation needs a shorter label.
 
 ## Content boundaries
