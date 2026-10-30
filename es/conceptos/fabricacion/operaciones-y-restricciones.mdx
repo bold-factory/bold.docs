@@ -95,7 +95,9 @@ Una espera temporizada no ofrece **En cualquier momento**. El inicio automático
 
 Si pausas una espera temporizada o deshaces su finalización, permanece pausada hasta que la reanudes manualmente. El tiempo de pausa prolonga su duración antes de la finalización automática.
 
-Con permiso de escritura de órdenes de fabricación puedes adelantar una espera desde el modo de trabajo: **Iniciar** la arranca sin aguardar al inicio automático y **Completar** registra su progreso y la finaliza antes de que transcurra su duración. Sin ese permiso no puedes iniciar, registrar progreso ni finalizar una espera manualmente, tampoco desde la API; el modo de trabajo no muestra estas acciones.
+Con permiso de escritura de órdenes de fabricación puedes adelantar una espera desde el modo de trabajo: **Iniciar** la arranca sin aguardar al inicio automático y **Completar** la finaliza antes de que transcurra su duración y da por completadas sus unidades pendientes. También puedes completarla desde la ficha de la operación o desde el menú contextual del diagrama de la OF. Sin ese permiso no puedes iniciar, registrar progreso ni finalizar una espera manualmente, tampoco desde la API; el modo de trabajo no muestra estas acciones.
+
+Una espera no consume materiales, no genera coproductos ni tiene controles, así que Bold no muestra esos apartados en sus operaciones ni en las de la receta.
 
 La secuenciación sigue las condiciones, con independencia de su exigencia. Una precedencia configurada como **Avisar pero permitir** también puede ordenar el plan.
 

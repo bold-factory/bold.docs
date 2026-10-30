@@ -95,7 +95,9 @@ A timed wait does not offer **At any time**. Automatic start respects all its st
 
 If you pause a timed wait or undo its completion, it stays paused until you resume it manually. Paused time extends its duration before automatic completion.
 
-With write permission on manufacturing orders, you can bring a wait forward from work mode: **Start** starts it without waiting for the automatic start, and **Complete** records its progress and finishes it before its duration elapses. Without that permission, you cannot start, record progress on, or finish a wait manually, including through the API; work mode does not show these actions.
+With write permission on manufacturing orders, you can bring a wait forward from work mode: **Start** starts it without waiting for the automatic start, and **Complete** finishes it before its duration elapses and marks its pending units as completed. You can also complete it from the operation page or from the context menu of the MO diagram. Without that permission, you cannot start, record progress on, or finish a wait manually, including through the API; work mode does not show these actions.
+
+A wait consumes no materials, produces no co-products and has no controls, so Bold does not show those sections on its operations or on recipe operations.
 
 Sequencing follows conditions regardless of enforcement. Precedence configured as **Warn but allow** can also order the plan.
 
