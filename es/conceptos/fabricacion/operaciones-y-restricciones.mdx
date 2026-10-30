@@ -35,6 +35,8 @@ Las restricciones relacionan una operación anterior con una siguiente. Configur
 
 En el diagrama de una receta u OF, **Recalcular posiciones** ordena los bloques según sus restricciones. Confirma el diálogo para guardar la nueva disposición. Necesitas permiso de escritura de recetas u órdenes de fabricación, respectivamente; las versiones de receta deben ser editables.
 
+En la tabla de operaciones de una receta u OF, la columna **#** numera las operaciones según sus restricciones: cada una aparece después de sus anteriores. Las que no dependen entre sí se ordenan por nombre, con los números en orden numérico, así que "Op 2" va antes que "Op 10". La tabla se abre en este orden y la API devuelve las operaciones en el mismo orden. Si ordenas por otra columna, ordena por **#** para recuperar la secuencia.
+
 | Condición de inicio | Se cumple cuando la anterior… |
 | --- | --- |
 | En cualquier momento | No impone una condición de inicio. |

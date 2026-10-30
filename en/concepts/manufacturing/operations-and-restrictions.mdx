@@ -35,6 +35,8 @@ Restrictions link a preceding operation to a following one. Configure separately
 
 In a recipe or MO diagram, **Recalculate positions** orders blocks according to their restrictions. Confirm the dialog to save the new arrangement. You need write permission for recipes or manufacturing orders, respectively; recipe versions must be editable.
 
+In the operations table of a recipe or MO, the **#** column numbers operations according to their restrictions: each one appears after its predecessors. Operations that do not depend on each other are sorted by name, with numbers in numeric order, so "Op 2" comes before "Op 10". The table opens in this order, and the API returns operations in the same order. If you sort by another column, sort by **#** to get the sequence back.
+
 | Start condition | Met when the preceding operation... |
 | --- | --- |
 | At any time | Imposes no start condition. |
