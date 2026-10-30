@@ -1,0 +1,37 @@
+sources/translations/en.json
+  s_1865b8cfb41d45::t_8434ed0921c210 279,284,294,359,599
+AGENTS.md
+  s_50aef3980c15c4::t_a906d8d1f6aa92 21,40
+en/guides/getting-started/execute-your-first-mo.mdx
+  s_50aef3980c15c4::t_3e54d634899fed 32-39,41,44-53,55-57,59-62
+en/guides/getting-started/introduction.mdx
+  s_50aef3980c15c4::t_2a96c9091e2f09 29
+es/ayuda/primeros-pasos/ejecutar-primera-of.mdx
+  s_50aef3980c15c4::t_618cdf5e5b9dc5 32-39,41,44-53,55-57,59-62
+es/ayuda/primeros-pasos/introduccion.mdx
+  s_50aef3980c15c4::t_8dbf29eb428f26 29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "43d1dd5dc6d1ad0508badae9e40c52def5357b07",
+  "prompts": {},
+  "sessions": {
+    "s_1865b8cfb41d45": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a18cb3-f4c4-71e3-b01b-0fa327a3a051",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_50aef3980c15c4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a7a3e77c-1ac8-4af3-818f-db52ba24d826",
+        "model": "unknown"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
