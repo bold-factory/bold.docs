@@ -1,0 +1,29 @@
+en/concepts/manufacturing/operations-and-restrictions.mdx
+  s_62666899454c0f::t_6b34670ec2a72a 40-41
+es/conceptos/fabricacion/operaciones-y-restricciones.mdx
+  s_5b424fe8225efb::t_a21bc109392f68 40-41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b640143967a1b2f9bef93803987776c8931409ce",
+  "prompts": {},
+  "sessions": {
+    "s_5b424fe8225efb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6ccc9e78-6db8-4f2d-9388-4348f7ae0942",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    },
+    "s_62666899454c0f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "088b5696-8139-490c-977c-0c257c6d05a9",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Pablo López <pablo@bold-factory.com>"
+    }
+  }
+}
